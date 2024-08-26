@@ -1,0 +1,11 @@
+*redist/
+*bin/
+*dump/
+*res/.tmp/
+*res/**/backups/
+
+# VScode
+*.vscode/settings.json
+
+# hlboot.dat and related bytecode
+*.dat

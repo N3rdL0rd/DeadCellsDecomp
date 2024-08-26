@@ -39,3 +39,10 @@ In order to get started decompiling Echo Arena, see the [Getting Started](docs/g
 ## Legal and Licensing
 
 This project is not licensed under any open-source license, as it is a decompilation of copyrighted software. However, we aim to respect the rights of the original developers at Motion Twin and Evil Empire, and we do not intend to distribute any copyrighted material. We encourage contributors to respect the rights of the original developers and to avoid sharing any copyrighted material. If you have any concerns about the legality of this project, please contact us in the modding channel of the Dead Cells [Discord server](https://discord.gg/deadcells).
+
+## Credits
+
+- Sébastien Bénard's GameBase, which is used as a starting point for the layout of the decompilation.
+- Guillaume Anthouard (Gui-Yom)'s hlbc, which is used to decompile and stub the game.
+
+<!-- TODO: links to credits -->
