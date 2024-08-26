@@ -5,11 +5,11 @@ class Animation {
   var timelines: hl.types.ArrayObj<Dynamic>;
   var duration: Float;
 
-  function __constructor__(name: String, timelines: hl.types.ArrayObj<Dynamic>, duration: Float) {}
-
   static function binarySearchWithStep(values: hl.types.ArrayBytes<Float>, target: Float, step: Int): Int {}
 
   static function binarySearch(values: hl.types.ArrayBytes<Float>, target: Float): Int {}
+
+  function __constructor__(name: String, timelines: hl.types.ArrayObj<Dynamic>, duration: Float) {}
 
   function getDuration(): Float {}
 }

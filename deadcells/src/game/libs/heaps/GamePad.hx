@@ -10,15 +10,15 @@ class GamePad {
   static var AVAILABLE_DEVICES: hl.types.ArrayObj<Dynamic>;
   static var MAPPING: hl.types.ArrayBytes<Int>;
 
-  function onEnable(pad: GamePad) {}
-
   function onDisable(pad: GamePad) {}
+
+  function onEnable(pad: GamePad) {}
 
   static function onDevice(p: hxd.Pad.Pad) {}
 
-  function __constructor__(deadZone: Dynamic, onEnable: Dynamic) {}
-
   static function update() {}
+
+  function __constructor__(deadZone: Dynamic, onEnable: Dynamic) {}
 
   function enableDevice(p: hxd.Pad.Pad) {}
 

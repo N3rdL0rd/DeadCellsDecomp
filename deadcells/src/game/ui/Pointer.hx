@@ -13,9 +13,9 @@ class Pointer extends ui.Process {
   var areaOffsetY: Float;
   static var ALL: hl.types.ArrayObj<Dynamic>;
 
-  function __constructor__(e: Entity, str: String, sec: Float, col: Int) {}
-
   static function kill(e: Entity) {}
+
+  function __constructor__(e: Entity, str: String, sec: Float, col: Int) {}
 
   function onDispose() {}
 

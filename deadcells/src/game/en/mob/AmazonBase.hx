@@ -35,9 +35,9 @@ class AmazonBase extends en.Mob {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, k: String, dmgTier: Int, lifeTier: Int, revealImmediatly: Bool) {}
-
   static function create(lvl: pr.Level.Level, x: Int, y: Int, k: String, dmgTier: Int, lifeTier: Int, revealImmediatly: Bool): AmazonBase {}
+
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, k: String, dmgTier: Int, lifeTier: Int, revealImmediatly: Bool) {}
 
   function get_inBossFight(): Bool {}
 

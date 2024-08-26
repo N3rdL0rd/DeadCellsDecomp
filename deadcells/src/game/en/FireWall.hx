@@ -11,13 +11,13 @@ class FireWall extends Entity {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  function createTouchAttack(): tool.atk.AttackData.AttackData {}
-
   function onFixedUpdate() {}
 
-  function getSfxLoop(): hxd.res.Sound.Sound {}
-
   function playFx() {}
+
+  function createTouchAttack(): tool.atk.AttackData.AttackData {}
+
+  function getSfxLoop(): hxd.res.Sound.Sound {}
 
   function __constructor__(mob: en.Mob.Mob, skillName: String, cx: Int, cy: Int, height: Int, radius: Float, speed: Dynamic) {}
 

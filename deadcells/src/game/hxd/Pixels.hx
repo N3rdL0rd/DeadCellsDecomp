@@ -8,11 +8,11 @@ class Pixels {
   var bytesPerPixel: Int;
   var innerFormat: Dynamic;
 
+  static function getBytesPerPixel(format: Dynamic): Int {}
+
   static function alloc(width: Int, height: Int, format: Dynamic): Pixels {}
 
   function __constructor__(width: Int, height: Int, bytes: haxe.io.Bytes, format: Dynamic, offset: Dynamic) {}
-
-  static function getBytesPerPixel(format: Dynamic): Int {}
 
   function set_innerFormat(fmt: Dynamic): Dynamic {}
 

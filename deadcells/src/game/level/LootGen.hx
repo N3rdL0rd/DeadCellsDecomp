@@ -37,13 +37,13 @@ class LootGen {
   static var LAST_LOG: hl.types.ArrayObj<Dynamic>;
   static var trueFoodKinds: hl.types.ArrayObj<Dynamic>;
 
-  static function getSmallHealingKind(): String {}
-
-  static function getLargeHealingKind(): String {}
-
   function __constructor__(user: User, maps: hl.types.ArrayObj<Dynamic>, seed: Int, tierDistrib: tool.TierDistribution.TierDistribution, hero: en.Hero.Hero, _hasExplorationBonusIncentive: Dynamic, forceNoGenerate: Dynamic) {}
 
   static function isDualWeapon(item: Dynamic): Bool {}
+
+  static function getLargeHealingKind(): String {}
+
+  static function getSmallHealingKind(): String {}
 
   function getLevelInfos(): Dynamic {}
 

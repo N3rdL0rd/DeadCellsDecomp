@@ -7,11 +7,11 @@ class IkConstraint {
   var bendDirection: Int;
   var <none>: Dynamic;
 
+  static function applyTwo(parent: spine.Bone.Bone, child: spine.Bone.Bone, targetX: Float, targetY: Float, bendDir: Int, alpha: Float) {}
+
   static function applyOne(bone: spine.Bone.Bone, targetX: Float, targetY: Float, alpha: Float) {}
 
   function __constructor__(data: IkConstraintData, skeleton: spine.Skeleton.Skeleton) {}
-
-  static function applyTwo(parent: spine.Bone.Bone, child: spine.Bone.Bone, targetX: Float, targetY: Float, bendDir: Int, alpha: Float) {}
 
   function update() {}
 }

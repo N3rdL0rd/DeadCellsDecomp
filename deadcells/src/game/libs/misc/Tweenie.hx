@@ -34,17 +34,17 @@ class Tween {
   var pixelSnap: Bool;
   var delay: Int;
 
-  function onUpdate() {}
+  function onStart() {}
 
   function onEnd() {}
+
+  function onUpdateT(t: Float) {}
+
+  function onUpdate() {}
 
   function interpolate(v: Float): Float {}
 
   function chainedEvent() {}
-
-  function onStart() {}
-
-  function onUpdateT(t: Float) {}
 
   function __constructor__(tw: Tweenie) {}
 

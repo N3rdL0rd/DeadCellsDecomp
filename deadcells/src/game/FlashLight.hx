@@ -7,13 +7,13 @@ class FlashLight {
   var maxLife: Float;
   var createTime: Float;
 
-  static function create(lvl: pr.Level.Level, x: Float, y: Float, col: Int, radiusPx: Float, int: Dynamic, durationS: Dynamic, depth: Dynamic): FlashLight {}
+  function __constructor__() {}
 
   static function alloc(level: pr.Level.Level, n: Int) {}
 
   static function getOne(level: pr.Level.Level): FlashLight {}
 
-  function __constructor__() {}
+  static function create(lvl: pr.Level.Level, x: Float, y: Float, col: Int, radiusPx: Float, int: Dynamic, durationS: Dynamic, depth: Dynamic): FlashLight {}
 
   function dispose() {}
 

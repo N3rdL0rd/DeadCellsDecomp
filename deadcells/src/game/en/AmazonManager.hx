@@ -61,9 +61,9 @@ class AmazonManager extends Entity {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  function onBossFightRoomLeft() {}
-
   function onBossFightCinematicStarted() {}
+
+  function onBossFightRoomLeft() {}
 
   function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, hero: en.Hero.Hero) {}
 

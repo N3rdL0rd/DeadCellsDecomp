@@ -30,9 +30,9 @@ class BoilerRoom extends en.Mob {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, _black: Bool) {}
-
   static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, _black: Bool): BoilerRoom {}
+
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, _black: Bool) {}
 
   function get_eyePosX(): Float {}
 

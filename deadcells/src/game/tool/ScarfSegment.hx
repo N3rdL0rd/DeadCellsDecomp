@@ -6,9 +6,9 @@ class ScarfManager {
   var scarfs: hl.types.ArrayObj<Dynamic>;
   var blendMode: Dynamic;
 
-  function __constructor__(e: Entity) {}
-
   static function create(e: Entity, id: String): ScarfManager {}
+
+  function __constructor__(e: Entity) {}
 
   function dispose() {}
 

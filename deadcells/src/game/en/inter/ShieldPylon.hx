@@ -7,9 +7,9 @@ class ShieldPylon extends en.Interactive {
 
   function onPyloneDestroyed() {}
 
-  static function countFor(e: Entity): Int {}
-
   function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, t: Entity) {}
+
+  static function countFor(e: Entity): Int {}
 
   function initGfx() {}
 

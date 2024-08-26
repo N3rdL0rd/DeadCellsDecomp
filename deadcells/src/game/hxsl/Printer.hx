@@ -8,9 +8,9 @@ class Printer {
 
   static function shaderToString(s: Dynamic, varId: Dynamic): String {}
 
-  static function toString(e: Dynamic, varId: Dynamic): String {}
-
   function __constructor__(varId: Dynamic) {}
+
+  static function toString(e: Dynamic, varId: Dynamic): String {}
 
   function shaderString(s: Dynamic): String {}
 

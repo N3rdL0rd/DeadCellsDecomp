@@ -6,9 +6,9 @@ class CastleFly extends en.mob.Fly {
 
   function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, master: en.mob.Screamer.Screamer) {}
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, master: en.mob.Screamer.Screamer): CastleFly {}
-
   static function preloadGfx() {}
+
+  static function create(lvl: pr.Level.Level, x: Int, y: Int, master: en.mob.Screamer.Screamer): CastleFly {}
 
   function initGfx() {}
 

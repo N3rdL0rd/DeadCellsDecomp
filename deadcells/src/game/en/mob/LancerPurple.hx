@@ -3,9 +3,9 @@ class LancerPurple extends en.mob.Lancer {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
-
   static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): LancerPurple {}
+
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
 
   function getKind(): String {}
 

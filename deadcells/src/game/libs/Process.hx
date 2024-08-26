@@ -23,19 +23,19 @@ class Process {
 
   function onUpdateCb() {}
 
-  function _postUpdate(p: Process) {}
+  function _update(p: Float, tmod: Dynamic) {}
+
+  static function resizeAll() {}
 
   function _dispose(p: Process) {}
 
   static function _checkDestroyeds(plist: hl.types.ArrayObj<Dynamic>) {}
 
-  function _update(p: Float, tmod: Dynamic) {}
-
-  static function resizeAll() {}
-
   function __constructor__(parent: Process) {}
 
   static function updateAll(tmod: Float, rendering: Dynamic) {}
+
+  function _postUpdate(p: Process) {}
 
   function _resize(p: Process) {}
 

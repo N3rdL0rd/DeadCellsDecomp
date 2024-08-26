@@ -5,9 +5,9 @@ class BatKamikaze extends BatKamikazeTemplate {
 
   static function explode(source: Entity, inf: Dynamic) {}
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): BatKamikaze {}
-
   function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+
+  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): BatKamikaze {}
 
   function initGfx() {}
 

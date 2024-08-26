@@ -3,9 +3,9 @@ class SecondaryHand extends en.mob.boss.giant.HandBase {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  static function create(giant: en.mob.boss.Giant.Giant, right: Bool, damageTier: Int, lifeTier: Int): SecondaryHand {}
-
   function __constructor__(giant: en.mob.boss.Giant.Giant, right: Bool, damageTier: Int, lifeTier: Int) {}
+
+  static function create(giant: en.mob.boss.Giant.Giant, right: Bool, damageTier: Int, lifeTier: Int): SecondaryHand {}
 
   function get_idleX(): Float {}
 

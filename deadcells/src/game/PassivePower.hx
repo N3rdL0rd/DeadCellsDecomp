@@ -2,9 +2,9 @@
 class PassivePower extends Power {
   static var __clid: Int;
 
-  function __constructor__(owner: Entity, item: tool.InventItem.InventItem) {}
-
   static function create(o: en.Hero.Hero, i: tool.InventItem.InventItem): PassivePower {}
+
+  function __constructor__(owner: Entity, item: tool.InventItem.InventItem) {}
 
   function init() {}
 

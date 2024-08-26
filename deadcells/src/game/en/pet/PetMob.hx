@@ -13,13 +13,13 @@ class PetMob extends en.Mob {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, kind: String, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, maxDuplicates: Dynamic) {}
-
   static function create(lvl: pr.Level.Level, x: Int, y: Int, kind: String, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, maxDuplicates: Dynamic): PetMob {}
 
-  static function tryToBuff(e: Entity, i: tool.InventItem.InventItem): Dynamic {}
-
   static function findAll(e: Entity, i: tool.InventItem.InventItem): hl.types.ArrayObj<Dynamic> {}
+
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, kind: String, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, maxDuplicates: Dynamic) {}
+
+  static function tryToBuff(e: Entity, i: tool.InventItem.InventItem): Dynamic {}
 
   static function find(e: Entity, i: tool.InventItem.InventItem): PetMob {}
 

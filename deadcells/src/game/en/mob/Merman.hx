@@ -3,9 +3,9 @@ class Merman extends en.mob.Archer {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
-
   static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Merman {}
+
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
 
   function getKind(): String {}
 

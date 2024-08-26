@@ -6,9 +6,9 @@ class ModEventManager extends libs.Process {
   static var instance: ModEventManager;
   static var p_Instance: ModEventManager;
 
-  function __constructor__() {}
-
   static function get_instance(): ModEventManager {}
+
+  function __constructor__() {}
 
   function heroDies() {}
 

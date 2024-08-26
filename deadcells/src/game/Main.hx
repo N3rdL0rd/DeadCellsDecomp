@@ -23,13 +23,13 @@ class Main extends libs.Process.Process {
 
   function onNextLoad(game: pr.Game.Game) {}
 
-  static function canOpenURL(): Bool {}
-
   static function openUrlInBrowser(url: String) {}
 
-  static function openURL(url: String) {}
-
   function __constructor__() {}
+
+  static function canOpenURL(): Bool {}
+
+  static function openURL(url: String) {}
 
   function checkSaveCompat() {}
 

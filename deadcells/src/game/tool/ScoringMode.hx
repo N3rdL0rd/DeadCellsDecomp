@@ -11,9 +11,9 @@ class ScoringMode {
   var isFail: Bool;
   var startedWithAssistMode: Bool;
 
-  function __constructor__(game: pr.Game.Game) {}
-
   static function getLevel(index: Int): String {}
+
+  function __constructor__(game: pr.Game.Game) {}
 
   function initScore() {}
 

@@ -14,9 +14,9 @@ class Pitcher extends en.Mob {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
-
   static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Pitcher {}
+
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
 
   function get_handTracks(): hl.types.ArrayBytes<Int> {}
 

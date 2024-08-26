@@ -230,9 +230,9 @@ class Emitter {
 
   function onDeactivate() {}
 
-  function onUpdate() {}
-
   function onActivate() {}
+
+  function onUpdate() {}
 
   function __constructor__(id: String, fps: Int) {}
 

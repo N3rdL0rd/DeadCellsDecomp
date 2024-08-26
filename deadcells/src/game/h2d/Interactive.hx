@@ -17,31 +17,31 @@ class Interactive extends h2d.Drawable {
   var shapeY: Float;
   var <none>: Dynamic;
 
-  function onKeyDown(e: Dynamic) {}
-
-  function onFocus(e: Dynamic) {}
-
-  function onWheel(e: Dynamic) {}
-
-  function onMove(e: Dynamic) {}
-
   function onClick(e: Dynamic) {}
-
-  function onRelease(e: Dynamic) {}
-
-  function onPush(e: Dynamic) {}
-
-  function onOut(e: Dynamic) {}
 
   function onTextInput(e: Dynamic) {}
 
-  function onKeyUp(e: Dynamic) {}
+  function onMove(e: Dynamic) {}
 
-  function onCheck(e: Dynamic) {}
+  function onPush(e: Dynamic) {}
+
+  function onKeyUp(e: Dynamic) {}
 
   function onFocusLost(e: Dynamic) {}
 
+  function onWheel(e: Dynamic) {}
+
+  function onRelease(e: Dynamic) {}
+
+  function onOut(e: Dynamic) {}
+
   function onOver(e: Dynamic) {}
+
+  function onCheck(e: Dynamic) {}
+
+  function onFocus(e: Dynamic) {}
+
+  function onKeyDown(e: Dynamic) {}
 
   function __constructor__(width: Float, height: Float, parent: h2d.Object.Object, shape: Dynamic) {}
 

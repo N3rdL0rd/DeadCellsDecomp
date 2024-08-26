@@ -20,23 +20,23 @@ class Grenade extends Entity {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
+  function onFixedUpdate() {}
+
+  function onPostUpdate() {}
+
+  function onAboutToExplode() {}
+
+  function onDispose() {}
+
+  function onWallBounce() {}
+
+  function onTrigger() {}
+
   function canTrigger(): Bool {}
 
   function onGroundBounce() {}
 
-  function onPostUpdate() {}
-
-  function onTrigger() {}
-
-  function onAboutToExplode() {}
-
-  function onWallBounce() {}
-
   function canTouch(e: Entity): Bool {}
-
-  function onDispose() {}
-
-  function onFixedUpdate() {}
 
   function __constructor__(from: Entity, timerS: Dynamic) {}
 

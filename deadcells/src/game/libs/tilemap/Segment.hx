@@ -4,21 +4,21 @@ class Segment {
   var b: Dynamic;
   var normal: Int;
 
-  static function getMaximumIndependentSet(segments: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
-
   function xMinSort(s1: Segment): Int {}
-
-  function __constructor__(a: Dynamic, b: Dynamic) {}
 
   static function getIntersectionGroups(segments: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
 
-  static function hvSplit(segments: hl.types.ArrayObj<Dynamic>, hSegs: hl.types.ArrayObj<Dynamic>, vSegs: hl.types.ArrayObj<Dynamic>) {}
-
   static function getRectangle(neighbors: haxe.ds.ObjectMap, start: Dynamic): Dynamic {}
 
-  static function toRectangles(segments: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+  static function getMaximumIndependentSet(segments: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+
+  function __constructor__(a: Dynamic, b: Dynamic) {}
 
   function yMinSort(s1: Segment): Int {}
+
+  static function hvSplit(segments: hl.types.ArrayObj<Dynamic>, hSegs: hl.types.ArrayObj<Dynamic>, vSegs: hl.types.ArrayObj<Dynamic>) {}
+
+  static function toRectangles(segments: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
 
   function swapVertices() {}
 

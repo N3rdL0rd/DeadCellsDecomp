@@ -7,9 +7,9 @@ class Consume {
   var wid: Int;
   var hei: Int;
 
-  static function genPoints(wid: Int, hei: Int, n: Int, dir: Dynamic, rng: libs.Rand.Rand): hl.types.ArrayObj<Dynamic> {}
-
   function __constructor__(spr: libs.heaps.slib.HSprite.HSprite, glowingBorder: Bool) {}
+
+  static function genPoints(wid: Int, hei: Int, n: Int, dir: Dynamic, rng: libs.Rand.Rand): hl.types.ArrayObj<Dynamic> {}
 
   function update(tmod: Float) {}
 

@@ -5,9 +5,9 @@ class User {
   var waiting: hl.types.ArrayObj<Dynamic>;
   static var users: haxe.ds.StringMap;
 
-  function __constructor__(uid: hl.Bytes) {}
-
   static function fromUID(uid: hl.Bytes): User {}
+
+  function __constructor__(uid: hl.Bytes) {}
 
   function getID32(): Int {}
 

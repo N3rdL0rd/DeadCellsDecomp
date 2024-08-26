@@ -4,9 +4,9 @@ class Icon extends h2d.Bitmap.Bitmap {
 
   function __constructor__(tile: h2d.Tile.Tile, parent: h2d.Object.Object) {}
 
-  static function createMobIcon(mobKind: String, parent: h2d.Object.Object): Icon {}
-
   static function createItemIcon(itemKind: String, parent: h2d.Object.Object): Icon {}
+
+  static function createMobIcon(mobKind: String, parent: h2d.Object.Object): Icon {}
 
   function addForeground(tile: h2d.Tile.Tile) {}
 

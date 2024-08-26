@@ -15,29 +15,29 @@ class Interactive extends h3d.scene.Object.Object {
 
   function onFocus(e: Dynamic) {}
 
-  function onRelease(e: Dynamic) {}
-
-  function onPush(e: Dynamic) {}
+  function onKeyUp(e: Dynamic) {}
 
   function onWheel(e: Dynamic) {}
 
   function onMove(e: Dynamic) {}
 
-  function onOut(e: Dynamic) {}
+  function onRelease(e: Dynamic) {}
+
+  function onPush(e: Dynamic) {}
+
+  function onClick(e: Dynamic) {}
 
   function onOver(e: Dynamic) {}
 
-  function onCheck(e: Dynamic) {}
+  function onFocusLost(e: Dynamic) {}
 
-  function onClick(e: Dynamic) {}
+  function onOut(e: Dynamic) {}
 
   function onTextInput(e: Dynamic) {}
 
   function onKeyDown(e: Dynamic) {}
 
-  function onKeyUp(e: Dynamic) {}
-
-  function onFocusLost(e: Dynamic) {}
+  function onCheck(e: Dynamic) {}
 
   function __constructor__(shape: Dynamic, parent: h3d.scene.Object.Object) {}
 

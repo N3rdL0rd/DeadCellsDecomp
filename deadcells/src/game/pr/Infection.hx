@@ -13,9 +13,9 @@ class Infection extends libs.Process {
   var mobTpWithNeighbourRange: Dynamic;
   var mobDeck: libs.RandDeck.RandDeck;
 
-  static function isInfectionRuleActiveForTier(rule: Dynamic, tier: Int): Bool {}
-
   static function getRulesActiveAt(tier: Int): hl.types.ArrayObj<Dynamic> {}
+
+  static function isInfectionRuleActiveForTier(rule: Dynamic, tier: Int): Bool {}
 
   function __constructor__(game: pr.Game.Game) {}
 

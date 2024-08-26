@@ -21,15 +21,15 @@ class HookChain extends libs.Process {
   var enableOnionTrail: Bool;
   var onions: hl.types.ArrayObj<Dynamic>;
 
-  function onRetractStart() {}
+  function onBlockedBy(e: Entity) {}
 
   function onHook(e: Entity) {}
 
-  function onBlockedBy(e: Entity) {}
-
-  function onReachWall() {}
+  function onRetractStart() {}
 
   function onRetractComplete(hasHookedSomeone: Bool) {}
+
+  function onReachWall() {}
 
   function onReachNothing() {}
 

@@ -21,17 +21,11 @@ class TextInput extends h2d.Text {
   var lastClick: Float;
   var maxHistorySize: Int;
 
-  function onTextInput(e: Dynamic) {}
-
-  function onKeyDown(e: Dynamic) {}
-
-  function onRelease(e: Dynamic) {}
-
-  function onClick(e: Dynamic) {}
-
-  function onFocus(e: Dynamic) {}
+  function onKeyUp(e: Dynamic) {}
 
   function onChange() {}
+
+  function onRelease(e: Dynamic) {}
 
   function onPush(e: Dynamic) {}
 
@@ -39,11 +33,17 @@ class TextInput extends h2d.Text {
 
   function onOver(e: Dynamic) {}
 
+  function onMove(e: Dynamic) {}
+
   function onOut(e: Dynamic) {}
 
-  function onKeyUp(e: Dynamic) {}
+  function onFocus(e: Dynamic) {}
 
-  function onMove(e: Dynamic) {}
+  function onClick(e: Dynamic) {}
+
+  function onKeyDown(e: Dynamic) {}
+
+  function onTextInput(e: Dynamic) {}
 
   function __constructor__(font: h2d.Font.Font, parent: h2d.Object.Object) {}
 

@@ -17,9 +17,9 @@ class BossRushMode {
   var skippedStage: Int;
   static var LAST_STAGE: Int;
 
-  function __constructor__(_game: pr.Game.Game) {}
-
   static function getBossLifePrctModifier(): Float {}
+
+  function __constructor__(_game: pr.Game.Game) {}
 
   function get_isCustomRoute(): Bool {}
 

@@ -4,9 +4,9 @@ class TeslaCoil extends en.active.Turret {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
-
   static function create(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem): TeslaCoil {}
+
+  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
 
   function initGfx() {}
 

@@ -28,9 +28,9 @@ class AdeleScytheGhost extends en.Mob.Mob {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, sprData: Dynamic) {}
-
   static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, sprData: Dynamic): AdeleScytheGhost {}
+
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, sprData: Dynamic) {}
 
   function canBeHit(): Bool {}
 

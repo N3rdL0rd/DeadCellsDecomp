@@ -13,21 +13,21 @@ class Ammo extends en.Loot {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function doCustomUpdate() {}
+  function onManualPickUp() {}
 
   function beforeFallFromEntity() {}
 
-  function onManualPickUp() {}
-
   function doCustomFx() {}
 
-  static function countOnEntity(e: Entity): Int {}
-
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, team: tool.Team.Team) {}
+  function doCustomUpdate() {}
 
   static function create(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, team: tool.Team.Team): Ammo {}
 
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, team: tool.Team.Team) {}
+
   static function dropFromEntity(e: Entity, n: Dynamic, immediateGrab: Dynamic): Bool {}
+
+  static function countOnEntity(e: Entity): Int {}
 
   function initGfx() {}
 

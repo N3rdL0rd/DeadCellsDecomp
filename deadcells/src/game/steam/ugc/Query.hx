@@ -9,11 +9,11 @@ class Query {
   var totalResults: Int;
   var cached: Bool;
 
+  static function details(ids: hl.types.ArrayObj<Dynamic>): Query {}
+
   function __constructor__(b: hl.Bytes) {}
 
   static function userList(user: steam.User.User, listType: Int, ugcType: Int, order: Int, creatorApp: Int, consumerApp: Int, page: Int): Query {}
-
-  static function details(ids: hl.types.ArrayObj<Dynamic>): Query {}
 
   function set_returnKeyValueTags(b: Bool): Bool {}
 

@@ -4,21 +4,21 @@ class TeleJump extends tool.skill.OldMobSkill {
   var point: Dynamic;
   var maxDistance: Int;
 
-  function listAlikes(): hl.types.ArrayObj<Dynamic> {}
-
-  function onJumpEndCallback() {}
-
   function onJumpEnd() {}
-
-  function onExecuteSucceed() {}
-
-  function chooseDestination(): Dynamic {}
 
   function chargeAnimSequence() {}
 
   function onJumpChargeStartCallback() {}
 
+  function chooseDestination(): Dynamic {}
+
   function dynOnChargeStart() {}
+
+  function onJumpEndCallback() {}
+
+  function onExecuteSucceed() {}
+
+  function listAlikes(): hl.types.ArrayObj<Dynamic> {}
 
   function dynOnExecute(ratio: Float) {}
 

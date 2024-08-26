@@ -6,9 +6,9 @@ class Parser {
   static var START_MATRIX: hl.types.ArrayObj<Dynamic>;
   static var STEP_MATRIX: hl.types.ArrayObj<Dynamic>;
 
-  static function createStepMatrix(dir: Int): hl.types.ArrayBytes<Int> {}
-
   function __constructor__(grid: hl.types.ArrayBytes<Int>, wid: Int, hei: Int) {}
+
+  static function createStepMatrix(dir: Int): hl.types.ArrayBytes<Int> {}
 
   function getCollisionPolygons(s: Dynamic): hl.types.ArrayObj<Dynamic> {}
 

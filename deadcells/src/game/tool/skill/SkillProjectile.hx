@@ -14,9 +14,9 @@ class SkillProjectile extends tool.skill.Skill.SkillEvent {
   var pierce: Int;
   var ignoreWalls: Bool;
 
-  function customTail() {}
-
   function spawnCustomBullet(skillData: tool.atk.AttackData.AttackData, ang: Float): en.Bullet.Bullet {}
+
+  function customTail() {}
 
   function __constructor__(type: Dynamic, sprite: String, skill: tool.skill.Skill.Skill, delay: Float, customId: String, trigger: Dynamic, minMaxRatio: Dynamic) {}
 

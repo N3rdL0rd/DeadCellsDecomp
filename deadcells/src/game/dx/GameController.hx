@@ -12,9 +12,9 @@ class GameController {
   static var UID: Int;
   static var ALL: hl.types.ArrayObj<Dynamic>;
 
-  static function detect(onDetect: Dynamic) {}
-
   function __constructor__() {}
+
+  static function detect(onDetect: Dynamic) {}
 
   static function init() {}
 

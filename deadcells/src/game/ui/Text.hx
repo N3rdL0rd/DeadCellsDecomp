@@ -19,13 +19,13 @@ class Text extends h2d.HtmlText {
 
   function get_pixelScale(): Float {}
 
-  function __constructor__(p: h2d.Object.Object, big: Dynamic, isMedieval: Dynamic, customScale: Dynamic, imageVerticalAlign: Dynamic, customFont: Dynamic) {}
-
-  static function applyTierColors() {}
-
   static function onCdbReload() {}
 
   static function getTierColor(tier: String): Int {}
+
+  function __constructor__(p: h2d.Object.Object, big: Dynamic, isMedieval: Dynamic, customScale: Dynamic, imageVerticalAlign: Dynamic, customFont: Dynamic) {}
+
+  static function applyTierColors() {}
 
   function initBackground() {}
 

@@ -2,9 +2,9 @@ package hxsl;
 class Clone {
   var varMap: haxe.ds.IntMap<Dynamic>;
 
-  static function shaderData(s: Dynamic): Dynamic {}
-
   function __constructor__() {}
+
+  static function shaderData(s: Dynamic): Dynamic {}
 
   function tvar(v: Dynamic): Dynamic {}
 

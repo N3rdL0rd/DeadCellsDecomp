@@ -12,13 +12,13 @@ class Visibility {
 
   static function getAngleBetween(x1: Float, y1: Float, x2: Float, y2: Float): Float {}
 
-  static function compareEdge(a: Dynamic, b: Dynamic): Int {}
-
   static function getEdgeDir(e: Dynamic): Int {}
 
   static function isSameDir(dBase: Int, d: Int): Bool {}
 
   function __constructor__() {}
+
+  static function compareEdge(a: Dynamic, b: Dynamic): Int {}
 
   function addStaticWall(x1: Float, y1: Float, x2: Float, y2: Float, mask: Dynamic) {}
 

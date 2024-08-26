@@ -10,9 +10,9 @@ class DynamicBiomeDisp extends level.BiomeDisp {
   var mainCamFogConf: Dynamic;
   var otherCamFogConf: Dynamic;
 
-  function __constructor__(level: pr.Level.Level, map: level.LevelMap.LevelMap, mainBiomeKind: String, otherBiomeKind: String, blendConfiguration: Dynamic, parallaxInfo: hl.types.ArrayObj<Dynamic>) {}
-
   static function readLightConf(lightKind: String, biomeKind: String): Dynamic {}
+
+  function __constructor__(level: pr.Level.Level, map: level.LevelMap.LevelMap, mainBiomeKind: String, otherBiomeKind: String, blendConfiguration: Dynamic, parallaxInfo: hl.types.ArrayObj<Dynamic>) {}
 
   function render() {}
 

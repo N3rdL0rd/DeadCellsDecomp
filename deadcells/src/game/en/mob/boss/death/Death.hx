@@ -38,9 +38,9 @@ class Death extends en.mob.Boss {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
-
   static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Death {}
+
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
 
   function get_coreTracks(): hl.types.ArrayBytes<Int> {}
 

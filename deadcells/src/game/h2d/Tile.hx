@@ -14,9 +14,9 @@ class Tile {
   var isFlipX: Bool;
   var isFlipY: Bool;
 
-  function __constructor__(tex: h3d.mat.Texture.Texture, x: Int, y: Int, w: Int, h: Int, dx: Dynamic, dy: Dynamic) {}
-
   static function fromTexture(t: h3d.mat.Texture.Texture): Tile {}
+
+  function __constructor__(tex: h3d.mat.Texture.Texture, x: Int, y: Int, w: Int, h: Int, dx: Dynamic, dy: Dynamic) {}
 
   static function fromColor(color: Int, width: Dynamic, height: Dynamic, alpha: Dynamic, allocPos: Dynamic): Tile {}
 

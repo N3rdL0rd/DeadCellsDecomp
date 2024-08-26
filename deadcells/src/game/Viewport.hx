@@ -39,9 +39,9 @@ class Viewport extends libs.Process {
   static var NATIVE_HEIGHT: Int;
   static var __clid: Int;
 
-  static function damp(a: Float, b: Float, rate: Float, tmod: Float): Float {}
-
   function __constructor__(lvl: pr.Level.Level) {}
+
+  static function damp(a: Float, b: Float, rate: Float, tmod: Float): Float {}
 
   function set_zoom(v: Float): Float {}
 

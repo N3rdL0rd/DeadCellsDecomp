@@ -14,15 +14,15 @@ class LevelAreaAffect {
   var <none>: Dynamic;
   static var __clid: Int;
 
-  function __constructor__(l: pr.Level.Level) {}
+  static function iceWaterPropagation(level: pr.Level.Level, cx: Int, cy: Int, aDurationS: Float, aValue: Float) {}
+
+  static function electricityWaterPropagation(level: pr.Level.Level, cx: Int, cy: Int, aDurationS: Float, aValue: Float) {}
 
   static function waterPropagation(level: pr.Level.Level, affect: Int, cx: Int, cy: Int, aoeMinS: Float, aoeMaxS: Float, aDurationS: Float, aValue: Float) {}
 
   static function isValidPosFor(level: pr.Level.Level, a: Int, cx: Int, cy: Int): Bool {}
 
-  static function electricityWaterPropagation(level: pr.Level.Level, cx: Int, cy: Int, aDurationS: Float, aValue: Float) {}
-
-  static function iceWaterPropagation(level: pr.Level.Level, cx: Int, cy: Int, aDurationS: Float, aValue: Float) {}
+  function __constructor__(l: pr.Level.Level) {}
 
   function init(x: Int, y: Int, durationS: Float, a: Int, aDurationS: Float, aValue: Float, affixes: hl.types.ArrayObj<Dynamic>) {}
 

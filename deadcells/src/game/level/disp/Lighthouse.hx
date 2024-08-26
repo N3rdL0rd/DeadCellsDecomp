@@ -64,9 +64,9 @@ class Lighthouse extends level.DynamicBiomeDisp {
   var fireDarkColor: Int;
   var fireLightColor: Int;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome1: String, biome2: String) {}
-
   static function invLerp(a: Float, b: Float, value: Float, clamp: Dynamic): Float {}
+
+  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome1: String, biome2: String) {}
 
   function computeHorizonY() {}
 

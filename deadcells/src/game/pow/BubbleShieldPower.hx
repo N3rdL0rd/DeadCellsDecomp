@@ -4,9 +4,9 @@ class BubbleShieldPower extends Power {
   var parriedSomething: Bool;
   static var __clid: Int;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
-
   static function createCounterBullet(owner: en.Hero.Hero, item: tool.InventItem.InventItem, sourceAtk: tool.atk.AttackData.AttackData, cBullet: en.Bullet.Bullet): en.Bullet.Bullet {}
+
+  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
 
   function setDurationS(duration: Float) {}
 

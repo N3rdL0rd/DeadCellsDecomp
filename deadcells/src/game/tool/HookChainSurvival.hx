@@ -31,11 +31,11 @@ class HookChainSurvival extends libs.Process {
   var onions: hl.types.ArrayObj<Dynamic>;
   var lastCheck: tool.FPoint.FPoint;
 
-  function onRetractComplete() {}
+  function onReachNothing() {}
 
   function onRetractStart() {}
 
-  function onReachNothing() {}
+  function onRetractComplete() {}
 
   function __constructor__(e: en.mob.AmazonSurvival.AmazonSurvival, k: String, idProjectile: String, len: Float, targetGetter: Dynamic, _hand: String) {}
 

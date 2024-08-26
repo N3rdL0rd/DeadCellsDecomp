@@ -21,9 +21,9 @@ class WorldMap {
   static var _bezierOffset: Int;
   static var _bezierSteps: Int;
 
-  function __constructor__(curLevel: pr.Level.Level) {}
-
   static function canLevelBeDisplayed(level: Dynamic): Bool {}
+
+  function __constructor__(curLevel: pr.Level.Level) {}
 
   function get_levelLinks(): hl.types.ArrayObj<Dynamic> {}
 

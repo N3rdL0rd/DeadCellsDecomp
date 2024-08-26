@@ -19,11 +19,11 @@ class Chain {
 
   function getEndY(): Float {}
 
-  function getEndX(): Float {}
-
   function getStartY(): Float {}
 
   function getStartX(): Float {}
+
+  function getEndX(): Float {}
 
   function __constructor__(_lib: libs.heaps.slib.SpriteLib.SpriteLib, sprName: String, lighted: Dynamic, nrmTex: h3d.mat.Texture.Texture, _offsetX: Dynamic) {}
 

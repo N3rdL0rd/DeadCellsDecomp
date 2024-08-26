@@ -29,9 +29,9 @@ class Engine {
   var resCache: haxe.ds.ObjectMap;
   static var CURRENT: Engine;
 
-  function onReady() {}
-
   function onResized() {}
+
+  function onReady() {}
 
   function onContextLost() {}
 

@@ -5,9 +5,9 @@ class RootTrap extends en.Active {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  static function create(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem): RootTrap {}
-
   function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
+
+  static function create(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem): RootTrap {}
 
   function initGfx() {}
 

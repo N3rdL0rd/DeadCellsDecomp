@@ -3,9 +3,9 @@ class Charset {
   var map: haxe.ds.IntMap<Dynamic>;
   static var inst: Charset;
 
-  static function getDefault(): Charset {}
-
   function __constructor__() {}
+
+  static function getDefault(): Charset {}
 
   function resolveChar(code: Int, glyphs: haxe.ds.IntMap<Dynamic>): Dynamic {}
 

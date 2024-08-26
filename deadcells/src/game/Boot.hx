@@ -1,3 +1,5 @@
+package deadcells.src.game;
+
 
 class Boot extends hxd.App {
   var controller: tool.Controller.Controller;
@@ -14,29 +16,29 @@ class Boot extends hxd.App {
   static var returnToMainMenuAfterLoadingNextFrame: Bool;
   static var prevDelta: Float;
 
+  static function initRes() {}
+
+  function __constructor__() {}
+
+  static function tryRender() {}
+
+  static function main() {}
+
   static function initPlatform(args: hl.types.ArrayObj<Dynamic>) {}
 
   static function initLogSystem() {}
 
-  static function logClientInfos() {}
-
   static function exit(): Bool {}
-
-  static function main() {}
 
   static function onLoadingEnd() {}
 
-  function __constructor__() {}
-
-  static function initRes() {}
-
-  static function tryRender() {}
-
   static function initMods(args: hl.types.ArrayObj<Dynamic>) {}
+
+  static function logClientInfos() {}
 
   static function initXboxGdk() {}
 
-  override function init() {}
+  function init() {}
 
   function initConsoles() {}
 
@@ -44,7 +46,7 @@ class Boot extends hxd.App {
 
   function endInit() {}
 
-  override function onResize() {}
+  function onResize() {}
 
   function returnToMainMenu() {}
 
@@ -58,11 +60,11 @@ class Boot extends hxd.App {
 
   function onControllerChange() {}
 
-  override function render(e: h3d.Engine.Engine) {}
+  function render(e: h3d.Engine.Engine) {}
 
-  override function update(dt: Float) {}
+  function update(dt: Float) {}
 
-  override function mainLoop() {}
+  function mainLoop() {}
 
   function onExit(): Bool {}
 

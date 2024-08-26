@@ -9,11 +9,11 @@ class Pet extends Entity {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, p: Entity, i: tool.InventItem.InventItem) {}
+
   static function find(e: Entity, i: tool.InventItem.InventItem): Pet {}
 
   static function tryToBuff(e: Entity, i: tool.InventItem.InventItem): Dynamic {}
-
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, p: Entity, i: tool.InventItem.InventItem) {}
 
   function init() {}
 

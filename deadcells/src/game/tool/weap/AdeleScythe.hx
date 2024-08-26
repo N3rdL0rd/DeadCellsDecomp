@@ -2,11 +2,11 @@ package tool.weap;
 class AdeleScythe extends tool.Weapon {
   var delayer: libs.Delayer.Delayer;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+  static function isExclude(mob: en.Mob.Mob): Bool {}
 
   static function createGhost(mob: en.Mob.Mob, item: tool.InventItem.InventItem) {}
 
-  static function isExclude(mob: en.Mob.Mob): Bool {}
+  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
 
   function onExecute(): Bool {}
 

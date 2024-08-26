@@ -29,9 +29,9 @@ class RoomNode {
   var y: Int;
   var errors: Int;
 
-  function copyRec(root: RoomNode): RoomNode {}
-
   function __constructor__(type: String, group: Dynamic, struct: level.LevelStruct.LevelStruct, uid: String) {}
+
+  function copyRec(root: RoomNode): RoomNode {}
 
   function setUID(_uid: String) {}
 

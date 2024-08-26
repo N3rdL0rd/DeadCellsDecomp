@@ -7,9 +7,9 @@ class Blueprint extends en.Loot {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, k: String): Blueprint {}
-
   function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, k: String) {}
+
+  static function create(lvl: pr.Level.Level, x: Int, y: Int, k: String): Blueprint {}
 
   function canBeActivated(by: en.Hero.Hero): Bool {}
 

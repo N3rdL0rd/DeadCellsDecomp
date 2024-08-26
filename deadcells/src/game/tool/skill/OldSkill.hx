@@ -26,25 +26,25 @@ class OldSkill extends libs.Process {
   var active: Bool;
   var sfxCustom: hxd.res.Sound.Sound;
 
+  function dynOnExecute(ratio: Float) {}
+
+  function dynOnInterrupt(ratio: Float) {}
+
   function dynOnFxFrame() {}
-
-  function dynOnCoolDownComplete() {}
-
-  function dynOnChargeComplete() {}
 
   function dynOnAttackAnim() {}
 
-  function dynOnChargeStart() {}
-
-  function dynOnCharging(ratio: Float) {}
-
   function onSetCooldown(f: Float) {}
 
-  function dynOnExecute(ratio: Float) {}
+  function dynOnCoolDownComplete() {}
 
   function dynHasCooldown(): Bool {}
 
-  function dynOnInterrupt(ratio: Float) {}
+  function dynOnChargeComplete() {}
+
+  function dynOnCharging(ratio: Float) {}
+
+  function dynOnChargeStart() {}
 
   function __constructor__(id: String, e: Entity, cb: Dynamic) {}
 

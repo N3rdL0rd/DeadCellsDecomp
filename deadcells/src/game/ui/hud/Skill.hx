@@ -50,13 +50,13 @@ class Skill extends h2d.Layers {
   static var ICON_SIZE: Int;
   static var ICONBG_SIZE: Int;
 
-  function hasAmmo(): Bool {}
-
   function get_pixelScale(): Float {}
 
   function getAmmo(): Float {}
 
   function getMaxAmmo(): Int {}
+
+  function hasAmmo(): Bool {}
 
   function __constructor__(act: Dynamic, p: h2d.Object.Object, ctrlBg: Dynamic, _showTierIcon: Dynamic) {}
 

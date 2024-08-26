@@ -6,9 +6,9 @@ class Driver {
   var tmpBytes: haxe.io.Bytes;
   var <none>: Dynamic;
 
-  static function checkAL(msg: String): Int {}
-
   function __constructor__() {}
+
+  static function checkAL(msg: String): Int {}
 
   function getTmpBytes(size: Int): haxe.io.Bytes {}
 

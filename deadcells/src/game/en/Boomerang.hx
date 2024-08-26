@@ -11,15 +11,15 @@ class Boomerang extends Entity {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  function onTouchTarget(e: Entity): Bool {}
-
   function onDispose() {}
+
+  function onObstacle() {}
 
   function onFixedUpdate() {}
 
   function onPostUpdate() {}
 
-  function onObstacle() {}
+  function onTouchTarget(e: Entity): Bool {}
 
   function __constructor__(from: Entity, i: tool.InventItem.InventItem, ang: Float) {}
 

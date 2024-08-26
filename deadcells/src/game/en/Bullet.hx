@@ -35,29 +35,29 @@ class Bullet extends Entity {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  function onBeforeRender() {}
-
-  function onBulletKill(e: Entity, atk: tool.atk.AttackData.AttackData) {}
-
-  function onPostUpdate() {}
-
   function onBulletDelayDone() {}
 
   function onCountered() {}
 
   function onBlock(byEntity: Bool) {}
 
-  function beforeHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+  function onPostUpdate() {}
 
   function onFixedUpdate() {}
 
-  function canHit(e: Entity): Bool {}
-
-  function onDispose() {}
+  function onBeforeRender() {}
 
   function onReachMaxDist() {}
 
+  function canHit(e: Entity): Bool {}
+
+  function onBulletKill(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+
+  function onDispose() {}
+
   function onBulletHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+
+  function beforeHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
 
   function __constructor__(from: Entity, a: tool.atk.AttackData.AttackData, ang: Float, spd: Dynamic, spriteName: String) {}
 

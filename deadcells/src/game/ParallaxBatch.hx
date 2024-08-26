@@ -33,9 +33,9 @@ class ParallaxBatch extends libs.heaps.slib.HSpriteBatch {
   var vwid: Float;
   var vhei: Float;
 
-  static function sortLayers(a: ParallaxBatch.ParallaxBatch, b: ParallaxBatch.ParallaxBatch): Int {}
-
   function __constructor__(tile: h2d.Tile.Tile, bounds: h2d.col.Bounds.Bounds, viewport: Viewport, p: h2d.Object.Object) {}
+
+  static function sortLayers(a: ParallaxBatch.ParallaxBatch, b: ParallaxBatch.ParallaxBatch): Int {}
 
   function createLayer(prio: Int, scrollX: Dynamic, scrollY: Dynamic): ParallaxBatch.ParallaxBatch {}
 

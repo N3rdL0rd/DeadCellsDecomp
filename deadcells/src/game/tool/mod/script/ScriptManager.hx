@@ -3,9 +3,9 @@ class ScriptManager {
   var struct: tool.mod.script.StructInterpreter.StructInterpreter;
   static var privateInstance: ScriptManager;
 
-  static function get_instance(): ScriptManager {}
-
   function __constructor__() {}
+
+  static function get_instance(): ScriptManager {}
 
   function reset() {}
 

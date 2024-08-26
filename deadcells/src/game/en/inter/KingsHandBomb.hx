@@ -5,9 +5,9 @@ class KingsHandBomb extends en.Interactive {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function onBombLand() {}
-
   function onTrigger() {}
+
+  function onBombLand() {}
 
   function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, inf: Dynamic) {}
 

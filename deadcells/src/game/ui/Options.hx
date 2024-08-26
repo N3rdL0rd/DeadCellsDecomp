@@ -8,11 +8,11 @@ class Options extends OptionsBase {
   static var firstInitDone: Bool;
   static var ME: Options;
 
-  static function onItemDownloaded(_item: steam.ugc.Item.Item) {}
+  static function onItemInstalled(_item: steam.ugc.Item.Item) {}
 
   function __constructor__(pauseUI: ui.Pause.Pause, defaultSection: Dynamic, editCustomBindings: Dynamic) {}
 
-  static function onItemInstalled(_item: steam.ugc.Item.Item) {}
+  static function onItemDownloaded(_item: steam.ugc.Item.Item) {}
 
   function isOnAModSection(): Bool {}
 

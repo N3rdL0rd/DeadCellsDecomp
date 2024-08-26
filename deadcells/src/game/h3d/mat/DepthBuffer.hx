@@ -5,9 +5,9 @@ class DepthBuffer {
   var height: Int;
   var format: Dynamic;
 
-  function __constructor__(width: Int, height: Int, format: Dynamic) {}
-
   static function getDefault(): DepthBuffer {}
+
+  function __constructor__(width: Int, height: Int, format: Dynamic) {}
 
   function alloc() {}
 

@@ -10,9 +10,9 @@ class FlyingCrow extends en.Mob {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function __constructor__(level: pr.Level.Level, cx: Int, cy: Int, dmgTier: Int, lifeTier: Int, dx: Float, hero: en.Hero.Hero, crowManager: en.CrowManager.CrowManager) {}
-
   static function create(level: pr.Level.Level, cx: Int, cy: Int, dmgTier: Int, lifeTier: Int, dx: Float, hero: en.Hero.Hero, crowManager: en.CrowManager.CrowManager): FlyingCrow {}
+
+  function __constructor__(level: pr.Level.Level, cx: Int, cy: Int, dmgTier: Int, lifeTier: Int, dx: Float, hero: en.Hero.Hero, crowManager: en.CrowManager.CrowManager) {}
 
   function init() {}
 

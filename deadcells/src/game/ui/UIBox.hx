@@ -17,27 +17,27 @@ class UIBox extends h2d.Layers {
 
   function get_pixelScale(): Float {}
 
-  static function drawBoxDialog(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, colBG: Int): UIBox {}
+  static function drawBoxMain(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, col: Dynamic, adjust: Dynamic): UIBox {}
+
+  static function drawBoxValidation(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, logo: Dynamic, adjust: Dynamic): UIBox {}
+
+  static function drawBoxInfo(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, col: Dynamic, alpha: Dynamic, adjust: Dynamic): UIBox {}
 
   static function drawBoxHud(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, adjust: Dynamic): UIBox {}
 
-  static function drawBoxMain(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, col: Dynamic, adjust: Dynamic): UIBox {}
+  static function drawBoxBlueAssist(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, colBG: Int): UIBox {}
+
+  static function drawBoxOutline(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, col: Dynamic, adjust: Dynamic): UIBox {}
+
+  static function drawBoxLegendaryOutline(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, adjust: Dynamic): UIBox {}
 
   function __constructor__(idTile: String, wid: Float, hei: Float, padH: Int, padV: Int) {}
 
   static function drawBoxCollector(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, colBG: Int): UIBox {}
 
-  static function drawBoxInfo(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, col: Dynamic, alpha: Dynamic, adjust: Dynamic): UIBox {}
-
-  static function drawBoxLegendaryOutline(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, adjust: Dynamic): UIBox {}
-
-  static function drawBoxBlueAssist(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, colBG: Int): UIBox {}
+  static function drawBoxDialog(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, colBG: Int): UIBox {}
 
   static function drawBoxThink(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, colBG: Int): UIBox {}
-
-  static function drawBoxValidation(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, logo: Dynamic, adjust: Dynamic): UIBox {}
-
-  static function drawBoxOutline(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, col: Dynamic, adjust: Dynamic): UIBox {}
 
   function addSecondaryBox(idTile: String) {}
 

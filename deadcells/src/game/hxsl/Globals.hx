@@ -6,9 +6,9 @@ class Globals {
   static var ALL: hl.types.ArrayObj<Dynamic>;
   static var MAP: haxe.ds.StringMap;
 
-  static function allocID(path: String): Dynamic {}
-
   function __constructor__() {}
+
+  static function allocID(path: String): Dynamic {}
 
   function set(path: String, v: Dynamic) {}
 

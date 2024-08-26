@@ -6,11 +6,11 @@ class Lava extends en.LevelTrap {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
+  static function adjustLavaBounds(map: level.LevelMap.LevelMap, lavas: hl.types.ArrayObj<Dynamic>) {}
+
   static function moveNeighbourLavaDownTo(map: level.LevelMap.LevelMap, lavas: hl.types.ArrayObj<Dynamic>, ref: hxbit.Macros.Macros) {}
 
   function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, w: Int, h: Int) {}
-
-  static function adjustLavaBounds(map: level.LevelMap.LevelMap, lavas: hl.types.ArrayObj<Dynamic>) {}
 
   function canBeHit(): Bool {}
 

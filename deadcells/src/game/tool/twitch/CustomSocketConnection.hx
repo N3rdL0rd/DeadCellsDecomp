@@ -12,9 +12,9 @@ class CustomSocketConnection {
 
   function onMessage(type: String, data: String) {}
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
-
   function onError(rawData: String, error: String) {}
+
+  function onCooldownEnd(k: String, subIndex: Int) {}
 
   function __constructor__(address: String, port: Dynamic) {}
 

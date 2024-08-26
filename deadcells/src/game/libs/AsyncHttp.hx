@@ -77,15 +77,15 @@ class AsyncHttp {
   static var CHUNK_RE: EReg;
   static var REG_ABSOLUTE: EReg;
 
-  function onRedirect(url: String) {}
-
-  function onData(data: haxe.io.Bytes) {}
-
   function onError(e: Dynamic) {}
 
   function onProgress(read: Bool, doneSize: Int, totalSize: Int) {}
 
+  function onRedirect(url: String) {}
+
   function onStatus(status: Int) {}
+
+  function onData(data: haxe.io.Bytes) {}
 
   function __constructor__(url: String) {}
 

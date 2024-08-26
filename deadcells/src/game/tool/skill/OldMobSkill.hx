@@ -16,21 +16,21 @@ class OldMobSkill extends tool.skill.OldSkill {
   var applyOnTouchOtherMobsMethod: Bool;
   var interruptOnNoTarget: Bool;
 
-  function canUse(): Bool {}
-
   function dynOnBeforePrepare() {}
 
-  function dynOnAnnounce() {}
-
-  function dynOnTouchEntity(e: Entity) {}
+  function dynOnTouchOtherMobs(e: Entity) {}
 
   function getSameSkillLockDuration(chargeF: Float, cooldownF: Float): Float {}
 
   function canUseOn(e: Entity): Bool {}
 
-  function dynOnTouchOtherMobs(e: Entity) {}
+  function dynOnAnnounce() {}
 
   function dynNeedFacing(): Bool {}
+
+  function canUse(): Bool {}
+
+  function dynOnTouchEntity(e: Entity) {}
 
   function dynOnChargingArea(area: tool.Area.Area, ratio: Float) {}
 

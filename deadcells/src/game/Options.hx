@@ -148,17 +148,17 @@ class Options {
   static var _keepUniqId: String;
   static var keyLayout: String;
 
-  static function reset() {}
+  static function load(): Options {}
+
+  function __constructor__() {}
 
   static function convKey(azertyKey: Int): Int {}
 
-  function __constructor__() {}
+  static function reset() {}
 
   static function loadAndApply(ignoreLang: Dynamic): Options {}
 
   static function dumpControllerConfig(_gamepad: Dynamic, _keyboard: Dynamic, isNormalBindings: Bool) {}
-
-  static function load(): Options {}
 
   static function keyName(code: Int): String {}
 

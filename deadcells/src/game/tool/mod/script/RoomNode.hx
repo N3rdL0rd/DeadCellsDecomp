@@ -3,9 +3,9 @@ class RoomNode {
   var p_RoomNode: level.RoomNode.RoomNode;
   static var p_RoomMap: haxe.ds.ObjectMap;
 
-  static function p_getRoomNodeFromLevelRoomNode(_levelRoomNode: level.RoomNode.RoomNode): RoomNode {}
-
   function __constructor__(_roomNode: level.RoomNode.RoomNode) {}
+
+  static function p_getRoomNodeFromLevelRoomNode(_levelRoomNode: level.RoomNode.RoomNode): RoomNode {}
 
   function get_parent(): RoomNode {}
 

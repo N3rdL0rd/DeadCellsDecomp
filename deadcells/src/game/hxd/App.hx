@@ -7,9 +7,9 @@ class App {
   var isDisposed: Bool;
   var <none>: Dynamic;
 
-  function __constructor__() {}
-
   static function staticHandler() {}
+
+  function __constructor__() {}
 
   function onResize() {}
 

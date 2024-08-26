@@ -4,9 +4,9 @@ class Beheaded extends en.Hero {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function __constructor__(game: pr.Game.Game) {}
-
   static function create(game: pr.Game.Game): Beheaded {}
+
+  function __constructor__(game: pr.Game.Game) {}
 
   function wakeup(lvl: pr.Level.Level, cx: Int, cy: Int) {}
 

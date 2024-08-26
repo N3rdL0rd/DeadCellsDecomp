@@ -50,13 +50,13 @@ class Achievements.Achievements {
   var <none>: Dynamic;
   static var __clid: Int;
 
-  function __constructor__() {}
-
   static function gpCanBeUsedInStream(id: Dynamic): Bool {}
 
-  static function gpCanBeUsedInCustom(id: Dynamic): Bool {}
+  function __constructor__() {}
 
   static function load(forceNew: Dynamic, slot: Dynamic): Achievements.Achievements {}
+
+  static function gpCanBeUsedInCustom(id: Dynamic): Bool {}
 
   function save(slot: Dynamic) {}
 

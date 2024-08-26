@@ -13,13 +13,13 @@ class LevelTransition extends GameCinematic {
   var onEnteredLevel: Dynamic;
   var playAfterZDoorCine: Bool;
 
-  static function gotoSub(map: level.LevelMap.LevelMap, linkId: Dynamic): LevelTransition {}
-
-  static function goto(id: String): LevelTransition {}
-
   function __constructor__(mainId: String, map: level.LevelMap.LevelMap, linkId: Dynamic, heroPosAfterBossRuneReload: tool.CPoint.CPoint, noLoadingData: Dynamic) {}
 
   static function gotoNoLoading(id: String): LevelTransition {}
+
+  static function gotoSub(map: level.LevelMap.LevelMap, linkId: Dynamic): LevelTransition {}
+
+  static function goto(id: String): LevelTransition {}
 
   static function reloadAfterBossRuneModif(id: String, cx: Int, cy: Int): LevelTransition {}
 

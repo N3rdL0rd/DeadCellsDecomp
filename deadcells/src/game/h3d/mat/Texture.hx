@@ -19,13 +19,13 @@ class Texture {
   static var UID: Int;
   static var nativeFormat: Dynamic;
 
-  static function fromPixels(pixels: hxd.Pixels.Pixels, allocPos: Dynamic): Texture {}
-
-  static function fromColor(color: Int, alpha: Dynamic, allocPos: Dynamic): Texture {}
-
   function __constructor__(w: Int, h: Int, flags: hl.types.ArrayObj<Dynamic>, format: Dynamic, allocPos: Dynamic) {}
 
+  static function fromPixels(pixels: hxd.Pixels.Pixels, allocPos: Dynamic): Texture {}
+
   static function defaultCubeTexture(): Texture {}
+
+  static function fromColor(color: Int, alpha: Dynamic, allocPos: Dynamic): Texture {}
 
   function get_layerCount(): Int {}
 

@@ -17,15 +17,15 @@ class Serializer {
   static var CLIDS: hl.types.ArrayBytes<Int>;
   static var ENUM_CLASSES: haxe.ds.StringMap;
 
+  static function registerClass(c: hl.Class): Int {}
+
   static function isClassFinal(index: Int): Bool {}
+
+  static function resetCounters() {}
 
   function __constructor__() {}
 
   static function initClassIDS() {}
-
-  static function registerClass(c: hl.Class): Int {}
-
-  static function resetCounters() {}
 
   function set_remapIds(b: Bool): Bool {}
 

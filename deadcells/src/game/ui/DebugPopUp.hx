@@ -12,19 +12,19 @@ class DebugPopUp extends ui.Window {
   var pageIncr: Int;
   static var ALL: hl.types.ArrayObj<Dynamic>;
 
-  function onClose() {}
-
-  function onCancel() {}
-
-  function onMap() {}
-
-  function onSwap() {}
-
-  function onPrev() {}
+  function onNext() {}
 
   function onSwapAlt() {}
 
-  function onNext() {}
+  function onPrev() {}
+
+  function onClose() {}
+
+  function onMap() {}
+
+  function onCancel() {}
+
+  function onSwap() {}
 
   function __constructor__(p: libs.Process.Process) {}
 

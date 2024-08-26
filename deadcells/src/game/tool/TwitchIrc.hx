@@ -24,11 +24,11 @@ class TwitchIrc {
   static var CMD_PREFIX: String;
   static var REG_CMD: EReg;
 
-  function onMessage(m: tool.TwitchMessage.TwitchMessage) {}
-
   function onSubscribe(msgId: String, subscriber: String, giftSentBy: String) {}
 
   function onJoin(channel: String) {}
+
+  function onMessage(m: tool.TwitchMessage.TwitchMessage) {}
 
   function __constructor__() {}
 

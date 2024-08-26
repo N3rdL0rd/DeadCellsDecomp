@@ -9,9 +9,9 @@ class Spawnling extends en.Mob {
 
   function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
 
-  static function preloadGfx(): libs.heaps.slib.SpriteLib.SpriteLib {}
-
   static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Spawnling {}
+
+  static function preloadGfx(): libs.heaps.slib.SpriteLib.SpriteLib {}
 
   function initGfx() {}
 

@@ -4,9 +4,9 @@ class SteamAchievementManager {
   var idByAchievement: haxe.ds.EnumValueMap;
   var <none>: Dynamic;
 
-  function __constructor__() {}
-
   static function onAchievementStored(id: String) {}
+
+  function __constructor__() {}
 
   function shouldDisplayInGameNotification(): Bool {}
 

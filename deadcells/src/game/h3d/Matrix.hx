@@ -18,11 +18,11 @@ class Matrix {
   var _44: Float;
   static var tmp: Matrix;
 
-  static function L(a: hl.types.ArrayBytes<Float>): Matrix {}
-
   static function I(): Matrix {}
 
   function __constructor__() {}
+
+  static function L(a: hl.types.ArrayBytes<Float>): Matrix {}
 
   function zero() {}
 

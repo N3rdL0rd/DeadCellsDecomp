@@ -28,11 +28,11 @@ class AttackData {
   static var POOL: hl.types.ArrayObj<Dynamic>;
   static var CURIDX: Int;
 
+  static function _create(source: Entity, baseDmg: Dynamic, tier: Dynamic): AttackData {}
+
   function __constructor__() {}
 
   static function initPool(n: Int) {}
-
-  static function _create(source: Entity, baseDmg: Dynamic, tier: Dynamic): AttackData {}
 
   function init(s: Entity, baseDmg: Dynamic): AttackData {}
 

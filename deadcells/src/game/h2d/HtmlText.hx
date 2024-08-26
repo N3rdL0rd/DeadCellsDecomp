@@ -11,9 +11,9 @@ class HtmlText extends h2d.Text {
   static var REG_SPACES: EReg;
   static var REG_HTMLENTITIES: EReg;
 
-  function loadFont(name: String): h2d.Font.Font {}
-
   function loadImage(url: String): h2d.Tile.Tile {}
+
+  function loadFont(name: String): h2d.Font.Font {}
 
   function __constructor__(font: h2d.Font.Font, parent: h2d.Object.Object) {}
 

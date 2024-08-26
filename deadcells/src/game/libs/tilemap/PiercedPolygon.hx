@@ -7,9 +7,9 @@ class PiercedPolygon {
   static var VDIAG_START_MATRIX: hl.types.ArrayObj<Dynamic>;
   static var VDIAG_END_MATRIX: hl.types.ArrayObj<Dynamic>;
 
-  static function initDiagMatrices() {}
-
   function __constructor__(shape: libs.tilemap.Polygon.Polygon, holes: hl.types.ArrayObj<Dynamic>) {}
+
+  static function initDiagMatrices() {}
 
   function iterator(): libs.tilemap.PiercedPolygon.PiercedPolygon {}
 

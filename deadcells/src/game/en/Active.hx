@@ -6,9 +6,9 @@ class Active extends Entity {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
-
   static function create(from: en.Hero.Hero, g: en.Grenade.Grenade, ii: tool.InventItem.InventItem): Active {}
+
+  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
 
   function initGfx() {}
 

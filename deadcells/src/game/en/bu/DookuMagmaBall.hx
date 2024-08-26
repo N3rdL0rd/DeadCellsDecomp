@@ -7,11 +7,11 @@ class DookuMagmaBall extends en.Bullet {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function onBlock(byEnt: Bool) {}
+  function onCountered() {}
 
   function onBulletHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
 
-  function onCountered() {}
+  function onBlock(byEnt: Bool) {}
 
   function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, c: Int) {}
 

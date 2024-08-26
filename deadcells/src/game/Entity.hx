@@ -133,9 +133,9 @@ class Entity {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
-
   static function isObstructed(level: pr.Level.Level, cx: Int, cy: Int, except: Entity): Bool {}
+
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
 
   function get_tmod(): Float {}
 

@@ -11,9 +11,9 @@ class DebugScrollingGraph extends h2d.Drawable {
   static var fpsGraph: DebugScrollingGraph;
   static var fxGraph: DebugScrollingGraph;
 
-  static function toggle() {}
-
   function __constructor__(parent: h2d.Object.Object, nHistoryEntries: Int) {}
+
+  static function toggle() {}
 
   function shutdown() {}
 

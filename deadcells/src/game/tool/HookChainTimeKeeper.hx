@@ -30,13 +30,13 @@ class HookChainTimeKeeper extends libs.Process {
   var circleDebug2: h2d.Graphics.Graphics;
   var onions: hl.types.ArrayObj<Dynamic>;
 
-  function onReachNothing() {}
-
   function onHook(e: Entity) {}
 
   function onRetractComplete(hasHookedSomeone: Bool) {}
 
   function onRetractStart() {}
+
+  function onReachNothing() {}
 
   function __constructor__(e: en.Mob.Mob, k: String, idProjectile: String, len: Float, targetGetter: Dynamic, color: Dynamic) {}
 

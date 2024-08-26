@@ -6,11 +6,11 @@ class Cache {
   var constsToGlobal: Bool;
   static var INST: Cache;
 
+  static function get(): Cache {}
+
   function __constructor__() {}
 
   function set(c: Cache) {}
-
-  static function get(): Cache {}
 
   function getLinkShader(vars: hl.types.ArrayObj<Dynamic>): hxsl.Shader.Shader {}
 

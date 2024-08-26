@@ -76,9 +76,9 @@ class Giant extends en.mob.Boss {
   static var __clid: Int;
   static var __eclids: hl.types.ArrayBytes<Int>;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Giant {}
-
   function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+
+  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Giant {}
 
   function get_idleX(): Int {}
 

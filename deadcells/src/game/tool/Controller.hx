@@ -50,13 +50,13 @@ class Controller {
   static var SHORT_PRESS: Float;
   static var ALL: hl.types.ArrayObj<Dynamic>;
 
+  function onChange() {}
+
   function onPadEnabled() {}
 
   function onActPressed(act: Int, isKey: Bool) {}
 
   function onPadDisabled() {}
-
-  function onChange() {}
 
   function __constructor__(s2d: h2d.Scene.Scene) {}
 

@@ -19,11 +19,11 @@ class RoomTemplate {
 
   static function getCellType(v: Int): Dynamic {}
 
+  static function getTemplate(dat: Dynamic, flip: Dynamic, flipLink: Dynamic): RoomTemplate {}
+
   static function parseAll(ltick: Dynamic): hl.types.ArrayObj<Dynamic> {}
 
   function __constructor__(dat: Dynamic, flip: Dynamic, flipLink: Dynamic) {}
-
-  static function getTemplate(dat: Dynamic, flip: Dynamic, flipLink: Dynamic): RoomTemplate {}
 
   function addHLinks(ti: Int, dir: Int, grid: hl.types.ArrayBytes<Int>, tmpGrid: hl.types.ArrayObj<Dynamic>) {}
 

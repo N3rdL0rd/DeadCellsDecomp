@@ -21,9 +21,9 @@ class Pad {
 
   function __constructor__() {}
 
-  static function wait(onPad: Dynamic) {}
-
   static function onDetect(d: dx.GameController.GameController, active: Bool) {}
+
+  static function wait(onPad: Dynamic) {}
 
   function rumble(strength: Float, time_s: Float) {}
 

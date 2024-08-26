@@ -18,11 +18,11 @@ class CacheFile extends hxsl.Cache {
 
   function onNewShader(r: Dynamic) {}
 
-  static function fileBytes(file: String): haxe.io.Bytes {}
-
   static function fileExists(file: String): Bool {}
 
   function __constructor__(allowCompile: Bool, recompileRT: Dynamic) {}
+
+  static function fileBytes(file: String): haxe.io.Bytes {}
 
   function getPlatformTag(): String {}
 

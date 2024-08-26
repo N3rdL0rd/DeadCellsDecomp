@@ -5,9 +5,9 @@ class LeaderboardScore {
   var detail: Int;
   var rank: Int;
 
-  function __constructor__(leaderboardId_: String, score_: Int, detail_: Int, rank_: Dynamic) {}
-
   static function fromString(str: String): LeaderboardScore {}
+
+  function __constructor__(leaderboardId_: String, score_: Int, detail_: Int, rank_: Dynamic) {}
 
   function toString(): String {}
 

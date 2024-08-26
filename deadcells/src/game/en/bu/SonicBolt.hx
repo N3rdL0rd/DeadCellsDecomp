@@ -6,9 +6,9 @@ class SonicBolt extends en.Bullet {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function beforeHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
-
   function onBlock(byEnt: Bool) {}
+
+  function beforeHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
 
   function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, c: Int, hasLight: Bool) {}
 

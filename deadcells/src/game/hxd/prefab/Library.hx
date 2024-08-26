@@ -7,15 +7,15 @@ class Library extends hxd.prefab.Prefab.Prefab {
 
   function __constructor__() {}
 
-  static function getRegistered(): haxe.ds.StringMap {}
+  static function getPrefabType(path: String): String {}
 
   static function create(extension: String): hxd.prefab.Prefab.Prefab {}
 
-  static function getPrefabType(path: String): String {}
+  static function isOfType(prefabKind: String, cl: hl.Class): Bool {}
+
+  static function getRegistered(): haxe.ds.StringMap {}
 
   static function register(type: String, cl: hl.Class, extension: String): Bool {}
-
-  static function isOfType(prefabKind: String, cl: hl.Class): Bool {}
 
   function load(obj: Dynamic) {}
 

@@ -5,9 +5,9 @@ class Gem extends en.Loot {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, val: Int, combo: Dynamic) {}
-
   static function create(lvl: pr.Level.Level, x: Int, y: Int, val: Int, combo: Dynamic): Gem {}
+
+  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, val: Int, combo: Dynamic) {}
 
   function initGfx() {}
 

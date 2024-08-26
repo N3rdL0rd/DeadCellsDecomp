@@ -15,9 +15,9 @@ class MobGenInfos {
   var maxPackSize: Int;
   var spawnWith: hl.types.ArrayObj<Dynamic>;
 
-  function __constructor__(id: String, qty: Dynamic) {}
-
   static function fromCdb(data: Dynamic): MobGenInfos {}
+
+  function __constructor__(id: String, qty: Dynamic) {}
 
   function setPack(min: Int, max: Dynamic) {}
 

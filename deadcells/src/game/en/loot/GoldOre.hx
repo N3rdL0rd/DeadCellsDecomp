@@ -5,9 +5,9 @@ class GoldOre extends en.Loot {
   static var __eclids: hl.types.ArrayBytes<Int>;
   static var __clid: Int;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, val: Dynamic, combo: Dynamic): GoldOre {}
-
   function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, val: Dynamic, combo: Dynamic) {}
+
+  static function create(lvl: pr.Level.Level, x: Int, y: Int, val: Dynamic, combo: Dynamic): GoldOre {}
 
   function initGfx() {}
 
