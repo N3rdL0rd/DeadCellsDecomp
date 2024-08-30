@@ -1,6 +1,6 @@
 # Dead Cells Decompilation Project
 
-This project is a work in progress (WIP) that aims to decompile v35 of the PC version of Dead Cells back to its original Haxe sources.
+This project is a work in progress (WIP) that aims to decompile v35 (`50edff4`) of the PC version of Dead Cells back to its original Haxe sources.
 
 ## Status
 
@@ -30,11 +30,11 @@ The project is divided into several main components:
 
 ## Future Plans
 
-- Examine Android versions of Echo Arena/VR to see if they can also be decompiled.
+- Examine mobile and console versions of the game to see if they can be decompiled.
 
 ## Contributing
 
-In order to get started decompiling Echo Arena, see the [Getting Started](docs/gettingstarted.md) guide. Or, if you think you know what you're doing, feel free to jump right in! We welcome contributions from anyone interested in game development or reverse engineering. If you have any information or findings that you think could benefit this project, please feel free to share them with us. You can contribute by submitting pull requests or by opening issues on our GitHub page.
+In order to get started decompiling the game, see the [Getting Started](docs/gettingstarted.md) guide. Or, if you think you know what you're doing, feel free to jump right in! We welcome contributions from anyone interested in game development or reverse engineering. If you have any information or findings that you think could benefit this project, please feel free to share them with us. You can contribute by submitting pull requests or by opening issues on our GitHub page.
 
 ## Legal and Licensing
 

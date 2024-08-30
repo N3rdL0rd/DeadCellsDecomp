@@ -1,4 +1,3 @@
-package deadcells.src.game;
 
 
 class Boot extends hxd.App {
@@ -62,11 +61,63 @@ class Boot extends hxd.App {
 
   function render(e: h3d.Engine.Engine) {}
 
-  function update(dt: Float) {}
+  function update(dt: Float) {
+    if ($Boot.returnToMainMenuAfterLoadingNextFrame) {
+      // returnToMainMenu@6124
+      $Boot.ME.returnToMainMenu();
+      $Boot.returnToMainMenuAfterLoading = false;
+      $Boot.returnToMainMenuAfterLoadingNextFrame = false;
+    }
+    var tmod = hxd.$Timer.dt * hxd.$Timer.wantedFPS;
+    // update@1481
+    this.delayer.update(tmod);
+    // update@2888
+    this.tw.update(tmod);
+    beforeUpdate();
+    if (ui.$Console.ME != null) {
+      // isActive@5896
+    }
+    if (ui.$Console.ME.isActive()) {
+      // lock@2441
+      this.controller.lock();
+    } else {
+      // unlock@2442
+      this.controller.unlock();
+    }
+    // isPressed@6549
+    if (isPressed(122)) {
+      // set_fullScreen@2594
+      if (this.engine.fullScreen) {
+      }
+      $Main.ME.options.displayMode = 0;
+    }
+    var mult = 1;
+    // updateAll@617
+    updateAll(reg8 * this.speed * mult, null);
+    update();
+  }
 
-  function mainLoop() {}
+  override function mainLoop() {
+    super.mainLoop();
+    this.frameProfiler.beforePresent();
+  }
 
-  function onExit(): Bool {}
+  function onExit(): Bool {
+    var bufferedOutput = getOutput(tool.log.$BufferedFileOutput);
+    if (bufferedOutput != null) {
+      bufferedOutput.saveLogs();
+    }
+    if ($Boot.isInForceRender) {
+      return false;
+    }
+    if ($Main.ME != null) {
+      if (!$Main.ME.onExit()) {
+        return false;
+      }
+    }
+    shutdown();
+    return true;
+  }
 
   function forceRender() {}
 }
