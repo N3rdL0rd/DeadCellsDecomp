@@ -10,3 +10,4 @@
 # hlboot.dat and related bytecode
 *.dat
 temp.txt
+__pycache__/
