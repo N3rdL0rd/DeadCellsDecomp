@@ -11,3 +11,4 @@
 *.dat
 temp.txt
 __pycache__/
+tools/agent_runs/
