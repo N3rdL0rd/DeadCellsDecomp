@@ -9,7 +9,7 @@ class BleedAxeBullet extends en.Bullet {
     public var glowColIn: Int;
     public var glowColOut: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Int) {
+    public function new(arg0: en.Hero = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 

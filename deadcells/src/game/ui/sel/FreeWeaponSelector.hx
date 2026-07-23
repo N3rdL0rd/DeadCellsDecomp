@@ -8,7 +8,7 @@ class FreeWeaponSelector extends ui.sel.TieredItemSelector {
     public var colorless: Bool;
     public var weaponSpawner: en.inter.TrainingWeaponSpawner;
 
-    public function new(arg0: Dynamic, arg1: String, arg2: Ref, arg3: Ref, arg4: Ref, arg5: Ref, arg6: en.inter.TrainingWeaponSpawner) {
+    public function new(arg0: Dynamic = null, arg1: String = null, arg2: Ref = null, arg3: Ref = null, arg4: Ref = null, arg5: Ref = null, arg6: en.inter.TrainingWeaponSpawner = null) {
         super();
     }
 

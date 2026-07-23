@@ -17,7 +17,7 @@ class SkillFx extends tool.skill.SkillEvent {
     public var particle: libs.heaps.HParticle;
     public var dir: Int;
 
-    public function new(arg0: String, arg1: tool.skill.Skill, arg2: Int, arg3: String, arg4: Dynamic, arg5: Dynamic) {
+    public function new(arg0: String = null, arg1: tool.skill.Skill = null, arg2: Int = 0, arg3: String = null, arg4: Dynamic = null, arg5: Dynamic = null) {
         super();
     }
 

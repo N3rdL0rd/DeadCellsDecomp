@@ -3,12 +3,12 @@ package level;
 class LevelAudio extends libs.Process {
     public var ambientChannels: Array<Dynamic>;
     public var ambientSpatializer: Array<Dynamic>;
-    public var newEvents: level._LevelAudio.Event;
-    public var onHoldEvents: level._LevelAudio.Event;
+    public var newEvents: level.LevelAudio.Event;
+    public var onHoldEvents: level.LevelAudio.Event;
     public var spParams: Dynamic;
     public var eventSpaceBuffer: tool.RingBuffer;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
         super();
     }
 
@@ -39,22 +39,22 @@ class LevelAudio extends libs.Process {
         throw "stub: addAmbientZone not decompiled";
     }
 
-    public function playEvent(arg0: hxd.res.Sound, arg1: Dynamic, arg2: Dynamic, arg3: String): level._LevelAudio.Event {
+    public function playEvent(arg0: hxd.res.Sound, arg1: Dynamic, arg2: Dynamic, arg3: String): level.LevelAudio.Event {
         throw "stub: playEvent not decompiled";
     }
 
-    public function playEventAt(arg0: hxd.res.Sound, arg1: Float, arg2: Float, arg3: Dynamic, arg4: Dynamic, arg5: String): level._LevelAudio.Event {
+    public function playEventAt(arg0: hxd.res.Sound, arg1: Float, arg2: Float, arg3: Dynamic, arg4: Dynamic, arg5: String): level.LevelAudio.Event {
         throw "stub: playEventAt not decompiled";
     }
 
-    public function playEventOn(arg0: hxd.res.Sound, arg1: Entity, arg2: Dynamic, arg3: Dynamic, arg4: String): level._LevelAudio.Event {
+    public function playEventOn(arg0: hxd.res.Sound, arg1: Entity, arg2: Dynamic, arg3: Dynamic, arg4: String): level.LevelAudio.Event {
         throw "stub: playEventOn not decompiled";
     }
 
     public override function postUpdate(): Void {
     }
 
-    public function compareEvent(arg0: level._LevelAudio.Event, arg1: level._LevelAudio.Event): Int {
+    public function compareEvent(arg0: level.LevelAudio.Event, arg1: level.LevelAudio.Event): Int {
         throw "stub: compareEvent not decompiled";
     }
 
@@ -67,7 +67,7 @@ class LevelAudio extends libs.Process {
     public override function resume(): Void {
     }
 
-    public function getSfxChannelGroup(arg0: level._LevelAudio.Event): hxd.snd.ChannelGroup {
+    public function getSfxChannelGroup(arg0: level.LevelAudio.Event): hxd.snd.ChannelGroup {
         throw "stub: getSfxChannelGroup not decompiled";
     }
 
@@ -78,8 +78,8 @@ class LevelAudio extends libs.Process {
 
 class Event {
     public static var cleanName: EReg;
-    public var next: level._LevelAudio.Event;
-    public var nextOnHold: level._LevelAudio.Event;
+    public var next: level.LevelAudio.Event;
+    public var nextOnHold: level.LevelAudio.Event;
     public var snd: hxd.res.Sound;
     public var group: String;
     public var pos: h2d.col.Point;
@@ -110,7 +110,6 @@ class Zone {
     public var cxMax: Float;
     public var cyMax: Float;
     public var space: hxd.snd.effect.Spatialization;
-    public var : Dynamic;
 
     public function new(arg0: hxd.snd.effect.Spatialization, arg1: Float, arg2: Float, arg3: Float, arg4: Float) {
     }
@@ -125,7 +124,6 @@ class Segment {
     public var from: Dynamic;
     public var to: Dynamic;
     public var space: hxd.snd.effect.Spatialization;
-    public var : Dynamic;
 
     public function new() {
     }

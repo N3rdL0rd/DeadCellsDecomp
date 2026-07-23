@@ -7,7 +7,7 @@ class Club extends tool.Weapon {
     public var brokenSfx: hxd.res.Sound;
     public var touchGroundSfx: hxd.res.Sound;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -23,7 +23,7 @@ class Club extends tool.Weapon {
         throw "stub: isFullCharge not decompiled";
     }
 
-    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.Weapon.WeaponSkill): Void {
     }
 
     public override function onExecute(): Bool {
@@ -33,14 +33,14 @@ class Club extends tool.Weapon {
     public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
     }
 
-    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnAttackAnim(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 }
 
 class ClubBroken extends tool.Weapon {
     public var woodRechargeFXDone: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

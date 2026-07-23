@@ -20,7 +20,7 @@ class MiniMap extends ui.Process {
     public var bgHighlight: ui.UIBox;
     public var highlightTime: Float;
     public var blackBG: libs.heaps.slib.HSprite;
-    public var bgPool: libs.heaps.ParticlePool;
+    public var bgPool: libs.heaps.HParticle.ParticlePool;
     public var bgSb: libs.heaps.slib.HSpriteBatch;
     public var mask: ui.hud.map.MapMask;
     public var worldMapMask: h2d.Mask;
@@ -59,7 +59,7 @@ class MiniMap extends ui.Process {
     public var worldMapStruct: ui.WorldMap;
     public var worldMapSize: Dynamic;
 
-    public function new(arg0: libs.Process, arg1: pr.Level, arg2: haxe.io.Bytes) {
+    public function new(arg0: libs.Process = null, arg1: pr.Level = null, arg2: haxe.io.Bytes = null) {
         super();
     }
 
@@ -164,10 +164,10 @@ class MiniMap extends ui.Process {
     public function handleWorldMapMovements(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function addSmokePart(): Void {
@@ -176,13 +176,13 @@ class MiniMap extends ui.Process {
 
 class MMTracker {
     public var e: Entity;
-    public var dot: h2d.BatchElement;
+    public var dot: h2d.SpriteBatch.BatchElement;
     public var icons: Array<Dynamic>;
     public var blink: Bool;
     public var textWrapper: h2d.Object;
     public var text: ui.hud.map.Text;
 
-    public function new(arg0: Entity, arg1: h2d.BatchElement, arg2: Array<Dynamic>, arg3: Bool, arg4: h2d.Object, arg5: ui.hud.map.Text) {
+    public function new(arg0: Entity = null, arg1: h2d.SpriteBatch.BatchElement = null, arg2: Array<Dynamic> = null, arg3: Bool = false, arg4: h2d.Object = null, arg5: ui.hud.map.Text = null) {
     }
 }
 
@@ -194,15 +194,15 @@ class MMTarget {
     public var line: h2d.ScaleGrid;
     public var onChoose: Dynamic;
 
-    public function new(arg0: Entity, arg1: Array<Dynamic>, arg2: Entity, arg3: h2d.ScaleGrid, arg4: h2d.ScaleGrid, arg5: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Array<Dynamic> = null, arg2: Entity = null, arg3: h2d.ScaleGrid = null, arg4: h2d.ScaleGrid = null, arg5: Dynamic = null) {
     }
 }
 
 class MMLink {
     public var from: tool.CPoint;
     public var to: tool.CPoint;
-    public var line: h2d.BatchElement;
+    public var line: h2d.SpriteBatch.BatchElement;
 
-    public function new(arg0: tool.CPoint, arg1: tool.CPoint, arg2: h2d.BatchElement) {
+    public function new(arg0: tool.CPoint, arg1: tool.CPoint, arg2: h2d.SpriteBatch.BatchElement) {
     }
 }

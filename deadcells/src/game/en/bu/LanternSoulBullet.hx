@@ -7,7 +7,7 @@ class LanternSoulBullet extends en.Bullet {
     public var colorTail: Int;
     public var colorLight: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Int, arg6: en.SmallSoul) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Int = 0, arg6: en.SmallSoul = null) {
         super();
     }
 

@@ -7,7 +7,7 @@ class WindowElement {
     public var bgWrapper: h2d.Object;
     public var isInteractive: Bool;
 
-    public function new(arg0: ui.Window) {
+    public function new(arg0: ui.Window = null) {
     }
 
     public function get_pixelScale(): Float {

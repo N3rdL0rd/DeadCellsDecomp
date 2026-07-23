@@ -3,7 +3,6 @@ package _Stats;
 class RunStats {
     public static var __clid: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }
@@ -29,9 +28,8 @@ class RunStats {
 class Stats extends libs.Process {
     public static var __clid: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
         super();
     }
 

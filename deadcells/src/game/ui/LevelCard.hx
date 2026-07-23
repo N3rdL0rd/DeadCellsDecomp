@@ -8,7 +8,7 @@ class LevelCard {
     public var name: String;
     public var levelLogoBitmap: h2d.Bitmap;
 
-    public function new(arg0: Dynamic, arg1: h2d.Tile) {
+    public function new(arg0: Dynamic = null, arg1: h2d.Tile = null) {
     }
 
     public static function scaleFrame(arg0: libs.heaps.slib.HSprite, arg1: Int, arg2: Int): Void {

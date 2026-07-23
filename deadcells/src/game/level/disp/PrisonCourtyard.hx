@@ -13,19 +13,19 @@ class PrisonCourtyard extends level.BiomeDisp {
     public function render(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addBarrelLantern(arg0: level.DecoZone): Void {
+    public function addBarrelLantern(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addSmallDoors(arg0: level.DecoZone): Void {
+    public function addSmallDoors(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addParrallaxAlcove(arg0: level.DecoZone, arg1: Bool): Void {
+    public function addParrallaxAlcove(arg0: level.DecoTypes.DecoZone, arg1: Bool): Void {
     }
 
     public function renderBackground(): Void {

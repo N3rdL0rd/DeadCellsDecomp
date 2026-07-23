@@ -5,14 +5,14 @@ class NunchuckPan extends tool.Weapon {
     public var areaBis: Array<Dynamic>;
     public var areaBisMulthit: Array<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
-    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnAttackAnim(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
-    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
     public override function onExecute(): Bool {

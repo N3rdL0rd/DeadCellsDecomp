@@ -10,7 +10,7 @@ class TrainingTierChooser extends en.Interactive {
     public var tacticGlow: shader.GradientHiLo;
     public var survivalGlow: shader.GradientHiLo;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 

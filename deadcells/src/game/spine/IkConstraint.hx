@@ -6,7 +6,6 @@ class IkConstraint {
     public var target: spine.Bone;
     public var mix: Float;
     public var bendDirection: Int;
-    public var : Dynamic;
 
     public function new(arg0: spine.IkConstraintData, arg1: spine.Skeleton) {
     }

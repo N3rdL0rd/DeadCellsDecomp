@@ -6,6 +6,6 @@ class EventData {
     public var floatValue: Float;
     public var stringValue: String;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
     }
 }

@@ -3,14 +3,14 @@ package en.mob;
 class MariaCat extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var lastJumpPos: tool.CPoint;
     public var maria: en.inter.npc.Maria;
     public var maxJumpDistance: Float;
     public var positionDecisionHelper: tool.DecisionHelper;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 

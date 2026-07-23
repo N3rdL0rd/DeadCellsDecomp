@@ -13,7 +13,6 @@ class LevelAreaAffect {
     public var aValue: Float;
     public var affixes: Array<Dynamic>;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: pr.Level) {
     }

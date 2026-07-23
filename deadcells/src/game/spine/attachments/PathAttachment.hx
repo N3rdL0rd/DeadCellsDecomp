@@ -6,7 +6,7 @@ class PathAttachment extends spine.attachments.VertexAttachment {
     public var constantSpeed: Bool;
     public var color: spine.support.graphics.Color;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
         super();
     }
 }

@@ -3,7 +3,7 @@ package en.mob;
 class AmazonTactic extends en.mob.AmazonBase {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleportPhase: Bool;
     public var forcedTp: Bool;
     public var currentSpot: tool.CPoint;
@@ -43,8 +43,8 @@ class AmazonTactic extends en.mob.AmazonBase {
     public var targetedShootMaxRow: Int;
     public var acrossBossRoomAirShootChance: Float;
     public var acrossBossRoomAirShootVertical: Bool;
-    public var acrossBossRoomAirShootStartSpot: level.Marker;
-    public var acrossBossRoomAirShootTargetSpot: level.Marker;
+    public var acrossBossRoomAirShootStartSpot: level.LevelTypes.Marker;
+    public var acrossBossRoomAirShootTargetSpot: level.LevelTypes.Marker;
     public var acrossBossRoomAirShootForced: Bool;
     public var acrossBossRoomAirShootForcedFromTp: Bool;
     public var acrossBossRoomAirShootPlayed: Bool;
@@ -55,7 +55,7 @@ class AmazonTactic extends en.mob.AmazonBase {
     public var tacticBossRushModifiers: Dynamic;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -67,11 +67,11 @@ class AmazonTactic extends en.mob.AmazonBase {
         throw "stub: get_avoidLookTowardHero not decompiled";
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
@@ -86,20 +86,20 @@ class AmazonTactic extends en.mob.AmazonBase {
     public override function registerToManager(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function getSkillSpeedMul(): Float {
+    public override function getSkillSpeedMul(): Float {
         throw "stub: getSkillSpeedMul not decompiled";
     }
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function unlockAi(): Void {
+    public override function unlockAi(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function updateShootFxLocations(): Void {
@@ -111,10 +111,10 @@ class AmazonTactic extends en.mob.AmazonBase {
     public function checkDiveAttackHit(): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
-    public function onTouchGround(): Void {
+    public override function onTouchGround(): Void {
     }
 
     public function shockWaveHit(arg0: Float, arg1: Float): Void {
@@ -134,7 +134,7 @@ class AmazonTactic extends en.mob.AmazonBase {
     public function holdBeforeShootParticleUpdate(arg0: libs.heaps.HParticle): Void {
     }
 
-    public function inDetectArea(arg0: Entity): Bool {
+    public override function inDetectArea(arg0: Entity): Bool {
         throw "stub: inDetectArea not decompiled";
     }
 
@@ -144,23 +144,23 @@ class AmazonTactic extends en.mob.AmazonBase {
     public override function postUpdate(): Void {
     }
 
-    public function preUpdate(): Void {
+    public override function preUpdate(): Void {
     }
 
     public override function fixedUpdate(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
     public function getSpotPosition(): Dynamic {
         throw "stub: getSpotPosition not decompiled";
     }
 
-    public function onFatalFallStart(arg0: Ref): Void {
+    public override function onFatalFallStart(arg0: Ref): Void {
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
     public function getShootingTarget(): tool.CPoint {
@@ -170,7 +170,7 @@ class AmazonTactic extends en.mob.AmazonBase {
     public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public function behaviourAloneBossFight(): Void {
@@ -192,7 +192,7 @@ class AmazonTactic extends en.mob.AmazonBase {
     public override function applyBossRushModifier(arg0: Dynamic): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function getCLID(): Int {

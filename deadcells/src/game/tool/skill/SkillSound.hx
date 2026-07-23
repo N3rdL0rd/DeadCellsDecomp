@@ -12,7 +12,7 @@ class SkillSound extends tool.skill.SkillEvent {
     public var loopWhileHeld: Bool;
     public var holdCond: Dynamic;
 
-    public function new(arg0: String, arg1: tool.skill.Skill, arg2: Float, arg3: String, arg4: Dynamic, arg5: Dynamic) {
+    public function new(arg0: String = null, arg1: tool.skill.Skill = null, arg2: Float = 0., arg3: String = null, arg4: Dynamic = null, arg5: Dynamic = null) {
         super();
     }
 

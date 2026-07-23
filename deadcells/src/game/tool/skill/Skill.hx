@@ -37,7 +37,7 @@ class Skill extends libs.Process {
     public var lockedAfterSignal: libs.signals.Signal1;
     public var coolingdownSignal: libs.signals.Signal1;
 
-    public function new(arg0: String, arg1: Entity) {
+    public function new(arg0: String = null, arg1: Entity = null) {
         super();
     }
 

@@ -6,7 +6,7 @@ class ComboMultDrop extends en.Loot {
     public var col: Int;
     public var icon: ui.icon.Icon;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 

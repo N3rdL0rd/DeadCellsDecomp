@@ -19,7 +19,7 @@ class Room {
     public var parent: level.Room;
     public var children: Array<Dynamic>;
     public var links: Array<Dynamic>;
-    public var flags: hxbit.EnumFlagsData;
+    public var flags: Dynamic; // was hxbit.EnumFlagsProxy.EnumFlagsData<?> - flags enum dropped by decompiler
     public var spawnDistance: Int;
     public var metaGates: Array<Dynamic>;
     public var exitLevel: String;
@@ -31,11 +31,10 @@ class Room {
     public var mobs: Array<Dynamic>;
     public var loots: Array<Dynamic>;
     public var secretLevels: Array<Dynamic>;
-    public var merchant: level.MerchantData;
+    public var merchant: level.LevelTypes.MerchantData;
     public var genData: Dynamic;
     public var platforms: Array<Dynamic>;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: level.LevelMap, arg1: Int, arg2: String, arg3: String, arg4: Int) {
     }
@@ -52,7 +51,7 @@ class Room {
         throw "stub: getMarkersOfType not decompiled";
     }
 
-    public function getMarker(arg0: String, arg1: String, arg2: Ref): level.Marker {
+    public function getMarker(arg0: String, arg1: String, arg2: Ref): level.LevelTypes.Marker {
         throw "stub: getMarker not decompiled";
     }
 
@@ -68,11 +67,11 @@ class Room {
         throw "stub: getMarkerCenterByType not decompiled";
     }
 
-    public function getMarkerCenter(arg0: level.Marker): tool.CPoint {
+    public function getMarkerCenter(arg0: level.LevelTypes.Marker): tool.CPoint {
         throw "stub: getMarkerCenter not decompiled";
     }
 
-    public function getMarkerOfTypeAt(arg0: String, arg1: Int, arg2: Int): level.Marker {
+    public function getMarkerOfTypeAt(arg0: String, arg1: Int, arg2: Int): level.LevelTypes.Marker {
         throw "stub: getMarkerOfTypeAt not decompiled";
     }
 
@@ -88,7 +87,7 @@ class Room {
         throw "stub: isConnected not decompiled";
     }
 
-    public function getEnter(): level.RoomLink {
+    public function getEnter(): level.LevelTypes.RoomLink {
         throw "stub: getEnter not decompiled";
     }
 

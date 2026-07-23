@@ -11,7 +11,7 @@ class Hand extends en.mob.boss.giant.HandBase {
     public var consecutiveStompCount: Int;
 
     public function new(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int) {
-        super();
+        super(null, false, 0, 0);
     }
 
     public static function create(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int): en.mob.boss.giant.Hand {

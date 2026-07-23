@@ -5,9 +5,8 @@ class CPoint {
     public var cx: Int;
     public var cy: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: Int, arg1: Int) {
+    public function new(arg0: Int = 0, arg1: Int = 0) {
     }
 
     public function clone(): tool.CPoint {

@@ -11,7 +11,7 @@ class Card extends en.Bullet {
     public var t: Float;
     public var sinSign: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Bool) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Bool = false) {
         super();
     }
 

@@ -6,7 +6,7 @@ class Wings extends Power {
     public var isHovering: Bool;
     public var lastFrameDy: Int;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 

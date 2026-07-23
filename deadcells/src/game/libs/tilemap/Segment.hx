@@ -8,7 +8,7 @@ class Segment {
     public function new(arg0: libs.tilemap.Vertex, arg1: libs.tilemap.Vertex) {
     }
 
-    public static function getRectangle(arg0: haxe.ds.ObjectMap, arg1: libs.tilemap._Segment.Neighbors): libs.tilemap.Rectangle {
+    public static function getRectangle(arg0: haxe.ds.ObjectMap<Dynamic, Dynamic>, arg1: libs.tilemap.Segment.Neighbors): libs.tilemap.Rectangle {
         throw "stub: getRectangle not decompiled";
     }
 
@@ -47,7 +47,7 @@ class Intersection {
     public var h: Int;
     public var v: Int;
 
-    public function new(arg0: Int, arg1: Int) {
+    public function new(arg0: Int = 0, arg1: Int = 0) {
     }
 }
 
@@ -55,8 +55,8 @@ class IntersectionGroup {
     public var hSegs: Array<Dynamic>;
     public var vSegs: Array<Dynamic>;
     public var intersections: Array<Dynamic>;
-    public var hSegToIndex: haxe.ds.ObjectMap;
-    public var vSegToIndex: haxe.ds.ObjectMap;
+    public var hSegToIndex: haxe.ds.ObjectMap<Dynamic, Dynamic>;
+    public var vSegToIndex: haxe.ds.ObjectMap<Dynamic, Dynamic>;
 
     public function new() {
     }
@@ -67,10 +67,10 @@ class IntersectionGroup {
 
 class Neighbors {
     public var vert: libs.tilemap.Vertex;
-    public var up: libs.tilemap._Segment.Neighbors;
-    public var right: libs.tilemap._Segment.Neighbors;
-    public var down: libs.tilemap._Segment.Neighbors;
-    public var left: libs.tilemap._Segment.Neighbors;
+    public var up: libs.tilemap.Segment.Neighbors;
+    public var right: libs.tilemap.Segment.Neighbors;
+    public var down: libs.tilemap.Segment.Neighbors;
+    public var left: libs.tilemap.Segment.Neighbors;
 
     public function new(arg0: libs.tilemap.Vertex) {
     }

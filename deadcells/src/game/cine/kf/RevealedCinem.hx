@@ -3,7 +3,7 @@ package cine.kf;
 class RevealedCinem extends cine.KeyframesCinematic {
     public var endMask: h2d.Graphics;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
         super();
     }
 

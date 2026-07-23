@@ -2,10 +2,10 @@ package level;
 
 class SeedErrorException {
     public var text: String;
-    public var roomErrors: haxe.ds.StringMap;
+    public var roomErrors: haxe.ds.StringMap<Dynamic>;
     public var root: level.RoomNode;
 
-    public function new(arg0: String, arg1: level.RoomNode, arg2: haxe.ds.StringMap) {
+    public function new(arg0: String = null, arg1: level.RoomNode = null, arg2: haxe.ds.StringMap<Dynamic> = null) {
     }
 
     public function toString(): String {
@@ -22,7 +22,7 @@ class LevelGen {
     public var ltick: Dynamic;
     public var countTryWithDifferentSeed: Int;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
     }
 
     public function generate(arg0: User, arg1: Int, arg2: Dynamic, arg3: Ref): Array<Dynamic> {

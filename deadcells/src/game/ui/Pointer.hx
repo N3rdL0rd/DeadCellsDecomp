@@ -14,7 +14,7 @@ class Pointer extends ui.Process {
     public var areaOffsetX: Float;
     public var areaOffsetY: Float;
 
-    public function new(arg0: Entity, arg1: String, arg2: Float, arg3: Int) {
+    public function new(arg0: Entity = null, arg1: String = null, arg2: Float = 0., arg3: Int = 0) {
         super();
     }
 

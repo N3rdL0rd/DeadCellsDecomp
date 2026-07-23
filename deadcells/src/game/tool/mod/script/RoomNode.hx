@@ -1,7 +1,7 @@
 package tool.mod.script;
 
 class RoomNode {
-    public static var p_RoomMap: haxe.ds.ObjectMap;
+    public static var p_RoomMap: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var p_RoomNode: level.RoomNode;
 
     public function new(arg0: level.RoomNode) {

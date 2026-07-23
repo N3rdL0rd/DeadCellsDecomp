@@ -8,7 +8,7 @@ class Mob extends Entity {
     public var forcedBlueprint: String;
     public var delayedVolte: Dynamic;
     public var allowHitOverlapAnims: Bool;
-    public var attackeds: haxe.ds.IntMap;
+    public var attackeds: haxe.ds.IntMap<Dynamic>;
     public var oldSkills: Array<Dynamic>;
     public var skills: Array<Dynamic>;
     public var queuedOldSkill: Dynamic;
@@ -45,7 +45,7 @@ class Mob extends Entity {
     public var forceBodyPart: Bool;
     public var useBodyParts: Bool;
     public var minPfSize: Int;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
     public var particleEmitters: Array<Dynamic>;
     public var thawMaxStacks: Int;
     public var thawMinDiminushingFactor: Int;
@@ -97,7 +97,7 @@ class Mob extends Entity {
     public var breachDamage: Float;
     public var pawGroundOffset: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -109,15 +109,15 @@ class Mob extends Entity {
         throw "stub: createSideKick not decompiled";
     }
 
-    public function addAttack_tool_skill_mobSkill_Melee(arg0: hl.Class, arg1: String): tool.skill.mobSkill.Melee {
+    public function addAttack_tool_skill_mobSkill_Melee(arg0: Class<Dynamic>, arg1: String): tool.skill.mobSkill.Melee {
         throw "stub: addAttack_tool_skill_mobSkill_Melee not decompiled";
     }
 
-    public function addAttack_tool_skill_OldMobSkill(arg0: hl.Class, arg1: String): tool.skill.OldMobSkill {
+    public function addAttack_tool_skill_OldMobSkill(arg0: Class<Dynamic>, arg1: String): tool.skill.OldMobSkill {
         throw "stub: addAttack_tool_skill_OldMobSkill not decompiled";
     }
 
-    public function addAttack_tool_skill_mobSkill_TeleJump(arg0: hl.Class, arg1: String): tool.skill.mobSkill.TeleJump {
+    public function addAttack_tool_skill_mobSkill_TeleJump(arg0: Class<Dynamic>, arg1: String): tool.skill.mobSkill.TeleJump {
         throw "stub: addAttack_tool_skill_mobSkill_TeleJump not decompiled";
     }
 
@@ -744,9 +744,8 @@ class MobThreat {
     public var score: Float;
     public var max: Float;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: Entity, arg1: Float, arg2: Float) {
+    public function new(arg0: Entity = null, arg1: Float = 0., arg2: Float = 0.) {
     }
 
     public function getCLID(): Int {

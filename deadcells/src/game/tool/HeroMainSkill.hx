@@ -9,9 +9,8 @@ class HeroMainSkill {
     public var duration: Float;
     public var cooldown: Float;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+    public function new(arg0: en.Hero = null, arg1: pr.Game = null, arg2: Dynamic = null) {
     }
 
     public static function create(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic): tool.HeroMainSkill {

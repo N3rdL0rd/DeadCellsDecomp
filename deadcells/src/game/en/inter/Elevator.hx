@@ -37,7 +37,7 @@ class Elevator extends en.Interactive {
     public var chainsIsVisible: Bool;
     public var chainsCullingBound: h2d.col.Bounds;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -49,11 +49,11 @@ class Elevator extends en.Interactive {
         throw "stub: setYTop not decompiled";
     }
 
-    public function canBeHit(): Bool {
+    public override function canBeHit(): Bool {
         throw "stub: canBeHit not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function initChains(): Void {
@@ -62,7 +62,7 @@ class Elevator extends en.Interactive {
     public function renderPlatform(): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
     public override function dispose(): Void {
@@ -83,17 +83,17 @@ class Elevator extends en.Interactive {
     public function onArrival(arg0: Int): Void {
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function isSnapping(arg0: Entity): Bool {
         throw "stub: isSnapping not decompiled";
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public function afterFixedUpdate(): Void {
@@ -121,7 +121,7 @@ class Elevator extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

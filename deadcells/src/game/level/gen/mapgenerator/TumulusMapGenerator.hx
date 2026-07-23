@@ -1,7 +1,7 @@
 package level.gen.mapgenerator;
 
 class TumulusMapGenerator extends level.gen.MapGenerator {
-    public function new(arg0: Dynamic, arg1: level.RoomNode, arg2: libs.Rand, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: Dynamic = null, arg1: level.RoomNode = null, arg2: libs.Rand = null, arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 

@@ -7,7 +7,7 @@ class BeheadedActiveSkillsManager extends tool.hero.HeroActiveSkillsManager {
     public var wingsSpeedMul: Float;
     public var bubblePowers: Array<Dynamic>;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

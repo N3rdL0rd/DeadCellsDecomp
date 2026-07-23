@@ -8,7 +8,7 @@ class RGBReplace extends hxsl.Shader {
     public var colorB__: h3d.Vector;
     public var power__: Float;
 
-    public function new(arg0: Int, arg1: Dynamic, arg2: Dynamic) {
+    public function new(arg0: Int = 0, arg1: Dynamic = null, arg2: Dynamic = null) {
         super();
     }
 

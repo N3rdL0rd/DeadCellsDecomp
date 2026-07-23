@@ -11,7 +11,6 @@ class Team {
     public var asMobs: Array<Dynamic>;
     public var teamSignals: tool.signals.TeamSignals;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

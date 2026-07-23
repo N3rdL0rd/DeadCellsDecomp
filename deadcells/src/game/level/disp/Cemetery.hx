@@ -19,22 +19,22 @@ class Cemetery extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addPillar(arg0: level.DecoZone): Void {
+    public function addPillar(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addVault(arg0: level.DecoZone): Void {
+    public function addVault(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addSmallDoors(arg0: level.DecoZone): Void {
+    public function addSmallDoors(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addCandleBones(arg0: level.DecoZone): Void {
+    public function addCandleBones(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function renderBackground(): Void {

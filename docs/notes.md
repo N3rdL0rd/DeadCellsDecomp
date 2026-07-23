@@ -20,7 +20,7 @@ This document contains some random ideas that I had while decompiling stuff. Eve
 
 ## Open-Source Libraries
 
-**The `motion-twin` GitHub org hosts its own forks of most of these — use those, not generic upstream, as the primary source.** `motion-twin/heaps` even has a branch named `dc_v10` (Dead Cells v1.0, dated Nov 2018) that's the single best-matching source for h2d/h3d/hxd/hxsl (wins 84/140 files in the auto-generated report below).
+**The `motion-twin` GitHub org hosts its own forks of most of these — use those, not generic upstream, as the primary reference source.** `motion-twin/heaps` even has a branch named `dc_v10` (Dead Cells v1.0, dated Nov 2018) that's the single best-matching *source* for h2d/h3d/hxd/hxsl for manual comparison while decompiling (wins 84/140 files in the auto-generated report below). Note this is separate from what's actually linked at **compile time**: `setup.hxml` pulls `heaps`'s `master` branch instead, since `dc_v10` predates Haxe's `haxe.macro.Binop`/`FunctionKind` changes (added in 4.3) and fails to compile under a modern Haxe compiler — `dc_v10` is still the better reference to *read*, just not what gets built against.
 
 - https://github.com/motion-twin/heaps — see branch `dc_v10` specifically, and other branches (`h3d_mt`, `dx_pad`, `webgl`, etc.) for platform-specific variants
 - https://github.com/motion-twin/hxbit
@@ -40,7 +40,7 @@ This document contains some random ideas that I had while decompiling stuff. Eve
 
 ## Vendored trees removed from this repo
 
-The following packages were **100% matched** (exact package namespace, high identifier overlap) to real upstream libraries and their local stub trees have been deleted — they're now pulled in via `-lib` in `deadcells/_base.hxml` / `build.directx.hxml`, sourced from `deadcells/setup.hxml` (motion-twin forks, `heaps` on the `dc_v10` branch):
+The following packages were **100% matched** (exact package namespace, high identifier overlap) to real upstream libraries and their local stub trees have been deleted — they're now pulled in via `-lib` in `deadcells/_base.hxml` / `build.directx.hxml`, sourced from `deadcells/setup.hxml` (motion-twin forks, `heaps` on the `master` branch — see note above on why `master` rather than `dc_v10` is what's actually built against):
 
 `h2d`, `h3d`, `hxd`, `hxsl` (→ `-lib heaps`), `hxbit` (→ `-lib hxbit`), `hscript` (→ `-lib hscript`), `format` (→ `-lib format`), `cdb` (→ `-lib castle`), `steam` (→ `-lib hlsteam`, directx build only), `dx` (→ `-lib hldx`, directx build only, generic HaxeFoundation/hashlink since no motion-twin fork exists for it).
 

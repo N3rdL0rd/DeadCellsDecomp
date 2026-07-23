@@ -27,7 +27,7 @@ class OldSkill extends libs.Process {
     public var active: Bool;
     public var sfxCustom: hxd.res.Sound;
 
-    public function new(arg0: String, arg1: Entity, arg2: Dynamic) {
+    public function new(arg0: String = null, arg1: Entity = null, arg2: Dynamic = null) {
         super();
     }
 

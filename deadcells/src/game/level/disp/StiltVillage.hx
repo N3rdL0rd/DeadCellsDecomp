@@ -27,7 +27,7 @@ class StiltVillage extends level.BiomeDisp {
     public function decorateLevel(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function isTransparent(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Dynamic): Bool {

@@ -4,7 +4,7 @@ class HUD extends ui.Process {
     public static var ME: ui.HUD;
     public var bossLifebar: ui.hud.LifeBar;
     public var isHidden: Bool;
-    public var ppool: libs.heaps.ParticlePool;
+    public var ppool: libs.heaps.HParticle.ParticlePool;
     public var pbatchBack: libs.heaps.slib.HSpriteBatch;
     public var pbatchFront: libs.heaps.slib.HSpriteBatch;
     public var tmpPoint: h2d.col.Point;
@@ -222,10 +222,10 @@ class HUD extends ui.Process {
     public override function onResize(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function onDispose(): Void {
@@ -234,7 +234,7 @@ class HUD extends ui.Process {
     public function refresh(): Void {
     }
 
-    public function get_pixelScale(): Float {
+    public override function get_pixelScale(): Float {
         throw "stub: get_pixelScale not decompiled";
     }
 }

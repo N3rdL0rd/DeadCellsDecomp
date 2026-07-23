@@ -2,8 +2,7 @@ package achievements;
 
 class SteamAchievementManager {
     public var isApiAvailable: Bool;
-    public var idByAchievement: haxe.ds.EnumValueMap;
-    public var : Dynamic;
+    public var idByAchievement: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
 
     public function new() {
     }
@@ -15,7 +14,7 @@ class SteamAchievementManager {
         throw "stub: shouldDisplayInGameNotification not decompiled";
     }
 
-    public function init(arg0: haxe.ds.EnumValueMap): Void {
+    public function init(arg0: haxe.ds.EnumValueMap<Dynamic, Dynamic>): Void {
     }
 
     public function getConfigResourceName(): String {

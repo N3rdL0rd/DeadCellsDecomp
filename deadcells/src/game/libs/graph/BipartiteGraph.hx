@@ -34,7 +34,7 @@ class Edge {
     public var u: Int;
     public var v: Int;
 
-    public function new(arg0: Int, arg1: Int) {
+    public function new(arg0: Int = 0, arg1: Int = 0) {
     }
 }
 
@@ -50,7 +50,7 @@ class BipartiteGraph {
     public var _dist: Array<Int>;
     public var _maxDist: Int;
 
-    public function new(arg0: Int, arg1: Int) {
+    public function new(arg0: Int = 0, arg1: Int = 0) {
     }
 
     public function reset(arg0: Int, arg1: Int): Void {

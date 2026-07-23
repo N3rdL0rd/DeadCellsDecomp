@@ -13,7 +13,7 @@ class DebugPopUp extends ui.Window {
     public var controller: tool.ControllerAccess;
     public var pageIncr: Int;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
         super();
     }
 

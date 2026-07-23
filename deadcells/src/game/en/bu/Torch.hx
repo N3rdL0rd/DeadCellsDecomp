@@ -8,7 +8,7 @@ class Torch extends en.Bullet {
     public var weaponItem: tool.InventItem;
     public var fireActive: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: tool.InventItem = null) {
         super();
     }
 

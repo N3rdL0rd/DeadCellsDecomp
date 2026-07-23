@@ -3,7 +3,7 @@ package light;
 class Background extends h2d.Object {
     public var lightedLayers: light.LightedLayers;
 
-    public function new(arg0: h2d.Object) {
+    public function new(arg0: h2d.Object = null) {
         super();
     }
 

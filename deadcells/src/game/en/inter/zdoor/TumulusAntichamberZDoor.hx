@@ -13,7 +13,7 @@ class TumulusAntichamberZDoor extends en.inter.ZDoor {
     public var fxLockFactor: Float;
     public var lockFactor: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Bool, arg6: level.ZDoorType, arg7: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0, arg5: Bool = false, arg6: level.ZDoorType = null, arg7: Int = 0) {
         super();
     }
 

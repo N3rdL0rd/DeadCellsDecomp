@@ -20,13 +20,13 @@ class Bank extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addSuspendedChest(arg0: level.DecoZone, arg1: Int, arg2: Int, arg3: Int): Void {
+    public function addSuspendedChest(arg0: level.DecoTypes.DecoZone, arg1: Int, arg2: Int, arg3: Int): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone, arg1: Int): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone, arg1: Int): Void {
     }
 
     public override function renderStructures(): Void {

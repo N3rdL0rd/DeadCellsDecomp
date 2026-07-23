@@ -5,7 +5,7 @@ class RichterDeath extends cine.HeroDeathBase {
     public var titleMask: h2d.Bitmap;
     public var titleScreenBg: pr.ts.DlcPTitleScreenBg;
 
-    public function new(arg0: en.Hero, arg1: Bool) {
+    public function new(arg0: en.Hero = null, arg1: Bool = false) {
         super();
     }
 

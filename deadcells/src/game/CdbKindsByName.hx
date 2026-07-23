@@ -1,11 +1,11 @@
 class CdbKindsByName {
-    public static var roomMarker: haxe.ds.StringMap;
-    public static var lightConf: haxe.ds.StringMap;
-    public static var mob: haxe.ds.StringMap;
-    public static var item: haxe.ds.StringMap;
-    public static var level: haxe.ds.StringMap;
-    public static var layer: haxe.ds.StringMap;
-    public static var dlc: haxe.ds.StringMap;
+    public static var roomMarker: haxe.ds.StringMap<Dynamic>;
+    public static var lightConf: haxe.ds.StringMap<Dynamic>;
+    public static var mob: haxe.ds.StringMap<Dynamic>;
+    public static var item: haxe.ds.StringMap<Dynamic>;
+    public static var level: haxe.ds.StringMap<Dynamic>;
+    public static var layer: haxe.ds.StringMap<Dynamic>;
+    public static var dlc: haxe.ds.StringMap<Dynamic>;
 
     public static function getDlcKind(arg0: String): String {
         throw "stub: getDlcKind not decompiled";

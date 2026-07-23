@@ -9,7 +9,7 @@ class MobThrowingAxe extends en.Bullet {
     public var comingBack: Bool;
     public var retinas: Array<Dynamic>;
 
-    public function new(arg0: en.Mob, arg1: tool.atk.AttackData, arg2: Int, arg3: Float) {
+    public function new(arg0: en.Mob = null, arg1: tool.atk.AttackData = null, arg2: Int = 0, arg3: Float = 0.) {
         super();
     }
 

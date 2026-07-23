@@ -7,7 +7,7 @@ class EnemyPoisonGrenade extends en.Grenade {
     public var rSec: Float;
     public var sec: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity, arg1: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Dynamic = null) {
         super();
     }
 

@@ -4,7 +4,7 @@ class LevelStruct {
     public var user: User;
     public var lInfos: Dynamic;
     public var rng: libs.Rand;
-    public var nodes: haxe.ds.StringMap;
+    public var nodes: haxe.ds.StringMap<Dynamic>;
     public var all: Array<Dynamic>;
     public var zLinkId: Int;
     public var defaultGroup: Int;

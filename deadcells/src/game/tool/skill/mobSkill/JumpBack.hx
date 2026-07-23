@@ -1,7 +1,7 @@
 package tool.skill.mobSkill;
 
 class JumpBack extends tool.skill.OldMobSkill {
-    public function new(arg0: String, arg1: en.Mob) {
+    public function new(arg0: String = null, arg1: en.Mob = null) {
         super();
     }
 

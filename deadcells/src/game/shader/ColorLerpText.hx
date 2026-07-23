@@ -7,7 +7,7 @@ class ColorLerpText extends hxsl.Shader {
     public var endColor__: h3d.Vector;
     public var lerpPos__: Float;
 
-    public function new(arg0: Ref, arg1: Ref, arg2: Dynamic) {
+    public function new(arg0: Ref = null, arg1: Ref = null, arg2: Dynamic = null) {
         super();
     }
 

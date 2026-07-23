@@ -8,7 +8,7 @@ class Game extends libs.Process {
     public var gameSignals: tool.signals.GameSignals;
     public var user: User;
     public var data: tool.GameData;
-    public var dmgTracking: haxe.ds.StringMap;
+    public var dmgTracking: haxe.ds.StringMap<Dynamic>;
     public var hero: en.Hero;
     public var curLevel: pr.Level;
     public var subLevels: Array<Dynamic>;
@@ -48,7 +48,7 @@ class Game extends libs.Process {
     public var nextCursedLevels: Array<Dynamic>;
     public var cursedLevelsCount: Int;
     public var nextLevelOverridenExit: Dynamic;
-    public var keyModdedSave: haxe.ds.StringMap;
+    public var keyModdedSave: haxe.ds.StringMap<Dynamic>;
     public var lockAssistModeValues: Bool;
     public var checkedMods: Bool;
     public var wasModalPause: Bool;
@@ -57,7 +57,6 @@ class Game extends libs.Process {
     public var lastChickenUpdate: String;
     public var lastBossUpdate: String;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: User, arg1: tool.GameData) {
         super();
@@ -141,7 +140,7 @@ class Game extends libs.Process {
     public function banCurrentChicken(): Void {
     }
 
-    public function killTwitchVotes(arg0: hl.Class): Void {
+    public function killTwitchVotes(arg0: Class<Dynamic>): Void {
     }
 
     public function getUniqId(): Int {

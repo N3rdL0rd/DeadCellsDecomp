@@ -1,7 +1,7 @@
 package tool.weap.bow;
 
 class ExplosiveCrossBow extends tool.weap.BaseBow {
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -24,7 +24,7 @@ class ExplosiveCrossBow extends tool.weap.BaseBow {
 }
 
 class ExplosiveCrossBowOffHand extends tool.Weapon {
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

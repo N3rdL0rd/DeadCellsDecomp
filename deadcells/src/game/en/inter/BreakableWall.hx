@@ -8,7 +8,7 @@ class BreakableWall extends en.Interactive {
     public var root: h2d.Object;
     public var blocks: Array<Dynamic>;
     public var canister: libs.heaps.slib.HSprite;
-    public var lightSegment: light.Wall;
+    public var lightSegment: light.Visibility.Wall;
     public var canGlow: shader.GlowKey;
     public var canGlowInner1: Int;
     public var canGlowInner2: Int;
@@ -17,7 +17,7 @@ class BreakableWall extends en.Interactive {
     public var broken: Bool;
     public var glowRatio: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 

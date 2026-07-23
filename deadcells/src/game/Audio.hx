@@ -29,9 +29,9 @@ class Audio extends libs.Process {
     public var jingleEffectMix: Float;
     public var timeEffectMix: Float;
     public var musicVolumeOverride: Float;
-    public var reportedAudioErrors: haxe.ds.StringMap;
+    public var reportedAudioErrors: haxe.ds.StringMap<Dynamic>;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
         super();
     }
 

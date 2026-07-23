@@ -121,7 +121,7 @@ class Options extends ui.OptionsBase {
     public function showStream(): Void {
     }
 
-    public function refreshTwitchVote(arg0: hl.Class): Void {
+    public function refreshTwitchVote(arg0: Class<Dynamic>): Void {
     }
 
     public function refreshStreamStatus(): Void {

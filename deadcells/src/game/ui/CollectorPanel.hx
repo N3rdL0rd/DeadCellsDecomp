@@ -14,10 +14,10 @@ class CollectorPanel extends ui.Process {
     public var cm: libs.misc.Cinematic;
     public var filterEntries: Bool;
     public var fxSb: h2d.SpriteBatch;
-    public var fxPool: libs.heaps.ParticlePool;
-    public var metaList: ui._CollectorPanel.MetaList;
-    public var cellCount: ui._CollectorPanel.CellCount;
-    public var itemDesc: ui._CollectorPanel.ItemDesc;
+    public var fxPool: libs.heaps.HParticle.ParticlePool;
+    public var metaList: ui.CollectorPanel.MetaList;
+    public var cellCount: ui.CollectorPanel.CellCount;
+    public var itemDesc: ui.CollectorPanel.ItemDesc;
     public var toHighlight: Array<Int>;
     public var cpBaseX: Float;
     public var adds: Int;
@@ -218,9 +218,9 @@ class ListItem extends h2d.Object {
     }
 }
 
-class ListEntry extends ui._CollectorPanel.ListItem {
+class ListEntry extends ui.CollectorPanel.ListItem {
     public var data: tool.ItemProgress;
-    public var header: ui._CollectorPanel.ListHeader;
+    public var header: ui.CollectorPanel.ListHeader;
     public var bg: ui.UIBox;
     public var time: Float;
     public var alt: Bool;
@@ -233,7 +233,7 @@ class ListEntry extends ui._CollectorPanel.ListItem {
     public var inter: h2d.Interactive;
     public var isPush: Bool;
 
-    public function new(arg0: tool.ItemProgress, arg1: ui._CollectorPanel.ListHeader, arg2: h2d.Flow) {
+    public function new(arg0: tool.ItemProgress, arg1: ui.CollectorPanel.ListHeader, arg2: h2d.Flow) {
         super();
     }
 
@@ -252,12 +252,12 @@ class ListEntry extends ui._CollectorPanel.ListItem {
     }
 }
 
-class ListHeader extends ui._CollectorPanel.ListItem {
+class ListHeader extends ui.CollectorPanel.ListItem {
     public var group: Int;
     public var text: ui.Text;
     public var line: h2d.Graphics;
 
-    public function new(arg0: Int, arg1: h2d.Flow) {
+    public function new(arg0: Int = 0, arg1: h2d.Flow = null) {
         super();
     }
 

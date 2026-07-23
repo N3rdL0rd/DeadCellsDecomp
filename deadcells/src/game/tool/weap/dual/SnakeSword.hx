@@ -3,7 +3,7 @@ package tool.weap.dual;
 class SnakeSwordBase extends tool.Weapon {
     public var isFirstWeapon: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -35,12 +35,12 @@ class SnakeSwordBase extends tool.Weapon {
         throw "stub: onCreateAttack not decompiled";
     }
 
-    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 }
 
 class SnakeSwordWeapon extends tool.weap.dual.SnakeSwordBase {
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -56,7 +56,7 @@ class SnakeSwordWeapon extends tool.weap.dual.SnakeSwordBase {
 }
 
 class SnakeSwordWeaponAlt extends tool.weap.dual.SnakeSwordBase {
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -79,7 +79,7 @@ class SnakeSwordSwap extends tool.Weapon {
     public var isFirstWeapon: Bool;
     public var nextIsAttack: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -102,7 +102,7 @@ class SnakeSwordSwap extends tool.Weapon {
         throw "stub: getPerfectTiming not decompiled";
     }
 
-    public override function dynOnInterrupt(arg0: tool.WeaponSkill, arg1: Float): Void {
+    public override function dynOnInterrupt(arg0: tool.Weapon.WeaponSkill, arg1: Float): Void {
     }
 
     public override function onExecute(): Bool {
@@ -118,6 +118,6 @@ class SnakeSwordSwap extends tool.Weapon {
     public override function fixedUpdate(): Void {
     }
 
-    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 }

@@ -3,7 +3,7 @@ package tool.weap.bow;
 class MultiCrossBow extends tool.weap.BaseBow {
     public var angDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -21,7 +21,7 @@ class MultiCrossBow extends tool.weap.BaseBow {
 class MultiCrossBowOffHand extends tool.weap.dual.OffHandRanged {
     public var minCYhit: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

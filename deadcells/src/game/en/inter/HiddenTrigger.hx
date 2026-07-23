@@ -7,7 +7,7 @@ class HiddenTrigger extends en.Interactive {
     public var r: Dynamic;
     public var genericEventId: String;
     public var levelId: String;
-    public var spotCastleEliteRoom: level.Marker;
+    public var spotCastleEliteRoom: level.LevelTypes.Marker;
 
     public function new(arg0: pr.Level, arg1: Float, arg2: Int, arg3: Int, arg4: Int) {
         super();

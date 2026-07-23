@@ -20,7 +20,7 @@ class Bar extends h2d.Object {
     public var text: ui.Text;
     public var icon: libs.heaps.slib.HSprite;
 
-    public function new(arg0: String, arg1: h2d.Object) {
+    public function new(arg0: String = null, arg1: h2d.Object = null) {
         super();
     }
 

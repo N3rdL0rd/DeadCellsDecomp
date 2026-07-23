@@ -5,9 +5,8 @@ class ItemMetaManager {
     public var _user: User;
     public var itemProgress: Array<Dynamic>;
     public var permanentItems: Array<Dynamic>;
-    public var forgeInvestedCells: haxe.ds.IntMap;
+    public var forgeInvestedCells: haxe.ds.IntMap<Dynamic>;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: User) {
     }
@@ -215,9 +214,8 @@ class ItemProgress {
     public var isNew: Bool;
     public var unlocked: Bool;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
     }
 
     public function hasTag(arg0: String): Bool {

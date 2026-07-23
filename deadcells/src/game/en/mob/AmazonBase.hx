@@ -34,9 +34,8 @@ class AmazonBase extends en.Mob {
     public var playingPotionAnim: Bool;
     public var playingDeathAnim: Bool;
     public var bossRushModifiers: Dynamic;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0, arg6: Bool = false) {
         super();
     }
 

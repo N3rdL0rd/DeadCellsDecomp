@@ -36,7 +36,7 @@ class Bullet extends Entity {
     public var hitSound: hxd.res.Sound;
     public var blockSound: hxd.res.Sound;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Dynamic, arg4: String) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Dynamic = null, arg4: String = null) {
         super();
     }
 

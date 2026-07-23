@@ -23,7 +23,6 @@ class BossRushData {
     public var weaponUnlock: Array<Dynamic>;
     public var materialUnlock: Array<Dynamic>;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

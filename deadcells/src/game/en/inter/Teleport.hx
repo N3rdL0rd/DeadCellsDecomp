@@ -10,20 +10,20 @@ class Teleport extends en.Interactive {
     public var runes: Array<Dynamic>;
     public var tLight: tool.EntityLight;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public function initOpenedGfx(arg0: Bool): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
     public override function dispose(): Void {
@@ -33,28 +33,28 @@ class Teleport extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function startTeleport(arg0: en.Hero, arg1: Entity): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public function open(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function outOfGameUpdate(): Void {
+    public override function outOfGameUpdate(): Void {
     }
 
     public function isHeroShouldRevealTeleporter(arg0: Int): Bool {

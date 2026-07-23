@@ -3,7 +3,7 @@ package tiled;
 class TmxBaseObject {
     public var id: Int;
     public var name: String;
-    public var properties: haxe.ds.StringMap;
+    public var properties: haxe.ds.StringMap<Dynamic>;
 
     public function new() {
     }

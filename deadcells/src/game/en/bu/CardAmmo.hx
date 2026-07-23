@@ -5,7 +5,7 @@ class CardAmmo extends en.loot.Ammo {
     public static var __eclids: Array<Int>;
     public var fromWeapon: tool.weap.ThrowingCards;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.weap.ThrowingCards) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: tool.weap.ThrowingCards = null) {
         super();
     }
 

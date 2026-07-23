@@ -129,10 +129,8 @@ class Entity {
     public var lastSprX: Float;
     public var lastSprY: Float;
     public var __uid: Int;
-    public var : Dynamic;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
     }
 
     public static function isObstructed(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity): Bool {

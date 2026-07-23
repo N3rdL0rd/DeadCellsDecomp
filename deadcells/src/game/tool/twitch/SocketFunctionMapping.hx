@@ -1,7 +1,7 @@
 package tool.twitch;
 
 class SocketFunctionMapping {
-    public var map: haxe.ds.StringMap;
+    public var map: haxe.ds.StringMap<Dynamic>;
     public var socket: tool.twitch.CustomSocketConnection;
 
     public function new(arg0: tool.twitch.CustomSocketConnection) {

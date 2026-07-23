@@ -16,7 +16,7 @@ class Dash extends Power {
     public var predictPixel: Float;
     public var predictCase: Float;
 
-    public function new(arg0: Entity, arg1: tool.InventItem, arg2: Bool) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null, arg2: Bool = false) {
         super();
     }
 

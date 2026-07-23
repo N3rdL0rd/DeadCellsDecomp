@@ -9,8 +9,8 @@ class StompSkeleton extends en.Mob {
     public var moveTargetY: Float;
     public var moveTargetTime: Float;
     public var moveTargetReached: Bool;
-    public var vx: tool.Ref;
-    public var vy: tool.Ref;
+    public var vx: tool.SmoothDamp.Ref;
+    public var vy: tool.SmoothDamp.Ref;
     public var consecutiveStompCount: Int;
     public var stompGroundY: Int;
     public var stompGroundXMin: Int;
@@ -19,7 +19,7 @@ class StompSkeleton extends en.Mob {
     public var hellStompInf: Dynamic;
     public var hellStomp: tool.skill.OldMobSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 

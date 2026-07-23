@@ -9,6 +9,6 @@ class SlotData {
     public var attachmentName: String;
     public var blendMode: Int;
 
-    public function new(arg0: Int, arg1: String, arg2: spine.BoneData) {
+    public function new(arg0: Int = 0, arg1: String = null, arg2: spine.BoneData = null) {
     }
 }

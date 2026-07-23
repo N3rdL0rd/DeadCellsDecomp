@@ -7,7 +7,7 @@ class BossDoor extends en.inter.Door {
     public var shine: Bool;
     public var bgFx: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 

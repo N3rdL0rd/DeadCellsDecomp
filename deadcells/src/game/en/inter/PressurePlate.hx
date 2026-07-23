@@ -8,14 +8,14 @@ class PressurePlate extends en.Interactive {
     public var lastTriggerer: Entity;
     public var cogs: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function dispose(): Void {
@@ -25,13 +25,13 @@ class PressurePlate extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function trigger(arg0: Entity): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public function execute(arg0: Entity): Void {
@@ -41,7 +41,7 @@ class PressurePlate extends en.Interactive {
         throw "stub: executeOn not decompiled";
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

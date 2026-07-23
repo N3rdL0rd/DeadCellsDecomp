@@ -27,7 +27,7 @@ class Hero extends Entity {
     public var lastParryShield: tool.weap.BaseShield;
     public var trail: Array<Dynamic>;
     public var curTrail: Int;
-    public var scarf: tool.ScarfManager;
+    public var scarf: tool.ScarfSegment.ScarfManager;
     public var oldTime: Float;
     public var pauseInfection: Bool;
     public var controller: tool.ControllerAccess;
@@ -38,7 +38,7 @@ class Hero extends Entity {
     public var _infos: Dynamic;
     public var sideKicks: Array<Dynamic>;
     public var lastHeadPos: tool.FPoint;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
     public var inventory: tool.Inventory;
     public var blueprints: Array<Dynamic>;
     public var awake: Bool;
@@ -638,7 +638,7 @@ class Hero extends Entity {
     public override function onEnterRoom(arg0: level.Room): Void {
     }
 
-    public function getCurrentShopMusic(arg0: level.MerchantData): hxd.res.Sound {
+    public function getCurrentShopMusic(arg0: level.LevelTypes.MerchantData): hxd.res.Sound {
         throw "stub: getCurrentShopMusic not decompiled";
     }
 
@@ -673,7 +673,7 @@ class Hero extends Entity {
     public function pushScarf(arg0: Float, arg1: Ref): Void {
     }
 
-    public function cancelMainSkills(arg0: hl.Class): Void {
+    public function cancelMainSkills(arg0: Class<Dynamic>): Void {
     }
 
     public function _setPerkCooldownS(arg0: tool.InventItem, arg1: Float): Void {

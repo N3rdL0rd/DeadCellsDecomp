@@ -6,13 +6,13 @@ class FlaskGoggles extends en.Interactive {
     public var isActivated: Bool;
     public var price: Int;
     public var camSpeed: Float;
-    public var paddings: haxe.ds.EnumValueMap;
+    public var paddings: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
     public var flaskMarkers: Array<Dynamic>;
     public var camBounds: tool.Area;
     public var ui: ui.FlaskGogglesUI;
     public var controller: tool.ControllerAccess;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Array<Dynamic> = null) {
         super();
     }
 

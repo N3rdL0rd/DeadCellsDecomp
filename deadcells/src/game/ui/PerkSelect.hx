@@ -28,7 +28,7 @@ class PerkSelect extends ui.Process {
     public var cpBaseX: Float;
     public var onClose: Dynamic;
 
-    public function new(arg0: en.Hero, arg1: Entity) {
+    public function new(arg0: en.Hero = null, arg1: Entity = null) {
         super();
     }
 

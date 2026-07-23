@@ -31,7 +31,7 @@ class HookChainTimeKeeper extends libs.Process {
     public var circleDebug2: h2d.Graphics;
     public var onions: Array<Dynamic>;
 
-    public function new(arg0: en.Mob, arg1: String, arg2: String, arg3: Float, arg4: Dynamic, arg5: Dynamic) {
+    public function new(arg0: en.Mob = null, arg1: String = null, arg2: String = null, arg3: Float = 0., arg4: Dynamic = null, arg5: Dynamic = null) {
         super();
     }
 

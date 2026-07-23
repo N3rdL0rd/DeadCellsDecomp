@@ -14,7 +14,7 @@ class Ammo extends en.Loot {
     public var allowManualRecovery: Bool;
     public var stuckInWall: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.Team) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: tool.Team = null) {
         super();
     }
 
@@ -64,16 +64,16 @@ class Ammo extends en.Loot {
     public override function dispose(): Void {
     }
 
-    public function onTouchGround(): Void {
+    public override function onTouchGround(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function onFatalFallStart(arg0: Ref): Void {
+    public override function onFatalFallStart(arg0: Ref): Void {
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
     public function fallFromEntity(arg0: Dynamic): Void {

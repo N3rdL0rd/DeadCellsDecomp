@@ -2,7 +2,7 @@ package tool.vote;
 
 class FallTaunt extends tool.TwitchVote {
     public static var __clid: Int;
-    public var words: haxe.ds.StringMap;
+    public var words: haxe.ds.StringMap<Dynamic>;
 
     public function new() {
         super();

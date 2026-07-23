@@ -13,7 +13,7 @@ class TombstoneEntity extends Entity {
     public var targetMobs: Array<Dynamic>;
     public var dmgRatio: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: en.Hero, arg5: Int, arg6: Int, arg7: en.Mob, arg8: Ref, arg9: Ref, arg10: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: en.Hero = null, arg5: Int = 0, arg6: Int = 0, arg7: en.Mob = null, arg8: Ref = null, arg9: Ref = null, arg10: Array<Dynamic> = null) {
         super();
     }
 

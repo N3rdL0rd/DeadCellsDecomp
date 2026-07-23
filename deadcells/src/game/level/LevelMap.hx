@@ -28,7 +28,6 @@ class LevelMap {
     public var initDone: Bool;
     public var blurredCols: Array<Float>;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: User, arg1: Dynamic, arg2: Int, arg3: Int) {
     }
@@ -175,7 +174,7 @@ class LevelMap {
         throw "stub: listDecoPlatforms not decompiled";
     }
 
-    public function listWallTransitions(arg0: libs.tilemap.Selector, arg1: libs.tilemap.Selector, arg2: libs.tilemap.Selector, arg3: libs.tilemap.Selector, arg4: libs.tilemap.Selector): Array<Dynamic> {
+    public function listWallTransitions(arg0: libs.tilemap.Data.Selector, arg1: libs.tilemap.Data.Selector, arg2: libs.tilemap.Data.Selector, arg3: libs.tilemap.Data.Selector, arg4: libs.tilemap.Data.Selector): Array<Dynamic> {
         throw "stub: listWallTransitions not decompiled";
     }
 

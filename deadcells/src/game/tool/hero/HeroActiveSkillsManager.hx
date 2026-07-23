@@ -3,13 +3,13 @@ package tool.hero;
 class HeroActiveSkillsManager extends tool.HeroManager {
     public static var __clid: Int;
     public var activeSkills: Array<Dynamic>;
-    public var savedCooldowns: haxe.ds.IntMap;
+    public var savedCooldowns: haxe.ds.IntMap<Dynamic>;
     public var passivePowers: Array<Dynamic>;
     public var __atkRunningPowers: Array<Dynamic>;
     public var __internalRunningPowers: Array<Dynamic>;
-    public var skillControlLocks: haxe.ds.IntMap;
+    public var skillControlLocks: haxe.ds.IntMap<Dynamic>;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 
@@ -65,7 +65,7 @@ class HeroActiveSkillsManager extends tool.HeroManager {
         throw "stub: prepareSave not decompiled";
     }
 
-    public function interruptPowers(arg0: hl.Class): Void {
+    public function interruptPowers(arg0: Class<Dynamic>): Void {
     }
 
     public function hasAnySpeedBuff(): Bool {
@@ -176,9 +176,8 @@ class HeroActiveSkill {
     public var oldCdF: Float;
     public var hasMultipleUses: Bool;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
     }
 
     public function get_usesLeft(): Int {

@@ -28,7 +28,7 @@ class TitleScreen extends ui.Process {
     public var oldUserWarningSeen: Bool;
     public var newsSelected: Bool;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
         super();
     }
 
@@ -121,9 +121,9 @@ class TitleScreen extends ui.Process {
     public override function onDispose(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

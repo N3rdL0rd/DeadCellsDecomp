@@ -3,7 +3,7 @@ package cine.dlcp;
 class EncounterAlucard extends GameCinematic {
     public var hero: en.Hero;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

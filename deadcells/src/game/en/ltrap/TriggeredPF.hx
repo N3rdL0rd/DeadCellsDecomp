@@ -13,7 +13,7 @@ class TriggeredPF extends en.LevelTrap {
     public var tDown: String;
     public var tUp: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Bool, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Bool = false, arg5: Dynamic = null) {
         super();
     }
 

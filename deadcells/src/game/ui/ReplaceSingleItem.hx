@@ -19,7 +19,7 @@ class ReplaceSingleItem extends ui.Process {
     public var arrowLeft: libs.heaps.slib.HSprite;
     public var showUIonDispose: Bool;
 
-    public function new(arg0: Entity, arg1: tool.InventItem, arg2: tool.InventItem, arg3: Dynamic, arg4: Ref) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null, arg2: tool.InventItem = null, arg3: Dynamic = null, arg4: Ref = null) {
         super();
     }
 

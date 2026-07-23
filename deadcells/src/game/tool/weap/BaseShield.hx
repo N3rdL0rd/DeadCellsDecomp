@@ -8,7 +8,7 @@ class BaseShield extends tool.Weapon {
     public var startTimeF: Float;
     public var totalParryDurationS: Float;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -16,7 +16,7 @@ class BaseShield extends tool.Weapon {
         throw "stub: createCounterBullet not decompiled";
     }
 
-    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.Weapon.WeaponSkill): Void {
     }
 
     public override function dispose(): Void {

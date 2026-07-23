@@ -1,15 +1,15 @@
 package tool.skill.mobSkill;
 
 class TeleJump extends tool.skill.OldMobSkill {
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var point: Dynamic;
     public var maxDistance: Int;
 
-    public function new(arg0: String, arg1: en.Mob) {
+    public function new(arg0: String = null, arg1: en.Mob = null) {
         super();
     }
 
-    public function setTeleJumpData(arg0: tool.skill.mobSkill.TeleJumpData): Void {
+    public function setTeleJumpData(arg0: tool.skill.mobSkill.TeleJump.TeleJumpData): Void {
     }
 
     public function defaultOnChargeStart(): Void {
@@ -40,7 +40,7 @@ class TeleJump extends tool.skill.OldMobSkill {
         throw "stub: listAlikes not decompiled";
     }
 
-    public function dynOnExecute(arg0: Float): Void {
+    public override function dynOnExecute(arg0: Float): Void {
     }
 
     public function onExecuteSucceed(): Void {
@@ -50,7 +50,7 @@ class TeleJump extends tool.skill.OldMobSkill {
         throw "stub: chooseDestination not decompiled";
     }
 
-    public function dynOnChargeStart(): Void {
+    public override function dynOnChargeStart(): Void {
     }
 
     public function chargeAnimSequence(): Void {
@@ -64,7 +64,6 @@ class TeleJumpData {
     public var jumpRatio: Float;
     public var jumpSpeed: Float;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

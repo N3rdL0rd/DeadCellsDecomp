@@ -5,7 +5,7 @@ class Grid {
     public var rightPos: Int;
     public var yPos: Int;
 
-    public function new(arg0: Int, arg1: Int, arg2: Ref) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Ref = null) {
     }
 
     public function get_length(): Int {
@@ -48,13 +48,13 @@ class PurpleGarden extends level.BiomeDisp {
     public function addColumnsInArea(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addSmallWindows(arg0: level.DecoZone, arg1: Array<Dynamic>): Void {
+    public function addSmallWindows(arg0: level.DecoTypes.DecoZone, arg1: Array<Dynamic>): Void {
     }
 
-    public function fillHorizontalCenteredZone(arg0: level.DecoZone, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Array<Dynamic>, arg8: Int, arg9: Int, arg10: Int, arg11: libs.heaps.StaticGeometryGroup, arg12: Dynamic): Int {
+    public function fillHorizontalCenteredZone(arg0: level.DecoTypes.DecoZone, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Array<Dynamic>, arg8: Int, arg9: Int, arg10: Int, arg11: libs.heaps.StaticGeometryGroup, arg12: Dynamic): Int {
         throw "stub: fillHorizontalCenteredZone not decompiled";
     }
 
@@ -62,11 +62,11 @@ class PurpleGarden extends level.BiomeDisp {
         throw "stub: fillHorizontalCentered not decompiled";
     }
 
-    public function isAboveGround(arg0: level.DecoZone): Bool {
+    public function isAboveGround(arg0: level.DecoTypes.DecoZone): Bool {
         throw "stub: isAboveGround not decompiled";
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function shouldSkipLightPoint(arg0: Int, arg1: Int, arg2: Int): Bool {

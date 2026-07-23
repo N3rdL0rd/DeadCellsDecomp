@@ -5,7 +5,7 @@ class ColorValSlider extends shader.slider.ColorSlider {
     public static var _SHADER: hxsl.SharedShader;
     public var currentColor__: h3d.Vector;
 
-    public function new(arg0: Dynamic, arg1: Ref, arg2: Ref) {
+    public function new(arg0: Dynamic = null, arg1: Ref = null, arg2: Ref = null) {
         super();
     }
 

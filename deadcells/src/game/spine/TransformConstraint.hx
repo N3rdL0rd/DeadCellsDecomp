@@ -9,7 +9,6 @@ class TransformConstraint {
     public var scaleMix: Float;
     public var shearMix: Float;
     public var temp: spine.support.math.Vector2;
-    public var : Dynamic;
 
     public function new(arg0: spine.TransformConstraintData, arg1: spine.Skeleton) {
     }

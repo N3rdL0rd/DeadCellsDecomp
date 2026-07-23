@@ -25,8 +25,8 @@ class LootGen {
     public var allGems: libs.RandList;
     public var allCells: Array<Dynamic>;
     public var regLoots: Array<Dynamic>;
-    public var occupiedCells: haxe.ds.ObjectMap;
-    public var occupiedRooms: haxe.ds.ObjectMap;
+    public var occupiedCells: haxe.ds.ObjectMap<Dynamic, Dynamic>;
+    public var occupiedRooms: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var hiddenBlockSpots: Array<Dynamic>;
     public var lootLevel: Int;
     public var mobTier: Int;

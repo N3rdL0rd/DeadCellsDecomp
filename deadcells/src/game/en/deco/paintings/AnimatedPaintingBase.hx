@@ -7,7 +7,7 @@ class AnimatedPaintingBase extends en.Deco {
     public var group: String;
     public var hasNorm: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Float, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Float = 0., arg5: Ref = null) {
         super();
     }
 

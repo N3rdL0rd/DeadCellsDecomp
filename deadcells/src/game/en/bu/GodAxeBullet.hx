@@ -10,7 +10,7 @@ class GodAxeBullet extends en.Bullet {
     public var glowColIn: Int;
     public var glowColOut: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.atk.AttackData, arg2: tool.weap.GodAxeWeapon, arg3: Float, arg4: Float, arg5: Int, arg6: Int) {
+    public function new(arg0: en.Hero = null, arg1: tool.atk.AttackData = null, arg2: tool.weap.GodAxeWeapon = null, arg3: Float = 0., arg4: Float = 0., arg5: Int = 0, arg6: Int = 0) {
         super();
     }
 

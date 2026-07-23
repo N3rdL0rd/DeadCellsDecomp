@@ -39,9 +39,9 @@ class Beholder extends en.mob.Boss {
     public var dxChainLR: Float;
     public var dxChainTop: Float;
     public var y_offsetChainLR: Int;
-    public var anchorTop: en.mob.boss._Beholder.Anchor;
-    public var anchorLeft: en.mob.boss._Beholder.Anchor;
-    public var anchorRight: en.mob.boss._Beholder.Anchor;
+    public var anchorTop: en.mob.boss.Beholder.Anchor;
+    public var anchorLeft: en.mob.boss.Beholder.Anchor;
+    public var anchorRight: en.mob.boss.Beholder.Anchor;
     public var isZoomed: Dynamic;
     public var speedBreathing: Int;
     public var angDizzy: Float;
@@ -66,9 +66,8 @@ class Beholder extends en.mob.Boss {
     public var nextIsMegaShoot: Bool;
     public var arDbg: Array<Dynamic>;
     public var bossRushModifiers: Dynamic;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -92,40 +91,40 @@ class Beholder extends en.mob.Boss {
     public override function onScream(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function getMobSprites(): Array<Dynamic> {
+    public override function getMobSprites(): Array<Dynamic> {
         throw "stub: getMobSprites not decompiled";
     }
 
-    public function setSpriteParent(arg0: h2d.Object): Void {
+    public override function setSpriteParent(arg0: h2d.Object): Void {
     }
 
-    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
 
-    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
 
-    public function canBeGrabbedByHomunculus(): Bool {
+    public override function canBeGrabbedByHomunculus(): Bool {
         throw "stub: canBeGrabbedByHomunculus not decompiled";
     }
 
     public function onStun(): Void {
     }
 
-    public function set_sprAlpha(arg0: Float): Float {
+    public override function set_sprAlpha(arg0: Float): Float {
         throw "stub: set_sprAlpha not decompiled";
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function spikesAreaTouched(): Array<Dynamic> {
@@ -150,27 +149,27 @@ class Beholder extends en.mob.Boss {
     public function setGlobalCD(): Void {
     }
 
-    public function initMove(): Void {
+    public override function initMove(): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public function prepareMegaShoot(): Void {
     }
 
-    public function canBeDetected(): Bool {
+    public override function canBeDetected(): Bool {
         throw "stub: canBeDetected not decompiled";
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function getAdjustedWeightFactor(arg0: Entity): Float {
+    public override function getAdjustedWeightFactor(arg0: Entity): Float {
         throw "stub: getAdjustedWeightFactor not decompiled";
     }
 
-    public function canBeHitBy(arg0: Entity): Bool {
+    public override function canBeHitBy(arg0: Entity): Bool {
         throw "stub: canBeHitBy not decompiled";
     }
 
@@ -193,10 +192,10 @@ class Beholder extends en.mob.Boss {
     public function createTentacles(arg0: Int, arg1: Bool): Void {
     }
 
-    public function onLand(arg0: Float): Void {
+    public override function onLand(arg0: Float): Void {
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public override function dispose(): Void {
@@ -212,7 +211,7 @@ class Beholder extends en.mob.Boss {
     public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function applyBossRushModifier(arg0: Dynamic): Void {

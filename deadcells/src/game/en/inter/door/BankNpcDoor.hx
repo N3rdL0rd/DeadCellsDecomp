@@ -7,7 +7,7 @@ class BankNpcDoor extends en.inter.Door {
     public var shine: Bool;
     public var banker: en.inter.npc.Banker;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 

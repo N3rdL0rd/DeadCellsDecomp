@@ -20,7 +20,7 @@ class Process {
     public var tw: libs.misc.Tweenie;
     public var root: h2d.Layers;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
     }
 
     public static function _dispose(arg0: libs.Process): Void {

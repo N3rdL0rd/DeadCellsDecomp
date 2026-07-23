@@ -6,7 +6,7 @@ class Turret extends en.Active {
     public var shootCdS: Float;
     public var areaLights: Array<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 

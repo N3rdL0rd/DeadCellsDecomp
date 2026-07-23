@@ -77,11 +77,11 @@ class Boot extends hxd.App {
         Boot.initRes();
         Boot.initXboxGdk();
         tool.ErrorHandler.init();
-        hxd.System.set_allowTimeout(true);
+        hxd.System.allowTimeout = true;
 
         var args: Array<String> = Sys.args();
         var hasCustomArg: Bool = false;
-        for (arg in args) {
+        for (arg in (args : Array<String>)) {
             if (arg.charCodeAt(0) == 45) {
                 hasCustomArg = true;
             }
@@ -90,7 +90,7 @@ class Boot extends hxd.App {
         Boot.initPlatform(args);
         Achievements.init();
 
-        arg = if (args.length <= 0) null else args[0];
+        var arg = if (args.length <= 0) null else args[0];
         if (arg != "--workshop") {
             arg = if (args.length <= 1) null else args[1];
             if (arg == "--workshop") {
@@ -107,7 +107,7 @@ class Boot extends hxd.App {
                 if (!hasCustomArg) {
                     Native.ui_close_console();
                 }
-                hxd.System.set_allowTimeout(false);
+                hxd.System.allowTimeout = false;
                 return;
             }
             tool.mod.ModManager.instance.deactivateAllMods(true);
@@ -115,7 +115,7 @@ class Boot extends hxd.App {
             if (!hasCustomArg) {
                 Native.ui_close_console();
             }
-            hxd.System.set_allowTimeout(false);
+            hxd.System.allowTimeout = false;
             return;
         }
         tool.mod.ModManager.instance.deactivateAllMods(true);
@@ -174,7 +174,7 @@ class Boot extends hxd.App {
         this.initConsoles();
         this.initSound();
         hxd.Window.getInstance().onClose = this.onExit;
-        hxd.Window.getInstance().window.set_title("Dead Cells");
+        @:privateAccess hxd.Window.getInstance().window.title = "Dead Cells";
 
         Boot.ME = this;
 
@@ -189,9 +189,9 @@ class Boot extends hxd.App {
         this.delayer = new libs.Delayer(60.0);
         this.tw = new libs.misc.Tweenie(60.0);
 
-        var baseShader: shader.Base2d = tool.ShaderTool.createBase2dShader();
-        this.s2d.ctx.baseShader = baseShader;
-        this.s2d.ctx.baseShaderList = new hxsl.ShaderList(baseShader, null);
+        var baseShader: h3d.shader.Base2d = tool.ShaderTool.createBase2dShader();
+        @:privateAccess this.s2d.ctx.baseShader = baseShader;
+        @:privateAccess this.s2d.ctx.baseShaderList = new hxsl.ShaderList(baseShader, null);
 
         hxd.Timer.wantedFPS = 60.0;
         this.engine.onContextLost = function() {
@@ -199,7 +199,7 @@ class Boot extends hxd.App {
         };
         haxe.Timer.delay(this.endInit, 0);
         this.frameProfiler = new tool.FrameProfiler();
-        haxe.MainLoop.add(this.frameProfiler.afterPresent, new hl.Ref(16777215)); // TODO: why ref here?
+        haxe.MainLoop.add(this.frameProfiler.afterPresent, 16777215); // TODO: why ref here?
         
         Boot.logClientInfos();
     }
@@ -226,9 +226,9 @@ class Boot extends hxd.App {
             var p: libs.Process;
             var i: Int = 0;
             while (i < Main.ME.children.length) {
-                p = Main.ME.children.array[i];
+                p = Main.ME.children[i];
                 i++;
-                if (Std.is(p, untyped $global298())) { // TODO: wtf?
+                if (Std.is(p, ui.Process)) {
                     p.destroyed = true;
                 }
             }
@@ -273,7 +273,7 @@ class Boot extends hxd.App {
                 this.controller.unlock();
             }
             if (hxd.Key.isPressed(122)) {
-                this.engine.set_fullScreen(!this.engine.fullScreen);
+                this.engine.fullScreen = !this.engine.fullScreen;
 				Main.ME.options.displayMode = if (this.engine.fullScreen) 2 else 0;
             }
             mult = 1;
@@ -285,7 +285,7 @@ class Boot extends hxd.App {
         
         mult = 122;
         if (hxd.Key.isPressed(mult)) {
-            this.engine.set_fullScreen(!this.engine.fullScreen);
+            this.engine.fullScreen = !this.engine.fullScreen;
             if (this.engine.fullScreen) {
                 mult = 2;
             } else {
@@ -306,7 +306,8 @@ class Boot extends hxd.App {
 	}
 
     public function onExit(): Bool {
-        var bufferedOutput = tool.log.LogUtils.getOutput(untyped $global1073());
+        
+        var bufferedOutput = tool.log.LogUtils.getOutput(tool.log.BufferedFileOutput);
         if (bufferedOutput != null) bufferedOutput.saveLogs();
 
         if (Boot.isInForceRender) return false;
@@ -320,7 +321,7 @@ class Boot extends hxd.App {
 		Boot.isInForceRender = true;
 		hxd.Timer.update();
 		this.s2d.setElapsedTime(hxd.Timer.dt);
-		h3d.Engine.CURRENT.render(this);
+		h3d.Engine.getCurrent().render(this);
 
 		var realLoop:Dynamic = hxd.System.getCurrentLoop();
 		hxd.System.setLoop(null);

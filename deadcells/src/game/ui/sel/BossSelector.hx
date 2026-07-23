@@ -3,7 +3,7 @@ package ui.sel;
 class BossSelector extends ui.sel.GridSelector {
     public var separators: Array<Dynamic>;
     public var toggleSwitch: Int;
-    public var bossEntry: haxe.ds.IntMap;
+    public var bossEntry: haxe.ds.IntMap<Dynamic>;
     public var pickedBoss: Array<Dynamic>;
     public var sectionsCallbacks: Array<Dynamic>;
     public var parentDoor: en.inter.door.BossRushDoor;

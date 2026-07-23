@@ -13,7 +13,7 @@ class TrainingWeaponSpawner extends en.Interactive {
     public var baseSeed: Int;
     public var rseed: libs.Rand;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: String, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: String = null, arg5: Ref = null) {
         super();
     }
 

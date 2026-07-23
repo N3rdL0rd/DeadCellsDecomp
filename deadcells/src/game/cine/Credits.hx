@@ -14,7 +14,7 @@ class Section extends h2d.Flow {
     public var splitFlows: Array<Dynamic>;
     public var onDisplayEnd: Dynamic;
 
-    public function new(arg0: Ref, arg1: Ref) {
+    public function new(arg0: Ref = null, arg1: Ref = null) {
         super();
     }
 

@@ -15,7 +15,6 @@ class InventItem {
     public var overridedMoneyValue: Dynamic;
     public var _itemData: Dynamic;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: tool.InventItemKind) {
     }

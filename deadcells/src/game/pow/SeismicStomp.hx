@@ -10,11 +10,11 @@ class SeismicStomp extends Power {
     public var startY: Float;
     public var fxRc: Int;
     public var fxC: Int;
-    public var fxBigRockTile: tool.FxTile;
-    public var fxSmallRockTile: tool.FxTile;
+    public var fxBigRockTile: tool.FxTileCache.FxTile;
+    public var fxSmallRockTile: tool.FxTileCache.FxTile;
     public var diveSkill: tool.mainSkills.DiveAttack;
 
-    public function new(arg0: Entity, arg1: tool.InventItem, arg2: Bool, arg3: Ref, arg4: Ref, arg5: Dynamic, arg6: Dynamic, arg7: tool.FxTile, arg8: tool.FxTile) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null, arg2: Bool = false, arg3: Ref = null, arg4: Ref = null, arg5: Dynamic = null, arg6: Dynamic = null, arg7: tool.FxTileCache.FxTile = null, arg8: tool.FxTileCache.FxTile = null) {
         super();
     }
 

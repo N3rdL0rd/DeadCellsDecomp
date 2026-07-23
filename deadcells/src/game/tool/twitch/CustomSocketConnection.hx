@@ -11,7 +11,7 @@ class CustomSocketConnection {
     public var destroyed: Bool;
     public var buffer: String;
 
-    public function new(arg0: String, arg1: Dynamic) {
+    public function new(arg0: String = null, arg1: Dynamic = null) {
     }
 
     public function disconnect(): Void {

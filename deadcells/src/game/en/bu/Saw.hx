@@ -6,7 +6,7 @@ class Saw extends en.Bullet {
     public var rot: Float;
     public var lightPow: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0.) {
         super();
     }
 

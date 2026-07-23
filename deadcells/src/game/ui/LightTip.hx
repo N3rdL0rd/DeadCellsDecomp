@@ -16,7 +16,7 @@ class LightTip extends ui.Process {
     public var visible: Bool;
     public var isPermanent: Bool;
 
-    public function new(arg0: Entity, arg1: Direction) {
+    public function new(arg0: Entity = null, arg1: Direction = null) {
         super();
     }
 
@@ -52,9 +52,9 @@ class LightTip extends ui.Process {
     public override function onResize(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

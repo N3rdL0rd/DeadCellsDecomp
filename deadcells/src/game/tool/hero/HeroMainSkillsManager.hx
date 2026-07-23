@@ -5,11 +5,11 @@ class HeroMainSkillsManager extends tool.HeroManager {
     public var skills: Array<Dynamic>;
     public var blackBoards: Array<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: pr.Game) {
+    public function new(arg0: en.Hero = null, arg1: pr.Game = null) {
         super();
     }
 
-    public function getBlackBoard(arg0: hl.Class): tool.mainSkills.blackboards.MainSkillBlackBoard {
+    public function getBlackBoard(arg0: Class<Dynamic>): tool.mainSkills.blackboards.MainSkillBlackBoard {
         throw "stub: getBlackBoard not decompiled";
     }
 
@@ -55,15 +55,15 @@ class HeroMainSkillsManager extends tool.HeroManager {
     public function onUse(arg0: en.Interactive): Void {
     }
 
-    public function getMainSkill(arg0: hl.Class): tool.HeroMainSkill {
+    public function getMainSkill(arg0: Class<Dynamic>): tool.HeroMainSkill {
         throw "stub: getMainSkill not decompiled";
     }
 
-    public function getEnabledMainSkill(arg0: hl.Class): tool.HeroMainSkill {
+    public function getEnabledMainSkill(arg0: Class<Dynamic>): tool.HeroMainSkill {
         throw "stub: getEnabledMainSkill not decompiled";
     }
 
-    public function cancelMainSkills(arg0: hl.Class): Void {
+    public function cancelMainSkills(arg0: Class<Dynamic>): Void {
     }
 
     public function tryInterruptBy(arg0: tool.HeroMainSkill): Bool {

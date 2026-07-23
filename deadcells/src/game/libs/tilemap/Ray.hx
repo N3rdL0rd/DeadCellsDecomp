@@ -7,7 +7,7 @@ class Ray {
     public var dx: Int;
     public var dy: Int;
 
-    public function new(arg0: Ref, arg1: Ref, arg2: Ref) {
+    public function new(arg0: Ref = null, arg1: Ref = null, arg2: Ref = null) {
     }
 
     public function intersects(arg0: libs.tilemap.Segment, arg1: libs.tilemap.RayIntersection): libs.tilemap.RayIntersection {

@@ -14,16 +14,16 @@ class BossRushZone extends level.BiomeDisp {
     public override function initDecoEntities(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addSmallDoors(arg0: level.DecoZone): Void {
+    public function addSmallDoors(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addSmallArch(arg0: level.DecoZone): Void {
+    public function addSmallArch(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function addWallLight(arg0: level.Room, arg1: Float, arg2: Float): Void {

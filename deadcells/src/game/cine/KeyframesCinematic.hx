@@ -12,9 +12,9 @@ class KeyframesCinematic extends GameCinematic {
     public var mask: h2d.Graphics;
     public var fxSbAdd: h2d.SpriteBatch;
     public var fxSbNormal: h2d.SpriteBatch;
-    public var fxPool: libs.heaps.ParticlePool;
+    public var fxPool: libs.heaps.HParticle.ParticlePool;
 
-    public function new(arg0: String, arg1: Array<Dynamic>) {
+    public function new(arg0: String = null, arg1: Array<Dynamic> = null) {
         super();
     }
 

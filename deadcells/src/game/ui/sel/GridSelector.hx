@@ -130,7 +130,7 @@ class GridSelector extends ui.Process {
     public override function onDispose(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
     public function controlsUpdate(): Bool {
@@ -140,7 +140,7 @@ class GridSelector extends ui.Process {
     public function controlMoveCheck(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function setOnCloseCallback(arg0: Dynamic): Void {

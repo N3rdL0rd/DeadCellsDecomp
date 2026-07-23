@@ -9,7 +9,7 @@ class ShopBooth extends en.Interactive {
     public var icon: ui.icon.Icon;
     public var oldMoney: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: Int = 0) {
         super();
     }
 

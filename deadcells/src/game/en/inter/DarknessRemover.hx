@@ -13,7 +13,7 @@ class DarknessRemover extends en.Interactive {
     public var depleted: Bool;
     public var maxRadius: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 

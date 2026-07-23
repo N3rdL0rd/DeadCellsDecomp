@@ -13,7 +13,7 @@ class AssistModeData {
     public var autoBreakDoors: Bool;
     public var slowerMobs: Bool;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
     }
 
     public function clone(arg0: Dynamic): Void {

@@ -4,7 +4,7 @@ class EnemyGrenadeWorm extends en.Grenade {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: Entity, arg1: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Dynamic = null) {
         super();
     }
 

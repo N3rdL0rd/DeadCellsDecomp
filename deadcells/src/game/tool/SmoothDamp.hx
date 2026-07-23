@@ -8,7 +8,7 @@ class Ref {
 }
 
 class SmoothDamp {
-    public static function update(arg0: Float, arg1: Float, arg2: tool.Ref, arg3: Float, arg4: Float, arg5: Float): Float {
+    public static function update(arg0: Float, arg1: Float, arg2: tool.SmoothDamp.Ref, arg3: Float, arg4: Float, arg5: Float): Float {
         throw "stub: update not decompiled";
     }
 }

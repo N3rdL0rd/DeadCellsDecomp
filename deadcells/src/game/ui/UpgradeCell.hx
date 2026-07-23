@@ -12,7 +12,7 @@ class UpgradeCell extends h2d.Object {
     public var id: Int;
     public var radius: Int;
 
-    public function new(arg0: libs.Process, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic) {
+    public function new(arg0: libs.Process = null, arg1: Dynamic = null, arg2: Dynamic = null, arg3: Dynamic = null) {
         super();
     }
 

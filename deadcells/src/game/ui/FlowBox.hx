@@ -10,7 +10,7 @@ class FlowBox extends h2d.Flow {
     public var padLeft: Dynamic;
     public var padRight: Dynamic;
 
-    public function new(arg0: h2d.Object) {
+    public function new(arg0: h2d.Object = null) {
         super();
     }
 

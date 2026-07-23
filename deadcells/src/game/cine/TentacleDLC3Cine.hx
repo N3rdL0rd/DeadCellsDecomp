@@ -7,7 +7,7 @@ class TentacleDLC3Cine extends GameCinematic {
     public var bringKey: Bool;
     public var itemsGiven: Bool;
 
-    public function new(arg0: en.Hero, arg1: en.MessengerTtcl, arg2: en.inter.TentacleNote, arg3: Bool) {
+    public function new(arg0: en.Hero = null, arg1: en.MessengerTtcl = null, arg2: en.inter.TentacleNote = null, arg3: Bool = false) {
         super();
     }
 

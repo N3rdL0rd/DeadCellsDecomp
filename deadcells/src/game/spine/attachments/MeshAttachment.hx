@@ -14,7 +14,7 @@ class MeshAttachment extends spine.attachments.VertexAttachment {
     public var width: Float;
     public var height: Float;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
         super();
     }
 

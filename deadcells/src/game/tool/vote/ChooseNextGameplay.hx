@@ -2,7 +2,7 @@ package tool.vote;
 
 class ChooseNextGameplay extends tool.TwitchVote {
     public static var __clid: Int;
-    public var mods: haxe.ds.StringMap;
+    public var mods: haxe.ds.StringMap<Dynamic>;
 
     public function new() {
         super();

@@ -7,11 +7,11 @@ class MapFow extends h2d.Drawable {
     public var tile: h2d.Tile;
     public var wrapper: h2d.Object;
     public var circle: h2d.Graphics;
-    public var shader: shader.FowAdd;
+    public var shader: shader.MiniMap.FowAdd;
     public var png: haxe.io.Bytes;
 
-    public function new(arg0: Int, arg1: Int, arg2: Float, arg3: haxe.io.Bytes) {
-        super();
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Float = 0., arg3: haxe.io.Bytes = null) {
+        super(null);
     }
 
     public function createGraphics(arg0: Ref): h2d.Graphics {
@@ -28,9 +28,9 @@ class MapFow extends h2d.Drawable {
     public function syncPosRec(arg0: h2d.Object): Void {
     }
 
-    public function draw(arg0: h2d.RenderContext): Void {
+    public override function draw(arg0: h2d.RenderContext): Void {
     }
 
-    public function drawRec(arg0: h2d.RenderContext): Void {
+    public override function drawRec(arg0: h2d.RenderContext): Void {
     }
 }

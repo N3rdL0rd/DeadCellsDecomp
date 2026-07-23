@@ -16,10 +16,10 @@ class Mirror extends en.Interactive {
     public var libMonsters: libs.heaps.slib.SpriteLib;
     public var mobId: String;
     public var mobSprite: libs.heaps.slib.HSprite;
-    public var fdAlpha: libs.heaps.slib.FrameData;
-    public var fdSprite: libs.heaps.slib.FrameData;
+    public var fdAlpha: libs.heaps.slib.SpriteLib.FrameData;
+    public var fdSprite: libs.heaps.slib.SpriteLib.FrameData;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 

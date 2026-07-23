@@ -13,7 +13,7 @@ class DookuMagmaBall extends Entity {
     public var oy: Float;
     public var a: tool.Area;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.boss.DookuBeast, arg4: Float, arg5: Float, arg6: Float, arg7: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.mob.boss.DookuBeast = null, arg4: Float = 0., arg5: Float = 0., arg6: Float = 0., arg7: Int = 0) {
         super();
     }
 

@@ -6,7 +6,7 @@ class BossRushTierButton extends en.inter.button.Button {
     public var tier: String;
     public var tierHotel: en.deco.BossRushTierHotel;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: en.deco.BossRushTierHotel) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: en.deco.BossRushTierHotel = null) {
         super();
     }
 

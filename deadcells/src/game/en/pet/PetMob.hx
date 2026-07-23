@@ -9,12 +9,12 @@ class PetMob extends en.Mob {
     public var followDistance: Int;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var teleJumpInf: Dynamic;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var canBePet: Bool;
     public var maxDuplicates: Int;
     public var tailUpdate: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Entity, arg7: tool.InventItem, arg8: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0, arg6: Entity = null, arg7: tool.InventItem = null, arg8: Ref = null) {
         super();
     }
 

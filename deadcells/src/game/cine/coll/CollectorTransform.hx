@@ -6,7 +6,7 @@ class CollectorTransform extends cine.KeyframesCinematic {
     public var music: hxd.snd.Channel;
     public var endCb: Dynamic;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
         super();
     }
 

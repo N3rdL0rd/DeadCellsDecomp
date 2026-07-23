@@ -15,7 +15,7 @@ class Bomber extends en.Mob {
     public var diveHei: Float;
     public var targetUndercoverS: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -29,7 +29,7 @@ class Bomber extends en.Mob {
     public override function setElite(arg0: Bool): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
@@ -52,7 +52,7 @@ class Bomber extends en.Mob {
         throw "stub: inDetectArea not decompiled";
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public override function onLand(arg0: Float): Void {

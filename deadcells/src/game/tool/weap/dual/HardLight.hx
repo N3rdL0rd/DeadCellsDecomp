@@ -1,7 +1,7 @@
 package tool.weap.dual;
 
 class HardLightSword extends tool.Weapon {
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -20,7 +20,7 @@ class HardLightSword extends tool.Weapon {
 }
 
 class HardLightGun extends tool.Weapon {
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

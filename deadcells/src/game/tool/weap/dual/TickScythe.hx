@@ -1,7 +1,7 @@
 package tool.weap.dual;
 
 class TickScythe extends tool.weap.dual.SharedComboWeapon {
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -33,7 +33,7 @@ class CombinedTickScythe extends tool.Weapon {
     public var combo: Int;
     public var lastWeap: tool.Weapon;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -48,7 +48,7 @@ class CombinedTickScythe extends tool.Weapon {
         throw "stub: tryToCancel not decompiled";
     }
 
-    public override function dynOnInterrupt(arg0: tool.WeaponSkill, arg1: Float): Void {
+    public override function dynOnInterrupt(arg0: tool.Weapon.WeaponSkill, arg1: Float): Void {
     }
 
     public override function cancelChain(): Void {
@@ -63,7 +63,7 @@ class CombinedTickScythe extends tool.Weapon {
 }
 
 class TickScytheRight extends tool.weap.dual.TickScythe {
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -78,7 +78,7 @@ class TickScytheRight extends tool.weap.dual.TickScythe {
 class TickScytheLeft extends tool.weap.dual.TickScythe {
     public var areaBis: Array<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

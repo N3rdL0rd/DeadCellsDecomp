@@ -60,10 +60,10 @@ class ModManager {
         throw "stub: needReload not decompiled";
     }
 
-    public function activateMod(arg0: haxe._Int64.___Int64): Void {
+    public function activateMod(arg0: haxe.Int64): Void {
     }
 
-    public function findMod(arg0: haxe._Int64.___Int64): tool.mod.ModState {
+    public function findMod(arg0: haxe.Int64): tool.mod.ModState {
         throw "stub: findMod not decompiled";
     }
 

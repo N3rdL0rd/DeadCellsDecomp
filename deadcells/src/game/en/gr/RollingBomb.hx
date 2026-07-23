@@ -10,7 +10,7 @@ class RollingBomb extends en.Grenade {
     public var announced: Bool;
     public var announcedTime: Float;
 
-    public function new(arg0: Entity, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Float = 0., arg2: Dynamic = null, arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 

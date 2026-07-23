@@ -1,7 +1,7 @@
 package cine;
 
 class HeroDeathContinue extends cine.HeroDeathBase {
-    public function new(arg0: en.Hero, arg1: Bool) {
+    public function new(arg0: en.Hero = null, arg1: Bool = false) {
         super();
     }
 

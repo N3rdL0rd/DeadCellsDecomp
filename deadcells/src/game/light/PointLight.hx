@@ -11,7 +11,7 @@ class PointLight extends light.Light {
     public var maxRange: Float;
     public var lastPos: h2d.col.Point;
 
-    public function new(arg0: h2d.Object) {
+    public function new(arg0: h2d.Object = null) {
         super();
     }
 
@@ -22,10 +22,10 @@ class PointLight extends light.Light {
     public override function setColor(arg0: Int): Void {
     }
 
-    public function sync(arg0: h2d.RenderContext): Void {
+    public override function sync(arg0: h2d.RenderContext): Void {
     }
 
-    public function cull(arg0: h2d.RenderContext): Bool {
+    public override function cull(arg0: h2d.RenderContext): Bool {
         throw "stub: cull not decompiled";
     }
 }

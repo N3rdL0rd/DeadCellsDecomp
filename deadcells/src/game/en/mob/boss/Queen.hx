@@ -55,7 +55,7 @@ class Queen extends en.mob.Boss {
     public var jumpSpeed: Float;
     public var lastCutReady: Bool;
     public var safeSpot: Dynamic;
-    public var headPool: libs.heaps.ParticlePool;
+    public var headPool: libs.heaps.HParticle.ParticlePool;
     public var headNormalSb: libs.heaps.slib.HSpriteBatch;
     public var headAddSb: libs.heaps.slib.HSpriteBatch;
     public var headBlack: Int;
@@ -79,9 +79,8 @@ class Queen extends en.mob.Boss {
     public var lastChargeRatio: Float;
     public var lastHandX: Float;
     public var lastHandY: Float;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -129,7 +128,7 @@ class Queen extends en.mob.Boss {
     public function initAffectResists(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function doCutLineAttack(arg0: Dynamic, arg1: Float, arg2: Dynamic): Void {
@@ -138,7 +137,7 @@ class Queen extends en.mob.Boss {
     public function singleCutLineAttack(arg0: Float, arg1: Float, arg2: Float): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
     public function initOffensiveSkills(): Void {
@@ -164,13 +163,13 @@ class Queen extends en.mob.Boss {
         throw "stub: playFx not decompiled";
     }
 
-    public function interruptSkills(): Void {
+    public override function interruptSkills(): Void {
     }
 
     public function cleanRegisteredFx(): Void {
     }
 
-    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
 
     public function dash(arg0: Int): Void {
@@ -179,11 +178,11 @@ class Queen extends en.mob.Boss {
     public function dashTo(arg0: Float): Void {
     }
 
-    public function canApplyRepelling(): Bool {
+    public override function canApplyRepelling(): Bool {
         throw "stub: canApplyRepelling not decompiled";
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public function checkDashHit(): Void {
@@ -231,7 +230,7 @@ class Queen extends en.mob.Boss {
     public function switchToOffensive(): Void {
     }
 
-    public function aiLocked(): Bool {
+    public override function aiLocked(): Bool {
         throw "stub: aiLocked not decompiled";
     }
 
@@ -268,28 +267,28 @@ class Queen extends en.mob.Boss {
         throw "stub: choseDefensiveMove not decompiled";
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
-    public function checkForBreach(arg0: tool.atk.AttackData): Void {
+    public override function checkForBreach(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onBreach(arg0: tool.atk.AttackData): Void {
+    public override function onBreach(arg0: tool.atk.AttackData): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public function startDelayedBreach(arg0: Ref): Void {
     }
 
-    public function onFatalFallDamage(): Void {
+    public override function onFatalFallDamage(): Void {
     }
 
     public function respawnOnLastStable(arg0: Float): Void {
@@ -299,11 +298,11 @@ class Queen extends en.mob.Boss {
         throw "stub: get_headTracks not decompiled";
     }
 
-    public function get_headX(): Float {
+    public override function get_headX(): Float {
         throw "stub: get_headX not decompiled";
     }
 
-    public function get_headY(): Float {
+    public override function get_headY(): Float {
         throw "stub: get_headY not decompiled";
     }
 
@@ -323,7 +322,7 @@ class Queen extends en.mob.Boss {
         throw "stub: getBlendMode not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function initHeadFx(): Void {
@@ -347,44 +346,44 @@ class Queen extends en.mob.Boss {
     public function stopHandSmoke(): Void {
     }
 
-    public function onDelayedVolteStart(): Void {
+    public override function onDelayedVolteStart(): Void {
     }
 
-    public function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
-    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
     }
 
     public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
         throw "stub: tryToPreventDeath not decompiled";
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
-    public function createBodyPart(): Array<Dynamic> {
+    public override function createBodyPart(): Array<Dynamic> {
         throw "stub: createBodyPart not decompiled";
     }
 
     public override function onDie(): Void {
     }
 
-    public function dropLoot(): Void {
+    public override function dropLoot(): Void {
     }
 
-    public function getVolteDelay(): Float {
+    public override function getVolteDelay(): Float {
         throw "stub: getVolteDelay not decompiled";
     }
 
-    public function getMoveSpeedMul(): Float {
+    public override function getMoveSpeedMul(): Float {
         throw "stub: getMoveSpeedMul not decompiled";
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
-    public function beforeRender(): Void {
+    public override function beforeRender(): Void {
     }
 
     public function updateHeadFx(arg0: Float): Void {
@@ -396,10 +395,10 @@ class Queen extends en.mob.Boss {
     public function _headPartUpdate(arg0: libs.heaps.HParticle): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
     public override function fixedUpdate(): Void {
@@ -408,13 +407,13 @@ class Queen extends en.mob.Boss {
     public function fxSplitScreen(arg0: Dynamic): Void {
     }
 
-    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
     }
 
     public function setHeadPosition(arg0: en.mob.boss.HeadPosition, arg1: Float): Void {
     }
 
-    public function getDiminishingFactor(arg0: Int, arg1: Int, arg2: Int, arg3: Dynamic): Float {
+    public override function getDiminishingFactor(arg0: Int, arg1: Int, arg2: Int, arg3: Dynamic): Float {
         throw "stub: getDiminishingFactor not decompiled";
     }
 

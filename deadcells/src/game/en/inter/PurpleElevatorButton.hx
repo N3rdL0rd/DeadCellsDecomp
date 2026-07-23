@@ -6,7 +6,7 @@ class PurpleElevatorButton extends en.Interactive {
     public var isActivated: Bool;
     public var elevatorTarget: en.inter.elevator.PurpleElevator;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 

@@ -12,11 +12,11 @@ class RewardPopup extends ui.Process {
     public var topLine: libs.heaps.slib.HSprite;
     public var botLine: libs.heaps.slib.HSprite;
     public var fxSb: h2d.SpriteBatch;
-    public var fxPool: libs.heaps.ParticlePool;
+    public var fxPool: libs.heaps.HParticle.ParticlePool;
     public var controller: tool.ControllerAccess;
     public var onValidate: Dynamic;
 
-    public function new(arg0: Dynamic, arg1: Dynamic, arg2: Ref) {
+    public function new(arg0: Dynamic = null, arg1: Dynamic = null, arg2: Ref = null) {
         super();
     }
 

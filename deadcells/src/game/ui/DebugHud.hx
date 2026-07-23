@@ -39,7 +39,7 @@ class DebugHud extends libs.Process {
     public var objectVisibilityText: h2d.Text;
     public var tileGroupCountText: h2d.Text;
     public var shaderCacheErrorText: h2d.Text;
-    public var logsTexts: haxe.ds.EnumValueMap;
+    public var logsTexts: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
     public var game: h2d.Text;
     public var mouse: h2d.Text;
     public var lights: h2d.Text;

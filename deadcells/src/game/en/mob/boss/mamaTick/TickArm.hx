@@ -9,8 +9,6 @@ class TickArm {
     public var anim: spine.SpineAnimation;
     public var glowShader: shader.GlowKey;
     public var __uid: Int;
-    public var : Dynamic;
-    public var : Dynamic;
 
     public function new(arg0: en.mob.boss.MamaTick, arg1: Float, arg2: Float, arg3: Ref) {
     }
@@ -31,22 +29,22 @@ class TickArm {
         throw "stub: isPlayingAny not decompiled";
     }
 
-    public function start(arg0: spine.TrackEntry): Void {
+    public function start(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function interrupt(arg0: spine.TrackEntry): Void {
+    public function interrupt(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function end(arg0: spine.TrackEntry): Void {
+    public function end(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function dispose(arg0: spine.TrackEntry): Void {
+    public function dispose(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function event(arg0: spine.TrackEntry, arg1: spine.Event): Void {
+    public function event(arg0: spine.AnimationState.TrackEntry, arg1: spine.Event): Void {
     }
 
-    public function complete(arg0: spine.TrackEntry): Void {
+    public function complete(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
     public function getCLID(): Int {

@@ -66,7 +66,7 @@ class TierSelect extends ui.Process {
     public var tiersWid: Int;
     public var tiersHei: Int;
 
-    public function new(arg0: en.Hero, arg1: Entity, arg2: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Entity = null, arg2: tool.InventItem = null) {
         super();
     }
 

@@ -1,6 +1,6 @@
 package libs.signals;
 
-class Signal2 extends libs.signals.BaseSignal {
+class Signal2 extends libs.signals.Signal.BaseSignal {
     public var value1: Dynamic;
     public var value2: Dynamic;
 

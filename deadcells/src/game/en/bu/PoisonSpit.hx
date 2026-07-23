@@ -14,7 +14,7 @@ class PoisonSpit extends en.Bullet {
     public var rSec: Float;
     public var sec: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Ref, arg4: Ref, arg5: Ref, arg6: Ref, arg7: Ref, arg8: Ref) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Ref = null, arg4: Ref = null, arg5: Ref = null, arg6: Ref = null, arg7: Ref = null, arg8: Ref = null) {
         super();
     }
 

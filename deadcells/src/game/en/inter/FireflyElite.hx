@@ -13,7 +13,7 @@ class FireflyElite extends en.Interactive {
     public var shootAng: Float;
     public var shootCount: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Mob, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Mob = null, arg4: Dynamic = null) {
         super();
     }
 

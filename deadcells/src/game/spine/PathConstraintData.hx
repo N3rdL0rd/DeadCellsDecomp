@@ -14,6 +14,6 @@ class PathConstraintData {
     public var rotateMix: Float;
     public var translateMix: Float;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
     }
 }

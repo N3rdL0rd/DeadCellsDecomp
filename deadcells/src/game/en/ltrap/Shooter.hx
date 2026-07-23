@@ -8,7 +8,7 @@ class Shooter extends en.LevelTrap {
     public var coolDown: Float;
     public var cPointCheck: tool.CPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Dynamic = null) {
         super();
     }
 

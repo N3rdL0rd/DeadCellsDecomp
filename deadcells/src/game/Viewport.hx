@@ -29,14 +29,13 @@ class Viewport extends libs.Process {
     public var minZoom: Float;
     public var zoom: Float;
     public var newVpRect: Dynamic;
-    public var debugMarks: haxe.ds.StringMap;
+    public var debugMarks: haxe.ds.StringMap<Dynamic>;
     public var level: pr.Level;
     public var shakeX: Float;
     public var shakeY: Float;
     public var bmpFocus: libs.heaps.slib.HSprite;
     public var padding: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: pr.Level) {
         super();

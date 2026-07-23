@@ -6,7 +6,7 @@ class DiveAttack extends tool.HeroMainSkill {
     public var heightIgnored: Int;
     public var sfxEnabled: Bool;
 
-    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+    public function new(arg0: en.Hero = null, arg1: pr.Game = null, arg2: Dynamic = null) {
         super();
     }
 

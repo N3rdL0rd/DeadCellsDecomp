@@ -37,9 +37,8 @@ class Death extends en.mob.Boss {
     public var sbFxBack: libs.heaps.slib.HSpriteBatch;
     public var scytheComboFx: libs.heaps.HParticle;
     public var ultiDarkness: h2d.Graphics;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -244,7 +243,7 @@ class SoulOrb extends Entity {
     public var startY: Float;
     public var initPosRatio: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.boss.death.Death, arg4: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.mob.boss.death.Death = null, arg4: Float = 0.) {
         super();
     }
 

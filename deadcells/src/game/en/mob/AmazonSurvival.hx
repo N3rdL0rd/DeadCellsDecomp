@@ -3,7 +3,7 @@ package en.mob;
 class AmazonSurvival extends en.mob.AmazonBase {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var isRunning: Bool;
     public var teleportPhase: Bool;
     public var atkType: en.mob.BallAtkType;
@@ -24,9 +24,9 @@ class AmazonSurvival extends en.mob.AmazonBase {
     public var sbFx: libs.heaps.slib.HSpriteBatch;
     public var chainLeft: en.mob.AmazonSurvivalChain;
     public var chainRight: en.mob.AmazonSurvivalChain;
-    public var animTracks: haxe.ds.StringMap;
+    public var animTracks: haxe.ds.StringMap<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -34,11 +34,11 @@ class AmazonSurvival extends en.mob.AmazonBase {
         throw "stub: create not decompiled";
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
@@ -96,23 +96,23 @@ class AmazonSurvival extends en.mob.AmazonBase {
     public override function registerToManager(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function chooseDestination(): Dynamic {
         throw "stub: chooseDestination not decompiled";
     }
 
-    public function unlockAi(): Void {
+    public override function unlockAi(): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
     public function scream(): Void {
@@ -125,20 +125,20 @@ class AmazonSurvival extends en.mob.AmazonBase {
     public function pullBack(arg0: en.mob.BallAtkType): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public function touchHeroWreckingBall(): Bool {
         throw "stub: touchHeroWreckingBall not decompiled";
     }
 
-    public function onFatalFallStart(arg0: Ref): Void {
+    public override function onFatalFallStart(arg0: Ref): Void {
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
     public function killWreckingBallAtq(): Void {
@@ -147,13 +147,13 @@ class AmazonSurvival extends en.mob.AmazonBase {
     public override function fixedUpdate(): Void {
     }
 
-    public function preUpdate(): Void {
+    public override function preUpdate(): Void {
     }
 
     public override function postUpdate(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
@@ -166,7 +166,7 @@ class AmazonSurvival extends en.mob.AmazonBase {
     public override function applyBossRushModifier(arg0: Dynamic): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function getCLID(): Int {
@@ -193,10 +193,10 @@ class AmazonSurvival extends en.mob.AmazonBase {
 
 class AmazonSurvivalChain extends tool.Chain {
     public function new() {
-        super();
+        super(null, null, null, null, null);
     }
 
-    public override function createSegment(arg0: Dynamic): tool.ChainSegment {
+    public override function createSegment(arg0: Dynamic): tool.Chain.ChainSegment {
         throw "stub: createSegment not decompiled";
     }
 }

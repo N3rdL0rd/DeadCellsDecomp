@@ -5,7 +5,7 @@ class RichterActiveSkillsManager extends tool.hero.activeSkills.BeheadedActiveSk
     public static var __clid: Int;
     public var hearts: Int;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

@@ -1,11 +1,11 @@
 package ui;
 
 class Wrapper extends h2d.Layers {
-    public function new(arg0: h2d.Object) {
+    public function new(arg0: h2d.Object = null) {
         super();
     }
 
-    public function calcAbsPos(): Void {
+    public override function calcAbsPos(): Void {
     }
 }
 
@@ -21,7 +21,7 @@ class Window extends ui.Process {
     public var invalidated: Bool;
     public var disableBG: Bool;
 
-    public function new(arg0: libs.Process, arg1: Dynamic) {
+    public function new(arg0: libs.Process = null, arg1: Dynamic = null) {
         super();
     }
 
@@ -73,9 +73,9 @@ class Window extends ui.Process {
     public function render(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

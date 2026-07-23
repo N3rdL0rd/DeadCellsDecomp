@@ -7,7 +7,7 @@ class RingBuffer {
     public var indexEnd: Int;
     public var curIndex: Int;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
     }
 
     public function incrementStart(): Void {

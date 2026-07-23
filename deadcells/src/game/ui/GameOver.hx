@@ -8,7 +8,7 @@ class GameOver extends ui.Process {
     public var cellText: ui.Text;
     public var botLine: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Dynamic, arg1: Bool, arg2: Dynamic) {
+    public function new(arg0: Dynamic = null, arg1: Bool = false, arg2: Dynamic = null) {
         super();
     }
 

@@ -2,11 +2,11 @@ package spine;
 
 class Skin {
     public var name: String;
-    public var attachments: haxe.ds.IntMap;
+    public var attachments: haxe.ds.IntMap<Dynamic>;
     public var lookup: spine.Key;
     public var keyPool: spine.support.utils.Pool;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
     }
 
     public function toString(): String {
@@ -28,7 +28,7 @@ class Key {
 }
 
 class KeyPool extends spine.support.utils.Pool {
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 

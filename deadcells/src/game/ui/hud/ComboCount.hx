@@ -22,7 +22,7 @@ class ComboCount extends h2d.Flow {
     public var endColorS3: Int;
     public var multTextBaseSize: Float;
 
-    public function new(arg0: h2d.Object) {
+    public function new(arg0: h2d.Object = null) {
         super();
     }
 

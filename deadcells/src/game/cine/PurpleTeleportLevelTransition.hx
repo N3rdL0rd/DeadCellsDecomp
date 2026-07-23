@@ -3,7 +3,7 @@ package cine;
 class PurpleTeleportLevelTransition extends cine.LevelTransition {
     public var mask: h2d.Bitmap;
 
-    public function new(arg0: String, arg1: level.LevelMap, arg2: Dynamic) {
+    public function new(arg0: String = null, arg1: level.LevelMap = null, arg2: Dynamic = null) {
         super();
     }
 

@@ -7,8 +7,6 @@ class DeathArenaSkySpr {
     public var offsetY: Float;
     public var anim: spine.SpineAnimation;
     public var __uid: Int;
-    public var : Dynamic;
-    public var : Dynamic;
 
     public function new(arg0: Parallax, arg1: Dynamic) {
     }
@@ -16,22 +14,22 @@ class DeathArenaSkySpr {
     public function update(arg0: Float): Void {
     }
 
-    public function start(arg0: spine.TrackEntry): Void {
+    public function start(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function interrupt(arg0: spine.TrackEntry): Void {
+    public function interrupt(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function end(arg0: spine.TrackEntry): Void {
+    public function end(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function dispose(arg0: spine.TrackEntry): Void {
+    public function dispose(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function event(arg0: spine.TrackEntry, arg1: spine.Event): Void {
+    public function event(arg0: spine.AnimationState.TrackEntry, arg1: spine.Event): Void {
     }
 
-    public function complete(arg0: spine.TrackEntry): Void {
+    public function complete(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
     public function getCLID(): Int {

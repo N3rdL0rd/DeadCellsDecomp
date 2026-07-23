@@ -61,10 +61,10 @@ class Castle extends level.BiomeDisp {
     public function addColumn(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addStatues(arg0: level.DecoZone): Void {
+    public function addStatues(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public override function canStampOn(arg0: Int): Bool {
@@ -75,7 +75,7 @@ class Castle extends level.BiomeDisp {
         throw "stub: canAddTorch not decompiled";
     }
 
-    public function addAlcoves(arg0: level.DecoZone, arg1: Int, arg2: String, arg3: Int): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone, arg1: Int, arg2: String, arg3: Int): Void {
     }
 
     public override function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {

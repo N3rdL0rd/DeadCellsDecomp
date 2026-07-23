@@ -8,9 +8,9 @@ class WallEgg extends en.Interactive {
     public var gibs: Array<Dynamic>;
     public var veins: Array<Dynamic>;
     public var core2: libs.heaps.slib.HSprite;
-    public var mobData: level.Mob;
+    public var mobData: level.LevelTypes.Mob;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.Mob) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelTypes.Mob = null) {
         super();
     }
 

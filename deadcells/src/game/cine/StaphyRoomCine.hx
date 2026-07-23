@@ -4,7 +4,7 @@ class StaphyRoomCine extends GameCinematic {
     public var hero: en.Hero;
     public var lilStaphy: en.mob.S_LilStaphy;
 
-    public function new(arg0: en.Hero, arg1: en.StaphyRoomManager) {
+    public function new(arg0: en.Hero = null, arg1: en.StaphyRoomManager = null) {
         super();
     }
 

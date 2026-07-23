@@ -8,7 +8,7 @@ class Homing extends en.Bullet {
     public var speed: Float;
     public var ang: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Entity) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Entity = null) {
         super();
     }
 

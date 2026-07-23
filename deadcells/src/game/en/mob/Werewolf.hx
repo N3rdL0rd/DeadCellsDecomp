@@ -5,7 +5,7 @@ class Werewolf extends en.mob.Rampager {
     public static var __eclids: Array<Int>;
     public var mini: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 

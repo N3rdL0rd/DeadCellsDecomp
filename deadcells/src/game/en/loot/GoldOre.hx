@@ -6,7 +6,7 @@ class GoldOre extends en.Loot {
     public var value: Int;
     public var fromCombo: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null, arg4: Ref = null) {
         super();
     }
 

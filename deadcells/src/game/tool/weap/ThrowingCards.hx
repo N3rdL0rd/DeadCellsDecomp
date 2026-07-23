@@ -3,7 +3,7 @@ package tool.weap;
 class ThrowingCards extends tool.Weapon {
     public var cardAmmoList: Array<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

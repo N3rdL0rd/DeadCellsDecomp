@@ -1,13 +1,13 @@
 package light;
 
 class DepthMap {
-    public var depthByObjects: haxe.ds.ObjectMap;
+    public var depthByObjects: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var maxDepth: Int;
     public var objectsCount: Int;
     public var currentObjectIndex: Int;
     public var objectHierarchyBuffer: Array<Dynamic>;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
     }
 
     public function build(arg0: h2d.Layers, arg1: Int): Void {

@@ -3,16 +3,16 @@ package tool.weap;
 class WreckingBall extends tool.Weapon {
     public var chain: tool.Chain;
     public var touchGroundSfx: hxd.res.Sound;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
     public var enemiesKilledInOneSwing: Int;
     public var chainedEntity: Entity;
     public var onWorldAmmo: en.bu.WreckingBallHeroAmmo;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
-    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.Weapon.WeaponSkill): Void {
     }
 
     public function registerAmmo(arg0: en.bu.WreckingBallHeroAmmo): Void {
@@ -51,7 +51,7 @@ class WreckingBall extends tool.Weapon {
     public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
     }
 
-    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnAttackAnim(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
     public override function canComboNextSkillEarly(): Bool {

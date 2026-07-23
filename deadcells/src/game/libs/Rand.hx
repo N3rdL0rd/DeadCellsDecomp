@@ -3,7 +3,7 @@ package libs;
 class Rand {
     public var seed: Float;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
     }
 
     public function random(arg0: Int): Int {

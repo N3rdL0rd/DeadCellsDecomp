@@ -16,7 +16,7 @@ class TopClockTower extends level.BiomeDisp {
     public var gears: Array<Dynamic>;
     public var clockIsBroken: Bool;
     public var bossRoom: level.Room;
-    public var lc: level.Marker;
+    public var lc: level.LevelTypes.Marker;
     public var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch;
 
     public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
@@ -26,10 +26,10 @@ class TopClockTower extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public override function renderBackWalls(): Void {

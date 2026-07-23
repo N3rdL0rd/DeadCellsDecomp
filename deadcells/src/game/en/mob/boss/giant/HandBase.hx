@@ -21,9 +21,9 @@ class HandBase extends en.Mob {
     public var impulseDir: Int;
     public var justGotKilled: Bool;
     public var arm: en.mob.boss.giant.Arm;
-    public var vx: tool.Ref;
-    public var vy: tool.Ref;
-    public var vr: tool.Ref;
+    public var vx: tool.SmoothDamp.Ref;
+    public var vy: tool.SmoothDamp.Ref;
+    public var vr: tool.SmoothDamp.Ref;
     public var maskShader: h3d.shader.AlphaMap;
     public var time: Float;
     public var shootGridPatterns: libs.RandDeck;
@@ -89,7 +89,7 @@ class HandBase extends en.Mob {
     public function onRecover(): Void {
     }
 
-    public function onReload(): Void {
+    public override function onReload(): Void {
     }
 
     public override function interruptSkills(): Void {
@@ -151,21 +151,21 @@ class HandBase extends en.Mob {
         throw "stub: isSwiping not decompiled";
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
-    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
         throw "stub: canReceiveAttack not decompiled";
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
     public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
         throw "stub: tryToPreventDeath not decompiled";
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public function checkSwipeDamages(): Void {
@@ -239,7 +239,6 @@ class ShootGridPattern {
     public var wid: Int;
     public var hei: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: Array<Int>, arg1: Int, arg2: Int) {
     }

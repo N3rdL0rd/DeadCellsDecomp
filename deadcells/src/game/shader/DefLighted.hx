@@ -5,7 +5,7 @@ class DefLighted extends hxsl.Shader {
     public static var _SHADER: hxsl.SharedShader;
     public var depth__: Float;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
         super();
     }
 

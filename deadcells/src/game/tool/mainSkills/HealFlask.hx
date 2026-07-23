@@ -4,7 +4,7 @@ class HealFlask extends tool.mainSkills.Heal {
     public static var FLASK_GLOW_KEY: Int;
     public static var __clid: Int;
 
-    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+    public function new(arg0: en.Hero = null, arg1: pr.Game = null, arg2: Dynamic = null) {
         super();
     }
 

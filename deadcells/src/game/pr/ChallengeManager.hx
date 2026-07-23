@@ -4,7 +4,6 @@ class ChallengeManager extends libs.Process {
     public static var __clid: Int;
     public var lvl: pr.Level;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: pr.Level) {
         super();

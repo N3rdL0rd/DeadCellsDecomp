@@ -24,9 +24,9 @@ class WiggleWhip extends tool.Weapon {
     public var spriteLevel: pr.Level;
     public var shouldUpdateChain: Bool;
     public var isPlayingWiggleSound: Bool;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -101,7 +101,7 @@ class WiggleWhip extends tool.Weapon {
     public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
     }
 
-    public override function dynOnInterrupt(arg0: tool.WeaponSkill, arg1: Float): Void {
+    public override function dynOnInterrupt(arg0: tool.Weapon.WeaponSkill, arg1: Float): Void {
     }
 
     public function stopWiggling(): Void {
@@ -116,7 +116,7 @@ class WiggleWhip extends tool.Weapon {
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnAttackAnim(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
     public override function hasCycleLossCD(): Bool {

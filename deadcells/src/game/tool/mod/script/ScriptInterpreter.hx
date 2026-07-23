@@ -4,7 +4,7 @@ class ScriptInterpreter extends hscript.Interp {
     public var active: Bool;
     public var entryPoint: String;
     public var parser: hscript.Parser;
-    public var contents: haxe.ds.StringMap;
+    public var contents: haxe.ds.StringMap<Dynamic>;
 
     public function new() {
         super();

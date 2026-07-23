@@ -7,7 +7,7 @@ class ForgeLegendary extends ui.Process {
     public var subText: ui.Text;
     public var line: libs.heaps.slib.HSprite;
     public var fxSb: h2d.SpriteBatch;
-    public var fxPool: libs.heaps.ParticlePool;
+    public var fxPool: libs.heaps.HParticle.ParticlePool;
     public var cursor: h2d.ScaleGrid;
     public var fBars: h2d.Flow;
     public var fCount: h2d.Flow;

@@ -9,7 +9,7 @@ class ControlIcon extends h2d.Object {
     public var width: Float;
     public var height: Float;
 
-    public function new(arg0: Ref, arg1: Ref, arg2: h2d.Object) {
+    public function new(arg0: Ref = null, arg1: Ref = null, arg2: h2d.Object = null) {
         super();
     }
 

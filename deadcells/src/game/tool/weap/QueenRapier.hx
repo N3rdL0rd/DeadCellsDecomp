@@ -4,7 +4,7 @@ class QueenRapier extends tool.Weapon {
     public var sbGroupQueenRapierFx: libs.heaps.SpriteBatchGroup;
     public var currentFxScroller: light.LightedLayers;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

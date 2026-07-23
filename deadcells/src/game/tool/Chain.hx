@@ -73,7 +73,7 @@ class Chain {
     public function changeLevel(arg0: pr.Level, arg1: Dynamic): Void {
     }
 
-    public function createSegment(arg0: Dynamic): tool.ChainSegment {
+    public function createSegment(arg0: Dynamic): tool.Chain.ChainSegment {
         throw "stub: createSegment not decompiled";
     }
 

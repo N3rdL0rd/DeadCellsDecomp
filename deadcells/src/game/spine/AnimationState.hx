@@ -6,7 +6,7 @@ class AnimationState {
     public var events: Array<Dynamic>;
     public var listeners: Array<Dynamic>;
     public var queue: spine.EventQueue;
-    public var propertyIDs: haxe.ds.IntMap;
+    public var propertyIDs: haxe.ds.IntMap<Dynamic>;
     public var mixingTo: Array<Dynamic>;
     public var animationsChanged: Bool;
     public var timeScale: Float;
@@ -15,7 +15,7 @@ class AnimationState {
     public function new(arg0: spine.AnimationStateData) {
     }
 
-    public function updateMixingFrom(arg0: spine.TrackEntry, arg1: Float): Bool {
+    public function updateMixingFrom(arg0: spine.AnimationState.TrackEntry, arg1: Float): Bool {
         throw "stub: updateMixingFrom not decompiled";
     }
 
@@ -23,15 +23,15 @@ class AnimationState {
         throw "stub: apply not decompiled";
     }
 
-    public function applyMixingFrom(arg0: spine.TrackEntry, arg1: spine.Skeleton, arg2: Int): Float {
+    public function applyMixingFrom(arg0: spine.AnimationState.TrackEntry, arg1: spine.Skeleton, arg2: Int): Float {
         throw "stub: applyMixingFrom not decompiled";
     }
 }
 
 class TrackEntry {
     public var animation: spine.Animation;
-    public var next: spine.TrackEntry;
-    public var mixingFrom: spine.TrackEntry;
+    public var next: spine.AnimationState.TrackEntry;
+    public var mixingFrom: spine.AnimationState.TrackEntry;
     public var listener: Dynamic;
     public var trackIndex: Int;
     public var loop: Bool;
@@ -56,7 +56,6 @@ class TrackEntry {
     public var timelineData: Array<Int>;
     public var timelineDipMix: Array<Dynamic>;
     public var timelinesRotation: Array<Float>;
-    public var : Dynamic;
 
     public function new() {
     }
@@ -64,7 +63,7 @@ class TrackEntry {
     public function reset(): Void {
     }
 
-    public function setTimelineData(arg0: spine.TrackEntry, arg1: Array<Dynamic>, arg2: haxe.ds.IntMap): spine.TrackEntry {
+    public function setTimelineData(arg0: spine.AnimationState.TrackEntry, arg1: Array<Dynamic>, arg2: haxe.ds.IntMap<Dynamic>): spine.AnimationState.TrackEntry {
         throw "stub: setTimelineData not decompiled";
     }
 
@@ -83,7 +82,7 @@ class EventQueue {
 }
 
 class TrackEntryPool extends spine.support.utils.Pool {
-    public function new(arg0: Ref, arg1: Ref) {
+    public function new(arg0: Ref = null, arg1: Ref = null) {
         super();
     }
 

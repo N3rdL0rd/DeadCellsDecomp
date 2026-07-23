@@ -49,10 +49,10 @@ class Cliff extends level.DynamicBiomeDisp {
     public function decorateLevel(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addDesk(arg0: level.DecoZone): Void {
+    public function addDesk(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function needToPlaceEnigma(): Bool {
@@ -62,16 +62,16 @@ class Cliff extends level.DynamicBiomeDisp {
     public function placeRuneFabric(arg0: String, arg1: Float, arg2: Float): Void {
     }
 
-    public function addFabric(arg0: level.DecoZone, arg1: Bool, arg2: String): Void {
+    public function addFabric(arg0: level.DecoTypes.DecoZone, arg1: Bool, arg2: String): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function addScroller(arg0: level.DecoZone): Void {
+    public function addScroller(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function renderOneWay(arg0: Int, arg1: Int, arg2: Bool, arg3: Bool, arg4: Bool): Void {

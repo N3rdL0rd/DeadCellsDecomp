@@ -11,8 +11,8 @@ class Eye extends en.Mob {
     public var levelUpSteps: Array<Dynamic>;
     public var nerve: libs.heaps.slib.HSprite;
     public var dropAmmoOnNextUpdate: Bool;
-    public var vx: tool.Ref;
-    public var vy: tool.Ref;
+    public var vx: tool.SmoothDamp.Ref;
+    public var vy: tool.SmoothDamp.Ref;
 
     public function new(arg0: en.mob.boss.Giant, arg1: Int, arg2: Int) {
         super();
@@ -39,7 +39,7 @@ class Eye extends en.Mob {
     public override function init(): Void {
     }
 
-    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
         throw "stub: canReceiveAttack not decompiled";
     }
 
@@ -47,7 +47,7 @@ class Eye extends en.Mob {
         throw "stub: canBeHitBy not decompiled";
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
     public function popOut(arg0: Bool): Void {

@@ -7,7 +7,7 @@ class RandDeck {
     public var max: Int;
     public var rnd: Dynamic;
 
-    public function new(arg0: Dynamic, arg1: Ref) {
+    public function new(arg0: Dynamic = null, arg1: Ref = null) {
     }
 
     public function grow(arg0: Ref): Void {

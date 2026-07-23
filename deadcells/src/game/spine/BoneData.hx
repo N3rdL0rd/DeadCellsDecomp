@@ -15,6 +15,6 @@ class BoneData {
     public var transformMode: Int;
     public var color: spine.support.graphics.Color;
 
-    public function new(arg0: Int, arg1: String, arg2: spine.BoneData) {
+    public function new(arg0: Int = 0, arg1: String = null, arg2: spine.BoneData = null) {
     }
 }

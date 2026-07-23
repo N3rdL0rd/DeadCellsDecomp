@@ -8,7 +8,7 @@ class MiniGrenade extends en.Bullet {
     public var maxBounces: Int;
     public var curBounces: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: tool.InventItem, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: tool.InventItem = null, arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 

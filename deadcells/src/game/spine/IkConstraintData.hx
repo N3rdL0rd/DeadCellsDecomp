@@ -8,6 +8,6 @@ class IkConstraintData {
     public var bendDirection: Int;
     public var mix: Float;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
     }
 }

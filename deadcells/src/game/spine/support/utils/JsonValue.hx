@@ -2,9 +2,8 @@ package spine.support.utils;
 
 class JsonDynamic {
     public var data: Dynamic;
-    public var : Dynamic;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
     }
 
     public function has(arg0: String): Bool {
@@ -88,7 +87,6 @@ class JsonChild {
     public var keys: Array<Dynamic>;
     public var data: Array<Dynamic>;
     public var index: Int;
-    public var : Dynamic;
 
     public function new(arg0: Array<Dynamic>, arg1: Int, arg2: Array<Dynamic>) {
     }

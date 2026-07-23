@@ -20,7 +20,7 @@ class LifeBar {
     public var sb: libs.heaps.slib.HSpriteBatch;
     public var lastV: Float;
 
-    public function new(arg0: Int, arg1: Int, arg2: Int, arg3: libs.heaps.slib.HSpriteBatch) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0, arg3: libs.heaps.slib.HSpriteBatch = null) {
     }
 
     public function init(arg0: Float, arg1: Dynamic): Void {

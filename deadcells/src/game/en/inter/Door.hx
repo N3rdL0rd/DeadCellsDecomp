@@ -20,26 +20,26 @@ class Door extends en.Interactive {
     public var locked: Bool;
     public var autoClose: Bool;
     public var _closed: Bool;
-    public var lightSegment: light.Wall;
+    public var lightSegment: light.Visibility.Wall;
     public var openSfx: hxd.res.Sound;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
     public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public function applyPermanentlyOpen(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
     public function set_closed(arg0: Bool): Bool {
@@ -50,10 +50,10 @@ class Door extends en.Interactive {
         throw "stub: set_breakable not decompiled";
     }
 
-    public function colorize(arg0: Int, arg1: Dynamic): Void {
+    public override function colorize(arg0: Int, arg1: Dynamic): Void {
     }
 
-    public function uncolorize(): Void {
+    public override function uncolorize(): Void {
     }
 
     public function updateDoorSkin(): Void {
@@ -87,32 +87,32 @@ class Door extends en.Interactive {
     public function closeFast(arg0: Dynamic): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
     }
 
-    public function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
         throw "stub: tryToPreventDeath not decompiled";
     }
 
     public function doorExplosionFx(): Void {
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
     public function updateLightBlocking(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
@@ -123,7 +123,7 @@ class Door extends en.Interactive {
         throw "stub: tryToUnlock not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function applyCollisions(): Void {
@@ -144,7 +144,7 @@ class Door extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

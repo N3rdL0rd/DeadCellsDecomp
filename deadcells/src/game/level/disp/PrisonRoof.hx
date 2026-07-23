@@ -20,7 +20,7 @@ class PrisonRoof extends level.BiomeDisp {
     public function render(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function addSuspendedCage(arg0: Int, arg1: Int, arg2: Int): Void {
@@ -30,7 +30,7 @@ class PrisonRoof extends level.BiomeDisp {
         throw "stub: isCorrupt not decompiled";
     }
 
-    public function addAlcove(arg0: level.DecoZone): Void {
+    public function addAlcove(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function renderBackground(): Void {

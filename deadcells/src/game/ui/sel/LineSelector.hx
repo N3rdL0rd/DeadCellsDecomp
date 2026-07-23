@@ -17,7 +17,7 @@ class LineSelector extends ui.Process {
     public var canCancel: Bool;
     public var curId: Int;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
         super();
     }
 

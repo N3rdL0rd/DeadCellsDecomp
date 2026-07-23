@@ -5,7 +5,7 @@ class SharedComboWeapon extends tool.Weapon {
     public static var sharedCombo: Array<Dynamic>;
     public var share: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

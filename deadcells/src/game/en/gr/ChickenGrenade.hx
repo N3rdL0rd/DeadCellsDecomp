@@ -6,7 +6,7 @@ class ChickenGrenade extends en.Grenade {
     public var parentItem: tool.InventItem;
     public var parentHero: en.Hero;
 
-    public function new(arg0: Entity, arg1: en.Hero, arg2: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: en.Hero = null, arg2: tool.InventItem = null) {
         super();
     }
 

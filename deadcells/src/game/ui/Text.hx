@@ -1,7 +1,7 @@
 package ui;
 
 class Text extends h2d.HtmlText {
-    public static var COLORS: haxe.ds.StringMap;
+    public static var COLORS: haxe.ds.StringMap<Dynamic>;
     public static var REG_TAG: EReg;
     public static var REG_IMG: EReg;
     public static var HTML: EReg;
@@ -18,8 +18,8 @@ class Text extends h2d.HtmlText {
     public var background: libs.heaps.slib.HSprite;
     public var canHaveBackground: Bool;
 
-    public function new(arg0: h2d.Object, arg1: Dynamic, arg2: Dynamic, arg3: Ref, arg4: ui.ImageVerticalAlign, arg5: Dynamic) {
-        super();
+    public function new(arg0: h2d.Object = null, arg1: Dynamic = null, arg2: Dynamic = null, arg3: Ref = null, arg4: ui.ImageVerticalAlign = null, arg5: Dynamic = null) {
+        super(null);
     }
 
     public static function getTierColor(arg0: String): Int {
@@ -45,11 +45,11 @@ class Text extends h2d.HtmlText {
         throw "stub: getColorFrom not decompiled";
     }
 
-    public function set_text(arg0: String): String {
+    override public function set_text(arg0: String): String {
         throw "stub: set_text not decompiled";
     }
 
-    public override function initGlyphs(arg0: String, arg1: Ref, arg2: Ref, arg3: Array<Int>): Void {
+    override public function initGlyphs(text: String, rebuild = true, handleAlign = true, ?lines: Array<Int>): Void {
     }
 
     public function onResize(): Void {

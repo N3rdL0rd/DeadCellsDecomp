@@ -3,7 +3,7 @@ package cine.dlcp;
 class AlucardAfterClockTower extends GameCinematic {
     public var hero: en.Hero;
 
-    public function new(arg0: en.Hero, arg1: en.inter.npc.AlucardNpc) {
+    public function new(arg0: en.Hero = null, arg1: en.inter.npc.AlucardNpc = null) {
         super();
     }
 

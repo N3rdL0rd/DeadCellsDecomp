@@ -4,7 +4,7 @@ class DiverseDeckBase extends PassivePower {
     public static var __clid: Int;
     public var deckOrder: Array<Dynamic>;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -40,7 +40,7 @@ class DiverseDeckBase extends PassivePower {
 class DiverseDeckJuggernaut extends pow.DiverseDeckBase {
     public static var __clid: Int;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -75,7 +75,7 @@ class DiverseDeckElectro extends pow.DiverseDeckBase {
     public var legMaxOrbs: Int;
     public var posId: Int;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -123,7 +123,7 @@ class DiverseDeckElectro extends pow.DiverseDeckBase {
 class DiverseDeckCatalyst extends pow.DiverseDeckBase {
     public static var __clid: Int;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -144,7 +144,7 @@ class DiverseDeckWatcher extends pow.DiverseDeckBase {
     public var legCharge: Int;
     public var maxChargeNeeded: Int;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 

@@ -8,7 +8,7 @@ class EnterLighthouse extends GameCinematic {
     public var nbWidthCase: Int;
     public var entranceRoom: level.Room;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

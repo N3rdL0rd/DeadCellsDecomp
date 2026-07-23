@@ -24,7 +24,7 @@ class Saying extends ui.Process {
     public var speechVolume: Float;
     public var forceSfxPlay: Bool;
 
-    public function new(arg0: Entity, arg1: String, arg2: Dynamic, arg3: libs.RandDeck, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic) {
+    public function new(arg0: Entity = null, arg1: String = null, arg2: Dynamic = null, arg3: libs.RandDeck = null, arg4: Dynamic = null, arg5: Dynamic = null, arg6: Dynamic = null) {
         super();
     }
 
@@ -37,7 +37,7 @@ class Saying extends ui.Process {
     public override function onResize(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function skip(): Float {
@@ -47,7 +47,7 @@ class Saying extends ui.Process {
     public function offset(arg0: Float, arg1: Float): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
     public function playSpeechSfx(): Void {

@@ -7,11 +7,11 @@ class DebugThresholdValueText {
     public var prefixText: h2d.Text;
     public var suffixText: h2d.Text;
     public var text: h2d.Text;
-    public var colorByThreshold: haxe.ds.IntMap;
+    public var colorByThreshold: haxe.ds.IntMap<Dynamic>;
     public var value: Int;
     public var color: Int;
 
-    public function new(arg0: h2d.Font, arg1: haxe.ds.IntMap, arg2: String, arg3: String, arg4: h2d.Object) {
+    public function new(arg0: h2d.Font, arg1: haxe.ds.IntMap<Dynamic>, arg2: String, arg3: String, arg4: h2d.Object) {
     }
 
     public function updateValue(arg0: Int): Void {

@@ -1,10 +1,10 @@
 package cine;
 
 class HeroDeath extends cine.HeroDeathBase {
-    public var pool: libs.heaps.ParticlePool;
+    public var pool: libs.heaps.HParticle.ParticlePool;
     public var fxSb: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: en.Hero, arg1: Bool) {
+    public function new(arg0: en.Hero = null, arg1: Bool = false) {
         super();
     }
 

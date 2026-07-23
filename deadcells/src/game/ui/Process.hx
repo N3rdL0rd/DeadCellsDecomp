@@ -5,7 +5,7 @@ class Process extends libs.Process {
     public var blurFilter: h2d.filter.Blur;
     public var fControlLabel: h2d.Flow;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
         super();
     }
 

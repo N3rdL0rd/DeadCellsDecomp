@@ -5,7 +5,7 @@ class BossGrenade extends en.Grenade {
     public static var __clid: Int;
     public var glow: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
         super();
     }
 

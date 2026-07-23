@@ -25,10 +25,10 @@ class AncientTemple extends level.BiomeDisp {
     public function decorateLevel(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function addLightHole(arg0: Float, arg1: Float): Void {

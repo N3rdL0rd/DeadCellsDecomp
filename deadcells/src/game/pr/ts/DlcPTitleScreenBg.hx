@@ -23,7 +23,7 @@ class DlcPTitleScreenBg extends pr.TitleScreenBgBase {
     public var birds: Array<Dynamic>;
     public var grass: Array<Dynamic>;
 
-    public function new(arg0: h2d.Object, arg1: libs.heaps.slib.SpriteLib, arg2: Ref) {
+    public function new(arg0: h2d.Object = null, arg1: libs.heaps.slib.SpriteLib = null, arg2: Ref = null) {
         super();
     }
 

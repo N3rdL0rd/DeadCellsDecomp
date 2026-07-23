@@ -17,7 +17,7 @@ class AnimatedPaw {
     public var moveRatio: Float;
     public var state: en.mob.PawState;
 
-    public function new(arg0: en.Mob, arg1: libs.heaps.slib.SpriteLib, arg2: h3d.mat.Texture, arg3: Ref) {
+    public function new(arg0: en.Mob = null, arg1: libs.heaps.slib.SpriteLib = null, arg2: h3d.mat.Texture = null, arg3: Ref = null) {
     }
 
     public function set_hasClaw(arg0: Bool): Bool {
@@ -65,7 +65,7 @@ class Paw extends tool.Chain {
     public function setGlowColor(arg0: Int, arg1: Int): Void {
     }
 
-    public override function createSegment(arg0: Dynamic): tool.ChainSegment {
+    public override function createSegment(arg0: Dynamic): tool.Chain.ChainSegment {
         throw "stub: createSegment not decompiled";
     }
 

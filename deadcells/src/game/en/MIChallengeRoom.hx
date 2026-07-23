@@ -9,7 +9,7 @@ class MIChallengeRoom extends Entity {
     public var retryCount: Int;
     public var mainDoor: en.inter.door.BossDoor;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Hero = null) {
         super();
     }
 

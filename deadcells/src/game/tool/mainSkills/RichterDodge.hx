@@ -4,7 +4,7 @@ class RichterDodge extends tool.mainSkills.Dodge {
     public static var __clid: Int;
     public var dodgeLock: Bool;
 
-    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+    public function new(arg0: en.Hero = null, arg1: pr.Game = null, arg2: Dynamic = null) {
         super();
     }
 

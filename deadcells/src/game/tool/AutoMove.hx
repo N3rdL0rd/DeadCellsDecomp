@@ -5,9 +5,8 @@ class AutoMove {
     public var speed: Float;
     public var parent: Entity;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
     }
 
     public function goto(arg0: Int, arg1: Int): Bool {

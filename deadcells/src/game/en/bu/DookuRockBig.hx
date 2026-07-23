@@ -5,7 +5,7 @@ class DookuRockBig extends en.bu.DookuRock {
     public static var __eclids: Array<Int>;
     public var SCALE: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null) {
         super();
     }
 

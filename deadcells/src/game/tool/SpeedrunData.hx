@@ -10,7 +10,6 @@ class SpeedrunData {
     public var bestRunTime: Array<Dynamic>;
     public var previousLevelTime: Float;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

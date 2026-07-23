@@ -3,13 +3,13 @@ package en.inter;
 class MobStatue extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
-    public var lMob: level.Mob;
+    public var lMob: level.LevelTypes.Mob;
     public var cont: Float;
     public var brig: Float;
     public var isReleased: Bool;
     public var canBeReleased: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.Mob) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelTypes.Mob = null) {
         super();
     }
 

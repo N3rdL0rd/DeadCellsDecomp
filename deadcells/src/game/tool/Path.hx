@@ -6,7 +6,6 @@ class Path {
     public var data: Array<Dynamic>;
     public var offset: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

@@ -1,0 +1,50 @@
+diff --git a/hxbit/Dump.hx b/hxbit/Dump.hx
+index 3139ada..0e0d8a9 100644
+--- a/hxbit/Dump.hx
++++ b/hxbit/Dump.hx
+@@ -118,7 +118,8 @@ class Dump extends Serializer {
+ 			index--;
+ 			var s = cachedEnum.get(name);
+ 			if( s == null ) {
+-				var ser : Dynamic = Type.resolveClass("hxbit.enumSer." + name.split(".").join("_"));
++				var _m = name.split(".").join("_"); _m = _m.charAt(0).toUpperCase() + _m.substr(1);
++				var ser : Dynamic = Type.resolveClass("hxbit.enumSer." + _m);
+ 				if( ser == null ) throw "No enum unserializer found for " + name;
+ 				s = ser.getSchema();
+ 				cachedEnum.set(name, s);
+diff --git a/hxbit/Macros.hx b/hxbit/Macros.hx
+index e518658..d1a5127 100644
+--- a/hxbit/Macros.hx
++++ b/hxbit/Macros.hx
+@@ -778,6 +778,7 @@ class Macros {
+ 		case TEnum(e, tparams):
+ 			var e = e.get();
+ 			var name = e.pack.length == 0 ? e.name : e.pack.join("_") + "_" + e.name;
++			name = name.charAt(0).toUpperCase() + name.substr(1); // module names must start uppercase (Haxe 4.3)
+ 			try {
+ 				return Context.getType("hxbit.enumSer." + name);
+ 			} catch( _ : Dynamic ) {
+diff --git a/hxbit/Serializer.hx b/hxbit/Serializer.hx
+index 1812d00..c01b833 100644
+--- a/hxbit/Serializer.hx
++++ b/hxbit/Serializer.hx
+@@ -779,7 +779,8 @@ class Serializer {
+ 		case PVector(t): getVector(function() return readValue(t));
+ 		case PBytes: getBytes();
+ 		case PEnum(name):
+-			var ser : Dynamic = Type.resolveClass("hxbit.enumSer." + name.split(".").join("_"));
++			var _m = name.split(".").join("_"); _m = _m.charAt(0).toUpperCase() + _m.substr(1);
++			var ser : Dynamic = Type.resolveClass("hxbit.enumSer." + _m);
+ 			if( ser == null ) {
+ 				var e = Type.resolveEnum(name);
+ 				// an old enum can be tagged with @skipSerialize in order to allow loading old content.
+@@ -858,7 +859,8 @@ class Serializer {
+ 		case PBytes:
+ 			addBytes(v);
+ 		case PEnum(name):
+-			var ser = "hxbit.enumSer." + name.split(".").join("_");
++			var _m = name.split(".").join("_"); _m = _m.charAt(0).toUpperCase() + _m.substr(1);
++			var ser = "hxbit.enumSer." + _m;
+ 			if( ser == null ) throw "No enum unserializer found for " + name;
+ 			(Type.resolveClass(ser) : Dynamic).doSerialize(this,v);
+ 		case PSerializable(_):

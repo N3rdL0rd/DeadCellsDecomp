@@ -16,7 +16,7 @@ class Emitter {
     public var padding: Int;
     public var permanent: Bool;
 
-    public function new(arg0: String, arg1: Int) {
+    public function new(arg0: String = null, arg1: Int = 0) {
     }
 
     public function get_top(): Float {
@@ -69,8 +69,8 @@ class Emitter {
 
 class HParticleNode {
     public var p: libs.heaps.HParticle;
-    public var prev: libs.heaps._HParticle.HParticleNode;
-    public var next: libs.heaps._HParticle.HParticleNode;
+    public var prev: libs.heaps.HParticle.HParticleNode;
+    public var next: libs.heaps.HParticle.HParticleNode;
 
     public function new(arg0: libs.heaps.HParticle) {
     }
@@ -78,22 +78,22 @@ class HParticleNode {
     public function unlink(): Void {
     }
 
-    public function insertBefore(arg0: libs.heaps._HParticle.HParticleNode): Void {
+    public function insertBefore(arg0: libs.heaps.HParticle.HParticleNode): Void {
     }
 }
 
 class HParticleList {
-    public var head: libs.heaps._HParticle.HParticleNode;
-    public var tail: libs.heaps._HParticle.HParticleNode;
+    public var head: libs.heaps.HParticle.HParticleNode;
+    public var tail: libs.heaps.HParticle.HParticleNode;
 
     public function new() {
     }
 
-    public function first(): libs.heaps._HParticle.HParticleNode {
+    public function first(): libs.heaps.HParticle.HParticleNode {
         throw "stub: first not decompiled";
     }
 
-    public function last(): libs.heaps._HParticle.HParticleNode {
+    public function last(): libs.heaps.HParticle.HParticleNode {
         throw "stub: last not decompiled";
     }
 
@@ -105,19 +105,19 @@ class HParticleList {
 class ParticlePool {
     public var size: Int;
     public var nalloc: Int;
-    public var busyList_DontKillEarly: libs.heaps._HParticle.HParticleList;
-    public var busyList_Killable: libs.heaps._HParticle.HParticleList;
-    public var freeList: libs.heaps._HParticle.HParticleList;
+    public var busyList_DontKillEarly: libs.heaps.HParticle.HParticleList;
+    public var busyList_Killable: libs.heaps.HParticle.HParticleList;
+    public var freeList: libs.heaps.HParticle.HParticleList;
     public var excessAllocs: Int;
     public var oldAllocId: Dynamic;
     public var particleLimiterPass: Int;
     public var particleLimiterBlock: Int;
     public var particleLimiterCount: Int;
 
-    public function new(arg0: h2d.Tile, arg1: Int, arg2: Int) {
+    public function new(arg0: h2d.Tile = null, arg1: Int = 0, arg2: Int = 0) {
     }
 
-    public function alloc(arg0: h2d.SpriteBatch, arg1: tool.FxTile, arg2: Float, arg3: Float, arg4: Ref, arg5: Dynamic, arg6: tool.FxTile, arg7: Ref, arg8: Ref): libs.heaps.HParticle {
+    public function alloc(arg0: h2d.SpriteBatch, arg1: tool.FxTileCache.FxTile, arg2: Float, arg3: Float, arg4: Ref, arg5: Dynamic, arg6: tool.FxTileCache.FxTile, arg7: Ref, arg8: Ref): libs.heaps.HParticle {
         throw "stub: alloc not decompiled";
     }
 
@@ -138,10 +138,10 @@ class ParticlePool {
     }
 }
 
-class HParticle extends h2d.BatchElement {
+class HParticle extends h2d.SpriteBatch.BatchElement {
     public static var DEFAULT_BOUNDS: h2d.col.Bounds;
-    public var pool: libs.heaps.ParticlePool;
-    public var poolNode: libs.heaps._HParticle.HParticleNode;
+    public var pool: libs.heaps.HParticle.ParticlePool;
+    public var poolNode: libs.heaps.HParticle.HParticleNode;
     public var poolIdx: Int;
     public var dx: Float;
     public var dy: Float;
@@ -200,8 +200,8 @@ class HParticle extends h2d.BatchElement {
     public var animStop: Bool;
     public var animSpd: Float;
 
-    public function new(arg0: libs.heaps.ParticlePool, arg1: h2d.Tile, arg2: Int, arg3: Ref, arg4: Ref) {
-        super();
+    public function new(arg0: libs.heaps.HParticle.ParticlePool, arg1: h2d.Tile, arg2: Int, arg3: Ref, arg4: Ref) {
+        super(null);
     }
 
     public function playAnimAndKill(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref): Void {

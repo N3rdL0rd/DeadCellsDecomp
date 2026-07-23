@@ -4,7 +4,7 @@ class PurpleTeleportZDoor extends en.inter.ZDoor {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0) {
         super();
     }
 

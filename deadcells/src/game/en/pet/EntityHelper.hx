@@ -9,12 +9,12 @@ class PetMob extends en.Mob {
     public var followDistance: Int;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var teleJumpInf: Dynamic;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var canBePet: Bool;
     public var maxDuplicates: Int;
     public var tailUpdate: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Entity, arg7: tool.InventItem, arg8: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0, arg6: Entity = null, arg7: tool.InventItem = null, arg8: Ref = null) {
         super();
     }
 
@@ -167,7 +167,7 @@ class Gem extends en.Loot {
     public var value: Int;
     public var fromCombo: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Ref = null) {
         super();
     }
 
@@ -227,7 +227,7 @@ class GenericCell extends en.Loot {
     public var value: Int;
     public var colorOverride: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Ref, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null, arg4: Ref = null, arg5: Dynamic = null) {
         super();
     }
 
@@ -287,7 +287,7 @@ class GoldOre extends en.Loot {
     public var value: Int;
     public var fromCombo: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null, arg4: Ref = null) {
         super();
     }
 
@@ -341,7 +341,7 @@ class Heart extends en.Loot {
     public var big: Bool;
     public var forbiddenFx: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null) {
         super();
     }
 
@@ -385,7 +385,7 @@ class BrBlueprint extends en.loot.Blueprint {
     public var partRarity: Int;
     public var flawless: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Ref = null) {
         super();
     }
 
@@ -435,7 +435,7 @@ class S_LilStaphy extends en.pet.PetMob {
     public var grownUpHeight: Float;
     public var winkingCD: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem, arg7: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Entity = null, arg6: tool.InventItem = null, arg7: Ref = null) {
         super();
     }
 
@@ -618,7 +618,7 @@ class Collector extends en.mob.Boss {
     public var sbFx: libs.heaps.slib.HSpriteBatch;
     public var arSBAngle: Array<Float>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Ref = null) {
         super();
     }
 
@@ -949,10 +949,8 @@ class Entity {
     public var lastSprX: Float;
     public var lastSprY: Float;
     public var __uid: Int;
-    public var : Dynamic;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
     }
 
     public static function isObstructed(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity): Bool {
@@ -1706,7 +1704,7 @@ class SpawnTheBeast extends Entity {
     public var container: light.TopFx;
     public var mask: h2d.Bitmap;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -1737,9 +1735,9 @@ class Active extends Entity {
     public static var __eclids: Array<Int>;
     public var item: tool.InventItem;
     public var deployPoint: tool.CPoint;
-    public var activeCells: haxe.ds.IntMap;
+    public var activeCells: haxe.ds.IntMap<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -1812,7 +1810,7 @@ class AlucardCoffin extends Entity {
     public var glow_wireframe: libs.heaps.slib.HSprite;
     public var shatterCount: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -1905,7 +1903,7 @@ class AmazonManager extends Entity {
     public var fireAmbientChannel: hxd.snd.Channel;
     public var smogGradientInBossFightMode: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Hero = null) {
         super();
     }
 
@@ -2067,7 +2065,7 @@ class AnathemaProjectile extends Entity {
     public var appliedCurse: Bool;
     public var canTouch: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.Weapon, arg2: Float) {
+    public function new(arg0: en.Hero = null, arg1: tool.Weapon = null, arg2: Float = 0.) {
         super();
     }
 
@@ -2151,7 +2149,7 @@ class BarrelSpawner extends Entity {
     public var launchDir: Int;
     public var announced: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Ref, arg6: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Float = 0., arg5: Ref = null, arg6: Ref = null) {
         super();
     }
 
@@ -2273,7 +2271,7 @@ class Boomerang extends Entity {
     public var maxDistCase: Float;
     public var backHits: Int;
 
-    public function new(arg0: Entity, arg1: tool.InventItem, arg2: Float) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null, arg2: Float = 0.) {
         super();
     }
 
@@ -2385,7 +2383,7 @@ class Bullet extends Entity {
     public var hitSound: hxd.res.Sound;
     public var blockSound: hxd.res.Sound;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Dynamic, arg4: String) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Dynamic = null, arg4: String = null) {
         super();
     }
 
@@ -2608,7 +2606,7 @@ class CaltropBase extends Entity {
     public var thawDur: Float;
     public var thawVal: Int;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Float, arg5: Int) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null, arg4: Float = 0., arg5: Int = 0) {
         super();
     }
 
@@ -2645,7 +2643,7 @@ class Caltrop extends en.CaltropBase {
     public static var __clid: Int;
     public var birth: Int;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Float, arg5: Int) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null, arg4: Float = 0., arg5: Int = 0) {
         super();
     }
 
@@ -2672,7 +2670,7 @@ class CaltropRetiarus extends en.CaltropBase {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Float, arg5: Int) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null, arg4: Float = 0., arg5: Int = 0) {
         super();
     }
 
@@ -2689,7 +2687,7 @@ class CollectorCorpse extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -2726,7 +2724,7 @@ class CrossEntity extends Entity {
     public var registeredPos: Array<Float>;
     public var fakeCrosses: Array<Dynamic>;
 
-    public function new(arg0: Entity, arg1: tool.weap.Cross, arg2: tool.InventItem, arg3: Float, arg4: Float, arg5: Int) {
+    public function new(arg0: Entity = null, arg1: tool.weap.Cross = null, arg2: tool.InventItem = null, arg3: Float = 0., arg4: Float = 0., arg5: Int = 0) {
         super();
     }
 
@@ -2821,7 +2819,7 @@ class CrowManager extends Entity {
     public var lastKnownHeroRoom: level.Room;
     public var nearbyPlatforms: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Hero = null) {
         super();
     }
 
@@ -2883,7 +2881,7 @@ class CultistStatue extends Entity {
     public static var __eclids: Array<Int>;
     public var lock: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -2909,7 +2907,7 @@ class Deco extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -2933,7 +2931,7 @@ class DiverseDeckLightningBall extends Entity {
     public var angStep: Float;
     public var power: pow.DiverseDeckBase;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: pow.DiverseDeckBase) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null, arg4: pow.DiverseDeckBase = null) {
         super();
     }
 
@@ -3129,13 +3127,13 @@ class DookuManager extends Entity {
     public var fakeDooku: en.FakeDooku;
     public var dookuBatManager: en.DookuBatManager;
     public var dookuBeast: en.mob.boss.DookuBeast;
-    public var middleM: level.Marker;
+    public var middleM: level.LevelTypes.Marker;
     public var roomMiddle: tool.CPoint;
     public var noDamage: Bool;
     public var ambiantChannel: hxd.snd.Channel;
     public var fe: en.FocusEntity;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Hero = null) {
         super();
     }
 
@@ -3206,7 +3204,7 @@ class FakeDooku extends Entity {
     public var lvlDisp: level.disp.DookuArena;
     public var anchorPoint: Parallax;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -3349,7 +3347,7 @@ class FireWall extends Entity {
     public var destroyOnTouch: Bool;
     public var destroyOnBlock: Bool;
 
-    public function new(arg0: en.Mob, arg1: String, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: Ref) {
+    public function new(arg0: en.Mob = null, arg1: String = null, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Float = 0., arg6: Ref = null) {
         super();
     }
 
@@ -3416,7 +3414,7 @@ class FlyingSwordDoor extends Entity {
     public var startingPosY: Float;
     public var shakePower: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -3459,7 +3457,7 @@ class FocusEntity extends Entity {
     public var isActive: Bool;
     public var focusThroughCollision: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null) {
         super();
     }
 
@@ -3503,7 +3501,7 @@ class Grenade extends Entity {
     public var isMinorGrenade: Bool;
     public var explodeSound: hxd.res.Sound;
 
-    public function new(arg0: Entity, arg1: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Dynamic = null) {
         super();
     }
 
@@ -3647,7 +3645,7 @@ class GroundPart extends Entity {
     public var canHit: Bool;
     public var source: Entity;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: Dynamic, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null, arg4: Dynamic = null, arg5: Ref = null) {
         super();
     }
 
@@ -3706,7 +3704,7 @@ class GuacameleeChicken extends Entity {
     public var shouldCollide: Bool;
     public var hasTouched: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Dynamic = null) {
         super();
     }
 
@@ -3776,7 +3774,7 @@ class Hero extends Entity {
     public var lastParryShield: tool.weap.BaseShield;
     public var trail: Array<Dynamic>;
     public var curTrail: Int;
-    public var scarf: tool.ScarfManager;
+    public var scarf: tool.ScarfSegment.ScarfManager;
     public var oldTime: Float;
     public var pauseInfection: Bool;
     public var controller: tool.ControllerAccess;
@@ -3787,7 +3785,7 @@ class Hero extends Entity {
     public var _infos: Dynamic;
     public var sideKicks: Array<Dynamic>;
     public var lastHeadPos: tool.FPoint;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
     public var inventory: tool.Inventory;
     public var blueprints: Array<Dynamic>;
     public var awake: Bool;
@@ -4387,7 +4385,7 @@ class Hero extends Entity {
     public override function onEnterRoom(arg0: level.Room): Void {
     }
 
-    public function getCurrentShopMusic(arg0: level.MerchantData): hxd.res.Sound {
+    public function getCurrentShopMusic(arg0: level.LevelTypes.MerchantData): hxd.res.Sound {
         throw "stub: getCurrentShopMusic not decompiled";
     }
 
@@ -4422,7 +4420,7 @@ class Hero extends Entity {
     public function pushScarf(arg0: Float, arg1: Ref): Void {
     }
 
-    public function cancelMainSkills(arg0: hl.Class): Void {
+    public function cancelMainSkills(arg0: Class<Dynamic>): Void {
     }
 
     public function _setPerkCooldownS(arg0: tool.InventItem, arg1: Float): Void {
@@ -4778,7 +4776,7 @@ class Homunculus extends Entity {
     public var backParts: Array<Dynamic>;
     public var parts: Array<Dynamic>;
     public var eye: libs.heaps.slib.HSprite;
-    public var pool: libs.heaps.ParticlePool;
+    public var pool: libs.heaps.HParticle.ParticlePool;
     public var fxSb: libs.heaps.slib.HSpriteBatch;
     public var ligamentSb: libs.heaps.slib.HSpriteBatch;
     public var ligaments: Array<Dynamic>;
@@ -4788,7 +4786,7 @@ class Homunculus extends Entity {
     public var moveSoundToggle: Bool;
     public var oldPos: tool.CPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Bool, arg5: tool.mainSkills.Homunculus) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Bool = false, arg5: tool.mainSkills.Homunculus = null) {
         super();
     }
 
@@ -4922,7 +4920,7 @@ class Interactive extends Entity {
     public var triggerability: Triggerability;
     public var triggerId: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -4976,7 +4974,7 @@ class KingSkin extends Entity {
     public var runAnims: Array<Dynamic>;
     public var hasWineGlass: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -5025,7 +5023,7 @@ class LevelTrap extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -5077,7 +5075,7 @@ class Loot extends Entity {
     public var magnetMaxDurationS: Float;
     public var canBePickedByEntity: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -5181,7 +5179,7 @@ class MIChallengeRoom extends Entity {
     public var retryCount: Int;
     public var mainDoor: en.inter.door.BossDoor;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Hero = null) {
         super();
     }
 
@@ -5253,7 +5251,7 @@ class MessengerTtcl extends Entity {
     public var spot: Int;
     public var isInGround: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -5292,7 +5290,7 @@ class Mob extends Entity {
     public var forcedBlueprint: String;
     public var delayedVolte: Dynamic;
     public var allowHitOverlapAnims: Bool;
-    public var attackeds: haxe.ds.IntMap;
+    public var attackeds: haxe.ds.IntMap<Dynamic>;
     public var oldSkills: Array<Dynamic>;
     public var skills: Array<Dynamic>;
     public var queuedOldSkill: Dynamic;
@@ -5329,7 +5327,7 @@ class Mob extends Entity {
     public var forceBodyPart: Bool;
     public var useBodyParts: Bool;
     public var minPfSize: Int;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
     public var particleEmitters: Array<Dynamic>;
     public var thawMaxStacks: Int;
     public var thawMinDiminushingFactor: Int;
@@ -5381,7 +5379,7 @@ class Mob extends Entity {
     public var breachDamage: Float;
     public var pawGroundOffset: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -5393,15 +5391,15 @@ class Mob extends Entity {
         throw "stub: createSideKick not decompiled";
     }
 
-    public function addAttack_tool_skill_mobSkill_Melee(arg0: hl.Class, arg1: String): tool.skill.mobSkill.Melee {
+    public function addAttack_tool_skill_mobSkill_Melee(arg0: Class<Dynamic>, arg1: String): tool.skill.mobSkill.Melee {
         throw "stub: addAttack_tool_skill_mobSkill_Melee not decompiled";
     }
 
-    public function addAttack_tool_skill_OldMobSkill(arg0: hl.Class, arg1: String): tool.skill.OldMobSkill {
+    public function addAttack_tool_skill_OldMobSkill(arg0: Class<Dynamic>, arg1: String): tool.skill.OldMobSkill {
         throw "stub: addAttack_tool_skill_OldMobSkill not decompiled";
     }
 
-    public function addAttack_tool_skill_mobSkill_TeleJump(arg0: hl.Class, arg1: String): tool.skill.mobSkill.TeleJump {
+    public function addAttack_tool_skill_mobSkill_TeleJump(arg0: Class<Dynamic>, arg1: String): tool.skill.mobSkill.TeleJump {
         throw "stub: addAttack_tool_skill_mobSkill_TeleJump not decompiled";
     }
 
@@ -6030,9 +6028,8 @@ class NecromancySpot extends Entity {
     public var flameBobSpeed: Float;
     public var bobDist: Float;
     public var smallSoul: en.SmallSoul;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -6130,7 +6127,7 @@ class Pet extends Entity {
     public var petIdx: Int;
     public var canBePet: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null, arg4: tool.InventItem = null) {
         super();
     }
 
@@ -6267,7 +6264,7 @@ class PrisonBatCine extends Entity {
     public var speed: Float;
     public var big: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Ref = null) {
         super();
     }
 
@@ -6298,7 +6295,7 @@ class Rod extends Entity {
     public var power: pow.LightningRod;
     public var isLastRod: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: pow.LightningRod, arg4: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: pow.LightningRod = null, arg4: Bool = false) {
         super();
     }
 
@@ -6333,7 +6330,7 @@ class RorMagmaWorm extends Entity {
     public var bodySprites: Array<Dynamic>;
     public var fxBgBatch: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -6381,7 +6378,7 @@ class ShopMimicManager extends Entity {
     public var rewards: Array<Dynamic>;
     public var mob: en.mob.ShopMimic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero, arg4: level.MerchantType) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Hero = null, arg4: level.MerchantType = null) {
         super();
     }
 
@@ -6433,7 +6430,7 @@ class ShovelPaint extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -6544,7 +6541,7 @@ class SmallSoul extends Entity {
     public var angTrail: Float;
     public var even: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null) {
         super();
     }
 
@@ -6597,7 +6594,7 @@ class SpeakingFlyingSword extends Entity {
     public var moveState: Bool;
     public var idleState: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -6641,7 +6638,7 @@ class StaphyRoomManager extends Entity {
     public var staphy: en.mob.BoilerRoom;
     public var hasStaphy: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Hero = null) {
         super();
     }
 
@@ -6689,7 +6686,7 @@ class SuspendedWeight extends Entity {
     public var triggered: Bool;
     public var alreadyHitEntities: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null) {
         super();
     }
 
@@ -6762,7 +6759,7 @@ class ThrowingAxeEntity extends Entity {
     public var isGoingDown: Bool;
     public var canTouch: Bool;
 
-    public function new(arg0: Entity, arg1: tool.Weapon, arg2: Float) {
+    public function new(arg0: Entity = null, arg1: tool.Weapon = null, arg2: Float = 0.) {
         super();
     }
 
@@ -6831,7 +6828,7 @@ class TombstoneEntity extends Entity {
     public var targetMobs: Array<Dynamic>;
     public var dmgRatio: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: en.Hero, arg5: Int, arg6: Int, arg7: en.Mob, arg8: Ref, arg9: Ref, arg10: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: en.Hero = null, arg5: Int = 0, arg6: Int = 0, arg7: en.Mob = null, arg8: Ref = null, arg9: Ref = null, arg10: Array<Dynamic> = null) {
         super();
     }
 
@@ -6914,7 +6911,7 @@ class TwitchPet extends Entity {
     public static var __eclids: Array<Int>;
     public var target: Entity;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null) {
         super();
     }
 
@@ -6961,7 +6958,7 @@ class UsableBody extends en.Interactive {
     public var skinId: String;
     public var skin: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: String = null) {
         super();
     }
 
@@ -7008,12 +7005,12 @@ class UsableBody extends en.Interactive {
 class VaniaTorch extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
-    public var fxEmitter: libs.heaps.Emitter;
+    public var fxEmitter: libs.heaps.HParticle.Emitter;
     public var lightSpr: libs.heaps.slib.HSpriteBE;
     public var light: light.PointLight;
     public var customLoot: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -7041,7 +7038,7 @@ class Turret extends en.Active {
     public var shootCdS: Float;
     public var areaLights: Array<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7105,7 +7102,7 @@ class Cannon extends en.active.Turret {
     public var leftCannon: libs.heaps.slib.HSprite;
     public var sdir: Int;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7177,7 +7174,7 @@ class CeilTurret extends en.active.Turret {
     public var links: Array<Dynamic>;
     public var balloons: Array<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7258,7 +7255,7 @@ class Crusher extends en.Active {
     public static var __clid: Int;
     public var maxUses: Int;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7309,7 +7306,7 @@ class EtheralDoorSocle extends en.Active {
     public static var __clid: Int;
     public var door: en.inter.door.EtheralDoor;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: en.inter.door.EtheralDoor) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: en.inter.door.EtheralDoor = null) {
         super();
     }
 
@@ -7361,7 +7358,7 @@ class FireTurret extends en.active.Turret {
     public var leftMax: Int;
     public var rightMax: Int;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7438,7 +7435,7 @@ class GroundSaw extends en.Active {
     public var left: Int;
     public var right: Int;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7497,7 +7494,7 @@ class HeavyTurret extends en.active.Turret {
     public var bow0: libs.heaps.slib.HSprite;
     public var bow1: libs.heaps.slib.HSprite;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7580,7 +7577,7 @@ class HorizontalTurret extends en.active.Turret {
     public var bow0: libs.heaps.slib.HSprite;
     public var bow1: libs.heaps.slib.HSprite;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7666,7 +7663,7 @@ class RootTrap extends en.Active {
     public var victim: en.Mob;
     public var targetLoss: Float;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7719,7 +7716,7 @@ class StandardTurret extends en.active.Turret {
     public var bow: libs.heaps.slib.HSprite;
     public var saws: Array<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7784,7 +7781,7 @@ class TeslaCoil extends en.active.Turret {
     public static var __eclids: Array<Int>;
     public var rangeCase: Int;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -7841,7 +7838,7 @@ class Anchor extends en.Bullet {
     public var hasBeenBlocked: Bool;
     public var hasBeenCountered: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: String) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Int = 0, arg4: Int = 0, arg5: Int = 0, arg6: Int = 0, arg7: String = null) {
         super();
     }
 
@@ -7915,7 +7912,7 @@ class AnchorAmmo extends Entity {
     public var glowInnerColor: Int;
     public var glowOuterColor: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -7977,7 +7974,7 @@ class BatVolleyBullet extends en.Bullet {
     public var hitWallCount: Int;
     public var alphaTween: libs.misc.Tween;
 
-    public function new(arg0: en.Hero, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Ref) {
+    public function new(arg0: en.Hero = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Ref = null) {
         super();
     }
 
@@ -8047,7 +8044,7 @@ class BeholderSpike extends en.Bullet {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0.) {
         super();
     }
 
@@ -8083,7 +8080,7 @@ class BibleBullet extends en.Bullet {
     public var pageSb: libs.heaps.slib.HSpriteBatch;
     public var baseAtk: tool.atk.AttackData;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Int) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Int = 0) {
         super();
     }
 
@@ -8158,7 +8155,7 @@ class BleedAxeBullet extends en.Bullet {
     public var glowColIn: Int;
     public var glowColOut: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Int) {
+    public function new(arg0: en.Hero = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -8216,7 +8213,7 @@ class BlobbySpit extends en.Bullet {
     public var rotation: Float;
     public var subSpr: Array<Dynamic>;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: String) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: String = null) {
         super();
     }
 
@@ -8251,7 +8248,7 @@ class BoneThrowerBullet extends en.Bullet {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0.) {
         super();
     }
 
@@ -8388,7 +8385,7 @@ class CannonBullet extends en.Bullet {
     public var reflectLight: libs.heaps.slib.HSprite;
     public var weaponProps: Dynamic;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 
@@ -8436,7 +8433,7 @@ class Card extends en.Bullet {
     public var t: Float;
     public var sinSign: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Bool) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Bool = false) {
         super();
     }
 
@@ -8500,7 +8497,7 @@ class Ammo extends en.Loot {
     public var allowManualRecovery: Bool;
     public var stuckInWall: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.Team) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: tool.Team = null) {
         super();
     }
 
@@ -8610,7 +8607,7 @@ class CardAmmo extends en.loot.Ammo {
     public static var __eclids: Array<Int>;
     public var fromWeapon: tool.weap.ThrowingCards;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.weap.ThrowingCards) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: tool.weap.ThrowingCards = null) {
         super();
     }
 
@@ -8638,7 +8635,7 @@ class CounteredBullet extends en.Bullet {
     public static var __clid: Int;
     public var color: Int;
 
-    public function new(arg0: Entity, arg1: en.Bullet, arg2: tool.atk.AttackData, arg3: Float, arg4: Float, arg5: Int) {
+    public function new(arg0: Entity = null, arg1: en.Bullet = null, arg2: tool.atk.AttackData = null, arg3: Float = 0., arg4: Float = 0., arg5: Int = 0) {
         super();
     }
 
@@ -8668,7 +8665,7 @@ class DookuBFireBall extends en.Bullet {
     public var btween: libs.misc.Tween;
     public var tweenVal: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0) {
         super();
     }
 
@@ -8819,7 +8816,7 @@ class DookuExplosiveFireBall extends en.Bullet {
     public var scaleM: Float;
     public var explosionRadius: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Ref) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Float = 0., arg5: Int = 0, arg6: Ref = null) {
         super();
     }
 
@@ -8872,7 +8869,7 @@ class DookuFireBall extends en.Bullet {
     public var color: Int;
     public var isBlue: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Bool) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -8924,7 +8921,7 @@ class DookuMagmaBall extends en.Bullet {
     public var speedTween: libs.misc.Tween;
     public var alphaTween: libs.misc.Tween;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0) {
         super();
     }
 
@@ -8976,7 +8973,7 @@ class DookuRock extends en.Bullet {
     public static var __clid: Int;
     public var rotationSpeed: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null) {
         super();
     }
 
@@ -9031,7 +9028,7 @@ class DookuRockBig extends en.bu.DookuRock {
     public static var __eclids: Array<Int>;
     public var SCALE: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null) {
         super();
     }
 
@@ -9064,7 +9061,7 @@ class FireBall extends en.Bullet {
     public var legDmgMult: Float;
     public var useAreaFire: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0.) {
         super();
     }
 
@@ -9183,7 +9180,7 @@ class GardenerSickleBullet extends en.Bullet {
     public var pickupWidth: Float;
     public var baseAtk: tool.atk.AttackData;
 
-    public function new(arg0: en.Hero, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int) {
+    public function new(arg0: en.Hero = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0) {
         super();
     }
 
@@ -9283,7 +9280,7 @@ class GodAxeBullet extends en.Bullet {
     public var glowColIn: Int;
     public var glowColOut: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.atk.AttackData, arg2: tool.weap.GodAxeWeapon, arg3: Float, arg4: Float, arg5: Int, arg6: Int) {
+    public function new(arg0: en.Hero = null, arg1: tool.atk.AttackData = null, arg2: tool.weap.GodAxeWeapon = null, arg3: Float = 0., arg4: Float = 0., arg5: Int = 0, arg6: Int = 0) {
         super();
     }
 
@@ -9341,7 +9338,7 @@ class Homing extends en.Bullet {
     public var speed: Float;
     public var ang: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Entity) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Entity = null) {
         super();
     }
 
@@ -9391,7 +9388,7 @@ class HomingBullet extends en.Bullet {
     public var speed: Float;
     public var ang: Float;
 
-    public function new(arg0: Entity, arg1: Entity, arg2: tool.atk.AttackData, arg3: Float, arg4: Ref, arg5: String, arg6: Float) {
+    public function new(arg0: Entity = null, arg1: Entity = null, arg2: tool.atk.AttackData = null, arg3: Float = 0., arg4: Ref = null, arg5: String = null, arg6: Float = 0.) {
         super();
     }
 
@@ -9434,7 +9431,7 @@ class HomingSoul extends en.Bullet {
     public var speed: Float;
     public var ang: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Entity, arg3: Float, arg4: Float, arg5: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Entity = null, arg3: Float = 0., arg4: Float = 0., arg5: Float = 0.) {
         super();
     }
 
@@ -9492,7 +9489,7 @@ class Javelin extends en.Bullet {
     public var glowInnerColor: Int;
     public var glowOuterColor: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: String) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Int = 0, arg4: Int = 0, arg5: Int = 0, arg6: Int = 0, arg7: String = null) {
         super();
     }
 
@@ -9553,7 +9550,7 @@ class JavelinAmmo extends Entity {
     public var glowInnerColor: Int;
     public var glowOuterColor: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -9610,7 +9607,7 @@ class LanternSoulBullet extends en.Bullet {
     public var colorTail: Int;
     public var colorLight: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Int, arg6: en.SmallSoul) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Int = 0, arg6: en.SmallSoul = null) {
         super();
     }
 
@@ -9654,7 +9651,7 @@ class LaserGlaiveBullet extends en.Bullet {
     public var critBounce: Int;
     public var currentHitFrame: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Float = 0., arg5: Int = 0, arg6: Int = 0) {
         super();
     }
 
@@ -9703,7 +9700,7 @@ class MagicBall extends en.Bullet {
     public static var __clid: Int;
     public var color: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0) {
         super();
     }
 
@@ -9752,7 +9749,7 @@ class MagicBowArrow extends en.Bullet {
     public var homingAngleThreshold: Float;
     public var distanceCheckPassed: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Dynamic) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Float = 0., arg5: Float = 0., arg6: Dynamic = null) {
         super();
     }
 
@@ -9805,7 +9802,7 @@ class MagicMissile extends en.Bullet {
     public var hasLight: Bool;
     public var hasSound: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Bool) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -9850,7 +9847,7 @@ class MagicSalve extends en.Bullet {
     public var colorOut: Int;
     public var hasSound: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Int) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -9988,7 +9985,7 @@ class MiniGrenade extends en.Bullet {
     public var maxBounces: Int;
     public var curBounces: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: tool.InventItem, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: tool.InventItem = null, arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 
@@ -10043,7 +10040,7 @@ class MobThrowingAxe extends en.Bullet {
     public var comingBack: Bool;
     public var retinas: Array<Dynamic>;
 
-    public function new(arg0: en.Mob, arg1: tool.atk.AttackData, arg2: Int, arg3: Float) {
+    public function new(arg0: en.Mob = null, arg1: tool.atk.AttackData = null, arg2: Int = 0, arg3: Float = 0.) {
         super();
     }
 
@@ -10106,7 +10103,7 @@ class Orb extends en.Bullet {
     public var speed: Float;
     public var tickrate: Float;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -10161,7 +10158,7 @@ class PoisonSpit extends en.Bullet {
     public var rSec: Float;
     public var sec: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Ref, arg4: Ref, arg5: Ref, arg6: Ref, arg7: Ref, arg8: Ref) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Ref = null, arg4: Ref = null, arg5: Ref = null, arg6: Ref = null, arg7: Ref = null, arg8: Ref = null) {
         super();
     }
 
@@ -10208,7 +10205,7 @@ class Saw extends en.Bullet {
     public var rot: Float;
     public var lightPow: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0.) {
         super();
     }
 
@@ -10240,7 +10237,7 @@ class Shark extends en.Bullet {
     public var sharknadoed: Bool;
     public var forceRetrieveAmmo: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0.) {
         super();
     }
 
@@ -10311,7 +10308,7 @@ class SharkAmmo extends en.loot.Ammo {
     public var hero: en.Hero;
     public var hasSnapped: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: Entity) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: Entity = null) {
         super();
     }
 
@@ -10360,7 +10357,7 @@ class ShootingStar extends en.bu.Homing {
     public static var __eclids: Array<Int>;
     public var maxY: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Entity, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Entity = null, arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 
@@ -10398,7 +10395,7 @@ class SonicBolt extends en.Bullet {
     public var shouldCrit: Bool;
     public var color: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Bool) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -10448,7 +10445,7 @@ class Stalactite extends en.Bullet {
     public var speed: Float;
     public var groundY: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null) {
         super();
     }
 
@@ -10494,7 +10491,7 @@ class Stuff extends en.Bullet {
     public var ang: Float;
     public var stunTime: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Float = 0.) {
         super();
     }
 
@@ -10539,7 +10536,7 @@ class ThrowingSpearBullet extends en.Bullet {
     public var ownerHero: en.Hero;
     public var touchedEnnemy: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Int) {
+    public function new(arg0: en.Hero = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -10567,7 +10564,7 @@ class ThrownRock extends en.Bullet {
     public var rot: Float;
     public var rotDir: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0.) {
         super();
     }
 
@@ -10658,7 +10655,7 @@ class Torch extends en.Bullet {
     public var weaponItem: tool.InventItem;
     public var fireActive: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: tool.InventItem = null) {
         super();
     }
 
@@ -10717,7 +10714,7 @@ class WallFragment extends en.Bullet {
     public var color: Int;
     public var dr: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0) {
         super();
     }
 
@@ -10761,7 +10758,7 @@ class WreckingBallHero extends en.Bullet {
     public var glowOuterColor: Int;
     public var enemiesKilled: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: tool.weap.WreckingBall, arg3: Float, arg4: Bool, arg5: Int, arg6: Int) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: tool.weap.WreckingBall = null, arg3: Float = 0., arg4: Bool = false, arg5: Int = 0, arg6: Int = 0) {
         super();
     }
 
@@ -10821,7 +10818,7 @@ class WreckingBallHeroAmmo extends en.loot.Ammo {
     public var glowInnerColor: Int;
     public var glowOuterColor: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.weap.WreckingBall, arg5: Int, arg6: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: tool.weap.WreckingBall = null, arg5: Int = 0, arg6: Int = 0) {
         super();
     }
 
@@ -11000,7 +10997,7 @@ class BossRushStatue extends Entity {
     public var top: libs.heaps.slib.HSprite;
     public var weapon: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -11042,7 +11039,7 @@ class BossRushTierHotel extends Entity {
     public var tacticButton: en.inter.button.BossRushTierButton;
     public var survivalButton: en.inter.button.BossRushTierButton;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -11088,7 +11085,7 @@ class BossSign extends en.Deco {
     public static var __clid: Int;
     public var direction: Direction;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Direction) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Direction = null) {
         super();
     }
 
@@ -11247,7 +11244,7 @@ class CollectorAddDoor extends en.Deco {
     public var isOpen: Bool;
     public var offY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -11325,7 +11322,7 @@ class DockedBoat extends en.Deco {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Float = 0.) {
         super();
     }
 
@@ -11347,7 +11344,7 @@ class FireAreaEmitter extends en.Deco {
     public var width: Int;
     public var blue: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Bool = false) {
         super();
     }
 
@@ -11393,7 +11390,7 @@ class GodRay extends en.Deco {
     public var dust: en.deco.Dust;
     public var dustColor: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float, arg5: Float, arg6: en.deco.Dust, arg7: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Float = 0., arg5: Float = 0., arg6: en.deco.Dust = null, arg7: Int = 0) {
         super();
     }
 
@@ -11431,7 +11428,7 @@ class GreenhouseDoubleFountain extends en.Deco {
     public var waterfalls: Array<Dynamic>;
     public var lines: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -11475,7 +11472,7 @@ class GreenhouseFountain extends en.Deco {
     public var speedWater: Float;
     public var waterSurfaceY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -11513,7 +11510,7 @@ class GreenhouseFountainBig extends en.Deco {
     public var waterfalls: Array<Dynamic>;
     public var lines: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -11555,7 +11552,7 @@ class HLDAltar extends en.Deco {
     public var force: Float;
     public var volume: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -11631,10 +11628,10 @@ class HangedDeadBody extends en.deco.Pendulum {
 class HomunculusFlush extends en.Deco {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
-    public var emit: libs.heaps.Emitter;
+    public var emit: libs.heaps.HParticle.Emitter;
     public var front: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -11675,7 +11672,7 @@ class PipeFall extends en.Deco {
     public var waterSurfaceY: Float;
     public var forCastle: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Ref = null) {
         super();
     }
 
@@ -11716,7 +11713,7 @@ class PrisonFountain extends en.Deco {
     public var waters: Array<Dynamic>;
     public var waterSurfaceY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Float = 0., arg5: Dynamic = null) {
         super();
     }
 
@@ -11790,7 +11787,7 @@ class ShopStall extends en.Deco {
     public var lights: Array<Dynamic>;
     public var lightFlickers: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: level.MerchantType) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: level.MerchantType = null) {
         super();
     }
 
@@ -11828,7 +11825,7 @@ class SkulBonePile extends en.Deco {
     public static var __clid: Int;
     public var crumbled: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -11965,7 +11962,7 @@ class TerrariaSoulsEaterCorpse extends en.Deco {
     public var swordOut: Bool;
     public var friendAtlas: libs.heaps.slib.SpriteLib;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -12035,7 +12032,7 @@ class TriggerTorch extends en.Deco {
     public var audioChannel: hxd.snd.Channel;
     public var bd: level.BiomeDisp;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null) {
         super();
     }
 
@@ -12084,7 +12081,7 @@ class AnimatedPaintingBase extends en.Deco {
     public var group: String;
     public var hasNorm: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Float, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Float = 0., arg5: Ref = null) {
         super();
     }
 
@@ -12114,7 +12111,7 @@ class LoopPainting extends en.deco.paintings.AnimatedPaintingBase {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Float, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Float = 0., arg5: Ref = null) {
         super();
     }
 
@@ -12136,7 +12133,7 @@ class CarmillaPainting extends en.deco.paintings.LoopPainting {
     public var eyeLeft: en.deco.paintings.CarmillaEye;
     public var eyeRight: en.deco.paintings.CarmillaEye;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0.) {
         super();
     }
 
@@ -12180,7 +12177,7 @@ class MedusaPainting extends en.deco.paintings.AnimatedPaintingBase {
     public var shouldReset: Bool;
     public var resetDistCase: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Float = 0.) {
         super();
     }
 
@@ -12221,7 +12218,7 @@ class RandomLoopPainting extends en.deco.paintings.AnimatedPaintingBase {
     public var minDelayS: Float;
     public var maxDelayS: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Float, arg5: Float, arg6: Float, arg7: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Float = 0., arg5: Float = 0., arg6: Float = 0., arg7: Ref = null) {
         super();
     }
 
@@ -12261,7 +12258,7 @@ class DookuInteractionsManager extends Entity {
     public var interactionDh: tool.DecisionHelper;
     public var ignoreCdInteractionList: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Hero = null) {
         super();
     }
 
@@ -12322,7 +12319,7 @@ class BossGrenade extends en.Grenade {
     public static var __clid: Int;
     public var glow: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
         super();
     }
 
@@ -12353,7 +12350,7 @@ class ChickenGrenade extends en.Grenade {
     public var parentItem: tool.InventItem;
     public var parentHero: en.Hero;
 
-    public function new(arg0: Entity, arg1: en.Hero, arg2: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: en.Hero = null, arg2: tool.InventItem = null) {
         super();
     }
 
@@ -12386,7 +12383,7 @@ class GrenadeSkill extends en.Grenade {
     public static var __clid: Int;
     public var item: tool.InventItem;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -12413,7 +12410,7 @@ class ClusterBomb extends en.gr.GrenadeSkill {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -12439,7 +12436,7 @@ class ClusterBombSub extends en.gr.GrenadeSkill {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem, arg2: Float) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null, arg2: Float = 0.) {
         super();
     }
 
@@ -12469,7 +12466,7 @@ class EnemyFloatingGrenade extends en.Grenade {
     public static var __clid: Int;
     public var glow: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
         super();
     }
 
@@ -12502,7 +12499,7 @@ class EnemyGrenade extends en.Grenade {
     public static var __clid: Int;
     public var glow: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
         super();
     }
 
@@ -12533,7 +12530,7 @@ class EnemyGrenadeHardy extends en.Grenade {
     public var tHardy: en.mob.ThrowableMushroom;
     public var skillInf: Dynamic;
 
-    public function new(arg0: Entity, arg1: en.mob.ThrowableMushroom, arg2: Entity, arg3: Dynamic) {
+    public function new(arg0: Entity = null, arg1: en.mob.ThrowableMushroom = null, arg2: Entity = null, arg3: Dynamic = null) {
         super();
     }
 
@@ -12561,7 +12558,7 @@ class EnemyGrenadeSub extends en.Grenade {
     public static var __clid: Int;
     public var glow: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
         super();
     }
 
@@ -12590,7 +12587,7 @@ class EnemyGrenadeWorm extends en.Grenade {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: Entity, arg1: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Dynamic = null) {
         super();
     }
 
@@ -12617,7 +12614,7 @@ class EnemyPoisonGrenade extends en.Grenade {
     public var rSec: Float;
     public var sec: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity, arg1: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Dynamic = null) {
         super();
     }
 
@@ -12656,7 +12653,7 @@ class Explosive extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -12692,7 +12689,7 @@ class FastGrenade extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -12728,7 +12725,7 @@ class FireBomb extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -12764,7 +12761,7 @@ class HolyWater extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -12804,7 +12801,7 @@ class HolyFire extends Entity {
     public var item: tool.InventItem;
     public var tickRate: Float;
 
-    public function new(arg0: Entity, arg1: tool.InventItem, arg2: pr.Level, arg3: Float, arg4: Float) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null, arg2: pr.Level = null, arg3: Float = 0., arg4: Float = 0.) {
         super();
     }
 
@@ -12849,7 +12846,7 @@ class HolyRain extends Entity {
     public var tickRate: Float;
     public var sbRain: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: Entity, arg1: tool.InventItem, arg2: pr.Level) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null, arg2: pr.Level = null) {
         super();
     }
 
@@ -12892,7 +12889,7 @@ class Ice extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -12928,7 +12925,7 @@ class Magnet extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -12963,7 +12960,7 @@ class MorpherPop extends en.Grenade {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: Entity, arg1: Float) {
+    public function new(arg0: Entity = null, arg1: Float = 0.) {
         super();
     }
 
@@ -12987,7 +12984,7 @@ class OilBomb extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -13023,7 +13020,7 @@ class Pokebomb extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -13070,7 +13067,7 @@ class RepeledGrenade extends en.Grenade {
     public static var __clid: Int;
     public var item: tool.InventItem;
 
-    public function new(arg0: en.Hero, arg1: en.Grenade, arg2: tool.InventItem, arg3: Int) {
+    public function new(arg0: en.Hero = null, arg1: en.Grenade = null, arg2: tool.InventItem = null, arg3: Int = 0) {
         super();
     }
 
@@ -13122,7 +13119,7 @@ class RollingBomb extends en.Grenade {
     public var announced: Bool;
     public var announcedTime: Float;
 
-    public function new(arg0: Entity, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Float = 0., arg2: Dynamic = null, arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 
@@ -13171,7 +13168,7 @@ class RootBomb extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -13207,7 +13204,7 @@ class SideBomb extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -13242,7 +13239,7 @@ class Stunning extends en.gr.GrenadeSkill {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -13272,7 +13269,7 @@ class TwitchEnemyGrenade extends en.Grenade {
     public static var __clid: Int;
     public var glow: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
         super();
     }
 
@@ -13492,13 +13489,13 @@ class Richter extends en.Hero {
 class ATStatue extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
-    public var lMob: level.Mob;
+    public var lMob: level.LevelTypes.Mob;
     public var cont: Float;
     public var brig: Float;
     public var isReleased: Bool;
     public var canBeReleased: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.Mob) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelTypes.Mob = null) {
         super();
     }
 
@@ -13538,7 +13535,7 @@ class ArmoryButton extends en.Interactive {
     public static var __clid: Int;
     public var isActivated: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -13587,7 +13584,7 @@ class BankATMButton extends en.Interactive {
     public var locked: Bool;
     public var onShop: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 
@@ -13642,7 +13639,7 @@ class BankDoorSign extends en.Interactive {
     public static var __clid: Int;
     public var droppedKey: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -13695,7 +13692,7 @@ class BankEntrance extends en.Interactive {
     public var glowT: Float;
     public var isLock: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -13762,7 +13759,7 @@ class SubTeleporter extends en.Interactive {
     public var targetRoomId: Int;
     public var tpId: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: String = null) {
         super();
     }
 
@@ -13809,7 +13806,7 @@ class BankSubTeleporter extends en.inter.SubTeleporter {
     public static var __eclids: Array<Int>;
     public var activated: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: String = null) {
         super();
     }
 
@@ -13852,7 +13849,7 @@ class BigBell extends en.Interactive {
     public var fxSpeed: Float;
     public var lastHitSide: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -13912,7 +13909,7 @@ class BloodFountain extends en.Interactive {
     public var bloodFlowActive: Bool;
     public var bloodFlow: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -13973,7 +13970,7 @@ class BossRushChest extends en.Interactive {
     public var godRays: libs.heaps.slib.HSpriteBE;
     public var glowT: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -14071,11 +14068,11 @@ class BreakableGround extends en.Interactive {
     public var root: h2d.Object;
     public var blocks: Array<Dynamic>;
     public var rune: libs.heaps.slib.HSprite;
-    public var shakes: haxe.ds.IntMap;
-    public var lightSegment: light.Wall;
+    public var shakes: haxe.ds.IntMap<Dynamic>;
+    public var lightSegment: light.Visibility.Wall;
     public var int: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -14139,7 +14136,7 @@ class BreakableGroundConditional extends en.inter.BreakableGround {
     public var oldUnlocked: Bool;
     public var minimapRevealed: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: String, arg6: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: String = null, arg6: String = null) {
         super();
     }
 
@@ -14185,9 +14182,9 @@ class BreakableGroundTriggered extends en.Interactive {
     public var chei: Int;
     public var root: h2d.Object;
     public var blocks: Array<Dynamic>;
-    public var lightSegment: light.Wall;
+    public var lightSegment: light.Visibility.Wall;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -14235,7 +14232,7 @@ class BreakableOneWay extends en.Interactive {
     public var chei: Int;
     public var cornerSprite: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -14291,7 +14288,7 @@ class BreakableProp extends en.Interactive {
     public static var __clid: Int;
     public var value: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -14347,7 +14344,7 @@ class BreakableTile extends en.Interactive {
     public var cwid: Int;
     public var chei: Int;
     public var root: h2d.Object;
-    public var lightSegment: light.Wall;
+    public var lightSegment: light.Visibility.Wall;
     public var lastHitDir: Int;
     public var shake: Float;
     public var tileUp: libs.heaps.slib.HSprite;
@@ -14360,7 +14357,7 @@ class BreakableTile extends en.Interactive {
     public var horizontal: Bool;
     public var glowRatio: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -14450,7 +14447,7 @@ class BreakableWall extends en.Interactive {
     public var root: h2d.Object;
     public var blocks: Array<Dynamic>;
     public var canister: libs.heaps.slib.HSprite;
-    public var lightSegment: light.Wall;
+    public var lightSegment: light.Visibility.Wall;
     public var canGlow: shader.GlowKey;
     public var canGlowInner1: Int;
     public var canGlowInner2: Int;
@@ -14459,7 +14456,7 @@ class BreakableWall extends en.Interactive {
     public var broken: Bool;
     public var glowRatio: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -14530,7 +14527,7 @@ class BridgeLever extends en.Interactive {
     public static var __clid: Int;
     public var bridge: en.inter.PurpleBridge;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -14577,7 +14574,7 @@ class CandleLighthouse extends en.Interactive {
     public static var __clid: Int;
     public var hasBeenActivated: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -14624,7 +14621,7 @@ class CarmillaMask extends en.Interactive {
     public static var __clid: Int;
     public var activated: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -14687,7 +14684,7 @@ class CellShrine extends en.Interactive {
     public var glows: Array<Dynamic>;
     public var cellIcons: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -14746,7 +14743,7 @@ class CemeteryGraveCave extends en.Interactive {
     public static var __clid: Int;
     public var glow: shader.GlowKey;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -14802,7 +14799,7 @@ class CollectorDoorSign extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -14847,7 +14844,7 @@ class CureMachine extends en.Interactive {
     public var focusBot: en.FocusEntity;
     public var focusLittleTank: en.FocusEntity;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -14918,7 +14915,7 @@ class CursedChest extends en.Interactive {
     public var talkId: Int;
     public var isFocused: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Array<Dynamic> = null) {
         super();
     }
 
@@ -15034,7 +15031,7 @@ class DancingGhosts extends en.Interactive {
     public var mobiusTime: Float;
     public var canTrigger: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -15092,7 +15089,7 @@ class DarknessRemover extends en.Interactive {
     public var depleted: Bool;
     public var maxRadius: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 
@@ -15166,7 +15163,7 @@ class DeadCultist extends en.Interactive {
     public var hasBeenActivated: Bool;
     public var deadCultistID: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -15242,7 +15239,7 @@ class FloatingPlatform extends en.Interactive {
     public var targetCol: Int;
     public var maxForce: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Ref = null) {
         super();
     }
 
@@ -15356,7 +15353,7 @@ class DookuBreakableFloor extends en.inter.FloatingPlatform {
     public var targetTween: libs.misc.Tween;
     public var brightLerp: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Dynamic, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Dynamic = null, arg5: Dynamic = null) {
         super();
     }
 
@@ -15430,10 +15427,10 @@ class Door extends en.Interactive {
     public var locked: Bool;
     public var autoClose: Bool;
     public var _closed: Bool;
-    public var lightSegment: light.Wall;
+    public var lightSegment: light.Visibility.Wall;
     public var openSfx: hxd.res.Sound;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -15598,7 +15595,7 @@ class Elevator extends en.Interactive {
     public var chainsIsVisible: Bool;
     public var chainsCullingBound: h2d.col.Bounds;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -15693,11 +15690,11 @@ class EliteShrine extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
     public var used: Bool;
-    public var lMob: level.Mob;
+    public var lMob: level.LevelTypes.Mob;
     public var sprAdd: libs.heaps.slib.HSprite;
     public var glowAdd: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.Mob) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelTypes.Mob = null) {
         super();
     }
 
@@ -15750,7 +15747,7 @@ class EntranceTeleporter extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -15791,7 +15788,7 @@ class Examinable extends en.Interactive {
     public var examineFrom: Int;
     public var icon: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -15870,7 +15867,7 @@ class Exit extends en.Interactive {
     public var explorationIncentive: Bool;
     public var cursed: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null, arg5: Dynamic = null) {
         super();
     }
 
@@ -16101,7 +16098,7 @@ class ExitToRichterCastle extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -16175,7 +16172,7 @@ class ExplosiveBarrel extends en.Interactive {
     public var outOfGameLifeDuration: Float;
     public var lessBright: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null, arg4: Ref = null) {
         super();
     }
 
@@ -16318,7 +16315,7 @@ class FireflyElite extends en.Interactive {
     public var shootAng: Float;
     public var shootCount: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Mob, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Mob = null, arg4: Dynamic = null) {
         super();
     }
 
@@ -16374,13 +16371,13 @@ class FlaskGoggles extends en.Interactive {
     public var isActivated: Bool;
     public var price: Int;
     public var camSpeed: Float;
-    public var paddings: haxe.ds.EnumValueMap;
+    public var paddings: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
     public var flaskMarkers: Array<Dynamic>;
     public var camBounds: tool.Area;
     public var ui: ui.FlaskGogglesUI;
     public var controller: tool.ControllerAccess;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Array<Dynamic> = null) {
         super();
     }
 
@@ -16438,7 +16435,7 @@ class Flower extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -16481,7 +16478,7 @@ class ForceField extends en.Interactive {
     public var closed: Bool;
     public var cHei: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 
@@ -16531,7 +16528,7 @@ class Fountain extends en.Interactive {
     public var darkPow: Float;
     public var broken: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 
@@ -16591,7 +16588,7 @@ class FriendsSkinUnlockNote extends en.Interactive {
     public static var __clid: Int;
     public var isActive: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -16642,7 +16639,7 @@ class Gardener extends en.Interactive {
     public var hasBeenActivated: Bool;
     public var isGone: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -16697,7 +16694,7 @@ class Gift extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -16737,7 +16734,7 @@ class GiftSub extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -16775,7 +16772,7 @@ class GoldNugget extends en.Interactive {
     public var dmgSounds: Array<Dynamic>;
     public var dieSounds: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -16842,7 +16839,7 @@ class Harpoon extends en.Interactive {
     public var target: en.Mob;
     public var door: en.inter.door.TriggeredDoor;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -16882,7 +16879,7 @@ class HarpoonBullet extends en.Bullet {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: Entity, arg1: Entity, arg2: en.inter.door.TriggeredDoor) {
+    public function new(arg0: Entity = null, arg1: Entity = null, arg2: en.inter.door.TriggeredDoor = null) {
         super();
     }
 
@@ -16904,12 +16901,12 @@ class HiddenBlock extends en.Interactive {
     public var item: tool.InventItem;
     public var back: libs.heaps.slib.HSprite;
     public var rune: libs.heaps.slib.HSprite;
-    public var lightSegment: light.Wall;
+    public var lightSegment: light.Visibility.Wall;
     public var dmgSounds: Array<Dynamic>;
     public var dieSounds: Array<Dynamic>;
     public var foodKind: FoodKind;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: tool.InventItem = null) {
         super();
     }
 
@@ -16985,7 +16982,7 @@ class HiddenGroundBlock extends en.Interactive {
     public var dmgSounds: Array<Dynamic>;
     public var dieSounds: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -17045,7 +17042,7 @@ class HiddenTrigger extends en.Interactive {
     public var r: Dynamic;
     public var genericEventId: String;
     public var levelId: String;
-    public var spotCastleEliteRoom: level.Marker;
+    public var spotCastleEliteRoom: level.LevelTypes.Marker;
 
     public function new(arg0: pr.Level, arg1: Float, arg2: Int, arg3: Int, arg4: Int) {
         super();
@@ -17090,7 +17087,7 @@ class HomonFountain extends en.Interactive {
     public var flowers: libs.heaps.slib.HSprite;
     public var homonTip: ui.LightTip;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -17140,7 +17137,7 @@ class HotkBossCellNote extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -17170,7 +17167,7 @@ class ImpAltar extends en.Interactive {
     public static var __clid: Int;
     public var isActivated: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -17228,7 +17225,7 @@ class ItemAltar extends en.Interactive {
     public var off: libs.heaps.slib.HSprite;
     public var offsetAlpha: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -17324,7 +17321,7 @@ class ItemDrop extends en.Interactive {
     public var icon: ui.icon.Icon;
     public var lockIcon: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: Bool, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: Bool = false, arg5: Ref = null) {
         super();
     }
 
@@ -17435,7 +17432,7 @@ class KingsHandBomb extends en.Interactive {
     public var inf: Dynamic;
     public var lastTimer: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null) {
         super();
     }
 
@@ -17537,7 +17534,7 @@ class LegendaryAltar extends en.Interactive {
     public var locked: Bool;
     public var icon: ui.icon.Icon;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -17602,7 +17599,7 @@ class Lustre extends en.Interactive {
     public var lights: Array<Dynamic>;
     public var explodeSound: hxd.res.Sound;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -17656,7 +17653,7 @@ class Magnet extends en.Interactive {
     public var infos: Dynamic;
     public var item: tool.InventItem;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Int, arg5: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Int = 0, arg5: tool.InventItem = null) {
         super();
     }
 
@@ -17710,7 +17707,7 @@ class Merchant extends en.Interactive {
     public var hasSaidEasterEgg: Bool;
     public var sid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: level.MerchantType) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: level.MerchantType = null) {
         super();
     }
 
@@ -17763,7 +17760,7 @@ class MerchantPan extends en.Interactive {
     public static var __clid: Int;
     public var hasGiven: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -17818,10 +17815,10 @@ class Mirror extends en.Interactive {
     public var libMonsters: libs.heaps.slib.SpriteLib;
     public var mobId: String;
     public var mobSprite: libs.heaps.slib.HSprite;
-    public var fdAlpha: libs.heaps.slib.FrameData;
-    public var fdSprite: libs.heaps.slib.FrameData;
+    public var fdAlpha: libs.heaps.slib.SpriteLib.FrameData;
+    public var fdSprite: libs.heaps.slib.SpriteLib.FrameData;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -17862,13 +17859,13 @@ class Mirror extends en.Interactive {
 class MobStatue extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
-    public var lMob: level.Mob;
+    public var lMob: level.LevelTypes.Mob;
     public var cont: Float;
     public var brig: Float;
     public var isReleased: Bool;
     public var canBeReleased: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.Mob) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelTypes.Mob = null) {
         super();
     }
 
@@ -17912,7 +17909,7 @@ class ZDoor extends en.Interactive {
     public var lockZDoor: Bool;
     public var visited: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0, arg5: Ref = null) {
         super();
     }
 
@@ -17986,7 +17983,7 @@ class MonsterDoor extends en.inter.ZDoor {
     public var isBroken: Bool;
     public var isExit: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -18037,7 +18034,7 @@ class NecromantForceField extends en.Interactive {
     public var cHei: Int;
     public var hitbox: en.inter.Hitbox;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.Necromant, arg4: Float, arg5: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.mob.Necromant = null, arg4: Float = 0., arg5: Float = 0.) {
         super();
     }
 
@@ -18092,7 +18089,7 @@ class Hitbox extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null) {
         super();
     }
 
@@ -18197,7 +18194,7 @@ class OldShopCategory extends en.Interactive {
     public var icon: h2d.Bitmap;
     public var oldCat: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null) {
         super();
     }
 
@@ -18259,7 +18256,7 @@ class PiggyBank extends en.Interactive {
     public var goldGaveByHero: Int;
     public var maxGold: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -18323,7 +18320,7 @@ class PileOfGold extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -18379,7 +18376,7 @@ class Portal extends en.Interactive {
     public var varDX: Float;
     public var varDY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Ref = null) {
         super();
     }
 
@@ -18441,7 +18438,7 @@ class PressurePlate extends en.Interactive {
     public var lastTriggerer: Entity;
     public var cogs: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -18501,7 +18498,7 @@ class PulleyAttachPoint extends en.inter.PressurePlate {
     public static var __eclids: Array<Int>;
     public var linkedTrap: en.ltrap.Pulley;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.ltrap.Pulley) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.ltrap.Pulley = null) {
         super();
     }
 
@@ -18556,7 +18553,7 @@ class PurpleBridge extends en.Interactive {
     public var chain: tool.Chain;
     public var chainEndPoint: tool.CPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -18613,7 +18610,7 @@ class PurpleElevatorButton extends en.Interactive {
     public var isActivated: Bool;
     public var elevatorTarget: en.inter.elevator.PurpleElevator;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -18675,7 +18672,7 @@ class RandomWeaponSpawner extends Entity {
     public var hasSpawnedItem: Bool;
     public var qualityProbabilities: Array<Float>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -18735,7 +18732,7 @@ class RandomActivableSpawner extends en.inter.RandomWeaponSpawner {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -18756,7 +18753,7 @@ class RandomBowSpawner extends en.inter.RandomWeaponSpawner {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -18777,7 +18774,7 @@ class RandomCCSpawner extends en.inter.RandomWeaponSpawner {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -18798,7 +18795,7 @@ class RandomShieldSpawner extends en.inter.RandomWeaponSpawner {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -18820,7 +18817,7 @@ class RedTeleporter extends en.Interactive {
     public static var __clid: Int;
     public var hasBeenUsed: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -18869,7 +18866,7 @@ class RockPile extends en.Interactive {
     public var rockColor: Int;
     public var hole: tool.FPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -18916,7 +18913,7 @@ class RunicShrine extends en.Interactive {
     public var icon: ui.icon.Icon;
     public var glowingCells: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: Int = 0) {
         super();
     }
 
@@ -18990,7 +18987,7 @@ class ScoringDoor extends en.Interactive {
     public var speedClock: Int;
     public var isOpening: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -19041,7 +19038,7 @@ class ScoringLimit extends en.Interactive {
     public var cHei: Int;
     public var arSpr: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -19083,7 +19080,7 @@ class SecretLever extends en.Interactive {
     public var rune: libs.heaps.slib.HSprite;
     public var int: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.inter.Portal) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.inter.Portal = null) {
         super();
     }
 
@@ -19142,7 +19139,7 @@ class ShieldPylon extends en.Interactive {
     public var shieldTarget: Entity;
     public var color: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null) {
         super();
     }
 
@@ -19199,7 +19196,7 @@ class ShopBooth extends en.Interactive {
     public var icon: ui.icon.Icon;
     public var oldMoney: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: Int = 0) {
         super();
     }
 
@@ -19278,7 +19275,7 @@ class ShopCategory extends en.Interactive {
     public var icon: h2d.Bitmap;
     public var cat: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -19342,7 +19339,7 @@ class ShopReroll extends en.Interactive {
     public var icon: h2d.Bitmap;
     public var remainUses: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -19404,7 +19401,7 @@ class ShovelCampFire extends en.Interactive {
     public var fire: libs.heaps.slib.HSprite;
     public var fireSfx: hxd.snd.Channel;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -19466,7 +19463,7 @@ class Skinner extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -19499,7 +19496,7 @@ class SkulTomb extends en.Interactive {
     public static var __clid: Int;
     public var isBreak: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -19568,7 +19565,7 @@ class SwitchBossRune extends en.Interactive {
     public var lightOn: tool.EntityLight;
     public var lightOff: tool.EntityLight;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -19644,7 +19641,7 @@ class Teleport extends en.Interactive {
     public var runes: Array<Dynamic>;
     public var tLight: tool.EntityLight;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -19719,7 +19716,7 @@ class TentacleNote extends en.Interactive {
     public static var __clid: Int;
     public var isActive: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -19780,7 +19777,7 @@ class Throne extends en.Interactive {
     public var glow: libs.heaps.slib.HSprite;
     public var isEndingState: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -19880,7 +19877,7 @@ class TimedItem extends en.Interactive {
     public var limitS: Float;
     public var frozenTime: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: Float = 0.) {
         super();
     }
 
@@ -19941,7 +19938,7 @@ class TopLighthouseGetAway extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -19989,7 +19986,7 @@ class TrainingArmoryButton extends en.Interactive {
     public var spawnedItemsWaves: Array<Dynamic>;
     public var flushLimit: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -20043,7 +20040,7 @@ class TrainingDifficultyChooser extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -20090,7 +20087,7 @@ class TrainingDoor extends en.Interactive {
     public var hsDarkDoor: libs.heaps.slib.HSprite;
     public var isOpen: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -20149,7 +20146,7 @@ class TrainingMobPresetBook extends en.Interactive {
     public var linkedSpawners: Array<Dynamic>;
     public var rseed: libs.Rand;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -20197,7 +20194,7 @@ class TrainingMobSpawnerStatue extends en.Interactive {
     public var backLight: tool.EntityLight;
     public var hasSpawned: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -20258,7 +20255,7 @@ class TrainingMobSwitch extends en.Interactive {
     public var hasLinkedSpawners: Bool;
     public var linkedSpawners: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -20316,7 +20313,7 @@ class TrainingTierChooser extends en.Interactive {
     public var tacticGlow: shader.GradientHiLo;
     public var survivalGlow: shader.GradientHiLo;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -20361,7 +20358,7 @@ class TrainingWeaponSpawner extends en.Interactive {
     public var baseSeed: Int;
     public var rseed: libs.Rand;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: String, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: String = null, arg5: Ref = null) {
         super();
     }
 
@@ -20471,7 +20468,7 @@ class TreasureChest extends en.Interactive {
     public var glowT: Float;
     public var isFocused: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Array<Dynamic> = null) {
         super();
     }
 
@@ -20569,7 +20566,7 @@ class TriggerTrapPressurePlate extends en.inter.PressurePlate {
     public static var __eclids: Array<Int>;
     public var linkedTrap: en.ltrap.TriggerTrap;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.ltrap.TriggerTrap) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.ltrap.TriggerTrap = null) {
         super();
     }
 
@@ -20618,7 +20615,7 @@ class TwitchChest extends en.Interactive {
     public var godRays: libs.heaps.slib.HSpriteBE;
     public var glowT: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -20712,7 +20709,7 @@ class UpgradeShrine extends en.Interactive {
     public var icon: ui.icon.Icon;
     public var brokenId: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -20777,7 +20774,7 @@ class VaniaAltar extends en.inter.ItemAltar {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -20816,7 +20813,7 @@ class VineLadder extends en.Interactive {
     public var goingUp: Bool;
     public var triggerSpot: tool.CPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 
@@ -20894,9 +20891,9 @@ class WallEgg extends en.Interactive {
     public var gibs: Array<Dynamic>;
     public var veins: Array<Dynamic>;
     public var core2: libs.heaps.slib.HSprite;
-    public var mobData: level.Mob;
+    public var mobData: level.LevelTypes.Mob;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.Mob) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelTypes.Mob = null) {
         super();
     }
 
@@ -20945,7 +20942,7 @@ class WorkInProgress extends en.Interactive {
     public static var __clid: Int;
     public var text: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -20985,7 +20982,7 @@ class Button extends en.Interactive {
     public var spriteActivated: String;
     public var activationFxColor: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -21050,7 +21047,7 @@ class ATSwitch extends en.inter.button.Button {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -21091,7 +21088,7 @@ class BossRushTierButton extends en.inter.button.Button {
     public var tier: String;
     public var tierHotel: en.deco.BossRushTierHotel;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: en.deco.BossRushTierHotel) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: en.deco.BossRushTierHotel = null) {
         super();
     }
 
@@ -21130,7 +21127,7 @@ class ATDoor extends en.inter.Door {
     public static var __eclids: Array<Int>;
     public var isBlue: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Float = 0.) {
         super();
     }
 
@@ -21178,7 +21175,7 @@ class BankMoneyCheckDoor extends en.inter.Door {
     public var fullyRepayedSound: hxd.res.Sound;
     public var cantRepayedSound: hxd.res.Sound;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -21237,7 +21234,7 @@ class BankNpcDoor extends en.inter.Door {
     public var shine: Bool;
     public var banker: en.inter.npc.Banker;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 
@@ -21278,7 +21275,7 @@ class BasicDoor extends en.inter.Door {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0.) {
         super();
     }
 
@@ -21307,7 +21304,7 @@ class BossDoor extends en.inter.Door {
     public var shine: Bool;
     public var bgFx: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 
@@ -21362,7 +21359,7 @@ class BossRushDoor extends en.Interactive {
     public var grid: libs.heaps.slib.HSprite;
     public var isCustomBossRushUIOpen: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -21443,7 +21440,7 @@ class LockedDoor extends en.inter.Door {
     public var keyKind: String;
     public var unlockId: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null) {
         super();
     }
 
@@ -21487,7 +21484,7 @@ class CardLockedDoor extends en.inter.door.LockedDoor {
     public static var __clid: Int;
     public var heroHasCard: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null) {
         super();
     }
 
@@ -21531,7 +21528,7 @@ class ElevatorDoor extends en.inter.Door {
     public var elevator: en.inter.Elevator;
     public var light: tool.EntityLight;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -21571,7 +21568,7 @@ class EtheralDoor extends en.inter.Door {
     public var elapsedTime: Float;
     public var opacity: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: tool.InventItem = null) {
         super();
     }
 
@@ -21652,7 +21649,7 @@ class LockedDoorButton extends en.Interactive {
     public static var __clid: Int;
     public var door: en.inter.door.LockedDoor;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.inter.door.LockedDoor) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.inter.door.LockedDoor = null) {
         super();
     }
 
@@ -21696,7 +21693,7 @@ class MariaDoor extends en.inter.door.LockedDoor {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null) {
         super();
     }
 
@@ -21719,7 +21716,7 @@ class MoneyDoor extends en.inter.Door {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -21769,7 +21766,7 @@ class TimedDoor extends en.inter.Door {
     public var dLight: libs.heaps.slib.HSprite;
     public var dGlow: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0.) {
         super();
     }
 
@@ -21827,7 +21824,7 @@ class TriggeredDoor extends en.inter.Door {
     public static var __eclids: Array<Int>;
     public var markerCustomId: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Ref = null) {
         super();
     }
 
@@ -21878,7 +21875,7 @@ class TwitchDoor extends en.inter.Door {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -21930,7 +21927,7 @@ class MultiFloorElevator extends en.inter.Elevator {
     public var activeButtonGlow: libs.heaps.slib.HSprite;
     public var elevatorButtons: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -22012,7 +22009,7 @@ class SimpleElevator extends en.inter.Elevator {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -22040,7 +22037,7 @@ class PurpleElevator extends en.inter.elevator.SimpleElevator {
     public var activated: Bool;
     public var cineRotation: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -22113,7 +22110,7 @@ class BgDoor extends en.inter.Exit {
     public var runes: Array<Dynamic>;
     public var hasGlowLight: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic, arg6: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null, arg5: Dynamic = null, arg6: Dynamic = null) {
         super();
     }
 
@@ -22191,7 +22188,7 @@ class Billboard extends en.inter.Exit {
     public var lanternA: libs.heaps.slib.HSpriteBE;
     public var lanternB: libs.heaps.slib.HSpriteBE;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Dynamic = null) {
         super();
     }
 
@@ -22238,7 +22235,7 @@ class DookuCastleExit extends en.inter.Exit {
     public var tipOffX: Float;
     public var tipOffY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -22287,7 +22284,7 @@ class FisherBarqueExit extends en.inter.Exit {
     public var yBounce: Float;
     public var sbWaterFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -22361,7 +22358,7 @@ class JumpDoor extends en.inter.Exit {
     public var fxLockFactor: Float;
     public var lockFactor: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -22413,7 +22410,7 @@ class RockDoor extends en.inter.Exit {
     public var runes: Array<Dynamic>;
     public var gridXOffset: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null, arg5: Dynamic = null, arg6: Dynamic = null, arg7: Dynamic = null) {
         super();
     }
 
@@ -22480,7 +22477,7 @@ class LighthouseExitDoor extends en.inter.exit.RockDoor {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic, arg6: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null, arg5: Dynamic = null, arg6: Dynamic = null) {
         super();
     }
 
@@ -22513,7 +22510,7 @@ class RichterCastleExit extends en.inter.exit.BgDoor {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic, arg6: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null, arg5: Dynamic = null, arg6: Dynamic = null) {
         super();
     }
 
@@ -22539,7 +22536,7 @@ class RockDoorWithCultistStatues extends en.inter.exit.RockDoor {
     public var cultistStatues: Array<Dynamic>;
     public var isFirstUpdate: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic, arg6: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null, arg5: Dynamic = null, arg6: Dynamic = null) {
         super();
     }
 
@@ -22585,7 +22582,7 @@ class SideDoor extends en.inter.Exit {
     public var grid: libs.heaps.slib.HSprite;
     public var gadd: libs.heaps.slib.HSpriteBE;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -22642,7 +22639,7 @@ class TeleportExit extends en.inter.Exit {
     public var varDX: Float;
     public var varDY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null, arg5: Dynamic = null) {
         super();
     }
 
@@ -22686,7 +22683,7 @@ class TrainingBossDoor extends en.inter.exit.BgDoor {
     public var doorName: String;
     public var customBossName: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic, arg6: Dynamic, arg7: String, arg8: String, arg9: String, arg10: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null, arg5: Dynamic = null, arg6: Dynamic = null, arg7: String = null, arg8: String = null, arg9: String = null, arg10: Ref = null) {
         super();
     }
 
@@ -24506,7 +24503,7 @@ class ChallengeZDoor extends en.inter.ZDoor {
     public var type: level.ZDoorType;
     public var frozenLabelValue: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Bool, arg6: level.ZDoorType) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0, arg5: Bool = false, arg6: level.ZDoorType = null) {
         super();
     }
 
@@ -24583,7 +24580,7 @@ class CliffEnigmaZDoor extends en.inter.zdoor.ChallengeZDoor {
     public var hsRune1: libs.heaps.slib.HSprite;
     public var hsRune2: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Bool, arg6: en.inter.zdoor.CliffRuneCombo) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0, arg5: Bool = false, arg6: en.inter.zdoor.CliffRuneCombo = null) {
         super();
     }
 
@@ -24650,7 +24647,7 @@ class ConditionalZDoor extends en.inter.ZDoor {
     public var isOpen: Bool;
     public var willOpen: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Bool, arg6: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0, arg5: Bool = false, arg6: Bool = false) {
         super();
     }
 
@@ -24701,7 +24698,7 @@ class PurpleTeleportZDoor extends en.inter.ZDoor {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0) {
         super();
     }
 
@@ -24732,7 +24729,7 @@ class RunicZDoor extends en.inter.ZDoor {
     public var neededRunes: Int;
     public var isSealed: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Bool, arg6: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0, arg5: Bool = false, arg6: Int = 0) {
         super();
     }
 
@@ -24803,7 +24800,7 @@ class TeleportZDoor extends en.inter.ZDoor {
     public var varDX: Float;
     public var varDY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0, arg5: Ref = null) {
         super();
     }
 
@@ -24839,7 +24836,7 @@ class TrainingArenaZDoor extends en.inter.ZDoor {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0) {
         super();
     }
 
@@ -24868,7 +24865,7 @@ class TumulusAntichamberZDoor extends en.inter.ZDoor {
     public var fxLockFactor: Float;
     public var lockFactor: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Bool, arg6: level.ZDoorType, arg7: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0, arg5: Bool = false, arg6: level.ZDoorType = null, arg7: Int = 0) {
         super();
     }
 
@@ -24945,7 +24942,7 @@ class Blueprint extends en.Loot {
     public var rarity: String;
     public var active: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -25016,7 +25013,7 @@ class BossCell extends en.Loot {
     public var item: tool.InventItem;
     public var c: ui.BossCell;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -25077,7 +25074,7 @@ class ComboMultDrop extends en.Loot {
     public var col: Int;
     public var icon: ui.icon.Icon;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -25121,7 +25118,7 @@ class HealDrop extends en.Loot {
     public var dr: Float;
     public var healPct: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0.) {
         super();
     }
 
@@ -25169,7 +25166,7 @@ class PreciousItem extends en.Loot {
     public var item: tool.InventItem;
     public var icon: ui.icon.Icon;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -25222,7 +25219,7 @@ class Spikes extends en.LevelTrap {
     public var variant: String;
     public var spikeDirection: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Int, arg5: Dynamic, arg6: Dynamic, arg7: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Int = 0, arg5: Dynamic = null, arg6: Dynamic = null, arg7: String = null) {
         super();
     }
 
@@ -25296,7 +25293,7 @@ class AutoRetractableSpikes extends en.ltrap.Spikes {
     public var tIn: Float;
     public var tOut: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Int, arg5: Dynamic, arg6: String, arg7: Ref, arg8: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Int = 0, arg5: Dynamic = null, arg6: String = null, arg7: Ref = null, arg8: Ref = null) {
         super();
     }
 
@@ -25332,7 +25329,7 @@ class BulletBomb extends en.LevelTrap {
     public var scount: Int;
     public var baseAng: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -25402,7 +25399,7 @@ class CarnivorousPlant extends en.LevelTrap {
     public var bumpAnimRatio: Float;
     public var announced: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null) {
         super();
     }
 
@@ -25480,7 +25477,7 @@ class FlipPF extends en.LevelTrap {
     public var xRight: Int;
     public var closed: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -25541,7 +25538,7 @@ class Lava extends en.LevelTrap {
     public var chei: Int;
     public var surface: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -25612,7 +25609,7 @@ class LavaGiant extends en.LevelTrap {
     public var overflowCoeff: Float;
     public var surface: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -25675,9 +25672,9 @@ class LightningWall extends en.LevelTrap {
     public var endBall: libs.heaps.slib.HSprite;
     public var lightningMainColor: Int;
     public var lightningSecColor: Int;
-    public var soundEvent: level._LevelAudio.Event;
+    public var soundEvent: level.LevelAudio.Event;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 
@@ -25782,7 +25779,7 @@ class LightningWallChallenge extends en.ltrap.LightningWall {
     public var chains: Array<Dynamic>;
     public var glowShaders: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Ref, arg5: Ref, arg6: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Ref = null, arg5: Ref = null, arg6: Ref = null) {
         super();
     }
 
@@ -25839,7 +25836,7 @@ class PullBomb extends en.LevelTrap {
     public var skill: tool.skill.OldSkill;
     public var warnLevel: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 
@@ -25934,7 +25931,7 @@ class Pulley extends en.LevelTrap {
     public var hitArea: tool.Area;
     public var cullingBounds: h2d.col.Bounds;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Int, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Int = 0, arg5: Dynamic = null) {
         super();
     }
 
@@ -26042,7 +26039,7 @@ class RetractableSpikes extends en.ltrap.Spikes {
     public var tIn: Float;
     public var tOut: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Int, arg5: Dynamic, arg6: String, arg7: Ref, arg8: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null, arg4: Int = 0, arg5: Dynamic = null, arg6: String = null, arg7: Ref = null, arg8: Ref = null) {
         super();
     }
 
@@ -26079,7 +26076,7 @@ class RetractableSpikesChallenge extends en.ltrap.RetractableSpikes {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Int, arg5: Dynamic, arg6: String, arg7: Ref, arg8: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null, arg4: Int = 0, arg5: Dynamic = null, arg6: String = null, arg7: Ref = null, arg8: Ref = null) {
         super();
     }
 
@@ -26126,7 +26123,7 @@ class RotatingAxes extends en.LevelTrap {
     public var chains1: Array<Dynamic>;
     public var secondLastTail: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Dynamic = null) {
         super();
     }
 
@@ -26178,7 +26175,7 @@ class RotatingBall extends en.LevelTrap {
     public var ball: libs.heaps.slib.HSprite;
     public var chains: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Dynamic = null) {
         super();
     }
 
@@ -26237,7 +26234,7 @@ class RotatingBallChallenge extends en.ltrap.RotatingBall {
     public static var __eclids: Array<Int>;
     public var useOnChallenge: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Dynamic = null, arg5: Dynamic = null, arg6: Dynamic = null, arg7: Ref = null) {
         super();
     }
 
@@ -26286,7 +26283,7 @@ class Shooter extends en.LevelTrap {
     public var coolDown: Float;
     public var cPointCheck: tool.CPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Dynamic = null) {
         super();
     }
 
@@ -26335,7 +26332,7 @@ class TimedShooter extends en.LevelTrap {
     public var end: tool.CPoint;
     public var shoot: tool.skill.OldSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Dynamic = null) {
         super();
     }
 
@@ -26407,7 +26404,7 @@ class TriggerTrap extends en.LevelTrap {
     public var ball: libs.heaps.slib.HSprite;
     public var chains: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Int, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Int = 0, arg5: Dynamic = null) {
         super();
     }
 
@@ -26487,7 +26484,7 @@ class TriggeredPF extends en.LevelTrap {
     public var tDown: String;
     public var tUp: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Bool, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Bool = false, arg5: Dynamic = null) {
         super();
     }
 
@@ -26546,7 +26543,7 @@ class TriggeredSpikes extends en.ltrap.Spikes {
     public static var __eclids: Array<Int>;
     public var triggerId: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Int, arg5: Dynamic, arg6: Dynamic, arg7: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Int = 0, arg5: Dynamic = null, arg6: Dynamic = null, arg7: String = null) {
         super();
     }
 
@@ -26589,7 +26586,7 @@ class TumulusTimedShooter extends en.LevelTrap {
     public var end: tool.CPoint;
     public var shoot: tool.skill.OldSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Float = 0., arg5: Dynamic = null) {
         super();
     }
 
@@ -26652,7 +26649,7 @@ class UnstableGround extends en.LevelTrap {
     public var unstable: Bool;
     public var sprOffsetY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -26723,7 +26720,7 @@ class UnstablePF extends en.LevelTrap {
     public var tDown: String;
     public var tUp: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Bool = false) {
         super();
     }
 
@@ -26794,7 +26791,7 @@ class AggressiveZombie extends en.Mob {
     public var oldDir: Int;
     public var lastFrame: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -26898,9 +26895,8 @@ class AmazonBase extends en.Mob {
     public var playingPotionAnim: Bool;
     public var playingDeathAnim: Bool;
     public var bossRushModifiers: Dynamic;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0, arg6: Bool = false) {
         super();
     }
 
@@ -27078,7 +27074,7 @@ class AmazonBrutal extends en.mob.AmazonBase {
     public var brutalBossRushModifiers: Dynamic;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -27219,7 +27215,7 @@ class AmazonBrutal extends en.mob.AmazonBase {
 class AmazonSurvival extends en.mob.AmazonBase {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var isRunning: Bool;
     public var teleportPhase: Bool;
     public var atkType: en.mob.BallAtkType;
@@ -27240,9 +27236,9 @@ class AmazonSurvival extends en.mob.AmazonBase {
     public var sbFx: libs.heaps.slib.HSpriteBatch;
     public var chainLeft: en.mob.AmazonSurvivalChain;
     public var chainRight: en.mob.AmazonSurvivalChain;
-    public var animTracks: haxe.ds.StringMap;
+    public var animTracks: haxe.ds.StringMap<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -27410,7 +27406,7 @@ class AmazonSurvival extends en.mob.AmazonBase {
 class AmazonTactic extends en.mob.AmazonBase {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleportPhase: Bool;
     public var forcedTp: Bool;
     public var currentSpot: tool.CPoint;
@@ -27450,8 +27446,8 @@ class AmazonTactic extends en.mob.AmazonBase {
     public var targetedShootMaxRow: Int;
     public var acrossBossRoomAirShootChance: Float;
     public var acrossBossRoomAirShootVertical: Bool;
-    public var acrossBossRoomAirShootStartSpot: level.Marker;
-    public var acrossBossRoomAirShootTargetSpot: level.Marker;
+    public var acrossBossRoomAirShootStartSpot: level.LevelTypes.Marker;
+    public var acrossBossRoomAirShootTargetSpot: level.LevelTypes.Marker;
     public var acrossBossRoomAirShootForced: Bool;
     public var acrossBossRoomAirShootForcedFromTp: Bool;
     public var acrossBossRoomAirShootPlayed: Bool;
@@ -27462,7 +27458,7 @@ class AmazonTactic extends en.mob.AmazonBase {
     public var tacticBossRushModifiers: Dynamic;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -27635,11 +27631,11 @@ class AnchorGuy extends en.Mob {
     public var runFactor: Float;
     public var anchorBullet: en.bu.Anchor;
     public var anchorAmmo: en.bu.AnchorAmmo;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var oneWayToDestroyCandidates: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -27752,7 +27748,7 @@ class Arbiter extends en.Mob {
     public var distAngMax: Float;
     public var vShootDir: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -27835,7 +27831,7 @@ class Archer extends en.Mob {
     public var swap: tool.skill.OldSkill;
     public var dodge: tool.skill.OldSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -27899,7 +27895,7 @@ class AxeStatue extends en.Mob {
     public var isRevealed: Bool;
     public var glowShader: shader.GlowKey;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -27986,7 +27982,7 @@ class AxeThrower extends en.Mob {
     public static var __clid: Int;
     public var mainAxe: en.bu.MobThrowingAxe;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -28036,7 +28032,7 @@ class BackShield extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -28082,7 +28078,7 @@ class Bat extends en.Mob {
     public var attach: tool.CPoint;
     public var detectionRange: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -28157,7 +28153,7 @@ class BatDasher extends en.mob.Bat {
     public var fast: Float;
     public var slow: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -28229,7 +28225,7 @@ class BatDasherPurple extends en.mob.BatDasher {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -28264,7 +28260,7 @@ class BatKamikazeTemplate extends en.mob.Bat {
     public var offAngDir: Int;
     public var offDist: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -28323,7 +28319,7 @@ class BatKamikaze extends en.mob.BatKamikazeTemplate {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -28373,7 +28369,7 @@ class Blobby extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -28422,12 +28418,12 @@ class Blowgunner extends en.Mob {
     public var shoot: tool.skill.OldMobSkill;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var teleJumpInf: Dynamic;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var distAngMax: Float;
     public var shootAng: Dynamic;
     public var aimingSpot: tool.CPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -28557,7 +28553,7 @@ class BoilerRoom extends en.Mob {
     public var black: Bool;
     public var moveSounds: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -28732,7 +28728,7 @@ class Bomber extends en.Mob {
     public var diveHei: Float;
     public var targetUndercoverS: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -28808,7 +28804,7 @@ class BonePillar extends en.Mob {
     public static var __clid: Int;
     public var atkDir: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -28859,7 +28855,7 @@ class BoneThrower extends en.Mob {
     public static var __clid: Int;
     public var fleeDir: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -28926,9 +28922,8 @@ class BootlegBase extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
     public var soulHead: en.SmallSoul;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0, arg6: Bool = false) {
         super();
     }
 
@@ -28991,11 +28986,11 @@ class BootlegBowman extends en.mob.BootlegBase {
     public static var __eclids: Array<Int>;
     public var fleeDestination: Dynamic;
     public var bowAtk: tool.skill.OldMobSkill;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var targetCase: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -29075,7 +29070,7 @@ class BootlegHomunculus extends en.mob.BootlegBase {
     public var dmgTier: Int;
     public var lifeTier: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -29121,7 +29116,7 @@ class BootlegShovelman extends en.mob.BootlegBase {
     public var repelSkillInf: Dynamic;
     public var repelArea: tool.Area;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -29151,7 +29146,7 @@ class BootlegSwordsman extends en.mob.BootlegBase {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -29194,13 +29189,13 @@ class Boss extends en.Mob {
     public var offsetCamY: Int;
     public var cameraTrackingDisabled: Bool;
     public var ready: Bool;
-    public var battleZone: level.Marker;
+    public var battleZone: level.LevelTypes.Marker;
     public var defeatAchievement: achievements.EAchievement;
     public var defeatFlawlessAchievement: achievements.EAchievement;
     public var flawlessHeadIndex: Int;
     public var bossRoom: level.Room;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -29316,13 +29311,13 @@ class Buer extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
     public var backFx: libs.heaps.slib.HSprite;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var trailPointId: Int;
     public var touchedByFire: Array<Dynamic>;
-    public var fireBuildUp: haxe.ds.ObjectMap;
+    public var fireBuildUp: haxe.ds.ObjectMap<Dynamic, Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -29405,7 +29400,7 @@ class Bull extends en.Mob {
     public var currentTarget: Entity;
     public var infCharge: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -29456,7 +29451,7 @@ class Fly extends en.Mob {
     public var side: Int;
     public var scale: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -29540,7 +29535,7 @@ class CastleFly extends en.mob.Fly {
     public static var __eclids: Array<Int>;
     public var master: en.mob.Screamer;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.Screamer) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.mob.Screamer = null) {
         super();
     }
 
@@ -29587,7 +29582,7 @@ class CastleKnight extends en.Mob {
     public var spin: Float;
     public var spinning: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -29643,7 +29638,7 @@ class ClusterGrenader extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -29698,7 +29693,7 @@ class Comboter extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -29747,7 +29742,7 @@ class CrossbowMan extends en.Mob {
     public var swap: tool.skill.OldSkill;
     public var dodge: tool.skill.OldSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -29810,7 +29805,7 @@ class Curser extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -29856,7 +29851,7 @@ class DeathMage extends en.Mob {
     public var blinkInfos: Dynamic;
     public var blinkTcx: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -29933,7 +29928,7 @@ class Decoy extends en.Mob {
     public var talkId: Int;
     public var item: tool.InventItem;
 
-    public function new(arg0: Entity, arg1: en.Grenade, arg2: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: en.Grenade = null, arg2: tool.InventItem = null) {
         super();
     }
 
@@ -30000,7 +29995,7 @@ class Defender extends en.Mob {
     public var lastTCx: Int;
     public var shieldingSomeone: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30074,7 +30069,7 @@ class Demon extends en.Mob {
     public var remainingShots: Int;
     public var hoverSprYOffset: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30149,7 +30144,7 @@ class DoomBringer extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30204,7 +30199,7 @@ class Duelist extends en.Mob {
     public var dashBehindAtk: tool.skill.OldMobSkill;
     public var dashBehindInf: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30259,7 +30254,7 @@ class Earthquaker extends en.Mob {
     public var fallCy: Int;
     public var lastFrame: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30326,7 +30321,7 @@ class EliteSideKick extends en.Mob {
     public static var __clid: Int;
     public var lostParentCpt: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Mob) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Mob = null) {
         super();
     }
 
@@ -30378,7 +30373,7 @@ class Enforcer extends en.Mob {
     public var shielded: Bool;
     public var shieldHealth: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30461,7 +30456,7 @@ class FatZombie extends en.Mob {
     public var tweens: Array<Dynamic>;
     public var roll: tool.skill.OldMobSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30513,7 +30508,7 @@ class FlyZombie extends en.Mob {
     public var rushSkillInfo: Dynamic;
     public var children: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30586,7 +30581,7 @@ class FlyingCrow extends en.Mob {
     public var isNew: Bool;
     public var initDx: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: en.Hero, arg7: en.CrowManager) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Float = 0., arg6: en.Hero = null, arg7: en.CrowManager = null) {
         super();
     }
 
@@ -30658,7 +30653,7 @@ class FlyingShooter extends en.Mob {
     public var wSpeed: Float;
     public var wang: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30720,7 +30715,7 @@ class Fogger extends en.Mob {
     public static var __clid: Int;
     public var da: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30780,7 +30775,7 @@ class Fugitive extends en.Mob {
     public var chargeFx: libs.heaps.slib.HSprite;
     public var lastHiddenSprY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30863,7 +30858,7 @@ class GoldenBatKamikaze extends en.mob.BatKamikazeTemplate {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30898,7 +30893,7 @@ class Golem extends en.Mob {
     public var fxPunch: libs.heaps.slib.HSprite;
     public var orgues: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -30959,7 +30954,7 @@ class Grenader extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31011,7 +31006,7 @@ class Hammer extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31068,7 +31063,7 @@ class Harpy extends en.Mob {
     public var chargeSpeed: Float;
     public var charging: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31168,7 +31163,7 @@ class HauntedArmor extends en.Mob {
     public var throwAtk: tool.skill.OldMobSkill;
     public var fakeStatue: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -31301,7 +31296,7 @@ class Hooker extends en.Mob {
     public static var __clid: Int;
     public var chain: tool.HookChain;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31345,7 +31340,7 @@ class Hurler extends en.Mob {
     public var hurl: tool.skill.OldMobSkill;
     public var barrelSpr: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31399,10 +31394,10 @@ class Hurler extends en.Mob {
 class Imp extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleJump: tool.skill.mobSkill.TeleJump;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31506,7 +31501,7 @@ class JavelinSnake extends en.Mob {
     public var javelinTargetCX: Int;
     public var javelinTargetCY: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31574,7 +31569,7 @@ class KingsFinger extends en.Mob {
     public var stompY: Int;
     public var atkFx: libs.heaps.HParticle;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31634,7 +31629,7 @@ class KunaiMaster extends en.Mob {
     public var count: Int;
     public var flewOnce: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31717,7 +31712,7 @@ class Lancer extends en.Mob {
     public var bumpCCHor: Float;
     public var atkFx: libs.heaps.HParticle;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31777,7 +31772,7 @@ class LancerPurple extends en.mob.Lancer {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31818,7 +31813,7 @@ class LeapingDuelyst extends en.Mob {
     public var dodge: tool.skill.OldSkill;
     public var dodgeDist: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31872,7 +31867,7 @@ class Librarian extends en.Mob {
     public var fxPentacle: libs.heaps.HParticle;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -31939,7 +31934,7 @@ class Mage360 extends en.Mob {
     public var rightHandOrb: libs.heaps.slib.HSpriteBE;
     public var distAngMax: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32005,14 +32000,14 @@ class Mage360 extends en.Mob {
 class MariaCat extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var lastJumpPos: tool.CPoint;
     public var maria: en.inter.npc.Maria;
     public var maxJumpDistance: Float;
     public var positionDecisionHelper: tool.DecisionHelper;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32122,7 +32117,7 @@ class Medusa extends en.mob.Boss {
     public var isPlayingDeathAnim: Bool;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32238,7 +32233,7 @@ class Merman extends en.mob.Archer {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32281,7 +32276,7 @@ class Merman extends en.mob.Archer {
 class Mimic extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var explode: tool.skill.OldMobSkill;
     public var hideSpr: libs.heaps.slib.HSprite;
     public var spikesInf: Dynamic;
@@ -32294,7 +32289,7 @@ class Mimic extends en.Mob {
     public var hasAppearFxBeenPlayed: Bool;
     public var angleSign: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32375,7 +32370,7 @@ class Minimoth extends en.Mob {
     public var roll: tool.skill.OldMobSkill;
     public var wave: tool.skill.OldMobSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32424,7 +32419,7 @@ class Morpher extends en.Mob {
     public var shootCount: Int;
     public var phase: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32491,7 +32486,7 @@ class Necromant extends en.Mob {
     public var revivedEntities: Array<Dynamic>;
     public var isFleeing: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32557,7 +32552,7 @@ class Ninja extends en.Mob {
     public var crawlX: Int;
     public var teleportTo: tool.CPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32623,7 +32618,7 @@ class OrbLauncher extends en.Mob {
     public var color: Int;
     public var smokeBombAttk: tool.skill.OldSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32679,7 +32674,7 @@ class PirateChief extends en.Mob {
     public var bombAtk: tool.skill.OldMobSkill;
     public var animPlayed: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32763,7 +32758,7 @@ class Pitcher extends en.Mob {
     public var hardyShield: libs.heaps.slib.HSprite;
     public var rockSprite: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32851,7 +32846,7 @@ class NunchuckPitcher extends en.mob.Pitcher {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32896,13 +32891,13 @@ class NunchuckPitcher extends en.mob.Pitcher {
 class Rampager extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var atkCount: Int;
     public var jumpBackSkl: tool.skill.OldMobSkill;
     public var rampageSkl: tool.skill.OldMobSkill;
     public var teleJump: tool.skill.mobSkill.TeleJump;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -32995,7 +32990,7 @@ class Rat extends en.Mob {
     public static var __clid: Int;
     public var jumpHit: tool.Area;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -33057,7 +33052,7 @@ class Runner extends en.Mob {
     public var tcy: Int;
     public var pfHistory: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -33134,7 +33129,7 @@ class S_Cat extends en.pet.PetMob {
     public var randomClawSkillBArea: tool.Area;
     public var statusMultiplier: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Entity = null, arg6: tool.InventItem = null) {
         super();
     }
 
@@ -33259,7 +33254,7 @@ class S_Fly extends en.Mob {
     public var side: Int;
     public var scale: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -33348,7 +33343,7 @@ class S_HeroChicken extends en.Mob {
     public var maxParentDist: Float;
     public var teleport: tool.skill.OldSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -33425,7 +33420,7 @@ class S_HeroWorm extends en.Mob {
     public var maxParentDist: Float;
     public var teleport: tool.skill.OldSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -33508,7 +33503,7 @@ class S_ProtectorMushroom extends en.pet.PetMob {
     public var chargingTarget: en.Mob;
     public var explosionTexts: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Entity = null, arg6: tool.InventItem = null) {
         super();
     }
 
@@ -33623,7 +33618,7 @@ class S_Worm extends en.Mob {
     public var trailColor: Int;
     public var crawl: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -33683,7 +33678,7 @@ class S_WallEggWorm extends en.mob.S_Worm {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -33717,7 +33712,7 @@ class S_ZombieFly extends en.Mob {
     public var side: Int;
     public var scale: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -33803,7 +33798,7 @@ class Samurai extends en.Mob {
     public var isSlashing: Bool;
     public var bulletProtec: en.Bullet;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -33870,7 +33865,7 @@ class Scarecrow extends en.Mob {
     public var dumpFolderPath: String;
     public var dumpFileName: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -33925,7 +33920,7 @@ class Scorpio extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -33976,7 +33971,7 @@ class Screamer extends en.Mob {
     public var swords: Array<Dynamic>;
     public var dbgs: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34117,7 +34112,7 @@ class SewerTtcl extends en.Mob {
     public var resistRoot: Float;
     public var resistStun: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34222,7 +34217,7 @@ class Shield extends en.Mob {
     public static var __clid: Int;
     public var shieldDir: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34284,7 +34279,7 @@ class Shielder extends en.Mob {
     public var addHS: libs.heaps.slib.HSprite;
     public var shieldingSomeone: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34342,7 +34337,7 @@ class Shocker extends en.Mob {
     public var pts: Array<Dynamic>;
     public var oldPos: tool.CPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34429,23 +34424,23 @@ class ShopMimic extends en.Mob {
     public var walkBounceInf: Dynamic;
     public var landCount: Int;
     public var meleeDeck: Array<Dynamic>;
-    public var meleeDeckWeights: haxe.ds.ObjectMap;
+    public var meleeDeckWeights: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var meleeDeckDh: tool.DecisionHelper;
     public var midRangeDeck: Array<Dynamic>;
-    public var midRangeDeckWeights: haxe.ds.ObjectMap;
+    public var midRangeDeckWeights: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var midRangeDeckDh: tool.DecisionHelper;
     public var rangedDeck: Array<Dynamic>;
-    public var rangedDeckWeights: haxe.ds.ObjectMap;
+    public var rangedDeckWeights: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var rangedDeckDh: tool.DecisionHelper;
     public var afterHookDeck: Array<Dynamic>;
-    public var afterHookDeckWeights: haxe.ds.ObjectMap;
+    public var afterHookDeckWeights: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var afterHookDeckDh: tool.DecisionHelper;
     public var afterParryDeck: Array<Dynamic>;
-    public var afterParryDeckWeights: haxe.ds.ObjectMap;
+    public var afterParryDeckWeights: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var afterParryDeckDh: tool.DecisionHelper;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: level.MerchantType, arg6: en.mob.BonusAttackType, arg7: en.inter.ItemDrop) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: level.MerchantType = null, arg6: en.mob.BonusAttackType = null, arg7: en.inter.ItemDrop = null) {
         super();
     }
 
@@ -34554,7 +34549,7 @@ class Skull extends en.Mob {
     public var floatLineY: Float;
     public var moveDir: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34610,9 +34605,9 @@ class SoreLooser extends en.Mob {
     public static var __clid: Int;
     public var runFx: libs.heaps.slib.HSprite;
     public var teleJump: tool.skill.mobSkill.TeleJump;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34679,7 +34674,7 @@ class Spawner extends en.Mob {
     public var meat: libs.heaps.slib.HSprite;
     public var pipe: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34738,7 +34733,7 @@ class Spawnling extends en.Mob {
     public var oldDir: Int;
     public var volteAnim: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34792,7 +34787,7 @@ class SpikedSatyr extends en.Mob {
     public static var __clid: Int;
     public var spin: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34860,7 +34855,7 @@ class Spiker extends en.Mob {
     public var squash: Float;
     public var spikePt: tool.CPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34923,7 +34918,7 @@ class Spinner extends en.Mob {
     public var spin: Float;
     public var spinning: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -34988,8 +34983,8 @@ class StompSkeleton extends en.Mob {
     public var moveTargetY: Float;
     public var moveTargetTime: Float;
     public var moveTargetReached: Bool;
-    public var vx: tool.Ref;
-    public var vy: tool.Ref;
+    public var vx: tool.SmoothDamp.Ref;
+    public var vy: tool.SmoothDamp.Ref;
     public var consecutiveStompCount: Int;
     public var stompGroundY: Int;
     public var stompGroundXMin: Int;
@@ -34998,7 +34993,7 @@ class StompSkeleton extends en.Mob {
     public var hellStompInf: Dynamic;
     public var hellStomp: tool.skill.OldMobSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -35071,10 +35066,10 @@ class Stomper extends en.Mob {
     public var stompTcx: Int;
     public var jumpInf: Dynamic;
     public var teleJump: tool.skill.mobSkill.TeleJump;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var useIdleA: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -35162,7 +35157,7 @@ class ThrowableMushroom extends en.Mob {
     public var fromBoss: Bool;
     public var oneChargeYet: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -35274,7 +35269,7 @@ class NunchuckThrowableMushroom extends en.mob.ThrowableMushroom {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -35306,7 +35301,7 @@ class Tick extends en.Mob {
     public var bossDoors: Array<Dynamic>;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -35402,7 +35397,7 @@ class TimeKeeperBot extends en.Mob {
     public var smokebombDest: tool.CPoint;
     public var wasStunned: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -35501,12 +35496,12 @@ class U28_Steal extends en.Mob {
     public var nextIsJumpBack: Bool;
     public var jumpInDir: Int;
     public var comboHit: Bool;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var onGoldPile: Bool;
     public var goldPile: en.inter.PileOfGold;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -35613,7 +35608,7 @@ class U28_VacuumCleaner extends en.Mob {
     public var sbFx: libs.heaps.slib.HSpriteBatch;
     public var fxGoldGorger: libs.heaps.slib.SpriteLib;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -35743,14 +35738,14 @@ class WeakHomunculusHead extends Entity {
     public var backParts: Array<Dynamic>;
     public var parts: Array<Dynamic>;
     public var eye: libs.heaps.slib.HSprite;
-    public var pool: libs.heaps.ParticlePool;
+    public var pool: libs.heaps.HParticle.ParticlePool;
     public var fxSb: libs.heaps.slib.HSpriteBatch;
     public var ligamentSb: libs.heaps.slib.HSpriteBatch;
     public var ligaments: Array<Dynamic>;
     public var bodyScale: Float;
     public var moveSoundToggle: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.BootlegHomunculus, arg4: Dynamic, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.mob.BootlegHomunculus = null, arg4: Dynamic = null, arg5: Bool = false) {
         super();
     }
 
@@ -35841,7 +35836,7 @@ class Werewolf extends en.mob.Rampager {
     public static var __eclids: Array<Int>;
     public var mini: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -35905,7 +35900,7 @@ class Worm extends en.Mob {
     public var volte: Float;
     public var crawl: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -35965,7 +35960,7 @@ class WormZombie extends en.Mob {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -36015,7 +36010,7 @@ class Zombie extends en.Mob {
     public static var __clid: Int;
     public var jumpHit: tool.Area;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -36062,9 +36057,8 @@ class Behemoth extends en.mob.Boss {
     public var shouldScream: Bool;
     public var blazeArea: tool.Area;
     public var bossRushModifiers: Dynamic;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -36214,9 +36208,9 @@ class Beholder extends en.mob.Boss {
     public var dxChainLR: Float;
     public var dxChainTop: Float;
     public var y_offsetChainLR: Int;
-    public var anchorTop: en.mob.boss._Beholder.Anchor;
-    public var anchorLeft: en.mob.boss._Beholder.Anchor;
-    public var anchorRight: en.mob.boss._Beholder.Anchor;
+    public var anchorTop: en.mob.boss.Beholder.Anchor;
+    public var anchorLeft: en.mob.boss.Beholder.Anchor;
+    public var anchorRight: en.mob.boss.Beholder.Anchor;
     public var isZoomed: Dynamic;
     public var speedBreathing: Int;
     public var angDizzy: Float;
@@ -36241,9 +36235,8 @@ class Beholder extends en.mob.Boss {
     public var nextIsMegaShoot: Bool;
     public var arDbg: Array<Dynamic>;
     public var bossRushModifiers: Dynamic;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -36440,7 +36433,7 @@ class BeholderTtcl extends en.Mob {
     public var resistStun: Float;
     public var hurtParent: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -36578,15 +36571,14 @@ class Dooku extends en.mob.Boss {
     public var hitVampireKillerAsAnyTaunts: Array<Dynamic>;
     public var deathTauntsBourvil: Array<Dynamic>;
     public var deathTauntsAlucard: Array<Dynamic>;
-    public var scarf: tool.ScarfManager;
+    public var scarf: tool.ScarfSegment.ScarfManager;
     public var sbDookuFx: libs.heaps.slib.HSpriteBatch;
     public var sbDookuFxAdd: libs.heaps.slib.HSpriteBatch;
     public var atkFx: libs.heaps.HParticle;
     public var grabFxAlpha: libs.misc.Tween;
     public var bossRushModifiers: Dynamic;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -36866,9 +36858,8 @@ class DookuBeast extends en.mob.Boss {
     public var sbDookuFxAdd: libs.heaps.slib.HSpriteBatch;
     public var bossRushModifiers: Dynamic;
     public var firePillarCount: Int;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -37211,9 +37202,8 @@ class GardenerBoss extends en.mob.Boss {
     public var isWateringIntroAnim: Bool;
     public var isAngryIntroAnim: Bool;
     public var tmp: libs.heaps.slib.SpriteLib;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -37511,7 +37501,7 @@ class Giant extends en.mob.Boss {
     public var rightShoulderSlotPoints: Array<Dynamic>;
     public var sbFxNormal: h2d.SpriteBatch;
     public var sbFxAdd: h2d.SpriteBatch;
-    public var particlePool: libs.heaps.ParticlePool;
+    public var particlePool: libs.heaps.HParticle.ParticlePool;
     public var glowMaskShader: h3d.shader.AlphaMap;
     public var subSpritesAcquired: Bool;
     public var screamFx: Bool;
@@ -37526,15 +37516,14 @@ class Giant extends en.mob.Boss {
     public var combatZoneCYMin: Int;
     public var combatZoneCYMax: Int;
     public var combatZoneCWid: Int;
-    public var vx: tool.Ref;
-    public var vy: tool.Ref;
-    public var vr: tool.Ref;
-    public var lvx: tool.Ref;
-    public var rvx: tool.Ref;
+    public var vx: tool.SmoothDamp.Ref;
+    public var vy: tool.SmoothDamp.Ref;
+    public var vr: tool.SmoothDamp.Ref;
+    public var lvx: tool.SmoothDamp.Ref;
+    public var rvx: tool.SmoothDamp.Ref;
     public var portalAng: Float;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -37733,11 +37722,10 @@ class KingsHand extends en.mob.Boss {
     public var bossRushModifiers: Dynamic;
     public var headPoint: tool.FPoint;
     public var playZone: level.Platform;
-    public var scarf: tool.ScarfManager;
+    public var scarf: tool.ScarfSegment.ScarfManager;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -37960,9 +37948,8 @@ class MamaTick extends en.mob.Boss {
     public var furryDone: Bool;
     public var slashHit: Int;
     public var isEmerged: Bool;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -38192,7 +38179,7 @@ class Queen extends en.mob.Boss {
     public var jumpSpeed: Float;
     public var lastCutReady: Bool;
     public var safeSpot: Dynamic;
-    public var headPool: libs.heaps.ParticlePool;
+    public var headPool: libs.heaps.HParticle.ParticlePool;
     public var headNormalSb: libs.heaps.slib.HSpriteBatch;
     public var headAddSb: libs.heaps.slib.HSpriteBatch;
     public var headBlack: Int;
@@ -38216,9 +38203,8 @@ class Queen extends en.mob.Boss {
     public var lastChargeRatio: Float;
     public var lastHandX: Float;
     public var lastHandY: Float;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -38628,9 +38614,8 @@ class TimeKeeper extends en.mob.Boss {
     public var py: Float;
     public var shuLaunch: libs.heaps.slib.HSprite;
     public var prevSprX: Float;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -39034,9 +39019,8 @@ class Death extends en.mob.Boss {
     public var sbFxBack: libs.heaps.slib.HSpriteBatch;
     public var scytheComboFx: libs.heaps.HParticle;
     public var ultiDarkness: h2d.Graphics;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -39241,7 +39225,7 @@ class SoulOrb extends Entity {
     public var startY: Float;
     public var initPosRatio: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.boss.death.Death, arg4: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.mob.boss.death.Death = null, arg4: Float = 0.) {
         super();
     }
 
@@ -39291,7 +39275,7 @@ class DeathArenaWall extends en.inter.ForceField {
     public static var __eclids: Array<Int>;
     public var wallSprites: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 
@@ -39513,7 +39497,7 @@ class DookuHead extends Entity {
     public var holdCond: Dynamic;
     public var lastHeadFx: libs.heaps.HParticle;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.boss.DookuBeast) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.mob.boss.DookuBeast = null) {
         super();
     }
 
@@ -39607,7 +39591,7 @@ class DookuMagmaBall extends Entity {
     public var oy: Float;
     public var a: tool.Area;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.boss.DookuBeast, arg4: Float, arg5: Float, arg6: Float, arg7: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.mob.boss.DookuBeast = null, arg4: Float = 0., arg5: Float = 0., arg6: Float = 0., arg7: Int = 0) {
         super();
     }
 
@@ -39736,7 +39720,7 @@ class Mushroom extends en.Interactive {
     public var sideOfTheRoom: Int;
     public var bumpForce: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.boss.GardenerBoss, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.mob.boss.GardenerBoss = null, arg4: Dynamic = null) {
         super();
     }
 
@@ -39825,9 +39809,9 @@ class Sickle extends en.Bullet {
     public var from: en.mob.boss.GardenerBoss;
     public var inf: Dynamic;
     public var sickleHitBox: tool.Area;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Ref) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Ref = null) {
         super();
     }
 
@@ -39901,8 +39885,8 @@ class Eye extends en.Mob {
     public var levelUpSteps: Array<Dynamic>;
     public var nerve: libs.heaps.slib.HSprite;
     public var dropAmmoOnNextUpdate: Bool;
-    public var vx: tool.Ref;
-    public var vy: tool.Ref;
+    public var vx: tool.SmoothDamp.Ref;
+    public var vy: tool.SmoothDamp.Ref;
 
     public function new(arg0: en.mob.boss.Giant, arg1: Int, arg2: Int) {
         super();
@@ -40003,9 +39987,9 @@ class HandBase extends en.Mob {
     public var impulseDir: Int;
     public var justGotKilled: Bool;
     public var arm: en.mob.boss.giant.Arm;
-    public var vx: tool.Ref;
-    public var vy: tool.Ref;
-    public var vr: tool.Ref;
+    public var vx: tool.SmoothDamp.Ref;
+    public var vy: tool.SmoothDamp.Ref;
+    public var vr: tool.SmoothDamp.Ref;
     public var maskShader: h3d.shader.AlphaMap;
     public var time: Float;
     public var shootGridPatterns: libs.RandDeck;
@@ -40401,7 +40385,7 @@ class TickWall extends en.inter.ForceField {
     public static var __eclids: Array<Int>;
     public var arms: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 
@@ -40461,7 +40445,7 @@ class AdeleScytheGhost extends en.Mob {
     public var walkAnim: String;
     public var walkAnimSpd: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem, arg7: tool.weap.SprData) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Entity = null, arg6: tool.InventItem = null, arg7: tool.weap.SprData = null) {
         super();
     }
 
@@ -40536,7 +40520,7 @@ class Chicken extends en.Pet {
     public var delayedDirVal: Int;
     public var shoot: tool.skill.OldSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null, arg4: tool.InventItem = null) {
         super();
     }
 
@@ -40644,7 +40628,7 @@ class FlyingSword extends en.Pet {
     public var petCount: Int;
     public var savedDepopCd: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null, arg4: tool.InventItem = null) {
         super();
     }
 
@@ -40809,7 +40793,7 @@ class Owl extends en.Pet {
     public var shoot: tool.skill.OldSkill;
     public var onFront: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null, arg4: tool.InventItem = null) {
         super();
     }
 
@@ -40889,7 +40873,7 @@ class SpeedRunner extends en.Pet {
     public var tx: Float;
     public var ty: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null, arg4: tool.InventItem = null) {
         super();
     }
 
@@ -41041,7 +41025,7 @@ class HookSource extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
         super();
     }
 
@@ -41073,7 +41057,7 @@ class PolloPower extends Entity {
     public var hitSound: hxd.res.Sound;
     public var newBombSound: hxd.res.Sound;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 

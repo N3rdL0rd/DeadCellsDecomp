@@ -38,7 +38,7 @@ class Pulley extends en.LevelTrap {
     public var hitArea: tool.Area;
     public var cullingBounds: h2d.col.Bounds;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Int, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Int = 0, arg5: Dynamic = null) {
         super();
     }
 
@@ -90,23 +90,23 @@ class Pulley extends en.LevelTrap {
     public function trigger_execute(arg0: Ref, arg1: Int, arg2: Int): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function _isOnScreen(): Bool {
+    public override function _isOnScreen(): Bool {
         throw "stub: _isOnScreen not decompiled";
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public function updateGlobalAlpha(): Void {
@@ -126,26 +126,26 @@ class Pulley extends en.LevelTrap {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 }
 
 class PulleyChain extends tool.Chain {
     public function new() {
-        super();
+        super(null, null, null, null, null);
     }
 
-    public override function createSegment(arg0: Dynamic): tool.ChainSegment {
+    public override function createSegment(arg0: Dynamic): tool.Chain.ChainSegment {
         throw "stub: createSegment not decompiled";
     }
 }

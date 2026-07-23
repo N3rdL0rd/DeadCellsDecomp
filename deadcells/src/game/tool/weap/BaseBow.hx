@@ -9,14 +9,14 @@ class BaseBow extends tool.Weapon {
     public var fullChargeAnnounce: Int;
     public var overlapAnimSpeed: Float;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
     public function initAnimIds(): Void {
     }
 
-    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnAttackAnim(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
     public override function isPlayingAttackAnim(): Bool {

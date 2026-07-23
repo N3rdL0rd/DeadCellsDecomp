@@ -11,7 +11,7 @@ class Spikes extends en.LevelTrap {
     public var variant: String;
     public var spikeDirection: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Int, arg5: Dynamic, arg6: Dynamic, arg7: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Int = 0, arg5: Dynamic = null, arg6: Dynamic = null, arg7: String = null) {
         super();
     }
 

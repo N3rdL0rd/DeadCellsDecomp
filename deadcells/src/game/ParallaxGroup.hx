@@ -18,11 +18,11 @@ class ParallaxGroup extends h2d.TileGroup {
     public var levelX: Float;
     public var levelY: Float;
 
-    public function new(arg0: h2d.Tile, arg1: h2d.col.Bounds, arg2: Viewport, arg3: Dynamic, arg4: Dynamic, arg5: h2d.Object, arg6: h2d.col.Bounds, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic) {
-        super();
+    public function new(arg0: h2d.Tile = null, arg1: h2d.col.Bounds = null, arg2: Viewport = null, arg3: Dynamic = null, arg4: Dynamic = null, arg5: h2d.Object = null, arg6: h2d.col.Bounds = null, arg7: Dynamic = null, arg8: Dynamic = null, arg9: Dynamic = null) {
+        super(null, null);
     }
 
-    public function calcAbsPos(): Void {
+    public override function calcAbsPos(): Void {
     }
 
     public function parallaxAdd(arg0: Float, arg1: Float, arg2: h2d.Tile): Void {

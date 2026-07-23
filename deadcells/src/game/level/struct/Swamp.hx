@@ -4,7 +4,7 @@ class Swamp extends level.LevelStruct {
     public var trees: Array<Dynamic>;
     public var treeIds: Array<Int>;
     public var exitTreeId: Int;
-    public var branchCrosses: haxe.ds.IntMap;
+    public var branchCrosses: haxe.ds.IntMap<Dynamic>;
 
     public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
         super();

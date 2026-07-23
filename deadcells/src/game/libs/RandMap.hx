@@ -7,7 +7,7 @@ class RandMap {
     public var noises: Array<Dynamic>;
     public var rnd: Dynamic;
 
-    public function new(arg0: Int, arg1: Array<Float>, arg2: Array<Float>, arg3: Dynamic) {
+    public function new(arg0: Int = 0, arg1: Array<Float> = null, arg2: Array<Float> = null, arg3: Dynamic = null) {
     }
 
     public function shuffle(): Void {

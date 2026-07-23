@@ -37,12 +37,12 @@ class LevelDisp extends libs.Process {
     public var customFxLandSmoke: Dynamic;
     public var cullingBounds: h2d.col.Bounds;
     public var rendered: Bool;
-    public var layerConfs: haxe.ds.ObjectMap;
-    public var lightConfs: haxe.ds.ObjectMap;
-    public var scatterConfs: haxe.ds.ObjectMap;
+    public var layerConfs: haxe.ds.ObjectMap<Dynamic, Dynamic>;
+    public var lightConfs: haxe.ds.ObjectMap<Dynamic, Dynamic>;
+    public var scatterConfs: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var oneWayLightWallOffset: Float;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: Array<Dynamic> = null) {
         super();
     }
 
@@ -114,7 +114,7 @@ class LevelDisp extends libs.Process {
     public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
     }
 
-    public function addJunk(arg0: level.DecoZone): Void {
+    public function addJunk(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function initDecoEntities(): Void {
@@ -171,7 +171,7 @@ class LevelDisp extends libs.Process {
     public function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public override function postUpdate(): Void {
@@ -237,7 +237,7 @@ class LevelDisp extends libs.Process {
         throw "stub: createParallax not decompiled";
     }
 
-    public function removeShaderIfExists(arg0: h2d.Drawable, arg1: hl.Class): Void {
+    public function removeShaderIfExists(arg0: h2d.Drawable, arg1: Class<Dynamic>): Void {
     }
 
     public function getLayerConf(arg0: String): Dynamic {

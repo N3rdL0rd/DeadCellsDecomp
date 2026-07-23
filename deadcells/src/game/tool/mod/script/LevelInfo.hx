@@ -22,7 +22,7 @@ class LevelInfo {
     public var gold: Int;
     public var loreDescriptions: Array<Dynamic>;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
     }
 
     public function p_CopyInfoFrom(arg0: Dynamic): Void {

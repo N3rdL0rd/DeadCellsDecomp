@@ -7,7 +7,7 @@ class GiantEscape extends GameCinematic {
     public var headTargetY: Float;
     public var rng: libs.Rand;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

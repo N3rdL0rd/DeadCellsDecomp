@@ -64,12 +64,12 @@ class GreenhouseData {
     public var maze: tool.Labyrinth;
     public var height: Int;
     public var width: Int;
-    public var nodeMap: haxe.ds.ObjectMap;
+    public var nodeMap: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var entrance: level.RoomNode;
     public var defaultExit: level.RoomNode;
     public var depth: Int;
 
-    public function new(arg0: tool.Labyrinth, arg1: haxe.ds.ObjectMap, arg2: Int) {
+    public function new(arg0: tool.Labyrinth, arg1: haxe.ds.ObjectMap<Dynamic, Dynamic>, arg2: Int) {
     }
 
     public function getMazeNode(arg0: level.RoomNode): tool.LabyrinthNode {

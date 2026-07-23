@@ -2,10 +2,10 @@ package tool.vote;
 
 class Encourage extends tool.TwitchVote {
     public static var __clid: Int;
-    public var words: haxe.ds.StringMap;
+    public var words: haxe.ds.StringMap<Dynamic>;
     public var reason: String;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
         super();
     }
 

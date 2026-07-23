@@ -10,10 +10,10 @@ class LoreDeco {
     public var room: level.Room;
     public var customAtlas: String;
     public var lDisp: level.LevelDisp;
-    public var m: level.Marker;
+    public var m: level.LevelTypes.Marker;
     public var atlas: libs.heaps.slib.SpriteLib;
 
-    public function new(arg0: level.LevelDisp, arg1: level.Marker, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Dynamic, arg11: Ref, arg12: Ref) {
+    public function new(arg0: level.LevelDisp, arg1: level.LevelTypes.Marker, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Dynamic, arg11: Ref, arg12: Ref) {
     }
 
     public function onSprPageChange(): Void {

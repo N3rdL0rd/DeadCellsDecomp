@@ -7,7 +7,7 @@ class LabyrinthNode {
     public var children: Array<Dynamic>;
     public var lab: tool.Labyrinth;
 
-    public function new(arg0: Int, arg1: Int, arg2: tool.Labyrinth) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: tool.Labyrinth = null) {
     }
 
     public function get_direction(): tool.NodeDirection {
@@ -42,7 +42,7 @@ class Labyrinth {
     public var startNode: tool.LabyrinthNode;
     public var endNode: tool.LabyrinthNode;
 
-    public function new(arg0: Int, arg1: Int, arg2: Array<Int>, arg3: Array<Int>) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Array<Int> = null, arg3: Array<Int> = null) {
     }
 
     public function getNode(arg0: Int, arg1: Int): tool.LabyrinthNode {

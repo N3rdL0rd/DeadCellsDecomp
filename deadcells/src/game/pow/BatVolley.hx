@@ -5,7 +5,7 @@ class BatVolley extends Power {
     public var leftToThrow: Int;
     public var spawnOrder: Array<Int>;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 

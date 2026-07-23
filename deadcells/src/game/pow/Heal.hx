@@ -6,7 +6,7 @@ class Heal extends Power {
     public var hps: Float;
     public var tick: Float;
 
-    public function new(arg0: Entity, arg1: Int, arg2: Dynamic, arg3: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Int = 0, arg2: Dynamic = null, arg3: Dynamic = null) {
         super();
     }
 

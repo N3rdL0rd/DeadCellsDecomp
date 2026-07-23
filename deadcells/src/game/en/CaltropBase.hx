@@ -8,7 +8,7 @@ class CaltropBase extends Entity {
     public var thawDur: Float;
     public var thawVal: Int;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Float, arg5: Int) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null, arg4: Float = 0., arg5: Int = 0) {
         super();
     }
 

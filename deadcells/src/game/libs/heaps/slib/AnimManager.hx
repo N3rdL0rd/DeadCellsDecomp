@@ -1,93 +1,4 @@
 package libs.heaps.slib;
-class AnimManager {
-  var spr: Dynamic;
-  var overlap: Dynamic;
-  var stack: hl.types.ArrayObj<Dynamic>;
-  var stateAnims: hl.types.ArrayObj<Dynamic>;
-  var transitions: hl.types.ArrayObj<Dynamic>;
-  var genSpeed: Float;
-  var needUpdates: Bool;
-  var destroyed: Bool;
-  var suspended: Bool;
-  var suspendF: Float;
-  var onEnterFrame: Dynamic;
-  var S_STAR: String;
-  static var UNSYNC: haxe.ds.StringMap;
-
-  function __constructor__(spr: Dynamic) {}
-
-  function getDurationF(): Float {}
-
-  function getPlayRatio(): Float {}
-
-  function setPlayRatio(r: Float): AnimManager {}
-
-  function setFrame(frame: Int): AnimManager {}
-
-  function getDurationS(fps: Float): Float {}
-
-  function destroy() {}
-
-  function playCustomSequence(group: String, from: Int, to: Int, queueAnim: Dynamic): AnimManager {}
-
-  function play(group: String, plays: Dynamic, queueAnim: Dynamic): AnimManager {}
-
-  function playOverlap(g: String, spd: Dynamic) {}
-
-  function clearOverlapAnim() {}
-
-  function hasOverlapAnim(): Bool {}
-
-  function loop(durationF: Dynamic): AnimManager {}
-
-  function stopOnLastFrame(stop: Dynamic): AnimManager {}
-
-  function pauseOnLastFrame() {}
-
-  function reverse(): AnimManager {}
-
-  function killAfterPlay(): AnimManager {}
-
-  function onEnd(cb: Dynamic): AnimManager {}
-
-  function onEachLoop(cb: Dynamic): AnimManager {}
-
-  function unsync(): AnimManager {}
-
-  function pauseCurrentAnim() {}
-
-  function resumeCurrentAnim() {}
-
-  function stopWithStateAnims() {}
-
-  function stopWithoutStateAnims(k: String, frame: Dynamic) {}
-
-  function suspend() {}
-
-  function unsuspend() {}
-
-  function suspendForF(durationFrame: Float) {}
-
-  function alwaysTrue(): Bool {}
-
-  function registerTransition(from: String, to: String, animId: String, spd: Dynamic, reverse: Dynamic, cond: Dynamic) {}
-
-  function getTransition(from: String, to: String): Dynamic {}
-
-  function registerStateAnim(group: String, priority: Int, spd: Dynamic, condition: Dynamic, loop: Dynamic, onEnd: Dynamic) {}
-
-  function registerStateAnimWithDuration(group: String, priority: Int, d: Float, condition: Dynamic, loop: Dynamic, onEnd: Dynamic) {}
-
-  function setStateAnimSpeed(group: String, spd: Float) {}
-
-  function removeStateAnim(group: String, priority: Int) {}
-
-  function removeAllStateAnims() {}
-
-  function applyStateAnims() {}
-
-  function _update(dt: Float) {}
-}
 
 class AnimInstance {
     public var spr: Dynamic;
@@ -107,7 +18,7 @@ class AnimInstance {
     public var reverse: Bool;
     public var lastFrame: Int;
 
-    public function new(arg0: Dynamic, arg1: String) {
+    public function new(arg0: Dynamic = null, arg1: String = null) {
     }
 
     public function onEachLoop(): Void {
@@ -125,7 +36,7 @@ class StateAnim {
     public var loop: Bool;
     public var onEnd: Dynamic;
 
-    public function new(arg0: String, arg1: Dynamic, arg2: Dynamic) {
+    public function new(arg0: String = null, arg1: Dynamic = null, arg2: Dynamic = null) {
     }
 }
 
@@ -137,14 +48,14 @@ class Transition {
     public var spd: Float;
     public var reverse: Bool;
 
-    public function new(arg0: String, arg1: String, arg2: String, arg3: Dynamic) {
+    public function new(arg0: String = null, arg1: String = null, arg2: String = null, arg3: Dynamic = null) {
     }
 }
 
 class AnimManager {
-    public static var UNSYNC: haxe.ds.StringMap;
+    public static var UNSYNC: haxe.ds.StringMap<Dynamic>;
     public var spr: Dynamic;
-    public var overlap: libs.heaps.slib._AnimManager.AnimInstance;
+    public var overlap: libs.heaps.slib.AnimManager.AnimInstance;
     public var stack: Array<Dynamic>;
     public var stateAnims: Array<Dynamic>;
     public var transitions: Array<Dynamic>;
@@ -156,7 +67,7 @@ class AnimManager {
     public var onEnterFrame: Dynamic;
     public var S_STAR: String;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
     }
 
     public function getDurationF(): Float {
@@ -259,7 +170,7 @@ class AnimManager {
     public function registerTransition(arg0: String, arg1: String, arg2: String, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic): Void {
     }
 
-    public function getTransition(arg0: String, arg1: String): libs.heaps.slib._AnimManager.Transition {
+    public function getTransition(arg0: String, arg1: String): libs.heaps.slib.AnimManager.Transition {
         throw "stub: getTransition not decompiled";
     }
 

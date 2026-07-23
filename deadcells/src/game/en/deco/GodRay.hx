@@ -10,7 +10,7 @@ class GodRay extends en.Deco {
     public var dust: en.deco.Dust;
     public var dustColor: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float, arg5: Float, arg6: en.deco.Dust, arg7: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Float = 0., arg5: Float = 0., arg6: en.deco.Dust = null, arg7: Int = 0) {
         super();
     }
 

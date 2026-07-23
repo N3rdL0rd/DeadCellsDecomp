@@ -6,8 +6,8 @@ class TickEye {
     public var tick: en.mob.boss.MamaTick;
     public var eyeSize: Int;
     public var irisSize: Int;
-    public var sprBack: h2d.BatchElement;
-    public var sprIris: h2d.BatchElement;
+    public var sprBack: h2d.SpriteBatch.BatchElement;
+    public var sprIris: h2d.SpriteBatch.BatchElement;
     public var maxIrisOffset: Float;
     public var irisMargin: Int;
     public var target: Entity;

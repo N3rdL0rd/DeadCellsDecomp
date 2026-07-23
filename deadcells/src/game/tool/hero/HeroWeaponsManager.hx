@@ -7,20 +7,20 @@ class HeroWeaponsManager extends tool.HeroManager {
     public var backpackWeapons: Array<Dynamic>;
     public var weaponInputs: Array<Int>;
     public var lastWeaponUsed: tool.Weapon;
-    public var weaponControlLocks: haxe.ds.IntMap;
+    public var weaponControlLocks: haxe.ds.IntMap<Dynamic>;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 
     public override function init(): Void {
     }
 
-    public function findInMain(arg0: hl.Class): tool.Weapon {
+    public function findInMain(arg0: Class<Dynamic>): tool.Weapon {
         throw "stub: findInMain not decompiled";
     }
 
-    public function findInBackpack(arg0: hl.Class): tool.Weapon {
+    public function findInBackpack(arg0: Class<Dynamic>): tool.Weapon {
         throw "stub: findInBackpack not decompiled";
     }
 
@@ -52,11 +52,11 @@ class HeroWeaponsManager extends tool.HeroManager {
         throw "stub: disposeBackpackWeapon not decompiled";
     }
 
-    public function hasInMain(arg0: hl.Class): Bool {
+    public function hasInMain(arg0: Class<Dynamic>): Bool {
         throw "stub: hasInMain not decompiled";
     }
 
-    public function hasInBackpack(arg0: hl.Class): Bool {
+    public function hasInBackpack(arg0: Class<Dynamic>): Bool {
         throw "stub: hasInBackpack not decompiled";
     }
 

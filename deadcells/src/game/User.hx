@@ -1,12 +1,12 @@
 class User {
     public static var __clid: Int;
-    public var flags: hxbit.EnumFlagsData;
+    public var flags: hxbit.EnumFlagsProxy.EnumFlagsData<UserFlag>;
     public var userId: Int;
     public var deathMoney: Int;
     public var deathCells: Int;
     public var bossRuneActivated: Int;
     public var tutorial: tool.Tutorial;
-    public var counters: haxe.ds.StringMap;
+    public var counters: haxe.ds.StringMap<Dynamic>;
     public var story: tool.StoryManager;
     public var itemMeta: tool.ItemMetaManager;
     public var userStats: UserStats;
@@ -18,14 +18,13 @@ class User {
     public var mainGameData: tool.GameData;
     public var meta: Array<Dynamic>;
     public var metaItems: Array<Dynamic>;
-    public var npcs: haxe.ds.EnumValueMap;
+    public var npcs: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
     public var achievements: Array<Dynamic>;
     public var deathItem: String;
     public var heroHeadSkin: String;
     public var userSignals: tool.signals.UserSignals;
     public var consecutiveCompletedRuns: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }
@@ -238,9 +237,8 @@ class MetaProgress {
     public var done: Bool;
     public var metaLevel: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
     }
 
     public function getCLID(): Int {

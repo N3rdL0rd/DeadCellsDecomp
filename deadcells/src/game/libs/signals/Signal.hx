@@ -1,7 +1,7 @@
 package libs.signals;
 
-class Signal extends libs.signals.BaseSignal {
-    public function new(arg0: Dynamic) {
+class Signal extends libs.signals.Signal.BaseSignal {
+    public function new(arg0: Dynamic = null) {
         super();
     }
 
@@ -32,7 +32,7 @@ class BaseSignal {
     public var requiresSort: Bool;
     public var defaultCallbackProps: Int;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
     }
 
     public function sortPriority(): Void {
@@ -77,7 +77,7 @@ class BaseSignal {
         throw "stub: get_hasListeners not decompiled";
     }
 
-    public function add(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): libs.signals.BaseSignal {
+    public function add(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): libs.signals.Signal.BaseSignal {
         throw "stub: add not decompiled";
     }
 
@@ -85,11 +85,11 @@ class BaseSignal {
         throw "stub: getNumParams not decompiled";
     }
 
-    public function priority(arg0: Int): libs.signals.BaseSignal {
+    public function priority(arg0: Int): libs.signals.Signal.BaseSignal {
         throw "stub: priority not decompiled";
     }
 
-    public function repeat(arg0: Ref): libs.signals.BaseSignal {
+    public function repeat(arg0: Ref): libs.signals.Signal.BaseSignal {
         throw "stub: repeat not decompiled";
     }
 

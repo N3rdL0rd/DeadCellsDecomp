@@ -12,7 +12,7 @@ class ScoreTip extends ui.Process {
     public var fromX: Float;
     public var fromY: Float;
 
-    public function new(arg0: Entity, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Dynamic = null, arg2: Dynamic = null, arg3: Dynamic = null) {
         super();
     }
 

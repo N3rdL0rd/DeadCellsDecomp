@@ -3,7 +3,7 @@ package tool.weap;
 class GoldDigger extends tool.Weapon {
     public var evolved: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem, arg2: Bool) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null, arg2: Bool = false) {
         super();
     }
 
@@ -23,12 +23,12 @@ class GoldDigger extends tool.Weapon {
     public function dropGold(arg0: Int, arg1: Int, arg2: Entity): Void {
     }
 
-    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnAttackAnim(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
     public function replaceItem(): Void {
     }
 
-    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 }

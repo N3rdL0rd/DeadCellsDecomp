@@ -4,7 +4,7 @@ class Dodge extends tool.HeroMainSkill {
     public static var __clid: Int;
     public var dodgeHold: Bool;
 
-    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+    public function new(arg0: en.Hero = null, arg1: pr.Game = null, arg2: Dynamic = null) {
         super();
     }
 

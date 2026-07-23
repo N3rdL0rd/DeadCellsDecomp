@@ -8,7 +8,7 @@ class GardenerSicklesPower extends Power {
     public var rightSickle2: en.bu.GardenerSickleBullet;
     public var delayer: libs.Delayer;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 

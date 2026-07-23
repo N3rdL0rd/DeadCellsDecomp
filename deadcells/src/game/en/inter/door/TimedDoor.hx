@@ -8,7 +8,7 @@ class TimedDoor extends en.inter.Door {
     public var dLight: libs.heaps.slib.HSprite;
     public var dGlow: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0.) {
         super();
     }
 

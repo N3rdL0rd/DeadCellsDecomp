@@ -3,7 +3,7 @@ package tool.weap;
 class AdeleScythe extends tool.Weapon {
     public var delayer: libs.Delayer;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -24,7 +24,7 @@ class AdeleScythe extends tool.Weapon {
     public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
     }
 
-    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnAttackAnim(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
     public function checkAreahit(arg0: Entity, arg1: Int): Void {
@@ -39,7 +39,7 @@ class AdeleScythe extends tool.Weapon {
     public override function dispose(): Void {
     }
 
-    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 }
 

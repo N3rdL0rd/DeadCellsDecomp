@@ -41,13 +41,13 @@ class TargetHelper {
     public function closestTo(arg0: Entity, arg1: Float, arg2: Dynamic): Void {
     }
 
-    public function filterByClass(arg0: hl.Class): Void {
+    public function filterByClass(arg0: Class<Dynamic>): Void {
     }
 
     public function removeBreakables(): Void {
     }
 
-    public function is(arg0: hl.Class, arg1: Dynamic): Void {
+    public function is(arg0: Class<Dynamic>, arg1: Dynamic): Void {
     }
 
     public function weaks(arg0: Dynamic): Void {
@@ -71,7 +71,7 @@ class TargetHelper {
     public function filterOutIf(arg0: Dynamic): Void {
     }
 
-    public function filterByDeltaCells(arg0: haxe.ds.IntMap): Void {
+    public function filterByDeltaCells(arg0: haxe.ds.IntMap<Dynamic>): Void {
     }
 
     public function filterBySight(arg0: Entity, arg1: Ref, arg2: Dynamic): Void {

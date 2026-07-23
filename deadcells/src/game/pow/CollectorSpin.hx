@@ -6,7 +6,7 @@ class CollectorSpin extends Power {
     public var firstCast: Bool;
     public var fxTick: Int;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 

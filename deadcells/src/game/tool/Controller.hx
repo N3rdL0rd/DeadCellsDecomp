@@ -36,7 +36,7 @@ class Controller {
     public var pressTimers: Array<Float>;
     public var framePresses: Array<Int>;
     public var needRelease: Array<Dynamic>;
-    public var longPressLock: haxe.ds.IntMap;
+    public var longPressLock: haxe.ds.IntMap<Dynamic>;
     public var hasAnyPress: Bool;
 
     public function new(arg0: h2d.Scene) {
@@ -92,47 +92,12 @@ class Controller {
     public function onActPressed(arg0: Int, arg1: Bool): Void {
     }
 
-    public function onChange(): Void {
+    public dynamic function onChange(): Void {
     }
 
-    public function onPadDisabled(): Void {
+    public dynamic function onPadDisabled(): Void {
     }
 
     public function onPadEnabled(): Void {
-    }
-}
-
-class ControllerAccess {
-    public var parent: tool.Controller;
-    public var id: String;
-    public var manualLock: Bool;
-    public var leftDeadZone: Dynamic;
-    public var rightDeadZone: Dynamic;
-
-    public function new(arg0: tool.Controller, arg1: String, arg2: Dynamic) {
-    }
-
-    public function setUseCustomBindings(arg0: Bool): Void {
-    }
-
-    public function isAnyActionDown(): Bool {
-        throw "stub: isAnyActionDown not decompiled";
-    }
-
-    public function getMovementSticks(arg0: Dynamic): Array<Int> {
-        throw "stub: getMovementSticks not decompiled";
-    }
-
-    public function getCameraSticks(arg0: Dynamic): Array<Int> {
-        throw "stub: getCameraSticks not decompiled";
-    }
-
-    public function dispose(arg0: Ref): Void {
-    }
-
-    public function setAnalogButtonThreshold(arg0: Float): Void {
-    }
-
-    public function onActPressed(arg0: Int, arg1: Bool): Void {
     }
 }

@@ -4,7 +4,7 @@ class HarpoonBullet extends en.Bullet {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: Entity, arg1: Entity, arg2: en.inter.door.TriggeredDoor) {
+    public function new(arg0: Entity = null, arg1: Entity = null, arg2: en.inter.door.TriggeredDoor = null) {
         super();
     }
 
@@ -27,7 +27,7 @@ class Harpoon extends en.Interactive {
     public var target: en.Mob;
     public var door: en.inter.door.TriggeredDoor;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 

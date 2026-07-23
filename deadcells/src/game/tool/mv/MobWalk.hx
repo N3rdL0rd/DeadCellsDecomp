@@ -5,7 +5,7 @@ class MobWalk extends tool.mv.MvWalk {
     public var mob: en.Mob;
     public var reverseWalk: Bool;
 
-    public function new(arg0: en.Mob) {
+    public function new(arg0: en.Mob = null) {
         super();
     }
 
@@ -28,7 +28,7 @@ class MobWalk extends tool.mv.MvWalk {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

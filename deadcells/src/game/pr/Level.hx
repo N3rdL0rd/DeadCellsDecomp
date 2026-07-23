@@ -19,7 +19,7 @@ class Level extends libs.Process {
     public var critters: Array<Dynamic>;
     public var splatters: Array<Dynamic>;
     public var nbTeleportOpened: Int;
-    public var entitiesByClass: haxe.ds.IntMap;
+    public var entitiesByClass: haxe.ds.IntMap<Dynamic>;
     public var entityLights: Array<Dynamic>;
     public var loreManagers: Array<Dynamic>;
     public var areaAffects: Array<Dynamic>;
@@ -78,7 +78,6 @@ class Level extends libs.Process {
     public var oldMouseY: Float;
     public var debugPath: tool.Path;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: pr.Game, arg1: level.LevelMap, arg2: pr.Level, arg3: Bool, arg4: Ref, arg5: cine.LevelTransition) {
         super();
@@ -132,10 +131,10 @@ class Level extends libs.Process {
         throw "stub: getCliffEnigmaAnswer not decompiled";
     }
 
-    public function attachTimedShooter(arg0: level.Room, arg1: level.Marker): Void {
+    public function attachTimedShooter(arg0: level.Room, arg1: level.LevelTypes.Marker): Void {
     }
 
-    public function attachTumulusTimedShooter(arg0: level.Room, arg1: level.Marker): Void {
+    public function attachTumulusTimedShooter(arg0: level.Room, arg1: level.LevelTypes.Marker): Void {
     }
 
     public function getAvailableLoreRooms(): Array<Dynamic> {
@@ -237,7 +236,7 @@ class Level extends libs.Process {
     public function unregisterPower(arg0: Power): Void {
     }
 
-    public function getRunningPowers(arg0: hl.Class, arg1: Entity, arg2: tool.InventItem, arg3: Array<Dynamic>): Array<Dynamic> {
+    public function getRunningPowers(arg0: Class<Dynamic>, arg1: Entity, arg2: tool.InventItem, arg3: Array<Dynamic>): Array<Dynamic> {
         throw "stub: getRunningPowers not decompiled";
     }
 
@@ -253,7 +252,7 @@ class Level extends libs.Process {
     public function attachMobs(): Void {
     }
 
-    public function attachMob(arg0: level.Mob): en.Mob {
+    public function attachMob(arg0: level.LevelTypes.Mob): en.Mob {
         throw "stub: attachMob not decompiled";
     }
 
@@ -343,16 +342,16 @@ class Level extends libs.Process {
     public function onMouseUp(arg0: hxd.Event): Void {
     }
 
-    public function spawnCustomEntity(arg0: level.Room, arg1: level.Marker, arg2: Int, arg3: Int): Void {
+    public function spawnCustomEntity(arg0: level.Room, arg1: level.LevelTypes.Marker, arg2: Int, arg3: Int): Void {
     }
 
-    public function spawnNpc(arg0: level.Room, arg1: level.Marker, arg2: Int, arg3: Int): Void {
+    public function spawnNpc(arg0: level.Room, arg1: level.LevelTypes.Marker, arg2: Int, arg3: Int): Void {
     }
 
-    public function spawnTrainingBossDoor(arg0: level.Marker, arg1: Int, arg2: Int): Void {
+    public function spawnTrainingBossDoor(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int): Void {
     }
 
-    public function spawnSpikes(arg0: level.Marker, arg1: Int, arg2: Int): Bool {
+    public function spawnSpikes(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int): Bool {
         throw "stub: spawnSpikes not decompiled";
     }
 

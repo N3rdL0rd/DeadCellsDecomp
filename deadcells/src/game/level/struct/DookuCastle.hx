@@ -1,9 +1,9 @@
 package level.struct;
 
 class DookuCastle extends level.LevelStruct {
-    public var wantedSpecialRooms: haxe.ds.EnumValueMap;
-    public var chosenSpecialRooms: haxe.ds.EnumValueMap;
-    public var specialRoomsCount: haxe.ds.EnumValueMap;
+    public var wantedSpecialRooms: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
+    public var chosenSpecialRooms: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
+    public var specialRoomsCount: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
     public var combatRoomCountBeforeCross: Int;
     public var combatRoomCountBeforeBigRoom: Int;
     public var combatRoomCountBeforeSpecialRoom: Int;

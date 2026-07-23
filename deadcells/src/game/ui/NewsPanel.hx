@@ -13,7 +13,7 @@ class NewsPanel extends ui.Process {
     public var focused: Bool;
     public var timeFocused: Float;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
         super();
     }
 
@@ -41,10 +41,10 @@ class NewsPanel extends ui.Process {
     public override function onResize(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function onMove(): Void {

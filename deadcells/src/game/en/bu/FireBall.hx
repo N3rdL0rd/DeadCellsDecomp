@@ -8,7 +8,7 @@ class FireBall extends en.Bullet {
     public var legDmgMult: Float;
     public var useAreaFire: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0.) {
         super();
     }
 

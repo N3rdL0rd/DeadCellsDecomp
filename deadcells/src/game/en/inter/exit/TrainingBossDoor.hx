@@ -8,7 +8,7 @@ class TrainingBossDoor extends en.inter.exit.BgDoor {
     public var doorName: String;
     public var customBossName: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic, arg6: Dynamic, arg7: String, arg8: String, arg9: String, arg10: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null, arg5: Dynamic = null, arg6: Dynamic = null, arg7: String = null, arg8: String = null, arg9: String = null, arg10: Ref = null) {
         super();
     }
 

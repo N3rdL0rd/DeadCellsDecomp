@@ -5,11 +5,11 @@ class TitleScreenBgBase extends libs.Process {
     public var front: libs.heaps.slib.HSprite;
     public var fxSbAdd: libs.heaps.slib.HSpriteBatch;
     public var fxSbNormal: libs.heaps.slib.HSpriteBatch;
-    public var pool: libs.heaps.ParticlePool;
+    public var pool: libs.heaps.HParticle.ParticlePool;
     public var wrapper: h2d.Object;
     public var titleLib: libs.heaps.slib.SpriteLib;
 
-    public function new(arg0: h2d.Object, arg1: libs.heaps.slib.SpriteLib) {
+    public function new(arg0: h2d.Object = null, arg1: libs.heaps.slib.SpriteLib = null) {
         super();
     }
 

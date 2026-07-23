@@ -5,11 +5,11 @@ class PulleyAttachPoint extends en.inter.PressurePlate {
     public static var __eclids: Array<Int>;
     public var linkedTrap: en.ltrap.Pulley;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.ltrap.Pulley) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.ltrap.Pulley = null) {
         super();
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
     public override function dispose(): Void {
@@ -25,7 +25,7 @@ class PulleyAttachPoint extends en.inter.PressurePlate {
     public override function trigger(arg0: Entity): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
     public override function execute(arg0: Entity): Void {

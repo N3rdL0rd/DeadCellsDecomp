@@ -5,9 +5,9 @@ class Active extends Entity {
     public static var __eclids: Array<Int>;
     public var item: tool.InventItem;
     public var deployPoint: tool.CPoint;
-    public var activeCells: haxe.ds.IntMap;
+    public var activeCells: haxe.ds.IntMap<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
         super();
     }
 
@@ -79,9 +79,8 @@ class DeltaCell {
     public var dx: Int;
     public var dy: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: Int, arg1: Int, arg2: Entity) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Entity = null) {
     }
 
     public function getCLID(): Int {

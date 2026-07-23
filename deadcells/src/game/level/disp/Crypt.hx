@@ -16,16 +16,16 @@ class Crypt extends level.BiomeDisp {
     public function decorateLevel(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addVault(arg0: level.DecoZone): Void {
+    public function addVault(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addBone(arg0: level.DecoZone): Void {
+    public function addBone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function addColumn(arg0: Int, arg1: Int, arg2: Int): Void {

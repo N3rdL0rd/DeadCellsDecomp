@@ -8,7 +8,7 @@ class ClassicTitleScreenBg extends pr.TitleScreenBgBase {
     public var grass: Array<Dynamic>;
     public var crowWrapper: h2d.Object;
 
-    public function new(arg0: h2d.Object, arg1: libs.heaps.slib.SpriteLib) {
+    public function new(arg0: h2d.Object = null, arg1: libs.heaps.slib.SpriteLib = null) {
         super();
     }
 

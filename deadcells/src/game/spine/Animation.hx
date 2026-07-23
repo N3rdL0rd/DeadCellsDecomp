@@ -6,7 +6,7 @@ class Animation {
     public var timelines: Array<Dynamic>;
     public var duration: Float;
 
-    public function new(arg0: String, arg1: Array<Dynamic>, arg2: Float) {
+    public function new(arg0: String = null, arg1: Array<Dynamic> = null, arg2: Float = 0.) {
     }
 
     public static function binarySearch(arg0: Array<Float>, arg1: Float): Int {
@@ -24,9 +24,8 @@ class Animation {
 
 class CurveTimeline {
     public var curves: Array<Float>;
-    public var : Dynamic;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
     }
 
     public function getPropertyId(): Int {
@@ -48,7 +47,7 @@ class RotateTimeline extends spine.CurveTimeline {
     public var boneIndex: Int;
     public var frames: Array<Float>;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -64,7 +63,7 @@ class TranslateTimeline extends spine.CurveTimeline {
     public var boneIndex: Int;
     public var frames: Array<Float>;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -77,7 +76,7 @@ class TranslateTimeline extends spine.CurveTimeline {
 }
 
 class ScaleTimeline extends spine.TranslateTimeline {
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -90,7 +89,7 @@ class ScaleTimeline extends spine.TranslateTimeline {
 }
 
 class ShearTimeline extends spine.TranslateTimeline {
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -106,7 +105,7 @@ class ColorTimeline extends spine.CurveTimeline {
     public var slotIndex: Int;
     public var frames: Array<Float>;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -122,7 +121,7 @@ class TwoColorTimeline extends spine.CurveTimeline {
     public var slotIndex: Int;
     public var frames: Array<Float>;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -138,9 +137,8 @@ class AttachmentTimeline {
     public var slotIndex: Int;
     public var frames: Array<Float>;
     public var attachmentNames: Array<Dynamic>;
-    public var : Dynamic;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
     }
 
     public function getPropertyId(): Int {
@@ -157,7 +155,7 @@ class DeformTimeline extends spine.CurveTimeline {
     public var frames: Array<Float>;
     public var frameVertices: Array<Dynamic>;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -172,9 +170,8 @@ class DeformTimeline extends spine.CurveTimeline {
 class EventTimeline {
     public var frames: Array<Float>;
     public var events: Array<Dynamic>;
-    public var : Dynamic;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
     }
 
     public function getPropertyId(): Int {
@@ -188,9 +185,8 @@ class EventTimeline {
 class DrawOrderTimeline {
     public var frames: Array<Float>;
     public var drawOrders: Array<Dynamic>;
-    public var : Dynamic;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
     }
 
     public function getPropertyId(): Int {
@@ -205,7 +201,7 @@ class IkConstraintTimeline extends spine.CurveTimeline {
     public var ikConstraintIndex: Int;
     public var frames: Array<Float>;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -221,7 +217,7 @@ class TransformConstraintTimeline extends spine.CurveTimeline {
     public var transformConstraintIndex: Int;
     public var frames: Array<Float>;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -237,7 +233,7 @@ class PathConstraintPositionTimeline extends spine.CurveTimeline {
     public var pathConstraintIndex: Int;
     public var frames: Array<Float>;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -250,7 +246,7 @@ class PathConstraintPositionTimeline extends spine.CurveTimeline {
 }
 
 class PathConstraintSpacingTimeline extends spine.PathConstraintPositionTimeline {
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 
@@ -266,7 +262,7 @@ class PathConstraintMixTimeline extends spine.CurveTimeline {
     public var pathConstraintIndex: Int;
     public var frames: Array<Float>;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
         super();
     }
 

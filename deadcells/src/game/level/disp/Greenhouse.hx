@@ -60,10 +60,10 @@ class Greenhouse extends level.DynamicBiomeDisp {
     public function initJunkDecks(): Void {
     }
 
-    public function addJunk(arg0: level.DecoZone): Void {
+    public function addJunk(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addJunkInFloorZone(arg0: level.DecoZone, arg1: Float, arg2: libs.RandList): Void {
+    public function addJunkInFloorZone(arg0: level.DecoTypes.DecoZone, arg1: Float, arg2: libs.RandList): Void {
     }
 
     public override function getBlendRatioAt(arg0: Float, arg1: Float): Float {

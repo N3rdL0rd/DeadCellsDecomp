@@ -6,7 +6,7 @@ class PurpleLevelIntro extends GameCinematic {
     public var triangle: h2d.Bitmap;
     public var textScale: Float;
 
-    public function new(arg0: String, arg1: en.Hero) {
+    public function new(arg0: String = null, arg1: en.Hero = null) {
         super();
     }
 

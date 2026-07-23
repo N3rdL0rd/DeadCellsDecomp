@@ -6,7 +6,7 @@ class ColorBlend extends hxsl.Shader {
     public var color__: h3d.Vector;
     public var factor__: Float;
 
-    public function new(arg0: Int, arg1: Float) {
+    public function new(arg0: Int = 0, arg1: Float = 0.) {
         super();
     }
 

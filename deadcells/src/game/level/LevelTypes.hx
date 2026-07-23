@@ -11,7 +11,7 @@ class RoomRect {
     public function new(arg0: level.RoomNode, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Ref) {
     }
 
-    public function checkFit(arg0: haxe.ds.List, arg1: Int, arg2: Int): Bool {
+    public function checkFit(arg0: haxe.ds.List<Dynamic>, arg1: Int, arg2: Int): Bool {
         throw "stub: checkFit not decompiled";
     }
 }
@@ -24,9 +24,8 @@ class RoomLink {
     public var dir: Direction;
     public var peer: level.Room;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: Int, arg1: Int, arg2: level.RoomLinkType, arg3: level.Room, arg4: Direction) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: level.RoomLinkType = null, arg3: level.Room = null, arg4: Direction = null) {
     }
 
     public function getCLID(): Int {
@@ -66,9 +65,8 @@ class Mob {
     public var carriedInfection: Int;
     public var flawlessLoots: Array<Dynamic>;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: String, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Dynamic) {
+    public function new(arg0: String = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Dynamic = null) {
     }
 
     public function toString(): String {
@@ -122,9 +120,8 @@ class Marker {
     public var ignoreTwitch: Bool;
     public var rotation: String;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: String, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: Float, arg7: Int, arg8: String, arg9: String, arg10: String, arg11: String, arg12: String, arg13: String, arg14: String, arg15: String, arg16: String, arg17: String, arg18: String, arg19: String, arg20: Bool, arg21: String) {
+    public function new(arg0: String = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Float = 0., arg6: Float = 0., arg7: Int = 0, arg8: String = null, arg9: String = null, arg10: String = null, arg11: String = null, arg12: String = null, arg13: String = null, arg14: String = null, arg15: String = null, arg16: String = null, arg17: String = null, arg18: String = null, arg19: String = null, arg20: Bool = false, arg21: String = null) {
     }
 
     public function getCLID(): Int {
@@ -151,7 +148,6 @@ class MerchantData {
     public var items: Array<Dynamic>;
     public var isMimic: Bool;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: level.MerchantType, arg1: Array<Dynamic>, arg2: Dynamic) {
     }
@@ -179,9 +175,8 @@ class SpotFlags {
     public var low: Int;
     public var high: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: Ref, arg1: Ref) {
+    public function new(arg0: Ref = null, arg1: Ref = null) {
     }
 
     public function getCLID(): Int {

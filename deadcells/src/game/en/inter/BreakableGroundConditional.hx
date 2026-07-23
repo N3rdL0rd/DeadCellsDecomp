@@ -8,7 +8,7 @@ class BreakableGroundConditional extends en.inter.BreakableGround {
     public var oldUnlocked: Bool;
     public var minimapRevealed: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: String, arg6: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: String = null, arg6: String = null) {
         super();
     }
 

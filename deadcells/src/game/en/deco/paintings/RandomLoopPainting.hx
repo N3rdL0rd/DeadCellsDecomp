@@ -6,7 +6,7 @@ class RandomLoopPainting extends en.deco.paintings.AnimatedPaintingBase {
     public var minDelayS: Float;
     public var maxDelayS: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Float, arg5: Float, arg6: Float, arg7: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Float = 0., arg5: Float = 0., arg6: Float = 0., arg7: Ref = null) {
         super();
     }
 

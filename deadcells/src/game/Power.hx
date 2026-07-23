@@ -7,9 +7,8 @@ class Power {
     public var item: tool.InventItem;
     public var accu: Float;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
     }
 
     public function shouldChangeLevelWithHero(): Bool {

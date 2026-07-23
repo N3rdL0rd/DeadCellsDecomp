@@ -9,7 +9,7 @@ class Chicken extends en.Pet {
     public var delayedDirVal: Int;
     public var shoot: tool.skill.OldSkill;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null, arg4: tool.InventItem = null) {
         super();
     }
 

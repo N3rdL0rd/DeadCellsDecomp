@@ -4,7 +4,7 @@ class EventObject {
     public var id: Int;
     public var callback: Dynamic;
 
-    public function new(arg0: Dynamic, arg1: Int) {
+    public function new(arg0: Dynamic = null, arg1: Int = 0) {
     }
 }
 

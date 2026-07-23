@@ -9,7 +9,7 @@ class Platform {
     public var heights: Array<Int>;
     public var minHeight: Int;
     public var maxHeight: Int;
-    public var occupations: haxe.ds.IntMap;
+    public var occupations: haxe.ds.IntMap<Dynamic>;
     public var occupiedCount: Int;
 
     public function new(arg0: level.LevelMap, arg1: Int, arg2: Int, arg3: Int) {

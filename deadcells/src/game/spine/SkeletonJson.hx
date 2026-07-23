@@ -5,7 +5,7 @@ class SkeletonJson {
     public var scale: Float;
     public var linkedMeshes: Array<Dynamic>;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
     }
 
     public function readAttachment(arg0: Dynamic, arg1: spine.Skin, arg2: Int, arg3: String, arg4: spine.SkeletonData): spine.attachments.Attachment {

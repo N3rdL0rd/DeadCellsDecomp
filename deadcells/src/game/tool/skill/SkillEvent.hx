@@ -10,7 +10,7 @@ class SkillEvent {
     public var minRatio: Float;
     public var maxRatio: Float;
 
-    public function new(arg0: tool.skill.Skill, arg1: Ref, arg2: String, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: tool.skill.Skill = null, arg1: Ref = null, arg2: String = null, arg3: Dynamic = null, arg4: Dynamic = null) {
     }
 
     public function tryTrigger(arg0: Dynamic, arg1: Dynamic): Bool {

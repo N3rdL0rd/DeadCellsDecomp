@@ -8,7 +8,7 @@ class VarSecure {
     public var dummies: Array<Dynamic>;
     public var bug: Bool;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
     }
 
     public function get(): Int {

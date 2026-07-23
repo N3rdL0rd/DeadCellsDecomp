@@ -12,7 +12,7 @@ class ErrorHandler {
         throw "stub: tryGetLevelData not decompiled";
     }
 
-    public static function stackItemToObj(arg0: haxe.StackItem): Dynamic {
+    public static function stackItemToObj(arg0: haxe.CallStack.StackItem): Dynamic {
         throw "stub: stackItemToObj not decompiled";
     }
 
@@ -44,8 +44,8 @@ class ErrorHandler {
 }
 
 class CustomHttp extends sys.Http {
-    public function new(arg0: String) {
-        super();
+    public function new(arg0: String = null) {
+        super(null);
     }
 
     public override function readHttpResponse(arg0: haxe.io.Output, arg1: sys.net.Socket): Void {

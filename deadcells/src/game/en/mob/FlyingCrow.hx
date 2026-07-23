@@ -11,7 +11,7 @@ class FlyingCrow extends en.Mob {
     public var isNew: Bool;
     public var initDx: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: en.Hero, arg7: en.CrowManager) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Float = 0., arg6: en.Hero = null, arg7: en.CrowManager = null) {
         super();
     }
 

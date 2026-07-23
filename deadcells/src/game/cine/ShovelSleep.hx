@@ -1,7 +1,7 @@
 package cine;
 
 class ShovelSleep extends GameCinematic {
-    public function new(arg0: en.Hero, arg1: en.inter.ShovelCampFire) {
+    public function new(arg0: en.Hero = null, arg1: en.inter.ShovelCampFire = null) {
         super();
     }
 

@@ -2,9 +2,9 @@ package libs.heaps;
 
 class MultiTileObject_h2d_TileGroup {
     public var spriteLibs: Array<Dynamic>;
-    public var objectsByTextureId: haxe.ds.IntMap;
+    public var objectsByTextureId: haxe.ds.IntMap<Dynamic>;
 
-    public function new(arg0: Array<Dynamic>, arg1: h2d.Object) {
+    public function new(arg0: Array<Dynamic> = null, arg1: h2d.Object = null) {
     }
 
     public function getObjectFromTile(arg0: h2d.Tile): h2d.TileGroup {
@@ -29,9 +29,9 @@ class MultiTileObject_h2d_TileGroup {
 
 class MultiTileObject_libs_heaps_slib_HSpriteBatch {
     public var spriteLibs: Array<Dynamic>;
-    public var objectsByTextureId: haxe.ds.IntMap;
+    public var objectsByTextureId: haxe.ds.IntMap<Dynamic>;
 
-    public function new(arg0: Array<Dynamic>, arg1: h2d.Object) {
+    public function new(arg0: Array<Dynamic> = null, arg1: h2d.Object = null) {
     }
 
     public function getObjects(): Dynamic {

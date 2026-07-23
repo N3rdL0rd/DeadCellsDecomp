@@ -5,7 +5,7 @@ class ATDoor extends en.inter.Door {
     public static var __eclids: Array<Int>;
     public var isBlue: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Float = 0.) {
         super();
     }
 

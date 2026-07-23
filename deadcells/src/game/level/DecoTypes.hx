@@ -12,7 +12,7 @@ class DecoZone {
     public var gFlags: Int;
     public var rooms: Array<Dynamic>;
 
-    public function new(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic) {
+    public function new(arg0: Dynamic = null, arg1: Dynamic = null, arg2: Dynamic = null, arg3: Dynamic = null) {
     }
 
     public function init(arg0: level.LevelMap): Void {
@@ -45,13 +45,13 @@ class DeathArena extends level.BiomeDisp {
     public override function renderOneWay(arg0: Int, arg1: Int, arg2: Bool, arg3: Bool, arg4: Bool): Void {
     }
 
-    public function applyScatterConf(arg0: light.Scatterer, arg1: String): Void {
+    public override function applyScatterConf(arg0: light.Scatterer, arg1: String): Void {
     }
 
-    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    public override function renderParallax(arg0: Dynamic, arg1: String): Void {
     }
 
-    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    public override function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
     }
 
     public function getBlendMode(arg0: Dynamic): h2d.BlendMode {
@@ -79,7 +79,7 @@ class DeathArena extends level.BiomeDisp {
     public override function postUpdate(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 }
 
@@ -89,7 +89,7 @@ class DecoPlatform {
     public var wid: Int;
     public var flags: Int;
 
-    public function new(arg0: Int, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
     }
 }
 
@@ -100,7 +100,7 @@ class DecoTransition {
     public var ymax: Int;
     public var dir: Direction;
 
-    public function new(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Direction) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Direction = null) {
     }
 }
 
@@ -118,7 +118,7 @@ class BiomeDisp extends level.LevelDisp {
     public var holeGen: level.HoleGenerator;
     public var holeCpt: Int;
     public var bgScrolls: Array<Dynamic>;
-    public var objPoints: haxe.ds.StringMap;
+    public var objPoints: haxe.ds.StringMap<Dynamic>;
     public var lightPoints: Array<Dynamic>;
     public var lanterns: Array<Dynamic>;
     public var lightFX: Array<Dynamic>;
@@ -152,7 +152,7 @@ class BiomeDisp extends level.LevelDisp {
     public var torchConfLightId: String;
     public var junkDecoFlags: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: Array<Dynamic> = null) {
         super();
     }
 
@@ -176,17 +176,17 @@ class BiomeDisp extends level.LevelDisp {
         throw "stub: getNewPosFlask not decompiled";
     }
 
-    public function canPlaceLoreDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Bool {
+    public function canPlaceLoreDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Bool {
         throw "stub: canPlaceLoreDeco not decompiled";
     }
 
-    public function addLoreDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
+    public function addLoreDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
     }
 
-    public function addFireDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
+    public function addFireDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
     }
 
-    public function addGodRayDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
+    public function addGodRayDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
     }
 
     public function initFlasks(arg0: level.Room): Void {
@@ -215,10 +215,10 @@ class BiomeDisp extends level.LevelDisp {
     public override function renderFrontWalls(): Void {
     }
 
-    public function renderDirt(arg0: haxe.ds.IntMap): Void {
+    public function renderDirt(arg0: haxe.ds.IntMap<Dynamic>): Void {
     }
 
-    public function computeDirtTileBoundaries(arg0: haxe.ds.IntMap): Void {
+    public function computeDirtTileBoundaries(arg0: haxe.ds.IntMap<Dynamic>): Void {
     }
 
     public function createDirtTileFromBoundaries(): Void {
@@ -389,13 +389,13 @@ class BiomeDisp extends level.LevelDisp {
         throw "stub: addWallStamp not decompiled";
     }
 
-    public override function addJunk(arg0: level.DecoZone): Void {
+    public override function addJunk(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function _addFloorJunk(arg0: level.DecoZone, arg1: Float): Void {
+    public function _addFloorJunk(arg0: level.DecoTypes.DecoZone, arg1: Float): Void {
     }
 
-    public function _addWallJunk(arg0: level.DecoZone, arg1: Float, arg2: Ref): Void {
+    public function _addWallJunk(arg0: level.DecoTypes.DecoZone, arg1: Float, arg2: Ref): Void {
     }
 
     public function onAddFloorJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
@@ -412,7 +412,7 @@ class PurpleGarden extends level.BiomeDisp {
         super();
     }
 
-    public function initGroups(): Void {
+    public override function initGroups(): Void {
     }
 
     public function towerPartRand(arg0: Int, arg1: Float, arg2: Int): Int {
@@ -428,10 +428,10 @@ class PurpleGarden extends level.BiomeDisp {
     public function renderBgGrids(): Void {
     }
 
-    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    public override function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
     }
 
-    public function parallaxHFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Ref, arg6: h2d.Tile): Void {
+    public override function parallaxHFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Ref, arg6: h2d.Tile): Void {
     }
 
     public function addColumns(arg0: level.Room): Void {
@@ -440,13 +440,13 @@ class PurpleGarden extends level.BiomeDisp {
     public function addColumnsInArea(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addSmallWindows(arg0: level.DecoZone, arg1: Array<Dynamic>): Void {
+    public function addSmallWindows(arg0: level.DecoTypes.DecoZone, arg1: Array<Dynamic>): Void {
     }
 
-    public function fillHorizontalCenteredZone(arg0: level.DecoZone, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Array<Dynamic>, arg8: Int, arg9: Int, arg10: Int, arg11: libs.heaps.StaticGeometryGroup, arg12: Dynamic): Int {
+    public function fillHorizontalCenteredZone(arg0: level.DecoTypes.DecoZone, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Array<Dynamic>, arg8: Int, arg9: Int, arg10: Int, arg11: libs.heaps.StaticGeometryGroup, arg12: Dynamic): Int {
         throw "stub: fillHorizontalCenteredZone not decompiled";
     }
 
@@ -454,11 +454,11 @@ class PurpleGarden extends level.BiomeDisp {
         throw "stub: fillHorizontalCentered not decompiled";
     }
 
-    public function isAboveGround(arg0: level.DecoZone): Bool {
+    public function isAboveGround(arg0: level.DecoTypes.DecoZone): Bool {
         throw "stub: isAboveGround not decompiled";
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function shouldSkipLightPoint(arg0: Int, arg1: Int, arg2: Int): Bool {
@@ -474,10 +474,10 @@ class PurpleGarden extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function clear(): Void {
+    public override function clear(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public override function onAddWallJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
@@ -517,17 +517,17 @@ class Tumulus extends level.BiomeDisp {
         super();
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
     public function addGodRays(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic): ParallaxEmitter {
         throw "stub: addGodRays not decompiled";
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public function displayPlatformBottom(arg0: libs.tilemap.Rectangle): Void {
@@ -552,7 +552,7 @@ class Tumulus extends level.BiomeDisp {
     public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
     }
 
-    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    public override function renderParallax(arg0: Dynamic, arg1: String): Void {
     }
 
     public override function decorateRoom(arg0: level.Room): Void {
@@ -584,6 +584,6 @@ class Tumulus extends level.BiomeDisp {
     public function addHangedDeadBody(arg0: Int, arg1: Int): Void {
     }
 
-    public function reloadRenderConf(): Void {
+    public override function reloadRenderConf(): Void {
     }
 }

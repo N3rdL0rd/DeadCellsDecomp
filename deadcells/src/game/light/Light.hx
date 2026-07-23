@@ -6,7 +6,7 @@ class Light extends light.DeferredSprite {
     public var depth: Float;
     public var volume: light.LightGraphics;
 
-    public function new(arg0: h2d.Object) {
+    public function new(arg0: h2d.Object = null) {
         super();
     }
 

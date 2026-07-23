@@ -11,7 +11,7 @@ class Tier extends h2d.Object {
     public var hei: Int;
     public var scaleFrom: Float;
 
-    public function new(arg0: String, arg1: Bool, arg2: h2d.Object) {
+    public function new(arg0: String = null, arg1: Bool = false, arg2: h2d.Object = null) {
         super();
     }
 
@@ -43,7 +43,7 @@ class TierBar extends h2d.Object {
     public var heiAsk: Int;
     public var bg: h2d.ScaleGrid;
 
-    public function new(arg0: h2d.Object, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: h2d.Object = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 

@@ -4,7 +4,7 @@ class Astrolab extends level.BiomeDisp {
     public var torchPoints: Array<Dynamic>;
     public var clouds: Array<Dynamic>;
     public var sprites: Array<Dynamic>;
-    public var bgPool: libs.heaps.ParticlePool;
+    public var bgPool: libs.heaps.HParticle.ParticlePool;
     public var bgParticles: libs.heaps.slib.HSpriteBatch;
     public var groupBackStructures: libs.heaps.StaticGeometryGroup;
     public var shelfDeck: libs.RandDeck;
@@ -30,31 +30,31 @@ class Astrolab extends level.BiomeDisp {
     public function decorateLevel(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public override function renderStructures(): Void {
     }
 
-    public function addBigShelves(arg0: level.DecoZone): Void {
+    public function addBigShelves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addMedShelf(arg0: level.DecoZone): Void {
+    public function addMedShelf(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addSmallShelf(arg0: level.DecoZone): Void {
+    public function addSmallShelf(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addBigPoster(arg0: level.DecoZone): Void {
+    public function addBigPoster(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addMedPoster(arg0: level.DecoZone): Void {
+    public function addMedPoster(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addDecoTorch(arg0: level.DecoZone): Void {
+    public function addDecoTorch(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addCandlePendulum(arg0: level.DecoZone): Void {
+    public function addCandlePendulum(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function renderBackground(): Void {

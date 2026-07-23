@@ -1,34 +1,4 @@
 package tool;
-class Cooldown {
-  var cdList: hl.types.ArrayObj<Dynamic>;
-  var baseFps: Float;
-  var onComplete: Dynamic;
-  var fastCheck: haxe.ds.IntMap<Dynamic>;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var INDEXES: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
-
-  function __constructor__(fps: Float, onComplete: Dynamic) {}
-
-  function init(onComplete: Dynamic) {}
-
-  function update(dt: Float) {}
-
-  function destroy() {}
-
-  function _getRatio(k: Int): Float {}
-
-  function getCLID(): Int {}
-
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getSerializeSchema(): hxbit.Schema.Schema {}
-
-  function unserializeInit() {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
-}
 
 class CdInst {
     public static var __clid: Int;
@@ -37,9 +7,8 @@ class CdInst {
     public var initial: Float;
     public var subIndexBits: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: Int, arg1: Float) {
+    public function new(arg0: Int = 0, arg1: Float = 0.) {
     }
 
     public function getCLID(): Int {
@@ -66,9 +35,8 @@ class Cooldown {
     public var cdList: Array<Dynamic>;
     public var baseFps: Float;
     public var onComplete: Dynamic;
-    public var fastCheck: haxe.ds.IntMap;
+    public var fastCheck: haxe.ds.IntMap<Dynamic>;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: Float, arg1: Dynamic) {
     }

@@ -14,7 +14,7 @@ class RegionAttachment extends spine.attachments.Attachment {
     public var offset: Array<Float>;
     public var color: spine.support.graphics.Color;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
         super();
     }
 }

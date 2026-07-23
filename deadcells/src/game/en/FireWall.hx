@@ -12,7 +12,7 @@ class FireWall extends Entity {
     public var destroyOnTouch: Bool;
     public var destroyOnBlock: Bool;
 
-    public function new(arg0: en.Mob, arg1: String, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: Ref) {
+    public function new(arg0: en.Mob = null, arg1: String = null, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Float = 0., arg6: Ref = null) {
         super();
     }
 

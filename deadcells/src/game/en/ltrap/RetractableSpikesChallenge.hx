@@ -4,7 +4,7 @@ class RetractableSpikesChallenge extends en.ltrap.RetractableSpikes {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Int, arg5: Dynamic, arg6: String, arg7: Ref, arg8: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null, arg4: Int = 0, arg5: Dynamic = null, arg6: String = null, arg7: Ref = null, arg8: Ref = null) {
         super();
     }
 

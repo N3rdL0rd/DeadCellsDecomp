@@ -7,7 +7,7 @@ class VertexAttachment extends spine.attachments.Attachment {
     public var vertices: Array<Float>;
     public var worldVerticesLength: Int;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
         super();
     }
 

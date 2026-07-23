@@ -15,7 +15,7 @@ class SkillProjectile extends tool.skill.SkillEvent {
     public var pierce: Int;
     public var ignoreWalls: Bool;
 
-    public function new(arg0: Dynamic, arg1: String, arg2: tool.skill.Skill, arg3: Float, arg4: String, arg5: Dynamic, arg6: Dynamic) {
+    public function new(arg0: Dynamic = null, arg1: String = null, arg2: tool.skill.Skill = null, arg3: Float = 0., arg4: String = null, arg5: Dynamic = null, arg6: Dynamic = null) {
         super();
     }
 

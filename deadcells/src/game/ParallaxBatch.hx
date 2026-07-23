@@ -1,4 +1,4 @@
-class ParallaxElement extends h2d.BatchElement {
+class ParallaxElement extends h2d.SpriteBatch.BatchElement {
     public var layer: ParallaxLayer;
     public var px: Float;
     public var py: Float;
@@ -9,8 +9,8 @@ class ParallaxElement extends h2d.BatchElement {
     public var cullW: Float;
     public var cullH: Float;
 
-    public function new(arg0: h2d.Tile) {
-        super();
+    public function new(arg0: h2d.Tile = null) {
+        super(null);
     }
 
     public override function remove(): Void {
@@ -28,8 +28,8 @@ class ParallaxLayer {
     public var scrollY: Float;
     public var prio: Int;
     public var parent: ParallaxBatch;
-    public var first: h2d.BatchElement;
-    public var last: h2d.BatchElement;
+    public var first: h2d.SpriteBatch.BatchElement;
+    public var last: h2d.SpriteBatch.BatchElement;
     public var offsetX: Float;
     public var offsetY: Float;
 
@@ -67,7 +67,7 @@ class ParallaxBatch extends libs.heaps.slib.HSpriteBatch {
     public var vwid: Float;
     public var vhei: Float;
 
-    public function new(arg0: h2d.Tile, arg1: h2d.col.Bounds, arg2: Viewport, arg3: h2d.Object) {
+    public function new(arg0: h2d.Tile = null, arg1: h2d.col.Bounds = null, arg2: Viewport = null, arg3: h2d.Object = null) {
         super();
     }
 

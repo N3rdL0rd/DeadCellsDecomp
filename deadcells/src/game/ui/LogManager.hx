@@ -7,7 +7,7 @@ class LogManager extends ui.Process {
     public var tauntWrapper: h2d.Object;
     public var cm: libs.misc.Cinematic;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
         super();
     }
 
@@ -50,6 +50,6 @@ class LogManager extends ui.Process {
     public override function onDispose(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 }

@@ -16,7 +16,7 @@ class SmallSoul extends Entity {
     public var angTrail: Float;
     public var even: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null) {
         super();
     }
 

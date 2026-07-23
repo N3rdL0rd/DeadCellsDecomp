@@ -14,7 +14,7 @@ class PiercedPolygon {
     public static function initDiagMatrices(): Void {
     }
 
-    public function iterator(): libs.tilemap._PiercedPolygon.PiercedPolygonIterator {
+    public function iterator(): libs.tilemap.PiercedPolygon.PiercedPolygonIterator {
         throw "stub: iterator not decompiled";
     }
 
@@ -30,7 +30,7 @@ class PiercedPolygon {
         throw "stub: getDiagonals not decompiled";
     }
 
-    public function getCoveringRectangles(arg0: libs.tilemap.Parser, arg1: libs.tilemap.Selector, arg2: libs.tilemap.SplitMode): Array<Dynamic> {
+    public function getCoveringRectangles(arg0: libs.tilemap.Parser, arg1: libs.tilemap.Data.Selector, arg2: libs.tilemap.SplitMode): Array<Dynamic> {
         throw "stub: getCoveringRectangles not decompiled";
     }
 }

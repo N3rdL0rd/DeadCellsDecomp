@@ -9,7 +9,7 @@ class WreckingBallHero extends en.Bullet {
     public var glowOuterColor: Int;
     public var enemiesKilled: Int;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: tool.weap.WreckingBall, arg3: Float, arg4: Bool, arg5: Int, arg6: Int) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: tool.weap.WreckingBall = null, arg3: Float = 0., arg4: Bool = false, arg5: Int = 0, arg6: Int = 0) {
         super();
     }
 

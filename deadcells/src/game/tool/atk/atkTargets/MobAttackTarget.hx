@@ -1,9 +1,9 @@
 package tool.atk.atkTargets;
 
 class MobAttackTarget extends tool.atk.AttackTargetImpl {
-    public var extraTargetAffixes: haxe.ds.IntMap;
+    public var extraTargetAffixes: haxe.ds.IntMap<Dynamic>;
 
-    public function new(arg0: en.Mob) {
+    public function new(arg0: en.Mob = null) {
         super();
     }
 

@@ -1,7 +1,7 @@
 package tool.atk.atkTargets;
 
 class HeroAttackTarget extends tool.atk.AttackTargetImpl {
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

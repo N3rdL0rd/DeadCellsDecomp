@@ -1,7 +1,7 @@
 package tool;
 
 class ScarfSegment {
-    public var manager: tool.ScarfManager;
+    public var manager: tool.ScarfSegment.ScarfManager;
     public var scarf: tool.Scarf;
     public var infos: Dynamic;
     public var owner: Entity;
@@ -27,7 +27,7 @@ class ScarfSegment {
     public var infRotScale: Float;
     public var infBackColor: Dynamic;
 
-    public function new(arg0: tool.ScarfManager, arg1: tool.Scarf, arg2: tool.ScarfSegment, arg3: Float, arg4: Dynamic) {
+    public function new(arg0: tool.ScarfSegment.ScarfManager, arg1: tool.Scarf, arg2: tool.ScarfSegment, arg3: Float, arg4: Dynamic) {
     }
 
     public function invertFrontAndBack(): Void {
@@ -59,10 +59,10 @@ class ScarfManager {
     public var scarfs: Array<Dynamic>;
     public var blendMode: h2d.BlendMode;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
     }
 
-    public static function create(arg0: Entity, arg1: String): tool.ScarfManager {
+    public static function create(arg0: Entity, arg1: String): tool.ScarfSegment.ScarfManager {
         throw "stub: create not decompiled";
     }
 
@@ -83,7 +83,7 @@ class ScarfManager {
 }
 
 class Scarf {
-    public var manager: tool.ScarfManager;
+    public var manager: tool.ScarfSegment.ScarfManager;
     public var segs: Array<Dynamic>;
     public var infos: Dynamic;
     public var owner: Entity;
@@ -93,7 +93,7 @@ class Scarf {
     public var isRigidScarf: Bool;
     public var isCape: Bool;
 
-    public function new(arg0: tool.ScarfManager, arg1: Dynamic) {
+    public function new(arg0: tool.ScarfSegment.ScarfManager, arg1: Dynamic) {
     }
 
     public function init(): Void {

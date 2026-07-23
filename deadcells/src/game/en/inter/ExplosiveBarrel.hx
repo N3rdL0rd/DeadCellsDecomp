@@ -25,7 +25,7 @@ class ExplosiveBarrel extends en.Interactive {
     public var outOfGameLifeDuration: Float;
     public var lessBright: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null, arg4: Ref = null) {
         super();
     }
 

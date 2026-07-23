@@ -7,7 +7,7 @@ class BeheadedWeaponsManager extends tool.hero.HeroWeaponsManager {
     public var backpackRollAttackArea: tool.Area;
     public var bulletsFired: Array<Dynamic>;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

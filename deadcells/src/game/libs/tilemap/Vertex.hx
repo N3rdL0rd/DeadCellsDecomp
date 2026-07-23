@@ -7,7 +7,7 @@ class Vertex {
     public var y: Int;
     public var sample: Int;
 
-    public function new(arg0: Int, arg1: Int, arg2: Int) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0) {
     }
 
     public static function ySort(arg0: libs.tilemap.Vertex, arg1: libs.tilemap.Vertex): Int {

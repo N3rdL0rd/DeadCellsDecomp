@@ -6,7 +6,7 @@ class Stalactite extends en.Bullet {
     public var speed: Float;
     public var groundY: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null) {
         super();
     }
 

@@ -5,7 +5,7 @@ class DookuRock extends en.Bullet {
     public static var __clid: Int;
     public var rotationSpeed: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null) {
         super();
     }
 

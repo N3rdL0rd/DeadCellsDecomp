@@ -7,7 +7,7 @@ class MvFly extends tool.AutoMove {
     public var tx: Float;
     public var ty: Float;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
         super();
     }
 

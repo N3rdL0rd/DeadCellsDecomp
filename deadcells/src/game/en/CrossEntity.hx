@@ -21,7 +21,7 @@ class CrossEntity extends Entity {
     public var registeredPos: Array<Float>;
     public var fakeCrosses: Array<Dynamic>;
 
-    public function new(arg0: Entity, arg1: tool.weap.Cross, arg2: tool.InventItem, arg3: Float, arg4: Float, arg5: Int) {
+    public function new(arg0: Entity = null, arg1: tool.weap.Cross = null, arg2: tool.InventItem = null, arg3: Float = 0., arg4: Float = 0., arg5: Int = 0) {
         super();
     }
 

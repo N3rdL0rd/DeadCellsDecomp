@@ -1,7 +1,7 @@
 package tool.weap;
 
 class ThrowingAxeWeapon extends tool.Weapon {
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -9,7 +9,7 @@ class ThrowingAxeWeapon extends tool.Weapon {
         throw "stub: get_shootY not decompiled";
     }
 
-    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.Weapon.WeaponSkill): Void {
     }
 
     public override function updateAmmoHud(): Void {

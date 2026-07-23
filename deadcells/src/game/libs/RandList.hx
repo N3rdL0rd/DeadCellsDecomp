@@ -5,7 +5,7 @@ class RandList {
     public var drawList: Array<Dynamic>;
     public var defaultRandom: Dynamic;
 
-    public function new(arg0: Dynamic, arg1: Array<Dynamic>) {
+    public function new(arg0: Dynamic = null, arg1: Array<Dynamic> = null) {
     }
 
     public function clear(): Void {

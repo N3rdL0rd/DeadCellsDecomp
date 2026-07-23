@@ -6,7 +6,7 @@ class KingsHandBomb extends en.Interactive {
     public var inf: Dynamic;
     public var lastTimer: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null) {
         super();
     }
 

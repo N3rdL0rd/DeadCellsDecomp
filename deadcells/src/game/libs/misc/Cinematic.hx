@@ -5,10 +5,10 @@ class Cinematic {
     public var onAllComplete: Dynamic;
     public var queues: Array<Dynamic>;
     public var curQueue: Array<Dynamic>;
-    public var persistSignals: haxe.ds.StringMap;
+    public var persistSignals: haxe.ds.StringMap<Dynamic>;
     public var fps: Int;
 
-    public function new(arg0: Int) {
+    public function new(arg0: Int = 0) {
     }
 
     public function destroy(): Void {

@@ -4,7 +4,7 @@ class SkinSelector extends ui.sel.GridSelector {
     public var group: Dynamic;
     public var skinContainer: h2d.Object;
     public var heroHead: tool.HeroHead;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
     public var skins: Array<Dynamic>;
     public var userSkin: String;
     public var curSkinId: Int;
@@ -16,7 +16,7 @@ class SkinSelector extends ui.sel.GridSelector {
     public var glitchShader: shader.Glitch;
     public var skinner: en.inter.Skinner;
 
-    public function new(arg0: Dynamic, arg1: en.inter.Skinner) {
+    public function new(arg0: Dynamic = null, arg1: en.inter.Skinner = null) {
         super();
     }
 

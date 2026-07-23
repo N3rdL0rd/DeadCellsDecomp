@@ -7,7 +7,7 @@ class HomingSoul extends en.Bullet {
     public var speed: Float;
     public var ang: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Entity, arg3: Float, arg4: Float, arg5: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Entity = null, arg3: Float = 0., arg4: Float = 0., arg5: Float = 0.) {
         super();
     }
 

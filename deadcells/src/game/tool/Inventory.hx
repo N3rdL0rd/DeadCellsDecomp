@@ -6,7 +6,6 @@ class Inventory {
     public var nbWeapons: Int;
     public var nbActives: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

@@ -22,7 +22,7 @@ class HookChain extends libs.Process {
     public var enableOnionTrail: Bool;
     public var onions: Array<Dynamic>;
 
-    public function new(arg0: Entity, arg1: String, arg2: String, arg3: Float, arg4: Dynamic) {
+    public function new(arg0: Entity = null, arg1: String = null, arg2: String = null, arg3: Float = 0., arg4: Dynamic = null) {
         super();
     }
 

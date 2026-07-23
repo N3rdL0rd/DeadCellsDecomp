@@ -6,9 +6,8 @@ class BufferedFileOutput {
     public var logPrefix: String;
     public var logFile: String;
     public var buffer: tool.RingBuffer;
-    public var : Dynamic;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
     }
 
     public function initLogFile(): Void {

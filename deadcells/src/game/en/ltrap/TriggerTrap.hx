@@ -19,7 +19,7 @@ class TriggerTrap extends en.LevelTrap {
     public var ball: libs.heaps.slib.HSprite;
     public var chains: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Int, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Int = 0, arg5: Dynamic = null) {
         super();
     }
 

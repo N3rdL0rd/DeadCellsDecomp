@@ -6,7 +6,6 @@ class TierDistribution {
     public var droppedWeapon: Int;
     public var droppedActive: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

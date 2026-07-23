@@ -5,7 +5,7 @@ class ContextState {
     public var front2back: Bool;
     public var blendFilter: light.BlendFilter;
     public var depthWrite: Bool;
-    public var depthTest: h3d.mat.Compare;
+    public var depthTest: h3d.mat.Data.Compare;
     public var killAlpha: Bool;
 
     public function new(arg0: Array<Dynamic>) {
@@ -54,7 +54,7 @@ class LightedLayers extends h2d.Layers {
     public var croppingWidthFactor: Float;
     public var croppingHeightFactor: Float;
     public var deferredMask: Int;
-    public var deferreds: light._LightedLayers.DeferredList;
+    public var deferreds: light.LightedLayers.DeferredList;
     public var enableLights: Bool;
     public var lightFactor: Float;
     public var captureCount: Int;
@@ -85,13 +85,13 @@ class LightedLayers extends h2d.Layers {
     public var commonBlurPass: h3d.pass.Blur;
     public var glowBlurPass: h3d.pass.Blur;
     public var postBlurPass: h3d.pass.Blur;
-    public var lightCombine: h3d.pass.ScreenFx;
-    public var displaceFx: h3d.pass.ScreenFx;
-    public var scatterFx: h3d.pass.ScreenFx;
-    public var postProcessing: h3d.pass.ScreenFx;
-    public var debugDepth: h3d.pass.ScreenFx;
-    public var darknessFx: h3d.pass.ScreenFx;
-    public var lightningMaskFx: h3d.pass.ScreenFx;
+    public var lightCombine: h3d.pass.ScreenFx<h3d.shader.ScreenShader>;
+    public var displaceFx: h3d.pass.ScreenFx<h3d.shader.ScreenShader>;
+    public var scatterFx: h3d.pass.ScreenFx<h3d.shader.ScreenShader>;
+    public var postProcessing: h3d.pass.ScreenFx<h3d.shader.ScreenShader>;
+    public var debugDepth: h3d.pass.ScreenFx<h3d.shader.ScreenShader>;
+    public var darknessFx: h3d.pass.ScreenFx<h3d.shader.ScreenShader>;
+    public var lightningMaskFx: h3d.pass.ScreenFx<h3d.shader.ScreenShader>;
     public var tmpPoint: h2d.col.Point;
     public var rtFree: Array<Dynamic>;
     public var rtFreeIdx: Int;
@@ -120,13 +120,13 @@ class LightedLayers extends h2d.Layers {
         throw "stub: render not decompiled";
     }
 
-    public function sync(arg0: h2d.RenderContext): Void {
+    public override function sync(arg0: h2d.RenderContext): Void {
     }
 
     public override function addChildAt(arg0: h2d.Object, arg1: Int): Void {
     }
 
-    public function contentChanged(arg0: h2d.Object): Void {
+    public override function contentChanged(arg0: h2d.Object): Void {
     }
 
     public override function under(arg0: h2d.Object): Void {
@@ -135,7 +135,7 @@ class LightedLayers extends h2d.Layers {
     public override function over(arg0: h2d.Object): Void {
     }
 
-    public function drawRec(arg0: h2d.RenderContext): Void {
+    public override function drawRec(arg0: h2d.RenderContext): Void {
     }
 
     public function setState(arg0: light.ContextState): Void {

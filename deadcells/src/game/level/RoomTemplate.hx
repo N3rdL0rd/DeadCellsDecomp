@@ -45,7 +45,7 @@ class RoomTemplate {
     public var rects: Array<Dynamic>;
     public var possibleExits: Int;
 
-    public function new(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic) {
+    public function new(arg0: Dynamic = null, arg1: Dynamic = null, arg2: Dynamic = null) {
     }
 
     public static function getCellType(arg0: Int): level.ColType {

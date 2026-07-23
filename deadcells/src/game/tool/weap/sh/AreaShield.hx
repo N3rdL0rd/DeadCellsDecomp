@@ -3,7 +3,7 @@ package tool.weap.sh;
 class AreaShield extends tool.weap.BaseShield {
     public var hasTriggeredBonusAreaThisFrame: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

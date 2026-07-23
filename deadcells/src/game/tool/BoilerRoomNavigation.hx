@@ -3,7 +3,7 @@ package tool;
 class BoilerRoomNavigation extends libs.Process {
     public static var instance: tool.BoilerRoomNavigation;
     public var level: pr.Level;
-    public var nodeCache: haxe.ds.IntMap;
+    public var nodeCache: haxe.ds.IntMap<Dynamic>;
     public var levelWidth: Int;
     public var pathRequestQueue: Array<Dynamic>;
 

@@ -9,14 +9,14 @@ class EtheralDoor extends en.inter.Door {
     public var elapsedTime: Float;
     public var opacity: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: tool.InventItem = null) {
         super();
     }
 
     public override function init(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public function cancelMobsPlannedMove(arg0: Array<Dynamic>): Void {
@@ -37,7 +37,7 @@ class EtheralDoor extends en.inter.Door {
     public override function updateLightBlocking(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public function shouldOneShot(arg0: tool.atk.AttackData): Bool {

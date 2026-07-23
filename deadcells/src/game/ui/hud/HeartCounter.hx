@@ -12,7 +12,7 @@ class HeartCounter extends h2d.Layers {
     public var cptTxt: ui.Text;
     public var value: Int;
 
-    public function new(arg0: h2d.Object, arg1: Ref) {
+    public function new(arg0: h2d.Object = null, arg1: Ref = null) {
         super();
     }
 
@@ -31,7 +31,7 @@ class HeartCounter extends h2d.Layers {
     public function highlight(arg0: Ref, arg1: Ref): Void {
     }
 
-    public function getBoundsRec(arg0: h2d.Object, arg1: h2d.col.Bounds, arg2: Bool): Void {
+    public override function getBoundsRec(arg0: h2d.Object, arg1: h2d.col.Bounds, arg2: Bool): Void {
     }
 
     public function get_pixelScale(): Float {

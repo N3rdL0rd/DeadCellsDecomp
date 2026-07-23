@@ -47,7 +47,6 @@ class CustomGameData {
     public var randomHeadEveryLevel: Bool;
     public var headsLocked: Array<Dynamic>;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

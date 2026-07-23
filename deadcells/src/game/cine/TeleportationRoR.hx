@@ -4,7 +4,7 @@ class TeleportationRoR extends GameCinematic {
     public var hero: en.Hero;
     public var to: Entity;
 
-    public function new(arg0: en.Hero, arg1: en.inter.Teleport, arg2: Entity) {
+    public function new(arg0: en.Hero = null, arg1: en.inter.Teleport = null, arg2: Entity = null) {
         super();
     }
 

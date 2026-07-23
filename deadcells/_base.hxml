@@ -8,5 +8,7 @@
 -lib deepnightLibs
 -lib ldtk-haxe-api
 -lib heaps-aseprite
+-lib hlsteam
+-lib hlchroma
 
 -main Boot

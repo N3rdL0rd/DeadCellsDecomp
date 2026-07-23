@@ -63,11 +63,11 @@ class Mod {
 class LangMod {
     public static var REG_TAG: EReg;
 
-    public static function listBitmapFontGlyphs(arg0: hxd.res.BitmapFont): haxe.ds.IntMap {
+    public static function listBitmapFontGlyphs(arg0: hxd.res.BitmapFont): haxe.ds.IntMap<Dynamic> {
         throw "stub: listBitmapFontGlyphs not decompiled";
     }
 
-    public static function checkTags(arg0: haxe.ds.StringMap, arg1: Array<Dynamic>, arg2: Bool): Void {
+    public static function checkTags(arg0: haxe.ds.StringMap<Dynamic>, arg1: Array<Dynamic>, arg2: Bool): Void {
     }
 
     public static function parsePath(arg0: String): Dynamic {

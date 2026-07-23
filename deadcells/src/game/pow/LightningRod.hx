@@ -9,7 +9,7 @@ class LightningRod extends Power {
     public var cdPerUseF: Dynamic;
     public var cdProgressF: Dynamic;
 
-    public function new(arg0: Entity, arg1: tool.InventItem, arg2: Dynamic, arg3: Dynamic) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null, arg2: Dynamic = null, arg3: Dynamic = null) {
         super();
     }
 

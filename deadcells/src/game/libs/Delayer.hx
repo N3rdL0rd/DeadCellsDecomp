@@ -1,40 +1,11 @@
 package libs;
-class Delayer {
-  var delays: hl.types.ArrayObj<Dynamic>;
-  var now: Float;
-  var fps: Float;
-
-  function __constructor__(fps: Float) {}
-
-  function destroy() {}
-
-  function cancelEverything() {}
-
-  function hasId(id: String): Bool {}
-
-  function cancelById(id: String) {}
-
-  function cmp(a: Dynamic, b: Dynamic): Int {}
-
-  function addMs(id: String, cb: Dynamic, ms: Float) {}
-
-  function addS(id: String, cb: Dynamic, sec: Float) {}
-
-  function addF(id: String, cb: Dynamic, frames: Float) {}
-
-  function getNextDelayF(id: String): Float {}
-
-  function modifyDelayF(id: String, addF: Float) {}
-
-  function update(dt: Float) {}
-}
 
 class Task {
     public var t: Float;
     public var id: String;
     public var cb: Dynamic;
 
-    public function new(arg0: String, arg1: Float, arg2: Dynamic) {
+    public function new(arg0: String = null, arg1: Float = 0., arg2: Dynamic = null) {
     }
 }
 
@@ -59,7 +30,7 @@ class Delayer {
     public function cancelById(arg0: String): Void {
     }
 
-    public function cmp(arg0: libs._Delayer.Task, arg1: libs._Delayer.Task): Int {
+    public function cmp(arg0: Task, arg1: Task): Int {
         throw "stub: cmp not decompiled";
     }
 

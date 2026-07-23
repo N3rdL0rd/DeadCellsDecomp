@@ -11,7 +11,7 @@ class MagicBowArrow extends en.Bullet {
     public var homingAngleThreshold: Float;
     public var distanceCheckPassed: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Dynamic) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Float = 0., arg5: Float = 0., arg6: Dynamic = null) {
         super();
     }
 

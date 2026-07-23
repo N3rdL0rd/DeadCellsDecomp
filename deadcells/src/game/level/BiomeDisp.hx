@@ -6,7 +6,7 @@ class BiomeDisp extends level.LevelDisp {
     public var holeGen: level.HoleGenerator;
     public var holeCpt: Int;
     public var bgScrolls: Array<Dynamic>;
-    public var objPoints: haxe.ds.StringMap;
+    public var objPoints: haxe.ds.StringMap<Dynamic>;
     public var lightPoints: Array<Dynamic>;
     public var lanterns: Array<Dynamic>;
     public var lightFX: Array<Dynamic>;
@@ -40,7 +40,7 @@ class BiomeDisp extends level.LevelDisp {
     public var torchConfLightId: String;
     public var junkDecoFlags: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: Array<Dynamic> = null) {
         super();
     }
 
@@ -64,17 +64,17 @@ class BiomeDisp extends level.LevelDisp {
         throw "stub: getNewPosFlask not decompiled";
     }
 
-    public function canPlaceLoreDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Bool {
+    public function canPlaceLoreDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Bool {
         throw "stub: canPlaceLoreDeco not decompiled";
     }
 
-    public function addLoreDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
+    public function addLoreDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
     }
 
-    public function addFireDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
+    public function addFireDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
     }
 
-    public function addGodRayDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
+    public function addGodRayDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
     }
 
     public function initFlasks(arg0: level.Room): Void {
@@ -103,10 +103,10 @@ class BiomeDisp extends level.LevelDisp {
     public override function renderFrontWalls(): Void {
     }
 
-    public function renderDirt(arg0: haxe.ds.IntMap): Void {
+    public function renderDirt(arg0: haxe.ds.IntMap<Dynamic>): Void {
     }
 
-    public function computeDirtTileBoundaries(arg0: haxe.ds.IntMap): Void {
+    public function computeDirtTileBoundaries(arg0: haxe.ds.IntMap<Dynamic>): Void {
     }
 
     public function createDirtTileFromBoundaries(): Void {
@@ -277,13 +277,13 @@ class BiomeDisp extends level.LevelDisp {
         throw "stub: addWallStamp not decompiled";
     }
 
-    public override function addJunk(arg0: level.DecoZone): Void {
+    public override function addJunk(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function _addFloorJunk(arg0: level.DecoZone, arg1: Float): Void {
+    public function _addFloorJunk(arg0: level.DecoTypes.DecoZone, arg1: Float): Void {
     }
 
-    public function _addWallJunk(arg0: level.DecoZone, arg1: Float, arg2: Ref): Void {
+    public function _addWallJunk(arg0: level.DecoTypes.DecoZone, arg1: Float, arg2: Ref): Void {
     }
 
     public function onAddFloorJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {

@@ -23,7 +23,7 @@ class GardenerStage extends level.disp.Cliff {
     public override function render(): Void {
     }
 
-    public override function addScroller(arg0: level.DecoZone): Void {
+    public override function addScroller(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public override function decorateRoom(arg0: level.Room): Void {

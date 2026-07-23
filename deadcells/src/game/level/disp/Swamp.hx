@@ -37,7 +37,7 @@ class Swamp extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function decorateLevel(): Void {
@@ -103,7 +103,7 @@ class Swamp extends level.BiomeDisp {
     public function addSuspendedCage(arg0: Int, arg1: Int, arg2: Int): Void {
     }
 
-    public function addTreeHole(arg0: level.DecoZone): Void {
+    public function addTreeHole(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function createInsects(arg0: level.disp.InsectType, arg1: Int): Void {
@@ -119,6 +119,6 @@ class Zone {
     public var waterLevel: Int;
     public var depth: Int;
 
-    public function new(arg0: Int, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
     }
 }

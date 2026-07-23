@@ -7,7 +7,7 @@ class DamageAura extends Power {
     public var distScale: Float;
     public var range: Float;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 

@@ -5,9 +5,9 @@ class EnterDookuBossRoom {
     public var fakeDooku: en.FakeDooku;
     public var h: en.Hero;
     public var nameBossTxt: ui.Text;
-    public var middleM: level.Marker;
+    public var middleM: level.LevelTypes.Marker;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
     }
 
     public function killCine(arg0: cine.EnterDookuBRCineBase): Void {

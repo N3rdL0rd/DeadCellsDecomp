@@ -12,7 +12,7 @@ class Count extends h2d.Flow {
     public var lastTick: Float;
     public var lastValue: Int;
 
-    public function new(arg0: h2d.Tile, arg1: h2d.Object) {
+    public function new(arg0: h2d.Tile = null, arg1: h2d.Object = null) {
         super();
     }
 

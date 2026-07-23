@@ -26,7 +26,7 @@ class Mushroom extends en.Interactive {
     public var sideOfTheRoom: Int;
     public var bumpForce: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.boss.GardenerBoss, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.mob.boss.GardenerBoss = null, arg4: Dynamic = null) {
         super();
     }
 

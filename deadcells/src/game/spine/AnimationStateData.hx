@@ -2,7 +2,7 @@ package spine;
 
 class AnimationStateData {
     public var skeletonData: spine.SkeletonData;
-    public var animationToMixTime: haxe.ds.IntMap;
+    public var animationToMixTime: haxe.ds.IntMap<Dynamic>;
     public var tempAnimationStateDataKey: spine.AnimationStateDataKey;
     public var defaultMix: Float;
 

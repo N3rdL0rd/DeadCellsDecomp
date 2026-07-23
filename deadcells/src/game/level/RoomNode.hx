@@ -24,13 +24,13 @@ class RoomNode {
     public var npcs: Array<Dynamic>;
     public var id: Int;
     public var spawnDistance: Int;
-    public var parentLink: level.RoomTemplateLink;
+    public var parentLink: level.RoomTemplate.RoomTemplateLink;
     public var childrenLinks: Array<Dynamic>;
     public var x: Int;
     public var y: Int;
     public var errors: Int;
 
-    public function new(arg0: String, arg1: Ref, arg2: level.LevelStruct, arg3: String) {
+    public function new(arg0: String = null, arg1: Ref = null, arg2: level.LevelStruct = null, arg3: String = null) {
     }
 
     public static function copyRec(arg0: level.RoomNode): level.RoomNode {
@@ -72,7 +72,7 @@ class RoomNode {
         throw "stub: addZChild not decompiled";
     }
 
-    public function copy(arg0: level.LevelStruct, arg1: level.RoomNode, arg2: haxe.ds.ObjectMap): level.RoomNode {
+    public function copy(arg0: level.LevelStruct, arg1: level.RoomNode, arg2: haxe.ds.ObjectMap<Dynamic, Dynamic>): level.RoomNode {
         throw "stub: copy not decompiled";
     }
 

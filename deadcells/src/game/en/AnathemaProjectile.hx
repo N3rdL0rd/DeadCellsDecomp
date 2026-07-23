@@ -14,7 +14,7 @@ class AnathemaProjectile extends Entity {
     public var appliedCurse: Bool;
     public var canTouch: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.Weapon, arg2: Float) {
+    public function new(arg0: en.Hero = null, arg1: tool.Weapon = null, arg2: Float = 0.) {
         super();
     }
 

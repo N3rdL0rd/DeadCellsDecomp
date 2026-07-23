@@ -7,7 +7,7 @@ class WreckingBallHeroAmmo extends en.loot.Ammo {
     public var glowInnerColor: Int;
     public var glowOuterColor: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.weap.WreckingBall, arg5: Int, arg6: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: tool.weap.WreckingBall = null, arg5: Int = 0, arg6: Int = 0) {
         super();
     }
 

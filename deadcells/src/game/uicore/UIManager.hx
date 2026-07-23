@@ -5,7 +5,7 @@ class UIManager extends libs.Process {
     public var windows: Array<Dynamic>;
     public var controller: tool.ControllerAccess;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
         super();
     }
 

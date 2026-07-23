@@ -6,7 +6,7 @@ class DeferredSprite extends h2d.Object {
     public var groups: Int;
     public var culled: Bool;
 
-    public function new(arg0: h2d.Object) {
+    public function new(arg0: h2d.Object = null) {
         super();
     }
 

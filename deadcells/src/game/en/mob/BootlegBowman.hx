@@ -5,11 +5,11 @@ class BootlegBowman extends en.mob.BootlegBase {
     public static var __eclids: Array<Int>;
     public var fleeDestination: Dynamic;
     public var bowAtk: tool.skill.OldMobSkill;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var targetCase: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 

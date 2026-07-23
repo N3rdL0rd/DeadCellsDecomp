@@ -6,12 +6,12 @@ class HiddenBlock extends en.Interactive {
     public var item: tool.InventItem;
     public var back: libs.heaps.slib.HSprite;
     public var rune: libs.heaps.slib.HSprite;
-    public var lightSegment: light.Wall;
+    public var lightSegment: light.Visibility.Wall;
     public var dmgSounds: Array<Dynamic>;
     public var dieSounds: Array<Dynamic>;
     public var foodKind: FoodKind;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: tool.InventItem = null) {
         super();
     }
 

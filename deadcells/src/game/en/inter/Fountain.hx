@@ -9,7 +9,7 @@ class Fountain extends en.Interactive {
     public var darkPow: Float;
     public var broken: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
         super();
     }
 

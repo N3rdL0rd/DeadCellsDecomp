@@ -3,14 +3,13 @@ package tool;
 class StoryManager {
     public static var DEBUG_LORE: Bool;
     public static var __clid: Int;
-    public var counters: haxe.ds.StringMap;
-    public var npcProgresses: haxe.ds.EnumValueMap;
+    public var counters: haxe.ds.StringMap<Dynamic>;
+    public var npcProgresses: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
     public var loreRoomRunIds: Dynamic;
     public var visitedLoreRooms: Dynamic;
     public var plannedLores: Array<Int>;
     public var storyDataVersion: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

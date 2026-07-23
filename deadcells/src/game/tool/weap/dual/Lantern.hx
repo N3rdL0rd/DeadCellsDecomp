@@ -3,7 +3,7 @@ package tool.weap.dual;
 class LanternMelee extends tool.Weapon {
     public var markedEnemies: Array<Dynamic>;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -30,7 +30,7 @@ class LanternRanged extends tool.weap.BaseBow {
     public var ringOffset: Float;
     public var lastNbSoulCast: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

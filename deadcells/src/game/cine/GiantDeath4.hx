@@ -10,7 +10,7 @@ class GiantDeath4 extends GameCinematic {
     public var bossJawsFx: libs.heaps.slib.HSprite;
     public var bossGlobalFx: libs.heaps.slib.HSprite;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

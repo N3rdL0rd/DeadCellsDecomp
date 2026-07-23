@@ -19,7 +19,7 @@ class Loading extends h2d.Layers {
     public var tgCorners: h2d.TileGroup;
     public var cornerTile: h2d.Tile;
 
-    public function new(arg0: h2d.Object) {
+    public function new(arg0: h2d.Object = null) {
         super();
     }
 
@@ -44,6 +44,6 @@ class Loading extends h2d.Layers {
     public function onResize(arg0: Int, arg1: Int): Void {
     }
 
-    public function sync(arg0: h2d.RenderContext): Void {
+    public override function sync(arg0: h2d.RenderContext): Void {
     }
 }

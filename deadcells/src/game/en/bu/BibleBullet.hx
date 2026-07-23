@@ -11,7 +11,7 @@ class BibleBullet extends en.Bullet {
     public var pageSb: libs.heaps.slib.HSpriteBatch;
     public var baseAtk: tool.atk.AttackData;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Int) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Int = 0) {
         super();
     }
 

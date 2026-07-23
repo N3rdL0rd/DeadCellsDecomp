@@ -10,7 +10,7 @@ class MedusaPainting extends en.deco.paintings.AnimatedPaintingBase {
     public var shouldReset: Bool;
     public var resetDistCase: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Float = 0.) {
         super();
     }
 

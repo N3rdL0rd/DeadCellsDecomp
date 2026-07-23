@@ -8,7 +8,7 @@ class Mob extends Entity {
     public var forcedBlueprint: String;
     public var delayedVolte: Dynamic;
     public var allowHitOverlapAnims: Bool;
-    public var attackeds: haxe.ds.IntMap;
+    public var attackeds: haxe.ds.IntMap<Dynamic>;
     public var oldSkills: Array<Dynamic>;
     public var skills: Array<Dynamic>;
     public var queuedOldSkill: Dynamic;
@@ -45,7 +45,7 @@ class Mob extends Entity {
     public var forceBodyPart: Bool;
     public var useBodyParts: Bool;
     public var minPfSize: Int;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
     public var particleEmitters: Array<Dynamic>;
     public var thawMaxStacks: Int;
     public var thawMinDiminushingFactor: Int;
@@ -97,7 +97,7 @@ class Mob extends Entity {
     public var breachDamage: Float;
     public var pawGroundOffset: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -109,15 +109,15 @@ class Mob extends Entity {
         throw "stub: createSideKick not decompiled";
     }
 
-    public function addAttack_tool_skill_mobSkill_Melee(arg0: hl.Class, arg1: String): tool.skill.mobSkill.Melee {
+    public function addAttack_tool_skill_mobSkill_Melee(arg0: Class<Dynamic>, arg1: String): tool.skill.mobSkill.Melee {
         throw "stub: addAttack_tool_skill_mobSkill_Melee not decompiled";
     }
 
-    public function addAttack_tool_skill_OldMobSkill(arg0: hl.Class, arg1: String): tool.skill.OldMobSkill {
+    public function addAttack_tool_skill_OldMobSkill(arg0: Class<Dynamic>, arg1: String): tool.skill.OldMobSkill {
         throw "stub: addAttack_tool_skill_OldMobSkill not decompiled";
     }
 
-    public function addAttack_tool_skill_mobSkill_TeleJump(arg0: hl.Class, arg1: String): tool.skill.mobSkill.TeleJump {
+    public function addAttack_tool_skill_mobSkill_TeleJump(arg0: Class<Dynamic>, arg1: String): tool.skill.mobSkill.TeleJump {
         throw "stub: addAttack_tool_skill_mobSkill_TeleJump not decompiled";
     }
 
@@ -752,7 +752,7 @@ class RotatingAxes extends en.LevelTrap {
     public var chains1: Array<Dynamic>;
     public var secondLastTail: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Dynamic = null) {
         super();
     }
 
@@ -804,11 +804,11 @@ class AnchorGuy extends en.Mob {
     public var runFactor: Float;
     public var anchorBullet: en.bu.Anchor;
     public var anchorAmmo: en.bu.AnchorAmmo;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var oneWayToDestroyCandidates: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -923,12 +923,12 @@ class PetMob extends en.Mob {
     public var followDistance: Int;
     public var teleJump: tool.skill.mobSkill.TeleJump;
     public var teleJumpInf: Dynamic;
-    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
     public var canBePet: Bool;
     public var maxDuplicates: Int;
     public var tailUpdate: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Entity, arg7: tool.InventItem, arg8: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0, arg6: Entity = null, arg7: tool.InventItem = null, arg8: Ref = null) {
         super();
     }
 
@@ -1095,7 +1095,7 @@ class ThrowableMushroom extends en.Mob {
     public var fromBoss: Bool;
     public var oneChargeYet: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -1208,7 +1208,7 @@ class BubbleShieldPower extends Power {
     public var repelGrenadeArea: tool.Area;
     public var parriedSomething: Bool;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -1250,7 +1250,7 @@ class BaseShield extends tool.Weapon {
     public var startTimeF: Float;
     public var totalParryDurationS: Float;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -1258,7 +1258,7 @@ class BaseShield extends tool.Weapon {
         throw "stub: createCounterBullet not decompiled";
     }
 
-    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.Weapon.WeaponSkill): Void {
     }
 
     public override function dispose(): Void {
@@ -1537,7 +1537,7 @@ class CrowManager extends Entity {
     public var lastKnownHeroRoom: level.Room;
     public var nearbyPlatforms: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Hero = null) {
         super();
     }
 
@@ -1599,7 +1599,7 @@ class BonePillar extends en.Mob {
     public static var __clid: Int;
     public var atkDir: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -1646,7 +1646,7 @@ class BonePillar extends en.Mob {
 }
 
 class Shark extends tool.Weapon {
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -1747,7 +1747,7 @@ class Hero extends Entity {
     public var lastParryShield: tool.weap.BaseShield;
     public var trail: Array<Dynamic>;
     public var curTrail: Int;
-    public var scarf: tool.ScarfManager;
+    public var scarf: tool.ScarfSegment.ScarfManager;
     public var oldTime: Float;
     public var pauseInfection: Bool;
     public var controller: tool.ControllerAccess;
@@ -1758,7 +1758,7 @@ class Hero extends Entity {
     public var _infos: Dynamic;
     public var sideKicks: Array<Dynamic>;
     public var lastHeadPos: tool.FPoint;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
     public var inventory: tool.Inventory;
     public var blueprints: Array<Dynamic>;
     public var awake: Bool;
@@ -2358,7 +2358,7 @@ class Hero extends Entity {
     public override function onEnterRoom(arg0: level.Room): Void {
     }
 
-    public function getCurrentShopMusic(arg0: level.MerchantData): hxd.res.Sound {
+    public function getCurrentShopMusic(arg0: level.LevelTypes.MerchantData): hxd.res.Sound {
         throw "stub: getCurrentShopMusic not decompiled";
     }
 
@@ -2393,7 +2393,7 @@ class Hero extends Entity {
     public function pushScarf(arg0: Float, arg1: Ref): Void {
     }
 
-    public function cancelMainSkills(arg0: hl.Class): Void {
+    public function cancelMainSkills(arg0: Class<Dynamic>): Void {
     }
 
     public function _setPerkCooldownS(arg0: tool.InventItem, arg1: Float): Void {
@@ -2720,7 +2720,7 @@ class Queen extends en.mob.Boss {
     public var jumpSpeed: Float;
     public var lastCutReady: Bool;
     public var safeSpot: Dynamic;
-    public var headPool: libs.heaps.ParticlePool;
+    public var headPool: libs.heaps.HParticle.ParticlePool;
     public var headNormalSb: libs.heaps.slib.HSpriteBatch;
     public var headAddSb: libs.heaps.slib.HSpriteBatch;
     public var headBlack: Int;
@@ -2744,9 +2744,8 @@ class Queen extends en.mob.Boss {
     public var lastChargeRatio: Float;
     public var lastHandX: Float;
     public var lastHandY: Float;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -3126,7 +3125,6 @@ class InventItem {
     public var overridedMoneyValue: Dynamic;
     public var _itemData: Dynamic;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: tool.InventItemKind) {
     }
@@ -3459,9 +3457,8 @@ class ItemMetaManager {
     public var _user: User;
     public var itemProgress: Array<Dynamic>;
     public var permanentItems: Array<Dynamic>;
-    public var forgeInvestedCells: haxe.ds.IntMap;
+    public var forgeInvestedCells: haxe.ds.IntMap<Dynamic>;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: User) {
     }

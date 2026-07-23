@@ -2,11 +2,10 @@ package tool;
 
 class Tutorial {
     public static var __clid: Int;
-    public var dones: haxe.ds.StringMap;
+    public var dones: haxe.ds.StringMap<Dynamic>;
     public var current: String;
     public var lastT: Float;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

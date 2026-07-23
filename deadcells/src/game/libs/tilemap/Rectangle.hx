@@ -6,6 +6,6 @@ class Rectangle {
     public var wid: Int;
     public var hei: Int;
 
-    public function new(arg0: Ref, arg1: Ref, arg2: Ref, arg3: Ref) {
+    public function new(arg0: Ref = null, arg1: Ref = null, arg2: Ref = null, arg3: Ref = null) {
     }
 }

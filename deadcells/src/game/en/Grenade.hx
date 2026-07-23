@@ -21,7 +21,7 @@ class Grenade extends Entity {
     public var isMinorGrenade: Bool;
     public var explodeSound: hxd.res.Sound;
 
-    public function new(arg0: Entity, arg1: Dynamic) {
+    public function new(arg0: Entity = null, arg1: Dynamic = null) {
         super();
     }
 

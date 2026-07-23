@@ -3,7 +3,7 @@ package tool.atk.atkSources;
 class HeroAttackSource extends tool.atk.AttackSourceImpl {
     public var invisibilityDmgBonus: Float;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

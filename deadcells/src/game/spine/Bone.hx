@@ -27,7 +27,6 @@ class Bone {
     public var d: Float;
     public var worldY: Float;
     public var sorted: Bool;
-    public var : Dynamic;
 
     public function new(arg0: spine.BoneData, arg1: spine.Skeleton, arg2: spine.Bone) {
     }

@@ -6,7 +6,7 @@ class Color {
     public var b: Float;
     public var a: Float;
 
-    public function new(arg0: Ref, arg1: Ref, arg2: Ref, arg3: Ref) {
+    public function new(arg0: Ref = null, arg1: Ref = null, arg2: Ref = null, arg3: Ref = null) {
     }
 
     public static function valueOf(arg0: String): spine.support.graphics.Color {

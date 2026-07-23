@@ -15,7 +15,7 @@ class Assets {
     public static var achievements: libs.heaps.slib.SpriteLib;
     public static var common: libs.heaps.slib.SpriteLib;
     public static var currentLevelCommonLoaded: Dynamic;
-    public static var dynamicAtlasByAtlasId: haxe.ds.EnumValueMap;
+    public static var dynamicAtlasByAtlasId: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
     public static var lib: AssetsLibManager;
     public static var truelleIcons: h2d.Tile;
     public static var itemIcons: h2d.Tile;
@@ -24,18 +24,18 @@ class Assets {
     public static var skillIcons: h2d.Tile;
     public static var infectionIcons: h2d.Tile;
     public static var levelLogos: ui.hud.LevelLogos;
-    public static var animationTracks: haxe.ds.StringMap;
+    public static var animationTracks: haxe.ds.StringMap<Dynamic>;
     public static var shaderQueue: Array<Dynamic>;
     public static var initDone: Bool;
     public static var AVAILABLE_FONTS: Array<Dynamic>;
     public static var FONT_LANGS_CHARS: String;
     public static var PRELOAD_SUB_MUSICS: Array<Dynamic>;
     public static var fontConf: Dynamic;
-    public static var schineseCharset: hxd.SimplifiedChineseCharset;
-    public static var tchineseCharset: hxd.TraditionalChineseCharset;
-    public static var japaneseCharset: hxd.JapaneseCharset;
-    public static var koreanCharset: hxd.KoreanCharset;
-    public static var backFramesCache: haxe.ds.StringMap;
+    public static var schineseCharset: hxd.Charset.SimplifiedChineseCharset;
+    public static var tchineseCharset: hxd.Charset.TraditionalChineseCharset;
+    public static var japaneseCharset: hxd.Charset.JapaneseCharset;
+    public static var koreanCharset: hxd.Charset.KoreanCharset;
+    public static var backFramesCache: haxe.ds.StringMap<Dynamic>;
 
     public static function checkBackFrames(arg0: libs.heaps.slib.HSprite, arg1: Int): Bool {
         throw "stub: checkBackFrames not decompiled";
@@ -72,7 +72,7 @@ class Assets {
         throw "stub: getDifficulty not decompiled";
     }
 
-    public static function getAnimationTracks(arg0: hxd.res.Resource): haxe.ds.StringMap {
+    public static function getAnimationTracks(arg0: hxd.res.Resource): haxe.ds.StringMap<Dynamic> {
         throw "stub: getAnimationTracks not decompiled";
     }
 
@@ -166,8 +166,8 @@ class Assets {
 }
 
 class AssetsLibManager {
-    public var cache: haxe.ds.StringMap;
-    public var levelCache: haxe.ds.StringMap;
+    public var cache: haxe.ds.StringMap<Dynamic>;
+    public var levelCache: haxe.ds.StringMap<Dynamic>;
     public var acache: Array<Dynamic>;
     public var shouldLoad: Bool;
 

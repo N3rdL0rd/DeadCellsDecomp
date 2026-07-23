@@ -1,7 +1,7 @@
 package cine;
 
 class MonsterDoor extends GameCinematic {
-    public function new(arg0: en.Hero, arg1: en.inter.MonsterDoor) {
+    public function new(arg0: en.Hero = null, arg1: en.inter.MonsterDoor = null) {
         super();
     }
 }

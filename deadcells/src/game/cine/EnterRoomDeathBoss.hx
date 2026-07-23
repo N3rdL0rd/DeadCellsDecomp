@@ -1,7 +1,7 @@
 package cine;
 
 class EnterRoomDeathBoss extends GameCinematic {
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

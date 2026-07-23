@@ -41,7 +41,7 @@ class DecisionElement {
     public var score: Float;
     public var out: Bool;
 
-    public function new(arg0: Dynamic) {
+    public function new(arg0: Dynamic = null) {
     }
 }
 

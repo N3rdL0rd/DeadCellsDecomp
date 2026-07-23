@@ -6,7 +6,7 @@ class Magnet extends en.Interactive {
     public var infos: Dynamic;
     public var item: tool.InventItem;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Int, arg5: tool.InventItem) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0., arg4: Int = 0, arg5: tool.InventItem = null) {
         super();
     }
 

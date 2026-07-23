@@ -8,7 +8,7 @@ class SummaryBossRuneEffect extends h2d.Layers {
     public var parentProcess: libs.Process;
     public var previousPS: Float;
 
-    public function new(arg0: libs.Process, arg1: Dynamic, arg2: Dynamic) {
+    public function new(arg0: libs.Process = null, arg1: Dynamic = null, arg2: Dynamic = null) {
         super();
     }
 

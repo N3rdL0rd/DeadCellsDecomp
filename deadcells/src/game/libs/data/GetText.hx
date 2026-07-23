@@ -1,12 +1,12 @@
 package libs.data;
 
 class GetText {
-    public var texts: haxe.ds.StringMap;
+    public var texts: haxe.ds.StringMap<Dynamic>;
 
     public function new() {
     }
 
-    public static function checkSyntax(arg0: haxe.ds.StringMap, arg1: haxe.ds.StringMap): Array<Dynamic> {
+    public static function checkSyntax(arg0: haxe.ds.StringMap<Dynamic>, arg1: haxe.ds.StringMap<Dynamic>): Array<Dynamic> {
         throw "stub: checkSyntax not decompiled";
     }
 
@@ -46,7 +46,7 @@ class MoReader {
     public function new(arg0: haxe.io.Bytes) {
     }
 
-    public function parse(): haxe.ds.StringMap {
+    public function parse(): haxe.ds.StringMap<Dynamic> {
         throw "stub: parse not decompiled";
     }
 

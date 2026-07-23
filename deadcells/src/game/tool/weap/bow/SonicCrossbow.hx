@@ -3,7 +3,7 @@ package tool.weap.bow;
 class SonicCrossbow extends tool.weap.BaseBow {
     public var shootIdx: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

@@ -12,7 +12,7 @@ class Tornado extends Power {
     public var sharknado: Bool;
     public var area: tool.Area;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 

@@ -6,7 +6,7 @@ class Rod extends Entity {
     public var power: pow.LightningRod;
     public var isLastRod: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: pow.LightningRod, arg4: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: pow.LightningRod = null, arg4: Bool = false) {
         super();
     }
 

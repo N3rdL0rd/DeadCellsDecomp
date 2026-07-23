@@ -34,13 +34,13 @@ class Sewer extends level.BiomeDisp {
     public override function renderFloorStamps(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addGridFloor(arg0: level.DecoZone): Void {
+    public function addGridFloor(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addPipeFall(arg0: level.DecoZone): Void {
+    public function addPipeFall(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public override function renderFrontWalls(): Void {

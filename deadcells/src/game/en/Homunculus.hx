@@ -24,7 +24,7 @@ class Homunculus extends Entity {
     public var backParts: Array<Dynamic>;
     public var parts: Array<Dynamic>;
     public var eye: libs.heaps.slib.HSprite;
-    public var pool: libs.heaps.ParticlePool;
+    public var pool: libs.heaps.HParticle.ParticlePool;
     public var fxSb: libs.heaps.slib.HSpriteBatch;
     public var ligamentSb: libs.heaps.slib.HSpriteBatch;
     public var ligaments: Array<Dynamic>;
@@ -34,7 +34,7 @@ class Homunculus extends Entity {
     public var moveSoundToggle: Bool;
     public var oldPos: tool.CPoint;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Bool, arg5: tool.mainSkills.Homunculus) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false, arg4: Bool = false, arg5: tool.mainSkills.Homunculus = null) {
         super();
     }
 

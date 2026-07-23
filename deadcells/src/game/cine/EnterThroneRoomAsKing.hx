@@ -9,7 +9,7 @@ class EnterThroneRoomAsKing extends GameCinematic {
     public var impactX: Float;
     public var impactY: Float;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

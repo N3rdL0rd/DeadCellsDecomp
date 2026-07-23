@@ -6,9 +6,9 @@ class Sickle extends en.Bullet {
     public var from: en.mob.boss.GardenerBoss;
     public var inf: Dynamic;
     public var sickleHitBox: tool.Area;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Ref) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Ref = null) {
         super();
     }
 

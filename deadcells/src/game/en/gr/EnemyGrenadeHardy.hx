@@ -6,7 +6,7 @@ class EnemyGrenadeHardy extends en.Grenade {
     public var tHardy: en.mob.ThrowableMushroom;
     public var skillInf: Dynamic;
 
-    public function new(arg0: Entity, arg1: en.mob.ThrowableMushroom, arg2: Entity, arg3: Dynamic) {
+    public function new(arg0: Entity = null, arg1: en.mob.ThrowableMushroom = null, arg2: Entity = null, arg3: Dynamic = null) {
         super();
     }
 

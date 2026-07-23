@@ -5,7 +5,7 @@ class CounteredBullet extends en.Bullet {
     public static var __clid: Int;
     public var color: Int;
 
-    public function new(arg0: Entity, arg1: en.Bullet, arg2: tool.atk.AttackData, arg3: Float, arg4: Float, arg5: Int) {
+    public function new(arg0: Entity = null, arg1: en.Bullet = null, arg2: tool.atk.AttackData = null, arg3: Float = 0., arg4: Float = 0., arg5: Int = 0) {
         super();
     }
 

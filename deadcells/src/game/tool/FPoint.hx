@@ -5,7 +5,6 @@ class FPoint {
     public var x: Float;
     public var y: Float;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: Float, arg1: Float) {
     }

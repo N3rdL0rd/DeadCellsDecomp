@@ -7,8 +7,6 @@ class DookuMagmaBallSpr {
     public var magmaBall: en.mob.boss.dooku.DookuMagmaBall;
     public var anim: spine.SpineAnimation;
     public var __uid: Int;
-    public var : Dynamic;
-    public var : Dynamic;
 
     public function new(arg0: en.mob.boss.dooku.DookuMagmaBall, arg1: Float, arg2: Float) {
     }
@@ -16,22 +14,22 @@ class DookuMagmaBallSpr {
     public function update(): Void {
     }
 
-    public function start(arg0: spine.TrackEntry): Void {
+    public function start(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function interrupt(arg0: spine.TrackEntry): Void {
+    public function interrupt(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function end(arg0: spine.TrackEntry): Void {
+    public function end(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function dispose(arg0: spine.TrackEntry): Void {
+    public function dispose(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
-    public function event(arg0: spine.TrackEntry, arg1: spine.Event): Void {
+    public function event(arg0: spine.AnimationState.TrackEntry, arg1: spine.Event): Void {
     }
 
-    public function complete(arg0: spine.TrackEntry): Void {
+    public function complete(arg0: spine.AnimationState.TrackEntry): Void {
     }
 
     public function getCLID(): Int {

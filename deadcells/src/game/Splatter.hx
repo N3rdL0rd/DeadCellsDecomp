@@ -1,5 +1,5 @@
 class Splatter {
-    public static var GRID: haxe.ds.IntMap;
+    public static var GRID: haxe.ds.IntMap<Dynamic>;
     public var gridId: Int;
     public var level: pr.Level;
     public var cd: libs.Cooldown;

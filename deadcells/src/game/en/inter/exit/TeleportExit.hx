@@ -19,7 +19,7 @@ class TeleportExit extends en.inter.Exit {
     public var varDX: Float;
     public var varDY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null, arg5: Dynamic = null) {
         super();
     }
 

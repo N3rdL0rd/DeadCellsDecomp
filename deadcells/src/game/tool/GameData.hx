@@ -21,7 +21,7 @@ class GameData {
     public var maxKillCount: Int;
     public var corruptedHealingKillCount: Int;
     public var twitchNewVoteSystem: Bool;
-    public var twitchBans: haxe.ds.StringMap;
+    public var twitchBans: haxe.ds.StringMap<Dynamic>;
     public var twitchBossUser: String;
     public var twitchBossDisplayName: String;
     public var twitchChicken: Bool;
@@ -49,12 +49,11 @@ class GameData {
     public var bankReplacedLevel: String;
     public var continueCount: Int;
     public var perkResetCount: Int;
-    public var gameFlags: haxe.ds.StringMap;
+    public var gameFlags: haxe.ds.StringMap<Dynamic>;
     public var currentIncentivizedLevel: String;
     public var currentCursedLevel: String;
     public var sUser: User;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: User, arg1: Int, arg2: Dynamic, arg3: Bool, arg4: Bool) {
     }

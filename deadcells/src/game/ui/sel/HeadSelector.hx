@@ -2,7 +2,7 @@ package ui.sel;
 
 class HeadSelector extends ui.sel.GridSelector {
     public var heroSpr: libs.heaps.slib.HSprite;
-    public var animationTracks: haxe.ds.StringMap;
+    public var animationTracks: haxe.ds.StringMap<Dynamic>;
     public var headContainer: h2d.Object;
     public var heads: Array<Dynamic>;
     public var userSkin: String;

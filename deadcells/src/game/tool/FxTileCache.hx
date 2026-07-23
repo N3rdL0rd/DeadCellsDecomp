@@ -4,7 +4,7 @@ class FxTile {
     public var id: Int;
     public var tile: h2d.Tile;
 
-    public function new(arg0: Dynamic, arg1: h2d.Tile) {
+    public function new(arg0: Dynamic = null, arg1: h2d.Tile = null) {
     }
 }
 

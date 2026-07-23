@@ -27,7 +27,7 @@ class Lighthouse extends level.DynamicBiomeDisp {
     public var fireSB: libs.heaps.slib.HSpriteBatch;
     public var fire2SB: libs.heaps.slib.HSpriteBatch;
     public var fireSBBack: libs.heaps.slib.HSpriteBatch;
-    public var smogEmitter: libs.heaps.Emitter;
+    public var smogEmitter: libs.heaps.HParticle.Emitter;
     public var smogEmitterVerticalOffsetCase: Float;
     public var flameFxArray: Array<Dynamic>;
     public var flameFxArray2: Array<Dynamic>;
@@ -114,10 +114,10 @@ class Lighthouse extends level.DynamicBiomeDisp {
     public function setSmogGradientBossFightMode(arg0: Bool): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function decorateLevel(): Void {
@@ -204,7 +204,7 @@ class Lighthouse extends level.DynamicBiomeDisp {
         throw "stub: canBeDestroy not decompiled";
     }
 
-    public function canPlaceLoreDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Bool {
+    public function canPlaceLoreDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Bool {
         throw "stub: canPlaceLoreDeco not decompiled";
     }
 }

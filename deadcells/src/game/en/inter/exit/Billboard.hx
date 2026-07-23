@@ -6,7 +6,7 @@ class Billboard extends en.inter.Exit {
     public var lanternA: libs.heaps.slib.HSpriteBE;
     public var lanternB: libs.heaps.slib.HSpriteBE;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Dynamic = null) {
         super();
     }
 

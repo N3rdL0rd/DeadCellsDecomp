@@ -4,13 +4,13 @@ class MvWalk extends tool.AutoMove {
     public static var tmpPath: tool.Path;
     public static var __clid: Int;
     public var path: tool.Path;
-    public var pathFinderWeights: haxe.ds.EnumValueMap;
+    public var pathFinderWeights: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
     public var canFall: Bool;
     public var curJump: Dynamic;
     public var t: tool.CPoint;
     public var next: tool.CPoint;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
         super();
     }
 

@@ -11,9 +11,9 @@ class LightningWall extends en.LevelTrap {
     public var endBall: libs.heaps.slib.HSprite;
     public var lightningMainColor: Int;
     public var lightningSecColor: Int;
-    public var soundEvent: level._LevelAudio.Event;
+    public var soundEvent: level.LevelAudio.Event;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 

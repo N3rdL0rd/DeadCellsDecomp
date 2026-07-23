@@ -7,7 +7,7 @@ class HomingBullet extends en.Bullet {
     public var speed: Float;
     public var ang: Float;
 
-    public function new(arg0: Entity, arg1: Entity, arg2: tool.atk.AttackData, arg3: Float, arg4: Ref, arg5: String, arg6: Float) {
+    public function new(arg0: Entity = null, arg1: Entity = null, arg2: tool.atk.AttackData = null, arg3: Float = 0., arg4: Ref = null, arg5: String = null, arg6: Float = 0.) {
         super();
     }
 

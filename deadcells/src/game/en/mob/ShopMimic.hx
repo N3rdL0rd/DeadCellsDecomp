@@ -42,23 +42,23 @@ class ShopMimic extends en.Mob {
     public var walkBounceInf: Dynamic;
     public var landCount: Int;
     public var meleeDeck: Array<Dynamic>;
-    public var meleeDeckWeights: haxe.ds.ObjectMap;
+    public var meleeDeckWeights: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var meleeDeckDh: tool.DecisionHelper;
     public var midRangeDeck: Array<Dynamic>;
-    public var midRangeDeckWeights: haxe.ds.ObjectMap;
+    public var midRangeDeckWeights: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var midRangeDeckDh: tool.DecisionHelper;
     public var rangedDeck: Array<Dynamic>;
-    public var rangedDeckWeights: haxe.ds.ObjectMap;
+    public var rangedDeckWeights: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var rangedDeckDh: tool.DecisionHelper;
     public var afterHookDeck: Array<Dynamic>;
-    public var afterHookDeckWeights: haxe.ds.ObjectMap;
+    public var afterHookDeckWeights: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var afterHookDeckDh: tool.DecisionHelper;
     public var afterParryDeck: Array<Dynamic>;
-    public var afterParryDeckWeights: haxe.ds.ObjectMap;
+    public var afterParryDeckWeights: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var afterParryDeckDh: tool.DecisionHelper;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: level.MerchantType, arg6: en.mob.BonusAttackType, arg7: en.inter.ItemDrop) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: level.MerchantType = null, arg6: en.mob.BonusAttackType = null, arg7: en.inter.ItemDrop = null) {
         super();
     }
 

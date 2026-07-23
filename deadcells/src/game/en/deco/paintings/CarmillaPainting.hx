@@ -32,7 +32,7 @@ class CarmillaPainting extends en.deco.paintings.LoopPainting {
     public var eyeLeft: en.deco.paintings.CarmillaEye;
     public var eyeRight: en.deco.paintings.CarmillaEye;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Float = 0.) {
         super();
     }
 

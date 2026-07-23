@@ -3,7 +3,7 @@ package uicore;
 class HighlighterComponent extends h2d.Object {
     public var enabled: Bool;
 
-    public function new(arg0: h2d.Object) {
+    public function new(arg0: h2d.Object = null) {
         super();
     }
 

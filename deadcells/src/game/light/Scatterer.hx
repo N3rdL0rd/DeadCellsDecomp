@@ -10,7 +10,7 @@ class Scatterer extends light.DeferredSprite {
     public var offsetX: Float;
     public var offsetY: Float;
 
-    public function new(arg0: h2d.Object) {
+    public function new(arg0: h2d.Object = null) {
         super();
     }
 }

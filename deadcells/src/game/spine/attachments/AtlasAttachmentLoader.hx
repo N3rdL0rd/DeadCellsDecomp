@@ -2,7 +2,6 @@ package spine.attachments;
 
 class AtlasAttachmentLoader {
     public var atlas: spine.support.graphics.TextureAtlas;
-    public var : Dynamic;
 
     public function new(arg0: spine.support.graphics.TextureAtlas) {
     }

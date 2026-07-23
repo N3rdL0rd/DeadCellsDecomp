@@ -23,10 +23,10 @@ class Cavern extends level.BiomeDisp {
     public function decorateLevel(): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addParallaxAlcove(arg0: level.DecoZone): Void {
+    public function addParallaxAlcove(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function addColumn(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Void {
@@ -38,7 +38,7 @@ class Cavern extends level.BiomeDisp {
     public function addBarrelLantern(arg0: Int, arg1: Int): Void {
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function checkMinLightDist(arg0: Float, arg1: Float, arg2: Float): Bool {

@@ -36,7 +36,7 @@ class ServerApi {
         throw "stub: canSaveScore not decompiled";
     }
 
-    public static function request(arg0: String, arg1: haxe.ds.StringMap, arg2: Dynamic, arg3: Dynamic): Void {
+    public static function request(arg0: String, arg1: haxe.ds.StringMap<Dynamic>, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
     public static function getPfUser(arg0: Dynamic): Void {

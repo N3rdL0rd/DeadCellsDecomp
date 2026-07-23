@@ -22,7 +22,7 @@ class HeroHead {
     public var customBackInf: Dynamic;
     public var customBackSpr: libs.heaps.slib.HSprite;
     public var alwaysShowBack: Bool;
-    public var pool: libs.heaps.ParticlePool;
+    public var pool: libs.heaps.HParticle.ParticlePool;
     public var headNormalSb: libs.heaps.slib.HSpriteBatch;
     public var headAddSb: libs.heaps.slib.HSpriteBatch;
     public var headBlack: Int;
@@ -34,7 +34,6 @@ class HeroHead {
     public var cineHeadMode: tool.HeadMode;
     public var fromUI: Bool;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

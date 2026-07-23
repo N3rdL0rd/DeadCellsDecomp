@@ -13,7 +13,7 @@ class ThrowingAxeEntity extends Entity {
     public var isGoingDown: Bool;
     public var canTouch: Bool;
 
-    public function new(arg0: Entity, arg1: tool.Weapon, arg2: Float) {
+    public function new(arg0: Entity = null, arg1: tool.Weapon = null, arg2: Float = 0.) {
         super();
     }
 

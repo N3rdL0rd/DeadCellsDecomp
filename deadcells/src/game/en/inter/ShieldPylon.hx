@@ -6,7 +6,7 @@ class ShieldPylon extends en.Interactive {
     public var shieldTarget: Entity;
     public var color: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null) {
         super();
     }
 

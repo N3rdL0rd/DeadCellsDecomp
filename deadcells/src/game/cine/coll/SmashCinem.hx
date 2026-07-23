@@ -55,7 +55,7 @@ class CollectorSaying extends ui.Process {
     public var sfxDeck: libs.RandDeck;
     public var onSfxPlay: Dynamic;
 
-    public function new(arg0: libs.Process, arg1: String, arg2: libs.RandDeck, arg3: Dynamic) {
+    public function new(arg0: libs.Process = null, arg1: String = null, arg2: libs.RandDeck = null, arg3: Dynamic = null) {
         super();
     }
 

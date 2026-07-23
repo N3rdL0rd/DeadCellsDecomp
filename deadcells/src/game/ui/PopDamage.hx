@@ -9,7 +9,7 @@ class PopDamage extends ui.Process {
     public var startIGX: Float;
     public var startIGY: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Int, arg3: Ref, arg4: Dynamic) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Int = 0, arg3: Ref = null, arg4: Dynamic = null) {
         super();
     }
 

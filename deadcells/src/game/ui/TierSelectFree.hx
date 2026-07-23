@@ -18,7 +18,7 @@ class TierSelectFree extends ui.TierSelect {
     public var infoTotalText: ui.Text;
     public var infoRecommendedText: ui.Text;
 
-    public function new(arg0: en.Hero, arg1: Entity, arg2: Ref, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic) {
+    public function new(arg0: en.Hero = null, arg1: Entity = null, arg2: Ref = null, arg3: Dynamic = null, arg4: Dynamic = null, arg5: Dynamic = null) {
         super();
     }
 

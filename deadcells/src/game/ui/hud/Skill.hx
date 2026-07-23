@@ -51,7 +51,7 @@ class Skill extends h2d.Layers {
     public var tmpPoint: h2d.col.Point;
     public var onSkillReady: Dynamic;
 
-    public function new(arg0: Dynamic, arg1: h2d.Object, arg2: Ref, arg3: Ref) {
+    public function new(arg0: Dynamic = null, arg1: h2d.Object = null, arg2: Ref = null, arg3: Ref = null) {
         super();
     }
 
@@ -166,10 +166,10 @@ class Skill extends h2d.Layers {
     public function onResize(): Void {
     }
 
-    public function getBoundsRec(arg0: h2d.Object, arg1: h2d.col.Bounds, arg2: Bool): Void {
+    public override function getBoundsRec(arg0: h2d.Object, arg1: h2d.col.Bounds, arg2: Bool): Void {
     }
 
-    public function sync(arg0: h2d.RenderContext): Void {
+    public override function sync(arg0: h2d.RenderContext): Void {
     }
 
     public function getAmmo(): Float {

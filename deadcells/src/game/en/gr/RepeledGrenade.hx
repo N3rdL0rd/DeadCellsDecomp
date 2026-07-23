@@ -5,7 +5,7 @@ class RepeledGrenade extends en.Grenade {
     public static var __clid: Int;
     public var item: tool.InventItem;
 
-    public function new(arg0: en.Hero, arg1: en.Grenade, arg2: tool.InventItem, arg3: Int) {
+    public function new(arg0: en.Hero = null, arg1: en.Grenade = null, arg2: tool.InventItem = null, arg3: Int = 0) {
         super();
     }
 

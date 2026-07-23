@@ -12,13 +12,13 @@ class CDBManager {
         throw "stub: getAlteredCDB not decompiled";
     }
 
-    public function parseOverloadedCDB(arg0: Dynamic, arg1: Dynamic, arg2: haxe.ds.StringMap): Void {
+    public function parseOverloadedCDB(arg0: Dynamic, arg1: Dynamic, arg2: haxe.ds.StringMap<Dynamic>): Void {
     }
 
-    public function expand(arg0: String, arg1: haxe.ds.StringMap, arg2: haxe.ds.StringMap): Void {
+    public function expand(arg0: String, arg1: haxe.ds.StringMap<Dynamic>, arg2: haxe.ds.StringMap<Dynamic>): Void {
     }
 
-    public function collapse(arg0: haxe.ds.StringMap, arg1: haxe.ds.StringMap): String {
+    public function collapse(arg0: haxe.ds.StringMap<Dynamic>, arg1: haxe.ds.StringMap<Dynamic>): String {
         throw "stub: collapse not decompiled";
     }
 
@@ -36,7 +36,7 @@ class CDBSeparator {
     public var name: String;
     public var lineIndex: Int;
 
-    public function new(arg0: Int, arg1: String, arg2: Int) {
+    public function new(arg0: Int = 0, arg1: String = null, arg2: Int = 0) {
     }
 
     public function pushLine(): Void {

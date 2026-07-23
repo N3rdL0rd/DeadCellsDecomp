@@ -17,7 +17,7 @@ class Anchor extends en.Bullet {
     public var hasBeenBlocked: Bool;
     public var hasBeenCountered: Bool;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: String) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Int = 0, arg4: Int = 0, arg5: Int = 0, arg6: Int = 0, arg7: String = null) {
         super();
     }
 

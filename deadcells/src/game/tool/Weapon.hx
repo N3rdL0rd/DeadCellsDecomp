@@ -21,7 +21,7 @@ class Weapon {
     public var requireRelease: Bool;
     public var critFeedback: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
     }
 
     public static function create(arg0: en.Hero, arg1: tool.InventItem): tool.Weapon {

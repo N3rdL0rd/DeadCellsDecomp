@@ -26,7 +26,7 @@ class TmxXmlParser {
     public static function parseTileset(arg0: tiled.Tmx, arg1: Xml, arg2: String): Void {
     }
 
-    public static function parseProperties(arg0: Xml, arg1: haxe.ds.StringMap): Void {
+    public static function parseProperties(arg0: Xml, arg1: haxe.ds.StringMap<Dynamic>): Void {
     }
 
     public static function parseCommonLayerAttributes(arg0: Xml, arg1: tiled.TmxBaseLayer): Void {
@@ -43,7 +43,7 @@ class TmxXmlParser {
     public static function readObjectTypes(arg0: haxe.io.BytesInput, arg1: tiled.Tmx): Void {
     }
 
-    public static function readTypeDef(arg0: haxe.io.BytesInput): haxe.ds.StringMap {
+    public static function readTypeDef(arg0: haxe.io.BytesInput): haxe.ds.StringMap<Dynamic> {
         throw "stub: readTypeDef not decompiled";
     }
 
@@ -87,7 +87,7 @@ class TmxXmlParser {
     public static function readBaseObject(arg0: haxe.io.BytesInput, arg1: tiled.TmxBaseObject): Void {
     }
 
-    public static function readProperties(arg0: haxe.io.BytesInput): haxe.ds.StringMap {
+    public static function readProperties(arg0: haxe.io.BytesInput): haxe.ds.StringMap<Dynamic> {
         throw "stub: readProperties not decompiled";
     }
 
@@ -95,11 +95,11 @@ class TmxXmlParser {
         throw "stub: readString not decompiled";
     }
 
-    public static function parseTmx(arg0: haxe.io.Bytes, arg1: String, arg2: haxe.ds.StringMap): tiled.Tmx {
+    public static function parseTmx(arg0: haxe.io.Bytes, arg1: String, arg2: haxe.ds.StringMap<Dynamic>): tiled.Tmx {
         throw "stub: parseTmx not decompiled";
     }
 
-    public static function parseRes(arg0: hxd.res.Resource, arg1: haxe.ds.StringMap): tiled.Tmx {
+    public static function parseRes(arg0: hxd.res.Resource, arg1: haxe.ds.StringMap<Dynamic>): tiled.Tmx {
         throw "stub: parseRes not decompiled";
     }
 }

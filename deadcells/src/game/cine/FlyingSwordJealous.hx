@@ -3,7 +3,7 @@ package cine;
 class FlyingSwordJealous extends GameCinematic {
     public var hero: en.Hero;
 
-    public function new(arg0: en.Hero, arg1: en.pet.FlyingSword) {
+    public function new(arg0: en.Hero = null, arg1: en.pet.FlyingSword = null) {
         super();
     }
 

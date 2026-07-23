@@ -6,7 +6,7 @@ class MapGenerator {
     public var autoRetry: Int;
     public var valid: Bool;
     public var placedRooms: Array<Dynamic>;
-    public var rects: haxe.ds.List;
+    public var rects: haxe.ds.List<Dynamic>;
     public var tries: Int;
     public var ldat: Dynamic;
     public var root: level.RoomNode;
@@ -21,7 +21,7 @@ class MapGenerator {
     public var allTemplates: Array<Dynamic>;
     public var templates: Dynamic;
 
-    public function new(arg0: Dynamic, arg1: level.RoomNode, arg2: libs.Rand, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: Dynamic = null, arg1: level.RoomNode = null, arg2: libs.Rand = null, arg3: Dynamic = null, arg4: Dynamic = null) {
     }
 
     public function get_levelLeftToRight(): Bool {
@@ -62,14 +62,14 @@ class MapGenerator {
     public function setTemplatesScore(arg0: Array<Dynamic>, arg1: Dynamic): Void {
     }
 
-    public function checkLinkConstraint(arg0: level.RoomNode, arg1: level.RoomTemplateLink): Bool {
+    public function checkLinkConstraint(arg0: level.RoomNode, arg1: level.RoomTemplate.RoomTemplateLink): Bool {
         throw "stub: checkLinkConstraint not decompiled";
     }
 
-    public function addRects(arg0: level.RoomNode, arg1: haxe.ds.List): Void {
+    public function addRects(arg0: level.RoomNode, arg1: haxe.ds.List<Dynamic>): Void {
     }
 
-    public function getValidTemplates(arg0: Dynamic, arg1: haxe.ds.List): Array<Dynamic> {
+    public function getValidTemplates(arg0: Dynamic, arg1: haxe.ds.List<Dynamic>): Array<Dynamic> {
         throw "stub: getValidTemplates not decompiled";
     }
 

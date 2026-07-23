@@ -8,7 +8,7 @@ class Stuff extends en.Bullet {
     public var ang: Float;
     public var stunTime: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Float) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Int = 0, arg5: Float = 0.) {
         super();
     }
 

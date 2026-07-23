@@ -3,7 +3,6 @@ package tool.mainSkills.blackboards;
 class MainSkillBlackBoard {
     public static var __clid: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

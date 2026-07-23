@@ -16,8 +16,8 @@ class MobsGen {
     public var bonusTotalMobCount: Int;
     public var platforms: Array<Dynamic>;
     public var pfPerMob: Dynamic;
-    public var roomMaxMobs: haxe.ds.ObjectMap;
-    public var pfMaxMobs: haxe.ds.IntMap;
+    public var roomMaxMobs: haxe.ds.ObjectMap<Dynamic, Dynamic>;
+    public var pfMaxMobs: haxe.ds.IntMap<Dynamic>;
     public var inStone: Bool;
     public var ltick: Dynamic;
 
@@ -39,7 +39,7 @@ class MobsGen {
         throw "stub: getAvailableMobs not decompiled";
     }
 
-    public function placeSingleRoomMobs(arg0: level.MobGenInfos, arg1: haxe.ds.IntMap): Bool {
+    public function placeSingleRoomMobs(arg0: level.MobGenInfos, arg1: haxe.ds.IntMap<Dynamic>): Bool {
         throw "stub: placeSingleRoomMobs not decompiled";
     }
 
@@ -128,7 +128,7 @@ class MobGenInfos {
     public var maxPackSize: Int;
     public var spawnWith: Array<Dynamic>;
 
-    public function new(arg0: String, arg1: Ref) {
+    public function new(arg0: String = null, arg1: Ref = null) {
     }
 
     public static function fromCdb(arg0: Dynamic): level.MobGenInfos {

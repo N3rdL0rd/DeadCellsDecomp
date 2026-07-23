@@ -9,7 +9,7 @@ class FakeHeroDeath extends GameCinematic {
     public var gameOverScreen: ui.GameOver;
     public var inf: Dynamic;
     public var hom: en.Homunculus;
-    public var pool: libs.heaps.ParticlePool;
+    public var pool: libs.heaps.HParticle.ParticlePool;
     public var fxSb: libs.heaps.slib.HSpriteBatch;
     public var heroDeathChannel: hxd.snd.Channel;
     public var baseColor: Int;
@@ -20,7 +20,7 @@ class FakeHeroDeath extends GameCinematic {
     public var recoverX: Float;
     public var recoverY: Float;
 
-    public function new(arg0: en.Hero, arg1: en.mob.boss.Queen, arg2: Bool, arg3: Dynamic, arg4: hxd.snd.Channel) {
+    public function new(arg0: en.Hero = null, arg1: en.mob.boss.Queen = null, arg2: Bool = false, arg3: Dynamic = null, arg4: hxd.snd.Channel = null) {
         super();
     }
 

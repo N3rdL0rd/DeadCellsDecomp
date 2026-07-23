@@ -5,7 +5,7 @@ class TextureAtlas {
     public var regions: Array<Dynamic>;
     public var textureLoader: Dynamic;
 
-    public function new(arg0: String, arg1: Dynamic) {
+    public function new(arg0: String = null, arg1: Dynamic = null) {
     }
 
     public function load(arg0: String, arg1: Dynamic): Void {
@@ -20,7 +20,7 @@ class Reader {
     public var lines: Array<Dynamic>;
     public var index: Int;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
     }
 
     public function trim(arg0: String): String {

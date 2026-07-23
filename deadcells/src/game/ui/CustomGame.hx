@@ -77,7 +77,7 @@ class CustomGame extends ui.Process {
     public function openPrevGroup(arg0: Int): Void {
     }
 
-    public function createPresetRadioWidget(arg0: CGPreset, arg1: String, arg2: String, arg3: Dynamic, arg4: Dynamic): ui.CGWidget {
+    public function createPresetRadioWidget(arg0: CGPreset, arg1: String, arg2: String, arg3: Dynamic, arg4: Dynamic): ui.CustomGame.CGWidget {
         throw "stub: createPresetRadioWidget not decompiled";
     }
 
@@ -85,27 +85,27 @@ class CustomGame extends ui.Process {
         throw "stub: createSimpleText not decompiled";
     }
 
-    public function createButtonWidget(arg0: String, arg1: String, arg2: Dynamic): ui.CGWidget {
+    public function createButtonWidget(arg0: String, arg1: String, arg2: Dynamic): ui.CustomGame.CGWidget {
         throw "stub: createButtonWidget not decompiled";
     }
 
-    public function createCustomSlider(arg0: String, arg1: Array<Dynamic>, arg2: Bool, arg3: Int, arg4: Int, arg5: Dynamic): ui.CGWidget {
+    public function createCustomSlider(arg0: String, arg1: Array<Dynamic>, arg2: Bool, arg3: Int, arg4: Int, arg5: Dynamic): ui.CustomGame.CGWidget {
         throw "stub: createCustomSlider not decompiled";
     }
 
-    public function createToggleWidget(arg0: String, arg1: String, arg2: Bool, arg3: Dynamic): ui.CGWidget {
+    public function createToggleWidget(arg0: String, arg1: String, arg2: Bool, arg3: Dynamic): ui.CustomGame.CGWidget {
         throw "stub: createToggleWidget not decompiled";
     }
 
-    public function createRadioWidget(arg0: String, arg1: String, arg2: Dynamic, arg3: Bool): ui.CGWidget {
+    public function createRadioWidget(arg0: String, arg1: String, arg2: Dynamic, arg3: Bool): ui.CustomGame.CGWidget {
         throw "stub: createRadioWidget not decompiled";
     }
 
-    public function createSliderWidget(arg0: String, arg1: String, arg2: Bool, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Dynamic): ui.CGWidget {
+    public function createSliderWidget(arg0: String, arg1: String, arg2: Bool, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Dynamic): ui.CustomGame.CGWidget {
         throw "stub: createSliderWidget not decompiled";
     }
 
-    public function createBaseEquipmentWidget(): ui.CGWidget {
+    public function createBaseEquipmentWidget(): ui.CustomGame.CGWidget {
         throw "stub: createBaseEquipmentWidget not decompiled";
     }
 
@@ -118,11 +118,11 @@ class CustomGame extends ui.Process {
     public function createItemWrapper(arg0: Int): Void {
     }
 
-    public function createItemWidget(arg0: String, arg1: h2d.Object): ui.CGWidget {
+    public function createItemWidget(arg0: String, arg1: h2d.Object): ui.CustomGame.CGWidget {
         throw "stub: createItemWidget not decompiled";
     }
 
-    public function createNumberWidget(arg0: String, arg1: String, arg2: Int, arg3: Int, arg4: Bool, arg5: Dynamic): ui.CGWidget {
+    public function createNumberWidget(arg0: String, arg1: String, arg2: Int, arg3: Int, arg4: Bool, arg5: Dynamic): ui.CustomGame.CGWidget {
         throw "stub: createNumberWidget not decompiled";
     }
 
@@ -180,9 +180,9 @@ class CustomGame extends ui.Process {
     public override function onDispose(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

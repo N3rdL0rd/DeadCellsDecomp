@@ -32,7 +32,7 @@ class CastleAlchemy extends level.disp.Castle {
     public override function postUpdate(): Void {
     }
 
-    public override function addAlcoves(arg0: level.DecoZone, arg1: Int, arg2: String, arg3: Int): Void {
+    public override function addAlcoves(arg0: level.DecoTypes.DecoZone, arg1: Int, arg2: String, arg3: Int): Void {
     }
 
     public override function getFloorJunkNames(): String {

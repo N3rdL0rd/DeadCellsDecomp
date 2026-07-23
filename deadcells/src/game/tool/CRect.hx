@@ -7,9 +7,8 @@ class CRect {
     public var wid: Int;
     public var hei: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: Int, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
     }
 
     public function getCLID(): Int {

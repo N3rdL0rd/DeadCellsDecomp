@@ -3,7 +3,7 @@ package libs.heaps;
 class HKeyFrames extends h2d.KeyFrames {
     public var groupFirstIndex: Int;
 
-    public function new(arg0: Dynamic, arg1: String, arg2: h2d.Object) {
+    public function new(arg0: Dynamic = null, arg1: String = null, arg2: h2d.Object = null) {
         super();
     }
 

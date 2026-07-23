@@ -12,7 +12,7 @@ class DebugScrollingGraph extends h2d.Drawable {
     public var buffer: h3d.Buffer;
     public var nQuads: Int;
 
-    public function new(arg0: h2d.Object, arg1: Int) {
+    public function new(arg0: h2d.Object = null, arg1: Int = 0) {
         super();
     }
 
@@ -42,7 +42,7 @@ class DebugScrollingGraph extends h2d.Drawable {
 class FrameProfilerRealTime extends tool.DebugScrollingGraph {
     public var last: Float;
 
-    public function new(arg0: h2d.Object, arg1: Int) {
+    public function new(arg0: h2d.Object = null, arg1: Int = 0) {
         super();
     }
 
@@ -52,7 +52,7 @@ class FrameProfilerRealTime extends tool.DebugScrollingGraph {
 }
 
 class ParticleProfilerRealTime extends tool.DebugScrollingGraph {
-    public function new(arg0: h2d.Object, arg1: Int) {
+    public function new(arg0: h2d.Object = null, arg1: Int = 0) {
         super();
     }
 

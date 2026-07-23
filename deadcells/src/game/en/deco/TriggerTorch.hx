@@ -8,7 +8,7 @@ class TriggerTorch extends en.Deco {
     public var audioChannel: hxd.snd.Channel;
     public var bd: level.BiomeDisp;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null) {
         super();
     }
 

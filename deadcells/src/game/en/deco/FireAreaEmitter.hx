@@ -6,7 +6,7 @@ class FireAreaEmitter extends en.Deco {
     public var width: Int;
     public var blue: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Bool = false) {
         super();
     }
 

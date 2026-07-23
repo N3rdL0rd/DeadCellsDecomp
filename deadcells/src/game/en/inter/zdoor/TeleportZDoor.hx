@@ -20,7 +20,7 @@ class TeleportZDoor extends en.inter.ZDoor {
     public var varDX: Float;
     public var varDY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelMap = null, arg4: Int = 0, arg5: Ref = null) {
         super();
     }
 

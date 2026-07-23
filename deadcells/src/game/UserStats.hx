@@ -41,7 +41,6 @@ class UserStats {
     public var incentivizedBiomesStats: Dynamic;
     public var statsDataVersion: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }
@@ -154,9 +153,8 @@ class MonsterStat {
     public var killedBy: Int;
     public var elites: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: String, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: String = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
     }
 
     public function getCLID(): Int {
@@ -182,9 +180,8 @@ class BiomeStat {
     public var id: String;
     public var reached: Int;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: String, arg1: Int) {
+    public function new(arg0: String = null, arg1: Int = 0) {
     }
 
     public function getCLID(): Int {

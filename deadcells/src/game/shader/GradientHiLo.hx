@@ -7,7 +7,7 @@ class GradientHiLo extends hxsl.Shader {
     public var hiColor__: h3d.Vector;
     public var scale__: Float;
 
-    public function new(arg0: Int, arg1: Int, arg2: Dynamic) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Dynamic = null) {
         super();
     }
 

@@ -7,7 +7,7 @@ class DiverseDeckLightningBall extends Entity {
     public var angStep: Float;
     public var power: pow.DiverseDeckBase;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: pow.DiverseDeckBase) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Ref = null, arg4: pow.DiverseDeckBase = null) {
         super();
     }
 

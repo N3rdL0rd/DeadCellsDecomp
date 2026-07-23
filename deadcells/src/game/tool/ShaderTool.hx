@@ -1,7 +1,7 @@
 package tool;
 
 class ShaderTool {
-    public static function getShaderValueLiteral(arg0: Array<Int>, arg1: hxsl.ShaderConst): String {
+    public static function getShaderValueLiteral(arg0: Array<Int>, arg1: hxsl.SharedShader.ShaderConst): String {
         throw "stub: getShaderValueLiteral not decompiled";
     }
 
@@ -13,7 +13,7 @@ class ShaderTool {
         throw "stub: createFallbackShaderList not decompiled";
     }
 
-    public static function createBase2dShader(): shader.Base2d {
+    public static function createBase2dShader(): h3d.shader.Base2d {
         throw "stub: createBase2dShader not decompiled";
     }
 

@@ -10,13 +10,13 @@ class DookuManager extends Entity {
     public var fakeDooku: en.FakeDooku;
     public var dookuBatManager: en.DookuBatManager;
     public var dookuBeast: en.mob.boss.DookuBeast;
-    public var middleM: level.Marker;
+    public var middleM: level.LevelTypes.Marker;
     public var roomMiddle: tool.CPoint;
     public var noDamage: Bool;
     public var ambiantChannel: hxd.snd.Channel;
     public var fe: en.FocusEntity;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.Hero = null) {
         super();
     }
 

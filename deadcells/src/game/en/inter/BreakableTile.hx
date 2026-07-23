@@ -6,7 +6,7 @@ class BreakableTile extends en.Interactive {
     public var cwid: Int;
     public var chei: Int;
     public var root: h2d.Object;
-    public var lightSegment: light.Wall;
+    public var lightSegment: light.Visibility.Wall;
     public var lastHitDir: Int;
     public var shake: Float;
     public var tileUp: libs.heaps.slib.HSprite;
@@ -19,7 +19,7 @@ class BreakableTile extends en.Interactive {
     public var horizontal: Bool;
     public var glowRatio: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 

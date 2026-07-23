@@ -12,7 +12,7 @@ class HeroDeathRespawn extends GameCinematic {
     public var respawnCy: Int;
     public var fxSb: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 

@@ -12,7 +12,7 @@ class FrameData {
     public var realHei: Int;
     public var tile: h2d.Tile;
 
-    public function new(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Int, arg8: Int, arg9: h2d.Tile) {
+    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Int = 0, arg6: Int = 0, arg7: Int = 0, arg8: Int = 0, arg9: h2d.Tile = null) {
     }
 }
 
@@ -24,16 +24,16 @@ class LibGroup {
     public var frames: Array<Dynamic>;
     public var anim: Array<Int>;
 
-    public function new(arg0: String, arg1: Int, arg2: Int, arg3: Int, arg4: Array<Dynamic>, arg5: Array<Int>) {
+    public function new(arg0: String = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Array<Dynamic> = null, arg5: Array<Int> = null) {
     }
 }
 
 class SpriteLib {
     public static var TMOD: Float;
-    public var groups: haxe.ds.StringMap;
+    public var groups: haxe.ds.StringMap<Dynamic>;
     public var defaultCenterX: Float;
     public var defaultCenterY: Float;
-    public var currentGroup: libs.heaps.slib.LibGroup;
+    public var currentGroup: libs.heaps.slib.SpriteLib.LibGroup;
     public var gridX: Int;
     public var gridY: Int;
     public var children: Array<Dynamic>;
@@ -59,7 +59,7 @@ class SpriteLib {
     public function ensureTexturesAllocated(): Void {
     }
 
-    public function createGroup(arg0: String): libs.heaps.slib.LibGroup {
+    public function createGroup(arg0: String): libs.heaps.slib.SpriteLib.LibGroup {
         throw "stub: createGroup not decompiled";
     }
 
@@ -79,11 +79,11 @@ class SpriteLib {
         throw "stub: getNormalMapFromSprite not decompiled";
     }
 
-    public function sliceCustom(arg0: String, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Int, arg8: Int, arg9: Int, arg10: Int): libs.heaps.slib.FrameData {
+    public function sliceCustom(arg0: String, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Int, arg8: Int, arg9: Int, arg10: Int): libs.heaps.slib.SpriteLib.FrameData {
         throw "stub: sliceCustom not decompiled";
     }
 
-    public function resliceCustom(arg0: String, arg1: Int, arg2: libs.heaps.slib.FrameData): libs.heaps.slib.FrameData {
+    public function resliceCustom(arg0: String, arg1: Int, arg2: libs.heaps.slib.SpriteLib.FrameData): libs.heaps.slib.SpriteLib.FrameData {
         throw "stub: resliceCustom not decompiled";
     }
 
@@ -97,7 +97,7 @@ class SpriteLib {
     public function removeChild(arg0: Dynamic): Void {
     }
 
-    public function be_get(arg0: h2d.SpriteBatch, arg1: String, arg2: Ref, arg3: Ref, arg4: Ref): h2d.BatchElement {
+    public function be_get(arg0: h2d.SpriteBatch, arg1: String, arg2: Ref, arg3: Ref, arg4: Ref): h2d.SpriteBatch.BatchElement {
         throw "stub: be_get not decompiled";
     }
 

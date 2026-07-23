@@ -14,35 +14,35 @@ class Parser {
         throw "stub: createStepMatrix not decompiled";
     }
 
-    public function getCollisionPolygons(arg0: libs.tilemap.Selector): Array<Dynamic> {
+    public function getCollisionPolygons(arg0: libs.tilemap.Data.Selector): Array<Dynamic> {
         throw "stub: getCollisionPolygons not decompiled";
     }
 
-    public function getPiercedPolygons(arg0: libs.tilemap.Selector): Array<Dynamic> {
+    public function getPiercedPolygons(arg0: libs.tilemap.Data.Selector): Array<Dynamic> {
         throw "stub: getPiercedPolygons not decompiled";
     }
 
-    public function getCoveringRectangles(arg0: libs.tilemap.Selector, arg1: libs.tilemap.SplitMode): Array<Dynamic> {
+    public function getCoveringRectangles(arg0: libs.tilemap.Data.Selector, arg1: libs.tilemap.SplitMode): Array<Dynamic> {
         throw "stub: getCoveringRectangles not decompiled";
     }
 
-    public function getTransitionSegments(arg0: Int, arg1: libs.tilemap.Selector, arg2: libs.tilemap.Selector): Array<Dynamic> {
+    public function getTransitionSegments(arg0: Int, arg1: libs.tilemap.Data.Selector, arg2: libs.tilemap.Data.Selector): Array<Dynamic> {
         throw "stub: getTransitionSegments not decompiled";
     }
 
-    public function getCorners(arg0: libs.tilemap.Selector, arg1: libs.tilemap.Selector, arg2: Ref): Array<Dynamic> {
+    public function getCorners(arg0: libs.tilemap.Data.Selector, arg1: libs.tilemap.Data.Selector, arg2: Ref): Array<Dynamic> {
         throw "stub: getCorners not decompiled";
     }
 
-    public function scanTransition(arg0: Int, arg1: Int, arg2: Int, arg3: libs.tilemap.Selector, arg4: libs.tilemap.Selector): Int {
+    public function scanTransition(arg0: Int, arg1: Int, arg2: Int, arg3: libs.tilemap.Data.Selector, arg4: libs.tilemap.Data.Selector): Int {
         throw "stub: scanTransition not decompiled";
     }
 
-    public function scanRectangle(arg0: libs.tilemap.Segment, arg1: Int, arg2: libs.tilemap.Selector, arg3: libs.tilemap.Selector): libs.tilemap.Rectangle {
+    public function scanRectangle(arg0: libs.tilemap.Segment, arg1: Int, arg2: libs.tilemap.Data.Selector, arg3: libs.tilemap.Data.Selector): libs.tilemap.Rectangle {
         throw "stub: scanRectangle not decompiled";
     }
 
-    public function scanRectangles(arg0: libs.tilemap.Segment, arg1: Int, arg2: libs.tilemap.Selector, arg3: libs.tilemap.Selector): Array<Dynamic> {
+    public function scanRectangles(arg0: libs.tilemap.Segment, arg1: Int, arg2: libs.tilemap.Data.Selector, arg3: libs.tilemap.Data.Selector): Array<Dynamic> {
         throw "stub: scanRectangles not decompiled";
     }
 }

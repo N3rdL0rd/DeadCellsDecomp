@@ -13,7 +13,7 @@ class SuspendedWeight extends Entity {
     public var triggered: Bool;
     public var alreadyHitEntities: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Entity = null) {
         super();
     }
 

@@ -9,7 +9,7 @@ class DookuBreakableFloor extends en.inter.FloatingPlatform {
     public var targetTween: libs.misc.Tween;
     public var brightLerp: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Dynamic, arg5: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Dynamic = null, arg5: Dynamic = null) {
         super();
     }
 

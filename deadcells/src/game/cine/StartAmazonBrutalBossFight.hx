@@ -8,7 +8,7 @@ class StartAmazonBrutalBossFight extends GameCinematic {
     public var servanteTactic: en.mob.AmazonTactic;
     public var tpSpellSound: hxd.res.Sound;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
         super();
     }
 }

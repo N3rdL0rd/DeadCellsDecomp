@@ -12,7 +12,7 @@ class Boomerang extends Entity {
     public var maxDistCase: Float;
     public var backHits: Int;
 
-    public function new(arg0: Entity, arg1: tool.InventItem, arg2: Float) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null, arg2: Float = 0.) {
         super();
     }
 

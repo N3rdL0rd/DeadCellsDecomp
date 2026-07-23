@@ -1,0 +1,87 @@
+diff --git a/hxd/System.hl.hx b/hxd/System.hl.hx
+index f8e9079e..dbfd9267 100644
+--- a/hxd/System.hl.hx
++++ b/hxd/System.hl.hx
+@@ -52,7 +52,7 @@ class System {
+ 		loopFunc = f;
+ 	}
+ 
+-	static function mainLoop() : Bool {
++	public static function mainLoop() : Bool {
+ 		// process events
+ 		#if usesys
+ 		if( !haxe.System.emitEvents(@:privateAccess hxd.Window.inst.event) )
+diff --git a/hxd/fmt/pak/FileSystem.hx b/hxd/fmt/pak/FileSystem.hx
+index 55116326..c3166b63 100644
+--- a/hxd/fmt/pak/FileSystem.hx
++++ b/hxd/fmt/pak/FileSystem.hx
+@@ -167,6 +167,10 @@ class PakEntry extends FileEntry {
+ 
+ class FileSystem implements hxd.fs.FileSystem {
+ 
++	// Dead Cells divergence: DC ships a modified pak format with a stamp-hash field
++	// that upstream heaps lacks. Added here only so the game compiles; behavior differs from upstream.
++	public static var PAK_STAMP_HASH : String;
++
+ 	var root : PakEntry;
+ 	var dict : Map<String,PakEntry>;
+ 	var files : Array<FileInput>;
+diff --git a/hxsl/Eval.hx b/hxsl/Eval.hx
+index deddb4ef..0fdc41d7 100644
+--- a/hxsl/Eval.hx
++++ b/hxsl/Eval.hx
+@@ -380,7 +380,7 @@ class Eval {
+ 			case OpGte: compare(function(x) return x >= 0);
+ 			case OpLt: compare(function(x) return x < 0);
+ 			case OpLte: compare(function(x) return x <= 0);
+-			case OpInterval, OpAssign, OpAssignOp(_): TBinop(op, e1, e2);
++			case OpInterval, OpAssign, OpAssignOp(_), OpNullCoal: TBinop(op, e1, e2);
+ 			case OpArrow: throw "assert";
+ 			#if (haxe_ver >= 4)
+ 			case OpIn: throw "assert";
+diff --git a/hxsl/GlslOut.hx b/hxsl/GlslOut.hx
+index 64bab16b..28ca78c0 100644
+--- a/hxsl/GlslOut.hx
++++ b/hxsl/GlslOut.hx
+@@ -347,6 +347,7 @@ class GlslOut {
+ 			case OpIncrement: "++";
+ 			case OpDecrement: "--";
+ 			case OpNegBits: "~";
++			case OpSpread: "...";
+ 			});
+ 			addValue(e1, tabs);
+ 		case TVarDecl(v, init):
+diff --git a/hxsl/MacroParser.hx b/hxsl/MacroParser.hx
+index 3acba59e..4e345ded 100644
+--- a/hxsl/MacroParser.hx
++++ b/hxsl/MacroParser.hx
+@@ -165,7 +165,8 @@ class MacroParser {
+ 					qualifiers : [],
+ 				}
+ 			}]);
+-		case EFunction(name, f) if( name != null && f.expr != null ):
++		case EFunction(kind, f) if( kind != null && f.expr != null ):
++			var name = switch( kind ) { case FNamed(n, _): n; default: null; };
+ 			EFunction({
+ 				name : name,
+ 				ret : f.ret == null ? null : (switch( f.ret ) {
+diff --git a/hxsl/Printer.hx b/hxsl/Printer.hx
+index 6fe69777..1acf16bd 100644
+--- a/hxsl/Printer.hx
++++ b/hxsl/Printer.hx
+@@ -237,6 +237,7 @@ class Printer {
+ 			case OpNegBits:"~";
+ 			case OpIncrement:"++";
+ 			case OpDecrement:"--";
++			case OpSpread:"...";
+ 			});
+ 			addExpr(e, tabs);
+ 		case TBinop(op, e1, e2):
+@@ -322,6 +323,7 @@ class Printer {
+ 		case OpAssignOp(op):opStr(op) + "=";
+ 		case OpArrow:"=>";
+ 		case OpInterval:"...";
++		case OpNullCoal:"??";
+ 		#if (haxe_ver >= 4)
+ 		case OpIn: " in ";
+ 		#end

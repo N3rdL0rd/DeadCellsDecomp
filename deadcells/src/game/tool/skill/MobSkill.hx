@@ -15,7 +15,7 @@ class MobSkill extends tool.skill.Skill {
     public var PREVENT_SAME_SKILL_RANGE: Int;
     public var interruptOnNoTarget: Bool;
 
-    public function new(arg0: String, arg1: en.Mob, arg2: Ref) {
+    public function new(arg0: String = null, arg1: en.Mob = null, arg2: Ref = null) {
         super();
     }
 

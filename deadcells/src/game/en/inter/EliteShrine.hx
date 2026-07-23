@@ -4,11 +4,11 @@ class EliteShrine extends en.Interactive {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
     public var used: Bool;
-    public var lMob: level.Mob;
+    public var lMob: level.LevelTypes.Mob;
     public var sprAdd: libs.heaps.slib.HSprite;
     public var glowAdd: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.Mob) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: level.LevelTypes.Mob = null) {
         super();
     }
 

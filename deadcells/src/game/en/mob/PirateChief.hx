@@ -10,7 +10,7 @@ class PirateChief extends en.Mob {
     public var bombAtk: tool.skill.OldMobSkill;
     public var animPlayed: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 

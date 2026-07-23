@@ -1,6 +1,6 @@
 # Motion Twin forks - these are the actual libraries Dead Cells was built
 # against (see docs/oss_match_report.md). Prefer these over generic upstream.
---cmd haxelib --always git heaps https://github.com/motion-twin/heaps.git dc_v10
+--cmd haxelib --always git heaps https://github.com/motion-twin/heaps.git master
 --cmd haxelib --always git castle https://github.com/motion-twin/castle.git
 --cmd haxelib --always git hscript https://github.com/motion-twin/hscript.git
 --cmd haxelib --always git hxbit https://github.com/motion-twin/hxbit.git
@@ -20,6 +20,12 @@
 --cmd haxelib --always install redistHelper
 --cmd haxelib --always git ldtk-haxe-api https://github.com/deepnight/ldtk-haxe-api.git
 --cmd haxelib --always git deepnightLibs https://github.com/deepnight/deepnightLibs.git
+
+# Haxe 4.3 compat patches - the motion-twin/heaps and hxbit forks predate several
+# Haxe 4.x language/macro-API changes (see ../patches/*.patch and docs/notes.md).
+# git apply is idempotent-safe here since these forks are freshly (re)cloned above.
+--cmd git -C `haxelib libpath heaps` apply ../patches/heaps-haxe4.3-compat.patch
+--cmd git -C `haxelib libpath hxbit` apply ../patches/hxbit-haxe4.3-compat.patch
 
 # Done
 --cmd haxelib list

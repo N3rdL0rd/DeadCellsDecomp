@@ -5,7 +5,7 @@ class Indulgence extends Power {
     public var nbExecute: Int;
     public var target: Entity;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 

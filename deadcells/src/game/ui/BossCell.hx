@@ -11,10 +11,10 @@ class BossCell extends libs.Process {
     public var id: Int;
     public var fxAddSb: h2d.SpriteBatch;
     public var fxNormalSb: h2d.SpriteBatch;
-    public var fxPool: libs.heaps.ParticlePool;
+    public var fxPool: libs.heaps.HParticle.ParticlePool;
     public var isVisible: Bool;
 
-    public function new(arg0: libs.Process) {
+    public function new(arg0: libs.Process = null) {
         super();
     }
 

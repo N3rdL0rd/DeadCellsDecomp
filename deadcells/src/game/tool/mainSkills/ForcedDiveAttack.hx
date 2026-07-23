@@ -3,7 +3,7 @@ package tool.mainSkills;
 class ForcedDiveAttack extends tool.mainSkills.DiveAttack {
     public static var __clid: Int;
 
-    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic, arg3: Ref) {
+    public function new(arg0: en.Hero = null, arg1: pr.Game = null, arg2: Dynamic = null, arg3: Ref = null) {
         super();
     }
 

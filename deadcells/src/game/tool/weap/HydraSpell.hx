@@ -4,7 +4,7 @@ class HydraSpell extends tool.Weapon {
     public var fxCircle: libs.heaps.slib.HSprite;
     public var lastFxCircle: libs.heaps.slib.HSprite;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

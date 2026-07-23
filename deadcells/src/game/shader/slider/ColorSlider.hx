@@ -6,7 +6,7 @@ class ColorSlider extends hxsl.Shader {
     public var width__: Float;
     public var step__: Float;
 
-    public function new(arg0: Ref, arg1: Ref) {
+    public function new(arg0: Ref = null, arg1: Ref = null) {
         super();
     }
 

@@ -2,9 +2,8 @@ package tool.atk;
 
 class AttackSourceImpl {
     public var parent: Entity;
-    public var : Dynamic;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
     }
 
     public function onHitInit(arg0: tool.atk.AttackData): Void {

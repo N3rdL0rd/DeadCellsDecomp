@@ -1,7 +1,7 @@
 package tool.skill;
 
 class MobSkillFx extends tool.skill.SkillFx {
-    public function new(arg0: String, arg1: tool.skill.Skill, arg2: Int, arg3: String, arg4: Dynamic, arg5: Dynamic) {
+    public function new(arg0: String = null, arg1: tool.skill.Skill = null, arg2: Int = 0, arg3: String = null, arg4: Dynamic = null, arg5: Dynamic = null) {
         super();
     }
 

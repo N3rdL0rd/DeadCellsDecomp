@@ -2,7 +2,7 @@ package tool;
 
 class Consume {
     public var root: h2d.Object;
-    public var parts: libs.heaps.ParticlePool;
+    public var parts: libs.heaps.HParticle.ParticlePool;
     public var batch: libs.heaps.slib.HSpriteBatch;
     public var map: h3d.mat.Texture;
     public var wid: Int;

@@ -6,7 +6,7 @@ class LockedDoor extends en.inter.Door {
     public var keyKind: String;
     public var unlockId: String;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null) {
         super();
     }
 
@@ -50,7 +50,7 @@ class LockedDoorButton extends en.Interactive {
     public static var __clid: Int;
     public var door: en.inter.door.LockedDoor;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.inter.door.LockedDoor) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: en.inter.door.LockedDoor = null) {
         super();
     }
 

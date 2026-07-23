@@ -5,7 +5,7 @@ class ShootingStar extends en.bu.Homing {
     public static var __eclids: Array<Int>;
     public var maxY: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Entity, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Entity = null, arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 

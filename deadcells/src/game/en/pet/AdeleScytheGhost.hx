@@ -29,7 +29,7 @@ class AdeleScytheGhost extends en.Mob {
     public var walkAnim: String;
     public var walkAnimSpd: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem, arg7: tool.weap.SprData) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Entity = null, arg6: tool.InventItem = null, arg7: tool.weap.SprData = null) {
         super();
     }
 

@@ -9,7 +9,7 @@ class ItemGen {
     public var lastError: Dynamic;
     public var failed: Bool;
 
-    public function new(arg0: Int, arg1: Bool) {
+    public function new(arg0: Int = 0, arg1: Bool = false) {
     }
 
     public function setSeed(arg0: Int): Void {

@@ -4,9 +4,8 @@ class HeroManager {
     public static var __clid: Int;
     public var hero: en.Hero;
     public var __uid: Int;
-    public var : Dynamic;
 
-    public function new(arg0: en.Hero) {
+    public function new(arg0: en.Hero = null) {
     }
 
     public function init(): Void {

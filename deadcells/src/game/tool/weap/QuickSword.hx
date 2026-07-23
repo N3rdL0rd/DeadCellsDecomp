@@ -3,7 +3,7 @@ package tool.weap;
 class QuickSword extends tool.Weapon {
     public var chainHits: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

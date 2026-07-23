@@ -10,8 +10,8 @@ class TwitchVote {
     public var cd: tool.Cooldown;
     public var desc: String;
     public var votes: Array<Dynamic>;
-    public var userVotes: haxe.ds.StringMap;
-    public var userDisplayNames: haxe.ds.StringMap;
+    public var userVotes: haxe.ds.StringMap<Dynamic>;
+    public var userDisplayNames: haxe.ds.StringMap<Dynamic>;
     public var firstVoter: String;
     public var visible: Bool;
     public var wasSuspended: Bool;
@@ -34,7 +34,6 @@ class TwitchVote {
     public var lastDebug: Bool;
     public var oldTime: Float;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new() {
     }

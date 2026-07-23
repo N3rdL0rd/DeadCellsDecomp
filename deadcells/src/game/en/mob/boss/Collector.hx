@@ -47,7 +47,7 @@ class Collector extends en.mob.Boss {
     public var sbFx: libs.heaps.slib.HSpriteBatch;
     public var arSBAngle: Array<Float>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Ref = null) {
         super();
     }
 
@@ -55,45 +55,45 @@ class Collector extends en.mob.Boss {
         throw "stub: create not decompiled";
     }
 
-    public function initLife(arg0: Float, arg1: Dynamic): Void {
+    public override function initLife(arg0: Float, arg1: Dynamic): Void {
     }
 
     public override function init(): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function talkFor(arg0: Float): Void {
     }
 
-    public function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
     public override function setReady(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
 
-    public function aiLocked(): Bool {
+    public override function aiLocked(): Bool {
         throw "stub: aiLocked not decompiled";
     }
 
-    public function canBeHitBy(arg0: Entity): Bool {
+    public override function canBeHitBy(arg0: Entity): Bool {
         throw "stub: canBeHitBy not decompiled";
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function addOrgue(arg0: Int, arg1: Int): Void {
@@ -167,11 +167,11 @@ class Collector extends en.mob.Boss {
         throw "stub: canSwitchDrinkPhase not decompiled";
     }
 
-    public function getDamageReduction(arg0: tool.atk.AttackData): Float {
+    public override function getDamageReduction(arg0: tool.atk.AttackData): Float {
         throw "stub: getDamageReduction not decompiled";
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public function spawnMob(): Void {
@@ -187,7 +187,7 @@ class Collector extends en.mob.Boss {
     public function backToFight(): Void {
     }
 
-    public function checkForExecute(arg0: tool.atk.AttackData): Void {
+    public override function checkForExecute(arg0: tool.atk.AttackData): Void {
     }
 
     public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
@@ -201,19 +201,19 @@ class Collector extends en.mob.Boss {
     public override function onDie(): Void {
     }
 
-    public function dropLoot(): Void {
+    public override function dropLoot(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function giveHeadFeedback(arg0: String): Void {
@@ -222,7 +222,7 @@ class Collector extends en.mob.Boss {
     public override function giveHeads(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function getCLID(): Int {

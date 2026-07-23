@@ -3,7 +3,7 @@ package libs;
 class AsyncHttp {
     public static var DEFAULT_IDLE_TIMEOUT: Float;
     public static var DEFAULT_TIMEOUT: Float;
-    public static var WORKER: libs._AsyncHttp.AsyncHttpWorker;
+    public static var WORKER: libs.AsyncHttp.AsyncHttpWorker;
     public static var CHUNK_RE: EReg;
     public static var REG_ABSOLUTE: EReg;
     public var url: String;
@@ -12,7 +12,7 @@ class AsyncHttp {
     public var params: Array<Dynamic>;
     public var post: Bool;
     public var responseData: haxe.io.Bytes;
-    public var responseHeaders: haxe.ds.StringMap;
+    public var responseHeaders: haxe.ds.StringMap<Dynamic>;
     public var status: Dynamic;
     public var chunk_size: Dynamic;
     public var chunk_buf: haxe.io.Bytes;
@@ -44,10 +44,10 @@ class AsyncHttp {
     public var host: String;
     public var port: Int;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
     }
 
-    public static function getWorker(): libs._AsyncHttp.AsyncHttpWorker {
+    public static function getWorker(): libs.AsyncHttp.AsyncHttpWorker {
         throw "stub: getWorker not decompiled";
     }
 
@@ -128,11 +128,11 @@ class AsyncHttp {
 }
 
 class AsyncHttpWorker {
-    public var queue: haxe.ds.List;
-    public var actives: haxe.ds.List;
+    public var queue: haxe.ds.List<Dynamic>;
+    public var actives: haxe.ds.List<Dynamic>;
     public var waitRead: Array<Dynamic>;
     public var waitWrite: Array<Dynamic>;
-    public var callbacks: haxe.ds.List;
+    public var callbacks: haxe.ds.List<Dynamic>;
 
     public function new() {
     }

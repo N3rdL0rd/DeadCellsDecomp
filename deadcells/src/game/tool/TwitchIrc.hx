@@ -9,7 +9,7 @@ class TwitchIrc {
     public var playerUser: String;
     public var playerDisplayName: String;
     public var pass: String;
-    public var channels: haxe.ds.StringMap;
+    public var channels: haxe.ds.StringMap<Dynamic>;
     public var mainChannel: String;
     public var connected: Bool;
     public var logged: Bool;
@@ -23,7 +23,7 @@ class TwitchIrc {
     public var failure: Int;
     public var reconnect: Float;
     public var destroyed: Bool;
-    public var recentMessages: haxe.ds.StringMap;
+    public var recentMessages: haxe.ds.StringMap<Dynamic>;
 
     public function new() {
     }
@@ -54,7 +54,7 @@ class TwitchIrc {
         throw "stub: readData not decompiled";
     }
 
-    public function onData(arg0: String, arg1: haxe.ds.StringMap, arg2: String, arg3: Array<Dynamic>): Void {
+    public function onData(arg0: String, arg1: haxe.ds.StringMap<Dynamic>, arg2: String, arg3: Array<Dynamic>): Void {
     }
 
     public function sendMessage(arg0: String, arg1: String): Bool {

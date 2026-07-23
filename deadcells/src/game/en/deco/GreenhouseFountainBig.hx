@@ -6,7 +6,7 @@ class GreenhouseFountainBig extends en.Deco {
     public var waterfalls: Array<Dynamic>;
     public var lines: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
         super();
     }
 

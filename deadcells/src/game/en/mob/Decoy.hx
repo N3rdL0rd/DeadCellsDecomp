@@ -7,7 +7,7 @@ class Decoy extends en.Mob {
     public var talkId: Int;
     public var item: tool.InventItem;
 
-    public function new(arg0: Entity, arg1: en.Grenade, arg2: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: en.Grenade = null, arg2: tool.InventItem = null) {
         super();
     }
 

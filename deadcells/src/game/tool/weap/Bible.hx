@@ -3,7 +3,7 @@ package tool.weap;
 class Bible extends tool.Weapon {
     public var canThrow: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -28,6 +28,6 @@ class Bible extends tool.Weapon {
     public function throwBible(arg0: Dynamic): Void {
     }
 
-    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 }

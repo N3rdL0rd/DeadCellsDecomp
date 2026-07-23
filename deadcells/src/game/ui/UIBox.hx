@@ -16,7 +16,7 @@ class UIBox extends h2d.Layers {
     public var maskLogo: h2d.Mask;
     public var isAdjusted: Bool;
 
-    public function new(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: Int) {
+    public function new(arg0: String = null, arg1: Float = 0., arg2: Float = 0., arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 

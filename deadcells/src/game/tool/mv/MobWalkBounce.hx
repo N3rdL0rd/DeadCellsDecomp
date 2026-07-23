@@ -5,14 +5,14 @@ class MobWalkBounce extends tool.mv.MobWalk {
     public var inf: Dynamic;
     public var sfxJump: hxd.res.Sound;
 
-    public function new(arg0: en.Mob) {
+    public function new(arg0: en.Mob = null) {
         super();
     }
 
-    public function updateWalk(): Void {
+    public override function updateWalk(): Void {
     }
 
-    public function cancelJump(): Void {
+    public override function cancelJump(): Void {
     }
 
     public override function getCLID(): Int {

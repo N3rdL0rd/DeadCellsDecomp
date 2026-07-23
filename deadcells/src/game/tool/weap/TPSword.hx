@@ -5,7 +5,7 @@ class TPSword extends tool.Weapon {
     public var tpAreaUp: tool.Area;
     public var isCrit: Bool;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -21,17 +21,17 @@ class TPSword extends tool.Weapon {
         throw "stub: isLastCycle not decompiled";
     }
 
-    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnAttackAnim(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
-    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
     public override function allowTurnDuringCharge(): Bool {
         throw "stub: allowTurnDuringCharge not decompiled";
     }
 
-    public override function dynOnInterrupt(arg0: tool.WeaponSkill, arg1: Float): Void {
+    public override function dynOnInterrupt(arg0: tool.Weapon.WeaponSkill, arg1: Float): Void {
     }
 
     public function prepareTeleport(): Void {

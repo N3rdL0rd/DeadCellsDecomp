@@ -21,7 +21,7 @@ class TreasureChest extends en.Interactive {
     public var glowT: Float;
     public var isFocused: Bool;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Array<Dynamic> = null) {
         super();
     }
 

@@ -7,7 +7,7 @@ class DookuExplosiveFireBall extends en.Bullet {
     public var scaleM: Float;
     public var explosionRadius: Float;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Ref) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Float = 0., arg4: Float = 0., arg5: Int = 0, arg6: Ref = null) {
         super();
     }
 

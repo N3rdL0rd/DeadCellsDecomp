@@ -15,7 +15,6 @@ class PathConstraint {
     public var curves: Array<Float>;
     public var lengths: Array<Float>;
     public var segments: Array<Float>;
-    public var : Dynamic;
 
     public function new(arg0: spine.PathConstraintData, arg1: spine.Skeleton) {
     }

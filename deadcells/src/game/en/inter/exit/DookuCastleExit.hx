@@ -6,7 +6,7 @@ class DookuCastleExit extends en.inter.Exit {
     public var tipOffX: Float;
     public var tipOffY: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null) {
         super();
     }
 

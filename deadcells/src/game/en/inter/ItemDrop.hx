@@ -23,7 +23,7 @@ class ItemDrop extends en.Interactive {
     public var icon: ui.icon.Icon;
     public var lockIcon: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: Bool, arg5: Ref) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null, arg4: Bool = false, arg5: Ref = null) {
         super();
     }
 

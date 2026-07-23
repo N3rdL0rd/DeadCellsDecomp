@@ -9,7 +9,7 @@ class Merchant extends en.Interactive {
     public var hasSaidEasterEgg: Bool;
     public var sid: Int;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: level.MerchantType) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: level.MerchantType = null) {
         super();
     }
 

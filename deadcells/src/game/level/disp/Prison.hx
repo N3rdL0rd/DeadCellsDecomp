@@ -27,16 +27,16 @@ class Prison extends level.BiomeDisp {
         throw "stub: createHoleGrid not decompiled";
     }
 
-    public function decorateZone(arg0: level.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addBigDoors(arg0: level.DecoZone): Void {
+    public function addBigDoors(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addSmallDoors(arg0: level.DecoZone): Void {
+    public function addSmallDoors(arg0: level.DecoTypes.DecoZone): Void {
     }
 
-    public function addShelves(arg0: level.DecoZone): Void {
+    public function addShelves(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function addBanner(arg0: Float, arg1: Float, arg2: Int): Void {
@@ -45,7 +45,7 @@ class Prison extends level.BiomeDisp {
     public function addSuspendedCage(arg0: Int, arg1: Int, arg2: Int): Void {
     }
 
-    public function addWindows(arg0: level.DecoZone): Void {
+    public function addWindows(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function addWallLight(arg0: level.Room, arg1: Float, arg2: Float): Void {
@@ -63,7 +63,7 @@ class Prison extends level.BiomeDisp {
     public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
     }
 
-    public function addSmallArch(arg0: level.DecoZone): Void {
+    public function addSmallArch(arg0: level.DecoTypes.DecoZone): Void {
     }
 
     public function onDispose(): Void {

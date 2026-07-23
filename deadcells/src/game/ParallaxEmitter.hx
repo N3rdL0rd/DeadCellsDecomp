@@ -1,4 +1,4 @@
-class ParallaxEmitter extends libs.heaps.Emitter {
+class ParallaxEmitter extends libs.heaps.HParticle.Emitter {
     public var scrollX: Float;
     public var scrollY: Float;
     public var bounds: h2d.col.Bounds;
@@ -8,7 +8,7 @@ class ParallaxEmitter extends libs.heaps.Emitter {
     public var absX: Float;
     public var absY: Float;
 
-    public function new(arg0: String, arg1: Int, arg2: Viewport, arg3: h2d.col.Bounds) {
+    public function new(arg0: String = null, arg1: Int = 0, arg2: Viewport = null, arg3: h2d.col.Bounds = null) {
         super();
     }
 

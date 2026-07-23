@@ -7,7 +7,7 @@ class BatKamikazeTemplate extends en.mob.Bat {
     public var offAngDir: Int;
     public var offDist: Float;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 

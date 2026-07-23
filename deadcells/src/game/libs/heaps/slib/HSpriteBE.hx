@@ -1,21 +1,20 @@
 package libs.heaps.slib;
 
-class HSpriteBE extends h2d.BatchElement {
+class HSpriteBE extends h2d.SpriteBatch.BatchElement {
     public var _animManager: libs.heaps.slib.AnimManager;
     public var lib: libs.heaps.slib.SpriteLib;
     public var groupName: String;
-    public var group: libs.heaps.slib.LibGroup;
+    public var group: libs.heaps.slib.SpriteLib.LibGroup;
     public var frame: Int;
-    public var frameData: libs.heaps.slib.FrameData;
+    public var frameData: libs.heaps.slib.SpriteLib.FrameData;
     public var pivot: libs.heaps.slib.SpritePivot;
     public var destroyed: Bool;
     public var onAnimManAlloc: Dynamic;
     public var onFrameChange: Dynamic;
     public var allocated: Bool;
-    public var : Dynamic;
 
     public function new(arg0: libs.heaps.slib.HSpriteBatch, arg1: libs.heaps.slib.SpriteLib, arg2: String, arg3: Ref) {
-        super();
+        super(null);
     }
 
     public function onAdd(): Void {

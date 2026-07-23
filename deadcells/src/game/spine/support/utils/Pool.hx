@@ -5,7 +5,7 @@ class Pool {
     public var peak: Int;
     public var freeObjects: Array<Dynamic>;
 
-    public function new(arg0: Ref, arg1: Ref) {
+    public function new(arg0: Ref = null, arg1: Ref = null) {
     }
 
     public function free(arg0: Dynamic): Void {

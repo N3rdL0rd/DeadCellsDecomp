@@ -1,7 +1,7 @@
 package cine;
 
 class SubTeleportation extends GameCinematic {
-    public function new(arg0: en.Hero, arg1: Entity, arg2: tool.CPoint, arg3: Bool, arg4: Dynamic, arg5: Dynamic) {
+    public function new(arg0: en.Hero = null, arg1: Entity = null, arg2: tool.CPoint = null, arg3: Bool = false, arg4: Dynamic = null, arg5: Dynamic = null) {
         super();
     }
 }

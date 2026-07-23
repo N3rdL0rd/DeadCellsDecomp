@@ -1,7 +1,7 @@
 package tool.atk.atkSources;
 
 class MobAttackSource extends tool.atk.AttackSourceImpl {
-    public function new(arg0: en.Mob) {
+    public function new(arg0: en.Mob = null) {
         super();
     }
 

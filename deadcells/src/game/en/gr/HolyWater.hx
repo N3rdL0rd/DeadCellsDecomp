@@ -5,7 +5,7 @@ class HolyWater extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -45,7 +45,7 @@ class HolyFire extends Entity {
     public var item: tool.InventItem;
     public var tickRate: Float;
 
-    public function new(arg0: Entity, arg1: tool.InventItem, arg2: pr.Level, arg3: Float, arg4: Float) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null, arg2: pr.Level = null, arg3: Float = 0., arg4: Float = 0.) {
         super();
     }
 
@@ -90,7 +90,7 @@ class HolyRain extends Entity {
     public var tickRate: Float;
     public var sbRain: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: Entity, arg1: tool.InventItem, arg2: pr.Level) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null, arg2: pr.Level = null) {
         super();
     }
 

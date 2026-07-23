@@ -5,7 +5,7 @@ class RootBomb extends en.gr.GrenadeSkill {
     public static var __eclids: Array<Int>;
     public var prevDir: Int;
 
-    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
         super();
     }
 

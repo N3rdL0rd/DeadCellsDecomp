@@ -9,13 +9,13 @@ class Boss extends en.Mob {
     public var offsetCamY: Int;
     public var cameraTrackingDisabled: Bool;
     public var ready: Bool;
-    public var battleZone: level.Marker;
+    public var battleZone: level.LevelTypes.Marker;
     public var defeatAchievement: achievements.EAchievement;
     public var defeatFlawlessAchievement: achievements.EAchievement;
     public var flawlessHeadIndex: Int;
     public var bossRoom: level.Room;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
         super();
     }
 
@@ -33,7 +33,7 @@ class Boss extends en.Mob {
     public override function init(): Void {
     }
 
-    public function onReload(): Void {
+    public override function onReload(): Void {
     }
 
     public function setReady(): Void {

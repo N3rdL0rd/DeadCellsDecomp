@@ -18,6 +18,6 @@ class TransformConstraintData {
     public var relative: Bool;
     public var local: Bool;
 
-    public function new(arg0: String) {
+    public function new(arg0: String = null) {
     }
 }

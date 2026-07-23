@@ -15,11 +15,10 @@ class KingsHand extends en.mob.Boss {
     public var bossRushModifiers: Dynamic;
     public var headPoint: tool.FPoint;
     public var playZone: level.Platform;
-    public var scarf: tool.ScarfManager;
+    public var scarf: tool.ScarfSegment.ScarfManager;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 

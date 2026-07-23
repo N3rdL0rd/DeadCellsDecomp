@@ -14,7 +14,7 @@ class LevelTransition extends GameCinematic {
     public var onEnteredLevel: Dynamic;
     public var playAfterZDoorCine: Bool;
 
-    public function new(arg0: String, arg1: level.LevelMap, arg2: Dynamic, arg3: tool.CPoint, arg4: Ref) {
+    public function new(arg0: String = null, arg1: level.LevelMap = null, arg2: Dynamic = null, arg3: tool.CPoint = null, arg4: Ref = null) {
         super();
     }
 

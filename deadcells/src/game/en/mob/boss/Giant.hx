@@ -54,7 +54,7 @@ class Giant extends en.mob.Boss {
     public var rightShoulderSlotPoints: Array<Dynamic>;
     public var sbFxNormal: h2d.SpriteBatch;
     public var sbFxAdd: h2d.SpriteBatch;
-    public var particlePool: libs.heaps.ParticlePool;
+    public var particlePool: libs.heaps.HParticle.ParticlePool;
     public var glowMaskShader: h3d.shader.AlphaMap;
     public var subSpritesAcquired: Bool;
     public var screamFx: Bool;
@@ -69,15 +69,14 @@ class Giant extends en.mob.Boss {
     public var combatZoneCYMin: Int;
     public var combatZoneCYMax: Int;
     public var combatZoneCWid: Int;
-    public var vx: tool.Ref;
-    public var vy: tool.Ref;
-    public var vr: tool.Ref;
-    public var lvx: tool.Ref;
-    public var rvx: tool.Ref;
+    public var vx: tool.SmoothDamp.Ref;
+    public var vy: tool.SmoothDamp.Ref;
+    public var vr: tool.SmoothDamp.Ref;
+    public var lvx: tool.SmoothDamp.Ref;
+    public var rvx: tool.SmoothDamp.Ref;
     public var portalAng: Float;
-    public var : Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
         super();
     }
 
@@ -97,13 +96,13 @@ class Giant extends en.mob.Boss {
         throw "stub: isOneHandGrounded not decompiled";
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
-    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
 
-    public function canBeGrabbedByHomunculus(): Bool {
+    public override function canBeGrabbedByHomunculus(): Bool {
         throw "stub: canBeGrabbedByHomunculus not decompiled";
     }
 
@@ -113,7 +112,7 @@ class Giant extends en.mob.Boss {
     public function moveToStep(): Void {
     }
 
-    public function canBeHitBy(arg0: Entity): Bool {
+    public override function canBeHitBy(arg0: Entity): Bool {
         throw "stub: canBeHitBy not decompiled";
     }
 
@@ -123,7 +122,7 @@ class Giant extends en.mob.Boss {
     public override function setReady(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function isLasering(): Bool {
@@ -136,10 +135,10 @@ class Giant extends en.mob.Boss {
     public function cacheCombatZone(arg0: String): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function getMobSprites(): Array<Dynamic> {
+    public override function getMobSprites(): Array<Dynamic> {
         throw "stub: getMobSprites not decompiled";
     }
 
@@ -152,7 +151,7 @@ class Giant extends en.mob.Boss {
     public function applyLaser(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function createStalactite(arg0: Float, arg1: Float): Void {
@@ -161,11 +160,11 @@ class Giant extends en.mob.Boss {
     public function createStalactiteWave(): Void {
     }
 
-    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
         throw "stub: canReceiveAttack not decompiled";
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
     public function onHandGrounded(arg0: en.mob.boss.giant.Hand): Void {
@@ -191,10 +190,10 @@ class Giant extends en.mob.Boss {
     public override function onScream(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function preUpdate(): Void {
+    public override function preUpdate(): Void {
     }
 
     public function laserVise(): Void {
@@ -227,7 +226,7 @@ class Giant extends en.mob.Boss {
     public override function onDie(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public function setLeftFloorState(arg0: Bool): Void {

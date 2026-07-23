@@ -6,7 +6,7 @@ class Hook extends Power {
     public var hookedEntity: Entity;
     public var hasReachedSomething: Bool;
 
-    public function new(arg0: Entity, arg1: tool.InventItem) {
+    public function new(arg0: Entity = null, arg1: tool.InventItem = null) {
         super();
     }
 
@@ -41,7 +41,7 @@ class HookSource extends Entity {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: Entity) {
+    public function new(arg0: Entity = null) {
         super();
     }
 

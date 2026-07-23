@@ -20,7 +20,7 @@ class AmazonBrutal extends en.mob.AmazonBase {
     public var brutalBossRushModifiers: Dynamic;
     public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
         super();
     }
 
@@ -34,10 +34,10 @@ class AmazonBrutal extends en.mob.AmazonBase {
     public override function registerToManager(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function findSpotInBossRoom(): Void {
@@ -69,24 +69,24 @@ class AmazonBrutal extends en.mob.AmazonBase {
     public function forceMeleePhase(): Void {
     }
 
-    public function onFatalFallStart(arg0: Ref): Void {
+    public override function onFatalFallStart(arg0: Ref): Void {
     }
 
-    public function canBeBreach(arg0: tool.atk.AttackData): Bool {
+    public override function canBeBreach(arg0: tool.atk.AttackData): Bool {
         throw "stub: canBeBreach not decompiled";
     }
 
-    public function getChargingOldSkill(): tool.skill.OldSkill {
+    public override function getChargingOldSkill(): tool.skill.OldSkill {
         throw "stub: getChargingOldSkill not decompiled";
     }
 
-    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public function behaviourAloneBossFight(): Void {
@@ -111,13 +111,13 @@ class AmazonBrutal extends en.mob.AmazonBase {
     public function scream(): Void {
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
     public override function postUpdate(): Void {
     }
 
-    public function preUpdate(): Void {
+    public override function preUpdate(): Void {
     }
 
     public override function fixedUpdate(): Void {
@@ -133,7 +133,7 @@ class AmazonBrutal extends en.mob.AmazonBase {
     public override function applyBossRushModifier(arg0: Dynamic): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function getCLID(): Int {

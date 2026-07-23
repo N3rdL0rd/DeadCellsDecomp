@@ -15,7 +15,7 @@ class AnswerBox extends ui.Process {
         super();
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function onResize(): Void {
@@ -46,7 +46,7 @@ class Answering extends ui.Process {
     public override function onResize(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function selectYes(): Void {

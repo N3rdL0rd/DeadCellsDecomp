@@ -9,7 +9,7 @@ class LoreManager {
     public var cd: tool.Cooldown;
     public var r: level.Room;
     public var level: pr.Level;
-    public var allEvents: haxe.ds.StringMap;
+    public var allEvents: haxe.ds.StringMap<Dynamic>;
     public var blinkers: Array<Dynamic>;
     public var pulsing: Array<Dynamic>;
     public var visible: Bool;
@@ -18,7 +18,6 @@ class LoreManager {
     public var gc: GameCinematic;
     public var oldDebug: Bool;
     public var __uid: Int;
-    public var : Dynamic;
 
     public function new(arg0: pr.Level, arg1: level.Room) {
     }

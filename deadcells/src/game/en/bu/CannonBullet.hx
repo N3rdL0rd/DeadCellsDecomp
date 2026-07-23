@@ -6,7 +6,7 @@ class CannonBullet extends en.Bullet {
     public var reflectLight: libs.heaps.slib.HSprite;
     public var weaponProps: Dynamic;
 
-    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Dynamic, arg4: Dynamic) {
+    public function new(arg0: Entity = null, arg1: tool.atk.AttackData = null, arg2: Float = 0., arg3: Dynamic = null, arg4: Dynamic = null) {
         super();
     }
 

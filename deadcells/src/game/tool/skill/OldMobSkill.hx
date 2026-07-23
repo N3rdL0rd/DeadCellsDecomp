@@ -17,7 +17,7 @@ class OldMobSkill extends tool.skill.OldSkill {
     public var applyOnTouchOtherMobsMethod: Bool;
     public var interruptOnNoTarget: Bool;
 
-    public function new(arg0: String, arg1: en.Mob) {
+    public function new(arg0: String = null, arg1: en.Mob = null) {
         super();
     }
 

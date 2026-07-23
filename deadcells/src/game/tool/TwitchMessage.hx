@@ -6,7 +6,7 @@ class TwitchMessage {
     public var user: String;
     public var userWithAt: String;
     public var rawMsg: String;
-    public var tags: haxe.ds.StringMap;
+    public var tags: haxe.ds.StringMap<Dynamic>;
     public var isWhisper: Bool;
     public var color: Int;
     public var timeStamp: Float;
@@ -15,7 +15,7 @@ class TwitchMessage {
     public var bits: Int;
     public var displayName: String;
 
-    public function new(arg0: String, arg1: String, arg2: String, arg3: haxe.ds.StringMap, arg4: Bool) {
+    public function new(arg0: String = null, arg1: String = null, arg2: String = null, arg3: haxe.ds.StringMap<Dynamic> = null, arg4: Bool = false) {
     }
 
     public function firstWordIs(arg0: String): Bool {
