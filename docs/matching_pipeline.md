@@ -71,8 +71,15 @@ are shown rather than conflated.
 uv run tools/build_site.py   # regenerates docs/progress/index.html
 ```
 
-Deliberately not using `crashtest`'s `staticjinja` + per-run-history
-approach yet - this is a single current snapshot, not a history of runs. If
-tracking progress over time becomes valuable, the next step is adapting
-`crashtest`'s `Run`/`TestCase` JSON schema and per-commit run storage rather
-than inventing a different one.
+`build_site.py` also appends a small summary snapshot (commit, timestamp,
+avg score, matched/total counts - not full per-method data, unlike
+`crashtest`'s much heavier per-run JSON) to `docs/progress/history.json` on
+every run, and renders it as a hand-rolled inline SVG line chart (no charting
+library) once there are 2+ points, the same "score over time" graph other
+decomp scenes publish. History starts from whenever this tool first ran
+(2026-07-23) - there's no way to retroactively measure earlier commits since
+the project didn't compile and this tool didn't exist before that. Run
+`tools/build_site.py` again after future meaningful commits to build the line
+out; if a fuller run-by-run drill-down (like `crashtest`'s per-method
+detail-per-run pages) becomes valuable later, adapt `crashtest`'s
+`Run`/`TestCase` schema instead of growing this one ad hoc.

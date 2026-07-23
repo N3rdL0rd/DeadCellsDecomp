@@ -3,13 +3,21 @@
 Barebones static progress site: overall opcode-match % (via diff_opcodes) plus
 which .hx files are marked fully decompiled, as one static HTML page.
 
+Each run appends a snapshot (commit, timestamp, avg score, matched/total
+counts) to docs/progress/history.json and renders it as a small inline SVG
+line chart - run this after each meaningful commit to build up history over
+time, same idea as other decomp scenes' progress-over-time graphs.
+
 Usage:
     uv run tools/build_site.py                     # writes docs/progress/index.html
     uv run tools/build_site.py --out some/dir
 """
 
 import argparse
+import datetime
 import html
+import json
+import subprocess
 from collections import defaultdict
 from pathlib import Path
 
@@ -20,6 +28,7 @@ from diff_opcodes import ORIGINAL_HL, RECOMPILED_HL, compare_project
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "deadcells" / "src" / "game"
 DONE_MARKER = "// This file has been completely decompiled."
+HISTORY_FILE = ROOT / "docs" / "progress" / "history.json"
 
 
 def class_name_of(func_name: str) -> str:
@@ -52,6 +61,75 @@ def scan_decompiled_files() -> tuple[int, int]:
     return done, len(files)
 
 
+def git_commit() -> tuple[str, bool]:
+    """(short commit hash, is_dirty) - or ('unknown', False) outside a repo."""
+    try:
+        commit = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT).strip().decode()
+        dirty = subprocess.check_output(["git", "status", "--porcelain"], cwd=ROOT).strip().decode() != ""
+        return commit, dirty
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return "unknown", False
+
+
+def record_history(avg_score: float, matched_funcs: int, total_funcs: int, done_files: int, total_files: int) -> list:
+    """Append (or update, if rerun on the same commit) a snapshot to history.json, return the full history."""
+    history = []
+    if HISTORY_FILE.exists():
+        history = json.loads(HISTORY_FILE.read_text())
+
+    commit, dirty = git_commit()
+    entry = {
+        "commit": commit,
+        "dirty": dirty,
+        "timestamp": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "avg_score": avg_score,
+        "matched_funcs": matched_funcs,
+        "total_funcs": total_funcs,
+        "done_files": done_files,
+        "total_files": total_files,
+    }
+    if history and history[-1]["commit"] == commit:
+        history[-1] = entry  # rerunning on the same commit updates its point instead of duplicating
+    else:
+        history.append(entry)
+
+    HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
+    HISTORY_FILE.write_text(json.dumps(history, indent=2))
+    return history
+
+
+def render_history_svg(history: list, width: int = 760, height: int = 160) -> str:
+    """Hand-rolled SVG line chart of avg_score over time - no charting library needed for one line."""
+    if len(history) < 2:
+        return "<p><em>Not enough history yet for a graph - run this again after future commits.</em></p>"
+
+    pad = 30
+    plot_w, plot_h = width - 2 * pad, height - 2 * pad
+    n = len(history)
+    points = []
+    for i, entry in enumerate(history):
+        x = pad + (i / (n - 1)) * plot_w
+        y = pad + (1 - entry["avg_score"]) * plot_h
+        points.append((x, y))
+    polyline = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+    dots = "\n".join(
+        f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="#4caf50">'
+        f"<title>{html.escape(entry['commit'])} - {entry['avg_score']:.1%}</title></circle>"
+        for (x, y), entry in zip(points, history)
+    )
+    first_ts, last_ts = history[0]["timestamp"][:10], history[-1]["timestamp"][:10]
+    return f"""<svg width="{width}" height="{height}" viewbox="0 0 {width} {height}">
+  <line x1="{pad}" y1="{pad}" x2="{pad}" y2="{height - pad}" stroke="#ccc"/>
+  <line x1="{pad}" y1="{height - pad}" x2="{width - pad}" y2="{height - pad}" stroke="#ccc"/>
+  <text x="2" y="{pad + 4}" font-size="10" fill="#666">100%</text>
+  <text x="2" y="{height - pad + 4}" font-size="10" fill="#666">0%</text>
+  <text x="{pad}" y="{height - 5}" font-size="10" fill="#666">{first_ts}</text>
+  <text x="{width - pad - 60}" y="{height - 5}" font-size="10" fill="#666">{last_ts}</text>
+  <polyline points="{polyline}" fill="none" stroke="#4caf50" stroke-width="2"/>
+  {dots}
+</svg>"""
+
+
 PAGE = """<!doctype html>
 <html>
 <head>
@@ -81,6 +159,8 @@ per class (average of per-method scores from <code>tools/diff_opcodes.py</code>)
   <div class="stat">{avg_score:.1%}<span>average opcode score</span></div>
   <div class="stat">{done_files}/{total_files}<span>files marked complete</span></div>
 </div>
+<h2>Average opcode match over time</h2>
+{history_svg}
 <table>
 <tr><th>Class</th><th>Methods</th><th>Score</th></tr>
 {rows}
@@ -106,6 +186,9 @@ def build(out_dir: Path, original_path: str, recompiled_path: str) -> None:
 
     done_files, total_files = scan_decompiled_files()
 
+    history = record_history(avg_score, matched_funcs, total_funcs, done_files, total_files)
+    history_svg = render_history_svg(history)
+
     classes = aggregate_by_class(results)
     rows = "\n".join(
         ROW.format(
@@ -126,6 +209,7 @@ def build(out_dir: Path, original_path: str, recompiled_path: str) -> None:
             avg_score=avg_score,
             done_files=done_files,
             total_files=total_files,
+            history_svg=history_svg,
             rows=rows,
         )
     )
