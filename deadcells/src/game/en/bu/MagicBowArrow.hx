@@ -53,6 +53,6 @@ class MagicBowArrow extends en.Bullet {
     public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function onReachMaxDist(): Void {
+    public override function onReachMaxDist(): Void {
     }
 }

@@ -42,7 +42,7 @@ class FloatingPlatform extends en.Interactive {
         throw "stub: get_rFootY not decompiled";
     }
 
-    public function canBeHit(): Bool {
+    public override function canBeHit(): Bool {
         throw "stub: canBeHit not decompiled";
     }
 
@@ -61,44 +61,44 @@ class FloatingPlatform extends en.Interactive {
     public function resetLastCy(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
-    public function canApplyRepelling(): Bool {
+    public override function canApplyRepelling(): Bool {
         throw "stub: canApplyRepelling not decompiled";
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function recreatePlatform(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public function addForce(arg0: Float): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
-    public function onFatalFallDamage(): Void {
+    public override function onFatalFallDamage(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -116,7 +116,7 @@ class FloatingPlatform extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

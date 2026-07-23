@@ -7,14 +7,14 @@ class GlitchedKnight extends en.inter.Npc {
     public var sentences: Array<Dynamic>;
     public var sentenceIndex: Int;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function canGreet(arg0: en.Hero): Bool {
@@ -34,7 +34,7 @@ class GlitchedKnight extends en.inter.Npc {
     public function setHeadFlip(arg0: Bool): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function fixedUpdate(): Void {
@@ -44,7 +44,7 @@ class GlitchedKnight extends en.inter.Npc {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

@@ -61,7 +61,7 @@ class ChallengeZDoor extends en.inter.ZDoor {
     public function updateTimer(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getCLID(): Int {

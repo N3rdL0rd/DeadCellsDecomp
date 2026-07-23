@@ -1,7 +1,7 @@
 package pr.infection;
 
 class FasterAggressiveTeleport extends pr.infection.VariableInfectionRule {
-    public function new(arg0: pr.Infection, arg1: String, arg2: Dynamic) {
+    public function new(arg0: pr.Infection = null, arg1: String = null, arg2: Dynamic = null) {
         super();
     }
 

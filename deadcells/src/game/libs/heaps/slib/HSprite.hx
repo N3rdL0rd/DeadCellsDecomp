@@ -16,7 +16,7 @@ class HSprite extends h2d.Drawable {
     public var lastPage: Int;
     public var syncOnlyIfVisible: Bool;
 
-    public function new(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref, arg3: h2d.Object) {
+    public function new(arg0: libs.heaps.slib.SpriteLib = null, arg1: String = null, arg2: Ref = null, arg3: h2d.Object = null) {
         super(arg3);
     }
 

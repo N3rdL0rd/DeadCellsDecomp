@@ -9,7 +9,7 @@ class Options extends ui.OptionsBase {
     public var autoRefreshStreamStatus: Bool;
     public var activatedMods: Array<Dynamic>;
 
-    public function new(arg0: ui.Pause, arg1: ui.OptionsSection, arg2: Dynamic) {
+    public function new(arg0: ui.Pause = null, arg1: ui.OptionsSection = null, arg2: Dynamic = null) {
         super();
     }
 
@@ -142,6 +142,6 @@ class Options extends ui.OptionsBase {
     public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

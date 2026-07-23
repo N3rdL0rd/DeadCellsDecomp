@@ -4,7 +4,7 @@ class VariableInfectionRule extends pr.InfectionRule {
     public var propName: String;
     public var variable: Dynamic;
 
-    public function new(arg0: pr.Infection, arg1: String, arg2: Dynamic, arg3: String) {
+    public function new(arg0: pr.Infection = null, arg1: String = null, arg2: Dynamic = null, arg3: String = null) {
         super();
     }
 

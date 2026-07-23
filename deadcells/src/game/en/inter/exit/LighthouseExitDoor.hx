@@ -8,7 +8,7 @@ class LighthouseExitDoor extends en.inter.exit.RockDoor {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {

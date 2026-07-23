@@ -32,7 +32,7 @@ class Shield extends en.Mob {
     public function ccRepel(arg0: Entity): Void {
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public override function fixedUpdate(): Void {

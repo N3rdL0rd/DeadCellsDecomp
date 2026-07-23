@@ -6,7 +6,7 @@ class InfectionRule extends libs.Process {
     public var infos: Dynamic;
     public var ruleId: String;
 
-    public function new(arg0: pr.Infection, arg1: String) {
+    public function new(arg0: pr.Infection = null, arg1: String = null) {
         super();
     }
 

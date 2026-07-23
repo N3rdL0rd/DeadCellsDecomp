@@ -19,26 +19,26 @@ class Throne extends en.Interactive {
         throw "stub: inBossBattle not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function setEndingRTCState(): Void {
     }
 
-    public function canBeHitBy(arg0: Entity): Bool {
+    public override function canBeHitBy(arg0: Entity): Bool {
         throw "stub: canBeHitBy not decompiled";
     }
 
     public function loseShield(): Void {
     }
 
-    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function onFocusHomunculus(arg0: en.Homunculus): Void {
@@ -55,7 +55,7 @@ class Throne extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public override function onActivateHomunculus(arg0: en.Homunculus): Void {
@@ -64,16 +64,16 @@ class Throne extends en.Interactive {
     public function nextScene(arg0: en.Hero): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
-    public function globalShieldFx(): Void {
+    public override function globalShieldFx(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -91,7 +91,7 @@ class Throne extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

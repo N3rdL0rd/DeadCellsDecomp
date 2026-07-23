@@ -8,13 +8,13 @@ class SimpleElevator extends en.inter.Elevator {
         super();
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
+    public override function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
     }
 
     public override function getCLID(): Int {

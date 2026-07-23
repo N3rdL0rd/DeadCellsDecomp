@@ -27,7 +27,7 @@ class LauncherExplosiveBarrel extends en.inter.ExplosiveBarrel {
     public override function setActivatedByHero(arg0: Bool): Void {
     }
 
-    public function shouldSave(): Bool {
+    public override function shouldSave(): Bool {
         throw "stub: shouldSave not decompiled";
     }
 

@@ -31,19 +31,19 @@ class CursedChest extends en.Interactive {
         super();
     }
 
-    public function canBeHit(): Bool {
+    public override function canBeHit(): Bool {
         throw "stub: canBeHit not decompiled";
     }
 
-    public function canApplyRepelling(): Bool {
+    public override function canApplyRepelling(): Bool {
         throw "stub: canApplyRepelling not decompiled";
     }
 
-    public function get_globalUiX(): Float {
+    public override function get_globalUiX(): Float {
         throw "stub: get_globalUiX not decompiled";
     }
 
-    public function get_globalUiY(): Float {
+    public override function get_globalUiY(): Float {
         throw "stub: get_globalUiY not decompiled";
     }
 
@@ -51,21 +51,21 @@ class CursedChest extends en.Interactive {
         throw "stub: hasContent not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function get_headX(): Float {
+    public override function get_headX(): Float {
         throw "stub: get_headX not decompiled";
     }
 
-    public function get_headY(): Float {
+    public override function get_headY(): Float {
         throw "stub: get_headY not decompiled";
     }
 
     public override function dispose(): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
     public function addContent(arg0: tool.InventItem): Void {
@@ -79,10 +79,10 @@ class CursedChest extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
     public function open(arg0: en.Hero): Void {
@@ -94,19 +94,19 @@ class CursedChest extends en.Interactive {
     public function gagS(arg0: Float): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function onAttackMissedEarly(arg0: tool.atk.AttackData): Void {
+    public override function onAttackMissedEarly(arg0: tool.atk.AttackData): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -124,7 +124,7 @@ class CursedChest extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

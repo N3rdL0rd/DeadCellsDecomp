@@ -11,11 +11,11 @@ class DookuCastle extends level.BiomeDisp {
     public var towerTilesWidths: Array<Dynamic>;
     public var customParallaxElements: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null) {
         super();
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public override function fillDecks(): Void {
@@ -27,28 +27,28 @@ class DookuCastle extends level.BiomeDisp {
     public override function postUpdate(): Void {
     }
 
-    public function renderParallaxes(): Void {
+    public override function renderParallaxes(): Void {
     }
 
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone, arg1: Ref): Void {
+    public function addAlcoves(arg0: level.DecoZone, arg1: Ref): Void {
     }
 
     public function addStatuesToAlcoves(): Void {
     }
 
-    public function addSmallWindows(arg0: level.DecoTypes.DecoZone): Void {
+    public function addSmallWindows(arg0: level.DecoZone): Void {
     }
 
-    public function addSuspendedCages(arg0: level.DecoTypes.DecoZone): Void {
+    public function addSuspendedCages(arg0: level.DecoZone): Void {
     }
 
     public function addAnimatedPainting(arg0: Float, arg1: Float): Void {
@@ -99,7 +99,7 @@ class DookuCastle extends level.BiomeDisp {
     public function moveHauntedArmorsToAlcoves(): Void {
     }
 
-    public function getParallaxScrollMaxY(arg0: Dynamic): Dynamic {
+    public override function getParallaxScrollMaxY(arg0: Dynamic): Dynamic {
         throw "stub: getParallaxScrollMaxY not decompiled";
     }
 

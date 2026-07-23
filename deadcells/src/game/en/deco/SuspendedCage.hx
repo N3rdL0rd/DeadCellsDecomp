@@ -9,7 +9,7 @@ class SuspendedCage extends en.deco.Pendulum {
     public var flipX: Bool;
     public var forcedFrame: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: Float, arg2: Float, arg3: String, arg4: String, arg5: Ref, arg6: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: Float = 0., arg2: Float = 0., arg3: String = null, arg4: String = null, arg5: Ref = null, arg6: Dynamic = null) {
         super();
     }
 

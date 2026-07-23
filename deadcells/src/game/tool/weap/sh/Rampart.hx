@@ -11,9 +11,9 @@ class Rampart extends tool.weap.BaseShield {
     public override function onOwnerAttackResultReceived(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

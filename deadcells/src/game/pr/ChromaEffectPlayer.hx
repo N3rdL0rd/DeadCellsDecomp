@@ -5,13 +5,13 @@ class ChromaEffectPlayer extends libs.Process {
   var currentKey: Int;
   static var instanceV: ChromaEffectPlayer;
 
-  static function instance(): ChromaEffectPlayer {}
+  static function instance(): ChromaEffectPlayer { return instanceV; }
 
-  function __constructor__() {}
+  public function new() { super(); }
 
   function play(effect: chroma.ChromaEffect.ChromaEffect) {}
 
-  function update() {}
+  override function update() {}
 
   function stop() {}
 }

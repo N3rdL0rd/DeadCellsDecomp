@@ -16,7 +16,7 @@ class BatVolleyBullet extends en.Bullet {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
@@ -28,7 +28,7 @@ class BatVolleyBullet extends en.Bullet {
     public override function postUpdate(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
     public override function setSpriteTransform(): Void {
@@ -71,9 +71,9 @@ class BatVolleyBullet extends en.Bullet {
     public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function onCountered(): Void {
+    public override function onCountered(): Void {
     }
 
-    public function onBlock(arg0: Bool): Void {
+    public override function onBlock(arg0: Bool): Void {
     }
 }

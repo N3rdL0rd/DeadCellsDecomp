@@ -24,18 +24,18 @@ class BootlegBowman extends en.mob.BootlegBase {
     public override function initGfx(): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
-    public function getMoveSpeedMul(): Float {
+    public override function getMoveSpeedMul(): Float {
         throw "stub: getMoveSpeedMul not decompiled";
     }
 
@@ -46,30 +46,30 @@ class BootlegBowman extends en.mob.BootlegBase {
     public function flee(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function postUpdate(): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

@@ -30,19 +30,19 @@ class Mushroom extends en.Interactive {
         super();
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public function createMushroom(): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
     public function updateColorTeam(): Void {
@@ -60,31 +60,31 @@ class Mushroom extends en.Interactive {
     public function flashRed(): Void {
     }
 
-    public function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(arg0: Int): Void {
     }
 
-    public function onTouchGround(): Void {
+    public override function onTouchGround(): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
-    public function kill(): Void {
+    public override function kill(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -102,7 +102,7 @@ class Mushroom extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

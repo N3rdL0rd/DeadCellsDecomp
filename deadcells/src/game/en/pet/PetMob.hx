@@ -59,7 +59,7 @@ class PetMob extends en.Mob {
     public function depop(): Void {
     }
 
-    public function canApplyRepelling(): Bool {
+    public override function canApplyRepelling(): Bool {
         throw "stub: canApplyRepelling not decompiled";
     }
 
@@ -111,10 +111,10 @@ class PetMob extends en.Mob {
     public function tpTo(arg0: Entity): Void {
     }
 
-    public function outOfGameUpdate(): Void {
+    public override function outOfGameUpdate(): Void {
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
     public override function onFatalFallStart(arg0: Ref): Void {
@@ -123,14 +123,14 @@ class PetMob extends en.Mob {
     public override function onFatalFallDamage(): Void {
     }
 
-    public function canBeActivated(arg0: en.Hero): Bool {
+    public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function noPetReaction(): Void {

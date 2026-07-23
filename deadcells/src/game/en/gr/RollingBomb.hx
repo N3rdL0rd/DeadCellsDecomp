@@ -14,7 +14,7 @@ class RollingBomb extends en.Grenade {
         super();
     }
 
-    public function get_targetSprPosY(): Float {
+    public override function get_targetSprPosY(): Float {
         throw "stub: get_targetSprPosY not decompiled";
     }
 
@@ -24,10 +24,10 @@ class RollingBomb extends en.Grenade {
     public override function initGfx(): Void {
     }
 
-    public function onLand(arg0: Float): Void {
+    public override function onLand(arg0: Float): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function onTouch(arg0: Entity): Void {
@@ -36,7 +36,7 @@ class RollingBomb extends en.Grenade {
     public override function fixedUpdate(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function dispose(): Void {

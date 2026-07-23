@@ -10,18 +10,18 @@ class DookuCastleExit extends en.inter.Exit {
         super();
     }
 
-    public function get_globalUiX(): Float {
+    public override function get_globalUiX(): Float {
         throw "stub: get_globalUiX not decompiled";
     }
 
-    public function get_globalUiY(): Float {
+    public override function get_globalUiY(): Float {
         throw "stub: get_globalUiY not decompiled";
     }
 
     public override function initGfx(): Void {
     }
 
-    public function onApplyOptions(): Void {
+    public override function onApplyOptions(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {

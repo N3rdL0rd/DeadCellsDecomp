@@ -20,14 +20,14 @@ class Button extends en.Interactive {
         throw "stub: getLightTipStr not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public function canActivate(arg0: en.Hero): Bool {
@@ -43,7 +43,7 @@ class Button extends en.Interactive {
     public function setActivated(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function isActivated(): Bool {

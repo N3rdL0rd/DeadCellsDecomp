@@ -8,23 +8,23 @@ class SewerCreature extends en.inter.Npc {
     public var willShow: Bool;
     public var wall: libs.heaps.slib.HSprite;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public function leave(): Void {
@@ -61,13 +61,13 @@ class SewerCreature extends en.inter.Npc {
     public override function onFocus(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getCLID(): Int {

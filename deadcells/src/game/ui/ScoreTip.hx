@@ -22,6 +22,6 @@ class ScoreTip extends ui.Process {
     public override function onResize(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

@@ -11,13 +11,13 @@ class ScoringLimit extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

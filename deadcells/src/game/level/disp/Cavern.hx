@@ -9,7 +9,7 @@ class Cavern extends level.BiomeDisp {
     public var scrollerBgs: Array<Dynamic>;
     public var scrollerFgs: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null) {
         super();
     }
 
@@ -20,13 +20,13 @@ class Cavern extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoZone): Void {
     }
 
-    public function addParallaxAlcove(arg0: level.DecoTypes.DecoZone): Void {
+    public function addParallaxAlcove(arg0: level.DecoZone): Void {
     }
 
     public function addColumn(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Void {
@@ -38,14 +38,14 @@ class Cavern extends level.BiomeDisp {
     public function addBarrelLantern(arg0: Int, arg1: Int): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
     public function checkMinLightDist(arg0: Float, arg1: Float, arg2: Float): Bool {
         throw "stub: checkMinLightDist not decompiled";
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
     public override function renderStructures(): Void {

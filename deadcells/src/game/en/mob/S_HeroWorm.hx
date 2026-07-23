@@ -57,7 +57,7 @@ class S_HeroWorm extends en.Mob {
     public override function fixedUpdate(): Void {
     }
 
-    public function getDamageReduction(arg0: tool.atk.AttackData): Float {
+    public override function getDamageReduction(arg0: tool.atk.AttackData): Float {
         throw "stub: getDamageReduction not decompiled";
     }
 

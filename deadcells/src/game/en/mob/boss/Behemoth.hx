@@ -23,7 +23,7 @@ class Behemoth extends en.mob.Boss {
     public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function isLast(): Bool {
@@ -40,15 +40,15 @@ class Behemoth extends en.mob.Boss {
     public override function onDie(): Void {
     }
 
-    public function get_headX(): Float {
+    public override function get_headX(): Float {
         throw "stub: get_headX not decompiled";
     }
 
-    public function get_headY(): Float {
+    public override function get_headY(): Float {
         throw "stub: get_headY not decompiled";
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public override function onScream(): Void {
@@ -61,29 +61,29 @@ class Behemoth extends en.mob.Boss {
     public override function bossLevelUp(): Void {
     }
 
-    public function onLand(arg0: Float): Void {
+    public override function onLand(arg0: Float): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
-    public function onHorizontalStep(): Void {
+    public override function onHorizontalStep(): Void {
     }
 
     public function canWalkTo(arg0: Entity): Bool {
         throw "stub: canWalkTo not decompiled";
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function applyBossRushModifier(arg0: Dynamic): Void {
@@ -92,7 +92,7 @@ class Behemoth extends en.mob.Boss {
     public override function setReady(): Void {
     }
 
-    public function setNemesisTarget(arg0: Entity): Void {
+    public override function setNemesisTarget(arg0: Entity): Void {
     }
 
     public override function getCLID(): Int {

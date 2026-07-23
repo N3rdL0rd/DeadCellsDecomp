@@ -4,14 +4,14 @@ class GuillainHidden extends en.inter.Npc {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function onFocus(): Void {

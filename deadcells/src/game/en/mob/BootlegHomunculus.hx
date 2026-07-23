@@ -23,10 +23,10 @@ class BootlegHomunculus extends en.mob.BootlegBase {
     public override function initGfx(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public override function postUpdate(): Void {
@@ -36,14 +36,14 @@ class BootlegHomunculus extends en.mob.BootlegBase {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

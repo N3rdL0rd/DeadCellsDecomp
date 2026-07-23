@@ -9,17 +9,17 @@ class FriendsSkinUnlockNote extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function onCompleteCine(): Void {
@@ -43,7 +43,7 @@ class FriendsSkinUnlockNote extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

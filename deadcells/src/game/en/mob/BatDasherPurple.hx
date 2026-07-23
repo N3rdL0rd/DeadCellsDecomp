@@ -20,7 +20,7 @@ class BatDasherPurple extends en.mob.BatDasher {
         throw "stub: getKind not decompiled";
     }
 
-    public function playTriggerSound(): Void {
+    public override function playTriggerSound(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

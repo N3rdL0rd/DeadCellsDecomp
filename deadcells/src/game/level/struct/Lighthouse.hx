@@ -3,7 +3,7 @@ package level.struct;
 class Lighthouse extends level.LevelStruct {
     public var combats: Array<Dynamic>;
 
-    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+    public function new(arg0: User = null, arg1: Dynamic = null, arg2: libs.Rand = null) {
         super();
     }
 

@@ -45,7 +45,7 @@ class StompSkeleton extends en.Mob {
     public override function onTouchWall(arg0: Int): Void {
     }
 
-    public function onTouchCeil(): Void {
+    public override function onTouchCeil(): Void {
     }
 
     public function stopHellStomp(): Void {

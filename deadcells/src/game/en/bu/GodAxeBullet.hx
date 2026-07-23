@@ -17,7 +17,7 @@ class GodAxeBullet extends en.Bullet {
     public override function playBlockSound(): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
@@ -56,6 +56,6 @@ class GodAxeBullet extends en.Bullet {
     public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function onBlock(arg0: Bool): Void {
+    public override function onBlock(arg0: Bool): Void {
     }
 }

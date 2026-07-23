@@ -12,7 +12,7 @@ class MiniGrenade extends en.Bullet {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
@@ -50,6 +50,6 @@ class MiniGrenade extends en.Bullet {
     public function onExplode(): Void {
     }
 
-    public function onBlock(arg0: Bool): Void {
+    public override function onBlock(arg0: Bool): Void {
     }
 }

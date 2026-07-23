@@ -20,7 +20,7 @@ class GoldOre extends en.Loot {
     public override function postUpdate(): Void {
     }
 
-    public function onDropAsLoot(): Void {
+    public override function onDropAsLoot(): Void {
     }
 
     public override function pickUp(arg0: en.Hero): Void {

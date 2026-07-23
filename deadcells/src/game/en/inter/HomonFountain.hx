@@ -11,11 +11,11 @@ class HomonFountain extends en.Interactive {
         super();
     }
 
-    public function get_interactX(): Float {
+    public override function get_interactX(): Float {
         throw "stub: get_interactX not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function dispose(): Void {
@@ -29,7 +29,7 @@ class HomonFountain extends en.Interactive {
         throw "stub: canBeActivatedByHomunculus not decompiled";
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function onFocusHomunculus(arg0: en.Homunculus): Void {
@@ -38,10 +38,10 @@ class HomonFountain extends en.Interactive {
     public override function onActivateHomunculus(arg0: en.Homunculus): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

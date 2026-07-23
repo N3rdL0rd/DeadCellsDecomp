@@ -11,7 +11,7 @@ class FirePillar extends Entity {
     public var pillarWid: Float;
     public var pillarHei: Float;
 
-    public function new(arg0: en.mob.boss.DookuBeast, arg1: String, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: en.inter.DookuBreakableFloor) {
+    public function new(arg0: en.mob.boss.DookuBeast = null, arg1: String = null, arg2: Int = 0, arg3: Int = 0, arg4: Float = 0., arg5: Float = 0., arg6: Float = 0., arg7: en.inter.DookuBreakableFloor = null) {
         super();
     }
 

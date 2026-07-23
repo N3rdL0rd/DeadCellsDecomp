@@ -23,39 +23,39 @@ class BreakableTile extends en.Interactive {
         super();
     }
 
-    public function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
-    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
     }
 
-    public function isInQuadTree(): Bool {
+    public override function isInQuadTree(): Bool {
         throw "stub: isInQuadTree not decompiled";
     }
 
-    public function isBreakableByHero(): Bool {
+    public override function isBreakableByHero(): Bool {
         throw "stub: isBreakableByHero not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public function updateEdgeVisual(arg0: String): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
     public function setColSpotLogic(arg0: pr.Level, arg1: Ref, arg2: Ref): Void {
@@ -70,13 +70,13 @@ class BreakableTile extends en.Interactive {
     public function removeSpotLogic(arg0: Int, arg1: Int): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public function destroyBreakableAbove(arg0: Entity): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -94,7 +94,7 @@ class BreakableTile extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

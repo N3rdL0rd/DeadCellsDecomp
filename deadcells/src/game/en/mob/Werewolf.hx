@@ -39,7 +39,7 @@ class Werewolf extends en.mob.Rampager {
         throw "stub: shouldGoRampage not decompiled";
     }
 
-    public function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
         throw "stub: tryToPreventDeath not decompiled";
     }
 

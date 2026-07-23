@@ -7,7 +7,7 @@ class ForcedDiveAttack extends tool.mainSkills.DiveAttack {
         super();
     }
 
-    public function isEnabled(): Bool {
+    public override function isEnabled(): Bool {
         throw "stub: isEnabled not decompiled";
     }
 

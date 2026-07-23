@@ -8,21 +8,21 @@ class GiftSub extends en.Interactive {
         super();
     }
 
-    public function canBeHit(): Bool {
+    public override function canBeHit(): Bool {
         throw "stub: canBeHit not decompiled";
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

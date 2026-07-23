@@ -64,7 +64,7 @@ class Chain {
     public var chainSegments: Array<Dynamic>;
     public var lastSegmentIndex: Int;
 
-    public function new(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref, arg3: h3d.mat.Texture, arg4: Ref) {
+    public function new(arg0: libs.heaps.slib.SpriteLib = null, arg1: String = null, arg2: Ref = null, arg3: h3d.mat.Texture = null, arg4: Ref = null) {
     }
 
     public function init(arg0: pr.Level, arg1: Ref, arg2: Entity, arg3: Dynamic): Void {

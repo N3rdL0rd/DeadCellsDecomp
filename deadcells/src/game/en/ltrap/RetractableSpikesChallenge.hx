@@ -8,24 +8,24 @@ class RetractableSpikesChallenge extends en.ltrap.RetractableSpikes {
         super();
     }
 
-    public function get_normalSprite(): String {
+    public override function get_normalSprite(): String {
         throw "stub: get_normalSprite not decompiled";
     }
 
-    public function get_bloodySprite(): String {
+    public override function get_bloodySprite(): String {
         throw "stub: get_bloodySprite not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onHitHero(): Void {
+    public override function onHitHero(): Void {
     }
 
     public override function goOut(arg0: Bool, arg1: Ref): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

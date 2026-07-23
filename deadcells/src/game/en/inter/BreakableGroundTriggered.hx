@@ -13,22 +13,22 @@ class BreakableGroundTriggered extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

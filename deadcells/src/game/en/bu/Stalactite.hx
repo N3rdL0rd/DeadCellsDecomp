@@ -13,7 +13,7 @@ class Stalactite extends en.Bullet {
     public override function initGfx(): Void {
     }
 
-    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {

@@ -9,13 +9,13 @@ class HeroDeathDLCP extends cine.HeroDeathBase {
         super();
     }
 
-    public function onResize(): Void {
+    public override function onResize(): Void {
     }
 
     public override function gameOverTitle(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public override function postUpdate(): Void {

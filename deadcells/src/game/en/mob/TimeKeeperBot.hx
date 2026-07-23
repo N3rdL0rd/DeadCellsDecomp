@@ -56,7 +56,7 @@ class TimeKeeperBot extends en.Mob {
     public override function postUpdate(): Void {
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public override function reveal(): Void {

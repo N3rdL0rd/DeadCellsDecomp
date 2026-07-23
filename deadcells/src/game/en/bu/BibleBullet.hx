@@ -15,7 +15,7 @@ class BibleBullet extends en.Bullet {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
@@ -51,7 +51,7 @@ class BibleBullet extends en.Bullet {
     public function updateMovement(): Void {
     }
 
-    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -72,7 +72,7 @@ class BibleBullet extends en.Bullet {
     public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function canHit(arg0: Entity): Bool {
+    public override function canHit(arg0: Entity): Bool {
         throw "stub: canHit not decompiled";
     }
 }

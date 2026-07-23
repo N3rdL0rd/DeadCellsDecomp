@@ -7,20 +7,20 @@ class PrisonRoof extends level.BiomeDisp {
     public var sbFlags: libs.heaps.slib.HSpriteBatch;
     public var cloudGroups: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null) {
         super();
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
     public function addSuspendedCage(arg0: Int, arg1: Int, arg2: Int): Void {
@@ -30,7 +30,7 @@ class PrisonRoof extends level.BiomeDisp {
         throw "stub: isCorrupt not decompiled";
     }
 
-    public function addAlcove(arg0: level.DecoTypes.DecoZone): Void {
+    public function addAlcove(arg0: level.DecoZone): Void {
     }
 
     public function renderBackground(): Void {
@@ -61,7 +61,7 @@ class PrisonRoof extends level.BiomeDisp {
     public override function renderFloorStamps(): Void {
     }
 
-    public function reloadRenderConf(): Void {
+    public override function reloadRenderConf(): Void {
     }
 
     public override function updateBiomeFx(): Void {

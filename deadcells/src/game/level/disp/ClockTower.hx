@@ -8,26 +8,26 @@ class ClockTower extends level.BiomeDisp {
     public var fogs: Array<Dynamic>;
     public var glowShader: shader.GlowKey;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null) {
         super();
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addSmallDoors(arg0: level.DecoTypes.DecoZone): Void {
+    public function addSmallDoors(arg0: level.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoZone): Void {
     }
 
     public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
@@ -39,13 +39,13 @@ class ClockTower extends level.BiomeDisp {
     public override function postUpdate(): Void {
     }
 
-    public function clear(): Void {
+    public override function clear(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
-    public function reloadRenderConf(): Void {
+    public override function reloadRenderConf(): Void {
     }
 
     public override function updateBiomeFx(): Void {

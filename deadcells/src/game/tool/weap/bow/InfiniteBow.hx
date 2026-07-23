@@ -8,10 +8,10 @@ class InfiniteBow extends tool.weap.BaseBow {
     public override function shoot(arg0: Array<Dynamic>): Void {
     }
 
-    public function set_cycle(arg0: Int): Int {
+    public override function set_cycle(arg0: Int): Int {
         throw "stub: set_cycle not decompiled";
     }
 
-    public function incrementCycle(): Void {
+    public override function incrementCycle(): Void {
     }
 }

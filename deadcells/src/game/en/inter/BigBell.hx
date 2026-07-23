@@ -18,7 +18,7 @@ class BigBell extends en.Interactive {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public function ring(arg0: Bool, arg1: Dynamic): Void {
@@ -28,22 +28,22 @@ class BigBell extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -61,7 +61,7 @@ class BigBell extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

@@ -13,20 +13,20 @@ class TrainingArmoryButton extends en.Interactive {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public function disable(): Void {
@@ -38,7 +38,7 @@ class TrainingArmoryButton extends en.Interactive {
     public function respawnItems(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function flush(): Void {
@@ -52,7 +52,7 @@ class TrainingArmoryButton extends en.Interactive {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

@@ -5,6 +5,6 @@ class CursingSkill extends tool.skill.MobSkill {
         super();
     }
 
-    public function tryHitEntities(arg0: tool.skill.SkillArea, arg1: Array<Dynamic>, arg2: Ref): Void {
+    public override function tryHitEntities(arg0: tool.skill.SkillArea, arg1: Array<Dynamic>, arg2: Ref): Void {
     }
 }

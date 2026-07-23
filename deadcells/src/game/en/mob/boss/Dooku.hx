@@ -60,10 +60,10 @@ class Dooku extends en.mob.Boss {
     public override function init(): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function initScarf(): Void {
@@ -75,10 +75,10 @@ class Dooku extends en.mob.Boss {
     public override function onBossLevelUp(): Void {
     }
 
-    public function postDeserialize(): Void {
+    public override function postDeserialize(): Void {
     }
 
-    public function getDamageReduction(arg0: tool.atk.AttackData): Float {
+    public override function getDamageReduction(arg0: tool.atk.AttackData): Float {
         throw "stub: getDamageReduction not decompiled";
     }
 
@@ -89,11 +89,11 @@ class Dooku extends en.mob.Boss {
     public override function onDie(): Void {
     }
 
-    public function get_headX(): Float {
+    public override function get_headX(): Float {
         throw "stub: get_headX not decompiled";
     }
 
-    public function get_headY(): Float {
+    public override function get_headY(): Float {
         throw "stub: get_headY not decompiled";
     }
 
@@ -118,7 +118,7 @@ class Dooku extends en.mob.Boss {
     public function deathTaunt(): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
     public function onHeroUseSkill(arg0: String): Void {
@@ -127,7 +127,7 @@ class Dooku extends en.mob.Boss {
     public function sayTaunt(arg0: String, arg1: Ref, arg2: Ref): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function applyBossRushModifier(arg0: Dynamic): Void {
@@ -150,7 +150,7 @@ class Dooku extends en.mob.Boss {
         throw "stub: initCCAttack not decompiled";
     }
 
-    public function interruptSkills(): Void {
+    public override function interruptSkills(): Void {
     }
 
     public function teleportTo(arg0: Int, arg1: Int, arg2: Ref): Bool {
@@ -161,10 +161,10 @@ class Dooku extends en.mob.Boss {
         throw "stub: shadowStepTo not decompiled";
     }
 
-    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
 
-    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
 
     public function startATpAction(arg0: tool.skill.OldMobSkill): Bool {
@@ -210,16 +210,16 @@ class Dooku extends en.mob.Boss {
     public override function bossLevelUp(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
-    public function onHorizontalStep(): Void {
+    public override function onHorizontalStep(): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public override function fixedUpdate(): Void {
@@ -229,13 +229,13 @@ class Dooku extends en.mob.Boss {
         throw "stub: getShadowStepColor not decompiled";
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
     public override function getCLID(): Int {

@@ -21,7 +21,7 @@ class CrossbowMan extends en.Mob {
     public override function initGfx(): Void {
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 

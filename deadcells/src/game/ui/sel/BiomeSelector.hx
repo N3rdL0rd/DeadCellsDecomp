@@ -9,7 +9,7 @@ class BiomeSelector extends ui.sel.GridSelector {
     public var nameText: ui.Text;
     public var preSelectedBiome: String;
 
-    public function new(arg0: Array<Int>, arg1: Dynamic, arg2: String) {
+    public function new(arg0: Array<Int> = null, arg1: Dynamic = null, arg2: String = null) {
         super();
     }
 

@@ -27,7 +27,7 @@ class S_ProtectorMushroom extends en.pet.PetMob {
         throw "stub: getUseSound not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function getJumpingSpot(): Dynamic {
@@ -56,7 +56,7 @@ class S_ProtectorMushroom extends en.pet.PetMob {
     public function giveExplodeOrder(): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
     public override function onTeleJumpEnd(): Void {
@@ -65,7 +65,7 @@ class S_ProtectorMushroom extends en.pet.PetMob {
     public override function fixedUpdate(): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public override function shouldFollowParent(): Bool {
@@ -75,7 +75,7 @@ class S_ProtectorMushroom extends en.pet.PetMob {
     public function followParent(): Void {
     }
 
-    public function getMoveSpeedMul(): Float {
+    public override function getMoveSpeedMul(): Float {
         throw "stub: getMoveSpeedMul not decompiled";
     }
 

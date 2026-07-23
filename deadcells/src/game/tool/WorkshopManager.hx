@@ -23,13 +23,13 @@ class WorkshopManager {
         throw "stub: itemURL not decompiled";
     }
 
-    public function itemMenu(arg0: steam.ugc.Result): Void {
+    public function itemMenu(arg0: steam.ugc.Query.Result): Void {
     }
 
     public function newItem(): Void {
     }
 
-    public function updateProperties(arg0: steam.ugc.Item, arg1: steam.ugc.Result): Void {
+    public function updateProperties(arg0: steam.ugc.Item, arg1: steam.ugc.Query.Result): Void {
     }
 
     public function read(arg0: String, arg1: String, arg2: Dynamic): String {

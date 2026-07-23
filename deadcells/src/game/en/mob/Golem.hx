@@ -35,7 +35,7 @@ class Golem extends en.Mob {
     public override function setAttackTarget(arg0: Entity): Void {
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public override function behaviourAi(): Void {

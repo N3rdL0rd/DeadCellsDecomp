@@ -29,7 +29,7 @@ class ExplosiveBarrel extends en.Interactive {
         super();
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
@@ -39,28 +39,28 @@ class ExplosiveBarrel extends en.Interactive {
         throw "stub: getSkillId not decompiled";
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onTouchGround(): Void {
+    public override function onTouchGround(): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
-    public function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(arg0: Int): Void {
     }
 
     public function createAttack(arg0: Entity, arg1: Float): tool.atk.AttackData {
@@ -105,7 +105,7 @@ class ExplosiveBarrel extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

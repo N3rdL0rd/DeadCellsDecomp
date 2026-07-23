@@ -9,27 +9,27 @@ class Pokebomb extends en.gr.GrenadeSkill {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onFatalFallStart(arg0: Ref): Void {
+    public override function onFatalFallStart(arg0: Ref): Void {
     }
 
     public function dropItem(arg0: tool.InventItem): en.inter.ItemDrop {
         throw "stub: dropItem not decompiled";
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {
@@ -39,10 +39,10 @@ class Pokebomb extends en.gr.GrenadeSkill {
         throw "stub: getEntityCLIDS not decompiled";
     }
 
-    public function onTrigger(): Void {
+    public override function onTrigger(): Void {
     }
 
-    public function canTouch(arg0: Entity): Bool {
+    public override function canTouch(arg0: Entity): Bool {
         throw "stub: canTouch not decompiled";
     }
 }

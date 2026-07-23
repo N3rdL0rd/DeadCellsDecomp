@@ -5,7 +5,7 @@ class InteractiveComponent {
     public var interactive: h2d.Interactive;
     public var actionSignals: uicore.signals.ActionSignals;
 
-    public function new(arg0: uicore.UIElement) {
+    public function new(arg0: uicore.UIElement = null) {
     }
 
     public function initMouseInteractive(): Void {

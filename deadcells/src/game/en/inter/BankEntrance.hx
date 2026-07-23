@@ -19,39 +19,39 @@ class BankEntrance extends en.Interactive {
         super();
     }
 
-    public function canBeHit(): Bool {
+    public override function canBeHit(): Bool {
         throw "stub: canBeHit not decompiled";
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function canApplyRepelling(): Bool {
+    public override function canApplyRepelling(): Bool {
         throw "stub: canApplyRepelling not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public function open(arg0: en.Hero): Void {
     }
 
-    public function setDepth(arg0: Int): Void {
+    public override function setDepth(arg0: Int): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -69,7 +69,7 @@ class BankEntrance extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

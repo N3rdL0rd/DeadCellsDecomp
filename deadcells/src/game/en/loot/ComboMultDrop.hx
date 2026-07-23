@@ -17,7 +17,7 @@ class ComboMultDrop extends en.Loot {
     public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function pickUp(arg0: en.Hero): Void {

@@ -36,7 +36,7 @@ class OnionSkin extends h2d.Bitmap {
     public function addAdditionnalShader(arg0: hxsl.Shader): Void {
     }
 
-    public function addShader(arg0: hxsl.Shader): hxsl.Shader {
+    public override function addShader<T: hxsl.Shader>(arg0: T): T {
         throw "stub: addShader not decompiled";
     }
 

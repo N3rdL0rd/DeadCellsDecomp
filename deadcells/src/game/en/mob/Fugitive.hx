@@ -60,7 +60,7 @@ class Fugitive extends en.Mob {
         throw "stub: inDetectArea not decompiled";
     }
 
-    public function onTouchGround(): Void {
+    public override function onTouchGround(): Void {
     }
 
     public override function onDamage(arg0: tool.atk.AttackData): Void {

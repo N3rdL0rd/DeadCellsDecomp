@@ -39,7 +39,7 @@ class LightningWall extends en.LevelTrap {
         throw "stub: canBeActive not decompiled";
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
     public function getEndX(): Float {
@@ -60,23 +60,23 @@ class LightningWall extends en.LevelTrap {
     public function tpFeedback(arg0: en.Hero, arg1: tool.FPoint): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function updateLightning(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function _isOnScreen(): Bool {
+    public override function _isOnScreen(): Bool {
         throw "stub: _isOnScreen not decompiled";
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -87,17 +87,17 @@ class LightningWall extends en.LevelTrap {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
     public function onRotSet(arg0: Int): Void {

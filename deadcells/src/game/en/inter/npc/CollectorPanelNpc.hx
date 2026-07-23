@@ -5,7 +5,7 @@ class CollectorPanelNpc extends en.inter.Npc {
     public static var __eclids: Array<Int>;
     public var itemPops: Int;
 
-    public function new(arg0: pr.Level, arg1: NpcId) {
+    public function new(arg0: pr.Level = null, arg1: NpcId = null) {
         super();
     }
 
@@ -49,7 +49,7 @@ class CollectorPanelNpc extends en.inter.Npc {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

@@ -9,7 +9,7 @@ class DeathArenaWall extends en.inter.ForceField {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function fixedUpdate(): Void {

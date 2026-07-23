@@ -58,20 +58,20 @@ class MamaTick extends en.mob.Boss {
     public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function getMobSprites(): Array<Dynamic> {
+    public override function getMobSprites(): Array<Dynamic> {
         throw "stub: getMobSprites not decompiled";
     }
 
-    public function enableOutline(): Void {
+    public override function enableOutline(): Void {
     }
 
-    public function disableOutline(): Void {
+    public override function disableOutline(): Void {
     }
 
-    public function setOutlineColor(arg0: Int): Void {
+    public override function setOutlineColor(arg0: Int): Void {
     }
 
     public function breathIn(): Void {
@@ -83,7 +83,7 @@ class MamaTick extends en.mob.Boss {
     public function initEyes(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function onScream(): Void {
@@ -96,28 +96,28 @@ class MamaTick extends en.mob.Boss {
     public override function onDie(): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function onBossLevelUp(): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
 
     public function cancelDelayers(): Void {
     }
 
-    public function colorBlink(arg0: Int, arg1: Dynamic, arg2: Dynamic): Void {
+    public override function colorBlink(arg0: Int, arg1: Dynamic, arg2: Dynamic): Void {
     }
 
     public function submerge(arg0: Float): Void {
@@ -129,7 +129,7 @@ class MamaTick extends en.mob.Boss {
     public function initSkillsInf(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function initChangePosition(): Void {
@@ -172,7 +172,7 @@ class MamaTick extends en.mob.Boss {
     public function initSlash(arg0: Int, arg1: Ref): Void {
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 

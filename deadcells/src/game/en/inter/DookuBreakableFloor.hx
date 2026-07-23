@@ -28,7 +28,7 @@ class DookuBreakableFloor extends en.inter.FloatingPlatform {
     public function laserImpactFeedback(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function fixedUpdate(): Void {

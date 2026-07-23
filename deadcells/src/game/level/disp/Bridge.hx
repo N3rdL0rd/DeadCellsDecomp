@@ -11,11 +11,11 @@ class Bridge extends level.BiomeDisp {
     public var sbWaterFx: libs.heaps.slib.HSpriteBatch;
     public var gradientWater: h2d.Bitmap;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null) {
         super();
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
     public function addWater(): Void {
@@ -24,13 +24,13 @@ class Bridge extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public override function renderFloorStamps(): Void {
     }
 
-    public function renderFrontCorners(): Void {
+    public override function renderFrontCorners(): Void {
     }
 
     public override function renderGroundSmoke(): Void {

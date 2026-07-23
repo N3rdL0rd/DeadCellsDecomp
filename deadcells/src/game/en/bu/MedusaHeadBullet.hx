@@ -28,7 +28,7 @@ class MedusaHeadBullet extends en.Bullet {
     public override function initOrigin(arg0: Float, arg1: Float): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
@@ -50,7 +50,7 @@ class MedusaHeadBullet extends en.Bullet {
     public override function onTouchGround(): Void {
     }
 
-    public function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(arg0: Int): Void {
     }
 
     public override function onHitWall(): Void {
@@ -74,7 +74,7 @@ class MedusaHeadBullet extends en.Bullet {
     public function tryToResetWeapon(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

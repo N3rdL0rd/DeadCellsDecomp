@@ -9,23 +9,23 @@ class HolyWater extends en.gr.GrenadeSkill {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {
@@ -35,7 +35,7 @@ class HolyWater extends en.gr.GrenadeSkill {
         throw "stub: getEntityCLIDS not decompiled";
     }
 
-    public function onTrigger(): Void {
+    public override function onTrigger(): Void {
     }
 }
 

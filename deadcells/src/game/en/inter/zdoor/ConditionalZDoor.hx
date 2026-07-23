@@ -35,7 +35,7 @@ class ConditionalZDoor extends en.inter.ZDoor {
     public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getCLID(): Int {

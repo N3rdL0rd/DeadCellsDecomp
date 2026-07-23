@@ -12,7 +12,7 @@ class Platform {
     public var occupations: haxe.ds.IntMap<Dynamic>;
     public var occupiedCount: Int;
 
-    public function new(arg0: level.LevelMap, arg1: Int, arg2: Int, arg3: Int) {
+    public function new(arg0: level.LevelMap = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
     }
 
     public function getPoints(): Array<Dynamic> {

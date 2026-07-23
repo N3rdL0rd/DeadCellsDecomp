@@ -1,7 +1,7 @@
 package tool.mod;
 
 class DLCSecurityTools {
-    public static function canOverride(arg0: String, arg1: hxd.fmt.pak.PakEntry, arg2: haxe.ds.StringMap<Dynamic>): Bool {
+    public static function canOverride(arg0: String, arg1: hxd.fmt.pak.FileSystem.PakEntry, arg2: haxe.ds.StringMap<Dynamic>): Bool {
         throw "stub: canOverride not decompiled";
     }
 }

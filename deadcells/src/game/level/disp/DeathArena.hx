@@ -10,7 +10,7 @@ class DeathArena extends level.BiomeDisp {
     public var parallaxFx: Array<Dynamic>;
     public var skyAnimation: en.mob.boss.death.DeathArenaSkySpr;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null) {
         super();
     }
 
@@ -23,13 +23,13 @@ class DeathArena extends level.BiomeDisp {
     public override function renderOneWay(arg0: Int, arg1: Int, arg2: Bool, arg3: Bool, arg4: Bool): Void {
     }
 
-    public function applyScatterConf(arg0: light.Scatterer, arg1: String): Void {
+    public override function applyScatterConf(arg0: light.Scatterer, arg1: String): Void {
     }
 
-    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    public override function renderParallax(arg0: Dynamic, arg1: String): Void {
     }
 
-    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    public override function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
     }
 
     public function getBlendMode(arg0: Dynamic): h2d.BlendMode {
@@ -57,6 +57,6 @@ class DeathArena extends level.BiomeDisp {
     public override function postUpdate(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 }

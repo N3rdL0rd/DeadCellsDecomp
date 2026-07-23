@@ -10,10 +10,10 @@ class AirJumpUppercut extends tool.mainSkills.AirJump {
     public override function init(): Void {
     }
 
-    public function passiveFixedUpdate(): Void {
+    public override function passiveFixedUpdate(): Void {
     }
 
-    public function passivePostUpdate(): Void {
+    public override function passivePostUpdate(): Void {
     }
 
     public override function isUsingInputs(): Bool {

@@ -8,10 +8,10 @@ class ClusterBombSub extends en.gr.GrenadeSkill {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function getCLID(): Int {
@@ -25,6 +25,6 @@ class ClusterBombSub extends en.gr.GrenadeSkill {
     public function onExplode(): Void {
     }
 
-    public function onTrigger(): Void {
+    public override function onTrigger(): Void {
     }
 }

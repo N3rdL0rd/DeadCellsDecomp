@@ -98,7 +98,7 @@ class DookuBeast extends en.mob.Boss {
         throw "stub: get_diffMult not decompiled";
     }
 
-    public function moveBlocked(): Bool {
+    public override function moveBlocked(): Bool {
         throw "stub: moveBlocked not decompiled";
     }
 
@@ -114,17 +114,17 @@ class DookuBeast extends en.mob.Boss {
     public override function onBossLevelUp(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function getMobSprites(): Array<Dynamic> {
+    public override function getMobSprites(): Array<Dynamic> {
         throw "stub: getMobSprites not decompiled";
     }
 
-    public function postDeserialize(): Void {
+    public override function postDeserialize(): Void {
     }
 
-    public function initMove(): Void {
+    public override function initMove(): Void {
     }
 
     public function onFlyTargetReached(): Void {
@@ -140,11 +140,11 @@ class DookuBeast extends en.mob.Boss {
     public override function onDie(): Void {
     }
 
-    public function get_headX(): Float {
+    public override function get_headX(): Float {
         throw "stub: get_headX not decompiled";
     }
 
-    public function get_headY(): Float {
+    public override function get_headY(): Float {
         throw "stub: get_headY not decompiled";
     }
 
@@ -164,13 +164,13 @@ class DookuBeast extends en.mob.Boss {
         throw "stub: getLeftHandY not decompiled";
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
-    public function onFatalFallDamage(): Void {
+    public override function onFatalFallDamage(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function applyBossRushModifier(arg0: Dynamic): Void {
@@ -220,7 +220,7 @@ class DookuBeast extends en.mob.Boss {
         throw "stub: checkAllActionInCD not decompiled";
     }
 
-    public function interruptSkills(): Void {
+    public override function interruptSkills(): Void {
     }
 
     public function resetAndWait(arg0: Ref): Void {
@@ -256,16 +256,16 @@ class DookuBeast extends en.mob.Boss {
         throw "stub: canLevelUp not decompiled";
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
-    public function pickColorBlink(arg0: tool.atk.AttackData): Void {
+    public override function pickColorBlink(arg0: tool.atk.AttackData): Void {
     }
 
-    public function colorBlink(arg0: Int, arg1: Dynamic, arg2: Dynamic): Void {
+    public override function colorBlink(arg0: Int, arg1: Dynamic, arg2: Dynamic): Void {
     }
 
     public function getPfOnXPos(arg0: Int, arg1: Ref, arg2: Ref, arg3: Ref): en.inter.DookuBreakableFloor {
@@ -276,14 +276,14 @@ class DookuBeast extends en.mob.Boss {
         throw "stub: getClosestWallPos not decompiled";
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public function canPickANewAction(): Bool {
         throw "stub: canPickANewAction not decompiled";
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function applyLaser(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
@@ -292,7 +292,7 @@ class DookuBeast extends en.mob.Boss {
     public override function fixedUpdate(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function getCLID(): Int {

@@ -12,19 +12,19 @@ class Sickle extends en.Bullet {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
     }
 
-    public function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(arg0: Int): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
-    public function kill(): Void {
+    public override function kill(): Void {
     }
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
@@ -42,11 +42,11 @@ class Sickle extends en.Bullet {
     public override function fixedUpdate(): Void {
     }
 
-    public function get_headX(): Float {
+    public override function get_headX(): Float {
         throw "stub: get_headX not decompiled";
     }
 
-    public function get_headY(): Float {
+    public override function get_headY(): Float {
         throw "stub: get_headY not decompiled";
     }
 
@@ -64,9 +64,9 @@ class Sickle extends en.Bullet {
         throw "stub: getCLID not decompiled";
     }
 
-    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    public override function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
     }
 
-    public function onBlock(arg0: Bool): Void {
+    public override function onBlock(arg0: Bool): Void {
     }
 }

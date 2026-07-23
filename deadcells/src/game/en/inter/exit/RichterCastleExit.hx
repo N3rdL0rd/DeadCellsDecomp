@@ -11,7 +11,7 @@ class RichterCastleExit extends en.inter.exit.BgDoor {
     public override function startExitCinematic(arg0: en.Hero): Void {
     }
 
-    public function getDestName(): String {
+    public override function getDestName(): String {
         throw "stub: getDestName not decompiled";
     }
 

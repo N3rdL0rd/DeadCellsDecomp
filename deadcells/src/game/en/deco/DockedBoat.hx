@@ -8,7 +8,7 @@ class DockedBoat extends en.Deco {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

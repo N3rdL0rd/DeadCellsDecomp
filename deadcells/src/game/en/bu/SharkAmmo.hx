@@ -24,7 +24,7 @@ class SharkAmmo extends en.loot.Ammo {
     public function snapEntity(arg0: Entity, arg1: Int): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function fixedUpdate(): Void {
@@ -33,7 +33,7 @@ class SharkAmmo extends en.loot.Ammo {
     public override function startMagnet(arg0: Entity): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
     public override function stickInWall(arg0: en.Bullet): Void {
@@ -47,6 +47,6 @@ class SharkAmmo extends en.loot.Ammo {
         throw "stub: getEntityCLIDS not decompiled";
     }
 
-    public function beforeFallFromEntity(): Void {
+    public override function beforeFallFromEntity(): Void {
     }
 }

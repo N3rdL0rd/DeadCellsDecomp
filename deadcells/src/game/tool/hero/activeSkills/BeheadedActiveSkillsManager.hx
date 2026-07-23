@@ -20,7 +20,7 @@ class BeheadedActiveSkillsManager extends tool.hero.HeroActiveSkillsManager {
     public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function spawnGrenadeSkill(arg0: tool.InventItem, arg1: Dynamic): Void {

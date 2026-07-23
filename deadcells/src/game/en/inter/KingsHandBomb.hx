@@ -10,34 +10,34 @@ class KingsHandBomb extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function onLand(arg0: Float): Void {
+    public override function onLand(arg0: Float): Void {
     }
 
-    public function onTouchGround(): Void {
+    public override function onTouchGround(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -48,7 +48,7 @@ class KingsHandBomb extends en.Interactive {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

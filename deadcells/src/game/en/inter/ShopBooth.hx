@@ -17,32 +17,32 @@ class ShopBooth extends en.Interactive {
         throw "stub: get_isMimic not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function setDepth(arg0: Int): Void {
+    public override function setDepth(arg0: Int): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function removeLargeTip(arg0: Ref): Void {
+    public override function removeLargeTip(arg0: Ref): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function buy(arg0: en.Hero, arg1: Ref): Void {
@@ -54,7 +54,7 @@ class ShopBooth extends en.Interactive {
     public function patchUsingOptions(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public function checkForMimic(): Void {
@@ -75,7 +75,7 @@ class ShopBooth extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

@@ -24,10 +24,10 @@ class CellShrine extends en.Interactive {
     public function initCellIcons(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function dispose(): Void {
@@ -37,13 +37,13 @@ class CellShrine extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -61,7 +61,7 @@ class CellShrine extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

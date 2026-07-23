@@ -11,23 +11,23 @@ class DeadCultist extends en.Interactive {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function onFocusHomunculus(arg0: en.Homunculus): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public override function canBeActivatedByHomunculus(arg0: en.Homunculus): Bool {
@@ -40,7 +40,7 @@ class DeadCultist extends en.Interactive {
     public function dropSkin(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -58,7 +58,7 @@ class DeadCultist extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

@@ -27,7 +27,7 @@ class RockDoor extends en.inter.Exit {
     public override function initGfx(): Void {
     }
 
-    public function onApplyOptions(): Void {
+    public override function onApplyOptions(): Void {
     }
 
     public override function disposeGfx(): Void {
@@ -37,7 +37,7 @@ class RockDoor extends en.inter.Exit {
         throw "stub: getDoorName not decompiled";
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public function applyGlowLight(): Void {
@@ -49,7 +49,7 @@ class RockDoor extends en.inter.Exit {
     public override function postUpdate(): Void {
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
     public override function startExitCinematic(arg0: en.Hero): Void {

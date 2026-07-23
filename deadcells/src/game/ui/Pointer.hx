@@ -31,6 +31,6 @@ class Pointer extends ui.Process {
         throw "stub: getPlayerEntity not decompiled";
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 }

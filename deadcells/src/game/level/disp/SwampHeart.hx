@@ -15,11 +15,11 @@ class SwampHeart extends level.BiomeDisp {
     public var flyingInsects: Array<Dynamic>;
     public var swampSeq: Int;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null) {
         super();
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
     public function addWater(): Void {
@@ -31,26 +31,26 @@ class SwampHeart extends level.BiomeDisp {
     public function renderForeground(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
     public override function postUpdate(): Void {
     }
 
-    public function parallaxHFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Ref, arg6: h2d.Tile): Void {
+    public override function parallaxHFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Ref, arg6: h2d.Tile): Void {
     }
 
-    public function getParallaxOnAddCallback(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic): Dynamic {
+    public override function getParallaxOnAddCallback(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic): Dynamic {
         throw "stub: getParallaxOnAddCallback not decompiled";
     }
 
-    public function initCloudShader(): Void {
+    public override function initCloudShader(): Void {
     }
 
     public override function updateBiomeFx(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public function renderBackground(): Void {

@@ -17,7 +17,7 @@ class PreciousItem extends en.Loot {
     public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function postUpdate(): Void {

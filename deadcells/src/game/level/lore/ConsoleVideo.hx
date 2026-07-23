@@ -5,7 +5,7 @@ class ConsoleVideo extends level.LoreManager {
     public var _pt: tool.CPoint;
     public var treasure: en.inter.TreasureChest;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 

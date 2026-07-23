@@ -9,7 +9,7 @@ class RotatingBallChallenge extends en.ltrap.RotatingBall {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function setChainSprite(): Void {
@@ -35,7 +35,7 @@ class RotatingBallChallenge extends en.ltrap.RotatingBall {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

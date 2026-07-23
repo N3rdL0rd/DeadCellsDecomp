@@ -17,7 +17,7 @@ class Castle extends level.BiomeDisp {
     public var torchBack: h2d.Tile;
     public var shovelPaintPlaced: Bool;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null) {
         super();
     }
 
@@ -52,19 +52,19 @@ class Castle extends level.BiomeDisp {
         throw "stub: getSpecificJunkGlowName not decompiled";
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public function addColumn(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addStatues(arg0: level.DecoTypes.DecoZone): Void {
+    public function addStatues(arg0: level.DecoZone): Void {
     }
 
     public override function canStampOn(arg0: Int): Bool {
@@ -75,7 +75,7 @@ class Castle extends level.BiomeDisp {
         throw "stub: canAddTorch not decompiled";
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone, arg1: Int, arg2: String, arg3: Int): Void {
+    public function addAlcoves(arg0: level.DecoZone, arg1: Int, arg2: String, arg3: Int): Void {
     }
 
     public override function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
@@ -88,10 +88,10 @@ class Castle extends level.BiomeDisp {
     public override function updateBiomeFx(): Void {
     }
 
-    public function clear(): Void {
+    public override function clear(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public function renderBackground(): Void {

@@ -14,7 +14,7 @@ class BarrelLauncher extends tool.weap.BaseBow {
     public function spawnBarrel(arg0: Ref): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 

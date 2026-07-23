@@ -1,7 +1,7 @@
 package tool.mod.script;
 
 class ExitNode extends tool.mod.script.RoomNode {
-    public function new(arg0: level.RoomNode) {
+    public function new(arg0: level.RoomNode = null) {
         super();
     }
 

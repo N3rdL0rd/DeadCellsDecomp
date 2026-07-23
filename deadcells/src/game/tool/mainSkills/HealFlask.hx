@@ -11,11 +11,11 @@ class HealFlask extends tool.mainSkills.Heal {
     public override function init(): Void {
     }
 
-    public function isEnabled(): Bool {
+    public override function isEnabled(): Bool {
         throw "stub: isEnabled not decompiled";
     }
 
-    public function passiveFixedUpdate(): Void {
+    public override function passiveFixedUpdate(): Void {
     }
 
     public override function onStart(): Void {
@@ -27,10 +27,10 @@ class HealFlask extends tool.mainSkills.Heal {
     public override function setFlaskGlow(): Void {
     }
 
-    public function onCancel(): Void {
+    public override function onCancel(): Void {
     }
 
-    public function prepare(): Bool {
+    public override function prepare(): Bool {
         throw "stub: prepare not decompiled";
     }
 

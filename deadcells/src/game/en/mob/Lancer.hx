@@ -48,7 +48,7 @@ class Lancer extends en.Mob {
     public override function behaviourAi(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

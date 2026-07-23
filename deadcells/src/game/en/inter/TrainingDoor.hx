@@ -12,31 +12,31 @@ class TrainingDoor extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
-    public function onApplyOptions(): Void {
+    public override function onApplyOptions(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function open(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

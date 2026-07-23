@@ -20,25 +20,25 @@ class PullBomb extends en.LevelTrap {
         throw "stub: tryToApplyForce not decompiled";
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function getDistIntensity(arg0: Entity): Float {
         throw "stub: getDistIntensity not decompiled";
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -49,16 +49,16 @@ class PullBomb extends en.LevelTrap {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 }

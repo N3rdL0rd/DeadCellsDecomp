@@ -9,7 +9,7 @@ class AssistMode extends ui.OptionsBase {
     public var maxTutoPage: Int;
     public var fromOption: Bool;
 
-    public function new(arg0: ui.Pause, arg1: Ref) {
+    public function new(arg0: ui.Pause = null, arg1: Ref = null) {
         super();
     }
 

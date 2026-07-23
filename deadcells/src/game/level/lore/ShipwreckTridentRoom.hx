@@ -4,7 +4,7 @@ class ShipwreckTridentRoom extends level.LoreManager {
     public static var __clid: Int;
     public var swordY: Float;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 

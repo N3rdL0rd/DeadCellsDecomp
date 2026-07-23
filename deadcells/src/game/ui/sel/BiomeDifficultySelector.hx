@@ -6,7 +6,7 @@ class BiomeDifficultySelector extends ui.sel.BiomeSelector {
     public var recommendedScrollsText: ui.Text;
     public var gearLevelText: ui.Text;
 
-    public function new(arg0: Array<Int>, arg1: Dynamic, arg2: String) {
+    public function new(arg0: Array<Int> = null, arg1: Dynamic = null, arg2: String = null) {
         super();
     }
 

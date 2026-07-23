@@ -7,7 +7,7 @@ class Castle extends level.LevelStruct {
     public var zDoors: Array<Dynamic>;
     public var zBosses: Array<Dynamic>;
 
-    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+    public function new(arg0: User = null, arg1: Dynamic = null, arg2: libs.Rand = null) {
         super();
     }
 

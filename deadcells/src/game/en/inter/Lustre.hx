@@ -12,22 +12,22 @@ class Lustre extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function addTorch(arg0: Float, arg1: Float, arg2: h2d.Tile): Void {
     }
 
-    public function onTouchGround(): Void {
+    public override function onTouchGround(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
@@ -49,7 +49,7 @@ class Lustre extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

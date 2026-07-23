@@ -10,7 +10,7 @@ class ForceField extends en.Interactive {
         super();
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
     public override function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
@@ -25,7 +25,7 @@ class ForceField extends en.Interactive {
     public function close(arg0: Dynamic): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

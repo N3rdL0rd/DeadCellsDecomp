@@ -17,7 +17,7 @@ class HeroDeath extends cine.HeroDeathBase {
     public function fxHomunculusExit(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public override function postUpdate(): Void {

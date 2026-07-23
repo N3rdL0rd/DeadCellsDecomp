@@ -17,7 +17,7 @@ class HeavyBow extends tool.weap.BaseBow {
     public function doWallShake(arg0: Entity, arg1: en.Bullet): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
@@ -25,6 +25,6 @@ class HeavyBow extends tool.weap.BaseBow {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 }

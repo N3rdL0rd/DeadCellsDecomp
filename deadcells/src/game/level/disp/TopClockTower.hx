@@ -19,17 +19,17 @@ class TopClockTower extends level.BiomeDisp {
     public var lc: level.LevelTypes.Marker;
     public var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null) {
         super();
     }
 
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoZone): Void {
     }
 
     public override function renderBackWalls(): Void {
@@ -42,7 +42,7 @@ class TopClockTower extends level.BiomeDisp {
     public override function renderFloorStamps(): Void {
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
     public function renderBackGround(): Void {
@@ -51,9 +51,9 @@ class TopClockTower extends level.BiomeDisp {
     public override function postUpdate(): Void {
     }
 
-    public function clear(): Void {
+    public override function clear(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 }

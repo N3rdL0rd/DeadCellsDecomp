@@ -59,11 +59,11 @@ class Pitcher extends en.Mob {
     public function updateHandSprite(arg0: libs.heaps.slib.HSprite): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
@@ -96,51 +96,5 @@ class Pitcher extends en.Mob {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {
-    }
-}
-
-class NunchuckPitcher extends en.mob.Pitcher {
-    public static var __clid: Int;
-    public static var __eclids: Array<Int>;
-
-    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0) {
-        super();
-    }
-
-    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.NunchuckPitcher {
-        throw "stub: create not decompiled";
-    }
-
-    public override function initGfx(): Void {
-    }
-
-    public function spriteUpdate(): Void {
-    }
-
-    public function forceReveal(): Void {
-    }
-
-    public function reveal(): Void {
-    }
-
-    public function canBeRevealedBy(arg0: en.Hero): Bool {
-        throw "stub: canBeRevealedBy not decompiled";
-    }
-
-    public function hide(arg0: Float): Void {
-    }
-
-    public function onCineEnd(): Void {
-    }
-
-    public function dropLoot(): Void {
-    }
-
-    public override function getCLID(): Int {
-        throw "stub: getCLID not decompiled";
-    }
-
-    public override function getEntityCLIDS(): Array<Int> {
-        throw "stub: getEntityCLIDS not decompiled";
     }
 }

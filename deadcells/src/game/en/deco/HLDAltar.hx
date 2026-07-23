@@ -15,16 +15,16 @@ class HLDAltar extends en.Deco {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public function startPulse(arg0: Float, arg1: Float, arg2: Float, arg3: hxd.res.Sound, arg4: Float, arg5: Dynamic): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function shouldSave(): Bool {
@@ -39,16 +39,16 @@ class HLDAltar extends en.Deco {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 }

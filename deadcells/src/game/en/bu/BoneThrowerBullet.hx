@@ -29,10 +29,10 @@ class BoneThrowerBullet extends en.Bullet {
     public override function onTouchGround(): Void {
     }
 
-    public function onTouchCeil(): Void {
+    public override function onTouchCeil(): Void {
     }
 
-    public function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(arg0: Int): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

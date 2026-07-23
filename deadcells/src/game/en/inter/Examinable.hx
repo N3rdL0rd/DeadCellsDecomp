@@ -20,16 +20,16 @@ class Examinable extends en.Interactive {
     public override function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
@@ -39,7 +39,7 @@ class Examinable extends en.Interactive {
     public function closeAllTexts(): Void {
     }
 
-    public function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
     public function narrate(arg0: Entity, arg1: String, arg2: Dynamic): Void {
@@ -51,10 +51,10 @@ class Examinable extends en.Interactive {
     public function hideToolTip(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

@@ -27,22 +27,22 @@ class BatDasher extends en.mob.Bat {
         throw "stub: getKind not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function decideChargeAng(): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
     public override function wakeUp(): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public function stopCharge(): Void {

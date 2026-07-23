@@ -11,7 +11,7 @@ class MariaDoor extends en.inter.door.LockedDoor {
     public override function init(): Void {
     }
 
-    public function openWithAKick(arg0: en.Hero): Void {
+    public override function openWithAKick(arg0: en.Hero): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

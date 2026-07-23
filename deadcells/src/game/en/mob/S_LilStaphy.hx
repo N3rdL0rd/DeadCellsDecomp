@@ -40,11 +40,11 @@ class S_LilStaphy extends en.pet.PetMob {
         throw "stub: get_isGrownUp not decompiled";
     }
 
-    public function get_targetSprPosX(): Float {
+    public override function get_targetSprPosX(): Float {
         throw "stub: get_targetSprPosX not decompiled";
     }
 
-    public function get_targetSprPosY(): Float {
+    public override function get_targetSprPosY(): Float {
         throw "stub: get_targetSprPosY not decompiled";
     }
 
@@ -62,10 +62,10 @@ class S_LilStaphy extends en.pet.PetMob {
     public function initPaws(arg0: Bool): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
     public override function getJumpingSpot(): Dynamic {
@@ -91,7 +91,7 @@ class S_LilStaphy extends en.pet.PetMob {
     public override function onTeleJumpEnd(): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public function followParent(): Void {
@@ -100,7 +100,7 @@ class S_LilStaphy extends en.pet.PetMob {
     public override function tpTo(arg0: Entity): Void {
     }
 
-    public function getMoveSpeedMul(): Float {
+    public override function getMoveSpeedMul(): Float {
         throw "stub: getMoveSpeedMul not decompiled";
     }
 

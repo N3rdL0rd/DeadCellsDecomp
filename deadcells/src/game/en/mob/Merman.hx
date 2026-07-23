@@ -24,11 +24,11 @@ class Merman extends en.mob.Archer {
         throw "stub: getNormalMap not decompiled";
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function seeThroughOneWays(arg0: Entity): Bool {
+    public override function seeThroughOneWays(arg0: Entity): Bool {
         throw "stub: seeThroughOneWays not decompiled";
     }
 

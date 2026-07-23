@@ -101,7 +101,7 @@ class U28_VacuumCleaner extends en.Mob {
     public override function postUpdate(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

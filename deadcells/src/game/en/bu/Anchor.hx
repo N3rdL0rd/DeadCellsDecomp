@@ -44,7 +44,7 @@ class Anchor extends en.Bullet {
         throw "stub: getProgress not decompiled";
     }
 
-    public function _isOutOfGame(): Bool {
+    public override function _isOutOfGame(): Bool {
         throw "stub: _isOutOfGame not decompiled";
     }
 
@@ -71,7 +71,7 @@ class Anchor extends en.Bullet {
     public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function onCountered(): Void {
+    public override function onCountered(): Void {
     }
 
     public function onTouchGroundCallback(): Void {

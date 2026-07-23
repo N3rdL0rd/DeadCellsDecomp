@@ -9,7 +9,7 @@ class BreakableProp extends en.Interactive {
         super();
     }
 
-    public function isInQuadTree(): Bool {
+    public override function isInQuadTree(): Bool {
         throw "stub: isInQuadTree not decompiled";
     }
 
@@ -17,23 +17,23 @@ class BreakableProp extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function canBeHitBy(arg0: Entity): Bool {
+    public override function canBeHitBy(arg0: Entity): Bool {
         throw "stub: canBeHitBy not decompiled";
     }
 
-    public function onLand(arg0: Float): Void {
+    public override function onLand(arg0: Float): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

@@ -5,7 +5,7 @@ class MobBecomesElite extends pr.InfectionRule {
     public var infectionRange: Float;
     public var infectionDelay: Float;
 
-    public function new(arg0: pr.Infection, arg1: String) {
+    public function new(arg0: pr.Infection = null, arg1: String = null) {
         super();
     }
 

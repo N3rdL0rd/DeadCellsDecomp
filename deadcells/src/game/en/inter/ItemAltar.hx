@@ -16,16 +16,16 @@ class ItemAltar extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function setDepth(arg0: Int): Void {
+    public override function setDepth(arg0: Int): Void {
     }
 
     public function drawLink(arg0: en.inter.ItemAltar, arg1: en.inter.ItemAltar): Void {
@@ -35,10 +35,10 @@ class ItemAltar extends en.Interactive {
         throw "stub: getHighestSellValue not decompiled";
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function removeLargeTip(arg0: Ref): Void {
+    public override function removeLargeTip(arg0: Ref): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
@@ -48,19 +48,19 @@ class ItemAltar extends en.Interactive {
     public override function dispose(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function disable(arg0: Bool): Void {
     }
 
-    public function preUpdate(): Void {
+    public override function preUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -78,7 +78,7 @@ class ItemAltar extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

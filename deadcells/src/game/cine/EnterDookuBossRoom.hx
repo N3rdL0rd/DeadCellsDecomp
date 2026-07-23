@@ -15,7 +15,7 @@ class EnterDookuBossRoom {
 }
 
 class EDBR_Any extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -28,7 +28,7 @@ class EDBR_Any extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_BossRush extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -38,7 +38,7 @@ class EDBR_BossRush extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_Richter extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -51,7 +51,7 @@ class EDBR_Richter extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_Simon extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -64,7 +64,7 @@ class EDBR_Simon extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_Trevor extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -77,7 +77,7 @@ class EDBR_Trevor extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_Dooku extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -90,7 +90,7 @@ class EDBR_Dooku extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_Adele extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -103,7 +103,7 @@ class EDBR_Adele extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_HauntedArmor extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -116,7 +116,7 @@ class EDBR_HauntedArmor extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_Hector extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -129,7 +129,7 @@ class EDBR_Hector extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_Alucard extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -142,7 +142,7 @@ class EDBR_Alucard extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_Sypha extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -155,7 +155,7 @@ class EDBR_Sypha extends cine.EnterDookuBRCineBase {
 }
 
 class EDBR_Maria extends cine.EnterDookuBRCineBase {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 
@@ -168,7 +168,7 @@ class EDBR_Maria extends cine.EnterDookuBRCineBase {
 }
 
 class EnterDookuBRCineBase extends GameCinematic {
-    public function new(arg0: cine.EnterDookuBossRoom) {
+    public function new(arg0: cine.EnterDookuBossRoom = null) {
         super();
     }
 

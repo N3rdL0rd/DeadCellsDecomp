@@ -57,9 +57,9 @@ class AspectSelect extends ui.Process {
     public override function onResize(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

@@ -12,29 +12,29 @@ class ExitToRichterCastle extends en.Interactive {
         throw "stub: get_active not decompiled";
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
-    public function onApplyOptions(): Void {
+    public override function onApplyOptions(): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function startExitCinematic(arg0: en.Hero): Void {

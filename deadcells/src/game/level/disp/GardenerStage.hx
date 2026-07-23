@@ -13,7 +13,7 @@ class GardenerStage extends level.disp.Cliff {
     public var customParallaxBounds: h2d.col.Bounds;
     public var vitrauxPos: h2d.col.Point;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null, arg3: String = null) {
         super();
     }
 
@@ -23,7 +23,7 @@ class GardenerStage extends level.disp.Cliff {
     public override function render(): Void {
     }
 
-    public override function addScroller(arg0: level.DecoTypes.DecoZone): Void {
+    public override function addScroller(arg0: level.DecoZone): Void {
     }
 
     public override function decorateRoom(arg0: level.Room): Void {
@@ -40,7 +40,7 @@ class GardenerStage extends level.disp.Cliff {
         throw "stub: getNearBorderRatioAtPos not decompiled";
     }
 
-    public function getParallaxBounds(arg0: Dynamic): h2d.col.Bounds {
+    public override function getParallaxBounds(arg0: Dynamic): h2d.col.Bounds {
         throw "stub: getParallaxBounds not decompiled";
     }
 

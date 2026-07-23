@@ -277,13 +277,13 @@ class BiomeDisp extends level.LevelDisp {
         throw "stub: addWallStamp not decompiled";
     }
 
-    public override function addJunk(arg0: level.DecoTypes.DecoZone): Void {
+    public override function addJunk(arg0: level.DecoZone): Void {
     }
 
-    public function _addFloorJunk(arg0: level.DecoTypes.DecoZone, arg1: Float): Void {
+    public function _addFloorJunk(arg0: level.DecoZone, arg1: Float): Void {
     }
 
-    public function _addWallJunk(arg0: level.DecoTypes.DecoZone, arg1: Float, arg2: Ref): Void {
+    public function _addWallJunk(arg0: level.DecoZone, arg1: Float, arg2: Ref): Void {
     }
 
     public function onAddFloorJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {

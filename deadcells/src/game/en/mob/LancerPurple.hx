@@ -24,7 +24,7 @@ class LancerPurple extends en.mob.Lancer {
         throw "stub: getNormalMap not decompiled";
     }
 
-    public function createBodyPart(): Array<Dynamic> {
+    public override function createBodyPart(): Array<Dynamic> {
         throw "stub: createBodyPart not decompiled";
     }
 

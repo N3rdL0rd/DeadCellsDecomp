@@ -25,7 +25,7 @@ class BossRushTierButton extends en.inter.button.Button {
     public override function initGfx(): Void {
     }
 
-    public function onApplyOptions(): Void {
+    public override function onApplyOptions(): Void {
     }
 
     public override function onActivationSuccess(arg0: en.Hero): Void {

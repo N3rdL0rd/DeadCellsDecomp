@@ -23,13 +23,13 @@ class GardenerSickleBullet extends en.Bullet {
     public override function playBlockSound(): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
     }
 
-    public function setGlowColor(arg0: Int, arg1: Dynamic, arg2: Dynamic, arg3: libs.heaps.slib.HSprite): Void {
+    public override function setGlowColor(arg0: Int, arg1: Dynamic, arg2: Dynamic, arg3: libs.heaps.slib.HSprite): Void {
     }
 
     public override function onOutOfGameChange(): Void {

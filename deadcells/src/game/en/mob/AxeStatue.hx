@@ -37,11 +37,11 @@ class AxeStatue extends en.Mob {
     public override function setElite(arg0: Bool): Void {
     }
 
-    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
         throw "stub: canReceiveAttack not decompiled";
     }
 
-    public function canApplyRepelling(): Bool {
+    public override function canApplyRepelling(): Bool {
         throw "stub: canApplyRepelling not decompiled";
     }
 

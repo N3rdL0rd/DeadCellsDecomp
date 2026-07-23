@@ -57,19 +57,19 @@ class TimeKeeper extends en.mob.Boss {
     public override function init(): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
     public override function setReady(): Void {
     }
 
-    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function updateShurikenLaunch(arg0: Ref): Void {
@@ -82,19 +82,19 @@ class TimeKeeper extends en.mob.Boss {
     public function shootCircleShuriken(): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function shootXHook(): Float {
+    public override function shootXHook(): Float {
         throw "stub: shootXHook not decompiled";
     }
 
-    public function shootYHook(): Float {
+    public override function shootYHook(): Float {
         throw "stub: shootYHook not decompiled";
     }
 
@@ -125,16 +125,16 @@ class TimeKeeper extends en.mob.Boss {
     public function setOutOfDanger(): Void {
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public function onDashing(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public override function prepareLevelUp(): Void {
@@ -160,7 +160,7 @@ class TimeKeeper extends en.mob.Boss {
     public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function adaptCDDuration(arg0: Float): Float {
@@ -171,7 +171,7 @@ class TimeKeeper extends en.mob.Boss {
         throw "stub: adaptLockDuration not decompiled";
     }
 
-    public function getVolteDelay(): Float {
+    public override function getVolteDelay(): Float {
         throw "stub: getVolteDelay not decompiled";
     }
 

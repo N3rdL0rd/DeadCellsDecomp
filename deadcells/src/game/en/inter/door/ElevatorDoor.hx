@@ -16,7 +16,7 @@ class ElevatorDoor extends en.inter.Door {
     public override function initGfx(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {

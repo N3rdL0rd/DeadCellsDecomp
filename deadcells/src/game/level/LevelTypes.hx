@@ -8,7 +8,7 @@ class RoomRect {
     public var hei: Int;
     public var canOverlap: Bool;
 
-    public function new(arg0: level.RoomNode, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Ref) {
+    public function new(arg0: level.RoomNode = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Ref = null) {
     }
 
     public function checkFit(arg0: haxe.ds.List<Dynamic>, arg1: Int, arg2: Int): Bool {

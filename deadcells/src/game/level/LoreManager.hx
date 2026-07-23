@@ -19,7 +19,7 @@ class LoreManager {
     public var oldDebug: Bool;
     public var __uid: Int;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
     }
 
     public function get_game(): pr.Game {

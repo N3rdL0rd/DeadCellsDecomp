@@ -10,7 +10,7 @@ class MerchantPan extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
@@ -20,7 +20,7 @@ class MerchantPan extends en.Interactive {
     public function dropPan(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -38,7 +38,7 @@ class MerchantPan extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

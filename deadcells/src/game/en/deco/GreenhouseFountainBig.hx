@@ -10,16 +10,16 @@ class GreenhouseFountainBig extends en.Deco {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function initWaterfall(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -30,9 +30,9 @@ class GreenhouseFountainBig extends en.Deco {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 }

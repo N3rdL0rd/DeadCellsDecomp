@@ -5,7 +5,7 @@ class DookuInteractionKillMerchant extends en.dookuInteractions.DookuInteraction
     public var curMerchant: en.inter.Merchant;
     public var lootGen: level.LootGen;
 
-    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager = null) {
         super();
     }
 

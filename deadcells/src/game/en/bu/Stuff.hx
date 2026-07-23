@@ -12,7 +12,7 @@ class Stuff extends en.Bullet {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
@@ -41,6 +41,6 @@ class Stuff extends en.Bullet {
     public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    public override function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
     }
 }

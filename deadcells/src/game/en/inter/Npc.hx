@@ -9,14 +9,14 @@ class Npc extends en.Interactive {
     public var greetDistance: Int;
     public var requireNoMobAround: Bool;
 
-    public function new(arg0: pr.Level, arg1: NpcId) {
+    public function new(arg0: pr.Level = null, arg1: NpcId = null) {
         super();
     }
 
-    public function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
     }
 
-    public function toString(): String {
+    public override function toString(): String {
         throw "stub: toString not decompiled";
     }
 
@@ -29,7 +29,7 @@ class Npc extends en.Interactive {
     public function talkFor(arg0: Float): Void {
     }
 
-    public function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
     public override function dispose(): Void {
@@ -38,14 +38,14 @@ class Npc extends en.Interactive {
     public function closeAllSays(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function checkCanGreet(): Void {
@@ -58,7 +58,7 @@ class Npc extends en.Interactive {
         throw "stub: canGreet not decompiled";
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

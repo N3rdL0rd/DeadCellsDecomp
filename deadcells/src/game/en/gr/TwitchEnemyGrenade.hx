@@ -12,7 +12,7 @@ class TwitchEnemyGrenade extends en.Grenade {
     public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function dispose(): Void {

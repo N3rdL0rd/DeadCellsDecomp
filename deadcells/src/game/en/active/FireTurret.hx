@@ -15,14 +15,14 @@ class FireTurret extends en.active.Turret {
         throw "stub: create not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
@@ -50,7 +50,7 @@ class FireTurret extends en.active.Turret {
     public function updateBounds(): Void {
     }
 
-    public function deploy(): Void {
+    public override function deploy(): Void {
     }
 
     public override function fixedUpdate(): Void {

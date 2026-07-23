@@ -17,7 +17,7 @@ class Ninja extends en.Mob {
     public override function initGfx(): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
     public override function setElite(arg0: Bool): Void {

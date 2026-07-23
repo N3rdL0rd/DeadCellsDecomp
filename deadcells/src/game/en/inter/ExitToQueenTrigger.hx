@@ -11,7 +11,7 @@ class ExitToQueenTrigger extends en.Interactive {
         super();
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
@@ -21,13 +21,13 @@ class ExitToQueenTrigger extends en.Interactive {
     public function trigger(arg0: Entity): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
-    public function outOfGameUpdate(): Void {
+    public override function outOfGameUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

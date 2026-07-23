@@ -13,15 +13,15 @@ class Owl extends en.Pet {
         super();
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function playIdleAnim(): Void {
@@ -57,7 +57,7 @@ class Owl extends en.Pet {
     public override function fixedUpdate(): Void {
     }
 
-    public function onBeginLongPress(): Void {
+    public override function onBeginLongPress(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -75,7 +75,7 @@ class Owl extends en.Pet {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

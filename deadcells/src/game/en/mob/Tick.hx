@@ -47,7 +47,7 @@ class Tick extends en.Mob {
     public function shoot(arg0: Dynamic, arg1: Float, arg2: Float): Void {
     }
 
-    public function onTouchGround(): Void {
+    public override function onTouchGround(): Void {
     }
 
     public override function fixedUpdate(): Void {
@@ -69,7 +69,7 @@ class Tick extends en.Mob {
     public override function onDie(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

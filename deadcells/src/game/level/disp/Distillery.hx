@@ -18,7 +18,7 @@ class Distillery extends level.BiomeDisp {
     public var incrFront: Float;
     public var incrMiddle: Float;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null) {
         super();
     }
 
@@ -29,7 +29,7 @@ class Distillery extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public function addFloorWallJunks(): Void {
@@ -80,7 +80,7 @@ class Distillery extends level.BiomeDisp {
     public function addSuspendedBottle(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Void {
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
     public override function postUpdate(): Void {
@@ -89,6 +89,6 @@ class Distillery extends level.BiomeDisp {
     public function addGodRays(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 }

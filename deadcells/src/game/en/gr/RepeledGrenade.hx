@@ -43,6 +43,6 @@ class RepeledGrenade extends en.Grenade {
     public function onBeforeHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
     }
 
-    public function onTrigger(): Void {
+    public override function onTrigger(): Void {
     }
 }

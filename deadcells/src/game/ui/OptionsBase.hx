@@ -27,7 +27,7 @@ class OptionsBase extends ui.Process {
     public var controller: tool.ControllerAccess;
     public var killOnBack: Bool;
 
-    public function new(arg0: ui.Pause) {
+    public function new(arg0: ui.Pause = null) {
         super();
     }
 
@@ -114,7 +114,7 @@ class OptionsBase extends ui.Process {
     public override function onDispose(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
     public function onQuit(): Void {

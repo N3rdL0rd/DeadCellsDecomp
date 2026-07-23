@@ -9,23 +9,23 @@ class BridgeLever extends en.Interactive {
         super();
     }
 
-    public function postCreate(): Void {
+    public override function postCreate(): Void {
     }
 
     public function getBridge(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

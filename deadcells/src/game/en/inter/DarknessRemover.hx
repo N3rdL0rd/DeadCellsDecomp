@@ -17,10 +17,10 @@ class DarknessRemover extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public function initLight(): Void {
@@ -55,10 +55,10 @@ class DarknessRemover extends en.Interactive {
         throw "stub: getParticuleColorBright not decompiled";
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

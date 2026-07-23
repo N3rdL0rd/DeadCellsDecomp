@@ -18,41 +18,41 @@ class BossRushDoor extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function isBrLocked(arg0: Int): Bool {
         throw "stub: isBrLocked not decompiled";
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
-    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function onApplyOptions(): Void {
+    public override function onApplyOptions(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function launchClosedDoorCine(arg0: en.Hero): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public function open(arg0: Ref): Void {
@@ -61,10 +61,10 @@ class BossRushDoor extends en.Interactive {
     public function close(arg0: Ref): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public function onBossSelectorUIClose(): Void {

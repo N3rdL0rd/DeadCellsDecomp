@@ -8,7 +8,7 @@ class TopLighthouseGetAway extends en.Interactive {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function dispose(): Void {
@@ -28,10 +28,10 @@ class TopLighthouseGetAway extends en.Interactive {
     public override function onActivateHomunculus(arg0: en.Homunculus): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

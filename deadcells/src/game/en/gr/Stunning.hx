@@ -8,13 +8,13 @@ class Stunning extends en.gr.GrenadeSkill {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getCLID(): Int {
@@ -25,6 +25,6 @@ class Stunning extends en.gr.GrenadeSkill {
         throw "stub: getEntityCLIDS not decompiled";
     }
 
-    public function onTrigger(): Void {
+    public override function onTrigger(): Void {
     }
 }

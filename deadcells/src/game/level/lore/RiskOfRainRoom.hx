@@ -9,7 +9,7 @@ class RiskOfRainRoom extends level.LoreManager {
     public var droneLight: light.PointLight;
     public var stayAliveText: ui.Text;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 

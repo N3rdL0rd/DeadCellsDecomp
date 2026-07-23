@@ -18,10 +18,10 @@ class BootlegShovelman extends en.mob.BootlegBase {
     public override function initGfx(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getCLID(): Int {

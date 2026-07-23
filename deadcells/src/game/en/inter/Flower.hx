@@ -12,24 +12,24 @@ class Flower extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function canBeHitBy(arg0: Entity): Bool {
+    public override function canBeHitBy(arg0: Entity): Bool {
         throw "stub: canBeHitBy not decompiled";
     }
 
-    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
         throw "stub: canReceiveAttack not decompiled";
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

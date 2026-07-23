@@ -5,7 +5,7 @@ class PerkShop extends level.LoreManager {
     public var _pile: tool.CPoint;
     public var size: Int;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 

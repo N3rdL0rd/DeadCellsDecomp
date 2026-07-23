@@ -22,7 +22,7 @@ class BreakableGroundConditional extends en.inter.BreakableGround {
     public override function postUpdate(): Void {
     }
 
-    public function outOfGameUpdate(): Void {
+    public override function outOfGameUpdate(): Void {
     }
 
     public function checkJustUnlocked(): Void {

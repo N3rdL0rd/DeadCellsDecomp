@@ -28,10 +28,10 @@ class BossPart extends en.deco.Pendulum {
     public override function postUpdate(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getCLID(): Int {

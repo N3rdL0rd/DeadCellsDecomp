@@ -10,10 +10,10 @@ class PurpleElevator extends en.inter.elevator.SimpleElevator {
         super();
     }
 
-    public function renderPlatform(): Void {
+    public override function renderPlatform(): Void {
     }
 
-    public function isReady(): Bool {
+    public override function isReady(): Bool {
         throw "stub: isReady not decompiled";
     }
 
@@ -23,7 +23,7 @@ class PurpleElevator extends en.inter.elevator.SimpleElevator {
     public function refusal(arg0: en.Hero): Void {
     }
 
-    public function initChains(): Void {
+    public override function initChains(): Void {
     }
 
     public override function onFocus(): Void {
@@ -33,13 +33,13 @@ class PurpleElevator extends en.inter.elevator.SimpleElevator {
         throw "stub: isGoingTo not decompiled";
     }
 
-    public function onArrival(arg0: Int): Void {
+    public override function onArrival(arg0: Int): Void {
     }
 
     public function cineShake(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -50,16 +50,16 @@ class PurpleElevator extends en.inter.elevator.SimpleElevator {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 }

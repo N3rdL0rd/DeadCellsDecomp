@@ -18,7 +18,7 @@ class PirateChief extends en.Mob {
         throw "stub: create not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 

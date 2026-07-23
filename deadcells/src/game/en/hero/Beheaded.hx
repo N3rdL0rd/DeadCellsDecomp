@@ -50,7 +50,7 @@ class Beheaded extends en.Hero {
         throw "stub: moveControlled not decompiled";
     }
 
-    public function globalShieldFx(): Void {
+    public override function globalShieldFx(): Void {
     }
 
     public override function postUpdate(): Void {

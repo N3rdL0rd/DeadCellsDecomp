@@ -47,10 +47,10 @@ class Shark extends en.Bullet {
     public override function fixedUpdate(): Void {
     }
 
-    public function spriteUpdate(): Void {
+    public override function spriteUpdate(): Void {
     }
 
-    public function onEnterWater(): Void {
+    public override function onEnterWater(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -67,6 +67,6 @@ class Shark extends en.Bullet {
     public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    public override function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
     }
 }

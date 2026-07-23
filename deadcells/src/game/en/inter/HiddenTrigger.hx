@@ -23,7 +23,7 @@ class HiddenTrigger extends en.Interactive {
     public function castleEliteForceFieldCheck(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

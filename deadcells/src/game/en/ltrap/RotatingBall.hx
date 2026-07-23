@@ -24,13 +24,13 @@ class RotatingBall extends en.LevelTrap {
     public function setBallSprite(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public function setBloodSprite(): Void {
@@ -39,10 +39,10 @@ class RotatingBall extends en.LevelTrap {
     public function onHitHero(arg0: en.Hero): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function _isOnScreen(): Bool {
+    public override function _isOnScreen(): Bool {
         throw "stub: _isOnScreen not decompiled";
     }
 
@@ -54,13 +54,13 @@ class RotatingBall extends en.LevelTrap {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 }

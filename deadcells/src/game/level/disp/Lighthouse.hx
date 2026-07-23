@@ -65,7 +65,7 @@ class Lighthouse extends level.DynamicBiomeDisp {
     public var fireDarkColor: Int;
     public var fireLightColor: Int;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null, arg3: String = null) {
         super();
     }
 
@@ -88,7 +88,7 @@ class Lighthouse extends level.DynamicBiomeDisp {
     public override function render(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public function get_minXBgWallPx(): Int {
@@ -114,22 +114,22 @@ class Lighthouse extends level.DynamicBiomeDisp {
     public function setSmogGradientBossFightMode(arg0: Bool): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoZone): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public function addWallDeco(arg0: Int): Void {
     }
 
-    public function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
     }
 
-    public function decorateRoom(arg0: level.Room): Void {
+    public override function decorateRoom(arg0: level.Room): Void {
     }
 
     public function addRoses(arg0: Int, arg1: Int, arg2: Int, arg3: Float, arg4: Float): Void {
@@ -153,31 +153,31 @@ class Lighthouse extends level.DynamicBiomeDisp {
     public function renderBackground(): Void {
     }
 
-    public function renderWallTransitions(): Void {
+    public override function renderWallTransitions(): Void {
     }
 
-    public function createLightWalls(): Void {
+    public override function createLightWalls(): Void {
     }
 
-    public function renderBackWalls(): Void {
+    public override function renderBackWalls(): Void {
     }
 
-    public function renderLadders(): Void {
+    public override function renderLadders(): Void {
     }
 
-    public function addWallStamp(arg0: Int, arg1: Int, arg2: Int, arg3: String): Bool {
+    public override function addWallStamp(arg0: Int, arg1: Int, arg2: Int, arg3: String): Bool {
         throw "stub: addWallStamp not decompiled";
     }
 
-    public function generateParallax(arg0: Dynamic): Parallax {
+    public override function generateParallax(arg0: Dynamic): Parallax {
         throw "stub: generateParallax not decompiled";
     }
 
-    public function generateParallaxGroup(arg0: Dynamic): ParallaxGroup {
+    public override function generateParallaxGroup(arg0: Dynamic): ParallaxGroup {
         throw "stub: generateParallaxGroup not decompiled";
     }
 
-    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    public override function renderParallax(arg0: Dynamic, arg1: String): Void {
     }
 
     public function heroLightUpdate(): Void {
@@ -194,17 +194,17 @@ class Lighthouse extends level.DynamicBiomeDisp {
     public override function updateBiomeFx(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function canBeDestroy(arg0: Entity): Bool {
         throw "stub: canBeDestroy not decompiled";
     }
 
-    public function canPlaceLoreDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Bool {
+    public override function canPlaceLoreDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Bool {
         throw "stub: canPlaceLoreDeco not decompiled";
     }
 }

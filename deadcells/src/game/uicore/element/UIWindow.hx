@@ -5,7 +5,7 @@ class UIWindow extends uicore.UIElement {
     public var signals: uicore.signals.WindowSignals;
     public var controllerExclusivity: Bool;
 
-    public function new(arg0: uicore.UIElement) {
+    public function new(arg0: uicore.UIElement = null) {
         super();
     }
 

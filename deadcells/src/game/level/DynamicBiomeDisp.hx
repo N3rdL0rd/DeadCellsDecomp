@@ -11,7 +11,7 @@ class DynamicBiomeDisp extends level.BiomeDisp {
     public var mainCamFogConf: Dynamic;
     public var otherCamFogConf: Dynamic;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String, arg4: Dynamic, arg5: Array<Dynamic>) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null, arg3: String = null, arg4: Dynamic = null, arg5: Array<Dynamic> = null) {
         super();
     }
 
@@ -19,10 +19,10 @@ class DynamicBiomeDisp extends level.BiomeDisp {
         throw "stub: readLightConf not decompiled";
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
-    public function reloadRenderConf(): Void {
+    public override function reloadRenderConf(): Void {
     }
 
     public function reloadBlends(): Void {
@@ -43,7 +43,7 @@ class DynamicBiomeDisp extends level.BiomeDisp {
         throw "stub: readOrCacheLightConf not decompiled";
     }
 
-    public function applyLightConf(arg0: light.PointLight, arg1: String, arg2: Ref): Void {
+    public override function applyLightConf(arg0: light.PointLight, arg1: String, arg2: Ref): Void {
     }
 
     public function reloadLightConfs(): Void {
@@ -62,7 +62,7 @@ class DynamicBiomeDisp extends level.BiomeDisp {
         throw "stub: loadCamFogConf not decompiled";
     }
 
-    public function loadCamFog(arg0: Dynamic): Void {
+    public override function loadCamFog(arg0: Dynamic): Void {
     }
 
     public function updateCameraFog(): Void {

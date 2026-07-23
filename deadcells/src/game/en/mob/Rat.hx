@@ -32,7 +32,7 @@ class Rat extends en.Mob {
     public override function behaviour_platformPatrol(): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
     public override function canHaveRepellingWith(arg0: Entity): Bool {

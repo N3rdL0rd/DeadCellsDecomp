@@ -9,15 +9,15 @@ class VoronoiExt {
         throw "stub: genPoints not decompiled";
     }
 
-    public static function cellArea(arg0: h2d.col.Cell): Float {
+    public static function cellArea(arg0: h2d.col.Voronoi.Cell): Float {
         throw "stub: cellArea not decompiled";
     }
 
-    public static function cellCentroid(arg0: h2d.col.Cell): h2d.col.Point {
+    public static function cellCentroid(arg0: h2d.col.Voronoi.Cell): h2d.col.Point {
         throw "stub: cellCentroid not decompiled";
     }
 
-    public static function relax(arg0: h2d.col.Voronoi, arg1: h2d.col.Diagram, arg2: h2d.col.Bounds): h2d.col.Diagram {
+    public static function relax(arg0: h2d.col.Voronoi, arg1: h2d.col.Voronoi.Diagram, arg2: h2d.col.Bounds): h2d.col.Voronoi.Diagram {
         throw "stub: relax not decompiled";
     }
 }

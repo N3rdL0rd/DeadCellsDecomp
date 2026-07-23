@@ -60,7 +60,7 @@ class U28_Steal extends en.Mob {
     public override function setAttackTarget(arg0: Entity): Void {
     }
 
-    public function isFacing(arg0: Entity): Bool {
+    public override function isFacing(arg0: Entity): Bool {
         throw "stub: isFacing not decompiled";
     }
 

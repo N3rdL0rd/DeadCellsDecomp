@@ -29,7 +29,7 @@ class FisherBarqueExit extends en.inter.Exit {
         throw "stub: get_backY not decompiled";
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
     public override function initGfx(): Void {

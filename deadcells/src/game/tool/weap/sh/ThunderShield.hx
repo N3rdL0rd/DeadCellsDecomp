@@ -18,10 +18,10 @@ class ThunderShield extends tool.weap.BaseShield {
     public function damageNearby(arg0: Ref): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function isBuffed(): Bool {

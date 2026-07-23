@@ -4,7 +4,7 @@ class RoomNode {
     public static var p_RoomMap: haxe.ds.ObjectMap<Dynamic, Dynamic>;
     public var p_RoomNode: level.RoomNode;
 
-    public function new(arg0: level.RoomNode) {
+    public function new(arg0: level.RoomNode = null) {
     }
 
     public static function p_getRoomNodeFromLevelRoomNode(arg0: level.RoomNode): tool.mod.script.RoomNode {

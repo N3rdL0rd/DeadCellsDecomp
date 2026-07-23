@@ -25,6 +25,6 @@ class BeholderSpike extends en.Bullet {
         throw "stub: getCLID not decompiled";
     }
 
-    public function onBlock(arg0: Bool): Void {
+    public override function onBlock(arg0: Bool): Void {
     }
 }

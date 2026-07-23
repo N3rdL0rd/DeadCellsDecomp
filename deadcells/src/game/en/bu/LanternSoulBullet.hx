@@ -17,7 +17,7 @@ class LanternSoulBullet extends en.Bullet {
     public override function dispose(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
     public override function vanish(): Void {

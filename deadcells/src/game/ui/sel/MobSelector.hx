@@ -10,7 +10,7 @@ class MobSelector extends ui.sel.GridSelector {
     public var nameText: ui.Text;
     public var lockedSprite: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Array<Int>, arg1: Dynamic) {
+    public function new(arg0: Array<Int> = null, arg1: Dynamic = null) {
         super();
     }
 

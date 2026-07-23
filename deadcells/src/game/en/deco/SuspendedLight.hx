@@ -16,7 +16,7 @@ class SuspendedLight extends en.deco.SuspendedCage {
     public override function initGfx(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function initChain(arg0: Ref): Void {

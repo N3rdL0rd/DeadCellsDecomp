@@ -6,26 +6,26 @@ class PrisonCourtyard extends level.BiomeDisp {
     public var smallDoorTiles: Array<Dynamic>;
     public var horizonY: Int;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null) {
         super();
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addBarrelLantern(arg0: level.DecoTypes.DecoZone): Void {
+    public function addBarrelLantern(arg0: level.DecoZone): Void {
     }
 
-    public function addSmallDoors(arg0: level.DecoTypes.DecoZone): Void {
+    public function addSmallDoors(arg0: level.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoZone): Void {
     }
 
-    public function addParrallaxAlcove(arg0: level.DecoTypes.DecoZone, arg1: Bool): Void {
+    public function addParrallaxAlcove(arg0: level.DecoZone, arg1: Bool): Void {
     }
 
     public function renderBackground(): Void {
@@ -34,6 +34,6 @@ class PrisonCourtyard extends level.BiomeDisp {
     public override function updateBiomeFx(): Void {
     }
 
-    public function reloadRenderConf(): Void {
+    public override function reloadRenderConf(): Void {
     }
 }

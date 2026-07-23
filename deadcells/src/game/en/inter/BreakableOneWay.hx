@@ -11,32 +11,32 @@ class BreakableOneWay extends en.Interactive {
         super();
     }
 
-    public function isInQuadTree(): Bool {
+    public override function isInQuadTree(): Bool {
         throw "stub: isInQuadTree not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function chooseSprite(arg0: Int, arg1: Int): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

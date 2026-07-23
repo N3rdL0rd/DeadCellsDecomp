@@ -17,7 +17,7 @@ class HauntedArmor extends en.Mob {
         throw "stub: create not decompiled";
     }
 
-    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
     }
 
     public function shouldRun(): Bool {
@@ -31,7 +31,7 @@ class HauntedArmor extends en.Mob {
     public override function initGfx(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function initSkills(): Void {
@@ -54,7 +54,7 @@ class HauntedArmor extends en.Mob {
     public override function behaviourAi(): Void {
     }
 
-    public function canApplyRepelling(): Bool {
+    public override function canApplyRepelling(): Bool {
         throw "stub: canApplyRepelling not decompiled";
     }
 

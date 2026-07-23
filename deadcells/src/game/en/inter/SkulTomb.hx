@@ -13,21 +13,21 @@ class SkulTomb extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function canBeHitBy(arg0: Entity): Bool {
+    public override function canBeHitBy(arg0: Entity): Bool {
         throw "stub: canBeHitBy not decompiled";
     }
 
-    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
         throw "stub: canReceiveAttack not decompiled";
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -45,7 +45,7 @@ class SkulTomb extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

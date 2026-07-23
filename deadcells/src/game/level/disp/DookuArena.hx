@@ -27,7 +27,7 @@ class DookuArena extends level.DynamicBiomeDisp {
     public var thunderSoundsDeck: Array<Dynamic>;
     public var intensityTween: libs.misc.Tween;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null, arg3: String = null) {
         super();
     }
 
@@ -45,7 +45,7 @@ class DookuArena extends level.DynamicBiomeDisp {
     public override function render(): Void {
     }
 
-    public function renderBackWalls(): Void {
+    public override function renderBackWalls(): Void {
     }
 
     public function renderFrise(): Void {
@@ -54,7 +54,7 @@ class DookuArena extends level.DynamicBiomeDisp {
     public override function updateBiomeFx(): Void {
     }
 
-    public function decorateRoom(arg0: level.Room): Void {
+    public override function decorateRoom(arg0: level.Room): Void {
     }
 
     public function startPhase(arg0: Int, arg1: Ref): Void {
@@ -63,7 +63,7 @@ class DookuArena extends level.DynamicBiomeDisp {
     public function incDestroyPhase(): Void {
     }
 
-    public function renderParallaxes(): Void {
+    public override function renderParallaxes(): Void {
     }
 
     public function renderParallaxesPhase(): Void {
@@ -103,7 +103,7 @@ class DookuArena extends level.DynamicBiomeDisp {
         throw "stub: isAColumn not decompiled";
     }
 
-    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    public override function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
     }
 
     public function getBmpChild(arg0: Parallax): h2d.Bitmap {
@@ -113,13 +113,13 @@ class DookuArena extends level.DynamicBiomeDisp {
     public function dissolveAllFallingObj(arg0: Ref): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function getDepthFromInfos(arg0: Dynamic): Int {
+    public override function getDepthFromInfos(arg0: Dynamic): Int {
         throw "stub: getDepthFromInfos not decompiled";
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 }

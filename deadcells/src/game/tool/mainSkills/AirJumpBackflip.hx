@@ -10,7 +10,7 @@ class AirJumpBackflip extends tool.mainSkills.AirJump {
     public override function init(): Void {
     }
 
-    public function passiveFixedUpdate(): Void {
+    public override function passiveFixedUpdate(): Void {
     }
 
     public override function canUse(): Bool {

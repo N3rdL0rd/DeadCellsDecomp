@@ -15,13 +15,13 @@ class BatKamikaze extends en.mob.BatKamikazeTemplate {
     public static function explode(arg0: Entity, arg1: Dynamic): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function dropLoot(): Void {
+    public override function dropLoot(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public override function get_shootX(): Float {
@@ -35,7 +35,7 @@ class BatKamikaze extends en.mob.BatKamikazeTemplate {
     public override function behaviourAi(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function fixedUpdate(): Void {

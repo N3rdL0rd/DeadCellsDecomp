@@ -59,7 +59,7 @@ class Harpy extends en.Mob {
     public override function onDie(): Void {
     }
 
-    public function canCrawlThrought(arg0: Int, arg1: Int): Bool {
+    public override function canCrawlThrought(arg0: Int, arg1: Int): Bool {
         throw "stub: canCrawlThrought not decompiled";
     }
 
@@ -75,7 +75,7 @@ class Harpy extends en.Mob {
     public function stopCharge(): Void {
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public override function fixedUpdate(): Void {

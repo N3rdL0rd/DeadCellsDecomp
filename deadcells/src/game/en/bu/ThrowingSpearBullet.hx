@@ -12,7 +12,7 @@ class ThrowingSpearBullet extends en.Bullet {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initAmmo(arg0: en.loot.Ammo): Void {

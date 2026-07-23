@@ -50,7 +50,7 @@ class FlyingCrow extends en.Mob {
     public override function onDie(): Void {
     }
 
-    public function beforeRender(): Void {
+    public override function beforeRender(): Void {
     }
 
     public override function onOutOfGameChange(): Void {

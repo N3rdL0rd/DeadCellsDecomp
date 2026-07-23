@@ -25,14 +25,14 @@ class S_Cat extends en.pet.PetMob {
         throw "stub: create not decompiled";
     }
 
-    public function aiLocked(): Bool {
+    public override function aiLocked(): Bool {
         throw "stub: aiLocked not decompiled";
     }
 
     public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function mariaCineEnd(): Void {
@@ -75,13 +75,13 @@ class S_Cat extends en.pet.PetMob {
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
-    public function behaviour_platformPatrol(): Void {
+    public override function behaviour_platformPatrol(): Void {
     }
 
-    public function getMoveSpeedMul(): Float {
+    public override function getMoveSpeedMul(): Float {
         throw "stub: getMoveSpeedMul not decompiled";
     }
 
@@ -94,7 +94,7 @@ class S_Cat extends en.pet.PetMob {
     public override function postUpdate(): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
     public override function canApplyRepelling(): Bool {

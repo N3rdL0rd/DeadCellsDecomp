@@ -21,11 +21,11 @@ class Shooter extends en.LevelTrap {
     public function trigger(): Void {
     }
 
-    public function _isOnScreen(): Bool {
+    public override function _isOnScreen(): Bool {
         throw "stub: _isOnScreen not decompiled";
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -36,13 +36,13 @@ class Shooter extends en.LevelTrap {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 }

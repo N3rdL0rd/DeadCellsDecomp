@@ -26,6 +26,6 @@ class RewardPopup extends ui.Process {
     public override function onDispose(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 }

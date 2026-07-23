@@ -17,7 +17,7 @@ class MedusaPainting extends en.deco.paintings.AnimatedPaintingBase {
     public override function initGfx(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public function playAnim(): Void {

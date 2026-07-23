@@ -39,7 +39,7 @@ class SpeedrunPopUp extends ui.Process {
     public override function onDispose(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 }
 
@@ -52,7 +52,7 @@ class SpeedrunScoreLine extends h2d.Flow {
 class LineSection extends h2d.Flow {
     public var t: ui.Text;
 
-    public function new(arg0: h2d.Object = null, arg1: Int = 0, arg2: String = null, arg3: h2d.FlowAlign = null, arg4: Dynamic = null) {
+    public function new(arg0: h2d.Object = null, arg1: Int = 0, arg2: String = null, arg3: h2d.Flow.FlowAlign = null, arg4: Dynamic = null) {
         super();
     }
 }

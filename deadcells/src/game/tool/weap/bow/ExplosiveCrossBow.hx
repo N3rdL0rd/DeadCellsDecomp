@@ -9,7 +9,7 @@ class ExplosiveCrossBow extends tool.weap.BaseBow {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 

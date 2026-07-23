@@ -1,3 +1,5 @@
+package libs.heaps;
+
 class SizedTileDecks_Impl_ {
     public static function getBestFit(arg0: Array<Dynamic>, arg1: Int, arg2: Int): Dynamic {
         throw "stub: getBestFit not decompiled";

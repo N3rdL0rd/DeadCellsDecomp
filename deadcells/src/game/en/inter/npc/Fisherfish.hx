@@ -6,14 +6,14 @@ class Fisherfish extends en.inter.Npc {
     public var greetedOnce: Bool;
     public var headFlip: Bool;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function onGreet(arg0: en.Hero): Void {
@@ -32,7 +32,7 @@ class Fisherfish extends en.inter.Npc {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

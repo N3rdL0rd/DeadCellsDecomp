@@ -11,27 +11,27 @@ class SlayTheSpireNeow extends en.inter.Npc {
     public var eyes: Array<Dynamic>;
     public var speechSfx: libs.RandDeck;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 
-    public function get_interactX(): Float {
+    public override function get_interactX(): Float {
         throw "stub: get_interactX not decompiled";
     }
 
-    public function get_interactY(): Float {
+    public override function get_interactY(): Float {
         throw "stub: get_interactY not decompiled";
     }
 
-    public function get_globalUiX(): Float {
+    public override function get_globalUiX(): Float {
         throw "stub: get_globalUiX not decompiled";
     }
 
-    public function get_globalUiY(): Float {
+    public override function get_globalUiY(): Float {
         throw "stub: get_globalUiY not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function blinkEye(): Void {
@@ -53,7 +53,7 @@ class SlayTheSpireNeow extends en.inter.Npc {
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
     public function talk(): Void {
@@ -73,7 +73,7 @@ class SlayTheSpireNeow extends en.inter.Npc {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

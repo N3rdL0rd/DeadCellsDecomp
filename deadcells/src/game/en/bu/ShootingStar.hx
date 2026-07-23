@@ -12,13 +12,13 @@ class ShootingStar extends en.bu.Homing {
     public override function initGfx(): Void {
     }
 
-    public function doTail(): Void {
+    public override function doTail(): Void {
     }
 
     public override function fixedUpdate(): Void {
     }
 
-    public function onTouchValidTarget(arg0: Entity): Void {
+    public override function onTouchValidTarget(arg0: Entity): Void {
     }
 
     public override function onCantHome(): Void {
@@ -32,6 +32,6 @@ class ShootingStar extends en.bu.Homing {
         throw "stub: getEntityCLIDS not decompiled";
     }
 
-    public function onBlock(arg0: Bool): Void {
+    public override function onBlock(arg0: Bool): Void {
     }
 }

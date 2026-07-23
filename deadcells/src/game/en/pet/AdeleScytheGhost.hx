@@ -37,7 +37,7 @@ class AdeleScytheGhost extends en.Mob {
         throw "stub: create not decompiled";
     }
 
-    public function canBeHit(): Bool {
+    public override function canBeHit(): Bool {
         throw "stub: canBeHit not decompiled";
     }
 

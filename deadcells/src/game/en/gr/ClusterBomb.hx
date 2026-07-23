@@ -8,10 +8,10 @@ class ClusterBomb extends en.gr.GrenadeSkill {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function getCLID(): Int {
@@ -22,6 +22,6 @@ class ClusterBomb extends en.gr.GrenadeSkill {
         throw "stub: getEntityCLIDS not decompiled";
     }
 
-    public function onTrigger(): Void {
+    public override function onTrigger(): Void {
     }
 }

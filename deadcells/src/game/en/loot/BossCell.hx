@@ -14,20 +14,20 @@ class BossCell extends en.Loot {
         throw "stub: create not decompiled";
     }
 
-    public function onTouchGround(): Void {
+    public override function onTouchGround(): Void {
     }
 
     public override function initGfx(): Void {
     }
 
-    public function canBeActivated(arg0: en.Hero): Bool {
+    public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function dispose(): Void {

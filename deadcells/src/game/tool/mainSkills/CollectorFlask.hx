@@ -10,7 +10,7 @@ class CollectorFlask extends tool.mainSkills.Heal {
     public override function init(): Void {
     }
 
-    public function passiveFixedUpdate(): Void {
+    public override function passiveFixedUpdate(): Void {
     }
 
     public override function onStart(): Void {
@@ -19,10 +19,10 @@ class CollectorFlask extends tool.mainSkills.Heal {
     public override function onEnd(): Void {
     }
 
-    public function onCancel(): Void {
+    public override function onCancel(): Void {
     }
 
-    public function prepare(): Bool {
+    public override function prepare(): Bool {
         throw "stub: prepare not decompiled";
     }
 

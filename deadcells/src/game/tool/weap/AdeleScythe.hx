@@ -42,13 +42,3 @@ class AdeleScythe extends tool.Weapon {
     public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 }
-
-class SprData {
-    public var lib: libs.heaps.slib.SpriteLib;
-    public var mob: en.Mob;
-    public var pivotY: Float;
-    public var stateAnims: Array<Dynamic>;
-
-    public function new() {
-    }
-}

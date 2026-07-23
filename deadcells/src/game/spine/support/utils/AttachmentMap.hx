@@ -1,3 +1,5 @@
+package spine.support.utils;
+
 class AttachmentMap_Impl_ {
     public static function entries(arg0: haxe.ds.IntMap<Dynamic>): Array<Dynamic> {
         throw "stub: entries not decompiled";

@@ -1,10 +1,9 @@
 package chroma.effects;
 class ChromaBlinkEffect extends chroma.ChromaEffect {
 
-  function __constructor__(length: Int, delayInMs: Int, color1: Int, color2: Dynamic) {}
+  public function new(length: Int, delayInMs: Int, color1: Int, color2: Dynamic) { super(); }
 
-  function playKeyboardEffectKey(key: chroma.ChromaEffect.ChromaEffect) {}
+  override function playKeyboardEffectKey(key: chroma.ChromaEffect.KeyboardEffectKey) {}
 
-  function fallback() {}
+  override function fallback() {}
 }
-

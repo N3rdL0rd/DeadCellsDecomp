@@ -17,27 +17,27 @@ class QueenArena extends level.BiomeDisp {
     public var paddingBefore: Float;
     public var paddingAfter: Float;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null) {
         super();
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
     public function initParallaxFXSpritebatch(arg0: Dynamic, arg1: h2d.Tile): Dynamic {
         throw "stub: initParallaxFXSpritebatch not decompiled";
     }
 
-    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    public override function renderParallax(arg0: Dynamic, arg1: String): Void {
     }
 
-    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    public override function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
     }
 
     public override function addLoreDeco(arg0: level.LevelTypes.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
     }
 
-    public function renderFrontCorners(): Void {
+    public override function renderFrontCorners(): Void {
     }
 
     public override function renderWaterPools(): Void {
@@ -53,12 +53,12 @@ class QueenArena extends level.BiomeDisp {
     public override function updateBiomeFx(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
     public override function postUpdate(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 }

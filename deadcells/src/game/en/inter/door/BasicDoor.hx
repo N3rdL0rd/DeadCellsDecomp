@@ -14,7 +14,7 @@ class BasicDoor extends en.inter.Door {
     public override function initGfx(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function getCLID(): Int {

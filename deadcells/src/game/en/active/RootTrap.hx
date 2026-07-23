@@ -23,7 +23,7 @@ class RootTrap extends en.Active {
     public function remove(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function fixedUpdate(): Void {
@@ -44,7 +44,7 @@ class RootTrap extends en.Active {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

@@ -18,7 +18,7 @@ class DoomBringer extends en.Mob {
     public override function initSkills(): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
     public override function getMoveSpeedMul(): Float {

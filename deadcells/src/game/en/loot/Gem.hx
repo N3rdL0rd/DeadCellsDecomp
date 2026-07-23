@@ -17,7 +17,7 @@ class Gem extends en.Loot {
     public override function initGfx(): Void {
     }
 
-    public function onDropAsLoot(): Void {
+    public override function onDropAsLoot(): Void {
     }
 
     public override function postUpdate(): Void {

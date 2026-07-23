@@ -23,7 +23,7 @@ class DashShield extends tool.weap.BaseShield {
     public function cancelDash(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function onShieldHolding(arg0: Float): Void {

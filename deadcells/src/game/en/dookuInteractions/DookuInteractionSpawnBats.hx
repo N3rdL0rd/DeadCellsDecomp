@@ -1,7 +1,7 @@
 package en.dookuInteractions;
 
 class DookuInteractionSpawnBats extends en.dookuInteractions.DookuInteraction {
-    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager = null) {
         super();
     }
 

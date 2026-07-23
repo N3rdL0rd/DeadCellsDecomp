@@ -5,17 +5,17 @@ class Collector extends en.inter.npc.CollectorPanelNpc {
     public static var __clid: Int;
     public var isFocused: Bool;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function onGreet(arg0: en.Hero): Void {

@@ -73,7 +73,7 @@ class LineSelector extends ui.Process {
     public function controlsUpdate(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
     public function updatePos(arg0: Int, arg1: Ref): Void {

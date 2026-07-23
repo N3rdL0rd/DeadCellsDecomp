@@ -16,19 +16,19 @@ class Billboard extends en.inter.Exit {
     public function addLanternFx(): Void {
     }
 
-    public function onApplyOptions(): Void {
+    public override function onApplyOptions(): Void {
     }
 
     public override function disposeGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function postUpdate(): Void {
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {

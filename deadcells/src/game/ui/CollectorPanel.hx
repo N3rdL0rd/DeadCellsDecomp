@@ -118,10 +118,10 @@ class CollectorPanel extends ui.Process {
     public override function onResize(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }
 
@@ -151,7 +151,7 @@ class MetaList extends h2d.Flow {
     public var baseFilter: Dynamic;
     public var userFilter: Dynamic;
 
-    public function new(arg0: h2d.Flow, arg1: Dynamic, arg2: Dynamic, arg3: String, arg4: en.inter.npc.CollectorPanelNpc) {
+    public function new(arg0: h2d.Flow = null, arg1: Dynamic = null, arg2: Dynamic = null, arg3: String = null, arg4: en.inter.npc.CollectorPanelNpc = null) {
         super();
     }
 
@@ -188,7 +188,7 @@ class CellCount extends h2d.Flow {
     public var icon: h2d.Bitmap;
     public var text: ui.Text;
 
-    public function new(arg0: h2d.Flow) {
+    public function new(arg0: h2d.Flow = null) {
         super();
     }
 
@@ -202,7 +202,7 @@ class CellCount extends h2d.Flow {
 class ListItem extends h2d.Object {
     public var flow: h2d.Flow;
 
-    public function new(arg0: h2d.Flow) {
+    public function new(arg0: h2d.Flow = null) {
         super();
     }
 
@@ -248,7 +248,7 @@ class ListEntry extends ui.CollectorPanel.ListItem {
     public override function onResize(): Void {
     }
 
-    public function sync(arg0: h2d.RenderContext): Void {
+    public override function sync(arg0: h2d.RenderContext): Void {
     }
 }
 
@@ -271,7 +271,7 @@ class ItemDesc extends h2d.Object {
     public var parentFlow: h2d.Flow;
     public var bg: ui.UIBox;
 
-    public function new(arg0: h2d.Flow) {
+    public function new(arg0: h2d.Flow = null) {
         super();
     }
 

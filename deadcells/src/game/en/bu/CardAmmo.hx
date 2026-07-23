@@ -13,7 +13,7 @@ class CardAmmo extends en.loot.Ammo {
         throw "stub: create not decompiled";
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function getCLID(): Int {
@@ -24,6 +24,6 @@ class CardAmmo extends en.loot.Ammo {
         throw "stub: getEntityCLIDS not decompiled";
     }
 
-    public function doCustomUpdate(): Void {
+    public override function doCustomUpdate(): Void {
     }
 }

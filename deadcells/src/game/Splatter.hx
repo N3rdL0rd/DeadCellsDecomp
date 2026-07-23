@@ -9,7 +9,7 @@ class Splatter {
     public var dsY: Float;
     public var dy: Float;
 
-    public function new(arg0: pr.Level, arg1: String, arg2: Float, arg3: Float, arg4: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: String = null, arg2: Float = 0., arg3: Float = 0., arg4: Dynamic = null) {
     }
 
     public static function singleHeavy(arg0: Entity): Void {

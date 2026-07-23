@@ -8,7 +8,7 @@ class TwitchDoor extends en.inter.Door {
         super();
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
     public override function initGfx(): Void {
@@ -17,7 +17,7 @@ class TwitchDoor extends en.inter.Door {
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function fixedUpdate(): Void {

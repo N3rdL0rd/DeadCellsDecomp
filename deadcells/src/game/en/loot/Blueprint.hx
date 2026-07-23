@@ -16,20 +16,20 @@ class Blueprint extends en.Loot {
         throw "stub: create not decompiled";
     }
 
-    public function canBeActivated(arg0: en.Hero): Bool {
+    public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function onDropAsLoot(): Void {
+    public override function onDropAsLoot(): Void {
     }
 
     public override function initGfx(): Void {
@@ -39,7 +39,7 @@ class Blueprint extends en.Loot {
         throw "stub: getBackgroundImage not decompiled";
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function pickUp(arg0: en.Hero): Void {

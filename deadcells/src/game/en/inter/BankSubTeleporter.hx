@@ -23,7 +23,7 @@ class BankSubTeleporter extends en.inter.SubTeleporter {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

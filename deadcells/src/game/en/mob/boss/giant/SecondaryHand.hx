@@ -4,7 +4,7 @@ class SecondaryHand extends en.mob.boss.giant.HandBase {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int) {
+    public function new(arg0: en.mob.boss.Giant = null, arg1: Bool = false, arg2: Int = 0, arg3: Int = 0) {
         super();
     }
 
@@ -51,7 +51,7 @@ class SecondaryHand extends en.mob.boss.giant.HandBase {
         throw "stub: tryToPreventDeath not decompiled";
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function startAction(arg0: en.mob.boss.giant.GHAction): Void {

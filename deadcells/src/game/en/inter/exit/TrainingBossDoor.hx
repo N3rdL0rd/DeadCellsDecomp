@@ -21,7 +21,7 @@ class TrainingBossDoor extends en.inter.exit.BgDoor {
     public override function initBackgroundGfx(arg0: String): Void {
     }
 
-    public function getDestName(): String {
+    public override function getDestName(): String {
         throw "stub: getDestName not decompiled";
     }
 
@@ -33,10 +33,10 @@ class TrainingBossDoor extends en.inter.exit.BgDoor {
         throw "stub: hasSeenBoss not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

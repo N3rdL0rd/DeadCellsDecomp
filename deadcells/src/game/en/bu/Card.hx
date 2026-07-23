@@ -43,7 +43,7 @@ class Card extends en.Bullet {
     public override function fixedUpdate(): Void {
     }
 
-    public function spriteUpdate(): Void {
+    public override function spriteUpdate(): Void {
     }
 
     public function setShootAngle(arg0: Float): Void {
@@ -57,6 +57,6 @@ class Card extends en.Bullet {
         throw "stub: getCLID not decompiled";
     }
 
-    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    public override function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
     }
 }

@@ -70,7 +70,7 @@ class Imp extends en.Mob {
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

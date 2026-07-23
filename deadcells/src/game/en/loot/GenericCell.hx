@@ -26,16 +26,16 @@ class GenericCell extends en.Loot {
     public override function dispose(): Void {
     }
 
-    public function onFatalFallStart(arg0: Ref): Void {
+    public override function onFatalFallStart(arg0: Ref): Void {
     }
 
-    public function onFatalFallDamage(): Void {
+    public override function onFatalFallDamage(): Void {
     }
 
     public override function pickUp(arg0: en.Hero): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public override function updateMagnet(arg0: Float): Void {

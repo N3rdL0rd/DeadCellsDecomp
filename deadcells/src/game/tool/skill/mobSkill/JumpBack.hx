@@ -8,6 +8,6 @@ class JumpBack extends tool.skill.OldMobSkill {
     public override function initWithInfo(arg0: Dynamic): Void {
     }
 
-    public function dynOnExecute(arg0: Float): Void {
+    public override function dynOnExecute(arg0: Float): Void {
     }
 }

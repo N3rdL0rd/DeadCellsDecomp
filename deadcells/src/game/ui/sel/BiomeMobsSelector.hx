@@ -5,7 +5,7 @@ class BiomeMobsSelector extends ui.sel.BiomeSelector {
     public var mobs: Array<Dynamic>;
     public var mobsIcons: Array<Dynamic>;
 
-    public function new(arg0: Array<Int>, arg1: Dynamic, arg2: String) {
+    public function new(arg0: Array<Int> = null, arg1: Dynamic = null, arg2: String = null) {
         super();
     }
 

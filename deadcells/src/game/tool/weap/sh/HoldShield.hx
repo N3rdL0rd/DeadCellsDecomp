@@ -17,7 +17,7 @@ class HoldShield extends tool.weap.BaseShield {
     public override function onShieldBlock(arg0: tool.atk.AttackData, arg1: Bool): Void {
     }
 
-    public function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
     public function getRatioLoss(): Float {
@@ -30,6 +30,6 @@ class HoldShield extends tool.weap.BaseShield {
     public function addFrames(arg0: Float): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 }

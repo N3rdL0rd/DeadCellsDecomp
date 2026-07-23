@@ -8,14 +8,14 @@ class HealCaptainChicken extends tool.mainSkills.Heal {
         super();
     }
 
-    public function isEnabled(): Bool {
+    public override function isEnabled(): Bool {
         throw "stub: isEnabled not decompiled";
     }
 
     public override function init(): Void {
     }
 
-    public function passiveFixedUpdate(): Void {
+    public override function passiveFixedUpdate(): Void {
     }
 
     public override function onStart(): Void {
@@ -24,7 +24,7 @@ class HealCaptainChicken extends tool.mainSkills.Heal {
     public function triggerHeal(): Void {
     }
 
-    public function prepare(): Bool {
+    public override function prepare(): Bool {
         throw "stub: prepare not decompiled";
     }
 
@@ -39,13 +39,13 @@ class HealCaptainChicken extends tool.mainSkills.Heal {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 }

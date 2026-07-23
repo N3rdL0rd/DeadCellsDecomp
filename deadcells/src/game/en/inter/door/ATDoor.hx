@@ -9,7 +9,7 @@ class ATDoor extends en.inter.Door {
         super();
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
     public override function initGfx(): Void {

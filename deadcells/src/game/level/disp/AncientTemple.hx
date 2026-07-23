@@ -12,23 +12,23 @@ class AncientTemple extends level.BiomeDisp {
     public var fxBgBatch: libs.heaps.slib.HSpriteBatch;
     public var godRays: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null) {
         super();
     }
 
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoZone): Void {
     }
 
     public function addLightHole(arg0: Float, arg1: Float): Void {
@@ -47,7 +47,7 @@ class AncientTemple extends level.BiomeDisp {
     public override function updateBiomeFx(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public function renderBackground(): Void {

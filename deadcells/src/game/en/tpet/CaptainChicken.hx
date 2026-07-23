@@ -18,27 +18,27 @@ class CaptainChicken extends en.TwitchPet {
         throw "stub: getCurrent not decompiled";
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
-    public function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
     public function startFlight(): Void {
@@ -54,7 +54,7 @@ class CaptainChicken extends en.TwitchPet {
     public function delayedDir(arg0: Int): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function depop(): Void {
@@ -87,7 +87,7 @@ class CaptainChicken extends en.TwitchPet {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

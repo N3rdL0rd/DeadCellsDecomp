@@ -20,20 +20,20 @@ class CeilTurret extends en.active.Turret {
         throw "stub: create not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
@@ -51,7 +51,7 @@ class CeilTurret extends en.active.Turret {
     public override function shoot(arg0: Entity): Void {
     }
 
-    public function onTouchCeil(): Void {
+    public override function onTouchCeil(): Void {
     }
 
     public override function postUpdate(): Void {

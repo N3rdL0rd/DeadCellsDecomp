@@ -24,7 +24,7 @@ class Buer extends en.Mob {
     public override function initGfx(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function initSkills(): Void {
@@ -36,7 +36,7 @@ class Buer extends en.Mob {
     public override function postUpdate(): Void {
     }
 
-    public function spriteUpdate(): Void {
+    public override function spriteUpdate(): Void {
     }
 
     public override function onAffectChange(arg0: Int, arg1: Bool): Void {

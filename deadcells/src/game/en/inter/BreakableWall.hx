@@ -24,40 +24,40 @@ class BreakableWall extends en.Interactive {
     public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function onAttackMissed(arg0: tool.atk.AttackData): Void {
+    public override function onAttackMissed(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onAttackMissedEarly(arg0: tool.atk.AttackData): Void {
+    public override function onAttackMissedEarly(arg0: tool.atk.AttackData): Void {
     }
 
     public function failBreak(arg0: Entity): Void {
     }
 
-    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
         throw "stub: canReceiveAttack not decompiled";
     }
 
@@ -76,7 +76,7 @@ class BreakableWall extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

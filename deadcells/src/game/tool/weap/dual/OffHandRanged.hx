@@ -9,10 +9,10 @@ class OffHandRanged extends tool.weap.BaseBow {
         throw "stub: getMainWeapon not decompiled";
     }
 
-    public function consumeAmmo(): Bool {
+    public override function consumeAmmo(): Bool {
         throw "stub: consumeAmmo not decompiled";
     }
 
-    public function updateAmmoHud(): Void {
+    public override function updateAmmoHud(): Void {
     }
 }

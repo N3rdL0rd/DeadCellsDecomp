@@ -15,21 +15,21 @@ class Tumulus extends level.BiomeDisp {
     public var sbNormalProps: libs.heaps.slib.HSpriteBatch;
     public var startingRectTopOutlineTumulus: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null) {
         super();
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
     public function addGodRays(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic): ParallaxEmitter {
         throw "stub: addGodRays not decompiled";
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public function displayPlatformBottom(arg0: libs.tilemap.Rectangle): Void {
@@ -54,7 +54,7 @@ class Tumulus extends level.BiomeDisp {
     public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
     }
 
-    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    public override function renderParallax(arg0: Dynamic, arg1: String): Void {
     }
 
     public override function decorateRoom(arg0: level.Room): Void {
@@ -86,6 +86,6 @@ class Tumulus extends level.BiomeDisp {
     public function addHangedDeadBody(arg0: Int, arg1: Int): Void {
     }
 
-    public function reloadRenderConf(): Void {
+    public override function reloadRenderConf(): Void {
     }
 }

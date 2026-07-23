@@ -11,7 +11,7 @@ class SpeedRunner extends en.Pet {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function init(): Void {
@@ -54,7 +54,7 @@ class SpeedRunner extends en.Pet {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

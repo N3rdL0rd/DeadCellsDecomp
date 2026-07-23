@@ -47,19 +47,19 @@ class BoilerRoom extends en.Mob {
         throw "stub: get_eyePosY not decompiled";
     }
 
-    public function get_targetSprPosX(): Float {
+    public override function get_targetSprPosX(): Float {
         throw "stub: get_targetSprPosX not decompiled";
     }
 
-    public function get_targetSprPosY(): Float {
+    public override function get_targetSprPosY(): Float {
         throw "stub: get_targetSprPosY not decompiled";
     }
 
-    public function get_globalUiX(): Float {
+    public override function get_globalUiX(): Float {
         throw "stub: get_globalUiX not decompiled";
     }
 
-    public function get_globalUiY(): Float {
+    public override function get_globalUiY(): Float {
         throw "stub: get_globalUiY not decompiled";
     }
 
@@ -72,7 +72,7 @@ class BoilerRoom extends en.Mob {
     public function initEye(): Void {
     }
 
-    public function canCrawlThrought(arg0: Int, arg1: Int): Bool {
+    public override function canCrawlThrought(arg0: Int, arg1: Int): Bool {
         throw "stub: canCrawlThrought not decompiled";
     }
 
@@ -140,7 +140,7 @@ class BoilerRoom extends en.Mob {
     public override function postUpdate(): Void {
     }
 
-    public function spriteUpdate(): Void {
+    public override function spriteUpdate(): Void {
     }
 
     public function updatePaws(): Void {
@@ -152,10 +152,10 @@ class BoilerRoom extends en.Mob {
     public function updateGlow(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
-    public function sightCheckCase(arg0: Int, arg1: Int, arg2: Ref, arg3: Dynamic): Bool {
+    public override function sightCheckCase(arg0: Int, arg1: Int, arg2: Ref, arg3: Dynamic): Bool {
         throw "stub: sightCheckCase not decompiled";
     }
 

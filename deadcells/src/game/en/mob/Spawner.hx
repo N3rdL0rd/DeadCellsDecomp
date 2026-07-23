@@ -25,7 +25,7 @@ class Spawner extends en.Mob {
         throw "stub: canHaveRepellingWith not decompiled";
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
     public override function initGfx(): Void {
@@ -34,7 +34,7 @@ class Spawner extends en.Mob {
     public override function onDie(): Void {
     }
 
-    public function onPlatformParse(): Void {
+    public override function onPlatformParse(): Void {
     }
 
     public override function dispose(): Void {

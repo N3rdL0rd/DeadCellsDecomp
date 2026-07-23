@@ -19,16 +19,16 @@ class RichterActiveSkillsManager extends tool.hero.activeSkills.BeheadedActiveSk
     public override function fixedUpdate(): Void {
     }
 
-    public function onEquippedItemsUpdated(arg0: Bool, arg1: Bool): Void {
+    public override function onEquippedItemsUpdated(arg0: Bool, arg1: Bool): Void {
     }
 
-    public function applyHudLockFade(): Void {
+    public override function applyHudLockFade(): Void {
     }
 
     public override function useSkillItem(arg0: Int, arg1: tool.InventItem): Void {
     }
 
-    public function startCooldownForItem(arg0: tool.InventItem, arg1: Dynamic): Void {
+    public override function startCooldownForItem(arg0: tool.InventItem, arg1: Dynamic): Void {
     }
 
     public override function canUseActiveSkill(arg0: Int): Bool {
@@ -49,10 +49,10 @@ class RichterActiveSkillsManager extends tool.hero.activeSkills.BeheadedActiveSk
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 

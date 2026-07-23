@@ -105,7 +105,7 @@ class GardenerBoss extends en.mob.Boss {
         throw "stub: create not decompiled";
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
@@ -119,29 +119,29 @@ class GardenerBoss extends en.mob.Boss {
     public function initRoomInfos(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function nextStep(arg0: Dynamic): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public override function onScream(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
-    public function canHaveRepellingWith(arg0: Entity): Bool {
+    public override function canHaveRepellingWith(arg0: Entity): Bool {
         throw "stub: canHaveRepellingWith not decompiled";
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public function doActionAi(): Void {
@@ -151,7 +151,7 @@ class GardenerBoss extends en.mob.Boss {
         throw "stub: isLigamentComingBack not decompiled";
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function fixedUpdate(): Void {
@@ -175,7 +175,7 @@ class GardenerBoss extends en.mob.Boss {
     public function removeLigament_exe(): Void {
     }
 
-    public function preUpdate(): Void {
+    public override function preUpdate(): Void {
     }
 
     public function addLigament(): Void {
@@ -193,10 +193,10 @@ class GardenerBoss extends en.mob.Boss {
     public function cancelCeilingWalk(): Void {
     }
 
-    public function onLand(arg0: Float): Void {
+    public override function onLand(arg0: Float): Void {
     }
 
-    public function onTouchGround(): Void {
+    public override function onTouchGround(): Void {
     }
 
     public function bounceBackToCeiling(): Void {
@@ -226,7 +226,7 @@ class GardenerBoss extends en.mob.Boss {
     public function sickles(arg0: Int, arg1: Float): Void {
     }
 
-    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
 
     public function doThrowSickle(arg0: tool.atk.AttackData, arg1: Float, arg2: Float): en.mob.boss.gardener.Sickle {
@@ -277,33 +277,33 @@ class GardenerBoss extends en.mob.Boss {
         throw "stub: createAlly not decompiled";
     }
 
-    public function getAffectResist(arg0: Dynamic): Float {
+    public override function getAffectResist(arg0: Dynamic): Float {
         throw "stub: getAffectResist not decompiled";
     }
 
-    public function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(arg0: Int): Void {
     }
 
     public function getHitLigament(): Void {
     }
 
-    public function onDirectHitFromHero(arg0: tool.atk.AttackData): Void {
+    public override function onDirectHitFromHero(arg0: tool.atk.AttackData): Void {
     }
 
-    public function interruptSkills(): Void {
+    public override function interruptSkills(): Void {
     }
 
-    public function lockAiS(arg0: Float): Void {
+    public override function lockAiS(arg0: Float): Void {
     }
 
-    public function lockAiF(arg0: Float): Void {
+    public override function lockAiF(arg0: Float): Void {
     }
 
-    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
         throw "stub: canReceiveAttack not decompiled";
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
     public override function onDie(): Void {

@@ -38,7 +38,7 @@ class LanternRanged extends tool.weap.BaseBow {
         throw "stub: createSoulFrom not decompiled";
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
     public function gainSoul(arg0: Entity): Void {
@@ -57,7 +57,7 @@ class LanternRanged extends tool.weap.BaseBow {
     public override function initAnimIds(): Void {
     }
 
-    public function killEntities(): Void {
+    public override function killEntities(): Void {
     }
 
     public function getNbSoulCast(): Int {
@@ -71,7 +71,7 @@ class LanternRanged extends tool.weap.BaseBow {
         throw "stub: shootSingleSoul not decompiled";
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
@@ -94,6 +94,6 @@ class LanternRanged extends tool.weap.BaseBow {
     public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

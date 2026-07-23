@@ -11,7 +11,7 @@ class DookuInteraction {
     public var uses: Int;
     public var textsToSay: Array<Dynamic>;
 
-    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager = null) {
     }
 
     public function initTexts(): Void {

@@ -6,14 +6,14 @@ class TrainingKnight extends en.inter.Npc {
     public var headFlip: Bool;
     public var isInMobsRoom: Bool;
 
-    public function new(arg0: pr.Level, arg1: level.Room, arg2: Dynamic) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null, arg2: Dynamic = null) {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
     public override function onFocus(): Void {
@@ -34,7 +34,7 @@ class TrainingKnight extends en.inter.Npc {
     public function setHeadFlip(arg0: Bool): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function fixedUpdate(): Void {
@@ -44,7 +44,7 @@ class TrainingKnight extends en.inter.Npc {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

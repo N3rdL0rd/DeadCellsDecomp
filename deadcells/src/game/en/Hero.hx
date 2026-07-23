@@ -106,7 +106,7 @@ class Hero extends Entity {
     public var lastFootStepFrame: Int;
     public var lastSprPage: Int;
 
-    public function new(arg0: pr.Game, arg1: String) {
+    public function new(arg0: pr.Game = null, arg1: String = null) {
         super();
     }
 

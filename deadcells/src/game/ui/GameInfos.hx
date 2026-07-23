@@ -15,7 +15,7 @@ class GameInfos extends ui.Process {
     public var fInfection: ui.FlowBox;
     public var heiContent: Int;
 
-    public function new(arg0: ui.Pause) {
+    public function new(arg0: ui.Pause = null) {
         super();
     }
 
@@ -25,6 +25,6 @@ class GameInfos extends ui.Process {
     public override function onDispose(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 }

@@ -8,13 +8,13 @@ class ATSwitch extends en.inter.button.Button {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
     public override function canActivate(arg0: en.Hero): Bool {

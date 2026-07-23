@@ -9,7 +9,7 @@ class ObjectHelper {
         throw "stub: getChildren not decompiled";
     }
 
-    public static function getChildOfType(arg0: Class<Dynamic>, arg1: hxd.impl.ArrayIterator_h2d_Object): h2d.Object {
+    public static function getChildOfType(arg0: Class<Dynamic>, arg1: hxd.impl.ArrayIterator<h2d.Object>): h2d.Object {
         throw "stub: getChildOfType not decompiled";
     }
 }

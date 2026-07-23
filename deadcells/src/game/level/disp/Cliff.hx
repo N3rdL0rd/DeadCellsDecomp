@@ -33,11 +33,11 @@ class Cliff extends level.DynamicBiomeDisp {
     public var horizonY: Float;
     public var sbWaterFx: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null, arg3: String = null) {
         super();
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public override function render(): Void {
@@ -46,13 +46,13 @@ class Cliff extends level.DynamicBiomeDisp {
     public function computeCliffXperY(): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addDesk(arg0: level.DecoTypes.DecoZone): Void {
+    public function addDesk(arg0: level.DecoZone): Void {
     }
 
     public function needToPlaceEnigma(): Bool {
@@ -62,31 +62,31 @@ class Cliff extends level.DynamicBiomeDisp {
     public function placeRuneFabric(arg0: String, arg1: Float, arg2: Float): Void {
     }
 
-    public function addFabric(arg0: level.DecoTypes.DecoZone, arg1: Bool, arg2: String): Void {
+    public function addFabric(arg0: level.DecoZone, arg1: Bool, arg2: String): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoZone): Void {
     }
 
-    public function decorateRoom(arg0: level.Room): Void {
+    public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function addScroller(arg0: level.DecoTypes.DecoZone): Void {
+    public function addScroller(arg0: level.DecoZone): Void {
     }
 
-    public function renderOneWay(arg0: Int, arg1: Int, arg2: Bool, arg3: Bool, arg4: Bool): Void {
+    public override function renderOneWay(arg0: Int, arg1: Int, arg2: Bool, arg3: Bool, arg4: Bool): Void {
     }
 
-    public function renderLadders(): Void {
+    public override function renderLadders(): Void {
     }
 
-    public function renderWallTransitions(): Void {
+    public override function renderWallTransitions(): Void {
     }
 
-    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    public override function renderParallax(arg0: Dynamic, arg1: String): Void {
     }
 
-    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    public override function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
     }
 
     public function lightningFlash(): Void {
@@ -121,7 +121,7 @@ class Cliff extends level.DynamicBiomeDisp {
         throw "stub: getLightningFlashPower not decompiled";
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function updateBiomeFx(): Void {

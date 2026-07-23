@@ -5,6 +5,6 @@ class PhotoRoom extends level.BiomeDisp {
         super();
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 }

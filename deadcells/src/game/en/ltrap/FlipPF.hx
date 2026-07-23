@@ -18,13 +18,13 @@ class FlipPF extends en.LevelTrap {
     public override function init(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
     public override function initGfx(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public function onHeroInitDone(arg0: en.Hero): Void {
@@ -50,13 +50,13 @@ class FlipPF extends en.LevelTrap {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 }

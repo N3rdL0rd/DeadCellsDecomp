@@ -11,10 +11,10 @@ class NecromantForceField extends en.Interactive {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
     public override function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
@@ -33,10 +33,10 @@ class NecromantForceField extends en.Interactive {
         throw "stub: get_hero not decompiled";
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

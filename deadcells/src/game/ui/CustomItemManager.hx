@@ -57,9 +57,9 @@ class CustomItemManager extends ui.Process {
     public override function onDispose(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

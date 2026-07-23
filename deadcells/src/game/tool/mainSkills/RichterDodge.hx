@@ -14,26 +14,26 @@ class RichterDodge extends tool.mainSkills.Dodge {
     public override function destroy(): Void {
     }
 
-    public function passivePreUpdate(): Void {
+    public override function passivePreUpdate(): Void {
     }
 
-    public function activeFixedUpdate(): Void {
+    public override function activeFixedUpdate(): Void {
     }
 
-    public function activePostUpdate(): Void {
+    public override function activePostUpdate(): Void {
     }
 
     public override function canUse(): Bool {
         throw "stub: canUse not decompiled";
     }
 
-    public function onReady(): Void {
+    public override function onReady(): Void {
     }
 
     public override function onStart(): Void {
     }
 
-    public function onEnd(): Void {
+    public override function onEnd(): Void {
     }
 
     public override function onCancel(): Void {
@@ -54,33 +54,33 @@ class RichterDodge extends tool.mainSkills.Dodge {
     public function onBackpackWeaponHit(arg0: tool.Weapon, arg1: Entity): Void {
     }
 
-    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
 
-    public function onPickItem(arg0: Entity, arg1: tool.InventItem): Void {
+    public override function onPickItem(arg0: Entity, arg1: tool.InventItem): Void {
     }
 
-    public function shouldHaveSmallHitbox(): Bool {
+    public override function shouldHaveSmallHitbox(): Bool {
         throw "stub: shouldHaveSmallHitbox not decompiled";
     }
 
-    public function canWallGrab(): Bool {
+    public override function canWallGrab(): Bool {
         throw "stub: canWallGrab not decompiled";
     }
 
-    public function canJumpThroughUp(): Bool {
+    public override function canJumpThroughUp(): Bool {
         throw "stub: canJumpThroughUp not decompiled";
     }
 
-    public function canPreventStuckInWall(arg0: Int, arg1: Int): Bool {
+    public override function canPreventStuckInWall(arg0: Int, arg1: Int): Bool {
         throw "stub: canPreventStuckInWall not decompiled";
     }
 
-    public function canBreakDoors(): Bool {
+    public override function canBreakDoors(): Bool {
         throw "stub: canBreakDoors not decompiled";
     }
 
-    public function canBreakTiles(): Bool {
+    public override function canBreakTiles(): Bool {
         throw "stub: canBreakTiles not decompiled";
     }
 
@@ -88,10 +88,10 @@ class RichterDodge extends tool.mainSkills.Dodge {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 

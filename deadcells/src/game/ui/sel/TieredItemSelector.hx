@@ -3,7 +3,7 @@ package ui.sel;
 class TieredItemSelector extends ui.sel.ItemSelector {
     public var tier: String;
 
-    public function new(arg0: Array<Int>, arg1: Dynamic, arg2: String) {
+    public function new(arg0: Array<Int> = null, arg1: Dynamic = null, arg2: String = null) {
         super();
     }
 

@@ -222,7 +222,7 @@ class Hero extends Entity {
     public var lastFootStepFrame: Int;
     public var lastSprPage: Int;
 
-    public function new(arg0: pr.Game, arg1: String) {
+    public function new(arg0: pr.Game = null, arg1: String = null) {
         super();
     }
 
@@ -1530,7 +1530,7 @@ class BiomeSelector extends ui.sel.GridSelector {
     public var nameText: ui.Text;
     public var preSelectedBiome: String;
 
-    public function new(arg0: Array<Int>, arg1: Dynamic, arg2: String) {
+    public function new(arg0: Array<Int> = null, arg1: Dynamic = null, arg2: String = null) {
         super();
     }
 

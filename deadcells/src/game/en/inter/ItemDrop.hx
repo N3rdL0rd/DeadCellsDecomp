@@ -27,11 +27,11 @@ class ItemDrop extends en.Interactive {
         super();
     }
 
-    public function canUpdate(): Bool {
+    public override function canUpdate(): Bool {
         throw "stub: canUpdate not decompiled";
     }
 
-    public function canBeHit(): Bool {
+    public override function canBeHit(): Bool {
         throw "stub: canBeHit not decompiled";
     }
 
@@ -42,50 +42,50 @@ class ItemDrop extends en.Interactive {
     public function floatForS(arg0: Float, arg1: Dynamic, arg2: Dynamic): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function updateAffixIcon(): Void {
     }
 
-    public function setDepth(arg0: Int): Void {
+    public override function setDepth(arg0: Int): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function removeLargeTip(arg0: Ref): Void {
+    public override function removeLargeTip(arg0: Ref): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function onLand(arg0: Float): Void {
+    public override function onLand(arg0: Float): Void {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function recycle(arg0: en.Hero): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public function spawnFx(): Void {
@@ -97,13 +97,13 @@ class ItemDrop extends en.Interactive {
     public function patchUsingOptions(): Void {
     }
 
-    public function onDropAsLoot(): Void {
+    public override function onDropAsLoot(): Void {
     }
 
-    public function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(arg0: Int): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -121,7 +121,7 @@ class ItemDrop extends en.Interactive {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

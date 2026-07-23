@@ -22,7 +22,7 @@ class Crusher extends en.Active {
     public function crush(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public function canAttack(arg0: Entity): Bool {

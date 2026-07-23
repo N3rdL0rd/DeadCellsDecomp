@@ -93,10 +93,10 @@ class AnchorGuy extends en.Mob {
     public override function postUpdate(): Void {
     }
 
-    public function onLeaveMap(): Void {
+    public override function onLeaveMap(): Void {
     }
 
-    public function outOfGameUpdate(): Void {
+    public override function outOfGameUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

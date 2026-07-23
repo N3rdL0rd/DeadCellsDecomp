@@ -12,13 +12,13 @@ class GoldenBatKamikaze extends en.mob.BatKamikazeTemplate {
         throw "stub: create not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
-    public function dropLoot(): Void {
+    public override function dropLoot(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

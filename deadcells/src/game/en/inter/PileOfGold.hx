@@ -12,13 +12,13 @@ class PileOfGold extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onDie(): Void {
+    public override function onDie(): Void {
     }
 
     public function drop(arg0: Int, arg1: Float): Void {
@@ -27,7 +27,7 @@ class PileOfGold extends en.Interactive {
     public function dropLoot(arg0: Int, arg1: Int, arg2: Ref): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

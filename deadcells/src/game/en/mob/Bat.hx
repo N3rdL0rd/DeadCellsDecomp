@@ -21,7 +21,7 @@ class Bat extends en.Mob {
         throw "stub: inDetectArea not decompiled";
     }
 
-    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
 
     public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
@@ -37,7 +37,7 @@ class Bat extends en.Mob {
     public function playTriggerSound(): Void {
     }
 
-    public function onStep(): Void {
+    public override function onStep(): Void {
     }
 
     public override function postUpdate(): Void {

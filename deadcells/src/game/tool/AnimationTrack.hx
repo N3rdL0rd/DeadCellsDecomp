@@ -1,3 +1,5 @@
+package tool;
+
 class AnimationTrack_Impl_ {
     public static function y(arg0: Array<Int>, arg1: Int): Int {
         throw "stub: y not decompiled";

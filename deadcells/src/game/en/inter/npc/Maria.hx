@@ -6,17 +6,17 @@ class Maria extends en.inter.Npc {
     public var headFlip: Bool;
     public var rseed: libs.Rand;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
@@ -38,7 +38,7 @@ class Maria extends en.inter.Npc {
         throw "stub: getCLID not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

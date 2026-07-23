@@ -26,7 +26,7 @@ class Shipwreck extends level.DynamicBiomeDisp {
     public var mainPropsGlowShader: shader.GlowKey;
     public var ambiantChannel: hxd.snd.Channel;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null, arg3: String = null) {
         super();
     }
 
@@ -37,19 +37,19 @@ class Shipwreck extends level.DynamicBiomeDisp {
     public function computeHorizonY(): Void {
     }
 
-    public function addTorch(arg0: Float, arg1: Float, arg2: h2d.Tile, arg3: Ref): Void {
+    public override function addTorch(arg0: Float, arg1: Float, arg2: h2d.Tile, arg3: Ref): Void {
     }
 
     public override function render(): Void {
     }
 
-    public function renderGroundSmoke(): Void {
+    public override function renderGroundSmoke(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public function renderTorches(): Void {
@@ -145,10 +145,10 @@ class Shipwreck extends level.DynamicBiomeDisp {
     public function renderWaterInBackground(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int): Void {
     }
 
-    public function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
     }
 
-    public function decorateRoom(arg0: level.Room): Void {
+    public override function decorateRoom(arg0: level.Room): Void {
     }
 
     public function addWaterfallsInScroller(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
@@ -157,7 +157,7 @@ class Shipwreck extends level.DynamicBiomeDisp {
     public function createHolesWithBounds(arg0: level.Room, arg1: libs.tilemap.Rectangle, arg2: Bool, arg3: Ref, arg4: Ref): Void {
     }
 
-    public function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
+    public override function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
         throw "stub: createHoleGrid not decompiled";
     }
 
@@ -165,7 +165,7 @@ class Shipwreck extends level.DynamicBiomeDisp {
         throw "stub: createHoleGridWithBounds not decompiled";
     }
 
-    public function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    public override function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
     }
 
     public override function updateBiomeFx(): Void {
@@ -174,21 +174,21 @@ class Shipwreck extends level.DynamicBiomeDisp {
     public function addGodRays(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
     }
 
-    public function createLightWalls(): Void {
+    public override function createLightWalls(): Void {
     }
 
-    public function generateParallax(arg0: Dynamic): Parallax {
+    public override function generateParallax(arg0: Dynamic): Parallax {
         throw "stub: generateParallax not decompiled";
     }
 
-    public function generateParallaxGroup(arg0: Dynamic): ParallaxGroup {
+    public override function generateParallaxGroup(arg0: Dynamic): ParallaxGroup {
         throw "stub: generateParallaxGroup not decompiled";
     }
 
-    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    public override function renderParallax(arg0: Dynamic, arg1: String): Void {
     }
 
-    public function applyLayerConf(arg0: h2d.Drawable, arg1: String, arg2: Ref, arg3: Ref): Void {
+    public override function applyLayerConf(arg0: h2d.Drawable, arg1: String, arg2: Ref, arg3: Ref): Void {
     }
 
     public override function getBlendRatioAt(arg0: Float, arg1: Float): Float {
@@ -198,7 +198,7 @@ class Shipwreck extends level.DynamicBiomeDisp {
     public function heroLightUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function updateGodRaysInScrollers(): Void {

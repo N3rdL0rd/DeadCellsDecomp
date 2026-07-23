@@ -27,7 +27,7 @@ class BossDoor extends en.inter.Door {
     public override function dispose(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function postUpdate(): Void {

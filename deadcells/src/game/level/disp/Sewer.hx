@@ -8,7 +8,7 @@ class Sewer extends level.BiomeDisp {
     public var arTunnel: Array<Dynamic>;
     public var cacheArTunnel: Array<Dynamic>;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: Ref) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: Ref = null) {
         super();
     }
 
@@ -28,19 +28,19 @@ class Sewer extends level.BiomeDisp {
     public override function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public override function renderFloorStamps(): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addGridFloor(arg0: level.DecoTypes.DecoZone): Void {
+    public function addGridFloor(arg0: level.DecoZone): Void {
     }
 
-    public function addPipeFall(arg0: level.DecoTypes.DecoZone): Void {
+    public function addPipeFall(arg0: level.DecoZone): Void {
     }
 
     public override function renderFrontWalls(): Void {

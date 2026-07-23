@@ -7,7 +7,7 @@ class Ossuary extends level.BiomeDisp {
     public var glowShader: shader.GlowKey;
     public var sbBodySmoke: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null) {
         super();
     }
 
@@ -18,24 +18,24 @@ class Ossuary extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoZone): Void {
     }
 
-    public function addSmallArch(arg0: level.DecoTypes.DecoZone): Void {
+    public function addSmallArch(arg0: level.DecoZone): Void {
     }
 
     public function addWallLight(arg0: level.Room, arg1: Float, arg2: Float): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public override function updateBiomeFx(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 }

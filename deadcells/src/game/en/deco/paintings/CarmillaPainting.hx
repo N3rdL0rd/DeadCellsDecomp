@@ -39,19 +39,19 @@ class CarmillaPainting extends en.deco.paintings.LoopPainting {
     public override function initGfx(): Void {
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
-    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
     }
 
     public function setEyesPos(): Void {

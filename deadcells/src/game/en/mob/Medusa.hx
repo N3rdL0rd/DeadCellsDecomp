@@ -31,19 +31,19 @@ class Medusa extends en.mob.Boss {
         throw "stub: create not decompiled";
     }
 
-    public function get_headX(): Float {
+    public override function get_headX(): Float {
         throw "stub: get_headX not decompiled";
     }
 
-    public function get_headY(): Float {
+    public override function get_headY(): Float {
         throw "stub: get_headY not decompiled";
     }
 
-    public function canBeElite(): Bool {
+    public override function canBeElite(): Bool {
         throw "stub: canBeElite not decompiled";
     }
 
-    public function setElite(arg0: Bool): Void {
+    public override function setElite(arg0: Bool): Void {
     }
 
     public override function init(): Void {
@@ -55,28 +55,28 @@ class Medusa extends en.mob.Boss {
     public function changeDirAnim(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
     public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function spriteUpdate(): Void {
+    public override function spriteUpdate(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public function medusaLookUpdate(): Void {
@@ -101,16 +101,16 @@ class Medusa extends en.mob.Boss {
         throw "stub: tryToPreventDeath not decompiled";
     }
 
-    public function kill(): Void {
+    public override function kill(): Void {
     }
 
     public override function onDie(): Void {
     }
 
-    public function tpHeroBackToTraining(): Void {
+    public override function tpHeroBackToTraining(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function getCLID(): Int {

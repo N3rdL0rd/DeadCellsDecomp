@@ -32,11 +32,11 @@ class Pendulum extends en.Deco {
     public var offsetY: Int;
     public var heiTileChain: Int;
 
-    public function new(arg0: pr.Level, arg1: String, arg2: Float, arg3: Float) {
+    public function new(arg0: pr.Level = null, arg1: String = null, arg2: Float = 0., arg3: Float = 0.) {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function ySort(): Void {
@@ -51,10 +51,10 @@ class Pendulum extends en.Deco {
     public function initTingle(arg0: Int, arg1: Bool): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -65,16 +65,16 @@ class Pendulum extends en.Deco {
         throw "stub: getCLID not decompiled";
     }
 
-    public function serialize(arg0: hxbit.Serializer): Void {
+    public override function serialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function getSerializeSchema(): hxbit.Schema {
+    public override function getSerializeSchema(): hxbit.Schema {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
-    public function unserialize(arg0: hxbit.Serializer): Void {
+    public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 }

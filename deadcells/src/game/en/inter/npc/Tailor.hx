@@ -6,17 +6,17 @@ class Tailor extends en.inter.Npc {
     public var headFlip: Bool;
     public var daughter: en.inter.npc.TailorDaughter;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function setHeadFlip(arg0: Bool): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
@@ -45,7 +45,7 @@ class Tailor extends en.inter.Npc {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

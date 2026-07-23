@@ -77,38 +77,3 @@ class TierSelectFree extends ui.TierSelect {
     public function equipTier(arg0: String, arg1: Int): Void {
     }
 }
-
-class TierInfoFree extends ui.TierInfo {
-    public var tierSelectFree: ui.TierSelectFree;
-    public var statCountText: ui.Text;
-
-    public function new(arg0: h2d.Flow, arg1: en.Hero, arg2: Int, arg3: Int, arg4: tool.InventItem, arg5: String, arg6: ui.TierSelectFree) {
-        super();
-    }
-
-    public override function get_brutTier(): Int {
-        throw "stub: get_brutTier not decompiled";
-    }
-
-    public override function get_tactTier(): Int {
-        throw "stub: get_tactTier not decompiled";
-    }
-
-    public override function get_survTier(): Int {
-        throw "stub: get_survTier not decompiled";
-    }
-
-    public function get_curTier(): Int {
-        throw "stub: get_curTier not decompiled";
-    }
-
-    public override function updateTexts(): Void {
-    }
-
-    public override function getBaseLife(): Int {
-        throw "stub: getBaseLife not decompiled";
-    }
-
-    public override function setSelected(arg0: libs.misc.Tweenie, arg1: Bool, arg2: Ref): Void {
-    }
-}

@@ -27,7 +27,7 @@ class FatZombie extends en.Mob {
     public override function fixedUpdate(): Void {
     }
 
-    public function onReload(): Void {
+    public override function onReload(): Void {
     }
 
     public override function beforeTryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Void {

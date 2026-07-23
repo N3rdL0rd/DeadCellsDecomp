@@ -18,10 +18,10 @@ class FallToLevelTrigger extends en.Interactive {
     public function trigger(arg0: Entity): Void {
     }
 
-    public function outOfGameUpdate(): Void {
+    public override function outOfGameUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

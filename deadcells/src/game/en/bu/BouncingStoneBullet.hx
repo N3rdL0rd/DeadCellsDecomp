@@ -18,7 +18,7 @@ class BouncingStoneBullet extends en.Bullet {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
@@ -36,13 +36,13 @@ class BouncingStoneBullet extends en.Bullet {
     public override function blockOnCollision(): Void {
     }
 
-    public function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(arg0: Int): Void {
     }
 
     public override function onTouchGround(): Void {
     }
 
-    public function onTouchCeil(): Void {
+    public override function onTouchCeil(): Void {
     }
 
     public function delayedTouchCeil(): Void {

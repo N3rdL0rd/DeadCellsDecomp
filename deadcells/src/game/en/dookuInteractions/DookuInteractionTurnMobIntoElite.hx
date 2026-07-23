@@ -4,7 +4,7 @@ class DookuInteractionTurnMobIntoElite extends en.dookuInteractions.DookuInterac
     public var possibleMobs: Array<Dynamic>;
     public var mob: en.Mob;
 
-    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager = null) {
         super();
     }
 

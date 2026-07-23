@@ -13,7 +13,7 @@ class CemeteryGraveCave extends en.Interactive {
         throw "stub: getKeySprite not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function dispose(): Void {
@@ -30,7 +30,7 @@ class CemeteryGraveCave extends en.Interactive {
     public function narrate(arg0: Entity, arg1: String, arg2: Dynamic): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public function openDoor(arg0: Entity): Void {
@@ -39,13 +39,13 @@ class CemeteryGraveCave extends en.Interactive {
     public function consumeKey(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {

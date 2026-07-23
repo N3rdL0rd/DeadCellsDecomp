@@ -1,7 +1,7 @@
 package level.disp;
 
 class CastleTorture extends level.disp.Castle {
-    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: String = null) {
         super();
     }
 

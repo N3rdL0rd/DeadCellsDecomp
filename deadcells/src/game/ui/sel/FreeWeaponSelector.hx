@@ -12,10 +12,10 @@ class FreeWeaponSelector extends ui.sel.TieredItemSelector {
         super();
     }
 
-    public function setControlLabel(): Void {
+    public override function setControlLabel(): Void {
     }
 
-    public function controlsUpdate(): Bool {
+    public override function controlsUpdate(): Bool {
         throw "stub: controlsUpdate not decompiled";
     }
 
@@ -38,10 +38,10 @@ class FreeWeaponSelector extends ui.sel.TieredItemSelector {
         throw "stub: isLegendary not decompiled";
     }
 
-    public function getInventItem(): tool.InventItem {
+    public override function getInventItem(): tool.InventItem {
         throw "stub: getInventItem not decompiled";
     }
 
-    public function onValidate(): Void {
+    public override function onValidate(): Void {
     }
 }

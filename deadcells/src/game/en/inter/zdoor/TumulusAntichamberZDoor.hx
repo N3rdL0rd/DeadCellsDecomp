@@ -26,7 +26,7 @@ class TumulusAntichamberZDoor extends en.inter.ZDoor {
     public function close(arg0: Dynamic): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
@@ -60,7 +60,7 @@ class TumulusAntichamberZDoor extends en.inter.ZDoor {
     public override function postUpdate(): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public override function getCLID(): Int {

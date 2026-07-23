@@ -65,7 +65,7 @@ class Richter extends en.Hero {
         throw "stub: canJumpThroughUp not decompiled";
     }
 
-    public function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(arg0: Int): Void {
     }
 
     public override function onTouchGround(): Void {

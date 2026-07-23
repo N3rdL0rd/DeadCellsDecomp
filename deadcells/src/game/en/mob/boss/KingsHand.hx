@@ -29,13 +29,13 @@ class KingsHand extends en.mob.Boss {
     public override function init(): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
-    public function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
-    public function canBeGrabbedByHomunculus(): Bool {
+    public override function canBeGrabbedByHomunculus(): Bool {
         throw "stub: canBeGrabbedByHomunculus not decompiled";
     }
 
@@ -49,13 +49,13 @@ class KingsHand extends en.mob.Boss {
         throw "stub: inCombat not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public function initScarf(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function globalStomp(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
@@ -67,19 +67,19 @@ class KingsHand extends en.mob.Boss {
     public override function onReload(): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function get_headX(): Float {
+    public override function get_headX(): Float {
         throw "stub: get_headX not decompiled";
     }
 
-    public function get_headY(): Float {
+    public override function get_headY(): Float {
         throw "stub: get_headY not decompiled";
     }
 
@@ -96,10 +96,10 @@ class KingsHand extends en.mob.Boss {
         throw "stub: createAlly not decompiled";
     }
 
-    public function queueAttack(arg0: tool.skill.OldMobSkill, arg1: Bool, arg2: Dynamic): Void {
+    public override function queueAttack(arg0: tool.skill.OldMobSkill, arg1: Bool, arg2: Dynamic): Void {
     }
 
-    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
     }
 
     public function forceIntoPlayZone(arg0: Dynamic): Void {
@@ -130,7 +130,7 @@ class KingsHand extends en.mob.Boss {
     public function grenadeExplosion(arg0: Dynamic, arg1: en.Grenade, arg2: Float): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public function chooseAction(arg0: Ref): Void {
@@ -139,23 +139,23 @@ class KingsHand extends en.mob.Boss {
     public function doActionAi(): Void {
     }
 
-    public function getAffectResist(arg0: Dynamic): Float {
+    public override function getAffectResist(arg0: Dynamic): Float {
         throw "stub: getAffectResist not decompiled";
     }
 
     public function stompHit(arg0: Dynamic, arg1: Float, arg2: Int): Void {
     }
 
-    public function onLand(arg0: Float): Void {
+    public override function onLand(arg0: Float): Void {
     }
 
-    public function beforeRender(): Void {
+    public override function beforeRender(): Void {
     }
 
-    public function preUpdate(): Void {
+    public override function preUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function onElitesDone(): Void {
@@ -173,7 +173,7 @@ class KingsHand extends en.mob.Boss {
     public override function giveHeads(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
     public override function getCLID(): Int {

@@ -114,7 +114,7 @@ class LevelDisp extends libs.Process {
     public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
     }
 
-    public function addJunk(arg0: level.DecoTypes.DecoZone): Void {
+    public function addJunk(arg0: level.DecoZone): Void {
     }
 
     public function initDecoEntities(): Void {
@@ -171,7 +171,7 @@ class LevelDisp extends libs.Process {
     public function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public function decorateZone(arg0: level.DecoZone): Void {
     }
 
     public override function postUpdate(): Void {

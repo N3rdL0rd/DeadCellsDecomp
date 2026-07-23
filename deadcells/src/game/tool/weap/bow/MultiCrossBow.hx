@@ -25,16 +25,16 @@ class MultiCrossBowOffHand extends tool.weap.dual.OffHandRanged {
         super();
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function onBowChargeStart(): Void {
+    public override function onBowChargeStart(): Void {
     }
 
-    public function onBowCharging(arg0: Float): Void {
+    public override function onBowCharging(arg0: Float): Void {
     }
 
-    public function shoot(arg0: Array<Dynamic>): Void {
+    public override function shoot(arg0: Array<Dynamic>): Void {
     }
 }

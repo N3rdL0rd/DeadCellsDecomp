@@ -31,7 +31,7 @@ class Turret extends en.Active {
         throw "stub: getAttackTarget not decompiled";
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function shoot(arg0: Entity): Void {
@@ -55,7 +55,7 @@ class Turret extends en.Active {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

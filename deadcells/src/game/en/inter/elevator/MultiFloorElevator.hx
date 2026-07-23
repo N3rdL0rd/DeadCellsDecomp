@@ -28,31 +28,31 @@ class MultiFloorElevator extends en.inter.Elevator {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function postCreate(): Void {
+    public override function postCreate(): Void {
     }
 
-    public function postDeserialize(): Void {
+    public override function postDeserialize(): Void {
     }
 
     public override function renderPlatform(): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function onBlur(): Void {
+    public override function onBlur(): Void {
     }
 
-    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
     public function callFromLevel(arg0: Int): Void {
     }
 
-    public function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
+    public override function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
     }
 
     public override function onArrival(arg0: Int): Void {
@@ -77,7 +77,7 @@ class MultiFloorElevator extends en.inter.Elevator {
     public function initDoors(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function getCLID(): Int {

@@ -17,16 +17,6 @@ class Skin {
         throw "stub: __string not decompiled";
     }
 }
-
-class Key {
-    public var slotIndex: Int;
-    public var name: String;
-    public var hashCode: Int;
-
-    public function new() {
-    }
-}
-
 class KeyPool extends spine.support.utils.Pool {
     public function new(arg0: Int = 0) {
         super();

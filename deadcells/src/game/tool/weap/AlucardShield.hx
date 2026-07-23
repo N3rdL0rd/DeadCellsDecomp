@@ -11,17 +11,17 @@ class AlucardShield extends tool.weap.BaseShield {
     public function parryForS(arg0: Float): Void {
     }
 
-    public function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
+    public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
-    public function onExecute(): Bool {
+    public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";
     }
 
-    public function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
     }
 
-    public function isLastCycle(): Bool {
+    public override function isLastCycle(): Bool {
         throw "stub: isLastCycle not decompiled";
     }
 
@@ -34,9 +34,9 @@ class AlucardShield extends tool.weap.BaseShield {
     public override function counterGrenade(arg0: en.Grenade): Void {
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

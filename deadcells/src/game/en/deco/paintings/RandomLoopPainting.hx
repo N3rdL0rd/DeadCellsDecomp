@@ -10,7 +10,7 @@ class RandomLoopPainting extends en.deco.paintings.AnimatedPaintingBase {
         super();
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function randomAnimCheck(): Void {

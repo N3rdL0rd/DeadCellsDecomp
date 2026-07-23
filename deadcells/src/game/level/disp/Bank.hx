@@ -4,14 +4,14 @@ class Bank extends level.BiomeDisp {
     public var darkSprites: Array<Dynamic>;
     public var candleLights: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null) {
         super();
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
     public function addStoneStamps(): Void {
@@ -20,13 +20,13 @@ class Bank extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
-    public function addSuspendedChest(arg0: level.DecoTypes.DecoZone, arg1: Int, arg2: Int, arg3: Int): Void {
+    public function addSuspendedChest(arg0: level.DecoZone, arg1: Int, arg2: Int, arg3: Int): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone, arg1: Int): Void {
+    public function addAlcoves(arg0: level.DecoZone, arg1: Int): Void {
     }
 
     public override function renderStructures(): Void {
@@ -82,9 +82,9 @@ class Bank extends level.BiomeDisp {
     public override function renderWallTransitions(): Void {
     }
 
-    public function clear(): Void {
+    public override function clear(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 }

@@ -21,16 +21,16 @@ class TimedDoor extends en.inter.Door {
     public override function onOutOfGameChange(): Void {
     }
 
-    public function minimapTracking(): Void {
+    public override function minimapTracking(): Void {
     }
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function postUpdate(): Void {

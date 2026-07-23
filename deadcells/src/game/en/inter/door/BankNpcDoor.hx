@@ -23,7 +23,7 @@ class BankNpcDoor extends en.inter.Door {
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function onFocus(): Void {
+    public override function onFocus(): Void {
     }
 
     public override function postUpdate(): Void {

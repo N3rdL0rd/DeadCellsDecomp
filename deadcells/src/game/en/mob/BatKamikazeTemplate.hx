@@ -22,11 +22,11 @@ class BatKamikazeTemplate extends en.mob.Bat {
         throw "stub: get_ty not decompiled";
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
@@ -37,7 +37,7 @@ class BatKamikazeTemplate extends en.mob.Bat {
     public override function wakeUp(): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public override function fixedUpdate(): Void {

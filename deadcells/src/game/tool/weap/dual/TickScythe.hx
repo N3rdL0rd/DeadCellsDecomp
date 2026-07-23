@@ -5,7 +5,7 @@ class TickScythe extends tool.weap.dual.SharedComboWeapon {
         super();
     }
 
-    public function dispose(): Void {
+    public override function dispose(): Void {
     }
 
     public function get_otherAreas(): Array<Dynamic> {
@@ -16,7 +16,7 @@ class TickScythe extends tool.weap.dual.SharedComboWeapon {
         throw "stub: canHitBis not decompiled";
     }
 
-    public function onExecute(): Bool {
+    public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";
     }
 
@@ -71,7 +71,7 @@ class TickScytheRight extends tool.weap.dual.TickScythe {
         throw "stub: onExecute not decompiled";
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 }
 
@@ -90,6 +90,6 @@ class TickScytheLeft extends tool.weap.dual.TickScythe {
         throw "stub: onExecute not decompiled";
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 }

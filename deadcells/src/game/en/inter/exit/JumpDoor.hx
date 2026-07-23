@@ -16,10 +16,10 @@ class JumpDoor extends en.inter.Exit {
     public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
-    public function preUpdate(): Void {
+    public override function preUpdate(): Void {
     }
 
     public override function postUpdate(): Void {

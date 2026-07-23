@@ -16,11 +16,11 @@ class Grid {
 class PurpleGarden extends level.BiomeDisp {
     public var sbGodRays: libs.heaps.slib.HSpriteBatch;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null) {
         super();
     }
 
-    public function initGroups(): Void {
+    public override function initGroups(): Void {
     }
 
     public function towerPartRand(arg0: Int, arg1: Float, arg2: Int): Int {
@@ -36,10 +36,10 @@ class PurpleGarden extends level.BiomeDisp {
     public function renderBgGrids(): Void {
     }
 
-    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    public override function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
     }
 
-    public function parallaxHFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Ref, arg6: h2d.Tile): Void {
+    public override function parallaxHFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Ref, arg6: h2d.Tile): Void {
     }
 
     public function addColumns(arg0: level.Room): Void {
@@ -48,13 +48,13 @@ class PurpleGarden extends level.BiomeDisp {
     public function addColumnsInArea(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
     }
 
-    public function addAlcoves(arg0: level.DecoTypes.DecoZone): Void {
+    public function addAlcoves(arg0: level.DecoZone): Void {
     }
 
-    public function addSmallWindows(arg0: level.DecoTypes.DecoZone, arg1: Array<Dynamic>): Void {
+    public function addSmallWindows(arg0: level.DecoZone, arg1: Array<Dynamic>): Void {
     }
 
-    public function fillHorizontalCenteredZone(arg0: level.DecoTypes.DecoZone, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Array<Dynamic>, arg8: Int, arg9: Int, arg10: Int, arg11: libs.heaps.StaticGeometryGroup, arg12: Dynamic): Int {
+    public function fillHorizontalCenteredZone(arg0: level.DecoZone, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Array<Dynamic>, arg8: Int, arg9: Int, arg10: Int, arg11: libs.heaps.StaticGeometryGroup, arg12: Dynamic): Int {
         throw "stub: fillHorizontalCenteredZone not decompiled";
     }
 
@@ -62,11 +62,11 @@ class PurpleGarden extends level.BiomeDisp {
         throw "stub: fillHorizontalCentered not decompiled";
     }
 
-    public function isAboveGround(arg0: level.DecoTypes.DecoZone): Bool {
+    public function isAboveGround(arg0: level.DecoZone): Bool {
         throw "stub: isAboveGround not decompiled";
     }
 
-    public function decorateZone(arg0: level.DecoTypes.DecoZone): Void {
+    public override function decorateZone(arg0: level.DecoZone): Void {
     }
 
     public function shouldSkipLightPoint(arg0: Int, arg1: Int, arg2: Int): Bool {
@@ -82,10 +82,10 @@ class PurpleGarden extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function clear(): Void {
+    public override function clear(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public override function onAddWallJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {

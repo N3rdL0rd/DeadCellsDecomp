@@ -4,20 +4,20 @@ class Throne extends level.BiomeDisp {
     public var horizonY: Int;
     public var centerX: Int;
 
-    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null) {
         super();
     }
 
-    public function render(): Void {
+    public override function render(): Void {
     }
 
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateLevel(): Void {
+    public override function decorateLevel(): Void {
     }
 
-    public function renderFrontCorners(): Void {
+    public override function renderFrontCorners(): Void {
     }
 
     public override function addCliffLights(): Void {
@@ -35,6 +35,6 @@ class Throne extends level.BiomeDisp {
     public override function updateBiomeFx(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 }

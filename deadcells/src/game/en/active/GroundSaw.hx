@@ -20,16 +20,16 @@ class GroundSaw extends en.Active {
     public override function initGfx(): Void {
     }
 
-    public function onOutOfGameChange(): Void {
+    public override function onOutOfGameChange(): Void {
     }
 
     public override function dispose(): Void {
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function checkFallHit(arg0: en.Mob, arg1: Float): Bool {
@@ -54,7 +54,7 @@ class GroundSaw extends en.Active {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

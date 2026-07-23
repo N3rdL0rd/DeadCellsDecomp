@@ -12,7 +12,7 @@ class DookuMagmaBall extends en.Bullet {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
@@ -24,7 +24,7 @@ class DookuMagmaBall extends en.Bullet {
     public override function onTouchValidTarget(arg0: Entity): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
     public override function getEntityCLIDS(): Array<Int> {
@@ -45,12 +45,12 @@ class DookuMagmaBall extends en.Bullet {
     public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    public override function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
     }
 
-    public function onCountered(): Void {
+    public override function onCountered(): Void {
     }
 
-    public function onBlock(arg0: Bool): Void {
+    public override function onBlock(arg0: Bool): Void {
     }
 }

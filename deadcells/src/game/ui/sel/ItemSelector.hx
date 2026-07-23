@@ -7,7 +7,7 @@ class ItemSelector extends ui.sel.GridSelector {
     public var chosenItem: String;
     public var validateCb: Dynamic;
 
-    public function new(arg0: Array<Int>, arg1: Dynamic) {
+    public function new(arg0: Array<Int> = null, arg1: Dynamic = null) {
         super();
     }
 

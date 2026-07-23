@@ -4,7 +4,7 @@ class TrainingKnightBoss extends en.inter.npc.TrainingKnight {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 

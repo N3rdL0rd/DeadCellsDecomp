@@ -22,7 +22,7 @@ class AxeThrower extends en.Mob {
     public override function setElite(arg0: Bool): Void {
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 

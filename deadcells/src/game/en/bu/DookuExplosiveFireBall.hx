@@ -11,7 +11,7 @@ class DookuExplosiveFireBall extends en.Bullet {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public override function initGfx(): Void {
@@ -47,9 +47,9 @@ class DookuExplosiveFireBall extends en.Bullet {
     public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function onBlock(arg0: Bool): Void {
+    public override function onBlock(arg0: Bool): Void {
     }
 
-    public function beforeHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    public override function beforeHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
     }
 }

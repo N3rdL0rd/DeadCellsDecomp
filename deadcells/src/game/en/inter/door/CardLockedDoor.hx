@@ -15,10 +15,10 @@ class CardLockedDoor extends en.inter.door.LockedDoor {
     public override function initGfx(): Void {
     }
 
-    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function minimapTracking(): Void {

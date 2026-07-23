@@ -4,7 +4,7 @@ class DookuInteractionCurseFood extends en.dookuInteractions.DookuInteraction {
     public var possibleFoods: Array<Dynamic>;
     public var food: en.inter.ItemDrop;
 
-    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager = null) {
         super();
     }
 

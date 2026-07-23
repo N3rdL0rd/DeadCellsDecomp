@@ -1,7 +1,7 @@
 package pr.infection;
 
 class MoreMobs extends pr.InfectionRule {
-    public function new(arg0: pr.Infection, arg1: String) {
+    public function new(arg0: pr.Infection = null, arg1: String = null) {
         super();
     }
 

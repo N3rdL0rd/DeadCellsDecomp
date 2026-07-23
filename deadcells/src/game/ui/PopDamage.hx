@@ -26,6 +26,6 @@ class PopDamage extends ui.Process {
     public override function onDispose(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 }

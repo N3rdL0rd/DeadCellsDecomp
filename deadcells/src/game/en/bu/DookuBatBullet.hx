@@ -19,7 +19,7 @@ class DookuBatBullet extends en.Bullet {
         super();
     }
 
-    public function init(): Void {
+    public override function init(): Void {
     }
 
     public function initOnPool(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Ref, arg6: Ref, arg7: Ref): Void {
@@ -47,7 +47,7 @@ class DookuBatBullet extends en.Bullet {
     public override function fixedUpdate(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
     public override function onFatalFallStart(arg0: Ref): Void {
@@ -102,6 +102,6 @@ class DookuBatBullet extends en.Bullet {
     public override function unserialize(arg0: hxbit.Serializer): Void {
     }
 
-    public function onBlock(arg0: Bool): Void {
+    public override function onBlock(arg0: Bool): Void {
     }
 }

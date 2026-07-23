@@ -38,10 +38,10 @@ class FlyingSword extends en.Pet {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
     public function initSayDeck(): Void {
@@ -56,18 +56,18 @@ class FlyingSword extends en.Pet {
     public function initSkill(arg0: Dynamic, arg1: Int): Void {
     }
 
-    public function getRelevantTierFor(arg0: tool.InventItem): Int {
+    public override function getRelevantTierFor(arg0: tool.InventItem): Int {
         throw "stub: getRelevantTierFor not decompiled";
     }
 
     public function hitCurrentTarget(arg0: Float, arg1: Array<Dynamic>): Void {
     }
 
-    public function get_globalUiX(): Float {
+    public override function get_globalUiX(): Float {
         throw "stub: get_globalUiX not decompiled";
     }
 
-    public function get_globalUiY(): Float {
+    public override function get_globalUiY(): Float {
         throw "stub: get_globalUiY not decompiled";
     }
 
@@ -155,7 +155,7 @@ class FlyingSword extends en.Pet {
     public function equipWeapon(): Void {
     }
 
-    public function onBeginLongPress(): Void {
+    public override function onBeginLongPress(): Void {
     }
 
     public override function noPetReaction(): Void {
@@ -183,7 +183,7 @@ class FlyingSword extends en.Pet {
         throw "stub: getSerializeSchema not decompiled";
     }
 
-    public function unserializeInit(): Void {
+    public override function unserializeInit(): Void {
     }
 
     public override function unserialize(arg0: hxbit.Serializer): Void {

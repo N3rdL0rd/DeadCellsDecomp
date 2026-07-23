@@ -13,7 +13,7 @@ class TeslaCoil extends en.active.Turret {
         throw "stub: create not decompiled";
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
     public override function initStats(): Void {

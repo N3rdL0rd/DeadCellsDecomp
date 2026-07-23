@@ -50,11 +50,11 @@ class Death extends en.mob.Boss {
         throw "stub: get_coreTracks not decompiled";
     }
 
-    public function get_shootY(): Float {
+    public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function get_shootX(): Float {
+    public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";
     }
 
@@ -69,10 +69,10 @@ class Death extends en.mob.Boss {
     public override function init(): Void {
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function initSkills(): Void {
+    public override function initSkills(): Void {
     }
 
     public function applyBossRushModifier(arg0: Dynamic): Void {
@@ -86,7 +86,7 @@ class Death extends en.mob.Boss {
         throw "stub: adaptLockDuration not decompiled";
     }
 
-    public function lockAiS(arg0: Float): Void {
+    public override function lockAiS(arg0: Float): Void {
     }
 
     public function lockAiAdaptedS(arg0: Float): Void {
@@ -98,11 +98,11 @@ class Death extends en.mob.Boss {
     public function scythePreshotFx_exec(arg0: Int, arg1: Int, arg2: Dynamic): Void {
     }
 
-    public function isMovingAtWalkSpeed(): Bool {
+    public override function isMovingAtWalkSpeed(): Bool {
         throw "stub: isMovingAtWalkSpeed not decompiled";
     }
 
-    public function initMove(): Void {
+    public override function initMove(): Void {
     }
 
     public override function setReady(): Void {
@@ -111,22 +111,22 @@ class Death extends en.mob.Boss {
     public override function fixedUpdate(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
-    public function destroy(): Void {
+    public override function destroy(): Void {
     }
 
-    public function disposeGfx(): Void {
+    public override function disposeGfx(): Void {
     }
 
-    public function behaviourAi(): Void {
+    public override function behaviourAi(): Void {
     }
 
     public override function onScream(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
     public override function bossLevelUp(): Void {
@@ -146,7 +146,7 @@ class Death extends en.mob.Boss {
     public override function onDie(): Void {
     }
 
-    public function onTouch(arg0: Entity): Void {
+    public override function onTouch(arg0: Entity): Void {
     }
 
     public function getRandomDest(arg0: Float): tool.CPoint {
@@ -197,7 +197,7 @@ class Death extends en.mob.Boss {
     public function resetAffectResist(): Void {
     }
 
-    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
 
     public function spawnSickles(): Void {
@@ -206,7 +206,7 @@ class Death extends en.mob.Boss {
     public function destroySickles(): Void {
     }
 
-    public function createBodyPart(): Array<Dynamic> {
+    public override function createBodyPart(): Array<Dynamic> {
         throw "stub: createBodyPart not decompiled";
     }
 

@@ -69,22 +69,22 @@ class DefaultPause extends ui.Pause {
     public override function onLeavingOptionsMenu(): Void {
     }
 
-    public function blur(arg0: Ref, arg1: Ref): Void {
+    public override function blur(arg0: Ref, arg1: Ref): Void {
     }
 
-    public function onResize(): Void {
+    public override function onResize(): Void {
     }
 
-    public function onDispose(): Void {
+    public override function onDispose(): Void {
     }
 
     public function startSwapBackpack(): Void {
     }
 
-    public function update(): Void {
+    public override function update(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public function uponClosing(): Void {

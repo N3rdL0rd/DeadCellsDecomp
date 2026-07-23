@@ -7,7 +7,7 @@ class AreaShield extends tool.weap.BaseShield {
         super();
     }
 
-    public function fixedUpdate(): Void {
+    public override function fixedUpdate(): Void {
     }
 
     public function areaEffect(arg0: Entity, arg1: Bool): Void {

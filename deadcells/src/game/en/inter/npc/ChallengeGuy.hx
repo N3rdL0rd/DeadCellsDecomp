@@ -6,14 +6,14 @@ class ChallengeGuy extends en.inter.Npc {
     public var glowSpr: libs.heaps.slib.HSprite;
     public var light: tool.EntityLight;
 
-    public function new(arg0: pr.Level, arg1: level.Room) {
+    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
         super();
     }
 
-    public function initGfx(): Void {
+    public override function initGfx(): Void {
     }
 
-    public function initSpeechDeck(): Void {
+    public override function initSpeechDeck(): Void {
     }
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
@@ -31,7 +31,7 @@ class ChallengeGuy extends en.inter.Npc {
     public override function dispose(): Void {
     }
 
-    public function postUpdate(): Void {
+    public override function postUpdate(): Void {
     }
 
     public override function getCLID(): Int {
