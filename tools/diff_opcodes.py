@@ -45,6 +45,10 @@ ORIGINAL_HL = ROOT / "hlboot.dat"
 RECOMPILED_HL = ROOT / "deadcells" / "bin" / "client.hl"
 SRC = ROOT / "deadcells" / "src" / "game"
 
+# Generated project tooling that lives under deadcells/src/game but isn't game
+# code - never part of decompilation stats. See tools/gen_match_include.py.
+TOOLING_CLASSES = {"_MatchInclude"}
+
 
 def game_top_level_names() -> set[str]:
     """
@@ -63,7 +67,7 @@ def game_top_level_names() -> set[str]:
             names.add(entry.name)
         elif entry.suffix == ".hx":
             names.add(entry.stem)
-    return names
+    return names - TOOLING_CLASSES
 
 
 def top_level_name(func_name: str) -> str:

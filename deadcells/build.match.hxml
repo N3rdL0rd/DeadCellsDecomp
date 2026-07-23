@@ -1,0 +1,24 @@
+_base_no_main.hxml
+-D windowSize=1280x720
+-hl bin/client.hl
+-lib hlsdl
+-dce no
+-main _MatchInclude
+--macro include('achievements', true, null, ['src/game'])
+--macro include('chroma', true, null, ['src/game'])
+--macro include('cine', true, null, ['src/game'])
+--macro include('critter', true, null, ['src/game'])
+--macro include('en', true, null, ['src/game'])
+--macro include('level', true, null, ['src/game'])
+--macro include('libs', true, null, ['src/game'])
+--macro include('light', true, null, ['src/game'])
+--macro include('parallax', true, null, ['src/game'])
+--macro include('pow', true, null, ['src/game'])
+--macro include('pr', true, null, ['src/game'])
+--macro include('shader', true, null, ['src/game'])
+--macro include('spine', true, null, ['src/game'])
+--macro include('tiled', true, null, ['src/game'])
+--macro include('tool', true, null, ['src/game'])
+--macro include('tools', true, null, ['src/game'])
+--macro include('ui', true, null, ['src/game'])
+--macro include('uicore', true, null, ['src/game'])
