@@ -6,9 +6,10 @@ HashLink bytecode via `crashlink`.
 
 ## The loop
 
-1. **Compile**: `haxe deadcells/build.opengl.hxml` (or `build.dev.hxml`) produces
-   `deadcells/bin/client.hl` - a real HashLink bytecode file, structurally the
-   same kind of artifact as `hlboot.dat`.
+1. **Compile with `haxe deadcells/build.match.hxml`** (not `build.opengl.hxml` -
+   see "Reachability gap" below for why) to produce `deadcells/bin/client.hl` -
+   a real HashLink bytecode file, structurally the same kind of artifact as
+   `hlboot.dat`.
 2. **Load both** with `crashlink.core.Bytecode.from_path()` - the original
    (`hlboot.dat`) and the recompiled output.
 3. **Index both** with `crashlink.core.SearchIndex.build(code)`. Its `_full`
@@ -46,6 +47,39 @@ bytecode (temp variable order, `for` vs `while` desugaring shape, etc). Since
 the goal is a byte-matching decompilation (not just "looks right"), the score
 has to be measured on what the compiler actually emits, not on source text -
 same reasoning as any native-code matching decomp project.
+
+## Known gap (fixed): reachability
+
+Haxe only type-checks (let alone compiles) code reachable from `-main`. Most
+of Dead Cells isn't wired into `Boot.hx`'s real game loop yet, so building
+with the normal `build.opengl.hxml`/`build.dev.hxml` targets left most classes
+never even typed - not dead-code-eliminated, just never considered - making
+them permanently absent from `client.hl` and scored as "missing" regardless of
+decompilation quality. This was discovered by testing the LLM agent pipeline
+(`tools/agent_pipeline.py`) against trivial one-op functions and finding every
+single one scored 0%, no matter what was generated.
+
+Fixed via `tools/gen_match_include.py`, which generates:
+- `deadcells/src/game/_MatchInclude.hx` - null-casts every flat root-level
+  class to force it to be typed (`haxe.macro.Compiler.include()` only forces
+  whole packages/directories, not individual files).
+- `deadcells/build.match.hxml` - `-dce no` plus `--macro include(pkg, true,
+  null, ['src/game'])` for every top-level game package, explicitly scoped to
+  our own source tree (unscoped `include()` also scans vendor library
+  classpaths and can collide with a same-named vendor package, e.g. our own
+  `tools.pak` vs. heaps' `tools.mikktspace`).
+
+Forcing full-tree typing immediately surfaced several previously-invisible
+real bugs - multiple giant duplicate-class "junk dump" files left over from
+an earlier bulk stub-regeneration merge (`tool/EntityHelper.hx`,
+`en/pet/EntityHelper.hx`, `en/Const.hx`, `en/Macros.hx`, and smaller
+within-file duplicates), plus a partial one (`level/DecoTypes.hx` mixed 4
+genuinely unique classes with 4 stale duplicates of classes that already had
+proper homes) - all since cleaned up. Regenerate after adding/removing a
+top-level class or package:
+```bash
+uv run tools/gen_match_include.py
+```
 
 ## Known gap: register renumbering
 

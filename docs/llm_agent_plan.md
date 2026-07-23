@@ -69,20 +69,69 @@ load-bearing for the agent loop specifically:
   between retries on the same function (the stub, the crashlink decompile) -
   cuts real spend before touching model tier at all.
 
-## What this project needs before the loop can run end-to-end
+## Implementation: `tools/agent_pipeline.py`
 
-- `tools/diff_opcodes.py` - done (this session), including `--json` for
-  scripting against.
-- A difficulty-ranked queue generator (reads `--json` output + a cheap
-  opcode-count/variety heuristic, doesn't exist yet).
-- A driver script: pop next function, assemble context, call the model
-  headless, apply its output to the one function's body, run the two-stage
-  validation, record result, loop. Doesn't exist yet - the natural next
-  build step once the queue generator exists.
-- Decision on where retry/attempt history and per-function scores get stored
-  (a JSON/sqlite ledger keyed by `Class.method`, most likely) so the queue and
-  the eventual web progress page can both read from one source of truth.
+Built and running against OpenRouter's free `nvidia/nemotron-3-ultra-550b-a55b:free`
+(1M context, $0/token - confirmed live against the actual OpenRouter model list,
+not guessed). Implements the loop above end to end:
 
-None of this needs to be built speculatively ahead of time beyond what's
-listed - the queue generator and driver are the two concrete next pieces, and
-each is small once the scorer they depend on already exists.
+- **Queue**: every game-code function that isn't already a perfect match,
+  excluding `Boot.hx` (hand-decompiled, never auto-touched) and, importantly,
+  any function whose *original* debug info (`Function.resolve_file`) resolves
+  outside `deadcells/src/game` entirely - e.g. `tool.hero.weap.
+  BeheadedWeaponsManager.getCLID`/`unserialize` resolve to `hxbit/Macros.hx`
+  in the original bytecode, meaning they're `hxbit` macro-generated
+  serialization methods, not something to hand-write into the stub file. This
+  is the macro-coordination problem from earlier, made concrete: ~3,300 of the
+  ~20,000 game functions are skipped this way on the current queue, and
+  writing a body for them in source would be actively wrong, not just
+  unhelpful - they need the macro's *input* (the class's `@:s` field
+  annotations) fixed instead, a different, coordinated kind of task not yet
+  automated (see "Macro clusters" below).
+- Sorted easiest (fewest original opcodes) first.
+- **Context per attempt**: full current file content, crashlink's decompiled
+  pseudocode (`crashlink.decomp.IRFunction` + `crashlink.pseudo.pseudo`) for
+  the target function, and on retry either the last compile error or a
+  unified opcode diff.
+- **Sandbox check** before ever writing to disk or compiling: regexes over
+  function/class names must match exactly between the original file and the
+  model's returned full-file rewrite, or the attempt is rejected without
+  spending a compile.
+- **Concurrency**: OpenRouter calls run across `--workers` threads in
+  parallel (the slow, I/O-bound part). Applying an edit, `haxe
+  build.dev.hxml`, rebuilding `client.hl` via `build.opengl.hxml`, and
+  rescoring are serialized behind one lock, since all workers share one
+  source tree and one compiled output - measured at ~2s per compile, so this
+  is fast in absolute terms but is the actual bottleneck at thousands of
+  functions, not model latency. `hlboot.dat` (the ~19s-to-load original) is
+  loaded once for the whole run and never reloaded.
+- **Retry budget**: 3 attempts per function; keeps the best-scoring compiling
+  result even if it never reaches 100%, same "record partial progress"
+  principle as the plan above.
+- **Ledger**: `tools/agent_runs/ledger.json` (gitignored - ephemeral run
+  state), so reruns skip already-matched functions and resume rather than
+  redo work.
+
+Run with `uv run tools/agent_pipeline.py --workers 8 --limit N`
+(`--dry-run` builds and prints the queue with no API calls, for sanity-checking
+before spending real runs).
+
+## Macro clusters: still needs a human/coordinator pass
+
+The queue builder *detects* macro-generated functions (via `resolve_file`
+pointing outside our tree) and skips them - it does not yet fix them. That
+requires the cluster-level coordinator described in the earlier discussion:
+group skipped functions by their shared macro/schema source, fix the
+annotation or schema once, and re-diff the whole cluster. Not built - this is
+lower volume than the per-function queue but higher-stakes (one wrong fix
+breaks many functions at once), and much less amenable to blind automation
+than the bulk of the queue is.
+
+## Tiered models: superseded by "it's free"
+
+The tiered cheap/expensive model plan above was written under the assumption
+of real per-token cost. Nemotron 3 Ultra on OpenRouter's free tier removes
+that constraint for now - no cost-based escalation logic was built. Worth
+revisiting if the free tier's rate limits become the binding constraint
+instead of money, or if quality on hard functions turns out to need a bigger
+model than free-tier Nemotron.
