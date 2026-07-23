@@ -1,23 +1,31 @@
 package ui;
+
 class PopDamage extends ui.Process {
-  var flow: h2d.Flow.Flow;
-  var text: ui.Text.Text;
-  var level: pr.Level.Level;
-  var tracked: Entity;
-  var startIGX: Float;
-  var startIGY: Float;
-  static var popDamageCount: Int;
+    public static var popDamageCount: Int;
+    public var flow: h2d.Flow;
+    public var text: ui.Text;
+    public var level: pr.Level;
+    public var tracked: Entity;
+    public var startIGX: Float;
+    public var startIGY: Float;
 
-  function __constructor__(e: Entity, ad: tool.atk.AttackData.AttackData, dmgIdx: Int, big: Dynamic, customFont: Dynamic) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Int, arg3: Ref, arg4: Dynamic) {
+        super();
+    }
 
-  static function create(e: Entity, ad: tool.atk.AttackData.AttackData, dmgIdx: Int, big: Dynamic, customFont: Dynamic): PopDamage {}
+    public static function create(arg0: Entity, arg1: tool.atk.AttackData, arg2: Int, arg3: Ref, arg4: Dynamic): ui.PopDamage {
+        throw "stub: create not decompiled";
+    }
 
-  function doMovement(e: Entity, ad: tool.atk.AttackData.AttackData) {}
+    public function doMovement(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

@@ -1,153 +1,210 @@
 package level.disp;
+
 class Lighthouse extends level.DynamicBiomeDisp {
-  var waterBounds: h2d.col.Bounds.Bounds;
-  var reflectY: Float;
-  var frontY: Float;
-  var horizonCY: Int;
-  var horizonY: Float;
-  var centerX: Float;
-  var ratio: Float;
-  var sbWaterFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbLightWindows: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var tileRoses: hl.types.ArrayObj<Dynamic>;
-  var sbRoses: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var groupAlpha: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var sbAddTop: Dynamic;
-  var sbTop: Dynamic;
-  var sbTopSmog: Dynamic;
-  var sbTopSmogEmitter: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbBottom: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var manager: en.AmazonManager.AmazonManager;
-  var ideck: libs.RandDeck.RandDeck;
-  var fireUnitWidth: Int;
-  var glowShader: shader.GlowKey.GlowKey;
-  var tw2: libs.misc.Tweenie.Tweenie;
-  var reflectedHero: Bool;
-  var fireSB: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var fire2SB: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var fireSBBack: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var smogEmitter: libs.heaps.HParticle.HParticle;
-  var smogEmitterVerticalOffsetCase: Float;
-  var flameFxArray: hl.types.ArrayObj<Dynamic>;
-  var flameFxArray2: hl.types.ArrayObj<Dynamic>;
-  var smogFx: hl.types.ArrayObj<Dynamic>;
-  var flameFxBackArray: hl.types.ArrayObj<Dynamic>;
-  var fireMaxEntities: Int;
-  var incFlamePool: Int;
-  var fireVerticalRange: Int;
-  var fireMinSpeedForVerticalRange: Float;
-  var fireMaxSpeedForVerticalRange: Float;
-  var smogGradientSB: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var smogGradient: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var smogGradientSquare: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var smogGradientName: String;
-  var smogGradientSquareName: String;
-  var smogGradientImageWidth: Int;
-  var smogGradientImageHeight: Int;
-  var smogGradientHeight: Float;
-  var smogGradientSquareImageHeight: Int;
-  var smogGradientSquareHeight: Float;
-  var smogGradientOffset: Float;
-  var smogGradientColor: Int;
-  var smogGradientMaxAlpha: Float;
-  var smogGradientFrontSB: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var smogGradientFront: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var smogGradientFrontSquare: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var smogGradientFrontHeight: Float;
-  var smogGradientFrontSquareHeight: Float;
-  var smogGradientFrontOffset: Float;
-  var smogGradientFrontColor: Int;
-  var smogGradientFrontMaxAlpha: Float;
-  var smogGradientStarted: Bool;
-  var smogGradiengBossRoomScale: Float;
-  var smogGradiengBossRoomAlpha: Float;
-  var fireDarkColor: Int;
-  var fireLightColor: Int;
+    public var waterBounds: h2d.col.Bounds;
+    public var reflectY: Float;
+    public var frontY: Float;
+    public var horizonCY: Int;
+    public var horizonY: Float;
+    public var centerX: Float;
+    public var ratio: Float;
+    public var sbWaterFx: libs.heaps.slib.HSpriteBatch;
+    public var sbLightWindows: libs.heaps.slib.HSpriteBatch;
+    public var tileRoses: Array<Dynamic>;
+    public var sbRoses: libs.heaps.slib.HSpriteBatch;
+    public var groupAlpha: libs.heaps.StaticGeometryGroup;
+    public var sbAddTop: light.TopFx;
+    public var sbTop: light.TopFx;
+    public var sbTopSmog: light.TopFx;
+    public var sbTopSmogEmitter: libs.heaps.slib.HSpriteBatch;
+    public var sbBottom: libs.heaps.slib.HSpriteBatch;
+    public var manager: en.AmazonManager;
+    public var ideck: libs.RandDeck;
+    public var fireUnitWidth: Int;
+    public var glowShader: shader.GlowKey;
+    public var tw2: libs.misc.Tweenie;
+    public var reflectedHero: Bool;
+    public var fireSB: libs.heaps.slib.HSpriteBatch;
+    public var fire2SB: libs.heaps.slib.HSpriteBatch;
+    public var fireSBBack: libs.heaps.slib.HSpriteBatch;
+    public var smogEmitter: libs.heaps.Emitter;
+    public var smogEmitterVerticalOffsetCase: Float;
+    public var flameFxArray: Array<Dynamic>;
+    public var flameFxArray2: Array<Dynamic>;
+    public var smogFx: Array<Dynamic>;
+    public var flameFxBackArray: Array<Dynamic>;
+    public var fireMaxEntities: Int;
+    public var incFlamePool: Int;
+    public var fireVerticalRange: Int;
+    public var fireMinSpeedForVerticalRange: Float;
+    public var fireMaxSpeedForVerticalRange: Float;
+    public var smogGradientSB: libs.heaps.slib.HSpriteBatch;
+    public var smogGradient: libs.heaps.slib.HSpriteBE;
+    public var smogGradientSquare: libs.heaps.slib.HSpriteBE;
+    public var smogGradientName: String;
+    public var smogGradientSquareName: String;
+    public var smogGradientImageWidth: Int;
+    public var smogGradientImageHeight: Int;
+    public var smogGradientHeight: Float;
+    public var smogGradientSquareImageHeight: Int;
+    public var smogGradientSquareHeight: Float;
+    public var smogGradientOffset: Float;
+    public var smogGradientColor: Int;
+    public var smogGradientMaxAlpha: Float;
+    public var smogGradientFrontSB: libs.heaps.slib.HSpriteBatch;
+    public var smogGradientFront: libs.heaps.slib.HSpriteBE;
+    public var smogGradientFrontSquare: libs.heaps.slib.HSpriteBE;
+    public var smogGradientFrontHeight: Float;
+    public var smogGradientFrontSquareHeight: Float;
+    public var smogGradientFrontOffset: Float;
+    public var smogGradientFrontColor: Int;
+    public var smogGradientFrontMaxAlpha: Float;
+    public var smogGradientStarted: Bool;
+    public var smogGradiengBossRoomScale: Float;
+    public var smogGradiengBossRoomAlpha: Float;
+    public var fireDarkColor: Int;
+    public var fireLightColor: Int;
 
-  static function invLerp(a: Float, b: Float, value: Float, clamp: Dynamic): Float {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+        super();
+    }
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome1: String, biome2: String) {}
+    public static function invLerp(arg0: Float, arg1: Float, arg2: Float, arg3: Ref): Float {
+        throw "stub: invLerp not decompiled";
+    }
 
-  function computeHorizonY() {}
+    public function computeHorizonY(): Void {
+    }
 
-  function addWater() {}
+    public function addWater(): Void {
+    }
 
-  function renderRockBackground() {}
+    public function renderRockBackground(): Void {
+    }
 
-  function renderForeground() {}
+    public function renderForeground(): Void {
+    }
 
-  function render() {}
+    public override function render(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function get_minXBgWallPx(): Int {}
+    public function get_minXBgWallPx(): Int {
+        throw "stub: get_minXBgWallPx not decompiled";
+    }
 
-  function get_maxXBgWallPx(): Int {}
+    public function get_maxXBgWallPx(): Int {
+        throw "stub: get_maxXBgWallPx not decompiled";
+    }
 
-  function initFire() {}
+    public function initFire(): Void {
+    }
 
-  function initSmogGradient(isFront: Bool) {}
+    public function initSmogGradient(arg0: Bool): Void {
+    }
 
-  function addFire(cx: Int, cy: Int) {}
+    public function addFire(arg0: Int, arg1: Int): Void {
+    }
 
-  function startSmogGradient() {}
+    public function startSmogGradient(): Void {
+    }
 
-  function setSmogGradientBossFightMode(inBossFight: Bool) {}
+    public function setSmogGradientBossFightMode(arg0: Bool): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function addWallDeco(dir: Int) {}
+    public function addWallDeco(arg0: Int): Void {
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function addRoses(width: Int, _cx: Int, _cy: Int, _xr: Float, _yr: Float) {}
+    public function addRoses(arg0: Int, arg1: Int, arg2: Int, arg3: Float, arg4: Float): Void {
+    }
 
-  function placeHoleInRect(r: Dynamic, winW: Int, winH: Int, names: hl.types.ArrayObj<Dynamic>): Bool {}
+    public function placeHoleInRect(arg0: libs.tilemap.Rectangle, arg1: Int, arg2: Int, arg3: Array<Dynamic>): Bool {
+        throw "stub: placeHoleInRect not decompiled";
+    }
 
-  function placeWindowsInRect(r: Dynamic, winW: Int, nameBot: String, botHei: Int, nameMid: String, midHei: Int, nameTop: String, topHei: Int): Bool {}
+    public function placeWindowsInRect(arg0: libs.tilemap.Rectangle, arg1: Int, arg2: String, arg3: Int, arg4: String, arg5: Int, arg6: String, arg7: Int): Bool {
+        throw "stub: placeWindowsInRect not decompiled";
+    }
 
-  function placeWindow(cx: Int, cy: Int, hei: Int, wid: Int, nameBot: String, botHei: Int, nameMid: String, midHei: Int, nameTop: String, topHei: Int) {}
+    public function placeWindow(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: String, arg5: Int, arg6: String, arg7: Int, arg8: String, arg9: Int): Void {
+    }
 
-  function addWindowFX(k: String, cx: Int, cy: Int, xr: Float, yr: Float): libs.heaps.slib.HSpriteBE.HSpriteBE {}
+    public function addWindowFX(arg0: String, arg1: Int, arg2: Int, arg3: Float, arg4: Float): libs.heaps.slib.HSpriteBE {
+        throw "stub: addWindowFX not decompiled";
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function renderWallTransitions() {}
+    public function renderWallTransitions(): Void {
+    }
 
-  function createLightWalls() {}
+    public function createLightWalls(): Void {
+    }
 
-  function renderBackWalls() {}
+    public function renderBackWalls(): Void {
+    }
 
-  function renderLadders() {}
+    public function renderLadders(): Void {
+    }
 
-  function addWallStamp(cx: Int, cy: Int, size: Int, id: String): Bool {}
+    public function addWallStamp(arg0: Int, arg1: Int, arg2: Int, arg3: String): Bool {
+        throw "stub: addWallStamp not decompiled";
+    }
 
-  function generateParallax(inf: Dynamic): Parallax {}
+    public function generateParallax(arg0: Dynamic): Parallax {
+        throw "stub: generateParallax not decompiled";
+    }
 
-  function generateParallaxGroup(inf: Dynamic): ParallaxGroup {}
+    public function generateParallaxGroup(arg0: Dynamic): ParallaxGroup {
+        throw "stub: generateParallaxGroup not decompiled";
+    }
 
-  function renderParallax(infos: Dynamic, parallaxName: String) {}
+    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    }
 
-  function heroLightUpdate() {}
+    public function heroLightUpdate(): Void {
+    }
 
-  static function getBlendRatioAt(_: Lighthouse, py: Float, _: Float): Float {}
+    public override function getBlendRatioAt(arg0: Float, arg1: Float): Float {
+        throw "stub: getBlendRatioAt not decompiled";
+    }
 
-  static function getBlendRatioFrom(_: Lighthouse, py: Float, _: Float): Float {}
+    public function getBlendRatioFrom(arg0: Float, arg1: Float): Float {
+        throw "stub: getBlendRatioFrom not decompiled";
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function canBeDestroy(e: Entity): Bool {}
+    public function canBeDestroy(arg0: Entity): Bool {
+        throw "stub: canBeDestroy not decompiled";
+    }
 
-  function canPlaceLoreDeco(m: hxbit.Macros.Macros, casePosX: Int, casePosY: Int, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, onBounds: Dynamic, _templateFlip: Dynamic, dir: Dynamic, ratio: Dynamic, reload: Dynamic): Bool {}
+    public function canPlaceLoreDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Bool {
+        throw "stub: canPlaceLoreDeco not decompiled";
+    }
 }
-

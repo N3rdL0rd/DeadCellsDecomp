@@ -1,35 +1,53 @@
 package en.bu;
+
 class HomingSoul extends en.Bullet {
-  var target: Entity;
-  var speed: Float;
-  var ang: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var target: Entity;
+    public var speed: Float;
+    public var ang: Float;
 
-  function onBlock(byEntity: Bool) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Entity, arg3: Float, arg4: Float, arg5: Float) {
+        super();
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, target: Entity, ang: Float, baseSpeed: Float, lifeDuration: Float) {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function vanish(): Void {
+    }
 
-  function vanish() {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public function normalizeAngle(arg0: Float): Float {
+        throw "stub: normalizeAngle not decompiled";
+    }
 
-  function normalizeAngle(ang: Float): Float {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

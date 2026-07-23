@@ -1,26 +1,41 @@
 package en.mob;
+
 class Scorpio extends en.Mob {
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Scorpio {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Scorpio {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function reveal() {}
+    public override function reveal(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

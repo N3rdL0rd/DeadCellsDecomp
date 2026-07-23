@@ -1,43 +1,63 @@
 package en;
+
 class GroundPart extends Entity {
-  var bounces: Int;
-  var rot: Float;
-  var scaleFade: Float;
-  var canDamage: Bool;
-  var isWood: Bool;
-  var canHit: Bool;
-  var source: Entity;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var bounces: Int;
+    public var rot: Float;
+    public var scaleFade: Float;
+    public var canDamage: Bool;
+    public var isWood: Bool;
+    public var canHit: Bool;
+    public var source: Entity;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, _source: Entity, fastDestroy: Dynamic, _isWood: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: Dynamic, arg5: Ref) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function destroy() {}
+    public override function destroy(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

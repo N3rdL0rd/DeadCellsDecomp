@@ -1,17 +1,26 @@
 package level.struct;
+
 class Crypt extends level.LevelStruct {
-  var branches: hl.types.ArrayObj<Dynamic>;
+    public var branches: Array<Dynamic>;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function addRoomsForCrypt(type: String, templateId: String, group: Dynamic, num: Int, start: String, ends: Dynamic, minSpawnDist: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function addRoomsForCrypt(arg0: String, arg1: String, arg2: Dynamic, arg3: Int, arg4: String, arg5: Dynamic, arg6: Dynamic): Array<Dynamic> {
+        throw "stub: addRoomsForCrypt not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 }
-

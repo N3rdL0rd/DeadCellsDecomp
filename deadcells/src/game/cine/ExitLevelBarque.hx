@@ -1,15 +1,20 @@
 package cine;
+
 class ExitLevelBarque extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var barque: en.inter.exit.FisherBarqueExit.FisherBarqueExit;
-  var commonDx: Float;
+    public var hero: en.Hero;
+    public var barque: en.inter.exit.FisherBarqueExit;
+    public var commonDx: Float;
 
-  function __constructor__(game: pr.Game.Game, hero: en.Hero.Hero, barqueExit: en.inter.exit.FisherBarqueExit.FisherBarqueExit, to: String) {}
+    public function new(arg0: pr.Game, arg1: en.Hero, arg2: en.inter.exit.FisherBarqueExit, arg3: String) {
+        super();
+    }
 
-  function goToDx(targetDx: Float, inTimeS: Float) {}
+    public function goToDx(arg0: Float, arg1: Float): Void {
+    }
 
-  function heroJumpDown(hero: en.Hero.Hero) {}
+    public function heroJumpDown(arg0: en.Hero): Void {
+    }
 
-  function resetHeroBeforeTransition() {}
+    public function resetHeroBeforeTransition(): Void {
+    }
 }
-

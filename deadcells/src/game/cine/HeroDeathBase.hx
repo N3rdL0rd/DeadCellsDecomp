@@ -1,23 +1,30 @@
 package cine;
+
 class HeroDeathBase extends GameCinematic {
-  var container: Dynamic;
-  var hom: en.Homunculus.Homunculus;
-  var hero: en.Hero.Hero;
-  var corpse: en.Hero.HeroDeadCorpse;
-  var mask: h2d.Bitmap.Bitmap;
-  var attacker: Entity;
-  var gameOver: ui.Process.Process;
+    public var container: light.TopFx;
+    public var hom: en.Homunculus;
+    public var hero: en.Hero;
+    public var corpse: en.HeroDeadCorpse;
+    public var mask: h2d.Bitmap;
+    public var attacker: Entity;
+    public var gameOver: ui.Process;
 
-  function __constructor__(e: en.Hero.Hero, lostBody: Bool) {}
+    public function new(arg0: en.Hero, arg1: Bool) {
+        super();
+    }
 
-  function sendDeathStats() {}
+    public function sendDeathStats(): Void {
+    }
 
-  function createHomunculus() {}
+    public function createHomunculus(): Void {
+    }
 
-  function gameOverTitle() {}
+    public function gameOverTitle(): Void {
+    }
 
-  function endScoreMode() {}
+    public function endScoreMode(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

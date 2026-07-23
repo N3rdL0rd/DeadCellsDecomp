@@ -1,36 +1,53 @@
 package en.mob.boss.collector;
+
 class CollectorSpikeBall extends Entity {
-  var collector: en.mob.boss.Collector.Collector;
-  var ang: Float;
-  var area: tool.Area.Area;
-  var speed: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var collector: en.mob.boss.Collector;
+    public var ang: Float;
+    public var area: tool.Area;
+    public var speed: Float;
 
-  function __constructor__(collector: en.mob.boss.Collector.Collector, cx: Int, cy: Int, ang: Float) {}
+    public function new(arg0: en.mob.boss.Collector, arg1: Int, arg2: Int, arg3: Float) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function onTouchCeil() {}
+    public override function onTouchCeil(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

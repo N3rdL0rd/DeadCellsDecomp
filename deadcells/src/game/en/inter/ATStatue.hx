@@ -1,31 +1,45 @@
 package en.inter;
+
 class ATStatue extends Entity {
-  var lMob: level.LevelTypes.LevelTypes;
-  var cont: Float;
-  var brig: Float;
-  var isReleased: Bool;
-  var canBeReleased: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var lMob: level.Mob;
+    public var cont: Float;
+    public var brig: Float;
+    public var isReleased: Bool;
+    public var canBeReleased: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, lMob: level.LevelTypes.LevelTypes) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.Mob) {
+        super();
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function release() {}
+    public function release(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

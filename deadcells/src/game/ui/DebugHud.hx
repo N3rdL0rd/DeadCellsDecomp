@@ -1,73 +1,94 @@
 package ui;
-class DebugHud extends libs.Process {
-  var flow: h2d.Flow.Flow;
-  var graphicFlow: h2d.Flow.Flow;
-  var graphicPerformanceFlow: h2d.Flow.Flow;
-  var graphicTextureFlow: h2d.Flow.Flow;
-  var cpuFlow: h2d.Flow.Flow;
-  var cpuCollisionFlow: h2d.Flow.Flow;
-  var shaderCacheErrorFlow: h2d.Flow.Flow;
-  var logsFlow: h2d.Flow.Flow;
-  var statsText: h2d.Text.Text;
-  var fpsValueText: ui.debug.DebugThresholdValue.DebugThresholdValue;
-  var drawCallsValueText: ui.debug.DebugThresholdValue.DebugThresholdValue;
-  var textureCountText: ui.debug.DebugThresholdValue.DebugThresholdValue;
-  var textureMemText: ui.debug.DebugThresholdValue.DebugThresholdValue;
-  var objectVisibilityText: h2d.Text.Text;
-  var tileGroupCountText: h2d.Text.Text;
-  var shaderCacheErrorText: h2d.Text.Text;
-  var logsTexts: haxe.ds.EnumValueMap;
-  var game: h2d.Text.Text;
-  var mouse: h2d.Text.Text;
-  var lights: h2d.Text.Text;
-  var mobs: h2d.Text.Text;
-  var custom: h2d.Text.Text;
-  var fpsAverage: ui.DebugHud.DebugHud;
-  var rootGraphicObject: h2d.Object.Object;
-  var graphicsObjects: hl.types.ArrayObj<Dynamic>;
-  var refreshGraphicsObjectsTimer: haxe.Timer;
-  static var ME: DebugHud;
-  static var colorGreen: Int;
-  static var colorYellow: Int;
-  static var colorRed: Int;
-
-  function __constructor__() {}
-
-  function onResize() {}
-
-  function onDispose() {}
-
-  function postUpdate() {}
-
-  function getTileGroupTileCount(): Int {}
-
-  function initGraphicTexts() {}
-
-  function initCpuTexts() {}
-
-  function initGraphicPerformanceText() {}
-
-  function initGraphicTextureText() {}
-
-  function initCollisionText() {}
-
-  function initShaderCacheErrorUi() {}
-
-  function updateLogsDisplay() {}
-
-  function initLogsUi() {}
-}
 
 class FPSAverage {
-  var refreshRate: Float;
-  var displayValue: Int;
-  var accuFrames: Int;
-  var periodStartTime: Float;
+    public var refreshRate: Float;
+    public var displayValue: Int;
+    public var accuFrames: Int;
+    public var periodStartTime: Float;
 
-  function __constructor__(refreshRate_: Dynamic) {}
+    public function new(arg0: Ref) {
+    }
 
-  function update(): Int {}
+    public function update(): Int {
+        throw "stub: update not decompiled";
+    }
 
-  function getAverage(): Int {}
+    public function getAverage(): Int {
+        throw "stub: getAverage not decompiled";
+    }
 }
 
+class DebugHud extends libs.Process {
+    public static var ME: ui.DebugHud;
+    public static var colorGreen: Int;
+    public static var colorYellow: Int;
+    public static var colorRed: Int;
+    public var flow: h2d.Flow;
+    public var graphicFlow: h2d.Flow;
+    public var graphicPerformanceFlow: h2d.Flow;
+    public var graphicTextureFlow: h2d.Flow;
+    public var cpuFlow: h2d.Flow;
+    public var cpuCollisionFlow: h2d.Flow;
+    public var shaderCacheErrorFlow: h2d.Flow;
+    public var logsFlow: h2d.Flow;
+    public var statsText: h2d.Text;
+    public var fpsValueText: ui.debug.DebugThresholdValueText;
+    public var drawCallsValueText: ui.debug.DebugThresholdValueText;
+    public var textureCountText: ui.debug.DebugThresholdValueText;
+    public var textureMemText: ui.debug.DebugThresholdValueText;
+    public var objectVisibilityText: h2d.Text;
+    public var tileGroupCountText: h2d.Text;
+    public var shaderCacheErrorText: h2d.Text;
+    public var logsTexts: haxe.ds.EnumValueMap;
+    public var game: h2d.Text;
+    public var mouse: h2d.Text;
+    public var lights: h2d.Text;
+    public var mobs: h2d.Text;
+    public var custom: h2d.Text;
+    public var joystick: h2d.Text;
+    public var fpsAverage: ui.FPSAverage;
+    public var rootGraphicObject: h2d.Object;
+    public var graphicsObjects: Array<Dynamic>;
+    public var refreshGraphicsObjectsTimer: haxe.Timer;
+
+    public function new() {
+        super();
+    }
+
+    public override function onResize(): Void {
+    }
+
+    public override function onDispose(): Void {
+    }
+
+    public override function postUpdate(): Void {
+    }
+
+    public function getTileGroupTileCount(): Int {
+        throw "stub: getTileGroupTileCount not decompiled";
+    }
+
+    public function initGraphicTexts(): Void {
+    }
+
+    public function initCpuTexts(): Void {
+    }
+
+    public function initGraphicPerformanceText(): Void {
+    }
+
+    public function initGraphicTextureText(): Void {
+    }
+
+    public function initCollisionText(): Void {
+    }
+
+    public function initShaderCacheErrorUi(): Void {
+    }
+
+    public function updateLogsDisplay(): Void {
+    }
+
+    public function initLogsUi(): Void {
+    }
+}

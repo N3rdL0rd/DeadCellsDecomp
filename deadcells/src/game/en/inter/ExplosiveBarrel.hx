@@ -1,79 +1,113 @@
 package en.inter;
+
 class ExplosiveBarrel extends en.Interactive {
-  var activated: Bool;
-  var bouncing: Bool;
-  var elapsedTime: Float;
-  var outOfGameElapsedTime: Float;
-  var activatedByHero: Bool;
-  var haveExploded: Bool;
-  var duration: Float;
-  var durationOverriden: Bool;
-  var damage: Float;
-  var mobDamage: Float;
-  var range: Float;
-  var breachBonus: Float;
-  var forceX: Float;
-  var forceY: Float;
-  var rotationSpeed: Float;
-  var minTimeAfterHit: Float;
-  var minTimeAfterWallBounce: Float;
-  var explosionInf: Dynamic;
-  var sfx: hxd.res.Sound.Sound;
-  var outOfGameLifeDuration: Float;
-  var lessBright: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var activated: Bool;
+    public var bouncing: Bool;
+    public var elapsedTime: Float;
+    public var outOfGameElapsedTime: Float;
+    public var activatedByHero: Bool;
+    public var haveExploded: Bool;
+    public var duration: Float;
+    public var durationOverriden: Bool;
+    public var damage: Float;
+    public var mobDamage: Float;
+    public var range: Float;
+    public var breachBonus: Float;
+    public var forceX: Float;
+    public var forceY: Float;
+    public var rotationSpeed: Float;
+    public var minTimeAfterHit: Float;
+    public var minTimeAfterWallBounce: Float;
+    public var explosionInf: Dynamic;
+    public var sfx: hxd.res.Sound;
+    public var outOfGameLifeDuration: Float;
+    public var lessBright: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, activatedByHero: Dynamic, lessBright: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Ref) {
+        super();
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function getSkillId(): String {}
+    public function getSkillId(): String {
+        throw "stub: getSkillId not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onTouchGround() {}
+    public function onTouchGround(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public function onTouchWall(arg0: Int): Void {
+    }
 
-  function createAttack(target: Entity, dmg: Float): tool.atk.AttackData.AttackData {}
+    public function createAttack(arg0: Entity, arg1: Float): tool.atk.AttackData {
+        throw "stub: createAttack not decompiled";
+    }
 
-  function explode() {}
+    public function explode(): Void {
+    }
 
-  function getIntensityFromDist(target: Entity, maxRangeCase: Float): Float {}
+    public function getIntensityFromDist(arg0: Entity, arg1: Float): Float {
+        throw "stub: getIntensityFromDist not decompiled";
+    }
 
-  function bounce(isWall: Dynamic, triggerDelay: Dynamic) {}
+    public function bounce(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function activate() {}
+    public function activate(): Void {
+    }
 
-  function setActivatedByHero(byHero: Bool) {}
+    public function setActivatedByHero(arg0: Bool): Void {
+    }
 
-  function addDelayIfNeeded(delay: Float) {}
+    public function addDelayIfNeeded(arg0: Float): Void {
+    }
 
-  function canBeGrabbedByHomunculus(): Bool {}
+    public function canBeGrabbedByHomunculus(): Bool {
+        throw "stub: canBeGrabbedByHomunculus not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

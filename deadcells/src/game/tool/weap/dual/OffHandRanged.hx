@@ -1,12 +1,18 @@
 package tool.weap.dual;
+
 class OffHandRanged extends tool.weap.BaseBow {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(owner: en.Hero.Hero, item: tool.InventItem.InventItem) {}
+    public function getMainWeapon(): tool.Weapon {
+        throw "stub: getMainWeapon not decompiled";
+    }
 
-  function getMainWeapon(): tool.Weapon.Weapon {}
+    public function consumeAmmo(): Bool {
+        throw "stub: consumeAmmo not decompiled";
+    }
 
-  function consumeAmmo(): Bool {}
-
-  function updateAmmoHud() {}
+    public function updateAmmoHud(): Void {
+    }
 }
-

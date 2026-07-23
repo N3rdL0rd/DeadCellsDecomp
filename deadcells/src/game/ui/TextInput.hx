@@ -1,33 +1,41 @@
 package ui;
-class TextInput extends ui.Process.Process {
-  var blackBG: libs.heaps.slib.HSprite.HSprite;
-  var fb: ui.FlowBox.FlowBox;
-  var text: ui.Text.Text;
-  var subText: ui.Text.Text;
-  var bgInput: ui.UIBox.UIBox;
-  var textInput: h2d.TextInput.TextInput;
-  var fControl: h2d.Flow.Flow;
-  var clYes: ui.ControlLabel.ControlLabel;
-  var clNo: ui.ControlLabel.ControlLabel;
-  var controller: tool.Controller.Controller;
-  var from: ui.Process.Process;
-  var onValidate: Dynamic;
-  var validSfx: hxd.res.Sound.Sound;
-  var closing: Bool;
-  static var MAX_LENGTH: Int;
 
-  function __constructor__(from: ui.Process.Process, str: String, subStr: String, inputText: String, onValidate: Dynamic, validateStr: String, cancelStr: String, validSfx: hxd.res.Sound.Sound) {}
+class TextInput extends ui.Process {
+    public static var MAX_LENGTH: Int;
+    public var blackBG: libs.heaps.slib.HSprite;
+    public var fb: ui.FlowBox;
+    public var text: ui.Text;
+    public var subText: ui.Text;
+    public var bgInput: ui.UIBox;
+    public var textInput: h2d.TextInput;
+    public var fControl: h2d.Flow;
+    public var clYes: ui.ControlLabel;
+    public var clNo: ui.ControlLabel;
+    public var controller: tool.ControllerAccess;
+    public var from: ui.Process;
+    public var onValidate: Dynamic;
+    public var validSfx: hxd.res.Sound;
+    public var closing: Bool;
 
-  function validate() {}
+    public function new(arg0: ui.Process, arg1: String, arg2: String, arg3: String, arg4: Dynamic, arg5: String, arg6: String, arg7: hxd.res.Sound) {
+        super();
+    }
 
-  function cancel() {}
+    public function validate(): Void {
+    }
 
-  function onResize() {}
+    public function cancel(): Void {
+    }
 
-  function close() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public function close(): Void {
+    }
 
-  function update() {}
+    public override function onDispose(): Void {
+    }
+
+    public function update(): Void {
+    }
 }
-

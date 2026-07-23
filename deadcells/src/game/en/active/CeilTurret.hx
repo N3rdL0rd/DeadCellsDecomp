@@ -1,58 +1,89 @@
 package en.active;
+
 class CeilTurret extends en.active.Turret {
-  var rangeCase: Int;
-  var snapTimer: Float;
-  var snapped: Bool;
-  var floating: Bool;
-  var target: tool.CPoint.CPoint;
-  var launchCy: Int;
-  var links: hl.types.ArrayObj<Dynamic>;
-  var balloons: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var rangeCase: Int;
+    public var snapTimer: Float;
+    public var snapped: Bool;
+    public var floating: Bool;
+    public var target: tool.CPoint;
+    public var launchCy: Int;
+    public var links: Array<Dynamic>;
+    public var balloons: Array<Dynamic>;
 
-  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+        super();
+    }
 
-  static function create(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem): CeilTurret {}
+    public static function create(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem): en.active.CeilTurret {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function initStats() {}
+    public override function initStats(): Void {
+    }
 
-  function canBeGrabbedByHomunculus(): Bool {}
+    public override function canBeGrabbedByHomunculus(): Bool {
+        throw "stub: canBeGrabbedByHomunculus not decompiled";
+    }
 
-  function getAttackTarget(): Entity {}
+    public override function getAttackTarget(): Entity {
+        throw "stub: getAttackTarget not decompiled";
+    }
 
-  function shoot(e: Entity) {}
+    public override function shoot(arg0: Entity): Void {
+    }
 
-  function onTouchCeil() {}
+    public function onTouchCeil(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function startFloating() {}
+    public function startFloating(): Void {
+    }
 
-  function snap() {}
+    public function snap(): Void {
+    }
 
-  function explode() {}
+    public function explode(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

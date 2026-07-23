@@ -1,153 +1,218 @@
 package en.mob;
+
 class AmazonTactic extends en.mob.AmazonBase {
-  var jumpData: hxbit.Macros.Macros;
-  var teleportPhase: Bool;
-  var forcedTp: Bool;
-  var currentSpot: tool.CPoint.CPoint;
-  var curTarget: tool.CPoint.CPoint;
-  var curTargetEntity: Entity;
-  var spawnSpots: hl.types.ArrayObj<Dynamic>;
-  var tryToPreventDeathBool: Bool;
-  var startHolding: Bool;
-  var airShoot: Bool;
-  var airShootIsDownAnim: Bool;
-  var curTargetIsHero: Bool;
-  var needResetFromPos: Bool;
-  var nextIsTpOnTopOfHero: Bool;
-  var angle: Float;
-  var shootStarsFx: hl.types.ArrayObj<Dynamic>;
-  var targetedShootWidth: Float;
-  var curTargetedShootX: Float;
-  var curTargetedShootY: Float;
-  var curTargetedShootAngle: Float;
-  var amazonTargetFxBig: libs.heaps.HParticle.HParticle;
-  var amazonTargetFxMedium: libs.heaps.HParticle.HParticle;
-  var amazonTargetFxLittle: libs.heaps.HParticle.HParticle;
-  var amazonTargetMediumScale: Float;
-  var amazonTargetMediumAlpha: Float;
-  var amazonTargetMediumDist: Int;
-  var amazonTargetLittleScale: Float;
-  var amazonTargetLittleAlpha: Float;
-  var amazonTargetLittleDist: Int;
-  var amazonTargetedShootArrowFx: libs.heaps.HParticle.HParticle;
-  var airShootTargetX: Float;
-  var airShootTargetY: Float;
-  var amazonAirShootArrowFx: libs.heaps.HParticle.HParticle;
-  var secondBossFightPotionTaken: Bool;
-  var dirOnShootChargeStart: Int;
-  var isChargingTargetedShoot: Bool;
-  var targetedShootRowCounter: Int;
-  var targetedShootMaxRow: Int;
-  var acrossBossRoomAirShootChance: Float;
-  var acrossBossRoomAirShootVertical: Bool;
-  var acrossBossRoomAirShootStartSpot: hxbit.Macros.Macros;
-  var acrossBossRoomAirShootTargetSpot: hxbit.Macros.Macros;
-  var acrossBossRoomAirShootForced: Bool;
-  var acrossBossRoomAirShootForcedFromTp: Bool;
-  var acrossBossRoomAirShootPlayed: Bool;
-  var telejumping: Bool;
-  var bossRoomHitBeforeJump: Int;
-  var bossRoomHitCount: Int;
-  var bossRoomJumpAway: Bool;
-  var tacticBossRushModifiers: Dynamic;
-  var sbFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var teleportPhase: Bool;
+    public var forcedTp: Bool;
+    public var currentSpot: tool.CPoint;
+    public var curTarget: tool.CPoint;
+    public var curTargetEntity: Entity;
+    public var spawnSpots: Array<Dynamic>;
+    public var tryToPreventDeathBool: Bool;
+    public var startHolding: Bool;
+    public var airShoot: Bool;
+    public var airShootIsDownAnim: Bool;
+    public var curTargetIsHero: Bool;
+    public var needResetFromPos: Bool;
+    public var nextIsTpOnTopOfHero: Bool;
+    public var angle: Float;
+    public var shootStarsFx: Array<Dynamic>;
+    public var targetedShootWidth: Float;
+    public var curTargetedShootX: Float;
+    public var curTargetedShootY: Float;
+    public var curTargetedShootAngle: Float;
+    public var amazonTargetFxBig: libs.heaps.HParticle;
+    public var amazonTargetFxMedium: libs.heaps.HParticle;
+    public var amazonTargetFxLittle: libs.heaps.HParticle;
+    public var amazonTargetMediumScale: Float;
+    public var amazonTargetMediumAlpha: Float;
+    public var amazonTargetMediumDist: Int;
+    public var amazonTargetLittleScale: Float;
+    public var amazonTargetLittleAlpha: Float;
+    public var amazonTargetLittleDist: Int;
+    public var amazonTargetedShootArrowFx: libs.heaps.HParticle;
+    public var airShootTargetX: Float;
+    public var airShootTargetY: Float;
+    public var amazonAirShootArrowFx: libs.heaps.HParticle;
+    public var secondBossFightPotionTaken: Bool;
+    public var dirOnShootChargeStart: Int;
+    public var isChargingTargetedShoot: Bool;
+    public var targetedShootRowCounter: Int;
+    public var targetedShootMaxRow: Int;
+    public var acrossBossRoomAirShootChance: Float;
+    public var acrossBossRoomAirShootVertical: Bool;
+    public var acrossBossRoomAirShootStartSpot: level.Marker;
+    public var acrossBossRoomAirShootTargetSpot: level.Marker;
+    public var acrossBossRoomAirShootForced: Bool;
+    public var acrossBossRoomAirShootForcedFromTp: Bool;
+    public var acrossBossRoomAirShootPlayed: Bool;
+    public var telejumping: Bool;
+    public var bossRoomHitBeforeJump: Int;
+    public var bossRoomHitCount: Int;
+    public var bossRoomJumpAway: Bool;
+    public var tacticBossRushModifiers: Dynamic;
+    public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, reveal: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, reveal: Bool): AmazonTactic {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): en.mob.AmazonTactic {
+        throw "stub: create not decompiled";
+    }
 
-  function get_avoidLookTowardHero(): Bool {}
+    public function get_avoidLookTowardHero(): Bool {
+        throw "stub: get_avoidLookTowardHero not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootStartX(): Int {}
+    public function get_shootStartX(): Int {
+        throw "stub: get_shootStartX not decompiled";
+    }
 
-  function get_shootStartY(): Int {}
+    public function get_shootStartY(): Int {
+        throw "stub: get_shootStartY not decompiled";
+    }
 
-  function registerToManager() {}
+    public override function registerToManager(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function getSkillSpeedMul(): Float {}
+    public function getSkillSpeedMul(): Float {
+        throw "stub: getSkillSpeedMul not decompiled";
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function unlockAi() {}
+    public function unlockAi(): Void {
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function updateShootFxLocations() {}
+    public function updateShootFxLocations(): Void {
+    }
 
-  function flipShootsChargeFx() {}
+    public function flipShootsChargeFx(): Void {
+    }
 
-  function checkDiveAttackHit() {}
+    public function checkDiveAttackHit(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function onTouchGround() {}
+    public function onTouchGround(): Void {
+    }
 
-  function shockWaveHit(x: Float, y: Float) {}
+    public function shockWaveHit(arg0: Float, arg1: Float): Void {
+    }
 
-  function teleportIf(): Bool {}
+    public function teleportIf(): Bool {
+        throw "stub: teleportIf not decompiled";
+    }
 
-  function getNextIsTpWaitTime(): Float {}
+    public override function getNextIsTpWaitTime(): Float {
+        throw "stub: getNextIsTpWaitTime not decompiled";
+    }
 
-  function holdBeforeShot() {}
+    public function holdBeforeShot(): Void {
+    }
 
-  function holdBeforeShootParticleUpdate(lineParticle: libs.heaps.HParticle.HParticle) {}
+    public function holdBeforeShootParticleUpdate(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function scream() {}
+    public function scream(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function preUpdate() {}
+    public function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function getSpotPosition(): Dynamic {}
+    public function getSpotPosition(): Dynamic {
+        throw "stub: getSpotPosition not decompiled";
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onLeaveMap() {}
+    public function onLeaveMap(): Void {
+    }
 
-  function getShootingTarget(): tool.CPoint.CPoint {}
+    public function getShootingTarget(): tool.CPoint {
+        throw "stub: getShootingTarget not decompiled";
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function behaviourAloneBossFight() {}
+    public function behaviourAloneBossFight(): Void {
+    }
 
-  function defaultBehaviour(aloneInBossRoom: Dynamic) {}
+    public function defaultBehaviour(arg0: Ref): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public override function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

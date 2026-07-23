@@ -1,173 +1,240 @@
 package ui;
+
 class HUD extends ui.Process {
-  var bossLifebar: ui.hud.LifeBar.LifeBar;
-  var isHidden: Bool;
-  var ppool: libs.heaps.HParticle.HParticle;
-  var pbatchBack: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var pbatchFront: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var tmpPoint: h2d.col.Point.Point;
-  var leftFlow: h2d.Flow.Flow;
-  var leftFlowT: h2d.Flow.Flow;
-  var leftFlowB: h2d.Flow.Flow;
-  var skillPotion: ui.hud.Skill.Skill;
-  var skillWeapons: hl.types.ArrayObj<Dynamic>;
-  var skillPowers: hl.types.ArrayObj<Dynamic>;
-  var skillBackpack: ui.hud.Skill.Skill;
-  var skills: hl.types.ArrayObj<Dynamic>;
-  var heartCounter: ui.hud.HeartCounter.HeartCounter;
-  var tierBar: ui.hud.TierBar.TierBar;
-  var heroLifeBar: ui.hud.LifeBar.LifeBar;
-  var customWeaponsFg: h2d.Bitmap.Bitmap;
-  var topRightFlow: h2d.Flow.Flow;
-  var topRightFlowT: h2d.Flow.Flow;
-  var rightFlow: h2d.Flow.Flow;
-  var rightFlowR: h2d.Flow.Flow;
-  var aboveMapFlow: h2d.Flow.Flow;
-  var rightFlowL: h2d.Flow.Flow;
-  var moneyFlowL: h2d.Flow.Flow;
-  var minimapCont: h2d.Layers.Layers;
-  var curSeed: ui.Text.Text;
-  var bmpMod: h2d.Bitmap.Bitmap;
-  var bmpCG: h2d.Bitmap.Bitmap;
-  var bmpSM: h2d.Bitmap.Bitmap;
-  var gameTime: ui.Text.Text;
-  var bossCellBG: ui.UIBox.UIBox;
-  var bossCellCount: ui.hud.Count.Count;
-  var moneyCount: ui.hud.Count.Count;
-  var goldCombo: ui.hud.Count.Count;
-  var debtCount: ui.hud.Count.Count;
-  var killCount: ui.hud.Count.Count;
-  var cellsCount: ui.hud.Count.Count;
-  var comboCount: ui.hud.ComboCount.ComboCount;
-  var keyStock: h2d.Flow.Flow;
-  var perkStock: h2d.Flow.Flow;
-  var aspectStock: h2d.Flow.Flow;
-  var speedrunTimer: ui.FlowBox.FlowBox;
-  var speedrunLastTime: ui.Text.Text;
-  var minimap: ui.hud.MiniMap.MiniMap;
-  var scoringInfo: ui.ScoringInfo.ScoringInfo;
-  var currentBoss: en.Mob.Mob;
-  var additionnalBoss: hl.types.ArrayObj<Dynamic>;
-  var game: pr.Game.Game;
-  var alpha: Float;
-  var leftUIIsSemiHidden: Bool;
-  var rightUIIsSemiHidden: Bool;
-  static var ME: HUD;
+    public static var ME: ui.HUD;
+    public var bossLifebar: ui.hud.LifeBar;
+    public var isHidden: Bool;
+    public var ppool: libs.heaps.ParticlePool;
+    public var pbatchBack: libs.heaps.slib.HSpriteBatch;
+    public var pbatchFront: libs.heaps.slib.HSpriteBatch;
+    public var tmpPoint: h2d.col.Point;
+    public var leftFlow: h2d.Flow;
+    public var leftFlowT: h2d.Flow;
+    public var leftFlowB: h2d.Flow;
+    public var skillPotion: ui.hud.Skill;
+    public var skillWeapons: Array<Dynamic>;
+    public var skillPowers: Array<Dynamic>;
+    public var skillBackpack: ui.hud.Skill;
+    public var skills: Array<Dynamic>;
+    public var heartCounter: ui.hud.HeartCounter;
+    public var tierBar: ui.hud.TierBar;
+    public var heroLifeBar: ui.hud.LifeBar;
+    public var customWeaponsFg: h2d.Bitmap;
+    public var topRightFlow: h2d.Flow;
+    public var topRightFlowT: h2d.Flow;
+    public var rightFlow: h2d.Flow;
+    public var rightFlowR: h2d.Flow;
+    public var aboveMapFlow: h2d.Flow;
+    public var rightFlowL: h2d.Flow;
+    public var moneyFlowL: h2d.Flow;
+    public var minimapCont: h2d.Layers;
+    public var curSeed: ui.Text;
+    public var bmpMod: h2d.Bitmap;
+    public var bmpCG: h2d.Bitmap;
+    public var bmpSM: h2d.Bitmap;
+    public var gameTime: ui.Text;
+    public var bossCellBG: ui.UIBox;
+    public var bossCellCount: ui.hud.Count;
+    public var moneyCount: ui.hud.Count;
+    public var goldCombo: ui.hud.Count;
+    public var debtCount: ui.hud.Count;
+    public var killCount: ui.hud.Count;
+    public var cellsCount: ui.hud.Count;
+    public var comboCount: ui.hud.ComboCount;
+    public var keyStock: h2d.Flow;
+    public var perkStock: h2d.Flow;
+    public var aspectStock: h2d.Flow;
+    public var speedrunTimer: ui.FlowBox;
+    public var speedrunLastTime: ui.Text;
+    public var minimap: ui.hud.MiniMap;
+    public var scoringInfo: ui.ScoringInfo;
+    public var currentBoss: en.Mob;
+    public var additionnalBoss: Array<Dynamic>;
+    public var game: pr.Game;
+    public var alpha: Float;
+    public var leftUIIsSemiHidden: Bool;
+    public var rightUIIsSemiHidden: Bool;
 
-  function get_pixelScale(): Float {}
+    public function new(arg0: pr.Game) {
+        super();
+    }
 
-  function __constructor__(game: pr.Game.Game) {}
+    public function get_hudSize(): Float {
+        throw "stub: get_hudSize not decompiled";
+    }
 
-  function get_hudSize(): Float {}
+    public function get_maxAlpha(): Float {
+        throw "stub: get_maxAlpha not decompiled";
+    }
 
-  function get_maxAlpha(): Float {}
+    public function initHero(): Void {
+    }
 
-  function initHero() {}
+    public function initLeftFlowT(): Void {
+    }
 
-  function initLeftFlowT() {}
+    public function initSpeedrunPanel(): Void {
+    }
 
-  function initSpeedrunPanel() {}
+    public function backpackAlphaUpdate(arg0: Float): Void {
+    }
 
-  function backpackAlphaUpdate(alpha: Float) {}
+    public function hudAlphaUpdate(arg0: Float): Void {
+    }
 
-  function hudAlphaUpdate(alpha: Float) {}
+    public function hudSizeUpdate(arg0: Float): Void {
+    }
 
-  function hudSizeUpdate(size: Float) {}
+    public function createPart(arg0: h2d.Tile, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): libs.heaps.HParticle {
+        throw "stub: createPart not decompiled";
+    }
 
-  function createPart(t: h2d.Tile.Tile, x: Dynamic, y: Dynamic, back: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function hide(arg0: Dynamic): Void {
+    }
 
-  function hide(instant: Dynamic) {}
+    public function hideRight(arg0: Dynamic): Void {
+    }
 
-  function hideRight(instant: Dynamic) {}
+    public function showCanBeEquippedHighlightFor(arg0: tool.InventItem): Void {
+    }
 
-  function showCanBeEquippedHighlightFor(item: tool.InventItem.InventItem) {}
+    public function hideCanBeEquippedHighlight(): Void {
+    }
 
-  function hideCanBeEquippedHighlight() {}
+    public function showBuffFor(arg0: en.Hero, arg1: String): Void {
+    }
 
-  function showBuffFor(hero: en.Hero.Hero, tier: String) {}
+    public function hideBuffs(): Void {
+    }
 
-  function hideBuffs() {}
+    public function hideRightAndPerks(arg0: Dynamic): Void {
+    }
 
-  function hideRightAndPerks(instant: Dynamic) {}
+    public function hideScore(arg0: Dynamic): Void {
+    }
 
-  function hideScore(instant: Dynamic) {}
+    public function show(arg0: Dynamic): Void {
+    }
 
-  function show(instant: Dynamic) {}
+    public function showRight(arg0: Dynamic): Void {
+    }
 
-  function showRight(instant: Dynamic) {}
+    public function showRightAndPerks(arg0: Dynamic): Void {
+    }
 
-  function showRightAndPerks(instant: Dynamic) {}
+    public function hasBossBar(): Bool {
+        throw "stub: hasBossBar not decompiled";
+    }
 
-  function hasBossBar(): Bool {}
+    public function showBossBar(): Void {
+    }
 
-  function showBossBar() {}
+    public function initBossBar(arg0: en.Mob, arg1: Array<Dynamic>): Void {
+    }
 
-  function initBossBar(e: en.Mob.Mob, _additionnalBoss: hl.types.ArrayObj<Dynamic>) {}
+    public function hideBossBar(arg0: Ref): Void {
+    }
 
-  function hideBossBar(force: Dynamic) {}
+    public function setSkillFade(arg0: tool.InventItem, arg1: Bool): Void {
+    }
 
-  function setSkillFade(i: tool.InventItem.InventItem, fade: Bool) {}
+    public function setWeaponFade(arg0: Int, arg1: Bool): Void {
+    }
 
-  function setWeaponFade(id: Int, fade: Bool) {}
+    public function setPowerFade(arg0: Int, arg1: Bool): Void {
+    }
 
-  function setPowerFade(id: Int, fade: Bool) {}
+    public function updateAmmo(arg0: tool.InventItem): Void {
+    }
 
-  function updateAmmo(i: tool.InventItem.InventItem) {}
+    public function updateIcon(arg0: tool.InventItem, arg1: h2d.Tile): Void {
+    }
 
-  function updateIcon(i: tool.InventItem.InventItem, t: h2d.Tile.Tile) {}
+    public function highlightItem(arg0: tool.InventItem): Void {
+    }
 
-  function highlightItem(i: tool.InventItem.InventItem) {}
+    public function setCustomWeaponsFg(arg0: h2d.Tile): Void {
+    }
 
-  function setCustomWeaponsFg(tile: h2d.Tile.Tile) {}
+    public function setGoldComboVisibility(arg0: Ref): Void {
+    }
 
-  function setGoldComboVisibility(value: Dynamic) {}
+    public function setDebtCountVisibility(arg0: Ref): Void {
+    }
 
-  function setDebtCountVisibility(value: Dynamic) {}
+    public function updateLifeSize(arg0: Dynamic): Void {
+    }
 
-  function updateLifeSize(overrideMaxLife: Dynamic) {}
+    public function updateSkillBgs(): Void {
+    }
 
-  function updateSkillBgs() {}
+    public function updateRichPresence(): Void {
+    }
 
-  function updateRichPresence() {}
+    public function setHealings(arg0: Int, arg1: Int): Void {
+    }
 
-  function setHealings(cur: Int, max: Int) {}
+    public function setSurvivalTier(arg0: Int, arg1: Ref): Void {
+    }
 
-  function setSurvivalTier(v: Int, animated: Dynamic) {}
+    public function setBrutalityTier(arg0: Int, arg1: Ref): Void {
+    }
 
-  function setBrutalityTier(v: Int, animated: Dynamic) {}
+    public function setTacticTier(arg0: Int, arg1: Ref): Void {
+    }
 
-  function setTacticTier(v: Int, animated: Dynamic) {}
+    public function refreshItems(): Void {
+    }
 
-  function refreshItems() {}
+    public function initItems(arg0: en.Hero): Void {
+    }
 
-  function initItems(hero: en.Hero.Hero) {}
+    public function setBossCells(): Void {
+    }
 
-  function setBossCells() {}
+    public function updateInfection(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function updateInfection(v: Float, max: Float, tierCount: Int) {}
+    public function initMap(arg0: pr.Level, arg1: haxe.io.Bytes): ui.hud.MiniMap {
+        throw "stub: initMap not decompiled";
+    }
 
-  function initMap(level: pr.Level.Level, fow: haxe.io.Bytes): ui.hud.MiniMap.MiniMap {}
+    public function fullscreenMap(arg0: Bool, arg1: Ref): Bool {
+        throw "stub: fullscreenMap not decompiled";
+    }
 
-  function fullscreenMap(v: Bool, restoreHUD: Dynamic): Bool {}
+    public function onBlueprintPick(arg0: String, arg1: Float, arg2: Float): Void {
+    }
 
-  function onBlueprintPick(k: String, fromX: Float, fromY: Float) {}
+    public function onItemPick(arg0: tool.InventItem, arg1: Float, arg2: Float): Void {
+    }
 
-  function onItemPick(item: tool.InventItem.InventItem, fromX: Float, fromY: Float) {}
+    public function toggleVisibilityLeftUI(arg0: Bool): Void {
+    }
 
-  function toggleVisibilityLeftUI(b: Bool) {}
+    public function toggleVisibilityRightUI(arg0: Bool): Void {
+    }
 
-  function toggleVisibilityRightUI(b: Bool) {}
+    public function shouldDisplaySeed(): Bool {
+        throw "stub: shouldDisplaySeed not decompiled";
+    }
 
-  function shouldDisplaySeed(): Bool {}
+    public override function onResize(): Void {
+    }
 
-  function onResize() {}
+    public function update(): Void {
+    }
 
-  function update() {}
+    public function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function onDispose(): Void {
+    }
 
-  function onDispose() {}
+    public function refresh(): Void {
+    }
 
-  function refresh() {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
-

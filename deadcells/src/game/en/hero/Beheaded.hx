@@ -1,55 +1,87 @@
 package en.hero;
+
 class Beheaded extends en.Hero {
-  var debuffedFlyingSwords: hl.types.ArrayObj<Dynamic>;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var debuffedFlyingSwords: Array<Dynamic>;
 
-  static function create(game: pr.Game.Game): Beheaded {}
+    public function new(arg0: pr.Game) {
+        super();
+    }
 
-  function __constructor__(game: pr.Game.Game) {}
+    public static function create(arg0: pr.Game): en.hero.Beheaded {
+        throw "stub: create not decompiled";
+    }
 
-  function wakeup(lvl: pr.Level.Level, cx: Int, cy: Int) {}
+    public override function wakeup(arg0: pr.Level, arg1: Int, arg2: Int): Void {
+    }
 
-  function onUnlockItem(kind: String) {}
+    public override function onUnlockItem(arg0: String): Void {
+    }
 
-  function createHead(): tool.HeroHead.HeroHead {}
+    public override function createHead(): tool.HeroHead {
+        throw "stub: createHead not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function getRunAnimId(): String {}
+    public function getRunAnimId(): String {
+        throw "stub: getRunAnimId not decompiled";
+    }
 
-  function initAnims() {}
+    public override function initAnims(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public override function initSpeechDeck(): Void {
+    }
 
-  function removeTemporaryItems() {}
+    public override function removeTemporaryItems(): Void {
+    }
 
-  function reapplyTemporaryItems() {}
+    public override function reapplyTemporaryItems(): Void {
+    }
 
-  function hasWeaponEquipped(id: String): Bool {}
+    public override function hasWeaponEquipped(arg0: String): Bool {
+        throw "stub: hasWeaponEquipped not decompiled";
+    }
 
-  function moveControlled(): Bool {}
+    public override function moveControlled(): Bool {
+        throw "stub: moveControlled not decompiled";
+    }
 
-  function globalShieldFx() {}
+    public function globalShieldFx(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function displayCursePopup(count: Int, reason: String, hidePopup: Dynamic) {}
+    public override function displayCursePopup(arg0: Int, arg1: String, arg2: Ref): Void {
+    }
 
-  function addCells(v: Int, noStats: Dynamic) {}
+    public override function addCells(arg0: Int, arg1: Ref): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function addMoney(v: Int, noStats: Dynamic) {}
+    public override function addMoney(arg0: Int, arg1: Ref): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,33 +1,47 @@
 package en.inter;
+
 class TrainingMobPresetBook extends en.Interactive {
-  var presetBiomes: hl.types.ArrayObj<Dynamic>;
-  var selectedBiome: String;
-  var hasLinkedSpawners: Bool;
-  var linkedSpawners: hl.types.ArrayObj<Dynamic>;
-  var rseed: libs.Rand.Rand;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var presetBiomes: Array<Dynamic>;
+    public var selectedBiome: String;
+    public var hasLinkedSpawners: Bool;
+    public var linkedSpawners: Array<Dynamic>;
+    public var rseed: libs.Rand;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function onCloseUI(biomePreset: Dynamic) {}
+    public function onCloseUI(arg0: Dynamic): Void {
+    }
 
-  function setPresetMobs() {}
+    public function setPresetMobs(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

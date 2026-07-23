@@ -1,21 +1,34 @@
 package tool.weap;
+
 class MedusaHead extends tool.Weapon {
-  var spawnedBullet: en.bu.MedusaHeadBullet.MedusaHeadBullet;
+    public var spawnedBullet: en.bu.MedusaHeadBullet;
 
-  function __constructor__(owner: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_cycle(): Int {}
+    public override function get_cycle(): Int {
+        throw "stub: get_cycle not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public override function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onOutOfAmmoTry() {}
+    public override function onOutOfAmmoTry(): Void {
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 }
-

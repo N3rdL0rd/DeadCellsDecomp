@@ -1,11 +1,14 @@
 package light;
+
 class Water extends light.DeferredSprite {
-  var stepSize: Int;
-  var shader: hxsl.Macros.Macros;
-  static var GROUP: Int;
+    public static var GROUP: Int;
+    public var stepSize: Int;
+    public var shader: shader.SSReflection;
 
-  function __constructor__(p: h2d.Object.Object) {}
+    public function new(arg0: h2d.Object) {
+        super();
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public override function sync(arg0: h2d.RenderContext): Void {
+    }
 }
-

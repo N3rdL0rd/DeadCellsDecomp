@@ -1,51 +1,76 @@
 package en.mob;
+
 class FlyingCrow extends en.Mob {
-  var hero: en.Hero.Hero;
-  var crowManager: en.CrowManager.CrowManager;
-  var syncGroup: Float;
-  var isNew: Bool;
-  var initDx: Float;
-  static var flyingMagnitude: Float;
-  static var flyingSpeedFactor: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var flyingMagnitude: Float;
+    public static var flyingSpeedFactor: Float;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var hero: en.Hero;
+    public var crowManager: en.CrowManager;
+    public var syncGroup: Float;
+    public var isNew: Bool;
+    public var initDx: Float;
 
-  static function create(level: pr.Level.Level, cx: Int, cy: Int, dmgTier: Int, lifeTier: Int, dx: Float, hero: en.Hero.Hero, crowManager: en.CrowManager.CrowManager): FlyingCrow {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: en.Hero, arg7: en.CrowManager) {
+        super();
+    }
 
-  function __constructor__(level: pr.Level.Level, cx: Int, cy: Int, dmgTier: Int, lifeTier: Int, dx: Float, hero: en.Hero.Hero, crowManager: en.CrowManager.CrowManager) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: en.Hero, arg7: en.CrowManager): en.mob.FlyingCrow {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onFatalFallDamage() {}
+    public override function onFatalFallDamage(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function aiLocked(): Bool {}
+    public override function aiLocked(): Bool {
+        throw "stub: aiLocked not decompiled";
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function beforeRender() {}
+    public function beforeRender(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

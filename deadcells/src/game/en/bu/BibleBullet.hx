@@ -1,53 +1,78 @@
 package en.bu;
+
 class BibleBullet extends en.Bullet {
-  var itemInf: Dynamic;
-  var rotSpeed: Float;
-  var distance: Float;
-  var hitCount: Int;
-  var curAng: Float;
-  var pageSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var baseAtk: tool.atk.AttackData.AttackData;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var itemInf: Dynamic;
+    public var rotSpeed: Float;
+    public var distance: Float;
+    public var hitCount: Int;
+    public var curAng: Float;
+    public var pageSb: libs.heaps.slib.HSpriteBatch;
+    public var baseAtk: tool.atk.AttackData;
 
-  function canHit(e: Entity): Bool {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Int) {
+        super();
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, dir: Int) {}
+    public function init(): Void {
+    }
 
-  function init() {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function block(arg0: Bool): Void {
+    }
 
-  function block(byEntity: Bool) {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function addHitCount(): Void {
+    }
 
-  function addHitCount() {}
+    public override function updateDir(): Void {
+    }
 
-  function updateDir() {}
+    public override function setSpriteTransform(): Void {
+    }
 
-  function setSpriteTransform() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function updateMovement(): Void {
+    }
 
-  function updateMovement() {}
+    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
 
-  function setPosPixel(x: Float, y: Float) {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function canHit(arg0: Entity): Bool {
+        throw "stub: canHit not decompiled";
+    }
 }
-

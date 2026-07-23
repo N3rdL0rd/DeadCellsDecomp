@@ -1,44 +1,59 @@
 package ui.hud;
-class TierBar extends h2d.Object.Object {
-  var brutalityTier: ui.hud.TierBar.TierBar;
-  var tacticTier: ui.hud.TierBar.TierBar;
-  var survivalTier: ui.hud.TierBar.TierBar;
-  var widAsk: Int;
-  var heiAsk: Int;
-  var bg: h2d.ScaleGrid.ScaleGrid;
 
-  function get_pixelScale(): Float {}
+class Tier extends h2d.Object {
+    public var value: Int;
+    public var text: ui.Text;
+    public var color: Int;
+    public var t: libs.misc.Tween;
+    public var tierIcon: h2d.Bitmap;
+    public var tierKind: String;
+    public var wid: Int;
+    public var hei: Int;
+    public var scaleFrom: Float;
 
-  function __constructor__(p: h2d.Object.Object, wid: Int, hei: Int, bigText: Bool) {}
+    public function new(arg0: String, arg1: Bool, arg2: h2d.Object) {
+        super();
+    }
 
-  function onResize() {}
+    public function setSize(arg0: Int, arg1: Int): Void {
+    }
 
-  function getBoundsRec(relativeTo: h2d.Object.Object, out: h2d.col.Bounds.Bounds, forSize: Bool) {}
+    public function setValue(arg0: Int, arg1: Dynamic): Void {
+    }
+
+    public function updateColor(): Void {
+    }
+
+    public function updateText(): Void {
+    }
+
+    public function updateIcon(): Void {
+    }
+
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
 
-class Tier extends h2d.Object.Object {
-  var value: Int;
-  var text: ui.Text.Text;
-  var color: Int;
-  var t: libs.misc.Tweenie.Tweenie;
-  var tierIcon: h2d.Bitmap.Bitmap;
-  var tierKind: String;
-  var wid: Int;
-  var hei: Int;
-  var scaleFrom: Float;
+class TierBar extends h2d.Object {
+    public var brutalityTier: ui.hud.Tier;
+    public var tacticTier: ui.hud.Tier;
+    public var survivalTier: ui.hud.Tier;
+    public var widAsk: Int;
+    public var heiAsk: Int;
+    public var bg: h2d.ScaleGrid;
 
-  function get_pixelScale(): Float {}
+    public function new(arg0: h2d.Object, arg1: Int, arg2: Int, arg3: Bool) {
+        super();
+    }
 
-  function __constructor__(kind: String, bigText: Bool, p: h2d.Object.Object) {}
+    public function onResize(): Void {
+    }
 
-  function setSize(wid: Int, hei: Int) {}
+    public override function getBoundsRec(arg0: h2d.Object, arg1: h2d.col.Bounds, arg2: Bool): Void {
+    }
 
-  function setValue(v: Int, animated: Dynamic) {}
-
-  function updateColor() {}
-
-  function updateText() {}
-
-  function updateIcon() {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
-

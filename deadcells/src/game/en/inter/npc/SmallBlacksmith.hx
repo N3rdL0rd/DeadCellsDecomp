@@ -1,31 +1,46 @@
 package en.inter.npc;
+
 class SmallBlacksmith extends en.inter.Npc {
-  var headFlip: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var headFlip: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function openUI(hasJustUnlockedGuillainHead: Dynamic) {}
+    public function openUI(arg0: Ref): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onFocus() {}
+    public override function onFocus(): Void {
+    }
 
-  function headLookAt(e: Entity, opposite: Dynamic) {}
+    public function headLookAt(arg0: Entity, arg1: Dynamic): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

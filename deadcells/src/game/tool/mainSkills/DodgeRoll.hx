@@ -1,67 +1,107 @@
 package tool.mainSkills;
+
 class DodgeRoll extends tool.mainSkills.Dodge {
-  var stopDodgeOnCliff: Bool;
-  var dodgeCancelCpt: Float;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var stopDodgeOnCliff: Bool;
+    public var dodgeCancelCpt: Float;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function destroy() {}
+    public override function destroy(): Void {
+    }
 
-  function activePreUpdate() {}
+    public function activePreUpdate(): Void {
+    }
 
-  function activeFixedUpdate() {}
+    public function activeFixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onReady() {}
+    public function onReady(): Void {
+    }
 
-  function onStart() {}
+    public override function onStart(): Void {
+    }
 
-  function onEnd() {}
+    public function onEnd(): Void {
+    }
 
-  function onCancel() {}
+    public override function onCancel(): Void {
+    }
 
-  function onCancelOtherSkill(heroSkill: tool.HeroMainSkill.HeroMainSkill) {}
+    public function onCancelOtherSkill(arg0: tool.HeroMainSkill): Void {
+    }
 
-  function getNoDodgeCancelRatio(): Float {}
+    public function getNoDodgeCancelRatio(): Float {
+        throw "stub: getNoDodgeCancelRatio not decompiled";
+    }
 
-  function applyDodgeMovement() {}
+    public function applyDodgeMovement(): Void {
+    }
 
-  function applyEndDodgeMovement() {}
+    public function applyEndDodgeMovement(): Void {
+    }
 
-  function extendDodgeRoll(sec: Float) {}
+    public function extendDodgeRoll(arg0: Float): Void {
+    }
 
-  function onBackpackWeaponHit(weapon: tool.Weapon.Weapon, target: Entity) {}
+    public function onBackpackWeaponHit(arg0: tool.Weapon, arg1: Entity): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function onOwnerLand(height: Float) {}
+    public function onOwnerLand(arg0: Float): Void {
+    }
 
-  function onOwnerDamaged(attack: tool.atk.AttackData.AttackData) {}
+    public override function onOwnerDamaged(arg0: tool.atk.AttackData): Void {
+    }
 
-  function shouldHaveSmallHitbox(): Bool {}
+    public function shouldHaveSmallHitbox(): Bool {
+        throw "stub: shouldHaveSmallHitbox not decompiled";
+    }
 
-  function canWallGrab(): Bool {}
+    public function canWallGrab(): Bool {
+        throw "stub: canWallGrab not decompiled";
+    }
 
-  function canJumpThroughUp(): Bool {}
+    public function canJumpThroughUp(): Bool {
+        throw "stub: canJumpThroughUp not decompiled";
+    }
 
-  function canPreventStuckInWall(cx: Int, cy: Int): Bool {}
+    public function canPreventStuckInWall(arg0: Int, arg1: Int): Bool {
+        throw "stub: canPreventStuckInWall not decompiled";
+    }
 
-  function canBreakDoors(): Bool {}
+    public function canBreakDoors(): Bool {
+        throw "stub: canBreakDoors not decompiled";
+    }
 
-  function canBreakTiles(): Bool {}
+    public function canBreakTiles(): Bool {
+        throw "stub: canBreakTiles not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

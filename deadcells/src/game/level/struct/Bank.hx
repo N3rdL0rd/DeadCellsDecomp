@@ -1,30 +1,44 @@
 package level.struct;
+
 class Bank extends level.LevelStruct {
-  var miStart: level.RoomNode.RoomNode;
-  var uniqueSpecialRooms: hl.types.ArrayObj<Dynamic>;
-  var uniqueRoomChance: Float;
-  var outsideRoomChance: Float;
-  var combatRoomCount: Int;
-  var firstFloorAdditionalRooms: Int;
+    public var miStart: level.RoomNode;
+    public var uniqueSpecialRooms: Array<Dynamic>;
+    public var uniqueRoomChance: Float;
+    public var outsideRoomChance: Float;
+    public var combatRoomCount: Int;
+    public var firstFloorAdditionalRooms: Int;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function initUniqueSpecialRooms() {}
+    public function initUniqueSpecialRooms(): Void {
+    }
 
-  function tryAddUniqueRoom(afterNode: String, between: String, higherChanceToSpawn: Dynamic) {}
+    public function tryAddUniqueRoom(arg0: String, arg1: String, arg2: Ref): Void {
+    }
 
-  function buildChallengeRoom() {}
+    public function buildChallengeRoom(): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function getInsideLoreRoomSpot(): level.RoomNode.RoomNode {}
+    public override function getInsideLoreRoomSpot(): level.RoomNode {
+        throw "stub: getInsideLoreRoomSpot not decompiled";
+    }
 
-  function allowLoreRoomBefore(r: level.RoomNode.RoomNode): Bool {}
+    public override function allowLoreRoomBefore(arg0: level.RoomNode): Bool {
+        throw "stub: allowLoreRoomBefore not decompiled";
+    }
 
-  function buildExits() {}
+    public function buildExits(): Void {
+    }
 }
-

@@ -1,15 +1,20 @@
 package cine;
+
 class GiantDeath extends GameCinematic {
-  var boss: en.mob.boss.Giant.Giant;
-  var hero: en.Hero.Hero;
-  var heroLanded: Bool;
+    public var boss: en.mob.boss.Giant;
+    public var hero: en.Hero;
+    public var heroLanded: Bool;
 
-  function __constructor__(hero: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function trackHeroLanding() {}
+    public function trackHeroLanding(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

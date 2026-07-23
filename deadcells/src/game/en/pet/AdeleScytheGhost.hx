@@ -1,69 +1,96 @@
 package en.pet;
-class AdeleScytheGhost extends en.Mob.Mob {
-  var charge: tool.skill.OldMobSkill.OldMobSkill;
-  var chargeInf: Dynamic;
-  var chargeTarget: en.Mob.Mob;
-  var hasChargedOnce: Bool;
-  var explosion: tool.skill.OldMobSkill.OldMobSkill;
-  var explosionInf: Dynamic;
-  var teleport: tool.skill.OldMobSkill.OldMobSkill;
-  var teleportInf: Dynamic;
-  var teleportSpot: Dynamic;
-  var item: tool.InventItem.InventItem;
-  var minHpMul: Float;
-  var maxHpMul: Float;
-  var minDmgMul: Float;
-  var maxDmgMul: Float;
-  var dmgMul: Float;
-  var isFlying: Bool;
-  var flyingOffsetCy: Int;
-  var sprData: Dynamic;
-  var copiedNrmShader: hxsl.Macros.Macros;
-  var baseAnim: String;
-  var baseAnimSpd: Float;
-  var chargeAnim: String;
-  var chargeAnimSpd: Float;
-  var walkAnim: String;
-  var walkAnimSpd: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, sprData: Dynamic): AdeleScytheGhost {}
+class AdeleScytheGhost extends en.Mob {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var charge: tool.skill.OldMobSkill;
+    public var chargeInf: Dynamic;
+    public var chargeTarget: en.Mob;
+    public var hasChargedOnce: Bool;
+    public var explosion: tool.skill.OldMobSkill;
+    public var explosionInf: Dynamic;
+    public var teleport: tool.skill.OldMobSkill;
+    public var teleportInf: Dynamic;
+    public var teleportSpot: Dynamic;
+    public var item: tool.InventItem;
+    public var minHpMul: Float;
+    public var maxHpMul: Float;
+    public var minDmgMul: Float;
+    public var maxDmgMul: Float;
+    public var dmgMul: Float;
+    public var isFlying: Bool;
+    public var flyingOffsetCy: Int;
+    public var sprData: tool.weap.SprData;
+    public var copiedNrmShader: shader.NormalMap;
+    public var baseAnim: String;
+    public var baseAnimSpd: Float;
+    public var chargeAnim: String;
+    public var chargeAnimSpd: Float;
+    public var walkAnim: String;
+    public var walkAnimSpd: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, sprData: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem, arg7: tool.weap.SprData) {
+        super();
+    }
 
-  function canBeHit(): Bool {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem, arg7: tool.weap.SprData): en.pet.AdeleScytheGhost {
+        throw "stub: create not decompiled";
+    }
 
-  function initSprState() {}
+    public function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function init() {}
+    public function initSprState(): Void {
+    }
 
-  function initGfx() {}
+    public override function init(): Void {
+    }
 
-  function initSkills() {}
+    public override function initGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function initSkills(): Void {
+    }
 
-  function canMove(): Bool {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function behaviourAi() {}
+    public function canMove(): Bool {
+        throw "stub: canMove not decompiled";
+    }
 
-  function onTouch(e: Entity) {}
+    public override function behaviourAi(): Void {
+    }
 
-  function explode() {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function getDangerousMobs(): hl.types.ArrayObj<Dynamic> {}
+    public function explode(): Void {
+    }
 
-  function getTeleportSpot(): Dynamic {}
+    public function getDangerousMobs(): Array<Dynamic> {
+        throw "stub: getDangerousMobs not decompiled";
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function getTeleportSpot(): Dynamic {
+        throw "stub: getTeleportSpot not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserializeInit(): Void {
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,77 +1,115 @@
 package en.inter;
+
 class TreasureChest extends en.Interactive {
-  var isOpen: Bool;
-  var contents: hl.types.ArrayObj<Dynamic>;
-  var mobContent: hl.types.ArrayObj<Dynamic>;
-  var blueprint: String;
-  var popDir: Int;
-  var popIdx: Int;
-  var originX: Float;
-  var originY: Float;
-  var chainFall: Float;
-  var isTrapped: Bool;
-  var rockFront: libs.heaps.slib.HSprite.HSprite;
-  var rockBack: libs.heaps.slib.HSprite.HSprite;
-  var rune: libs.heaps.slib.HSprite.HSprite;
-  var runeGlow: libs.heaps.slib.HSprite.HSprite;
-  var godRays: libs.heaps.slib.HSprite.HSpriteBE;
-  var glowT: Float;
-  var isFocused: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var isOpen: Bool;
+    public var contents: Array<Dynamic>;
+    public var mobContent: Array<Dynamic>;
+    public var blueprint: String;
+    public var popDir: Int;
+    public var popIdx: Int;
+    public var originX: Float;
+    public var originY: Float;
+    public var chainFall: Float;
+    public var isTrapped: Bool;
+    public var rockFront: libs.heaps.slib.HSprite;
+    public var rockBack: libs.heaps.slib.HSprite;
+    public var rune: libs.heaps.slib.HSprite;
+    public var runeGlow: libs.heaps.slib.HSprite;
+    public var godRays: libs.heaps.slib.HSpriteBE;
+    public var glowT: Float;
+    public var isFocused: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, items: hl.types.ArrayObj<Dynamic>) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Array<Dynamic>) {
+        super();
+    }
 
-  function canBeHit(): Bool {}
+    public function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function canApplyRepelling(): Bool {}
+    public function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function get_headX(): Float {}
+    public function get_headX(): Float {
+        throw "stub: get_headX not decompiled";
+    }
 
-  function get_headY(): Float {}
+    public function get_headY(): Float {
+        throw "stub: get_headY not decompiled";
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function minimapTracking() {}
+    public function minimapTracking(): Void {
+    }
 
-  function addContent(i: tool.InventItem.InventItem) {}
+    public function addContent(arg0: tool.InventItem): Void {
+    }
 
-  function addBlueprint(k: String) {}
+    public function addBlueprint(arg0: String): Void {
+    }
 
-  function hasContent(): Bool {}
+    public function hasContent(): Bool {
+        throw "stub: hasContent not decompiled";
+    }
 
-  function hasMultipleInvItem(): Bool {}
+    public function hasMultipleInvItem(): Bool {
+        throw "stub: hasMultipleInvItem not decompiled";
+    }
 
-  function addMobContent(k: String) {}
+    public function addMobContent(arg0: String): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function open(by: en.Hero.Hero) {}
+    public function open(arg0: en.Hero): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

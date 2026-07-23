@@ -1,22 +1,34 @@
 package level.struct;
+
 class Transition extends level.LevelStruct {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function get_bankChance(): Float {
+        throw "stub: get_bankChance not decompiled";
+    }
 
-  function get_bankChance(): Float {}
+    public override function applyDifficulty(): Void {
+    }
 
-  function applyDifficulty() {}
+    public override function buildZChallengeDoors(): Void {
+    }
 
-  function buildZChallengeDoors() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public override function finalize(): Void {
+    }
 
-  function finalize() {}
+    public function addTwitchDoorBeforeExits(): Void {
+    }
 
-  function addTwitchDoorBeforeExits() {}
+    public function createTwitchDoor(): level.RoomNode {
+        throw "stub: createTwitchDoor not decompiled";
+    }
 
-  function createTwitchDoor(): level.RoomNode.RoomNode {}
-
-  function checkForBank(): Bool {}
+    public function checkForBank(): Bool {
+        throw "stub: checkForBank not decompiled";
+    }
 }
-

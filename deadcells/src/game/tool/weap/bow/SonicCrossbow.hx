@@ -1,15 +1,22 @@
 package tool.weap.bow;
+
 class SonicCrossbow extends tool.weap.BaseBow {
-  var shootIdx: Int;
+    public var shootIdx: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function playShootAnim() {}
+    public override function playShootAnim(): Void {
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function onBowChargeStart() {}
+    public override function onBowChargeStart(): Void {
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 }
-

@@ -1,17 +1,19 @@
 package tool.mod.script;
+
 class LevelMob {
-  var mobName: String;
-  var quantityFactor: Float;
-  var singleRoom: Bool;
-  var singleRoomRatio: Float;
-  var minCombatRoomsBefore: Int;
-  var maxCombatRoomsBefore: Int;
-  var minDifficulty: Int;
-  var maxDifficulty: Int;
-  var props: Dynamic;
+    public var mobName: String;
+    public var quantityFactor: Float;
+    public var singleRoom: Bool;
+    public var singleRoomRatio: Float;
+    public var minCombatRoomsBefore: Int;
+    public var maxCombatRoomsBefore: Int;
+    public var minDifficulty: Int;
+    public var maxDifficulty: Int;
+    public var props: Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function p_CopyInfoFrom(_cdbLevelMob: Dynamic) {}
+    public function p_CopyInfoFrom(arg0: Dynamic): Void {
+    }
 }
-

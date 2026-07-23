@@ -1,44 +1,62 @@
 package level.disp;
+
 class DeathArena extends level.BiomeDisp {
-  var glowFx: Dynamic;
-  var fogFx: Dynamic;
-  var ghostFx: Dynamic;
-  var phantomFx: Dynamic;
-  var spectreLoopFx: Dynamic;
-  var spectreFx: Dynamic;
-  var parallaxFx: hl.types.ArrayObj<Dynamic>;
-  var skyAnimation: en.mob.boss.death.DeathArenaSkySpr.DeathArenaSkySpr;
+    public var glowFx: Dynamic;
+    public var fogFx: Dynamic;
+    public var ghostFx: Dynamic;
+    public var phantomFx: Dynamic;
+    public var spectreLoopFx: Dynamic;
+    public var spectreFx: Dynamic;
+    public var parallaxFx: Array<Dynamic>;
+    public var skyAnimation: en.mob.boss.death.DeathArenaSkySpr;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function renderFrontWalls() {}
+    public override function renderFrontWalls(): Void {
+    }
 
-  function _addFloorStamps(r: Dynamic, first: Bool, last: Bool) {}
+    public override function _addFloorStamps(arg0: libs.tilemap.Rectangle, arg1: Bool, arg2: Bool): Void {
+    }
 
-  function renderOneWay(cx: Int, cy: Int, leftCorner: Bool, rightCorner: Bool, isLadder: Bool) {}
+    public override function renderOneWay(arg0: Int, arg1: Int, arg2: Bool, arg3: Bool, arg4: Bool): Void {
+    }
 
-  function applyScatterConf(s: Dynamic, kind: String) {}
+    public function applyScatterConf(arg0: light.Scatterer, arg1: String): Void {
+    }
 
-  function renderParallax(infos: Dynamic, parallaxName: String) {}
+    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    }
 
-  function onAddParallax(inf: Dynamic, p: Parallax, pg: ParallaxGroup) {}
+    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    }
 
-  function getBlendMode(inf: Dynamic): Dynamic {}
+    public function getBlendMode(arg0: Dynamic): h2d.BlendMode {
+        throw "stub: getBlendMode not decompiled";
+    }
 
-  function addGlowFx(inf: Dynamic) {}
+    public function addGlowFx(arg0: Dynamic): Void {
+    }
 
-  function addFogFx(inf: Dynamic) {}
+    public function addFogFx(arg0: Dynamic): Void {
+    }
 
-  function addGhostFx(inf: Dynamic) {}
+    public function addGhostFx(arg0: Dynamic): Void {
+    }
 
-  function addPhantomFx(inf: Dynamic) {}
+    public function addPhantomFx(arg0: Dynamic): Void {
+    }
 
-  function addSpectreFx(inf: Dynamic) {}
+    public function addSpectreFx(arg0: Dynamic): Void {
+    }
 
-  function addSpectreLoopFx(inf: Dynamic) {}
+    public function addSpectreLoopFx(arg0: Dynamic): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

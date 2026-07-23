@@ -1,39 +1,58 @@
 package en;
+
 class ShopMimicManager extends Entity {
-  var hero: en.Hero.Hero;
-  var type: Dynamic;
-  var itemToEat: en.inter.ItemDrop.ItemDrop;
-  var rewards: hl.types.ArrayObj<Dynamic>;
-  var mob: en.mob.ShopMimic.ShopMimic;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var hero: en.Hero;
+    public var type: level.MerchantType;
+    public var itemToEat: en.inter.ItemDrop;
+    public var rewards: Array<Dynamic>;
+    public var mob: en.mob.ShopMimic;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, hero: en.Hero.Hero, type: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero, arg4: level.MerchantType) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function triggerMimic() {}
+    public function triggerMimic(): Void {
+    }
 
-  function initMob(cx: Int, cy: Int) {}
+    public function initMob(arg0: Int, arg1: Int): Void {
+    }
 
-  function setItemReward(item: tool.InventItem.InventItem, count: Dynamic) {}
+    public function setItemReward(arg0: tool.InventItem, arg1: Ref): Void {
+    }
 
-  function getBonusAttackType(item: tool.InventItem.InventItem): Dynamic {}
+    public function getBonusAttackType(arg0: tool.InventItem): en.mob.BonusAttackType {
+        throw "stub: getBonusAttackType not decompiled";
+    }
 
-  function disposeGfx() {}
+    public override function disposeGfx(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

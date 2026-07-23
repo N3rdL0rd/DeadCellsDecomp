@@ -1,23 +1,35 @@
 package en.bu;
+
 class WreckingBallHeroAmmo extends en.loot.Ammo {
-  var fromWeapon: tool.weap.WreckingBall.WreckingBall;
-  var glowInnerColor: Int;
-  var glowOuterColor: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var fromWeapon: tool.weap.WreckingBall;
+    public var glowInnerColor: Int;
+    public var glowOuterColor: Int;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, w: tool.weap.WreckingBall.WreckingBall, innerColor: Int, outerColor: Int): WreckingBallHeroAmmo {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.weap.WreckingBall, arg5: Int, arg6: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, w: tool.weap.WreckingBall.WreckingBall, innerColor: Int, outerColor: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.weap.WreckingBall, arg5: Int, arg6: Int): en.bu.WreckingBallHeroAmmo {
+        throw "stub: create not decompiled";
+    }
 
-  function shouldSave(): Bool {}
+    public function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

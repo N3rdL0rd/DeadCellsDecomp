@@ -1,31 +1,41 @@
 package libs.heaps;
+
 class GamePad {
-  var device: hxd.Pad.Pad;
-  var toggles: hl.types.ArrayBytes<Int>;
-  var deadZone: Float;
-  var axisAsButtonDeadZone: Float;
-  var triggerDeadzone: Float;
-  var lastActivity: Float;
-  static var ALL: hl.types.ArrayObj<Dynamic>;
-  static var AVAILABLE_DEVICES: hl.types.ArrayObj<Dynamic>;
-  static var MAPPING: hl.types.ArrayBytes<Int>;
+    public static var ALL: Array<Dynamic>;
+    public static var AVAILABLE_DEVICES: Array<Dynamic>;
+    public static var MAPPING: Array<Int>;
+    public var device: hxd.Pad;
+    public var toggles: Array<Int>;
+    public var deadZone: Float;
+    public var axisAsButtonDeadZone: Float;
+    public var triggerDeadzone: Float;
+    public var lastActivity: Float;
 
-  function onDisable(pad: GamePad) {}
+    public function new(arg0: Dynamic, arg1: Dynamic) {
+    }
 
-  function onEnable(pad: GamePad) {}
+    public static function update(): Void {
+    }
 
-  static function onDevice(p: hxd.Pad.Pad) {}
+    public static function onDevice(arg0: hxd.Pad): Void {
+    }
 
-  static function update() {}
+    public function enableDevice(arg0: hxd.Pad): Void {
+    }
 
-  function __constructor__(deadZone: Dynamic, onEnable: Dynamic) {}
+    public function disable(): Void {
+    }
 
-  function enableDevice(p: hxd.Pad.Pad) {}
+    public function rumble(arg0: Float, arg1: Float): Void {
+    }
 
-  function disable() {}
+    public function isPressed(arg0: Int): Bool {
+        throw "stub: isPressed not decompiled";
+    }
 
-  function rumble(strength: Float, time_s: Float) {}
+    public function onDisable(arg0: libs.heaps.GamePad): Void {
+    }
 
-  function isPressed(k: Int): Bool {}
+    public function onEnable(arg0: libs.heaps.GamePad): Void {
+    }
 }
-

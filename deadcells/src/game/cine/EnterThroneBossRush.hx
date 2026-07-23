@@ -1,10 +1,13 @@
 package cine;
+
 class EnterThroneBossRush extends GameCinematic {
-  var boss: en.mob.boss.KingsHand.KingsHand;
-  var throne: en.inter.Throne.Throne;
+    public var boss: en.mob.boss.KingsHand;
+    public var throne: en.inter.Throne;
 
-  function __constructor__(hero: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

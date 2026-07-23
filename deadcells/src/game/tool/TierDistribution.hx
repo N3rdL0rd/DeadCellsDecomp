@@ -1,24 +1,33 @@
 package tool;
+
 class TierDistribution {
-  var droppedDef: Int;
-  var droppedWeapon: Int;
-  var droppedActive: Int;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var droppedDef: Int;
+    public var droppedWeapon: Int;
+    public var droppedActive: Int;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function registerPick(k: String, n: Dynamic) {}
+    public function registerPick(arg0: String, arg1: Dynamic): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

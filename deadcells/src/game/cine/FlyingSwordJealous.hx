@@ -1,11 +1,15 @@
 package cine;
+
 class FlyingSwordJealous extends GameCinematic {
-  var hero: en.Hero.Hero;
+    public var hero: en.Hero;
 
-  function __constructor__(h: en.Hero.Hero, sword: en.pet.FlyingSword.FlyingSword) {}
+    public function new(arg0: en.Hero, arg1: en.pet.FlyingSword) {
+        super();
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

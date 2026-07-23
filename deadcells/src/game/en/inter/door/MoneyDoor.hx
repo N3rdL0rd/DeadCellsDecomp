@@ -1,30 +1,47 @@
 package en.inter.door;
+
 class MoneyDoor extends en.inter.Door {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, customId: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function get_price(): Dynamic {}
+    public function get_price(): Dynamic {
+        throw "stub: get_price not decompiled";
+    }
 
-  function get_curse(): Dynamic {}
+    public function get_curse(): Dynamic {
+        throw "stub: get_curse not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function updateDoorSkin() {}
+    public override function updateDoorSkin(): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

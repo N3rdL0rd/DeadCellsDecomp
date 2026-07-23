@@ -1,39 +1,55 @@
 package level.disp;
+
 class Docks extends level.BiomeDisp {
-  var water: h2d.col.Bounds.Bounds;
-  var horizonY: Float;
-  var mainY: Float;
-  var frontY: Float;
-  var boats: hl.types.ArrayObj<Dynamic>;
-  var sbCaustics: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbWaterFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
+    public var water: h2d.col.Bounds;
+    public var horizonY: Float;
+    public var mainY: Float;
+    public var frontY: Float;
+    public var boats: Array<Dynamic>;
+    public var sbCaustics: libs.heaps.slib.HSpriteBatch;
+    public var sbWaterFx: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function addWater() {}
+    public function addWater(): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function renderFloorStamps() {}
+    public override function renderFloorStamps(): Void {
+    }
 
-  function renderFrontCorners() {}
+    public function renderFrontCorners(): Void {
+    }
 
-  function renderGroundSmoke() {}
+    public override function renderGroundSmoke(): Void {
+    }
 
-  function renderWaterPools() {}
+    public override function renderWaterPools(): Void {
+    }
 
-  function addCliffLights() {}
+    public override function addCliffLights(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function addWaterShore(x: Float, y: Float, wid: Float, scrollX: Float): ParallaxEmitter {}
+    public function addWaterShore(arg0: Float, arg1: Float, arg2: Float, arg3: Float): ParallaxEmitter {
+        throw "stub: addWaterShore not decompiled";
+    }
 
-  function renderFrontRocks() {}
+    public function renderFrontRocks(): Void {
+    }
 }
-

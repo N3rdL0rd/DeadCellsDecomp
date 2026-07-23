@@ -1,42 +1,62 @@
 package pow;
+
 class Wings extends Power {
-  var targetCy: Int;
-  var isHovering: Bool;
-  var lastFrameDy: Int;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var targetCy: Int;
+    public var isHovering: Bool;
+    public var lastFrameDy: Int;
 
-  function __constructor__(owner: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function shouldChangeLevelWithHero(): Bool {}
+    public override function shouldChangeLevelWithHero(): Bool {
+        throw "stub: shouldChangeLevelWithHero not decompiled";
+    }
 
-  function onOwnerAttackDealt(atk: tool.atk.AttackData.AttackData, target: Entity) {}
+    public function onOwnerAttackDealt(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function onOwnerDiveAttackLand() {}
+    public function onOwnerDiveAttackLand(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function onOwnerJump(isDoubleJump: Bool) {}
+    public function onOwnerJump(arg0: Bool): Void {
+    }
 
-  function onOwnerStartClimbing(onLadder: Bool) {}
+    public function onOwnerStartClimbing(arg0: Bool): Void {
+    }
 
-  function onOwnerTouchGround() {}
+    public function onOwnerTouchGround(): Void {
+    }
 
-  function onOwnerLand(height: Float) {}
+    public function onOwnerLand(arg0: Float): Void {
+    }
 
-  function shootGround() {}
+    public function shootGround(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

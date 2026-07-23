@@ -1,17 +1,26 @@
 package level.struct;
+
 class SewerDepths extends level.LevelStruct {
-  var branches: hl.types.ArrayObj<Dynamic>;
+    public var branches: Array<Dynamic>;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function allowLoreRoomBefore(r: level.RoomNode.RoomNode): Bool {}
+    public override function allowLoreRoomBefore(arg0: level.RoomNode): Bool {
+        throw "stub: allowLoreRoomBefore not decompiled";
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 }
-

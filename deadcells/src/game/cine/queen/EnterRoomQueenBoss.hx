@@ -1,11 +1,14 @@
 package cine.queen;
+
 class EnterRoomQueenBoss extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var queen: en.mob.boss.Queen.Queen;
-  static var textboxXOffset: Int;
+    public static var textboxXOffset: Int;
+    public var hero: en.Hero;
+    public var queen: en.mob.boss.Queen;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function triggerEliteScoring() {}
+    public function triggerEliteScoring(): Void {
+    }
 }
-

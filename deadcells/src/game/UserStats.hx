@@ -1,107 +1,206 @@
-
 class UserStats {
-  var runs: Int;
-  var scoringRuns: Int;
-  var runsCompleted: Int;
-  var greaterQuantityGold: Int;
-  var greaterQuantityCell: Int;
-  var teleportation: Int;
-  var goldEarned: Int;
-  var goldSpent: Int;
-  var cellsEarned: Int;
-  var cellsSpent: Int;
-  var healUsed: Int;
-  var curseSurvived: Int;
-  var dailyRunWon: Int;
-  var lastDailyRunWon: String;
-  var weaponBlueprintBring: Int;
-  var activeBlueprintBring: Int;
-  var perksBlueprintBring: Int;
-  var normalChestOpened: Int;
-  var cursedChestOpened: Int;
-  var secretPortalOpened: Int;
-  var challengeSucceded: Int;
-  var challengeFailed: Int;
-  var biomes: hl.types.ArrayObj<Dynamic>;
-  var perfectKillsChallSucceeded: Int;
-  var perfectKillsChallFailed: Int;
-  var timedDoorChallSucceeded: Int;
-  var timedDoorChallFailed: Int;
-  var monsters: hl.types.ArrayObj<Dynamic>;
-  var deathByTrap: Int;
-  var deathByTrapCL: Int;
-  var deathByFatalFall: Int;
-  var deathByInfection: Int;
-  var deathBySuicide: Int;
-  var cellsLost: Int;
-  var invalidCdb: Bool;
-  var biomesTransitions: hl.types.ArrayObj<Dynamic>;
-  var bossRushData: tool.bossRush.BossRushData.BossRushData;
-  var speedrunData: tool.SpeedrunData.SpeedrunData;
-  var incentivizedBiomesStats: Dynamic;
-  var statsDataVersion: Int;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var runs: Int;
+    public var scoringRuns: Int;
+    public var runsCompleted: Int;
+    public var greaterQuantityGold: Int;
+    public var greaterQuantityCell: Int;
+    public var teleportation: Int;
+    public var goldEarned: Int;
+    public var goldSpent: Int;
+    public var cellsEarned: Int;
+    public var cellsSpent: Int;
+    public var healUsed: Int;
+    public var curseSurvived: Int;
+    public var dailyRunWon: Int;
+    public var lastDailyRunWon: String;
+    public var weaponBlueprintBring: Int;
+    public var activeBlueprintBring: Int;
+    public var perksBlueprintBring: Int;
+    public var normalChestOpened: Int;
+    public var cursedChestOpened: Int;
+    public var secretPortalOpened: Int;
+    public var challengeSucceded: Int;
+    public var challengeFailed: Int;
+    public var biomes: Array<Dynamic>;
+    public var perfectKillsChallSucceeded: Int;
+    public var perfectKillsChallFailed: Int;
+    public var timedDoorChallSucceeded: Int;
+    public var timedDoorChallFailed: Int;
+    public var monsters: Array<Dynamic>;
+    public var deathByTrap: Int;
+    public var deathByTrapCL: Int;
+    public var deathByFatalFall: Int;
+    public var deathByInfection: Int;
+    public var deathBySuicide: Int;
+    public var cellsLost: Int;
+    public var invalidCdb: Bool;
+    public var biomesTransitions: Array<Dynamic>;
+    public var bossRushData: tool.bossRush.BossRushData;
+    public var speedrunData: tool.SpeedrunData;
+    public var incentivizedBiomesStats: Dynamic;
+    public var statsDataVersion: Int;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function set_runs(v: Int): Int {}
+    public function set_runs(arg0: Int): Int {
+        throw "stub: set_runs not decompiled";
+    }
 
-  function set_runsCompleted(v: Int): Int {}
+    public function set_runsCompleted(arg0: Int): Int {
+        throw "stub: set_runsCompleted not decompiled";
+    }
 
-  function set_curseSurvived(v: Int): Int {}
+    public function set_curseSurvived(arg0: Int): Int {
+        throw "stub: set_curseSurvived not decompiled";
+    }
 
-  function checkWeaponsUnlockedAchievement() {}
+    public function checkWeaponsUnlockedAchievement(): Void {
+    }
 
-  function get_weaponsUnlocked(): Int {}
+    public function get_weaponsUnlocked(): Int {
+        throw "stub: get_weaponsUnlocked not decompiled";
+    }
 
-  function checkActivesUnlockedAchievement() {}
+    public function checkActivesUnlockedAchievement(): Void {
+    }
 
-  function get_activesUnlocked(): Int {}
+    public function get_activesUnlocked(): Int {
+        throw "stub: get_activesUnlocked not decompiled";
+    }
 
-  function get_perksUnlocked(): Int {}
+    public function get_perksUnlocked(): Int {
+        throw "stub: get_perksUnlocked not decompiled";
+    }
 
-  function checkGreaterQuantityGold() {}
+    public function checkGreaterQuantityGold(): Void {
+    }
 
-  function checkGreaterQuantityCell() {}
+    public function checkGreaterQuantityCell(): Void {
+    }
 
-  function reachBiome(id: String, lastid: String) {}
+    public function reachBiome(arg0: String, arg1: String): Void {
+    }
 
-  function getReachedBiomeCount(id: String): Int {}
+    public function getReachedBiomeCount(arg0: String): Int {
+        throw "stub: getReachedBiomeCount not decompiled";
+    }
 
-  function mobKilled(id: String, isElite: Bool) {}
+    public function mobKilled(arg0: String, arg1: Bool): Void {
+    }
 
-  function killedByMob(id: String) {}
+    public function killedByMob(arg0: String): Void {
+    }
 
-  function getKilledMobCount(mk: String): Int {}
+    public function getKilledMobCount(arg0: String): Int {
+        throw "stub: getKilledMobCount not decompiled";
+    }
 
-  function hasSeenMob(mk: String): Bool {}
+    public function hasSeenMob(arg0: String): Bool {
+        throw "stub: hasSeenMob not decompiled";
+    }
 
-  function hasKilledMob(mobKind: String): Bool {}
+    public function hasKilledMob(arg0: String): Bool {
+        throw "stub: hasKilledMob not decompiled";
+    }
 
-  function hasSeenLevel(lk: String): Bool {}
+    public function hasSeenLevel(arg0: String): Bool {
+        throw "stub: hasSeenLevel not decompiled";
+    }
 
-  function cleanBiomesStats() {}
+    public function cleanBiomesStats(): Void {
+    }
 
-  function checkAchievements() {}
+    public function checkAchievements(): Void {
+    }
 
-  function checkMobKilledUnlockedAchievement() {}
+    public function checkMobKilledUnlockedAchievement(): Void {
+    }
 
-  function checkBiomeReachedUnlockedAchievement() {}
+    public function checkBiomeReachedUnlockedAchievement(): Void {
+    }
 
-  function checkEndGameAchievements(by: en.Hero.Hero) {}
+    public function checkEndGameAchievements(arg0: en.Hero): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
+class MonsterStat {
+    public static var __clid: Int;
+    public var id: String;
+    public var killed: Int;
+    public var killedBy: Int;
+    public var elites: Int;
+    public var __uid: Int;
+    public var : Dynamic;
+
+    public function new(arg0: String, arg1: Int, arg2: Int, arg3: Int) {
+    }
+
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public function unserializeInit(): Void {
+    }
+
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
+}
+
+class BiomeStat {
+    public static var __clid: Int;
+    public var id: String;
+    public var reached: Int;
+    public var __uid: Int;
+    public var : Dynamic;
+
+    public function new(arg0: String, arg1: Int) {
+    }
+
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public function unserializeInit(): Void {
+    }
+
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
+}

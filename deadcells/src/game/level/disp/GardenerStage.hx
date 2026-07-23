@@ -1,43 +1,61 @@
 package level.disp;
+
 class GardenerStage extends level.disp.Cliff {
-  var speedMult: Float;
-  var oldSpeedMult: Float;
-  var sbFront: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbBrumeFront: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbRoses: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var tileRoses: hl.types.ArrayObj<Dynamic>;
-  var outsideRatio: Float;
-  var transitionTime: Float;
-  var rosePerCase: Int;
-  var customParallaxBounds: h2d.col.Bounds.Bounds;
-  var vitrauxPos: h2d.col.Point.Point;
+    public var speedMult: Float;
+    public var oldSpeedMult: Float;
+    public var sbFront: libs.heaps.slib.HSpriteBatch;
+    public var sbBrumeFront: libs.heaps.slib.HSpriteBatch;
+    public var sbRoses: libs.heaps.slib.HSpriteBatch;
+    public var tileRoses: Array<Dynamic>;
+    public var outsideRatio: Float;
+    public var transitionTime: Float;
+    public var rosePerCase: Int;
+    public var customParallaxBounds: h2d.col.Bounds;
+    public var vitrauxPos: h2d.col.Point;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap, biome: String, biome_outside: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+        super();
+    }
 
-  function addWater() {}
+    public override function addWater(): Void {
+    }
 
-  function render() {}
+    public override function render(): Void {
+    }
 
-  function addScroller(z: level.DecoTypes.DecoTypes) {}
+    public override function addScroller(arg0: level.DecoZone): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function addRoses(width: Int, _cx: Int, _cy: Int, _xr: Float, _yr: Float, arena: Dynamic) {}
+    public function addRoses(arg0: Int, arg1: Int, arg2: Int, arg3: Float, arg4: Float, arg5: Ref): Void {
+    }
 
-  function getCurrentNearBorderRatio(clamped: Dynamic): Float {}
+    public override function getCurrentNearBorderRatio(arg0: Ref): Float {
+        throw "stub: getCurrentNearBorderRatio not decompiled";
+    }
 
-  function getNearBorderRatioAtPos(px: Float, py: Float, clamped: Dynamic): Float {}
+    public override function getNearBorderRatioAtPos(arg0: Float, arg1: Float, arg2: Ref): Float {
+        throw "stub: getNearBorderRatioAtPos not decompiled";
+    }
 
-  function getParallaxBounds(inf: Dynamic): h2d.col.Bounds.Bounds {}
+    public function getParallaxBounds(arg0: Dynamic): h2d.col.Bounds {
+        throw "stub: getParallaxBounds not decompiled";
+    }
 
-  function renderParallax(inf: Dynamic, parallaxName: String) {}
+    public override function renderParallax(arg0: Dynamic, arg1: String): Void {
+    }
 
-  function onAddParallax(inf: Dynamic, p: Parallax, pg: ParallaxGroup) {}
+    public override function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    }
 
-  function renderFrontRocks() {}
+    public override function renderFrontRocks(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function decorateLevel() {}
+    public override function decorateLevel(): Void {
+    }
 }
-

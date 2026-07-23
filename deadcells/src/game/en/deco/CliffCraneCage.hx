@@ -1,26 +1,37 @@
 package en.deco;
+
 class CliffCraneCage extends en.deco.Pendulum {
-  var dc: libs.heaps.slib.HSprite.HSprite;
-  var cabled: Bool;
-  var heightPixel: Float;
-  static var tingleSounds: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var tingleSounds: Array<Dynamic>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var dc: libs.heaps.slib.HSprite;
+    public var cabled: Bool;
+    public var heightPixel: Float;
 
-  function __constructor__(lvl: pr.Level.Level, posX: Float, posY: Float, cabled: Bool, heightPixel: Float) {}
+    public function new(arg0: pr.Level, arg1: Float, arg2: Float, arg3: Bool, arg4: Float) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setPosition(x: Float, y: Float) {}
+    public override function setPosition(arg0: Float, arg1: Float): Void {
+    }
 
-  function initChain(offset: Dynamic) {}
+    public override function initChain(arg0: Ref): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function initTingle(dir: Int, fromHero: Bool) {}
+    public override function initTingle(arg0: Int, arg1: Bool): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

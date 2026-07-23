@@ -1,94 +1,129 @@
 package pr;
+
 class TitleScreen extends ui.Process {
-  var controller: tool.Controller.Controller;
-  var wrapper: h2d.Object.Object;
-  var titleScreenBg: TitleScreenBgBase;
-  var titleScreenBgType: Int;
-  var logo: libs.heaps.slib.HSprite.HSprite;
-  var build: ui.Text.Text;
-  var mainFlow: h2d.Flow.Flow;
-  var menuItemsWrapper: h2d.Flow.Flow;
-  var help: ui.Text.Text;
-  var menuItems: hl.types.ArrayObj<Dynamic>;
-  var selection: libs.heaps.slib.HSprite.HSprite;
-  var curMenu: Int;
-  var done: Bool;
-  var updateBtn: libs.heaps.slib.HSprite.HSprite;
-  var leaderboard: ui.LeaderboardPanel.LeaderboardPanel;
-  var news: ui.NewsPanel.NewsPanel;
-  var user: User;
-  var isMainMenu: Bool;
-  var isStreamEnable: Bool;
-  var sizeFactorX: Float;
-  var sizeFactorY: Float;
-  var pan: Float;
-  var padWarning: ui.Text.Text;
-  var oldUserWarningSeen: Bool;
-  var newsSelected: Bool;
-  static var ME: TitleScreen;
+    public static var ME: pr.TitleScreen;
+    public var controller: tool.ControllerAccess;
+    public var wrapper: h2d.Object;
+    public var titleScreenBg: pr.TitleScreenBgBase;
+    public var titleScreenBgType: Int;
+    public var logo: libs.heaps.slib.HSprite;
+    public var build: ui.Text;
+    public var mainFlow: h2d.Flow;
+    public var menuItemsWrapper: h2d.Flow;
+    public var help: ui.Text;
+    public var menuItems: Array<Dynamic>;
+    public var selection: libs.heaps.slib.HSprite;
+    public var curMenu: Int;
+    public var done: Bool;
+    public var updateBtn: libs.heaps.slib.HSprite;
+    public var leaderboard: ui.LeaderboardPanel;
+    public var news: ui.NewsPanel;
+    public var user: User;
+    public var isMainMenu: Bool;
+    public var isStreamEnable: Bool;
+    public var sizeFactorX: Float;
+    public var sizeFactorY: Float;
+    public var pan: Float;
+    public var padWarning: ui.Text;
+    public var oldUserWarningSeen: Bool;
+    public var newsSelected: Bool;
 
-  function __constructor__(playMusic: Dynamic) {}
+    public function new(arg0: Dynamic) {
+        super();
+    }
 
-  function getTitleScreenType(titleScreenIdx: Dynamic): Int {}
+    public function getTitleScreenType(arg0: Dynamic): Int {
+        throw "stub: getTitleScreenType not decompiled";
+    }
 
-  function resetTitleScreen() {}
+    public function resetTitleScreen(): Void {
+    }
 
-  function setTitleScreen(bgType: Int) {}
+    public function setTitleScreen(arg0: Int): Void {
+    }
 
-  function initTitleScreen(titleLib: libs.heaps.slib.SpriteLib.SpriteLib, bgType: Dynamic) {}
+    public function initTitleScreen(arg0: libs.heaps.slib.SpriteLib, arg1: Ref): Void {
+    }
 
-  function refreshMusic(k: String) {}
+    public function refreshMusic(arg0: String): Void {
+    }
 
-  function setControlLabel() {}
+    public function setControlLabel(): Void {
+    }
 
-  function setMiscTexts() {}
+    public function setMiscTexts(): Void {
+    }
 
-  function clearMenu() {}
+    public function clearMenu(): Void {
+    }
 
-  function mainMenu() {}
+    public function mainMenu(): Void {
+    }
 
-  function playMenu() {}
+    public function playMenu(): Void {
+    }
 
-  function startNewGame(custom: Bool) {}
+    public function startNewGame(arg0: Bool): Void {
+    }
 
-  function customModeMenu(isForMod: Bool) {}
+    public function customModeMenu(arg0: Bool): Void {
+    }
 
-  function showOptions(defaultSection: Dynamic) {}
+    public function showOptions(arg0: ui.OptionsSection): Void {
+    }
 
-  function showDLCs() {}
+    public function showDLCs(): Void {
+    }
 
-  function saveMenu() {}
+    public function saveMenu(): Void {
+    }
 
-  function onLeavingSaveMenu() {}
+    public function onLeavingSaveMenu(): Void {
+    }
 
-  function onLeavingCustomGameMenu(launchGame: Bool) {}
+    public function onLeavingCustomGameMenu(arg0: Bool): Void {
+    }
 
-  function onLeavingOptionsMenu() {}
+    public function onLeavingOptionsMenu(): Void {
+    }
 
-  function backFromStreamOptions() {}
+    public function backFromStreamOptions(): Void {
+    }
 
-  function backFromModsOptions(isCustomGame: Bool) {}
+    public function backFromModsOptions(arg0: Bool): Void {
+    }
 
-  function blur(sigma: Dynamic, gain: Dynamic) {}
+    public override function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function unblur() {}
+    public override function unblur(): Void {
+    }
 
-  function confirmNewGame(custom: Bool) {}
+    public function confirmNewGame(arg0: Bool): Void {
+    }
 
-  function addMenu(str: String, cb: Dynamic, help: String, isEnable: Dynamic, color: Dynamic): Dynamic {}
+    public function addMenu(arg0: String, arg1: Dynamic, arg2: String, arg3: Dynamic, arg4: Ref): Dynamic {
+        throw "stub: addMenu not decompiled";
+    }
 
-  function selectNews(result: Bool) {}
+    public function selectNews(arg0: Bool): Void {
+    }
 
-  function select(id: Int, instant: Dynamic) {}
+    public function select(arg0: Int, arg1: Ref): Void {
+    }
 
-  function close(cb: Dynamic) {}
+    public function close(arg0: Dynamic): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

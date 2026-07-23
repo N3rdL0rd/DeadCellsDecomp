@@ -1,28 +1,38 @@
 package ui.hud;
+
 class Count extends h2d.Flow {
-  var value: Int;
-  var icon: h2d.Bitmap.Bitmap;
-  var hideWhen0: Bool;
-  var widTile: Int;
-  var text: ui.Text.Text;
-  var lerpFrom: Float;
-  var lerpTime: Float;
-  var fromValue: Float;
-  var lastTick: Float;
-  var lastValue: Int;
+    public var value: Int;
+    public var icon: h2d.Bitmap;
+    public var hideWhen0: Bool;
+    public var widTile: Int;
+    public var text: ui.Text;
+    public var lerpFrom: Float;
+    public var lerpTime: Float;
+    public var fromValue: Float;
+    public var lastTick: Float;
+    public var lastValue: Int;
 
-  function get_pixelScale(): Float {}
+    public function new(arg0: h2d.Tile, arg1: h2d.Object) {
+        super();
+    }
 
-  function __constructor__(tile: h2d.Tile.Tile, p: h2d.Object.Object) {}
+    public function setIcon(arg0: h2d.Tile): Void {
+    }
 
-  function setIcon(tile: h2d.Tile.Tile) {}
+    public function setValue(arg0: Int, arg1: Ref): Int {
+        throw "stub: setValue not decompiled";
+    }
 
-  function setValue(v: Int, animated: Dynamic): Int {}
+    public function tick(arg0: Bool): Void {
+    }
 
-  function tick(blink: Bool) {}
+    public override function sync(arg0: h2d.RenderContext): Void {
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public function onResize(): Void {
+    }
 
-  function onResize() {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
-

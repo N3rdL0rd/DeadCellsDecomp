@@ -1,43 +1,62 @@
 package level.struct;
+
 class DookuCastle extends level.LevelStruct {
-  var wantedSpecialRooms: haxe.ds.EnumValueMap;
-  var chosenSpecialRooms: haxe.ds.EnumValueMap;
-  var specialRoomsCount: haxe.ds.EnumValueMap;
-  var combatRoomCountBeforeCross: Int;
-  var combatRoomCountBeforeBigRoom: Int;
-  var combatRoomCountBeforeSpecialRoom: Int;
-  var bigRoom0Size: hl.types.ArrayBytes<Int>;
-  var bigRoom1Size: hl.types.ArrayBytes<Int>;
-  var bcDoor1Type: String;
-  var bcDoor2Type: String;
-  var bcDoor2Shop: Dynamic;
-  var bcDoor4Type: String;
-  var exitRoom: String;
-  var bigRoomCount: Int;
-  var crossGroup: Int;
+    public var wantedSpecialRooms: haxe.ds.EnumValueMap;
+    public var chosenSpecialRooms: haxe.ds.EnumValueMap;
+    public var specialRoomsCount: haxe.ds.EnumValueMap;
+    public var combatRoomCountBeforeCross: Int;
+    public var combatRoomCountBeforeBigRoom: Int;
+    public var combatRoomCountBeforeSpecialRoom: Int;
+    public var bigRoom0Size: Array<Int>;
+    public var bigRoom1Size: Array<Int>;
+    public var bcDoor1Type: String;
+    public var bcDoor2Type: String;
+    public var bcDoor2Shop: level.MerchantType;
+    public var bcDoor4Type: String;
+    public var exitRoom: String;
+    public var bigRoomCount: Int;
+    public var crossGroup: Int;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function createRunicZDoor(zDoorGroup: Dynamic, content: level.RoomNode.RoomNode, neededRunes: Int, clue: Dynamic, combatRooms: Dynamic, combatGroup: Dynamic, beforeTargets: hl.types.ArrayObj<Dynamic>): level.RoomNode.RoomNode {}
+    public override function createRunicZDoor(arg0: Dynamic, arg1: level.RoomNode, arg2: Int, arg3: level.ZDoorContentClue, arg4: Dynamic, arg5: Dynamic, arg6: Array<Dynamic>): level.RoomNode {
+        throw "stub: createRunicZDoor not decompiled";
+    }
 
-  function computeChosenSpecialRooms() {}
+    public function computeChosenSpecialRooms(): Void {
+    }
 
-  function getSpecialRoom(floor: Dynamic, uid: String, outside: Dynamic): level.RoomNode.RoomNode {}
+    public function getSpecialRoom(arg0: level.struct.SpecialRoomFloor, arg1: String, arg2: Ref): level.RoomNode {
+        throw "stub: getSpecialRoom not decompiled";
+    }
 
-  function createUpsideDownRoom(uid: String): level.RoomNode.RoomNode {}
+    public function createUpsideDownRoom(arg0: String): level.RoomNode {
+        throw "stub: createUpsideDownRoom not decompiled";
+    }
 
-  function buildBigRoomAfter(ref: level.RoomNode.RoomNode, minSize: Int, maxSize: Int, numberOfExits: Int, endRoom: Dynamic, endExit: Dynamic): Dynamic {}
+    public function buildBigRoomAfter(arg0: level.RoomNode, arg1: Int, arg2: Int, arg3: Int, arg4: Ref, arg5: Ref): Dynamic {
+        throw "stub: buildBigRoomAfter not decompiled";
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function createCross(id: String): level.RoomNode.RoomNode {}
+    public override function createCross(arg0: String): level.RoomNode {
+        throw "stub: createCross not decompiled";
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 
-  function addLoreRoom(lore: Dynamic, overrideStructMode: Dynamic) {}
+    public override function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 }
-

@@ -1,14 +1,19 @@
 package pr.infection;
-class VariableInfectionRule extends pr.Infection.InfectionRule {
-  var propName: String;
-  var variable: Dynamic;
 
-  function __constructor__(infection: pr.Infection.Infection, ruleId: String, variable: Dynamic, propName: String) {}
+class VariableInfectionRule extends pr.InfectionRule {
+    public var propName: String;
+    public var variable: Dynamic;
 
-  function checkData() {}
+    public function new(arg0: pr.Infection, arg1: String, arg2: Dynamic, arg3: String) {
+        super();
+    }
 
-  function onActivate() {}
+    public override function checkData(): Void {
+    }
 
-  function onDeactivate() {}
+    public override function onActivate(): Void {
+    }
+
+    public override function onDeactivate(): Void {
+    }
 }
-

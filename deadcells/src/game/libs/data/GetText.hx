@@ -1,39 +1,64 @@
 package libs.data;
+
 class GetText {
-  var texts: haxe.ds.StringMap;
+    public var texts: haxe.ds.StringMap;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  static function checkSyntax(texts: haxe.ds.StringMap, refTexts: haxe.ds.StringMap): hl.types.ArrayObj<Dynamic> {}
+    public static function checkSyntax(arg0: haxe.ds.StringMap, arg1: haxe.ds.StringMap): Array<Dynamic> {
+        throw "stub: checkSyntax not decompiled";
+    }
 
-  function untranslated(str: Dynamic): String {}
+    public function untranslated(arg0: Dynamic): String {
+        throw "stub: untranslated not decompiled";
+    }
 
-  function get(str: String, params: Dynamic): String {}
+    public function get(arg0: String, arg1: Dynamic): String {
+        throw "stub: get not decompiled";
+    }
 
-  function readMo(data: haxe.io.Bytes) {}
+    public function readMo(arg0: haxe.io.Bytes): Void {
+    }
 
-  function readNextMo(data: haxe.io.Bytes) {}
+    public function readNextMo(arg0: haxe.io.Bytes): Void {
+    }
 
-  function emptyDictionary() {}
+    public function emptyDictionary(): Void {
+    }
+}
+
+class LocaleString_Impl_ {
+    public static function add(arg0: String, arg1: String): String {
+        throw "stub: add not decompiled";
+    }
 }
 
 class MoReader {
-  var original_table_offset: Int;
-  var translated_table_offset: Int;
-  var hash_num_entries: Int;
-  var hash_offset: Int;
-  var data: haxe.io.BytesInput;
-  static var MAGIC: Int;
-  static var MAGIC2: Int;
+    public static var MAGIC: Int;
+    public static var MAGIC2: Int;
+    public var original_table_offset: Int;
+    public var translated_table_offset: Int;
+    public var hash_num_entries: Int;
+    public var hash_offset: Int;
+    public var data: haxe.io.BytesInput;
 
-  function __constructor__(data: haxe.io.Bytes) {}
+    public function new(arg0: haxe.io.Bytes) {
+    }
 
-  function parse(): haxe.ds.StringMap {}
+    public function parse(): haxe.ds.StringMap {
+        throw "stub: parse not decompiled";
+    }
 
-  function getTranslatedString(index: Int): String {}
+    public function getTranslatedString(arg0: Int): String {
+        throw "stub: getTranslatedString not decompiled";
+    }
 
-  function getOriginalString(index: Int): String {}
+    public function getOriginalString(arg0: Int): String {
+        throw "stub: getOriginalString not decompiled";
+    }
 
-  function getString(offset: Int): String {}
+    public function getString(arg0: Int): String {
+        throw "stub: getString not decompiled";
+    }
 }
-

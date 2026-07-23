@@ -1,79 +1,122 @@
 package en.mob;
+
 class SewerTtcl extends en.Mob {
-  var isInGround: Bool;
-  var bLevel: Int;
-  var idLevel: String;
-  var heiC: Int;
-  var destX: Dynamic;
-  var timeLeftOffGround: Float;
-  var fxSweep: libs.heaps.slib.HSprite.HSprite;
-  var fxSweepVisible: Bool;
-  var strokeAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var isStrokeAttk: Bool;
-  var isSweepingAttk: Bool;
-  var sweepArea: tool.Area.Area;
-  var sweepAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var sweepBeginX: Int;
-  var sweepEndX: Int;
-  var resistRoot: Float;
-  var resistStun: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var isInGround: Bool;
+    public var bLevel: Int;
+    public var idLevel: String;
+    public var heiC: Int;
+    public var destX: Dynamic;
+    public var timeLeftOffGround: Float;
+    public var fxSweep: libs.heaps.slib.HSprite;
+    public var fxSweepVisible: Bool;
+    public var strokeAtk: tool.skill.OldMobSkill;
+    public var isStrokeAttk: Bool;
+    public var isSweepingAttk: Bool;
+    public var sweepArea: tool.Area;
+    public var sweepAtk: tool.skill.OldMobSkill;
+    public var sweepBeginX: Int;
+    public var sweepEndX: Int;
+    public var resistRoot: Float;
+    public var resistStun: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function canSpawnAt(level: pr.Level.Level, cx: Int, cy: Int): tool.CPoint.CPoint {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.SewerTtcl {
+        throw "stub: create not decompiled";
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): SewerTtcl {}
+    public static function canSpawnAt(arg0: pr.Level, arg1: Int, arg2: Int): tool.CPoint {
+        throw "stub: canSpawnAt not decompiled";
+    }
 
-  function set_isInGround(v: Bool): Bool {}
+    public function set_isInGround(arg0: Bool): Bool {
+        throw "stub: set_isInGround not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function contactAttack(e: Entity) {}
+    public override function contactAttack(arg0: Entity): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function canHaveRepellingWith(e: Entity): Bool {}
+    public override function canHaveRepellingWith(arg0: Entity): Bool {
+        throw "stub: canHaveRepellingWith not decompiled";
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function levelUp(): Int {}
+    public function levelUp(): Int {
+        throw "stub: levelUp not decompiled";
+    }
 
-  function getSpeedAnim(): Float {}
+    public function getSpeedAnim(): Float {
+        throw "stub: getSpeedAnim not decompiled";
+    }
 
-  function getPfEnd(dir: Int): Int {}
+    public function getPfEnd(arg0: Int): Int {
+        throw "stub: getPfEnd not decompiled";
+    }
 
-  function isPfLongEnoughForSweep(): Bool {}
+    public function isPfLongEnoughForSweep(): Bool {
+        throw "stub: isPfLongEnoughForSweep not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

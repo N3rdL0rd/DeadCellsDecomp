@@ -1,29 +1,42 @@
 package tool;
+
 class RingBuffer {
-  var size: Int;
-  var vector: hl.types.ArrayDyn;
-  var indexStart: Int;
-  var indexEnd: Int;
-  var curIndex: Int;
+    public var size: Int;
+    public var vector: Array<Dynamic>;
+    public var indexStart: Int;
+    public var indexEnd: Int;
+    public var curIndex: Int;
 
-  function onBufferFull() {}
+    public function new(arg0: Int) {
+    }
 
-  function __constructor__(size: Int) {}
+    public function incrementStart(): Void {
+    }
 
-  function incrementStart() {}
+    public function incrementEnd(): Void {
+    }
 
-  function incrementEnd() {}
+    public function incrementCurIndex(): Void {
+    }
 
-  function incrementCurIndex() {}
+    public function precedes(arg0: Int, arg1: Int): Bool {
+        throw "stub: precedes not decompiled";
+    }
 
-  function precedes(a: Int, b: Int): Bool {}
+    public function hasNext(): Bool {
+        throw "stub: hasNext not decompiled";
+    }
 
-  function hasNext(): Bool {}
+    public function next(): Dynamic {
+        throw "stub: next not decompiled";
+    }
 
-  function next(): Dynamic {}
+    public function reset(): Void {
+    }
 
-  function reset() {}
+    public function push(arg0: Dynamic): Void {
+    }
 
-  function push(newElement: Dynamic) {}
+    public function onBufferFull(): Void {
+    }
 }
-

@@ -1,36 +1,52 @@
 package cine;
+
 class LevelTransition extends GameCinematic {
-  var mainId: String;
-  var map: level.LevelMap.LevelMap;
-  var linkId: Dynamic;
-  var multFade: Float;
-  var walk: Dynamic;
-  var climb: Dynamic;
-  var jump: Dynamic;
-  var heroPosAfterBossRuneReload: tool.CPoint.CPoint;
-  var giveGentlemanAchievement: Bool;
-  var onLoad: Dynamic;
-  var onEnteredLevel: Dynamic;
-  var playAfterZDoorCine: Bool;
+    public var mainId: String;
+    public var map: level.LevelMap;
+    public var linkId: Dynamic;
+    public var multFade: Float;
+    public var walk: Dynamic;
+    public var climb: Dynamic;
+    public var jump: Dynamic;
+    public var heroPosAfterBossRuneReload: tool.CPoint;
+    public var giveGentlemanAchievement: Bool;
+    public var onLoad: Dynamic;
+    public var onEnteredLevel: Dynamic;
+    public var playAfterZDoorCine: Bool;
 
-  function __constructor__(mainId: String, map: level.LevelMap.LevelMap, linkId: Dynamic, heroPosAfterBossRuneReload: tool.CPoint.CPoint, noLoadingData: Dynamic) {}
+    public function new(arg0: String, arg1: level.LevelMap, arg2: Dynamic, arg3: tool.CPoint, arg4: Ref) {
+        super();
+    }
 
-  static function gotoNoLoading(id: String): LevelTransition {}
+    public static function gotoNoLoading(arg0: String): cine.LevelTransition {
+        throw "stub: gotoNoLoading not decompiled";
+    }
 
-  static function gotoSub(map: level.LevelMap.LevelMap, linkId: Dynamic): LevelTransition {}
+    public static function reloadAfterBossRuneModif(arg0: String, arg1: Int, arg2: Int): cine.LevelTransition {
+        throw "stub: reloadAfterBossRuneModif not decompiled";
+    }
 
-  static function goto(id: String): LevelTransition {}
+    public static function gotoSub(arg0: level.LevelMap, arg1: Dynamic): cine.LevelTransition {
+        throw "stub: gotoSub not decompiled";
+    }
 
-  static function reloadAfterBossRuneModif(id: String, cx: Int, cy: Int): LevelTransition {}
+    public static function goto(arg0: String): cine.LevelTransition {
+        throw "stub: goto not decompiled";
+    }
 
-  function get_isADlcPLevel(): Bool {}
+    public function get_isADlcPLevel(): Bool {
+        throw "stub: get_isADlcPLevel not decompiled";
+    }
 
-  function loadNewLevel() {}
+    public function loadNewLevel(): Void {
+    }
 
-  function afterTransitionCine() {}
+    public function afterTransitionCine(): Void {
+    }
 
-  function entranceWalk(xFrom: Int, xTo: Int, exit: en.inter.Exit.Exit) {}
+    public function entranceWalk(arg0: Int, arg1: Int, arg2: en.inter.Exit): Void {
+    }
 
-  function entranceJump(startCx: Int, startCy: Int, exit: en.inter.Exit.Exit) {}
+    public function entranceJump(arg0: Int, arg1: Int, arg2: en.inter.Exit): Void {
+    }
 }
-

@@ -1,20 +1,28 @@
 package ui;
+
 class LevelCard {
-  var level: Dynamic;
-  var id: String;
-  var name: String;
-  var levelLogoBitmap: h2d.Bitmap.Bitmap;
-  static var CARD_MAX_WIDTH: Int;
-  static var CARD_MAX_HEIGHT: Int;
+    public static var CARD_MAX_WIDTH: Int;
+    public static var CARD_MAX_HEIGHT: Int;
+    public var level: Dynamic;
+    public var id: String;
+    public var name: String;
+    public var levelLogoBitmap: h2d.Bitmap;
 
-  static function scaleFrame(frame: libs.heaps.slib.HSprite.HSprite, width: Int, height: Int) {}
+    public function new(arg0: Dynamic, arg1: h2d.Tile) {
+    }
 
-  function __constructor__(level: Dynamic, levelLogoTile: h2d.Tile.Tile) {}
+    public static function scaleFrame(arg0: libs.heaps.slib.HSprite, arg1: Int, arg2: Int): Void {
+    }
 
-  function getFrame(width: Int, height: Int, locked: Bool): libs.heaps.slib.HSprite.HSprite {}
+    public function getFrame(arg0: Int, arg1: Int, arg2: Bool): libs.heaps.slib.HSprite {
+        throw "stub: getFrame not decompiled";
+    }
 
-  function getLevelCardObject(width: Int, height: Int, scale: Float, locked: Bool, showTitle: Bool): h2d.Object.Object {}
+    public function getLevelCardObject(arg0: Int, arg1: Int, arg2: Float, arg3: Bool, arg4: Bool): h2d.Object {
+        throw "stub: getLevelCardObject not decompiled";
+    }
 
-  function getLevelLogo(): h2d.Bitmap.Bitmap {}
+    public function getLevelLogo(): h2d.Bitmap {
+        throw "stub: getLevelLogo not decompiled";
+    }
 }
-

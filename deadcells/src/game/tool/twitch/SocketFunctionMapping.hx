@@ -1,18 +1,24 @@
 package tool.twitch;
-class SocketDynamicMapping {
-  var map: haxe.ds.StringMap;
-  var socket: tool.twitch.CustomSocketConnection.CustomSocketConnection;
 
-  function __constructor__(socket: tool.twitch.CustomSocketConnection.CustomSocketConnection) {}
+class SocketFunctionMapping {
+    public var map: haxe.ds.StringMap;
+    public var socket: tool.twitch.CustomSocketConnection;
 
-  function changeSocket(newSocket: tool.twitch.CustomSocketConnection.CustomSocketConnection) {}
+    public function new(arg0: tool.twitch.CustomSocketConnection) {
+    }
 
-  function bind(type: String, fn: Dynamic) {}
+    public function changeSocket(arg0: tool.twitch.CustomSocketConnection): Void {
+    }
 
-  function unbindAll() {}
+    public function bind(arg0: String, arg1: Dynamic): Void {
+    }
 
-  function onMessage(type: String, data: String) {}
+    public function unbindAll(): Void {
+    }
 
-  function onError(rawData: String, error: String) {}
+    public function onMessage(arg0: String, arg1: String): Void {
+    }
+
+    public function onError(arg0: String, arg1: String): Void {
+    }
 }
-

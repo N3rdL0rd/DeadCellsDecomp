@@ -1,34 +1,52 @@
 package en.inter.npc;
+
 class CollectorIntern extends en.inter.npc.CollectorPanelNpc {
-  var isFocused: Bool;
-  var headFlip: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var isFocused: Bool;
+    public var headFlip: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onGreet(h: en.Hero.Hero) {}
+    public override function onGreet(arg0: en.Hero): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getIdleAnimForPanel(listMask: h2d.Mask.Mask): libs.heaps.slib.HSprite.HSprite {}
+    public override function getIdleAnimForPanel(arg0: h2d.Mask): libs.heaps.slib.HSprite {
+        throw "stub: getIdleAnimForPanel not decompiled";
+    }
 
-  function getPanelPixelOffset(): Int {}
+    public override function getPanelPixelOffset(): Int {
+        throw "stub: getPanelPixelOffset not decompiled";
+    }
 
-  function onPanelClose() {}
+    public override function onPanelClose(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

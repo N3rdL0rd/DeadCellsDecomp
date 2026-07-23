@@ -1,31 +1,52 @@
 package en.mob;
+
 class BonePillar extends en.Mob {
-  var atkDir: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var atkDir: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): BonePillar {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.BonePillar {
+        throw "stub: create not decompiled";
+    }
 
-  function get_frontShootX(): Float {}
+    public function get_frontShootX(): Float {
+        throw "stub: get_frontShootX not decompiled";
+    }
 
-  function get_frontShootY(): Float {}
+    public function get_frontShootY(): Float {
+        throw "stub: get_frontShootY not decompiled";
+    }
 
-  function get_backShootX(): Float {}
+    public function get_backShootX(): Float {
+        throw "stub: get_backShootX not decompiled";
+    }
 
-  function get_backShootY(): Float {}
+    public function get_backShootY(): Float {
+        throw "stub: get_backShootY not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

@@ -1,11 +1,16 @@
 package level.struct;
+
 class Lighthouse extends level.LevelStruct {
-  var combats: hl.types.ArrayObj<Dynamic>;
+    public var combats: Array<Dynamic>;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 }
-

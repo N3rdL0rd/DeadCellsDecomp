@@ -1,14 +1,21 @@
 package level.lore;
+
 class ResearchDiary7 extends level.LoreManager {
-  var _pt: tool.CPoint.CPoint;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var _pt: tool.CPoint;
 
-  function __constructor__(l: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function get_pt(): tool.CPoint.CPoint {}
+    public function get_pt(): tool.CPoint {
+        throw "stub: get_pt not decompiled";
+    }
 
-  function postUpdate(dt: Float) {}
+    public override function postUpdate(arg0: Float): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

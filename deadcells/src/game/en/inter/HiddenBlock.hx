@@ -1,53 +1,79 @@
 package en.inter;
+
 class HiddenBlock extends en.Interactive {
-  var item: tool.InventItem.InventItem;
-  var back: libs.heaps.slib.HSprite.HSprite;
-  var rune: libs.heaps.slib.HSprite.HSprite;
-  var lightSegment: light.Visibility.Visibility;
-  var dmgSounds: hl.types.ArrayObj<Dynamic>;
-  var dieSounds: hl.types.ArrayObj<Dynamic>;
-  var foodKind: Dynamic;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var item: tool.InventItem;
+    public var back: libs.heaps.slib.HSprite;
+    public var rune: libs.heaps.slib.HSprite;
+    public var lightSegment: light.Wall;
+    public var dmgSounds: Array<Dynamic>;
+    public var dieSounds: Array<Dynamic>;
+    public var foodKind: FoodKind;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dir: Int, i: tool.InventItem.InventItem) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: tool.InventItem) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDie() {}
+    public function onDie(): Void {
+    }
 
-  function levelUpLoot() {}
+    public function levelUpLoot(): Void {
+    }
 
-  function patchUsingOptions() {}
+    public function patchUsingOptions(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

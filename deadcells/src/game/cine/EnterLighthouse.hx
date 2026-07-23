@@ -1,14 +1,17 @@
 package cine;
+
 class EnterLighthouse extends GameCinematic {
-  var servanteSurvival: en.mob.AmazonSurvival.AmazonSurvival;
-  var servanteTactic: en.mob.AmazonTactic.AmazonTactic;
-  var servanteBrutal: en.mob.AmazonBrutal.AmazonBrutal;
-  var manager: en.AmazonManager.AmazonManager;
-  var nbWidthCase: Int;
-  var entranceRoom: level.Room.Room;
+    public var servanteSurvival: en.mob.AmazonSurvival;
+    public var servanteTactic: en.mob.AmazonTactic;
+    public var servanteBrutal: en.mob.AmazonBrutal;
+    public var manager: en.AmazonManager;
+    public var nbWidthCase: Int;
+    public var entranceRoom: level.Room;
 
-  function __constructor__(hero: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

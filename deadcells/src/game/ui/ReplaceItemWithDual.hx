@@ -1,51 +1,62 @@
 package ui;
+
 class ReplaceItemWithDual extends ui.Process {
-  var controller: tool.Controller.Controller;
-  var wrapper: h2d.Layers.Layers;
-  var fb: ui.FlowBox.FlowBox;
-  var selection: h2d.ScaleGrid.ScaleGrid;
-  var source: Entity;
-  var item: tool.InventItem.InventItem;
-  var iiBis: tool.InventItem.InventItem;
-  var iiLeft: tool.InventItem.InventItem;
-  var iiRight: tool.InventItem.InventItem;
-  var endCb: Dynamic;
-  var niDesc: ui.NewItemDesc.NewItemDesc;
-  var niBisDesc: ui.NewItemDesc.NewItemDesc;
-  var liDesc: ui.NewItemDesc.NewItemDesc;
-  var riDesc: ui.NewItemDesc.NewItemDesc;
-  var curDesc: ui.NewItemDesc.NewItemDesc;
-  var liInter: h2d.Interactive.Interactive;
-  var riInter: h2d.Interactive.Interactive;
-  var line: libs.heaps.slib.HSprite.HSprite;
-  var redCross: libs.heaps.slib.HSprite.HSprite;
-  var redCrossBis: libs.heaps.slib.HSprite.HSprite;
-  var arrowDown: libs.heaps.slib.HSprite.HSprite;
-  var arrowDownBis: libs.heaps.slib.HSprite.HSprite;
-  var arrowLeft: libs.heaps.slib.HSprite.HSprite;
-  var arrowRight: libs.heaps.slib.HSprite.HSprite;
-  var showUIonDispose: Bool;
-  var closing: Bool;
-  static var tArrow: Float;
+    public static var tArrow: Float;
+    public var controller: tool.ControllerAccess;
+    public var wrapper: h2d.Layers;
+    public var fb: ui.FlowBox;
+    public var selection: h2d.ScaleGrid;
+    public var source: Entity;
+    public var item: tool.InventItem;
+    public var iiBis: tool.InventItem;
+    public var iiLeft: tool.InventItem;
+    public var iiRight: tool.InventItem;
+    public var endCb: Dynamic;
+    public var niDesc: ui.NewItemDesc;
+    public var niBisDesc: ui.NewItemDesc;
+    public var liDesc: ui.NewItemDesc;
+    public var riDesc: ui.NewItemDesc;
+    public var curDesc: ui.NewItemDesc;
+    public var liInter: h2d.Interactive;
+    public var riInter: h2d.Interactive;
+    public var line: libs.heaps.slib.HSprite;
+    public var redCross: libs.heaps.slib.HSprite;
+    public var redCrossBis: libs.heaps.slib.HSprite;
+    public var arrowDown: libs.heaps.slib.HSprite;
+    public var arrowDownBis: libs.heaps.slib.HSprite;
+    public var arrowLeft: libs.heaps.slib.HSprite;
+    public var arrowRight: libs.heaps.slib.HSprite;
+    public var showUIonDispose: Bool;
+    public var closing: Bool;
 
-  function __constructor__(source: Entity, firstItem: tool.InventItem.InventItem, secondItem: tool.InventItem.InventItem, cb: Dynamic) {}
+    public function new(arg0: Entity, arg1: tool.InventItem, arg2: tool.InventItem, arg3: Dynamic) {
+        super();
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 
-  function onSwap() {}
+    public function onSwap(): Void {
+    }
 
-  function select(newDesc: ui.NewItemDesc.NewItemDesc, instant: Bool) {}
+    public function select(arg0: ui.NewItemDesc, arg1: Bool): Void {
+    }
 
-  function showArrow() {}
+    public function showArrow(): Void {
+    }
 
-  function noValidationFeedback() {}
+    public function noValidationFeedback(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

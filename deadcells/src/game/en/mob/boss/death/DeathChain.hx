@@ -1,49 +1,70 @@
 package en.mob.boss.death;
-class DeathChain extends Entity {
-  var target: Entity;
-  var originX: Float;
-  var originY: Float;
-  var targetReached: Bool;
-  var active: Bool;
-  var gameCine: GameCinematic;
-  var chainGrabSprite: libs.heaps.slib.HSprite.HSprite;
-  var chain: en.mob.boss.death.DeathChain.DeathChain;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-
-  function __constructor__(lvl: pr.Level.Level, x: Float, y: Float, parent: en.mob.boss.death.Death.Death, target: Entity, gameCine: GameCinematic) {}
-
-  function get_parentDeath(): en.mob.boss.death.Death.Death {}
-
-  function init() {}
-
-  function initGfx() {}
-
-  function dispose() {}
-
-  function fixedUpdate() {}
-
-  function postUpdate() {}
-
-  function setPosPixel(x: Float, y: Float) {}
-
-  function getCLID(): Int {}
-
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getSerializeSchema(): hxbit.Schema.Schema {}
-
-  function unserializeInit() {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
-}
 
 class DeathCustomChain extends tool.Chain {
+    public function new() {
+        super();
+    }
 
-  function __constructor__() {}
-
-  function changeLevel(level: pr.Level.Level, layer: Dynamic) {}
+    public override function changeLevel(arg0: pr.Level, arg1: Dynamic): Void {
+    }
 }
 
+class DeathChain extends Entity {
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var target: Entity;
+    public var originX: Float;
+    public var originY: Float;
+    public var targetReached: Bool;
+    public var active: Bool;
+    public var gameCine: GameCinematic;
+    public var chainGrabSprite: libs.heaps.slib.HSprite;
+    public var chain: en.mob.boss.death.DeathCustomChain;
+
+    public function new(arg0: pr.Level, arg1: Float, arg2: Float, arg3: en.mob.boss.death.Death, arg4: Entity, arg5: GameCinematic) {
+        super();
+    }
+
+    public function get_parentDeath(): en.mob.boss.death.Death {
+        throw "stub: get_parentDeath not decompiled";
+    }
+
+    public override function init(): Void {
+    }
+
+    public override function initGfx(): Void {
+    }
+
+    public override function dispose(): Void {
+    }
+
+    public override function fixedUpdate(): Void {
+    }
+
+    public override function postUpdate(): Void {
+    }
+
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
+
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public override function unserializeInit(): Void {
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
+}

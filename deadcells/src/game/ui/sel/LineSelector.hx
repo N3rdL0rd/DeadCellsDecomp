@@ -1,55 +1,81 @@
 package ui.sel;
+
 class LineSelector extends ui.Process {
-  var controller: tool.Controller.Controller;
-  var offsetX: Int;
-  var leftArrow: libs.heaps.slib.HSprite.HSprite;
-  var rightArrow: libs.heaps.slib.HSprite.HSprite;
-  var arrowsOffset: Float;
-  var fbSelect: ui.FlowBox.FlowBox;
-  var selectText: ui.Text.Text;
-  var currentText: ui.Text.Text;
-  var nameText: ui.Text.Text;
-  var descText: ui.Text.Text;
-  var box: ui.UIBox.UIBox;
-  var mask: h2d.Mask.Mask;
-  var wrapperSkin: h2d.Object.Object;
-  var canCancel: Bool;
-  var curId: Int;
+    public var controller: tool.ControllerAccess;
+    public var offsetX: Int;
+    public var leftArrow: libs.heaps.slib.HSprite;
+    public var rightArrow: libs.heaps.slib.HSprite;
+    public var arrowsOffset: Float;
+    public var fbSelect: ui.FlowBox;
+    public var selectText: ui.Text;
+    public var currentText: ui.Text;
+    public var nameText: ui.Text;
+    public var descText: ui.Text;
+    public var box: ui.UIBox;
+    public var mask: h2d.Mask;
+    public var wrapperSkin: h2d.Object;
+    public var canCancel: Bool;
+    public var curId: Int;
 
-  function __constructor__(parent: libs.Process.Process) {}
+    public function new(arg0: libs.Process) {
+        super();
+    }
 
-  function get_widBox(): Int {}
+    public function get_widBox(): Int {
+        throw "stub: get_widBox not decompiled";
+    }
 
-  function get_heiBox(): Int {}
+    public function get_heiBox(): Int {
+        throw "stub: get_heiBox not decompiled";
+    }
 
-  function get_selectTextStr(): String {}
+    public function get_selectTextStr(): String {
+        throw "stub: get_selectTextStr not decompiled";
+    }
 
-  function get_currentTextStr(): String {}
+    public function get_currentTextStr(): String {
+        throw "stub: get_currentTextStr not decompiled";
+    }
 
-  function createObjects() {}
+    public function createObjects(): Void {
+    }
 
-  function getItemNumber(): Int {}
+    public function getItemNumber(): Int {
+        throw "stub: getItemNumber not decompiled";
+    }
 
-  function getItem(i: Int): Dynamic {}
+    public function getItem(arg0: Int): Dynamic {
+        throw "stub: getItem not decompiled";
+    }
 
-  function isCurrentSelected(): Bool {}
+    public function isCurrentSelected(): Bool {
+        throw "stub: isCurrentSelected not decompiled";
+    }
 
-  function updateItemScale(item: Dynamic, index: Int) {}
+    public function updateItemScale(arg0: Dynamic, arg1: Int): Void {
+    }
 
-  function showContent() {}
+    public function showContent(): Void {
+    }
 
-  function updateData(isCurrent: Bool, name: String, desc: String) {}
+    public function updateData(arg0: Bool, arg1: String, arg2: String): Void {
+    }
 
-  function validate() {}
+    public function validate(): Void {
+    }
 
-  function close() {}
+    public function close(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function controlsUpdate() {}
+    public function controlsUpdate(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function updatePos(newId: Int, speedMult: Dynamic) {}
+    public function updatePos(arg0: Int, arg1: Ref): Void {
+    }
 }
-

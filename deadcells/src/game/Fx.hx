@@ -1,1527 +1,2867 @@
+package cine;
 
 class Fx extends libs.Process {
-  var emitters: hl.types.ArrayObj<Dynamic>;
-  var pool: libs.heaps.HParticle.HParticle;
-  var bgDisplaceSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var mainDisplaceSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var topDisplaceSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var bgAddSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var bgNormalSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var mobNormalSbGroup: libs.heaps.SpriteBatchGroup.SpriteBatchGroup;
-  var topMobNormalSbGroup: libs.heaps.SpriteBatchGroup.SpriteBatchGroup;
-  var midAddSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var mobAddSbGroup: libs.heaps.SpriteBatchGroup.SpriteBatchGroup;
-  var topAddSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var topNormalSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var level: pr.Level.Level;
-  var viewport: Viewport;
-  var waterColor: Dynamic;
-  var waterColorLight: Dynamic;
-  var gravityFactor: Float;
-  var condemnedCpt: Float;
-  var cachedTime: Float;
-  var viewportDiffX: Float;
-  var viewportDiffY: Float;
-  var oldVpX: Float;
-  var oldVpY: Float;
-  var orbAng: Float;
-  var courtyardSeq: Int;
-  var clockTowerSeq: Int;
+    public var emitters: Array<Dynamic>;
+    public var pool: libs.heaps.ParticlePool;
+    public var bgDisplaceSb: libs.heaps.slib.HSpriteBatch;
+    public var mainDisplaceSb: libs.heaps.slib.HSpriteBatch;
+    public var topDisplaceSb: libs.heaps.slib.HSpriteBatch;
+    public var bgAddSb: libs.heaps.slib.HSpriteBatch;
+    public var bgNormalSb: libs.heaps.slib.HSpriteBatch;
+    public var mobNormalSbGroup: libs.heaps.SpriteBatchGroup;
+    public var topMobNormalSbGroup: libs.heaps.SpriteBatchGroup;
+    public var midAddSb: libs.heaps.slib.HSpriteBatch;
+    public var mobAddSbGroup: libs.heaps.SpriteBatchGroup;
+    public var topAddSb: libs.heaps.slib.HSpriteBatch;
+    public var topNormalSb: libs.heaps.slib.HSpriteBatch;
+    public var level: pr.Level;
+    public var viewport: Viewport;
+    public var waterColor: Dynamic;
+    public var waterColorLight: Dynamic;
+    public var gravityFactor: Float;
+    public var condemnedCpt: Float;
+    public var cachedTime: Float;
+    public var viewportDiffX: Float;
+    public var viewportDiffY: Float;
+    public var oldVpX: Float;
+    public var oldVpY: Float;
+    public var orbAng: Float;
+    public var courtyardSeq: Int;
+    public var clockTowerSeq: Int;
+
+    public function new(arg0: pr.Level, arg1: h2d.Object, arg2: h2d.Object, arg3: h2d.Object) {
+        super();
+    }
+
+    public function createExternalBatch(): libs.heaps.slib.HSpriteBatch {
+        throw "stub: createExternalBatch not decompiled";
+    }
+
+    public override function onDispose(): Void {
+    }
+
+    public override function secToFrames(arg0: Float): Float {
+        throw "stub: secToFrames not decompiled";
+    }
+
+    public override function framesToSec(arg0: Float): Float {
+        throw "stub: framesToSec not decompiled";
+    }
+
+    public function killEmitters(arg0: String): Void {
+    }
+
+    public function allocMultiBatch(arg0: libs.heaps.SpriteBatchGroup, arg1: tool.FxTile, arg2: Float, arg3: Float, arg4: Ref, arg5: Dynamic, arg6: Ref): libs.heaps.HParticle {
+        throw "stub: allocMultiBatch not decompiled";
+    }
+
+    public function allocBg(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocBg not decompiled";
+    }
+
+    public function allocMid(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocMid not decompiled";
+    }
+
+    public function allocTop(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocTop not decompiled";
+    }
+
+    public function allocBgNormal(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocBgNormal not decompiled";
+    }
+
+    public function allocMobNormal(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocMobNormal not decompiled";
+    }
+
+    public function allocMobTop(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocMobTop not decompiled";
+    }
+
+    public function allocMobAdd(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocMobAdd not decompiled";
+    }
+
+    public function allocTopNormal(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocTopNormal not decompiled";
+    }
+
+    public function allocDisplaceBg(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocDisplaceBg not decompiled";
+    }
+
+    public function allocDisplaceMain(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocDisplaceMain not decompiled";
+    }
 
-  function __constructor__(p: pr.Level.Level, bgCtx: h2d.Object.Object, midCtx: h2d.Object.Object, topCtx: h2d.Object.Object) {}
+    public function allocDisplaceTop(arg0: tool.FxTile, arg1: Float, arg2: Float, arg3: Ref, arg4: Dynamic, arg5: Ref): libs.heaps.HParticle {
+        throw "stub: allocDisplaceTop not decompiled";
+    }
 
-  function createExternalBatch(): libs.heaps.slib.HSpriteBatch.HSpriteBatch {}
+    public function allocExternal(arg0: libs.heaps.slib.HSpriteBatch, arg1: tool.FxTile, arg2: Float, arg3: Float, arg4: Ref, arg5: Dynamic, arg6: Ref): libs.heaps.HParticle {
+        throw "stub: allocExternal not decompiled";
+    }
 
-  function onDispose() {}
+    public function getTile(arg0: String, arg1: Ref, arg2: Ref): tool.FxTile {
+        throw "stub: getTile not decompiled";
+    }
 
-  function secToFrames(v: Float): Float {}
+    public function getDisplaceTile(arg0: String): tool.FxTile {
+        throw "stub: getDisplaceTile not decompiled";
+    }
 
-  function framesToSec(v: Float): Float {}
+    public function getEnemyTile(arg0: String): tool.FxTile {
+        throw "stub: getEnemyTile not decompiled";
+    }
 
-  function killEmitters(id: String) {}
+    public function makeFxTile(arg0: h2d.Tile, arg1: Dynamic): tool.FxTile {
+        throw "stub: makeFxTile not decompiled";
+    }
 
-  function allocMultiBatch(batchGroup: libs.heaps.SpriteBatchGroup.SpriteBatchGroup, t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function killAll(): Void {
+    }
 
-  function allocBg(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function markerCase(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function allocMid(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function markerCaseDot(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function allocTop(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function markerFreeDot(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function allocBgNormal(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function refusal(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function allocMobNormal(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function wings(arg0: Entity, arg1: Int): Void {
+    }
 
-  function allocMobTop(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function wingsDodge(arg0: Entity, arg1: Int): Void {
+    }
 
-  function allocMobAdd(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function activateATSwitch(arg0: Entity, arg1: Int): Void {
+    }
 
-  function allocTopNormal(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function frontShield(arg0: Entity, arg1: Float, arg2: Int): Void {
+    }
 
-  function allocDisplaceBg(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function shieldParryStart(arg0: Entity, arg1: Int, arg2: Dynamic): Void {
+    }
 
-  function allocDisplaceMain(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function frontShieldHit(arg0: Entity, arg1: Int): Void {
+    }
 
-  function allocDisplaceTop(t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function warriorShieldHit(arg0: Entity, arg1: Int): Void {
+    }
 
-  function allocExternal(externalBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, t: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, p: Dynamic, ignoreParticleLimit: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function _fly(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function getTile(id: String, px: Dynamic, py: Dynamic): Dynamic {}
+    public function flies(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function getDisplaceTile(id: String): Dynamic {}
+    public function hitLines(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Dynamic, arg5: Ref, arg6: Ref): Void {
+    }
 
-  function getEnemyTile(id: String): Dynamic {}
+    public function lustreHit(arg0: Float, arg1: Int, arg2: Int, arg3: Dynamic): Void {
+    }
 
-  function makeFxTile(t: h2d.Tile.Tile, id: Dynamic): Dynamic {}
+    public function _bloodDropPhysics(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function killAll() {}
+    public function bloodDrop(arg0: Entity, arg1: Float, arg2: Float, arg3: Ref, arg4: Ref): Void {
+    }
 
-  function markerCase(cx: Float, cy: Float, c: Dynamic, durationS: Dynamic) {}
+    public function _bloodPhysics(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function markerCaseDot(cx: Int, cy: Int, c: Dynamic, durationS: Dynamic) {}
+    public function bloodHit(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function markerFreeDot(x: Float, y: Float, c: Dynamic, durationS: Dynamic) {}
+    public function singleUseBuffApplied(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function refusal(x: Float, y: Float, iconScale: Dynamic) {}
+    public function bloodHitFree(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function wings(e: Entity, c: Int) {}
+    public function bleed(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function wingsDodge(e: Entity, c: Int) {}
+    public function yolo(arg0: Float, arg1: Float): Void {
+    }
 
-  function activateATSwitch(e: Entity, c: Int) {}
+    public function lineFork(arg0: Float, arg1: Float): Void {
+    }
 
-  function frontShield(e: Entity, extraDist: Float, c: Int) {}
+    public function timeDistorsionStart(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function shieldParryStart(e: Entity, c: Int, dir: Dynamic) {}
+    public function timeDistorsionEnd(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function frontShieldHit(e: Entity, c: Int) {}
+    public function timeDistorsion(arg0: Entity, arg1: Int, arg2: Int): Void {
+    }
 
-  function warriorShieldHit(e: Entity, c: Int) {}
+    public function hookTensionSurvival(arg0: tool.HookChainSurvival): Void {
+    }
 
-  function _fly(p: libs.heaps.HParticle.HParticle) {}
+    public function hookTension(arg0: tool.HookChain): Void {
+    }
 
-  function flies(x: Float, y: Float, rx: Dynamic, ry: Dynamic) {}
+    public function hooked(arg0: tool.HookChain, arg1: Bool): Void {
+    }
 
-  function hitLines(x: Float, y: Float, dir: Int, c: Int, onTop: Dynamic, sparkLineCount: Dynamic, deflectLineCount: Dynamic) {}
+    public function hookedMultSurvival(arg0: tool.HookChainSurvival, arg1: Bool): Void {
+    }
 
-  function lustreHit(x: Float, y: Int, c: Int, onTop: Dynamic) {}
+    public function hookedMult(arg0: tool.HookChainTimeKeeper, arg1: Bool): Void {
+    }
 
-  function _bloodDropPhysics(p: libs.heaps.HParticle.HParticle) {}
+    public function hookTensionMult(arg0: tool.HookChainTimeKeeper): Void {
+    }
 
-  function bloodDrop(e: Entity, x: Float, y: Float, color1: Dynamic, color2: Dynamic) {}
+    public function bleeding(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function _bloodPhysics(p: libs.heaps.HParticle.HParticle) {}
+    public function bulletVanish(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function bloodHit(a: tool.atk.AttackData.AttackData, e: Entity) {}
+    public function bulletHit(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function singleUseBuffApplied(x: Float, y: Float, dir: Int) {}
+    public function oreShine(arg0: Float, arg1: Float): Void {
+    }
 
-  function bloodHitFree(x: Float, y: Float, dir: Int) {}
+    public function spearShine(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Bool): Void {
+    }
 
-  function bleed(a: tool.atk.AttackData.AttackData, e: Entity) {}
+    public function axeShine(arg0: en.loot.Ammo, arg1: Int, arg2: Bool): Void {
+    }
 
-  function yolo(x: Float, y: Float) {}
+    public function entranceTeleporter(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function lineFork(x: Float, y: Float) {}
+    public function longHitLine(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Int, arg5: Int): Void {
+    }
 
-  function timeDistorsionStart(x: Float, y: Float, r: Float, c: Int) {}
+    public function challengeDoorBrasero(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function timeDistorsionEnd(x: Float, y: Float, r: Float, c: Int) {}
+    public function challengeDoorBraseroOff(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function timeDistorsion(e: Entity, core: Int, far: Int) {}
+    public function challengeDoorBraseroChange(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function hookTensionSurvival(c: tool.HookChainSurvival.HookChainSurvival) {}
+    public function lockChain(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Dynamic): Void {
+    }
 
-  function hookTension(c: tool.HookChain.HookChain) {}
+    public function hookGrab(arg0: Entity, arg1: Int): Void {
+    }
 
-  function hooked(c: tool.HookChain.HookChain, hasBlood: Bool) {}
+    public function groundRoot(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function hookedMultSurvival(c: tool.HookChainSurvival.HookChainSurvival, hasBlood: Bool) {}
+    public function subTeleporter(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function hookedMult(c: tool.HookChain.HookChainTimeKeeper, hasBlood: Bool) {}
+    public function groundLightBeam(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function hookTensionMult(c: tool.HookChain.HookChainTimeKeeper) {}
+    public function buffedOwl(arg0: Entity, arg1: Int): Void {
+    }
 
-  function bleeding(x: Float, y: Float, dir: Int) {}
+    public function darknessRemoverSpawn(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function bulletVanish(x: Float, y: Float, ang: Float, c: Int) {}
+    public function darknessRemoverCore(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Float): Void {
+    }
 
-  function bulletHit(x: Float, y: Float, ang: Float, c: Int, lightIntensity: Dynamic) {}
+    public function darknessRemoverOff(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function oreShine(x: Float, y: Float) {}
+    public function darknessRemoverOffHelper(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function spearShine(x: Float, y: Float, ang: Float, dist: Float, c: Int, blink: Bool) {}
+    public function darknessRemoverRadius(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function axeShine(e: en.loot.Ammo.Ammo, c: Int, blink: Bool) {}
+    public function darknessRemoverGlassSphere(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Bool): Void {
+    }
 
-  function entranceTeleporter(x: Float, y: Float, c: Int) {}
+    public function darknessRemoverVanish(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function longHitLine(x: Float, y: Float, dir: Int, range: Float, inCol: Int, outCol: Int) {}
+    public function collectorBubbles(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic, arg5: Dynamic): Void {
+    }
 
-  function challengeDoorBrasero(x: Float, y: Float, c: Int) {}
+    public function collectorSmoke(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function challengeDoorBraseroOff(x: Float, y: Float, c: Int) {}
+    public function _shinyPart(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function challengeDoorBraseroChange(x: Float, y: Float, c: Int) {}
+    public function dust(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function lockChain(x: Float, y: Float, lenPx: Float, ang: Float, c: Int, alpha: Dynamic) {}
+    public function bigChestDust(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function hookGrab(e: Entity, c: Int) {}
+    public function skinnerDust(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function groundRoot(x: Float, y: Float, c: Int, sec: Float) {}
+    public function exitDust(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function subTeleporter(x: Float, y: Float, c: Int) {}
+    public function bossFlagDust(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function groundLightBeam(x: Float, y: Float, c: Int) {}
+    public function collectorDust(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function buffedOwl(e: Entity, c: Int) {}
+    public function bigChestShine(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function darknessRemoverSpawn(x: Float, y: Float, radius: Float, c: Int) {}
+    public function cursedChestTongue(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function darknessRemoverCore(x: Float, y: Float, r: Float, c: Int, pow: Float) {}
+    public function cursedChestPuke(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function darknessRemoverOff(x: Float, y: Float, r: Float, c: Int) {}
+    public function bombPirateShot(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function darknessRemoverOffHelper(x: Float, y: Float, r: Float, c: Int) {}
+    public function grenadeWarning(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function darknessRemoverRadius(x: Float, y: Float, r: Float, c: Int) {}
+    public function itemTimeOut(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function darknessRemoverGlassSphere(x: Float, y: Float, r: Float, c: Int, big: Bool) {}
+    public function beamMeUpCollector(arg0: Entity): Void {
+    }
 
-  function darknessRemoverVanish(x: Float, y: Float, r: Float, c: Int, dir: Dynamic) {}
+    public function tailPoison(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function collectorBubbles(x: Float, y: Float, r: Float, c: Int, angRange: Dynamic, surfaceY: Dynamic) {}
+    public function tailLine(arg0: Entity, arg1: Int, arg2: Float, arg3: Float, arg4: Dynamic, arg5: Ref, arg6: Ref): Void {
+    }
 
-  function collectorSmoke(x: Float, y: Float, r: Float, c: Int, n: Dynamic) {}
+    public function tailLineFree(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Float, arg6: Float, arg7: Dynamic): Void {
+    }
 
-  function _shinyPart(p: libs.heaps.HParticle.HParticle) {}
+    public function tailLineSlash(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Float, arg6: Float, arg7: Dynamic, arg8: Dynamic): Void {
+    }
 
-  function dust(x: Float, y: Float, r: Float, n: Int, c: Int) {}
+    public function tailLineCustom(arg0: Entity, arg1: String, arg2: Int, arg3: Float, arg4: Dynamic): Void {
+    }
 
-  function bigChestDust(x: Float, y: Float, ceilY: Float, c: Int) {}
+    public function tailMagicMissile(arg0: Entity, arg1: Int): Void {
+    }
 
-  function skinnerDust(x: Float, y: Float, ceilY: Float, c: Int) {}
+    public function tailMagicSalve(arg0: Entity, arg1: Int, arg2: Int): Void {
+    }
 
-  function exitDust(x: Float, y: Float, c: Int) {}
+    public function tailSonicBolt(arg0: Entity, arg1: Int, arg2: Int): Void {
+    }
 
-  function bossFlagDust(x: Float, y: Float, h: Float, c: Int) {}
+    public function tailLineDots(arg0: Entity, arg1: Int, arg2: Float, arg3: Float, arg4: Dynamic, arg5: Ref, arg6: Ref): Void {
+    }
 
-  function collectorDust(x: Float, y: Float, c: Int) {}
+    public function tailHomunculus(arg0: Entity, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function bigChestShine(x: Float, y: Float, wid: Float, hei: Float) {}
+    public function tailBloodBodyPart(arg0: en.BodyPart): Void {
+    }
 
-  function cursedChestTongue(x: Float, y: Float, d: Float) {}
+    public function collectorNeedleDrop(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function cursedChestPuke(x: Float, y: Float, dir: Int, c: Int) {}
+    public function tailFrost(arg0: Entity, arg1: Int): Void {
+    }
 
-  function bombPirateShot(x: Float, y: Float, dir: Int) {}
+    public function tailBoomerang(arg0: en.Boomerang, arg1: Bool, arg2: Int): Void {
+    }
 
-  function grenadeWarning(x: Float, y: Float, ratio: Float, col: Int) {}
+    public function boomerangSparks(arg0: Entity, arg1: Int): Void {
+    }
 
-  function itemTimeOut(x: Float, y: Float, c: Int) {}
+    public function tailBall(arg0: Entity, arg1: Float, arg2: Float, arg3: Int, arg4: Bool, arg5: Ref, arg6: Dynamic): Void {
+    }
 
-  function beamMeUpCollector(e: Entity) {}
+    public function railgunLine(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Float, arg6: Float, arg7: Dynamic): Void {
+    }
 
-  function tailPoison(x: Float, y: Float, c: Int) {}
+    public function tailDots(arg0: Entity, arg1: Float, arg2: Int, arg3: Dynamic): Void {
+    }
 
-  function tailLine(e: Entity, c: Int, alpha: Float, thickness: Float, durationFactor: Dynamic, offX: Dynamic, offY: Dynamic) {}
+    public function multiFlashBangS(arg0: Int, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function tailLineFree(x1: Float, y1: Float, x2: Float, y2: Float, c: Int, alpha: Float, thickness: Float, durationFactor: Dynamic) {}
+    public function canon(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function tailLineSlash(x1: Float, y1: Float, x2: Float, y2: Float, c: Int, alpha: Float, thickness: Float, durationFactor: Dynamic, updateFn: Dynamic) {}
+    public function heroDissolution(arg0: Entity, arg1: Dynamic): Void {
+    }
 
-  function tailLineCustom(e: Entity, sprId: String, c: Int, alpha: Float, durationFactor: Dynamic) {}
+    public function customMask(arg0: Int, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Dynamic): Void {
+    }
 
-  function tailMagicMissile(e: Entity, c: Int) {}
+    public function createMask(arg0: Int, arg1: Dynamic): Dynamic {
+        throw "stub: createMask not decompiled";
+    }
 
-  function tailMagicSalve(e: Entity, cIn: Int, cOut: Int) {}
+    public function shoot(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function tailSonicBolt(e: Entity, c0: Int, c1: Int) {}
+    public function sonicShootStart(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function tailLineDots(e: Entity, c: Int, alpha: Float, thickness: Float, durationFactor: Dynamic, offX: Dynamic, offY: Dynamic) {}
+    public function sonicShoot(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function tailHomunculus(e: Entity, c: Int, offX: Dynamic, offY: Dynamic) {}
+    public function groundStones(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function tailBloodBodyPart(e: en.BodyPart.BodyPart) {}
+    public function landHeavy(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function collectorNeedleDrop(x: Float, y: Float, floor: Float) {}
+    public function metalOnGround(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function tailFrost(e: Entity, c: Int) {}
+    public function earthquakerLeg(arg0: Float, arg1: Float, arg2: Bool, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function tailBoomerang(e: en.Boomerang.Boomerang, powerful: Bool, c: Int) {}
+    public function riseFromGround(arg0: Float, arg1: Float, arg2: Float, arg3: Dynamic): Void {
+    }
 
-  function boomerangSparks(e: Entity, c: Int) {}
+    public function freeze(arg0: Entity, arg1: Int): Void {
+    }
 
-  function tailBall(e: Entity, x: Float, y: Float, c: Int, blood: Bool, tAlpha: Dynamic, lastTailInfo: Dynamic) {}
+    public function _icePhysics(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function railgunLine(x1: Float, y1: Float, x2: Float, y2: Float, c: Int, alpha: Float, thickness: Float, durationFactor: Dynamic) {}
+    public function unfreeze(arg0: Entity, arg1: Int): Void {
+    }
 
-  function tailDots(e: Entity, ang: Float, c: Int, n: Dynamic) {}
+    public function smallIceExplosion(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function multiFlashBangS(c: Int, alpha: Float, tickS: Float, durationS: Float) {}
+    public function behemothAttack(arg0: Float, arg1: Float, arg2: Ref): Void {
+    }
 
-  function canon(x: Float, y: Float, a: Float) {}
+    public function scream(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Dynamic): Void {
+    }
 
-  function heroDissolution(e: Entity, pow: Dynamic) {}
+    public function behemothScream(arg0: Float, arg1: Float, arg2: Int, arg3: Ref, arg4: Ref): Void {
+    }
 
-  function customMask(color: Int, alpha: Float, fadeInS: Float, durationS: Float, fadeOutS: Float, add: Dynamic) {}
+    public function giantScream(arg0: Float, arg1: Float): Void {
+    }
 
-  function createMask(color: Int, add: Dynamic): Dynamic {}
+    public function dirtSpout(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function shoot(x: Float, y: Float, a: Float, c: Int) {}
+    public function ceilTurretSnap(arg0: Float, arg1: Float): Void {
+    }
 
-  function sonicShootStart(x: Float, y: Float, a: Float, c: Int) {}
+    public function chainDestroy(arg0: Float, arg1: Float): Void {
+    }
 
-  function sonicShoot(x: Float, y: Float, a: Float, c: Int) {}
+    public function tentacleOut(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function groundStones(x: Float, y: Float, c: Dynamic, pow: Dynamic) {}
+    public function _timeKeeperDash(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function landHeavy(x: Float, y: Float, rockCol: Dynamic, dustCol: Dynamic) {}
+    public function timeKeeperDash(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Float, arg5: Int): Void {
+    }
 
-  function metalOnGround(x: Float, y: Float, rockCol: Dynamic, dustCol: Dynamic) {}
+    public function _timeKeeperDashSpark(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function earthquakerLeg(x: Float, y: Float, isHeavy: Bool, rockCol: Dynamic, dustCol: Dynamic) {}
+    public function timeKeeperDashSpark(arg0: en.Mob): Void {
+    }
 
-  function riseFromGround(x: Float, y: Float, intensity: Float, c: Dynamic) {}
+    public function timeKeeperDashSparkDirect(arg0: Entity, arg1: Float): Void {
+    }
 
-  function freeze(e: Entity, c: Int) {}
+    public function beholderAnchor(arg0: Float, arg1: Float, arg2: Direction, arg3: Int): Void {
+    }
 
-  function _icePhysics(p: libs.heaps.HParticle.HParticle) {}
+    public function doorShine(arg0: en.inter.Door, arg1: Int, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function unfreeze(e: Entity, c: Int) {}
+    public function slimeBeholder(arg0: en.mob.boss.Beholder, arg1: Ref): Void {
+    }
 
-  function smallIceExplosion(x: Float, y: Float, c: Int) {}
+    public function grabJump(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function behemothAttack(x: Float, y: Float, yScale: Dynamic) {}
+    public function grabClimb(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function scream(x: Float, y: Float, c: Int, baseDelayS: Float, nbCircles: Dynamic) {}
+    public function guillainBag(arg0: Float, arg1: Float): Void {
+    }
 
-  function behemothScream(x: Float, y: Float, dir: Int, baseDelayS: Dynamic, c: Dynamic) {}
+    public function landSmoke(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function giantScream(x: Float, y: Float) {}
+    public function landDirt(arg0: Float, arg1: Float, arg2: Ref): Void {
+    }
 
-  function dirtSpout(x: Float, y: Float, radius: Float) {}
+    public function driftDirtAndSmoke(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function ceilTurretSnap(x: Float, y: Float) {}
+    public function smellSmoke(arg0: Entity, arg1: Int, arg2: Dynamic): Void {
+    }
 
-  function chainDestroy(x: Float, y: Float) {}
+    public function smellSmokeXY(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function tentacleOut(x: Float, y: Float, radius: Float) {}
+    public function dustSmoke(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function _timeKeeperDash(p: libs.heaps.HParticle.HParticle) {}
+    public function cell(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Bool): Void {
+    }
 
-  function timeKeeperDash(x: Float, y: Float, len: Float, dir: Int, r: Float, c: Int) {}
+    public function etheralDoorExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Float, arg5: Dynamic): Void {
+    }
 
-  function _timeKeeperDashSpark(p: libs.heaps.HParticle.HParticle) {}
+    public function doorExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function timeKeeperDashSpark(e: en.Mob.Mob) {}
+    public function _tubeBubble(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function timeKeeperDashSparkDirect(e: Entity, prevSprX: Float) {}
+    public function cliffCuveBubble(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Bool, arg5: libs.heaps.slib.HSpriteBatch, arg6: libs.heaps.slib.HSpriteBatch): Void {
+    }
 
-  function beholderAnchor(x: Float, y: Float, pos: Dynamic, dir: Int) {}
+    public function shipwreckSeaBubbles(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: libs.heaps.slib.HSpriteBatch): Void {
+    }
 
-  function doorShine(e: en.inter.Door.Door, c: Int, alpha: Dynamic, dur: Dynamic) {}
+    public function blorgDisplace(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Bool): Void {
+    }
 
-  function slimeBeholder(b: en.mob.boss.Beholder.Beholder, speedUp: Dynamic) {}
+    public function runeTube(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float): Void {
+    }
 
-  function grabJump(x: Float, y: Float, dir: Int) {}
+    public function runeTubeCureMachine(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float): Void {
+    }
 
-  function grabClimb(x: Float, y: Float, dir: Int) {}
+    public function zdoorExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function guillainBag(x: Float, y: Float) {}
+    public function steamCureMachine(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function landSmoke(x: Float, y: Float, n: Dynamic) {}
+    public function frostExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Int): Void {
+    }
 
-  function landDirt(x: Float, y: Float, top: Dynamic) {}
+    public function frostExplosionVertical(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function driftDirtAndSmoke(x: Float, y: Float, dir: Int) {}
+    public function fireWatered(arg0: Entity): Void {
+    }
 
-  function smellSmoke(e: Entity, c: Int, windX: Dynamic) {}
+    public function torchDepleted(arg0: Float, arg1: Float): Void {
+    }
 
-  function smellSmokeXY(x: Float, y: Float, radius: Float, c: Int, windX: Dynamic) {}
+    public function smokeBomb(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic, arg5: Dynamic): Void {
+    }
 
-  function dustSmoke(x: Float, y: Float, radius: Float, c: Int, windX: Dynamic) {}
+    public function monsterDoorSmokeExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function cell(x: Float, y: Float, curSpd: Float, c: Int, limit: Bool) {}
+    public function smokeBombShort(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic, arg5: Dynamic): Void {
+    }
 
-  function etheralDoorExplosion(x: Float, y: Float, dir: Int, c: Int, radius: Float, alpha: Dynamic) {}
+    public function smallIceGrenade(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function doorExplosion(x: Float, y: Float, dir: Int, c: Int) {}
+    public function smokeBombGrenade(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function _tubeBubble(p: libs.heaps.HParticle.HParticle) {}
+    public function smokeBombOpaque(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function cliffCuveBubble(x: Float, y: Float, wid: Float, hei: Float, intense: Bool, spriteBatchNormal: libs.heaps.slib.HSpriteBatch.HSpriteBatch, spriteBatchDisp: libs.heaps.slib.HSpriteBatch.HSpriteBatch) {}
+    public function shopReroll(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function shipwreckSeaBubbles(x: Float, y: Float, wid: Float, hei: Float, spriteBatchNormal: libs.heaps.slib.HSpriteBatch.HSpriteBatch) {}
+    public function _delayedGlass(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function blorgDisplace(x: Float, y: Float, scaleMul: Float, frame: Int, withGlow: Bool) {}
+    public function berserkEndSmokeBomb(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function runeTube(x: Float, y: Float, wid: Float, hei: Float, int: Float) {}
+    public function majorItemCharge(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function runeTubeCureMachine(x: Float, y: Float, wid: Float, hei: Float, int: Float) {}
+    public function majorItemShine(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function zdoorExplosion(x: Float, y: Float, dir: Int, c: Int) {}
+    public function majorItemPick(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function steamCureMachine(x: Float, y: Float, ang: Float, c: Int) {}
+    public function brokenGlass(arg0: Float, arg1: Float): Void {
+    }
 
-  function frostExplosion(x: Float, y: Float, dir: Int, range: Float, c: Int) {}
+    public function _confetti(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function frostExplosionVertical(x: Float, y: Float, range: Float, c: Int, up: Dynamic) {}
+    public function giftExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function fireWatered(e: Entity) {}
+    public function jarExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function torchDepleted(x: Float, y: Float) {}
+    public function flightStartJump(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function smokeBomb(x: Float, y: Float, r: Float, c: Int, dir: Dynamic, alpha: Dynamic) {}
+    public function malaiseEliteSpawn(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Entity): Void {
+    }
 
-  function monsterDoorSmokeExplosion(x: Float, y: Float, r: Float, c: Int, dir: Dynamic) {}
+    public function eliteShrineSpawn(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function smokeBombShort(x: Float, y: Float, r: Float, c: Int, dir: Dynamic, alpha: Dynamic) {}
+    public function invisibility(arg0: Entity): Void {
+    }
 
-  function smallIceGrenade(x: Float, y: Float, r: Float, c: Int, alpha: Dynamic) {}
+    public function invisiblityStart(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function smokeBombGrenade(x: Float, y: Float, r: Float, c: Int) {}
+    public function invisiblityEnd(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function smokeBombOpaque(x: Float, y: Float, r: Float, c: Int, dir: Dynamic) {}
+    public function playAnimOld(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Ref): libs.heaps.HParticle {
+        throw "stub: playAnimOld not decompiled";
+    }
 
-  function shopReroll(x: Float, y: Float, c: Int) {}
+    public function playEnmAnim(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Ref): libs.heaps.HParticle {
+        throw "stub: playEnmAnim not decompiled";
+    }
 
-  function _delayedGlass(p: libs.heaps.HParticle.HParticle) {}
+    public function playEnmAnimTop(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Ref): libs.heaps.HParticle {
+        throw "stub: playEnmAnimTop not decompiled";
+    }
 
-  function berserkEndSmokeBomb(x: Float, y: Float, r: Float, c: Int) {}
+    public function playParticleAnim(arg0: libs.heaps.HParticle, arg1: libs.heaps.slib.SpriteLib, arg2: String, arg3: Int, arg4: Ref, arg5: Ref, arg6: Ref, arg7: Ref, arg8: Ref, arg9: Ref): libs.heaps.HParticle {
+        throw "stub: playParticleAnim not decompiled";
+    }
 
-  function majorItemCharge(x: Float, y: Float, c: Int, durationS: Float) {}
+    public function playAnim(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: Ref, arg5: Ref, arg6: Ref, arg7: Dynamic, arg8: Ref, arg9: Ref, arg10: Ref): libs.heaps.HParticle {
+        throw "stub: playAnim not decompiled";
+    }
 
-  function majorItemShine(x: Float, y: Float, c: Int) {}
+    public function playMobAnim(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: Ref, arg5: Ref, arg6: Ref, arg7: Dynamic, arg8: Ref, arg9: Ref, arg10: Ref, arg11: Dynamic): libs.heaps.HParticle {
+        throw "stub: playMobAnim not decompiled";
+    }
 
-  function majorItemPick(x: Float, y: Float, c: Int) {}
+    public function playMamaAnim(arg0: libs.heaps.slib.HSpriteBatch, arg1: String, arg2: Float, arg3: Float, arg4: Int, arg5: Dynamic, arg6: Dynamic): libs.heaps.HParticle {
+        throw "stub: playMamaAnim not decompiled";
+    }
 
-  function brokenGlass(x: Float, y: Float) {}
+    public function playDynamicAtlasAnim(arg0: libs.heaps.slib.HSpriteBatch, arg1: DynamicLoadAtlas, arg2: String, arg3: Float, arg4: Float, arg5: Int, arg6: Ref, arg7: Ref, arg8: Ref, arg9: Ref, arg10: Ref): libs.heaps.HParticle {
+        throw "stub: playDynamicAtlasAnim not decompiled";
+    }
 
-  function _confetti(p: libs.heaps.HParticle.HParticle) {}
+    public function playMobAttackAnim(arg0: en.Mob, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic): libs.heaps.HParticle {
+        throw "stub: playMobAttackAnim not decompiled";
+    }
 
-  function giftExplosion(x: Float, y: Float, c1: Int, c2: Int, dir: Dynamic) {}
+    public function playWeaponAnim(arg0: Entity, arg1: Dynamic, arg2: Float, arg3: String, arg4: Dynamic, arg5: Dynamic): libs.heaps.slib.HSprite {
+        throw "stub: playWeaponAnim not decompiled";
+    }
 
-  function jarExplosion(x: Float, y: Float, c1: Int, c2: Int, dir: Dynamic) {}
+    public function playWeaponAnimFromObject(arg0: h2d.Object, arg1: Dynamic, arg2: Float, arg3: Dynamic, arg4: Dynamic, arg5: String, arg6: Dynamic, arg7: Dynamic): libs.heaps.slib.HSprite {
+        throw "stub: playWeaponAnimFromObject not decompiled";
+    }
 
-  function flightStartJump(x: Float, y: Float, c: Int) {}
+    public function playWeaponFx(arg0: Entity, arg1: String, arg2: Ref, arg3: Array<Int>, arg4: Dynamic, arg5: Dynamic): libs.heaps.slib.HSprite {
+        throw "stub: playWeaponFx not decompiled";
+    }
 
-  function malaiseEliteSpawn(x: Float, y: Float, c: Int, spawnS: Float, mob: Entity) {}
+    public function playTimeKeeperAttack(arg0: Entity, arg1: String, arg2: Ref, arg3: Dynamic, arg4: Dynamic): libs.heaps.slib.HSprite {
+        throw "stub: playTimeKeeperAttack not decompiled";
+    }
 
-  function eliteShrineSpawn(x: Float, y: Float, c: Int, spawnS: Float) {}
+    public function attachToEntity(arg0: libs.heaps.HParticle, arg1: Entity, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function invisibility(e: Entity) {}
+    public function radiusExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Ref): Void {
+    }
 
-  function invisiblityStart(x: Float, y: Float, c: Int) {}
+    public function throneShield(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function invisiblityEnd(x: Float, y: Float, c: Int) {}
+    public function throneShieldExplosion(arg0: Float, arg1: Float): Void {
+    }
 
-  function playAnimOld(id: String, x: Float, y: Float, dir: Int, scale: Dynamic, speed: Dynamic, add: Dynamic, loop: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function throneShieldStartCharge(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float): Void {
+    }
 
-  function playEnmAnim(id: String, x: Float, y: Float, dir: Int, scale: Dynamic, speed: Dynamic, add: Dynamic, alpha: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function throneShieldStart(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function playEnmAnimTop(id: String, x: Float, y: Float, dir: Int, scale: Dynamic, speed: Dynamic, stop: Dynamic, loop: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function throneSmoke(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function playParticleAnim(p: libs.heaps.HParticle.HParticle, lib: libs.heaps.slib.SpriteLib.SpriteLib, id: String, dir: Int, scaleX: Dynamic, scaleY: Dynamic, speed: Dynamic, alpha: Dynamic, loop: Dynamic, loopDur: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function _pileStone(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function playAnim(id: String, x: Float, y: Float, dir: Int, scaleX: Dynamic, scaleY: Dynamic, speed: Dynamic, allocMode: Dynamic, alpha: Dynamic, loop: Dynamic, loopDur: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function thronePileStone(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Float): Void {
+    }
 
-  function playMobAnim(id: String, x: Float, y: Float, dir: Int, scaleX: Dynamic, scaleY: Dynamic, speed: Dynamic, allocMode: Dynamic, alpha: Dynamic, loop: Dynamic, loopDur: Dynamic, whiteColor: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function thronePileExtraction(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function playMamaAnim(sBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, id: String, x: Float, y: Float, dir: Int, scale: Dynamic, speed: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function throneMinorSmoke(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function playDynamicAtlasAnim(sBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, atlas: Dynamic, id: String, x: Float, y: Float, dir: Int, loop: Dynamic, stop: Dynamic, timeF: Dynamic, scale: Dynamic, speed: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function throwWineGlass(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function playMobAttackAnim(e: en.Mob.Mob, id: String, c: Dynamic, scale: Dynamic, speed: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function teleporterOpen(arg0: en.inter.Teleport, arg1: Int): Void {
+    }
 
-  function playWeaponAnim(e: Entity, cinf: Dynamic, attackSpeed: Float, customId: String, innerColorOverride: Dynamic, outerColorOverride: Dynamic): libs.heaps.slib.HSprite.HSprite {}
+    public function teleporterStart(arg0: en.inter.Teleport, arg1: Int, arg2: Int): Void {
+    }
 
-  function playWeaponAnimFromObject(obj: h2d.Object.Object, cinf: Dynamic, attackSpeed: Float, x: Dynamic, y: Dynamic, customId: String, innerColorOverride: Dynamic, outerColorOverride: Dynamic): libs.heaps.slib.HSprite.HSprite {}
+    public function teleporterEnd(arg0: en.inter.Teleport, arg1: Int): Void {
+    }
 
-  function playWeaponFx(e: Entity, id: String, speed: Dynamic, offset: hl.types.ArrayBytes<Int>, innerColorOverride: Dynamic, outerColorOverride: Dynamic): libs.heaps.slib.HSprite.HSprite {}
+    public function electricGround(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function playTimeKeeperAttack(e: Entity, id: String, play: Dynamic, innerColor: Dynamic, outerColor: Dynamic): libs.heaps.slib.HSprite.HSprite {}
+    public function electricBall(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function attachToEntity(p: libs.heaps.HParticle.HParticle, e: Entity, offX: Dynamic, offY: Dynamic) {}
+    public function electricPillar(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function radiusExplosion(x: Float, y: Float, r: Float, c: Int, durationMax: Dynamic) {}
+    public function _lightningBallFlicker(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function throneShield(x: Float, y: Float, rx: Float, ry: Float, c: Int) {}
+    public function magicBallVanish(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function throneShieldExplosion(x: Float, y: Float) {}
+    public function fireBallVanish(arg0: Float, arg1: Float, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function throneShieldStartCharge(startDelayS: Float, fx: Float, fy: Float, tx: Float, ty: Float) {}
+    public function fireBall(arg0: Entity, arg1: Dynamic): Void {
+    }
 
-  function throneShieldStart(x: Float, y: Float, rx: Float, ry: Float) {}
+    public function skullTail(arg0: Entity, arg1: Dynamic): Void {
+    }
 
-  function throneSmoke(x: Float, y: Float, windX: Float, c: Int) {}
+    public function frostNova(arg0: Float, arg1: Float, arg2: Float, arg3: Dynamic): Void {
+    }
 
-  function _pileStone(p: libs.heaps.HParticle.HParticle) {}
+    public function fireNova(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function thronePileStone(x: Float, y: Float, c: Int, n: Int, durationS: Float) {}
+    public function elecNova(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function thronePileExtraction(x: Float, y: Float, r: Float, rc: Int, hc: Int) {}
+    public function warningShockBeholder(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function throneMinorSmoke(x: Float, y: Float, windX: Float, c: Int) {}
+    public function shockBeholder(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function throwWineGlass(x: Float, y: Float, groundY: Float, dir: Int) {}
+    public function shocker(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function teleporterOpen(e: en.inter.Teleport.Teleport, col: Int) {}
+    public function electricArea(arg0: Entity, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function teleporterStart(e: en.inter.Teleport.Teleport, col: Int, outCol: Int) {}
+    public function teslaCoilElectricArea(arg0: Entity, arg1: Float, arg2: Int): Void {
+    }
 
-  function teleporterEnd(e: en.inter.Teleport.Teleport, col: Int) {}
+    public function liquidNova(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Int): Void {
+    }
 
-  function electricGround(x: Float, y: Float, col: Int) {}
+    public function oilNova(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function electricBall(x: Float, y: Float, r: Float, core: Int, out: Int) {}
+    public function bloodNova(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function electricPillar(x: Float, y: Float, wid: Float, hei: Float, col: Int) {}
+    public function fireEmber(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Float): Void {
+    }
 
-  function _lightningBallFlicker(p: libs.heaps.HParticle.HParticle) {}
+    public function orbLauncherOrbSpark(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function magicBallVanish(x: Float, y: Float, c: Int) {}
+    public function fireSparks(arg0: Float, arg1: Float, arg2: Ref): Void {
+    }
 
-  function fireBallVanish(x: Float, y: Float, colorStart: Dynamic, colorEnd: Dynamic) {}
+    public function aoeFire(arg0: Float, arg1: Float, arg2: Bool): Void {
+    }
 
-  function fireBall(e: Entity, scale: Dynamic) {}
+    public function candleFire(arg0: Float, arg1: Float): Void {
+    }
 
-  function skullTail(e: Entity, scale: Dynamic) {}
+    public function groundFire(arg0: Float, arg1: Float): Void {
+    }
 
-  function frostNova(x: Float, y: Float, r: Float, alpha: Dynamic) {}
+    public function aoeElectricity(arg0: Float, arg1: Float): Void {
+    }
 
-  function fireNova(x: Float, y: Float, r: Float) {}
+    public function aoePoisonOptimized(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function elecNova(x: Float, y: Float, r: Float) {}
+    public function aoeBleedOptimized(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function warningShockBeholder(x: Float, y: Float, r: Float, c1: Int) {}
+    public function aoeIce(arg0: Float, arg1: Float): Void {
+    }
 
-  function shockBeholder(x: Float, y: Float, r: Float, c1: Int, c2: Int) {}
+    public function aoeOil(arg0: Float, arg1: Float, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function shocker(x: Float, y: Float, r: Float, c1: Int, c2: Int) {}
+    public function lancerGoThroughWall(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function electricArea(e: Entity, r: Float, c1: Int, c2: Int) {}
+    public function _lancerRocksBounceX(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function teslaCoilElectricArea(e: Entity, r: Float, c: Int) {}
+    public function mushroomAnnounce(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function liquidNova(x: Float, y: Float, r: Float, colorDisk: Int, colorRadius: Int, colorDroplets: Int, colorHalo0: Int, colorHalo1: Int) {}
+    public function screamerSwordAnnounce(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function oilNova(x: Float, y: Float, r: Float) {}
+    public function mushroomPop(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function bloodNova(x: Float, y: Float, r: Float) {}
+    public function teleportLightBeam(arg0: Float, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function fireEmber(x: Float, y: Float, dir: Int, wid: Float, hei: Float) {}
+    public function entityTeleport(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Ref, arg6: Ref, arg7: Ref): Void {
+    }
 
-  function orbLauncherOrbSpark(x: Float, y: Float, dir: Int, col: Int) {}
+    public function hitLooseGold(arg0: Float, arg1: Float, arg2: Int, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function fireSparks(x: Float, y: Float, top: Dynamic) {}
+    public function triggerSpikes(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function aoeFire(x: Float, y: Float, withOil: Bool) {}
+    public function holyRain(arg0: libs.heaps.slib.HSpriteBatch, arg1: Int): Void {
+    }
 
-  function candleFire(x: Float, y: Float) {}
+    public function _updateHolyRain(): Dynamic {
+        throw "stub: _updateHolyRain not decompiled";
+    }
 
-  function groundFire(x: Float, y: Float) {}
+    public function chickenHit(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function aoeElectricity(x: Float, y: Float) {}
+    public function scissorKillAnnounce(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function aoePoisonOptimized(x: Float, y: Float, t: Float, neighbours: Int) {}
+    public function fireVacuum(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int): Void {
+    }
 
-  function aoeBleedOptimized(x: Float, y: Float, t: Float, neighbours: Int) {}
+    public function fireballChargeNova(arg0: Entity, arg1: Float): Void {
+    }
 
-  function aoeIce(x: Float, y: Float) {}
+    public function fallingRocks(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function aoeOil(x: Float, y: Float, c1: Dynamic, c2: Dynamic) {}
+    public function _fallingRocks(): Dynamic {
+        throw "stub: _fallingRocks not decompiled";
+    }
 
-  function lancerGoThroughWall(fx: Float, tx: Float, y: Float, deltaY: Float, dir: Int) {}
+    public function adeleScytheShield(arg0: Entity): Void {
+    }
 
-  function _lancerRocksBounceX(p: libs.heaps.HParticle.HParticle) {}
+    public function harpyHit(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function mushroomAnnounce(x: Float, y: Float, intensity: Float) {}
+    public function boneSmoke(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function screamerSwordAnnounce(x: Float, y: Float, intensity: Float) {}
+    public function purpleSmokeExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Dynamic): Void {
+    }
 
-  function mushroomPop(x: Float, y: Float, color: Int) {}
+    public function dookuArenaAmbient(arg0: libs.heaps.slib.HSpriteBatch, arg1: Float, arg2: Float): Void {
+    }
 
-  function teleportLightBeam(px: Float, wid: Dynamic, dur: Dynamic) {}
+    public function playDookuAnim(arg0: libs.heaps.slib.HSpriteBatch, arg1: String, arg2: Float, arg3: Float, arg4: Int, arg5: Ref, arg6: Ref, arg7: Dynamic, arg8: Dynamic): libs.heaps.HParticle {
+        throw "stub: playDookuAnim not decompiled";
+    }
 
-  function entityTeleport(fromX: Float, fromY: Float, toX: Float, toY: Float, color: Int, botLayer: Dynamic, circleFx: Dynamic, opaque: Dynamic) {}
+    public function dookuLaser(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Float): Void {
+    }
 
-  function hitLooseGold(posX: Float, posY: Float, fxDir: Int, minG: Dynamic, maxG: Dynamic) {}
+    public function dookuLaserCharge(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function triggerSpikes(x: Float, y: Float, ang: Float) {}
+    public function dookuFlightScreenPreview(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Ref): Void {
+    }
 
-  function holyRain(rainLayer: libs.heaps.slib.HSpriteBatch.HSpriteBatch, waterColor: Int) {}
+    public function dookuGrabWall(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function _updateHolyRain(): Dynamic {}
+    public function dookuGiantMagmaBall(arg0: Float, arg1: Float): Void {
+    }
 
-  function chickenHit(posX: Float, posY: Float, fxDir: Int) {}
+    public function dookuMagicBall(arg0: Entity, arg1: Float, arg2: Int, arg3: Bool, arg4: Ref): Void {
+    }
 
-  function scissorKillAnnounce(posX: Float, posY: Float, fxDir: Int) {}
+    public function dookuGiantMagmaBallExplosion(arg0: libs.heaps.slib.HSpriteBatch, arg1: Float, arg2: Float): Void {
+    }
 
-  function fireVacuum(fromX: Float, fromY: Float, tx: Float, ty: Float, c: Int, fadeColor: Int) {}
+    public function katanaZeroHitLine(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function fireballChargeNova(e: Entity, r: Float) {}
+    public function diverseDeckShine(arg0: Float, arg1: Float, arg2: Int, arg3: Entity): Void {
+    }
 
-  function fallingRocks(posX: Float, posY: Float, intensity: Float) {}
+    public function chickenWormDeath(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function _fallingRocks(): Dynamic {}
+    public function hydraSpellTail(arg0: Entity, arg1: Int, arg2: Float): Void {
+    }
 
-  function adeleScytheShield(e: Entity) {}
+    public function destroySkullTomb(arg0: Entity, arg1: Int): Void {
+    }
 
-  function harpyHit(posX: Float, posY: Float, fxDir: Int) {}
+    public function boilerRoomAttackTail(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Ref, arg6: Ref, arg7: Ref): Void {
+    }
 
-  function boneSmoke(posX: Float, posY: Float, c: Int) {}
+    public function katanaLine(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int, arg6: Dynamic, arg7: Dynamic): Void {
+    }
 
-  function purpleSmokeExplosion(x: Float, y: Float, c: Int, dir: Dynamic) {}
+    public function teleportArrival(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function dookuArenaAmbient(sbBg: libs.heaps.slib.HSpriteBatch.HSpriteBatch, arenaLeftX: Float, arenaMaxY: Float) {}
+    public function aggressiveTeleport(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Float, arg6: Float): Void {
+    }
 
-  function playDookuAnim(sBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, id: String, x: Float, y: Float, dir: Int, loop: Dynamic, timeF: Dynamic, scale: Dynamic, speed: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function dirtTeleport(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function dookuLaser(fromX: Float, fromY: Float, toX: Float, toY: Float, dir: Int, widthMul: Float) {}
+    public function shadowStep(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function dookuLaserCharge(ratio: Float, x: Float, y: Float, c: Int) {}
+    public function entityHorizontalTeleport(arg0: Entity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int): Void {
+    }
 
-  function dookuFlightScreenPreview(fromX: Float, fromY: Float, ang: Float, len: Float, durationS: Float, col: Int, keepParticlesAlive: Dynamic) {}
+    public function itemUpgradeAura(arg0: Entity, arg1: Float, arg2: Float, arg3: tool.InventItem, arg4: Ref): Void {
+    }
 
-  function dookuGrabWall(grabX: Float, grabY: Float, dir: Int) {}
+    public function itemTierAura(arg0: Float, arg1: Float, arg2: tool.InventItem): Void {
+    }
 
-  function dookuGiantMagmaBall(x: Float, y: Float) {}
+    public function blueprintShine(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function dookuMagicBall(e: Entity, ang: Float, c: Int, isBlue: Bool, scaleMul: Dynamic) {}
+    public function blueprintPop(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function dookuGiantMagmaBallExplosion(dookuSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch, arenaLeftX: Float, arenaMaxY: Float) {}
+    public function chestOpenShine(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function katanaZeroHitLine(posX: Float, posY: Float, fxDir: Int, ang: Float) {}
+    public function pickUpUpgrade(arg0: Entity, arg1: Int, arg2: Dynamic): Void {
+    }
 
-  function diverseDeckShine(x: Float, y: Float, c: Int, followEntity: Entity) {}
+    public function flaskUnlocked(arg0: Entity, arg1: Int): Void {
+    }
 
-  function chickenWormDeath(posX: Float, posY: Float, fxDir: Int, c: Int) {}
+    public function pickUpAmmo(arg0: Float, arg1: Float): Void {
+    }
 
-  function hydraSpellTail(e: Entity, c: Int, p: Float) {}
+    public function pickUpSpear(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function destroySkullTomb(e: Entity, c: Int) {}
+    public function pickUpMoney(arg0: Float, arg1: Float): Void {
+    }
 
-  function boilerRoomAttackTail(fromX: Float, fromY: Float, toX: Float, toY: Float, color: Int, botLayer: Dynamic, circleFx: Dynamic, opaque: Dynamic) {}
+    public function pickUpLeech(arg0: Float, arg1: Float): Void {
+    }
 
-  function katanaLine(fx: Float, fy: Float, tx: Float, ty: Float, c: Int, cTo: Int, bot: Dynamic, angle: Dynamic) {}
+    public function secretHint(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function teleportArrival(x: Float, y: Float, durationS: Float, c: Int) {}
+    public function loreHint(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function aggressiveTeleport(fx: Float, fy: Float, tx: Float, ty: Float, c: Int, delayS: Float, durationS: Float) {}
+    public function secretGlow(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function dirtTeleport(fx: Float, fy: Float, tx: Float, ty: Float, c: Int) {}
+    public function _showGrenadeTarget(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function shadowStep(fx: Float, fy: Float, tx: Float, ty: Float, c: Int) {}
+    public function showGrenadeTarget(arg0: en.mob.boss.collector.CollectorBomb, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function entityHorizontalTeleport(e: Entity, fx: Float, fy: Float, tx: Float, ty: Float, c: Int) {}
+    public function pressurePlate(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function itemUpgradeAura(e: Entity, x: Float, y: Float, i: tool.InventItem.InventItem, alwaysMid: Dynamic) {}
+    public function pressurePlateTriggered(arg0: Entity): Void {
+    }
 
-  function itemTierAura(x: Float, y: Float, i: tool.InventItem.InventItem) {}
+    public function unstablePfTriggered(arg0: Entity, arg1: Float): Void {
+    }
 
-  function blueprintShine(x: Float, y: Float, c: Int) {}
+    public function timedDoorReached(arg0: en.inter.Door): Void {
+    }
 
-  function blueprintPop(x: Float, y: Float, c: Int) {}
+    public function timedDoorCondemned(arg0: en.inter.Door): Void {
+    }
 
-  function chestOpenShine(x: Float, y: Float, wid: Float, c: Int) {}
+    public function timedDoorCondemnedState(arg0: en.inter.Door): Void {
+    }
 
-  function pickUpUpgrade(e: Entity, c: Int, n: Dynamic) {}
+    public function popScore(arg0: Entity, arg1: Int, arg2: Int): Void {
+    }
 
-  function flaskUnlocked(e: Entity, c: Int) {}
+    public function buyItem(arg0: Float, arg1: Float, arg2: tool.InventItem): Void {
+    }
 
-  function pickUpAmmo(x: Float, y: Float) {}
+    public function meleeAtkBlow(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function pickUpSpear(x: Float, y: Float, ang: Float, len: Float, c: Int) {}
+    public function deflagration(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Ref, arg6: Ref): Void {
+    }
 
-  function pickUpMoney(x: Float, y: Float) {}
+    public function decoyExplosion(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function pickUpLeech(x: Float, y: Float) {}
+    public function oilDeflagration(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function secretHint(x: Float, y: Float, c: Int, alpha: Float) {}
+    public function minorDeflagration(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function loreHint(x: Float, y: Float, c: Int, alpha: Float) {}
+    public function cadaverExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function secretGlow(x: Float, y: Float, c: Int, intensity: Float) {}
+    public function dotsExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function _showGrenadeTarget(p: libs.heaps.HParticle.HParticle) {}
+    public function disintegrate(arg0: Entity, arg1: Int, arg2: Float): Void {
+    }
 
-  function showGrenadeTarget(bomb: en.mob.boss.collector.CollectorBomb.CollectorBomb, x: Float, y: Float, radius: Float) {}
+    public function heroRespawnArrival(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function pressurePlate(x: Float, y: Float, c: Int) {}
+    public function petSpawn(arg0: Entity, arg1: Int): Void {
+    }
 
-  function pressurePlateTriggered(e: Entity) {}
+    public function deathMageBookCharge(arg0: Entity, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function unstablePfTriggered(e: Entity, beforeOpenS: Float) {}
+    public function deathMageInvoke(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function timedDoorReached(e: en.inter.Door.Door) {}
+    public function bulletHitWall(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function timedDoorCondemned(e: en.inter.Door.Door) {}
+    public function timedItemReached(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function timedDoorCondemnedState(e: en.inter.Door.Door) {}
+    public function timedItemMissed(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function popScore(e: Entity, v: Int, stepExtra: Int) {}
+    public function headDotsExplosion(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function buyItem(x: Float, y: Float, item: tool.InventItem.InventItem) {}
+    public function healFountainSplash(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function meleeAtkBlow(x: Float, y: Float, radius: Float, core: Int, outer: Int) {}
+    public function impact(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Float): Void {
+    }
 
-  function deflagration(x: Float, y: Float, radius: Float, core: Int, outer: Int, skipDots: Dynamic, intensity: Dynamic) {}
+    public function dust_effect(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function decoyExplosion(x: Float, y: Float, radius: Float) {}
+    public function healFountainEnd(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function oilDeflagration(x: Float, y: Float, radius: Float) {}
+    public function stoneExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic, arg5: Dynamic): Void {
+    }
 
-  function minorDeflagration(x: Float, y: Float, radius: Float, c: Int, alpha: Dynamic) {}
+    public function stoneHit(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function cadaverExplosion(x: Float, y: Float, radius: Float, c: Int) {}
+    public function gardenerFrontShovelCharge(arg0: Entity, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function dotsExplosion(x: Float, y: Float, radius: Float, c: Int) {}
+    public function addBrumeEmitter(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Bool): Void {
+    }
 
-  function disintegrate(e: Entity, c: Int, pow: Float) {}
+    public function brumeMoving(arg0: libs.heaps.Emitter, arg1: Bool): Void {
+    }
 
-  function heroRespawnArrival(x: Float, y: Float, c: Int) {}
+    public function addSmogEmitter(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Bool, arg5: libs.heaps.slib.HSpriteBatch, arg6: Ref): libs.heaps.Emitter {
+        throw "stub: addSmogEmitter not decompiled";
+    }
 
-  function petSpawn(e: Entity, c: Int) {}
+    public function smogMoving(arg0: libs.heaps.Emitter, arg1: Bool): Void {
+    }
 
-  function deathMageBookCharge(owner: Entity, x: Float, y: Float, c: Int) {}
+    public function wallGrabPush(arg0: Entity, arg1: Dynamic): Void {
+    }
 
-  function deathMageInvoke(x: Float, y: Float, c: Int) {}
+    public function hiddenBlockHit(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function bulletHitWall(x: Float, y: Float, c: Int) {}
+    public function hiddenBlockExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function timedItemReached(x: Float, y: Float, c: Int) {}
+    public function hiddenGroundBlockExplosion(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function timedItemMissed(x: Float, y: Float, c: Int) {}
+    public function breach(arg0: tool.atk.AttackData): Void {
+    }
 
-  function headDotsExplosion(x: Float, y: Float, c: Int) {}
+    public function critical(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function healFountainSplash(x: Float, y: Float, c: Int) {}
+    public function activeDeployed(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function impact(x: Float, y: Float, radius: Int, col: Int, alpha: Float) {}
+    public function _delayedFall(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function dust_effect(x: Float, y: Float, alpha: Float, col: Int) {}
+    public function solidExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Ref, arg5: Ref): Void {
+    }
 
-  function healFountainEnd(x: Float, y: Float, radius: Int, col: Int) {}
+    public function projectileBlocked(arg0: Entity, arg1: Entity, arg2: Int): Void {
+    }
 
-  function stoneExplosion(x: Float, y: Float, r: Float, c: Int, radiusCircle: Dynamic, rockCount: Dynamic) {}
+    public function dirtExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Ref): Void {
+    }
 
-  function stoneHit(x: Float, y: Float, dir: Int, c: Int) {}
+    public function _slimeExplosion(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function gardenerFrontShovelCharge(e: Entity, extraDist: Float, c1: Int, c2: Int) {}
+    public function slimeExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int): Void {
+    }
 
-  function addBrumeEmitter(posX: Float, posY: Float, width: Float, height: Float, front: Bool) {}
+    public function slimeTrail(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function brumeMoving(e: libs.heaps.HParticle.HParticle, front: Bool) {}
+    public function statueExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Dynamic): Void {
+    }
 
-  function addSmogEmitter(posX: Float, posY: Float, width: Float, height: Float, front: Bool, parent: libs.heaps.slib.HSpriteBatch.HSpriteBatch, tickS: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function forgeHammerHit(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function smogMoving(e: libs.heaps.HParticle.HParticle, front: Bool) {}
+    public function forgeHoverPuff(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function wallGrabPush(e: Entity, pow: Dynamic) {}
+    public function vineLadderReact(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function hiddenBlockHit(x: Float, y: Float, dir: Int, c: Int) {}
+    public function vineLadderPart(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function hiddenBlockExplosion(x: Float, y: Float, dir: Int, c: Int) {}
+    public function rootTrapClosed(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function hiddenGroundBlockExplosion(x: Float, y: Float, c: Int) {}
+    public function jumpFrom(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function breach(a: tool.atk.AttackData.AttackData) {}
+    public function dodgeStart(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function critical(a: tool.atk.AttackData.AttackData, e: Entity) {}
+    public function footKick(arg0: Entity): Void {
+    }
 
-  function activeDeployed(x: Float, y: Float, c: Int) {}
+    public function flyingSwordDoorShake(arg0: Entity): Void {
+    }
 
-  function _delayedFall(p: libs.heaps.HParticle.HParticle) {}
+    public function globalShieldHit(arg0: Entity, arg1: Int): Void {
+    }
 
-  function solidExplosion(x: Float, y: Float, c1: Int, c2: Int, radiusScale: Dynamic, alpha: Dynamic) {}
+    public function shieldWarning(arg0: Entity, arg1: Int, arg2: Float): Void {
+    }
 
-  function projectileBlocked(e: Entity, from: Entity, c: Int) {}
+    public function globalShield(arg0: Entity, arg1: Int, arg2: Float, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function dirtExplosion(x: Float, y: Float, r: Float, c1: Int, c2: Int, top: Dynamic) {}
+    public function shieldBeholder(arg0: en.mob.boss.Beholder): Void {
+    }
 
-  function _slimeExplosion(p: libs.heaps.HParticle.HParticle) {}
+    public function behemothBlazeArmor(arg0: Entity, arg1: Float, arg2: Int): Void {
+    }
 
-  function slimeExplosion(x: Float, y: Float, r: Float, dir: Int, c0: Int, c1: Int) {}
+    public function damageAura(arg0: Entity, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function slimeTrail(x: Float, y: Float, dir: Int, c0: Int, c1: Int) {}
+    public function repeledGrenade(arg0: Entity): Void {
+    }
 
-  function statueExplosion(x: Float, y: Float, c1: Int, c2: Int, wid: Float, hei: Float, groundY: Float, n: Dynamic) {}
+    public function invalidateCachedValues(): Void {
+    }
 
-  function forgeHammerHit(fx: Float, tx: Float, y: Float, col: Int) {}
+    public function _parallax(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function forgeHoverPuff(x: Float, y: Float, radiusP: Float, col: Int, id: Int) {}
+    public function _parallaxX(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function vineLadderReact(x: Float, y: Float, c: Int) {}
+    public function _physicsFlatten(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function vineLadderPart(x: Float, y: Float, c: Int) {}
+    public function _physics(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function rootTrapClosed(x: Float, y: Float, c: Int) {}
+    public function _physicsHard(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function jumpFrom(x: Float, y: Float, dir: Int, c: Int) {}
+    public function _physicsStops(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function dodgeStart(x: Float, y: Float, dir: Int, c: Int) {}
+    public function _physicsOnce(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function footKick(e: Entity) {}
+    public function wood(arg0: Float, arg1: Float, arg2: Int, arg3: Dynamic): Void {
+    }
 
-  function flyingSwordDoorShake(e: Entity) {}
+    public function revive(arg0: Entity, arg1: Int): Void {
+    }
 
-  function globalShieldHit(e: Entity, c: Int) {}
+    public function crush(arg0: Float, arg1: Float, arg2: Int, arg3: Dynamic): Void {
+    }
 
-  function shieldWarning(e: Entity, c: Int, intensity: Float) {}
+    public function wallFragmentTail(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function globalShield(e: Entity, c: Int, alpha: Float, isEnding: Dynamic, padding: Dynamic) {}
+    public function wallFragmentAnnounce(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function shieldBeholder(b: en.mob.boss.Beholder.Beholder) {}
+    public function wallFragmentExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function behemothBlazeArmor(e: Entity, r: Float, c: Int) {}
+    public function groundExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Dynamic): Void {
+    }
 
-  function damageAura(e: Entity, r: Float, c: Int, alpha: Float) {}
+    public function groundExplosionCompact(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function repeledGrenade(e: Entity) {}
+    public function _raisedStone(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function invalidateCachedValues() {}
+    public function khDeathLand(arg0: Float, arg1: Float): Void {
+    }
 
-  function _parallax(p: libs.heaps.HParticle.HParticle) {}
+    public function khDeathCharge(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function _parallaxX(p: libs.heaps.HParticle.HParticle) {}
+    public function _khPartsPhysics(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function _physicsFlatten(p: libs.heaps.HParticle.HParticle) {}
+    public function khDeathExplosion(arg0: Float, arg1: Float): Void {
+    }
 
-  function _physics(p: libs.heaps.HParticle.HParticle) {}
+    public function khIntroJump(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function _physicsHard(p: libs.heaps.HParticle.HParticle) {}
+    public function khGrenade(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function _physicsStops(p: libs.heaps.HParticle.HParticle) {}
+    public function khRaiseStones(arg0: Entity, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function _physicsOnce(p: libs.heaps.HParticle.HParticle) {}
+    public function khRaiseStonesAt(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function wood(x: Float, y: Float, n: Int, dir: Dynamic) {}
+    public function _spark(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function revive(e: Entity, c: Int) {}
+    public function khSparkTrail(arg0: Entity): Void {
+    }
 
-  function crush(x: Float, y: Float, c: Int, pow: Dynamic) {}
+    public function giantSparkTrail(arg0: Entity): Void {
+    }
 
-  function wallFragmentTail(x: Float, y: Float, c: Int) {}
+    public function hkBlockedAttack(arg0: Entity, arg1: Float, arg2: Int): Void {
+    }
 
-  function wallFragmentAnnounce(x: Float, y: Float, durationS: Float, c: Int) {}
+    public function khFrontShield(arg0: Entity, arg1: Float, arg2: Int): Void {
+    }
 
-  function wallFragmentExplosion(x: Float, y: Float, moveAwayY: Float, c: Int) {}
+    public function ghFrontShield(arg0: en.mob.boss.giant.HandBase, arg1: Float, arg2: Int): Void {
+    }
 
-  function groundExplosion(x: Float, y: Float, c: Int, delayS: Dynamic) {}
+    public function khFrontShieldCharge(arg0: Entity, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function groundExplosionCompact(x: Float, y: Float, c: Int) {}
+    public function khStompCore(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function _raisedStone(p: libs.heaps.HParticle.HParticle) {}
+    public function khBombFallAnnounce(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Float): Void {
+    }
 
-  function khDeathLand(x: Float, y: Float) {}
+    public function khBombRadiusAnnounce(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function khDeathCharge(x: Float, y: Float, d: Float) {}
+    public function khBombExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function _khPartsPhysics(p: libs.heaps.HParticle.HParticle) {}
+    public function axeStatueStomp(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function khDeathExplosion(x: Float, y: Float) {}
+    public function khStomp(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: tool.FxTile, arg5: tool.FxTile): Void {
+    }
 
-  function khIntroJump(x: Float, y: Float, dir: Int) {}
+    public function khOutOfCombat(arg0: Entity, arg1: Int, arg2: Int): Void {
+    }
 
-  function khGrenade(x: Float, y: Float, c: Int, r: Float) {}
+    public function risingMob(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function khRaiseStones(e: Entity, x: Float, y: Float, dist: Float, c: Int) {}
+    public function handClap(arg0: Float, arg1: Float): Void {
+    }
 
-  function khRaiseStonesAt(x: Float, y: Float, smallC: Int, groundC: Int) {}
+    public function secretLeverGround(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function _spark(p: libs.heaps.HParticle.HParticle) {}
+    public function secretLeverActivated(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function khSparkTrail(e: Entity) {}
+    public function diveAttack(arg0: Float, arg1: Float, arg2: Int, arg3: Ref): Void {
+    }
 
-  function giantSparkTrail(e: Entity) {}
+    public function allocDisk(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): libs.heaps.HParticle {
+        throw "stub: allocDisk not decompiled";
+    }
 
-  function hkBlockedAttack(e: Entity, extraDist: Float, c: Int) {}
+    public function allocRadius(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): libs.heaps.HParticle {
+        throw "stub: allocRadius not decompiled";
+    }
 
-  function khFrontShield(e: Entity, extraDist: Float, c: Int) {}
+    public function radiusCase(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function ghFrontShield(e: en.mob.boss.giant.HandBase.HandBase, extraDist: Float, c: Int) {}
+    public function radiusFlask(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function khFrontShieldCharge(e: Entity, extraDist: Float, c1: Int, c2: Int) {}
+    public function radiusATSwitch(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function khStompCore(x: Float, y: Float, rc: Int, c: Int) {}
+    public function knockDoor(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function khBombFallAnnounce(x: Float, y: Float, hei: Float, c: Int, r: Float) {}
+    public function longPress(arg0: Entity, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function khBombRadiusAnnounce(x: Float, y: Float, radius: Float, ratio: Float, c: Int) {}
+    public function _mobDeathBlack(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function khBombExplosion(x: Float, y: Float, radius: Float, color: Int) {}
+    public function _mobDeathBlood(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function axeStatueStomp(x: Float, y: Float, width: Float, rockColor: Int) {}
+    public function _mobDeathFlesh(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function khStomp(x: Float, y: Float, rc: Dynamic, c: Dynamic, bigRockTile: Dynamic, smallRockTile: Dynamic) {}
+    public function mobDeath(arg0: en.Mob): Void {
+    }
 
-  function khOutOfCombat(e: Entity, c0: Int, c1: Int) {}
+    public function staphyEvolution(arg0: en.Mob): Void {
+    }
 
-  function risingMob(x: Float, y: Float, t: Float, c1: Int, c2: Dynamic) {}
+    public function staphyBloodEvolution(arg0: en.Mob): Void {
+    }
 
-  function handClap(x: Float, y: Float) {}
+    public function heavyMobDeath(arg0: Entity, arg1: Int): Void {
+    }
 
-  function secretLeverGround(x: Float, y: Float, c: Int, durationS: Float) {}
+    public function gibDrop(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function secretLeverActivated(x: Float, y: Float, c: Int) {}
+    public function gibExplosion(arg0: Float, arg1: Float): Void {
+    }
 
-  function diveAttack(x: Float, y: Float, _color: Int, _power: Dynamic) {}
+    public function _heroCorpseConsume(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function allocDisk(x: Float, y: Float, radius: Float, col: Int, onTop: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function heroCorpseConsume(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function allocRadius(x: Float, y: Float, radiusPx: Float, col: Int, onTop: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function chargeCancel(arg0: Float, arg1: Float): Void {
+    }
 
-  function radiusCase(x: Float, y: Float, cradius: Float, col: Int, contracting: Dynamic) {}
+    public function pointerArea(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function radiusFlask(x: Float, y: Float, col: Int) {}
+    public function chargeCircle(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic): Void {
+    }
 
-  function radiusATSwitch(x: Float, y: Float, col: Int) {}
+    public function chargeSemiCircle(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function knockDoor(x: Float, y: Float, dir: Int) {}
+    public function chargeCircleS(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic): Void {
+    }
 
-  function longPress(e: Entity, thresholdRatio: Float, ratio: Float, c: Int) {}
+    public function warnCircle(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic): Void {
+    }
 
-  function _mobDeathBlack(p: libs.heaps.HParticle.HParticle) {}
+    public function chargeSweetSpot(arg0: Int, arg1: Float, arg2: Float, arg3: Bool, arg4: Int): Void {
+    }
 
-  function _mobDeathBlood(p: libs.heaps.HParticle.HParticle) {}
+    public function chargeCircleToDot(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic, arg5: Dynamic): Void {
+    }
 
-  function _mobDeathFlesh(p: libs.heaps.HParticle.HParticle) {}
+    public function morpherAnnounce(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int): Void {
+    }
 
-  function mobDeath(e: en.Mob.Mob) {}
+    public function pokeCharge(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int): Void {
+    }
 
-  function staphyEvolution(e: en.Mob.Mob) {}
+    public function chargeArea(arg0: tool.Area, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function staphyBloodEvolution(e: en.Mob.Mob) {}
+    public function debugCircle(arg0: Float, arg1: Float, arg2: Float, arg3: Dynamic, arg4: Ref, arg5: Ref, arg6: Ref): Void {
+    }
 
-  function heavyMobDeath(e: Entity, fleshColor: Int) {}
+    public function debugArea(arg0: tool.Area, arg1: Dynamic): Void {
+    }
 
-  function gibDrop(x: Float, y: Float, c: Dynamic) {}
+    public function debugShockWaveHit(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic): Void {
+    }
 
-  function gibExplosion(x: Float, y: Float) {}
+    public function linePreview(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Dynamic, arg7: Ref): Void {
+    }
 
-  function _heroCorpseConsume(p: libs.heaps.HParticle.HParticle) {}
+    public function linePreviewBasic(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Ref): Void {
+    }
 
-  function heroCorpseConsume(x: Float, y: Float, r: Float, dir: Int) {}
+    public function linePreviewFaded(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Dynamic): Void {
+    }
 
-  function chargeCancel(x: Float, y: Float) {}
+    public function lightningWallPreview(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function pointerArea(x: Float, y: Float, r: Float, c: Int) {}
+    public function lightningWallEnd(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function chargeCircle(x: Float, y: Float, radius: Float, int: Float, c: Dynamic) {}
+    public function chargeExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function chargeSemiCircle(x: Float, y: Float, radius: Float, t: Float, c: Int) {}
+    public function chargeDashBeholder(arg0: en.mob.boss.Beholder, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function chargeCircleS(x: Float, y: Float, radius: Float, durationS: Float, c: Dynamic) {}
+    public function chargePunchGolem(arg0: Int, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int): Void {
+    }
 
-  function warnCircle(x: Float, y: Float, radius: Float, durationS: Float, c: Dynamic) {}
+    public function chargeMage360(arg0: en.mob.Mage360, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function chargeSweetSpot(dir: Int, x: Float, y: Float, isSweet: Bool, c: Int) {}
+    public function chargeCaster(arg0: Entity, arg1: Float, arg2: Int, arg3: Ref): Void {
+    }
 
-  function chargeCircleToDot(x: Float, y: Float, radius: Float, int: Float, c: Dynamic, endColor: Dynamic) {}
+    public function chargeJavelinSnakeTP(arg0: Entity, arg1: Float, arg2: Int): Void {
+    }
 
-  function morpherAnnounce(x: Float, y: Float, radius: Float, int: Float, startCol: Int, endCol: Int) {}
+    public function shootFromAir(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function pokeCharge(x: Float, y: Float, radius: Float, int: Float, startCol: Int, endCol: Int) {}
+    public function _electricCharge(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function chargeArea(a: tool.Area.Area, f: Float, c: Dynamic) {}
+    public function electricCharge(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function debugCircle(x: Float, y: Float, radius: Float, c: Dynamic, targetAlpha: Dynamic, fadeIn: Dynamic, fadeOut: Dynamic) {}
+    public function warningLancer(arg0: Entity, arg1: Float, arg2: Float, arg3: Bool, arg4: Float, arg5: Int): Void {
+    }
 
-  function debugArea(a: tool.Area.Area, c: Dynamic) {}
+    public function warningTumulusTrap(arg0: Entity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int): Void {
+    }
 
-  function debugShockWaveHit(x: Float, y: Float, halfWidth: Float, halfHeight: Float, c: Dynamic) {}
+    public function radiusAlertMushroomExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function linePreview(x: Float, y: Float, ang: Float, len: Float, durationS: Float, col: Int, delayS: Dynamic, keepParticlesAlive: Dynamic) {}
+    public function chargeStarFree(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Array<Dynamic> {
+        throw "stub: chargeStarFree not decompiled";
+    }
 
-  function linePreviewBasic(fx: Float, fy: Float, ang: Float, len: Float, durationS: Float, col: Int, keepParticlesAlive: Dynamic) {}
+    public function chargeStar(arg0: Entity, arg1: Float, arg2: Int, arg3: Dynamic): Array<Dynamic> {
+        throw "stub: chargeStar not decompiled";
+    }
 
-  function linePreviewFaded(x: Float, y: Float, ang: Float, len: Float, durationS: Float, col: Int, delayS: Dynamic) {}
+    public function prepareRSpikes(arg0: Entity, arg1: Float, arg2: Int): Void {
+    }
 
-  function lightningWallPreview(x: Float, y: Float, ang: Float, len: Float, col: Int) {}
+    public function shooterOrb(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function lightningWallEnd(x: Float, y: Float, ang: Float, c: Int) {}
+    public function orb(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function chargeExplosion(x: Float, y: Float, f: Float, c: Int) {}
+    public function fireThrow(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Entity): Void {
+    }
 
-  function chargeDashBeholder(b: en.mob.boss.Beholder.Beholder, f: Float, radius: Float, c: Int) {}
+    public function burningHand(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function chargePunchGolem(uid: Int, x: Float, y: Float, radius: Float, ratio: Float, c: Int) {}
+    public function torchFlame(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function chargeMage360(e: en.mob.Mage360.Mage360, f: Float, core: Int, outer: Int) {}
+    public function _waterBubbles(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function chargeCaster(e: Entity, f: Float, c: Int, scale: Dynamic) {}
+    public function waterDirt(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function chargeJavelinSnakeTP(e: Entity, f: Float, c: Int) {}
+    public function waterPoolDisp(arg0: Float, arg1: Float): Void {
+    }
 
-  function shootFromAir(x: Float, y: Float, c: Int) {}
+    public function _waterfallTracking(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function _electricCharge(p: libs.heaps.HParticle.HParticle) {}
+    public function waterfallDisp(arg0: level.disp.WaterFall, arg1: Float, arg2: Float, arg3: libs.heaps.slib.HSpriteBatch, arg4: Ref): Void {
+    }
 
-  function electricCharge(x: Float, y: Float, c: Int, r: Float) {}
+    public function waterfallLine(arg0: level.disp.WaterFall, arg1: Float, arg2: Float, arg3: libs.heaps.slib.HSpriteBatch, arg4: Ref): Void {
+    }
 
-  function warningLancer(e: Entity, x: Float, y: Float, isHor: Bool, rat: Float, c: Int) {}
+    public function waterShore(arg0: libs.heaps.slib.HSpriteBatch, arg1: libs.heaps.Emitter): Void {
+    }
 
-  function warningTumulusTrap(e: Entity, radius: Float, length: Float, dir: Float, ratio: Float, color: Int) {}
+    public function waterWaveSurface(arg0: libs.heaps.slib.HSpriteBatch, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic): Void {
+    }
 
-  function radiusAlertMushroomExplosion(x: Float, y: Float, totalDurationS: Float, c: Int) {}
+    public function waterWave(arg0: libs.heaps.slib.HSpriteBatch, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function chargeStarFree(x: Float, y: Float, totalDurationS: Float, c: Int): hl.types.ArrayObj<Dynamic> {}
+    public function waterHalo(arg0: libs.heaps.slib.HSpriteBatch, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic): Void {
+    }
 
-  function chargeStar(e: Entity, totalDurationS: Float, c: Int, atShootPoint: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function waterBubbles(arg0: libs.heaps.slib.HSpriteBatch, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic): Void {
+    }
 
-  function prepareRSpikes(e: Entity, totalDurationS: Float, c: Int) {}
+    public function waterPoolSurface(arg0: Float, arg1: Float): Void {
+    }
 
-  function shooterOrb(x: Float, y: Float, c: Int) {}
+    public function waterPoolSurfaceWithSpriteBatch(arg0: Float, arg1: Float, arg2: libs.heaps.slib.HSpriteBatch): Void {
+    }
 
-  function orb(x: Float, y: Float, dx: Float, radius: Float, c: Int) {}
+    public function _waterSpout(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function fireThrow(x: Float, y: Float, dir: Int, range: Float, followEntity: Entity) {}
+    public function waterSpout(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function burningHand(x: Float, y: Float, dir: Int) {}
+    public function mushSpores(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function torchFlame(x: Float, y: Float, c: Int) {}
+    public function waterShower(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function _waterBubbles(p: libs.heaps.HParticle.HParticle) {}
+    public function waterRainDrop(arg0: libs.heaps.Emitter, arg1: Int, arg2: Bool): Void {
+    }
 
-  function waterDirt(x: Float, y: Float, minY: Float) {}
+    public function waterSmallHit(arg0: Float, arg1: Float, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function waterPoolDisp(x: Float, y: Float) {}
+    public function waterFoutainSurface(arg0: Float, arg1: Float, arg2: Float, arg3: Dynamic): Void {
+    }
 
-  function _waterfallTracking(p: libs.heaps.HParticle.HParticle) {}
+    public function _waterDropPhysics(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function waterfallDisp(wf: level.disp.WaterFall.WaterFall, offX: Float, y: Float, spriteBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, ymax: Dynamic) {}
+    public function waterHeavyHit(arg0: Float, arg1: Float, arg2: Ref): Void {
+    }
 
-  function waterfallLine(wf: level.disp.WaterFall.WaterFall, offX: Float, y: Float, spriteBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, ymax: Dynamic) {}
+    public function _waterShowered(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function waterShore(sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch, e: libs.heaps.HParticle.HParticle) {}
+    public function waterShowered(arg0: Float, arg1: Float): Void {
+    }
 
-  function waterWaveSurface(sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch, x: Float, y: Float, z: Float, color: Dynamic) {}
+    public function dispFire(arg0: Float, arg1: Float, arg2: Ref): Void {
+    }
 
-  function waterWave(sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch, x: Float, y: Float, z: Float) {}
+    public function dispSwamp(arg0: Float, arg1: Float, arg2: h2d.SpriteBatch): Void {
+    }
 
-  function waterHalo(sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch, x: Float, y: Float, z: Float, color: Dynamic) {}
+    public function distilleryArche(arg0: h2d.SpriteBatch, arg1: h2d.SpriteBatch, arg2: Float, arg3: Float, arg4: Float, arg5: Float): Void {
+    }
 
-  function waterBubbles(sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch, x: Float, y: Float, z: Float, c: Dynamic) {}
+    public function _dispShockWave(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function waterPoolSurface(x: Float, y: Float) {}
+    public function dispShockWave(arg0: Float, arg1: Float, arg2: Float, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function waterPoolSurfaceWithSpriteBatch(x: Float, y: Float, spriteBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch) {}
+    public function dispShockWaveDir(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic): Void {
+    }
 
-  function _waterSpout(p: libs.heaps.HParticle.HParticle) {}
+    public function kickShockWave(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function waterSpout(x: Float, y: Float, dir: Int, c: Int) {}
+    public function shockwave(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function mushSpores(x: Float, y: Float, windX: Float, c: Int, duration: Dynamic) {}
+    public function spoutCellBoss(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function waterShower(x: Float, y: Float, width: Float, height: Float, color: Int) {}
+    public function shockwaveGroundSmoke(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function waterRainDrop(e: libs.heaps.HParticle.HParticle, c: Int, isHorizontal: Bool) {}
+    public function dispLine(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function waterSmallHit(x: Float, y: Float, background: Dynamic, forceTopNormal: Dynamic) {}
+    public function _rootsUpdate(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function waterFoutainSurface(xmin: Float, xmax: Float, y: Float, background: Dynamic) {}
+    public function roots(arg0: Entity, arg1: Float, arg2: Int, arg3: Ref): Void {
+    }
 
-  function _waterDropPhysics(p: libs.heaps.HParticle.HParticle) {}
+    public function vegetalExplosion(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function waterHeavyHit(x: Float, y: Float, shouldCollide: Dynamic) {}
+    public function rootNova(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function _waterShowered(p: libs.heaps.HParticle.HParticle) {}
+    public function fastFall(arg0: Entity): Void {
+    }
 
-  function waterShowered(x: Float, y: Float) {}
+    public function pulley(arg0: en.Hero, arg1: en.ltrap.Pulley): Void {
+    }
 
-  function dispFire(x: Float, y: Float, back: Dynamic) {}
+    public function pulleyExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function dispSwamp(x: Float, y: Float, sb: h2d.SpriteBatch.SpriteBatch) {}
+    public function elevator(arg0: en.inter.Elevator): Void {
+    }
 
-  function distilleryArche(dispSB: h2d.SpriteBatch.SpriteBatch, emberSB: h2d.SpriteBatch.SpriteBatch, px: Float, py: Float, width: Float, height: Float) {}
+    public function cannonSpark(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function _dispShockWave(p: libs.heaps.HParticle.HParticle) {}
+    public function elevatorArrival(arg0: en.inter.Elevator): Void {
+    }
 
-  function dispShockWave(x: Float, y: Float, radius: Float, alpha: Dynamic, newlifeS: Dynamic) {}
+    public function _linkBmp(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function dispShockWaveDir(x: Float, y: Float, radius: Float, dir: Int, alpha: Dynamic, newlifeS: Dynamic, speedFactor: Dynamic) {}
+    public function hammerPop(arg0: Float, arg1: Float): Void {
+    }
 
-  function kickShockWave(x: Float, y: Float, r: Float, c: Int) {}
+    public function surprise(arg0: Entity, arg1: Dynamic): Void {
+    }
 
-  function shockwave(x: Float, y: Float, r: Float) {}
+    public function cellBonusAura(arg0: Entity, arg1: Int): Void {
+    }
 
-  function spoutCellBoss(x: Float, y: Float, radius: Float, dir: Int) {}
+    public function speech(arg0: Entity): Void {
+    }
 
-  function shockwaveGroundSmoke(x: Float, y: Float, dir: Int) {}
+    public function attackAnnounceFree(arg0: Float, arg1: Float, arg2: Entity): Void {
+    }
 
-  function dispLine(x: Float, y: Float, ang: Float, len: Float) {}
+    public function attackAnnounce(arg0: Entity): Void {
+    }
 
-  function _rootsUpdate(p: libs.heaps.HParticle.HParticle) {}
+    public function attackAnnounceOutOfScreen(arg0: Entity, arg1: Dynamic, arg2: Dynamic, arg3: Viewport): Void {
+    }
 
-  function roots(e: Entity, durationS: Float, c: Int, top: Dynamic) {}
+    public function warnSpecialSkill(arg0: Entity): Void {
+    }
 
-  function vegetalExplosion(x: Float, y: Float, c: Int) {}
+    public function sparkBomb(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function rootNova(x: Float, y: Float, r: Float, c: Int) {}
+    public function wakeUp(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function fastFall(e: Entity) {}
+    public function wakeUpFree(arg0: Float, arg1: Float, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function pulley(hero: en.Hero.Hero, e: en.ltrap.Pulley.Pulley) {}
+    public function batWakeUp(arg0: Entity): Void {
+    }
 
-  function pulleyExplosion(x: Float, y: Float, smokeC: Int, linesC: Int) {}
+    public function whipHit(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function elevator(e: en.inter.Elevator.Elevator) {}
+    public function portalPart(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function cannonSpark(centerX: Float, centerY: Float, dir: Int) {}
+    public function portalClosed(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function elevatorArrival(e: en.inter.Elevator.Elevator) {}
+    public function collectorPortalClose(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function _linkBmp(p: libs.heaps.HParticle.HParticle) {}
+    public function collectorPortalStart(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function hammerPop(x: Float, y: Float) {}
+    public function collectorPortalEnd(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function surprise(e: Entity, c: Dynamic) {}
+    public function portalStart(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function cellBonusAura(e: Entity, c: Int) {}
+    public function portalEnd(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function speech(e: Entity) {}
+    public function slowedDown(arg0: Entity, arg1: Int): Void {
+    }
 
-  function attackAnnounceFree(x: Float, y: Float, owner: Entity) {}
+    public function emitShield(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function attackAnnounce(e: Entity) {}
+    public function _slimeDropPhysics(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function attackAnnounceOutOfScreen(e: Entity, fCenterX: Dynamic, fCenterY: Dynamic, viewport: Viewport) {}
+    public function liquidLine(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int): Void {
+    }
 
-  function warnSpecialSkill(e: Entity) {}
+    public function slimeGround(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Dynamic): Void {
+    }
 
-  function sparkBomb(x: Float, y: Float, col: Int) {}
+    public function slimeGroundSpread(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Float): Void {
+    }
 
-  function wakeUp(e: Entity, c: Dynamic) {}
+    public function slimeGroundWalk(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function wakeUpFree(x: Float, y: Float, c: Dynamic, arcRatio: Dynamic) {}
+    public function biomeBase(arg0: Int, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function batWakeUp(e: Entity) {}
+    public function prisonCourtyard(arg0: Int): Void {
+    }
 
-  function whipHit(x: Float, y: Float, c: Int) {}
+    public function leavesBurst(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function portalPart(x: Float, y: Float, c: Int) {}
+    public function biomeThrone(): Void {
+    }
 
-  function portalClosed(x: Float, y: Float, c: Int) {}
+    public function waterDropOnViewport(arg0: Int, arg1: Int, arg2: Bool): Void {
+    }
 
-  function collectorPortalClose(x: Float, y: Float, c: Int) {}
+    public function biomeTumulus(arg0: libs.heaps.slib.HSpriteBatch, arg1: libs.heaps.slib.HSpriteBatch, arg2: Int, arg3: Float, arg4: Bool, arg5: Bool): Void {
+    }
 
-  function collectorPortalStart(x: Float, y: Float, c: Int, oc: Int) {}
+    public function flyingSwordDoorDust(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function collectorPortalEnd(x: Float, y: Float, c: Int) {}
+    public function godRays(arg0: libs.heaps.slib.HSpriteBatch, arg1: libs.heaps.Emitter, arg2: Int, arg3: Float): Void {
+    }
 
-  function portalStart(x: Float, y: Float, c: Int, oc: Int) {}
+    public function biomeCemetery(arg0: Int, arg1: Bool): Void {
+    }
 
-  function portalEnd(x: Float, y: Float, c: Int) {}
+    public function biomeOssuary(arg0: Int): Void {
+    }
 
-  function slowedDown(e: Entity, c: Int) {}
+    public function biomeCastle(arg0: Int): Void {
+    }
 
-  function emitShield(x: Float, y: Float, c: Int) {}
+    public function biomeAncientTemple(arg0: Int): Void {
+    }
 
-  function _slimeDropPhysics(p: libs.heaps.HParticle.HParticle) {}
+    public function giantRumble(arg0: Int): Void {
+    }
 
-  function liquidLine(fx: Float, fy: Float, tx: Float, ty: Float, c1: Int, c2: Int) {}
+    public function biomeClockTower(): Void {
+    }
 
-  function slimeGround(x: Float, y: Float, c1: Int, c2: Int, delayS: Dynamic) {}
+    public function biomeCavern(): Void {
+    }
 
-  function slimeGroundSpread(x: Float, y: Float, c1: Int, c2: Int, dist: Float) {}
+    public function _updateCliffRain(arg0: Int): Dynamic {
+        throw "stub: _updateCliffRain not decompiled";
+    }
 
-  function slimeGroundWalk(x: Float, y: Float, c1: Int, c2: Int) {}
+    public function _isSkyHidden(arg0: Float, arg1: Float): Bool {
+        throw "stub: _isSkyHidden not decompiled";
+    }
 
-  function biomeBase(bigDustColor: Int, bigDustAlpha: Float, smallDustColor: Int, smallDustAlpha: Float) {}
+    public function _onDropletUpdate(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function prisonCourtyard(smoke: Int) {}
+    public function biomeCliff(arg0: libs.heaps.slib.HSpriteBatch, arg1: Int, arg2: Dynamic, arg3: Float, arg4: libs.heaps.slib.HSpriteBatch): Void {
+    }
 
-  function leavesBurst(posX: Float, posY: Float, dir: Int) {}
+    public function biomeShipwreck(arg0: Float): Void {
+    }
 
-  function biomeThrone() {}
+    public function blacksmithDrop(): Void {
+    }
 
-  function waterDropOnViewport(smoke: Int, water: Int, doubleWater: Bool) {}
+    public function _ash(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function biomeTumulus(rainLayer: libs.heaps.slib.HSpriteBatch.HSpriteBatch, bgWindLayer: libs.heaps.slib.HSpriteBatch.HSpriteBatch, water: Int, levelMapPixelHeight: Float, shouldDisplayDust: Bool, shouldDisplayWindAndLeaves: Bool) {}
+    public function _homunculusDirt(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function flyingSwordDoorDust(x: Float, y: Float, n: Int) {}
+    public function homunculusWalk(arg0: Entity, arg1: Int): Void {
+    }
 
-  function godRays(layer: libs.heaps.slib.HSpriteBatch.HSpriteBatch, e: libs.heaps.HParticle.HParticle, color: Int, maxAlpha: Float) {}
+    public function homunculusJump(arg0: Entity, arg1: Int): Void {
+    }
 
-  function biomeCemetery(smoke: Int, useSmoke: Bool) {}
+    public function homunculusLand(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function biomeOssuary(c: Int) {}
+    public function _trackEntity(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function biomeCastle(c: Int) {}
+    public function _trackEntityHead(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function biomeAncientTemple(smoke: Int) {}
+    public function _trackEntitySpriteTop(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function giantRumble(smoke: Int) {}
+    public function _trackEmitter(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function biomeClockTower() {}
+    public function _attractByEntity(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function biomeCavern() {}
+    public function homunculusIntrospect(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function _updateCliffRain(waterColor: Int): Dynamic {}
+    public function _trackHead(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function _isSkyHidden(px: Float, py: Float): Bool {}
+    public function homunculusEntrance(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function _onDropletUpdate(p: libs.heaps.HParticle.HParticle) {}
+    public function homunculusHeadDrip(arg0: en.Hero, arg1: Int, arg2: Float): Void {
+    }
 
-  function biomeCliff(rainLayer: libs.heaps.slib.HSpriteBatch.HSpriteBatch, waterColor: Int, bgWaterColor: Dynamic, nearBorderRatio: Float, spriteBatchNormal: libs.heaps.slib.HSpriteBatch.HSpriteBatch) {}
+    public function heroHeadCharge(arg0: en.Hero, arg1: Float, arg2: Int): Void {
+    }
 
-  function biomeShipwreck(nearBorderRatio: Float) {}
+    public function heroHeadLightnings(arg0: en.Hero, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int): Void {
+    }
 
-  function blacksmithDrop() {}
+    public function necromancySparkle(arg0: Entity): Void {
+    }
 
-  function _ash(p: libs.heaps.HParticle.HParticle) {}
+    public function _lightningFlicker(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function _homunculusDirt(p: libs.heaps.HParticle.HParticle) {}
+    public function lightningBolt(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic): Void {
+    }
 
-  function homunculusWalk(e: Entity, c: Int) {}
+    public function ceilLightningBolt(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic): Void {
+    }
 
-  function homunculusJump(e: Entity, c: Int) {}
+    public function collectorPreparingLaserBeam(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Entity): Void {
+    }
 
-  function homunculusLand(x: Float, y: Float, c: Int) {}
+    public function collectorChargeLaserBeam(arg0: Entity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 
-  function _trackEntity(p: libs.heaps.HParticle.HParticle) {}
+    public function collectorLaserBeam(arg0: Entity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 
-  function _trackEntityHead(p: libs.heaps.HParticle.HParticle) {}
+    public function lightningBall(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function _trackEntitySpriteTop(p: libs.heaps.HParticle.HParticle) {}
+    public function lightningWall(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Int, arg7: Int, arg8: Dynamic, arg9: Dynamic, arg10: Ref): Void {
+    }
 
-  function _trackEmitter(p: libs.heaps.HParticle.HParticle) {}
+    public function lightningWallBase(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Bool): Void {
+    }
 
-  function _attractByEntity(p: libs.heaps.HParticle.HParticle) {}
+    public function lightningWallHit(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function homunculusIntrospect(x: Float, y: Float, dir: Int, c: Int) {}
+    public function golemTpBolt(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int, arg6: Float, arg7: Dynamic, arg8: Dynamic): Void {
+    }
 
-  function _trackHead(p: libs.heaps.HParticle.HParticle) {}
+    public function lightningBoltWhip(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int, arg7: Bool): Void {
+    }
 
-  function homunculusEntrance(x: Float, y: Float, c: Int) {}
+    public function shieldLightningBolt(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int, arg7: Bool): Void {
+    }
 
-  function homunculusHeadDrip(e: en.Hero.Hero, c: Int, r: Float) {}
+    public function warnTimeKeeperSword(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function heroHeadCharge(e: en.Hero.Hero, r: Float, c: Int) {}
+    public function warnGiantStalactite(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function heroHeadLightnings(e: en.Hero.Hero, fx: Float, fy: Float, tx: Float, ty: Float, c: Int) {}
+    public function warnGiantLaserBeam(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int): Void {
+    }
 
-  function necromancySparkle(e: Entity) {}
+    public function fireWallPrepare(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function _lightningFlicker(p: libs.heaps.HParticle.HParticle) {}
+    public function _fireWallRock(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function lightningBolt(fx: Float, fy: Float, tx: Float, ty: Float, curveDist: Float, c: Int, fadeColor: Int, thickness: Dynamic, onTop: Dynamic, endHalos: Dynamic) {}
+    public function fireWallRock(arg0: en.FireWall, arg1: Float, arg2: Float): Void {
+    }
 
-  function ceilLightningBolt(fx: Float, fy: Float, tx: Float, ty: Float, curveRatio: Float, c: Int, fadeColor: Int, thickness: Dynamic, onTop: Dynamic, endHalos: Dynamic) {}
+    public function _fireWall(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function collectorPreparingLaserBeam(fx: Float, fy: Float, c: Int, fadeColor: Int, e: Entity) {}
+    public function fireWall(arg0: en.FireWall, arg1: Float, arg2: Float, arg3: Ref, arg4: Ref): Void {
+    }
 
-  function collectorChargeLaserBeam(col: Entity, fx: Float, fy: Float, tx: Float, ty: Float, c: Int, fadeColor: Int) {}
+    public function upgradeShrine(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function collectorLaserBeam(col: Entity, fx: Float, fy: Float, tx: Float, ty: Float, c: Int, fadeColor: Int) {}
+    public function shielderLink(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int): Void {
+    }
 
-  function lightningBall(x: Float, y: Float, scale: Float, core: Int, outCol: Int) {}
+    public function axeRecalled(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function lightningWall(fx: Float, fy: Float, tx: Float, ty: Float, dx: Float, curveDist: Float, c: Int, glowColor: Int, onTop: Dynamic, onlyDisplace: Dynamic, alp: Dynamic) {}
+    public function legendaryAltarBubble(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function lightningWallBase(x: Float, y: Float, c0: Int, c1: Int, onColl: Bool) {}
+    public function legendaryAltarLink(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 
-  function lightningWallHit(x: Float, y: Float, ang: Float, pow: Float, c: Int) {}
+    public function noPower(arg0: Float, arg1: Float): Void {
+    }
 
-  function golemTpBolt(fx: Float, fy: Float, tx: Float, ty: Float, c: Int, fadeColor: Int, ratio: Float, onTop: Dynamic, endHalos: Dynamic) {}
+    public function powerLink(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Dynamic): Void {
+    }
 
-  function lightningBoltWhip(fx: Float, fy: Float, tx: Float, ty: Float, curveDist: Float, c: Int, coreColor: Int, hitSomething: Bool) {}
+    public function _flaskDepleted(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function shieldLightningBolt(fx: Float, fy: Float, tx: Float, ty: Float, curveDist: Float, coreColor: Int, outColor: Int, hitSomething: Bool) {}
+    public function flaskDepleted(arg0: en.Hero, arg1: Int): Void {
+    }
 
-  function warnTimeKeeperSword(ratio: Float, x: Float, fromY: Float, toY: Float, c: Int) {}
+    public function flaskHeal(arg0: en.Hero, arg1: Int): Void {
+    }
 
-  function warnGiantStalactite(ratio: Float, x: Float, fromY: Float, toY: Float, c: Int) {}
+    public function flaskHealFree(arg0: Entity, arg1: Int, arg2: Array<Dynamic>): Void {
+    }
 
-  function warnGiantLaserBeam(ratio: Float, fromX: Float, fromY: Float, toX: Float, toY: Float, c: Int) {}
+    public function healing(arg0: Entity, arg1: Int): Void {
+    }
 
-  function fireWallPrepare(footX: Float, footY: Float, rad: Float) {}
+    public function heroHeadPopFinal(arg0: en.Hero, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function _fireWallRock(p: libs.heaps.HParticle.HParticle) {}
+    public function _drip(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function fireWallRock(fw: en.FireWall.FireWall, rad: Float, hei: Float) {}
+    public function drips(arg0: Float, arg1: Float, arg2: Int, arg3: Int, arg4: Dynamic, arg5: Dynamic): Void {
+    }
 
-  function _fireWall(p: libs.heaps.HParticle.HParticle) {}
+    public function throneFountainDrips(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function fireWall(fw: en.FireWall.FireWall, rad: Float, hei: Float, color: Dynamic, wallWidth: Dynamic) {}
+    public function throneFountainEnterDrips(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function upgradeShrine(x: Float, y: Float, c: Int) {}
+    public function throneFountainGlow(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function shielderLink(fx: Float, fy: Float, tx: Float, ty: Float, curveDist: Float, c: Int) {}
+    public function _eliteGradient(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function axeRecalled(fx: Float, fy: Float, tx: Float, ty: Float, c: Int) {}
+    public function elite(arg0: Entity, arg1: Bool): Void {
+    }
 
-  function legendaryAltarBubble(x: Float, y: Float, c: Int, r: Float) {}
+    public function itemAltarLinkDestroyed(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function legendaryAltarLink(fx: Float, fy: Float, tx: Float, ty: Float, delay: Float, cStart: Int, cEnd: Int) {}
+    public function itemAltarPicked(arg0: Float, arg1: Float, arg2: tool.InventItem, arg3: Int): Void {
+    }
 
-  function noPower(x: Float, y: Float) {}
+    public function itemAltarDisabled(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function powerLink(fx: Float, fy: Float, tx: Float, ty: Float, curveDist: Float, c: Int, alpha: Dynamic) {}
+    public function kingsSpearPowerUp(arg0: Entity): Void {
+    }
 
-  function _flaskDepleted(p: libs.heaps.HParticle.HParticle) {}
+    public function kingsSpearPowerOut(arg0: Entity): Void {
+    }
 
-  function flaskDepleted(e: en.Hero.Hero, c: Int) {}
+    public function superPower(arg0: Entity, arg1: Int, arg2: Ref): Void {
+    }
 
-  function flaskHeal(e: en.Hero.Hero, c: Int) {}
+    public function superCollectorPower(arg0: en.mob.boss.Collector, arg1: Int): Void {
+    }
 
-  function flaskHealFree(e: Entity, c: Int, pts: hl.types.ArrayObj<Dynamic>) {}
+    public function _cageColor(arg0: Entity, arg1: libs.heaps.HParticle, arg2: Int): Int {
+        throw "stub: _cageColor not decompiled";
+    }
 
-  function healing(e: Entity, c: Int) {}
+    public function eliteCage(arg0: Entity, arg1: Dynamic): Void {
+    }
 
-  function heroHeadPopFinal(e: en.Hero.Hero, c: Int, flashBangBool: Dynamic, circleAttachToEnt: Dynamic) {}
+    public function eliteAnger(arg0: Float, arg1: Float): Void {
+    }
 
-  function _drip(dp: libs.heaps.HParticle.HParticle) {}
+    public function eliteWakeUp(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function drips(x: Float, y: Float, n: Int, c: Int, fallImmediatly: Dynamic, wid: Dynamic) {}
+    public function dash(arg0: Entity, arg1: Int, arg2: Int, arg3: Ref, arg4: Ref): Void {
+    }
 
-  function throneFountainDrips(x: Float, y: Float, n: Int, c: Int) {}
+    public function verticalDash(arg0: Entity, arg1: Int, arg2: Int, arg3: Ref): Void {
+    }
 
-  function throneFountainEnterDrips(x: Float, y: Float, c: Int) {}
+    public function pullTrapReady(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function throneFountainGlow(x: Float, y: Float, c: Int) {}
+    public function pullTrapRadius(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function _eliteGradient(p: libs.heaps.HParticle.HParticle) {}
+    public function pullTrapTrigger(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function elite(e: Entity, angry: Bool) {}
+    public function pullTrapDeflagration(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function itemAltarLinkDestroyed(x: Float, y: Float, wid: Float) {}
+    public function pullTrapCharge(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function itemAltarPicked(x: Float, y: Float, i: tool.InventItem.InventItem, c: Int) {}
+    public function bombTrapTrigger(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function itemAltarDisabled(x: Float, y: Float, c: Int) {}
+    public function bombTrapCharge(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function kingsSpearPowerUp(e: Entity) {}
+    public function bombTrapShoot(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function kingsSpearPowerOut(e: Entity) {}
+    public function trapShine(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function superPower(e: Entity, c: Int, mult: Dynamic) {}
+    public function shurikenShine(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function superCollectorPower(e: en.mob.boss.Collector.Collector, c: Int) {}
+    public function moneyShine(arg0: Float, arg1: Float): Void {
+    }
 
-  function _cageColor(e: Entity, p: libs.heaps.HParticle.HParticle, i: Int): Int {}
+    public function lootSpawn(arg0: Entity, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function eliteCage(e: Entity, c: Dynamic) {}
+    public function counteredBullet(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function eliteAnger(x: Float, y: Float) {}
+    public function magicBallElectric(arg0: Entity, arg1: Float, arg2: Int, arg3: Int, arg4: Ref): Void {
+    }
 
-  function eliteWakeUp(x: Float, y: Float, minTime: Dynamic, maxTime: Dynamic) {}
+    public function foggerSmoke(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function dash(e: Entity, dir: Int, c: Int, dx: Dynamic, scaleMul: Dynamic) {}
+    public function outOfScreenDeath(arg0: Entity, arg1: Int): Void {
+    }
 
-  function verticalDash(e: Entity, dir: Int, c: Int, dy: Dynamic) {}
+    public function fireBlue(arg0: Float, arg1: Float): Void {
+    }
 
-  function pullTrapReady(x: Float, y: Float, c: Int) {}
+    public function fireAffect(arg0: Entity, arg1: Bool): Void {
+    }
 
-  function pullTrapRadius(x: Float, y: Float, r: Float, pow: Float, c: Int) {}
+    public function electricityAffect(arg0: Entity): Void {
+    }
 
-  function pullTrapTrigger(x: Float, y: Float, r: Float, c: Int) {}
+    public function shockAffect(arg0: Entity): Void {
+    }
 
-  function pullTrapDeflagration(x: Float, y: Float, r: Float, c: Int) {}
+    public function electricHit(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function pullTrapCharge(x: Float, y: Float, radius: Float, ratio: Float, c: Int) {}
+    public function oilAffect(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function bombTrapTrigger(x: Float, y: Float, r: Float, c: Int) {}
+    public function _spinning(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function bombTrapCharge(x: Float, y: Float, ratio: Float, c: Int) {}
+    public function spinner(arg0: Entity, arg1: Float, arg2: Ref): Void {
+    }
 
-  function bombTrapShoot(x: Float, y: Float, a: Float, c: Int) {}
+    public function chargeCkSpin(arg0: Entity, arg1: Float): Void {
+    }
 
-  function trapShine(x: Float, y: Float, c: Int) {}
+    public function _chargeckSpin(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function shurikenShine(x: Float, y: Float, c: Int) {}
+    public function _ckSpinning(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function moneyShine(x: Float, y: Float) {}
+    public function spinnerEnd(arg0: Entity): Void {
+    }
 
-  function lootSpawn(e: Entity, scale: Float, n: Int, c: Int) {}
+    public function runSmoke(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function counteredBullet(x: Float, y: Float, ang: Float, c: Int) {}
+    public function columnWall(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function magicBallElectric(e: Entity, ang: Float, c: Int, fadeCol: Int, scaleMul: Dynamic) {}
+    public function columnWallOpening(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function foggerSmoke(x: Float, y: Float, r: Float, c: Int) {}
+    public function columnWallClosing(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function outOfScreenDeath(e: Entity, c: Int) {}
+    public function itemSold(arg0: Float, arg1: Float): Void {
+    }
 
-  function fireBlue(x: Float, y: Float) {}
+    public function _followMoveAng(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function fireAffect(e: Entity, withOil: Bool) {}
+    public function speedComboChange(arg0: Entity, arg1: Bool): Void {
+    }
 
-  function electricityAffect(e: Entity) {}
+    public function _scaleXRotation(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function shockAffect(e: Entity) {}
+    public function perfectKillsDeathFeedback(arg0: Entity, arg1: Bool): Void {
+    }
 
-  function electricHit(x: Float, y: Float, c: Int) {}
+    public function groundSparks(arg0: Entity, arg1: Int, arg2: Int): Void {
+    }
 
-  function oilAffect(e: Entity, color: Dynamic) {}
+    public function dispellAoeSparks(arg0: tool.LevelAreaAffect): Void {
+    }
 
-  function _spinning(p: libs.heaps.HParticle.HParticle) {}
+    public function minimothGroundSparks(arg0: Entity, arg1: Int, arg2: Int, arg3: Float): Void {
+    }
 
-  function spinner(e: Entity, radiusPx: Float, isBlue: Dynamic) {}
+    public function enemyGrenade(arg0: en.Grenade, arg1: Bool): Void {
+    }
 
-  function chargeCkSpin(e: Entity, lifeS: Float) {}
+    public function tornado(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 
-  function _chargeckSpin(p: libs.heaps.HParticle.HParticle) {}
+    public function tornadoCK(arg0: en.mob.CastleKnight, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int): Void {
+    }
 
-  function _ckSpinning(p: libs.heaps.HParticle.HParticle) {}
+    public function tornadoGroundDirt(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function spinnerEnd(e: Entity) {}
+    public function bomberFlyingDagger(arg0: en.mob.Bomber, arg1: Float): libs.heaps.HParticle {
+        throw "stub: bomberFlyingDagger not decompiled";
+    }
 
-  function runSmoke(x: Float, y: Float, dir: Int, c: Int) {}
+    public function groundAreaAnnounce(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Float): Void {
+    }
 
-  function columnWall(x: Float, y: Float, hei: Float, c: Int, core: Int) {}
+    public function heavyIceStomp(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function columnWallOpening(x: Float, y: Float, c: Int) {}
+    public function _fireworkExplosion(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function columnWallClosing(x: Float, y: Float, hei: Float, c: Int) {}
+    public function firework(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function itemSold(x: Float, y: Float) {}
+    public function breakGround(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function _followMoveAng(p: libs.heaps.HParticle.HParticle) {}
+    public function breakWoodGround(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function speedComboChange(e: Entity, up: Bool) {}
+    public function breakGroundLight(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function _scaleXRotation(p: libs.heaps.HParticle.HParticle) {}
+    public function breakWall(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function perfectKillsDeathFeedback(e: Entity, major: Bool) {}
+    public function lavaHeavyHit(arg0: Float, arg1: Float): Void {
+    }
 
-  function groundSparks(e: Entity, c: Int, n: Int) {}
+    public function lavaDive(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function dispellAoeSparks(areaEffect: tool.LevelAreaAffect.LevelAreaAffect) {}
+    public function lava(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int): Void {
+    }
 
-  function minimothGroundSparks(e: Entity, c: Int, n: Int, xOffset: Float) {}
+    public function lavaGiant(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function enemyGrenade(e: en.Grenade.Grenade, boss: Bool) {}
+    public function chargeGiantEye(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function tornado(x: Float, y: Float, wid: Float, hei: Float, dx: Float, c0: Int, c1: Int) {}
+    public function giantLaserBeam(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function tornadoCK(ck: en.mob.CastleKnight.CastleKnight, wid: Float, hei: Float, dx: Float, c0: Int, c1: Int) {}
+    public function bomberJetpack(arg0: Entity, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int): Void {
+    }
 
-  function tornadoGroundDirt(x: Float, y: Float, c0: Int, c1: Int) {}
+    public function bomberJetpackSmoke(arg0: Entity, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function bomberFlyingDagger(bomber: en.mob.Bomber.Bomber, xOffset: Float): libs.heaps.HParticle.HParticle {}
+    public function wormGrenadeParry(arg0: Entity): Void {
+    }
 
-  function groundAreaAnnounce(x: Float, y: Float, c: Int, ratio: Float, totalDurationS: Float) {}
+    public function giantShoryuken(arg0: Float, arg1: Float, arg2: Float, arg3: Entity, arg4: Ref): Void {
+    }
 
-  function heavyIceStomp(x: Float, y: Float, rockCol: Int, fxCol: Int) {}
+    public function librarianPentacle(arg0: libs.heaps.slib.HSpriteBatch, arg1: Entity): libs.heaps.HParticle {
+        throw "stub: librarianPentacle not decompiled";
+    }
 
-  function _fireworkExplosion(bp: libs.heaps.HParticle.HParticle) {}
+    public function swampRosesPetals(arg0: Float, arg1: Float, arg2: Int, arg3: Dynamic): Void {
+    }
 
-  function firework(x: Float, y: Float, c: Int, n: Int) {}
+    public function swampButterFly(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function breakGround(cx: Int, cy: Int, cwid: Int, chei: Int) {}
+    public function swampInsects(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function breakWoodGround(cx: Int, cy: Int, cwid: Int, chei: Int) {}
+    public function simpleSmoke(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function breakGroundLight(cx: Int, cy: Int, cwid: Int, chei: Int) {}
+    public function featherExplosion(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function breakWall(cx: Int, cy: Int, cwid: Int, chei: Int, dir: Int) {}
+    public function eyeSpark(arg0: Entity, arg1: Float, arg2: Float): Void {
+    }
 
-  function lavaHeavyHit(x: Float, y: Float) {}
+    public function triggerTrapSparks(arg0: Float, arg1: Float): Void {
+    }
 
-  function lavaDive(x: Float, y: Float, wid: Float, light: Int, dark: Int) {}
+    public function axeStatueDeath(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Float): Void {
+    }
 
-  function lava(x: Float, y: Float, wid: Float, hei: Float, light: Int, dark: Int) {}
+    public function amazonBrutalDash(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int): Void {
+    }
 
-  function lavaGiant(x: Float, y: Float, wid: Float, hei: Float) {}
+    public function servantChaseDefeat(arg0: en.Mob): Void {
+    }
 
-  function chargeGiantEye(ratio: Float, x: Float, y: Float, c: Int) {}
+    public function tacticServantDiveAttackSign(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Ref, arg5: Ref): Void {
+    }
 
-  function giantLaserBeam(fromX: Float, fromY: Float, toX: Float, toY: Float, dir: Int) {}
+    public function fisherboatWaves(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function bomberJetpack(e: Entity, x: Float, y: Float, ang: Float, c: Int, out: Int) {}
+    public function _fisherboatWavesUpdate(arg0: Int): Dynamic {
+        throw "stub: _fisherboatWavesUpdate not decompiled";
+    }
 
-  function bomberJetpackSmoke(e: Entity, x: Float, y: Float, ang: Float) {}
+    public function hollowKnightSoulBubbles(arg0: Float, arg1: Float): Void {
+    }
 
-  function wormGrenadeParry(e: Entity) {}
+    public function _firefly(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function giantShoryuken(x: Float, y: Float, duration: Float, e: Entity, flip: Dynamic) {}
+    public function hollowKnightFireflies(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function librarianPentacle(batch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, e: Entity): libs.heaps.HParticle.HParticle {}
+    public function magnetArea(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function swampRosesPetals(x: Float, y: Float, color: Int, originDy: Dynamic) {}
+    public function bellSoundWave(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function swampButterFly(x: Float, y: Float, color: Int) {}
+    public function holyFire(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function swampInsects(x: Float, y: Float, color: Int) {}
+    public function bibleFlyingPage(arg0: libs.heaps.slib.HSpriteBatch, arg1: Float, arg2: Float, arg3: Float, arg4: Float): Void {
+    }
 
-  function simpleSmoke(x: Float, y: Float, c: Int) {}
+    public function catSpecialFury(arg0: Entity, arg1: String): Void {
+    }
 
-  function featherExplosion(x: Float, y: Float, dir: Int, color: Int) {}
+    public function mermanFireBall(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Entity): Void {
+    }
 
-  function eyeSpark(e: Entity, x: Float, y: Float) {}
+    public function buerFireTrail(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Bool): Void {
+    }
 
-  function triggerTrapSparks(x: Float, y: Float) {}
+    public function deathSoulsScatter(arg0: libs.heaps.slib.HSpriteBatch, arg1: Float, arg2: Float, arg3: Int, arg4: Float): Void {
+    }
 
-  function axeStatueDeath(x: Float, y: Float, width: Float, height: Float, dir: Int, groundY: Float) {}
+    public function deathSickleDestroy(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function amazonBrutalDash(x: Float, y: Float, len: Float, angle: Float, r: Float, c: Int) {}
+    public function bridgeSmoke(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Dynamic, arg5: Dynamic): Void {
+    }
 
-  function servantChaseDefeat(e: en.Mob.Mob) {}
+    public function bridgeSparks(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function tacticServantDiveAttackSign(x: Float, y: Float, _color: Int, _totalDurationS: Float, _power: Dynamic, _ratio: Dynamic) {}
+    public function deathTransitionExplosion(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function fisherboatWaves(x: Float, y: Float, power: Float, dir: Int) {}
+    public function medusaGorgonLook(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function _fisherboatWavesUpdate(color: Int): Dynamic {}
+    public function purpleTeleportLightBeam(arg0: Float, arg1: Ref, arg2: Ref, arg3: Ref, arg4: Ref, arg5: Ref): Void {
+    }
 
-  function hollowKnightSoulBubbles(x: Float, y: Float) {}
+    public function riskOfRainTPDots(arg0: Float, arg1: Float): Void {
+    }
 
-  function _firefly(p: libs.heaps.HParticle.HParticle) {}
+    public function riskOfRainMagmaWorm(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Bool, arg5: libs.heaps.slib.HSpriteBatch): Void {
+    }
 
-  function hollowKnightFireflies(x: Float, y: Float, rx: Dynamic, ry: Dynamic) {}
+    public function tailShootingStar(arg0: Entity, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function magnetArea(x: Float, y: Float, radius: Float, color: Int) {}
+    public function impactShootingStar(arg0: Float, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function bellSoundWave(x: Float, y: Float, radius: Float, speed: Float) {}
+    public function tailAnathema(arg0: Entity, arg1: Int, arg2: Int): Void {
+    }
 
-  function holyFire(x: Float, y: Float, range: Float) {}
+    public function indulgenceRay(arg0: Entity): Void {
+    }
 
-  function bibleFlyingPage(sBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, startX: Float, startY: Float, dx: Float, dy: Float) {}
+    public function doomBringerSoundWave(arg0: Float, arg1: Float): Void {
+    }
 
-  function catSpecialFury(from: Entity, fxId: String) {}
+    public override function update(): Void {
+    }
 
-  function mermanFireBall(x: Float, y: Float, dir: Int, range: Float, followEntity: Entity) {}
+    public function trueLightningBolt(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Ref, arg6: Ref): Void {
+    }
 
-  function buerFireTrail(x: Float, y: Float, dir: Int, duration: Float, sRush: Bool) {}
+    public function queenCutLine(arg0: Dynamic): Void {
+    }
 
-  function deathSoulsScatter(sBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, x: Float, y: Float, dir: Int, radius: Float) {}
+    public function getFxTileFromTier(arg0: String): tool.FxTile {
+        throw "stub: getFxTileFromTier not decompiled";
+    }
 
-  function deathSickleDestroy(x: Float, y: Float, color: Int) {}
-
-  function bridgeSmoke(x: Float, y: Float, r: Float, c: Int, dir: Dynamic, alpha: Dynamic) {}
-
-  function bridgeSparks(x: Float, y: Float, radius: Float, col: Int) {}
-
-  function deathTransitionExplosion(x: Float, y: Float, radius: Float, color: Int) {}
-
-  function medusaGorgonLook(x: Float, y: Float, radius: Float, alpha: Float, col: Int) {}
-
-  function purpleTeleportLightBeam(x: Float, col: Dynamic, wid: Dynamic, openDur: Dynamic, stayDur: Dynamic, closeDur: Dynamic) {}
-
-  function riskOfRainTPDots(x: Float, y: Float) {}
-
-  function riskOfRainMagmaWorm(x: Float, y: Float, dx: Float, dy: Float, left: Bool, sBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch) {}
-
-  function tailShootingStar(e: Entity, stepDot: Int, countDot: Int, stepStar: Int, countStar: Int) {}
-
-  function impactShootingStar(x: Float, y: Float, countDot: Int, countStar: Int) {}
-
-  function tailAnathema(e: Entity, cIn: Int, cOut: Int) {}
-
-  function indulgenceRay(target: Entity) {}
-
-  function doomBringerSoundWave(x: Float, y: Float) {}
-
-  function update() {}
-
-  function trueLightningBolt(fx: Float, fy: Float, tx: Float, ty: Float, segments: Int, maxChildren: Dynamic, widthScale: Dynamic) {}
-
-  function queenCutLine(cutLine: Dynamic) {}
-
-  function getFxTileFromTier(tierKind: String): Dynamic {}
-
-  function generateParticleFromConf(particleConf: Dynamic, pool: libs.heaps.HParticle.HParticle, batch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, offsetX: Dynamic, offsetY: Dynamic, dirMul: Dynamic, alphaMul: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function generateParticleFromConf(arg0: Dynamic, arg1: libs.heaps.ParticlePool, arg2: libs.heaps.slib.HSpriteBatch, arg3: Ref, arg4: Ref, arg5: Ref, arg6: Ref): libs.heaps.HParticle {
+        throw "stub: generateParticleFromConf not decompiled";
+    }
 }
 
+class FakeHeroDeath extends GameCinematic {
+    public var container: light.TopFx;
+    public var hero: en.Hero;
+    public var corpse: en.HeroDeadCorpse;
+    public var mask: h2d.Bitmap;
+    public var queen: en.mob.boss.Queen;
+    public var gameOverScreen: ui.GameOver;
+    public var inf: Dynamic;
+    public var hom: en.Homunculus;
+    public var pool: libs.heaps.ParticlePool;
+    public var fxSb: libs.heaps.slib.HSpriteBatch;
+    public var heroDeathChannel: hxd.snd.Channel;
+    public var baseColor: Int;
+    public var furyColor: Int;
+    public var lostBody: Bool;
+    public var moveTimeS: Float;
+    public var recoveringHero: Bool;
+    public var recoverX: Float;
+    public var recoverY: Float;
+
+    public function new(arg0: en.Hero, arg1: en.mob.boss.Queen, arg2: Bool, arg3: Dynamic, arg4: hxd.snd.Channel) {
+        super();
+    }
+
+    public function pauseMusic(): Void {
+    }
+
+    public function restartMusic(): Void {
+    }
+
+    public function hitQueenFor(arg0: Int): Void {
+    }
+
+    public function prepareForThrow(): Void {
+    }
+
+    public function headCharge(arg0: Float): Void {
+    }
+
+    public function holdHeroFx(arg0: Float): Void {
+    }
+
+    public function recalHeroToQueen(): Void {
+    }
+
+    public function homunculusExit(): Void {
+    }
+
+    public function _fxHomunculusExit(arg0: libs.heaps.HParticle): Void {
+    }
+
+    public function fxHomunculusExit(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
+
+    public function gameOverTitle(): ui.GameOver {
+        throw "stub: gameOverTitle not decompiled";
+    }
+
+    public override function onDispose(): Void {
+    }
+
+    public override function postUpdate(): Void {
+    }
+}
+
+class Queen extends en.mob.Boss {
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var middlePoint: tool.CPoint;
+    public var attackDealtMemory: Dynamic;
+    public var attackReceivedMemory: Dynamic;
+    public var initialAttackDone: Bool;
+    public var nbQuickStrike: Int;
+    public var nbCombo: Int;
+    public var nbTeleport: Int;
+    public var comboEnderDone: Bool;
+    public var shieldAnnoyanceLevel: Int;
+    public var attackChain: Array<Dynamic>;
+    public var activeCutLines: Array<Dynamic>;
+    public var shieldTaunts: Array<Dynamic>;
+    public var comboStarterAttacks: Array<Dynamic>;
+    public var comboStarterAttacksDeck: libs.RandDeck;
+    public var quickMeleeAttacks: Array<Dynamic>;
+    public var quickMeleeAttacksDeck: libs.RandDeck;
+    public var comboEnderAttacks: Array<Dynamic>;
+    public var comboEnderAttacksDeck: libs.RandDeck;
+    public var antiShieldAttacks: Array<Dynamic>;
+    public var antiShieldAttacksDeck: libs.RandDeck;
+    public var gapCloserSkill: tool.skill.OldMobSkill;
+    public var swapSkill: tool.skill.OldMobSkill;
+    public var preventFallingFromBump: Bool;
+    public var firewaveAtk: tool.skill.OldMobSkill;
+    public var lungeAttack: tool.skill.OldMobSkill;
+    public var lungeAttackArea: tool.Area;
+    public var comboAttack: tool.skill.OldMobSkill;
+    public var overshieldAttack: tool.skill.OldMobSkill;
+    public var grabAttack: tool.skill.OldMobSkill;
+    public var throwHeroSkill: tool.skill.OldSkill;
+    public var shockWaveAtk: tool.skill.OldMobSkill;
+    public var tauntAtk: tool.skill.OldMobSkill;
+    public var grabbedHero: en.Hero;
+    public var backDashSkill: tool.skill.OldMobSkill;
+    public var repelBulletSkill: tool.skill.OldMobSkill;
+    public var repelBulletSkillInf: Dynamic;
+    public var parrySkill: tool.skill.OldSkill;
+    public var parrySkillInf: Dynamic;
+    public var parryCounterAtk: tool.skill.OldMobSkill;
+    public var disableGrenadeSkill: tool.skill.OldMobSkill;
+    public var groundStompAnswerAtk: tool.skill.OldMobSkill;
+    public var removeRootAtk: tool.skill.OldMobSkill;
+    public var fallTpSkill: tool.skill.OldMobSkill;
+    public var maxFallBeforeTp: Int;
+    public var maxFallLeniency: Int;
+    public var destroyTurretAttack: tool.skill.OldMobSkill;
+    public var killPetSkill: tool.skill.OldMobSkill;
+    public var dispellAOESkill: tool.skill.OldMobSkill;
+    public var voronoi: h2d.col.Voronoi;
+    public var jumpSpeed: Float;
+    public var lastCutReady: Bool;
+    public var safeSpot: Dynamic;
+    public var headPool: libs.heaps.ParticlePool;
+    public var headNormalSb: libs.heaps.slib.HSpriteBatch;
+    public var headAddSb: libs.heaps.slib.HSpriteBatch;
+    public var headBlack: Int;
+    public var eye: libs.heaps.slib.HSprite;
+    public var eyeLeft: libs.heaps.slib.HSprite;
+    public var eyeRight: libs.heaps.slib.HSprite;
+    public var eyeDir: Float;
+    public var lastHeadPos: tool.FPoint;
+    public var eyeOffsetX: Float;
+    public var eyeOffsetY: Float;
+    public var bossRushModifiers: Dynamic;
+    public var ambiantChannel: hxd.snd.Channel;
+    public var registeredFx: Array<Dynamic>;
+    public var isAntiShieldCombo: Bool;
+    public var isInPlaceForCutScreen: Bool;
+    public var focusedActive: en.Active;
+    public var focusedGrenade: en.Grenade;
+    public var focusedPet: Entity;
+    public var delayedBreachFrom: tool.atk.AttackData;
+    public var sbQueenFx: libs.heaps.slib.HSpriteBatch;
+    public var lastChargeRatio: Float;
+    public var lastHandX: Float;
+    public var lastHandY: Float;
+    public var : Dynamic;
+
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
+
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.boss.Queen {
+        throw "stub: create not decompiled";
+    }
+
+    public function get_isInCutScreenPhase(): Bool {
+        throw "stub: get_isInCutScreenPhase not decompiled";
+    }
+
+    public function get_isInTutorialPhase(): Bool {
+        throw "stub: get_isInTutorialPhase not decompiled";
+    }
+
+    public function get_headDir(): Int {
+        throw "stub: get_headDir not decompiled";
+    }
+
+    public function interpolate(arg0: Float, arg1: libs.misc.TType): Float {
+        throw "stub: interpolate not decompiled";
+    }
+
+    public override function setReady(): Void {
+    }
+
+    public override function init(): Void {
+    }
+
+    public function initJumpSpeed(): Void {
+    }
+
+    public function idleToAnim(arg0: String): String {
+        throw "stub: idleToAnim not decompiled";
+    }
+
+    public function animToIdle(arg0: String): String {
+        throw "stub: animToIdle not decompiled";
+    }
+
+    public function loadToAnim(arg0: String): String {
+        throw "stub: loadToAnim not decompiled";
+    }
+
+    public function initAffectResists(): Void {
+    }
+
+    public function initSkills(): Void {
+    }
+
+    public function doCutLineAttack(arg0: Dynamic, arg1: Float, arg2: Dynamic): Void {
+    }
+
+    public function singleCutLineAttack(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
+
+    public function initSpeechDeck(): Void {
+    }
+
+    public function initOffensiveSkills(): Void {
+    }
+
+    public function releaseGrabbedHero(): Void {
+    }
+
+    public function initDefensiveSkills(): Void {
+    }
+
+    public function cutGrenade(arg0: en.Grenade): Void {
+    }
+
+    public function meleeCutLineAttack(arg0: String): Void {
+    }
+
+    public function initMeleeAtk(arg0: String, arg1: Bool, arg2: Array<Int>, arg3: Ref, arg4: String): tool.skill.OldMobSkill {
+        throw "stub: initMeleeAtk not decompiled";
+    }
+
+    public function playFx(arg0: String, arg1: Ref, arg2: tool.skill.OldSkill): libs.heaps.HParticle {
+        throw "stub: playFx not decompiled";
+    }
+
+    public function interruptSkills(): Void {
+    }
+
+    public function cleanRegisteredFx(): Void {
+    }
+
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
+
+    public function dash(arg0: Int): Void {
+    }
+
+    public function dashTo(arg0: Float): Void {
+    }
+
+    public function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
+
+    public function onStep(): Void {
+    }
+
+    public function checkDashHit(): Void {
+    }
+
+    public function stopDash(): Void {
+    }
+
+    public function createCounterBullet(arg0: en.Bullet): en.Bullet {
+        throw "stub: createCounterBullet not decompiled";
+    }
+
+    public function canTpBehind(arg0: Entity): Bool {
+        throw "stub: canTpBehind not decompiled";
+    }
+
+    public function chainComboAttack(arg0: Bool): Void {
+    }
+
+    public function needsCloseUp(arg0: tool.skill.OldMobSkill): Bool {
+        throw "stub: needsCloseUp not decompiled";
+    }
+
+    public function chainAntiShieldCombo(arg0: Bool): Void {
+    }
+
+    public function chainComboEnder(): Void {
+    }
+
+    public function resetAttackDealtMemory(): Void {
+    }
+
+    public function resetAttackReceivedMemory(): Void {
+    }
+
+    public function switchToDefensive(): Void {
+    }
+
+    public function startNextCombo(): Void {
+    }
+
+    public function tauntShieldFury(): Void {
+    }
+
+    public function switchToOffensive(): Void {
+    }
+
+    public function aiLocked(): Bool {
+        throw "stub: aiLocked not decompiled";
+    }
+
+    public override function canLevelUp(): Bool {
+        throw "stub: canLevelUp not decompiled";
+    }
+
+    public override function prepareLevelUp(): Void {
+    }
+
+    public override function onScream(): Void {
+    }
+
+    public function cancelCutScreenPhase(): Void {
+    }
+
+    public function getComboStarter(): tool.skill.OldMobSkill {
+        throw "stub: getComboStarter not decompiled";
+    }
+
+    public function isIgnoredBullet(arg0: en.Bullet): Bool {
+        throw "stub: isIgnoredBullet not decompiled";
+    }
+
+    public function getIncomingEnemyBullets(): Array<Dynamic> {
+        throw "stub: getIncomingEnemyBullets not decompiled";
+    }
+
+    public function detectedUrgentThreat(): Bool {
+        throw "stub: detectedUrgentThreat not decompiled";
+    }
+
+    public function choseDefensiveMove(): tool.skill.OldMobSkill {
+        throw "stub: choseDefensiveMove not decompiled";
+    }
+
+    public function behaviourAi(): Void {
+    }
+
+    public function checkForBreach(arg0: tool.atk.AttackData): Void {
+    }
+
+    public function onBreach(arg0: tool.atk.AttackData): Void {
+    }
+
+    public override function dispose(): Void {
+    }
+
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
+
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
+
+    public function startDelayedBreach(arg0: Ref): Void {
+    }
+
+    public function onFatalFallDamage(): Void {
+    }
+
+    public function respawnOnLastStable(arg0: Float): Void {
+    }
+
+    public function get_headTracks(): Array<Int> {
+        throw "stub: get_headTracks not decompiled";
+    }
+
+    public function get_headX(): Float {
+        throw "stub: get_headX not decompiled";
+    }
+
+    public function get_headY(): Float {
+        throw "stub: get_headY not decompiled";
+    }
+
+    public function get_handTracks(): Array<Int> {
+        throw "stub: get_handTracks not decompiled";
+    }
+
+    public function get_handX(): Float {
+        throw "stub: get_handX not decompiled";
+    }
+
+    public function get_handY(): Float {
+        throw "stub: get_handY not decompiled";
+    }
+
+    public function getBlendMode(): h2d.BlendMode {
+        throw "stub: getBlendMode not decompiled";
+    }
+
+    public function initGfx(): Void {
+    }
+
+    public function initHeadFx(): Void {
+    }
+
+    public function _trackHand(arg0: libs.heaps.HParticle): Void {
+    }
+
+    public function fxChargeHand(arg0: Float, arg1: Float): Void {
+    }
+
+    public function fxChargeEntity(arg0: Entity, arg1: Float, arg2: Float): Void {
+    }
+
+    public function handGlintFx(): Void {
+    }
+
+    public function startHandSmokeS(arg0: Float): Void {
+    }
+
+    public function stopHandSmoke(): Void {
+    }
+
+    public function onDelayedVolteStart(): Void {
+    }
+
+    public function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
+
+    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
+
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
+
+    public function onLeaveMap(): Void {
+    }
+
+    public function createBodyPart(): Array<Dynamic> {
+        throw "stub: createBodyPart not decompiled";
+    }
+
+    public override function onDie(): Void {
+    }
+
+    public function dropLoot(): Void {
+    }
+
+    public function getVolteDelay(): Float {
+        throw "stub: getVolteDelay not decompiled";
+    }
+
+    public function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
+
+    public function disposeGfx(): Void {
+    }
+
+    public function beforeRender(): Void {
+    }
+
+    public function updateHeadFx(arg0: Float): Void {
+    }
+
+    public function eyeShine(arg0: Int): Void {
+    }
+
+    public function _headPartUpdate(arg0: libs.heaps.HParticle): Void {
+    }
+
+    public function postUpdate(): Void {
+    }
+
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
+
+    public override function fixedUpdate(): Void {
+    }
+
+    public function fxSplitScreen(arg0: Dynamic): Void {
+    }
+
+    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
+
+    public function setHeadPosition(arg0: en.mob.boss.HeadPosition, arg1: Float): Void {
+    }
+
+    public function getDiminishingFactor(arg0: Int, arg1: Int, arg2: Int, arg3: Dynamic): Float {
+        throw "stub: getDiminishingFactor not decompiled";
+    }
+
+    public function applyBossRushModifier(arg0: Dynamic): Void {
+    }
+
+    public override function giveHeadFeedback(arg0: String): Void {
+    }
+
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public override function unserializeInit(): Void {
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
+}
+
+class ClubBroken extends tool.Weapon {
+    public var woodRechargeFXDone: Bool;
+
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
+
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
+
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
+
+    public override function fixedUpdate(): Void {
+    }
+
+    public override function onAnticipate(): Void {
+    }
+
+    public function woodRechargeFX(): Void {
+    }
+
+    public function woodRechargeCompleteFX(): Void {
+    }
+
+    public override function postUpdate(): Void {
+    }
+}

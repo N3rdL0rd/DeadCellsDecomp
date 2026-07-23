@@ -1,12 +1,18 @@
 package level.struct;
+
 class T_AfterSwamp extends level.struct.Transition {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public function createCross(arg0: String): level.RoomNode {
+        throw "stub: createCross not decompiled";
+    }
 
-  function createCross(id: String): level.RoomNode.RoomNode {}
-
-  function addTeleports() {}
+    public function addTeleports(): Void {
+    }
 }
-

@@ -1,18 +1,27 @@
 package level.struct;
+
 class Distillery extends level.LevelStruct {
-  var hub: level.RoomNode.RoomNode;
-  var branches: hl.types.ArrayObj<Dynamic>;
+    public var hub: level.RoomNode;
+    public var branches: Array<Dynamic>;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function createBranch(node: level.RoomNode.RoomNode, forceSubBranch: Dynamic): level.RoomNode.RoomNode {}
+    public function createBranch(arg0: level.RoomNode, arg1: Ref): level.RoomNode {
+        throw "stub: createBranch not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 }
-

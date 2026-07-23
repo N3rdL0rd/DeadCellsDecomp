@@ -1,41 +1,62 @@
 package en.inter.door;
+
 class BankMoneyCheckDoor extends en.inter.Door {
-  var baseMoneyValue: Int;
-  var totalRepaidAmount: Int;
-  var repaymentSound: hxd.res.Sound.Sound;
-  var fullyRepayedSound: hxd.res.Sound.Sound;
-  var cantRepayedSound: hxd.res.Sound.Sound;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var baseMoneyValue: Int;
+    public var totalRepaidAmount: Int;
+    public var repaymentSound: hxd.res.Sound;
+    public var fullyRepayedSound: hxd.res.Sound;
+    public var cantRepayedSound: hxd.res.Sound;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function get_allATMs(): hl.types.ArrayObj<Dynamic> {}
+    public function get_allATMs(): Array<Dynamic> {
+        throw "stub: get_allATMs not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function takeMoneyBack(): Int {}
+    public function takeMoneyBack(): Int {
+        throw "stub: takeMoneyBack not decompiled";
+    }
 
-  function onResolve() {}
+    public function onResolve(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

@@ -1,40 +1,59 @@
 package en;
+
 class SlicePart extends Entity {
-  var alphaMap: hxsl.Macros.Macros;
-  var baseSpr: libs.heaps.slib.HSprite.HSprite;
-  var baseDepth: Int;
-  var baseEn: Entity;
-  var inverted: Bool;
-  var isUnderSliceLine: Dynamic;
-  static var SLICE_MASK_WID: Int;
-  static var SLICE_MASK_HEI: Int;
-  static var VISIBLE_COLOR: Int;
-  static var HIDE_COLOR: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var SLICE_MASK_WID: Int;
+    public static var SLICE_MASK_HEI: Int;
+    public static var VISIBLE_COLOR: Int;
+    public static var HIDE_COLOR: Int;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var alphaMap: h3d.shader.AlphaMap;
+    public var baseSpr: libs.heaps.slib.HSprite;
+    public var baseDepth: Int;
+    public var baseEn: Entity;
+    public var inverted: Bool;
+    public var isUnderSliceLine: Dynamic;
 
-  function __constructor__(lvl: pr.Level.Level, x: Float, y: Float, e: Entity, inverted: Dynamic, depth: Dynamic, sliceFunc: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Float, arg2: Float, arg3: Entity, arg4: Ref, arg5: Dynamic, arg6: Dynamic) {
+        super();
+    }
 
-  function get_targetSprPosX(): Float {}
+    public override function get_targetSprPosX(): Float {
+        throw "stub: get_targetSprPosX not decompiled";
+    }
 
-  function get_targetSprPosY(): Float {}
+    public override function get_targetSprPosY(): Float {
+        throw "stub: get_targetSprPosY not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function generateSliceMask(): h3d.mat.Texture.Texture {}
+    public function generateSliceMask(): h3d.mat.Texture {
+        throw "stub: generateSliceMask not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

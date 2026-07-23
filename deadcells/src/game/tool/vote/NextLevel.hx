@@ -1,21 +1,35 @@
 package tool.vote;
+
 class NextLevel extends tool.TwitchVote {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  static function isRunning(): Bool {}
+    public function new() {
+        super();
+    }
 
-  static function countExits(l: pr.Level.Level): Int {}
+    public static function isBestLevelId(arg0: String): Bool {
+        throw "stub: isBestLevelId not decompiled";
+    }
 
-  static function isBestLevelId(lid: String): Bool {}
+    public static function isRunning(): Bool {
+        throw "stub: isRunning not decompiled";
+    }
 
-  function __constructor__() {}
+    public static function countExits(arg0: pr.Level): Int {
+        throw "stub: countExits not decompiled";
+    }
 
-  function isSuspended(): Bool {}
+    public override function isSuspended(): Bool {
+        throw "stub: isSuspended not decompiled";
+    }
 
-  function onDelayedVoteInit() {}
+    public override function onDelayedVoteInit(): Void {
+    }
 
-  function renderTime() {}
+    public override function renderTime(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

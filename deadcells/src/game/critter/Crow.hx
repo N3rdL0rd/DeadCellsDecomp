@@ -1,27 +1,35 @@
 package critter;
+
 class Crow extends Critter {
-  var tang: Float;
-  var spd: Float;
-  var fleeDist2: Float;
-  var fleeSpd: Float;
-  var jumps: Int;
-  var fleeing: Bool;
-  var sndSpace: hxd.snd.effect.Spatialization.Spatialization;
-  var fixed: Bool;
-  static var flySounds: hl.types.ArrayObj<Dynamic>;
+    public static var flySounds: Array<Dynamic>;
+    public var tang: Float;
+    public var spd: Float;
+    public var fleeDist2: Float;
+    public var fleeSpd: Float;
+    public var jumps: Int;
+    public var fleeing: Bool;
+    public var sndSpace: hxd.snd.effect.Spatialization;
+    public var fixed: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function onStepY() {}
+    public override function onStepY(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function flee(d: Int) {}
+    public function flee(arg0: Int): Void {
+    }
 
-  function onLeaveScreen() {}
+    public override function onLeaveScreen(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 }
-

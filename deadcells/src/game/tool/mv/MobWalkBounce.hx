@@ -1,15 +1,21 @@
 package tool.mv;
+
 class MobWalkBounce extends tool.mv.MobWalk {
-  var inf: Dynamic;
-  var sfxJump: hxd.res.Sound.Sound;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var inf: Dynamic;
+    public var sfxJump: hxd.res.Sound;
 
-  function __constructor__(mob: en.Mob.Mob) {}
+    public function new(arg0: en.Mob) {
+        super();
+    }
 
-  function updateWalk() {}
+    public function updateWalk(): Void {
+    }
 
-  function cancelJump() {}
+    public function cancelJump(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

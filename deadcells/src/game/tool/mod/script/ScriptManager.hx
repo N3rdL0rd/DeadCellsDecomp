@@ -1,28 +1,44 @@
 package tool.mod.script;
+
 class ScriptManager {
-  var struct: tool.mod.script.StructInterpreter.StructInterpreter;
-  static var privateInstance: ScriptManager;
+    public static var privateInstance: tool.mod.script.ScriptManager;
+    public var struct: tool.mod.script.StructInterpreter;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  static function get_instance(): ScriptManager {}
+    public static function get_instance(): tool.mod.script.ScriptManager {
+        throw "stub: get_instance not decompiled";
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 
-  function loadScripts(_path: String) {}
+    public function loadScripts(arg0: String): Void {
+    }
 
-  function doesOverrideStructure(): Bool {}
+    public function doesOverrideStructure(): Bool {
+        throw "stub: doesOverrideStructure not decompiled";
+    }
 
-  function loadLevel(_levelId: String) {}
+    public function loadLevel(arg0: String): Void {
+    }
 
-  function getCustomLevelInfo(_levelInfo: Dynamic): Dynamic {}
+    public function getCustomLevelInfo(arg0: Dynamic): Dynamic {
+        throw "stub: getCustomLevelInfo not decompiled";
+    }
 
-  function doesAllowInfamousMobScaling(): Bool {}
+    public function doesAllowInfamousMobScaling(): Bool {
+        throw "stub: doesAllowInfamousMobScaling not decompiled";
+    }
 
-  function getMobTier(_diff: Int): Int {}
+    public function getMobTier(arg0: Int): Int {
+        throw "stub: getMobTier not decompiled";
+    }
 
-  function initLevelStruct(_levelStruct: level.LevelStruct.LevelStruct) {}
+    public function initLevelStruct(arg0: level.LevelStruct): Void {
+    }
 
-  function releaseLevelStruct() {}
+    public function releaseLevelStruct(): Void {
+    }
 }
-

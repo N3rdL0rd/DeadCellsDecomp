@@ -1,196 +1,279 @@
 package spine;
+
 class Animation {
-  var hashCode: Int;
-  var name: String;
-  var timelines: hl.types.ArrayObj<Dynamic>;
-  var duration: Float;
+    public var hashCode: Int;
+    public var name: String;
+    public var timelines: Array<Dynamic>;
+    public var duration: Float;
 
-  static function binarySearchWithStep(values: hl.types.ArrayBytes<Float>, target: Float, step: Int): Int {}
+    public function new(arg0: String, arg1: Array<Dynamic>, arg2: Float) {
+    }
 
-  static function binarySearch(values: hl.types.ArrayBytes<Float>, target: Float): Int {}
+    public static function binarySearch(arg0: Array<Float>, arg1: Float): Int {
+        throw "stub: binarySearch not decompiled";
+    }
 
-  function __constructor__(name: String, timelines: hl.types.ArrayObj<Dynamic>, duration: Float) {}
+    public static function binarySearchWithStep(arg0: Array<Float>, arg1: Float, arg2: Int): Int {
+        throw "stub: binarySearchWithStep not decompiled";
+    }
 
-  function getDuration(): Float {}
-}
-
-class AttachmentTimeline {
-  var slotIndex: Int;
-  var frames: hl.types.ArrayBytes<Float>;
-  var attachmentNames: hl.types.ArrayObj<Dynamic>;
-  var <none>: Dynamic;
-
-  function __constructor__(frameCount: Int) {}
-
-  function getPropertyId(): Int {}
-
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public function getDuration(): Float {
+        throw "stub: getDuration not decompiled";
+    }
 }
 
 class CurveTimeline {
-  var curves: hl.types.ArrayBytes<Float>;
-  var <none>: Dynamic;
+    public var curves: Array<Float>;
+    public var : Dynamic;
 
-  function __constructor__(frameCount: Int) {}
+    public function new(arg0: Int) {
+    }
 
-  function getPropertyId(): Int {}
+    public function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
 
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 
-  function setCurve(frameIndex: Int, cx1: Float, cy1: Float, cx2: Float, cy2: Float) {}
+    public function setCurve(arg0: Int, arg1: Float, arg2: Float, arg3: Float, arg4: Float): Void {
+    }
 
-  function getCurvePercent(frameIndex: Int, percent: Float): Float {}
-}
-
-class ColorTimeline extends spine.CurveTimeline {
-  var slotIndex: Int;
-  var frames: hl.types.ArrayBytes<Float>;
-
-  function __constructor__(frameCount: Int) {}
-
-  function getPropertyId(): Int {}
-
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
-}
-
-class TwoColorTimeline extends spine.CurveTimeline {
-  var slotIndex: Int;
-  var frames: hl.types.ArrayBytes<Float>;
-
-  function __constructor__(frameCount: Int) {}
-
-  function getPropertyId(): Int {}
-
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public function getCurvePercent(arg0: Int, arg1: Float): Float {
+        throw "stub: getCurvePercent not decompiled";
+    }
 }
 
 class RotateTimeline extends spine.CurveTimeline {
-  var boneIndex: Int;
-  var frames: hl.types.ArrayBytes<Float>;
+    public var boneIndex: Int;
+    public var frames: Array<Float>;
 
-  function __constructor__(frameCount: Int) {}
+    public function new(arg0: Int) {
+        super();
+    }
 
-  function getPropertyId(): Int {}
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
 
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 }
 
 class TranslateTimeline extends spine.CurveTimeline {
-  var boneIndex: Int;
-  var frames: hl.types.ArrayBytes<Float>;
+    public var boneIndex: Int;
+    public var frames: Array<Float>;
 
-  function __constructor__(frameCount: Int) {}
+    public function new(arg0: Int) {
+        super();
+    }
 
-  function getPropertyId(): Int {}
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
 
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 }
 
 class ScaleTimeline extends spine.TranslateTimeline {
+    public function new(arg0: Int) {
+        super();
+    }
 
-  function __constructor__(frameCount: Int) {}
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
 
-  function getPropertyId(): Int {}
-
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 }
 
 class ShearTimeline extends spine.TranslateTimeline {
+    public function new(arg0: Int) {
+        super();
+    }
 
-  function __constructor__(frameCount: Int) {}
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
 
-  function getPropertyId(): Int {}
-
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 }
 
-class IkConstraintTimeline extends spine.CurveTimeline {
-  var ikConstraintIndex: Int;
-  var frames: hl.types.ArrayBytes<Float>;
+class ColorTimeline extends spine.CurveTimeline {
+    public var slotIndex: Int;
+    public var frames: Array<Float>;
 
-  function __constructor__(frameCount: Int) {}
+    public function new(arg0: Int) {
+        super();
+    }
 
-  function getPropertyId(): Int {}
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
 
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 }
 
-class TransformConstraintTimeline extends spine.CurveTimeline {
-  var transformConstraintIndex: Int;
-  var frames: hl.types.ArrayBytes<Float>;
+class TwoColorTimeline extends spine.CurveTimeline {
+    public var slotIndex: Int;
+    public var frames: Array<Float>;
 
-  function __constructor__(frameCount: Int) {}
+    public function new(arg0: Int) {
+        super();
+    }
 
-  function getPropertyId(): Int {}
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
 
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 }
 
-class PathConstraintPositionTimeline extends spine.CurveTimeline {
-  var pathConstraintIndex: Int;
-  var frames: hl.types.ArrayBytes<Float>;
+class AttachmentTimeline {
+    public var slotIndex: Int;
+    public var frames: Array<Float>;
+    public var attachmentNames: Array<Dynamic>;
+    public var : Dynamic;
 
-  function __constructor__(frameCount: Int) {}
+    public function new(arg0: Int) {
+    }
 
-  function getPropertyId(): Int {}
+    public function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
 
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
-}
-
-class PathConstraintSpacingTimeline extends spine.PathConstraintPositionTimeline {
-
-  function __constructor__(frameCount: Int) {}
-
-  function getPropertyId(): Int {}
-
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
-}
-
-class PathConstraintMixTimeline extends spine.CurveTimeline {
-  var pathConstraintIndex: Int;
-  var frames: hl.types.ArrayBytes<Float>;
-
-  function __constructor__(frameCount: Int) {}
-
-  function getPropertyId(): Int {}
-
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 }
 
 class DeformTimeline extends spine.CurveTimeline {
-  var slotIndex: Int;
-  var attachment: spine.attachments.VertexAttachment.VertexAttachment;
-  var frames: hl.types.ArrayBytes<Float>;
-  var frameVertices: hl.types.ArrayObj<Dynamic>;
+    public var slotIndex: Int;
+    public var attachment: spine.attachments.VertexAttachment;
+    public var frames: Array<Float>;
+    public var frameVertices: Array<Dynamic>;
 
-  function __constructor__(frameCount: Int) {}
+    public function new(arg0: Int) {
+        super();
+    }
 
-  function getPropertyId(): Int {}
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
 
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
-}
-
-class DrawOrderTimeline {
-  var frames: hl.types.ArrayBytes<Float>;
-  var drawOrders: hl.types.ArrayObj<Dynamic>;
-  var <none>: Dynamic;
-
-  function __constructor__(frameCount: Int) {}
-
-  function getPropertyId(): Int {}
-
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, events: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 }
 
 class EventTimeline {
-  var frames: hl.types.ArrayBytes<Float>;
-  var events: hl.types.ArrayObj<Dynamic>;
-  var <none>: Dynamic;
+    public var frames: Array<Float>;
+    public var events: Array<Dynamic>;
+    public var : Dynamic;
 
-  function __constructor__(frameCount: Int) {}
+    public function new(arg0: Int) {
+    }
 
-  function getPropertyId(): Int {}
+    public function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
 
-  function apply(skeleton: spine.Skeleton.Skeleton, lastTime: Float, time: Float, firedEvents: hl.types.ArrayObj<Dynamic>, alpha: Float, pose: Int, direction: Int) {}
+    public function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
 }
 
+class DrawOrderTimeline {
+    public var frames: Array<Float>;
+    public var drawOrders: Array<Dynamic>;
+    public var : Dynamic;
+
+    public function new(arg0: Int) {
+    }
+
+    public function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
+
+    public function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
+}
+
+class IkConstraintTimeline extends spine.CurveTimeline {
+    public var ikConstraintIndex: Int;
+    public var frames: Array<Float>;
+
+    public function new(arg0: Int) {
+        super();
+    }
+
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
+
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
+}
+
+class TransformConstraintTimeline extends spine.CurveTimeline {
+    public var transformConstraintIndex: Int;
+    public var frames: Array<Float>;
+
+    public function new(arg0: Int) {
+        super();
+    }
+
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
+
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
+}
+
+class PathConstraintPositionTimeline extends spine.CurveTimeline {
+    public var pathConstraintIndex: Int;
+    public var frames: Array<Float>;
+
+    public function new(arg0: Int) {
+        super();
+    }
+
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
+
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
+}
+
+class PathConstraintSpacingTimeline extends spine.PathConstraintPositionTimeline {
+    public function new(arg0: Int) {
+        super();
+    }
+
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
+
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
+}
+
+class PathConstraintMixTimeline extends spine.CurveTimeline {
+    public var pathConstraintIndex: Int;
+    public var frames: Array<Float>;
+
+    public function new(arg0: Int) {
+        super();
+    }
+
+    public override function getPropertyId(): Int {
+        throw "stub: getPropertyId not decompiled";
+    }
+
+    public override function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
+    }
+}

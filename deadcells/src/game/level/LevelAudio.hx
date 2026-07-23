@@ -1,97 +1,135 @@
 package level;
-class LevelAudio extends libs.Process.Process {
-  var ambientChannels: hl.types.ArrayObj<Dynamic>;
-  var ambientSpatializer: hl.types.ArrayObj<Dynamic>;
-  var newEvents: level.LevelAudio.LevelAudio;
-  var onHoldEvents: level.LevelAudio.LevelAudio;
-  var spParams: Dynamic;
-  var eventSpaceBuffer: tool.RingBuffer.RingBuffer;
 
-  function __constructor__(p: libs.Process.Process) {}
+class LevelAudio extends libs.Process {
+    public var ambientChannels: Array<Dynamic>;
+    public var ambientSpatializer: Array<Dynamic>;
+    public var newEvents: level._LevelAudio.Event;
+    public var onHoldEvents: level._LevelAudio.Event;
+    public var spParams: Dynamic;
+    public var eventSpaceBuffer: tool.RingBuffer;
 
-  function createAmbientSpace(): hxd.snd.effect.Spatialization.Spatialization {}
+    public function new(arg0: libs.Process) {
+        super();
+    }
 
-  function createEventSpace(): hxd.snd.effect.Spatialization.Spatialization {}
+    public function createAmbientSpace(): hxd.snd.effect.Spatialization {
+        throw "stub: createAmbientSpace not decompiled";
+    }
 
-  function setSpatializationParams(zPosition: Float, refDistance: Float, maxDistance: Float, rollOffFactor: Float, fadeDistance: Float) {}
+    public function createEventSpace(): hxd.snd.effect.Spatialization {
+        throw "stub: createEventSpace not decompiled";
+    }
 
-  function addAmbientLoop(snd: hxd.res.Sound.Sound, volume: Dynamic): hxd.snd.Channel.Channel {}
+    public function setSpatializationParams(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float): Void {
+    }
 
-  function addAmbientPoint(snd: hxd.res.Sound.Sound, px: Float, py: Float, volume: Dynamic): hxd.snd.Channel.Channel {}
+    public function addAmbientLoop(arg0: hxd.res.Sound, arg1: Dynamic): hxd.snd.Channel {
+        throw "stub: addAmbientLoop not decompiled";
+    }
 
-  function addAmbientSegment(snd: hxd.res.Sound.Sound, vertical: Bool, ref: Float, volume: Dynamic, from: Dynamic, to: Dynamic): hxd.snd.Channel.Channel {}
+    public function addAmbientPoint(arg0: hxd.res.Sound, arg1: Float, arg2: Float, arg3: Dynamic): hxd.snd.Channel {
+        throw "stub: addAmbientPoint not decompiled";
+    }
 
-  function addAmbientZone(snd: hxd.res.Sound.Sound, cxMin: Float, cyMin: Float, cxMax: Float, cyMax: Float, volume: Dynamic): hxd.snd.Channel.Channel {}
+    public function addAmbientSegment(arg0: hxd.res.Sound, arg1: Bool, arg2: Float, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic): hxd.snd.Channel {
+        throw "stub: addAmbientSegment not decompiled";
+    }
 
-  function playEvent(snd: hxd.res.Sound.Sound, volume: Dynamic, pitch: Dynamic, group: String): level.LevelAudio.LevelAudio {}
+    public function addAmbientZone(arg0: hxd.res.Sound, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Dynamic): hxd.snd.Channel {
+        throw "stub: addAmbientZone not decompiled";
+    }
 
-  function playEventAt(snd: hxd.res.Sound.Sound, x: Float, y: Float, volume: Dynamic, pitch: Dynamic, group: String): level.LevelAudio.LevelAudio {}
+    public function playEvent(arg0: hxd.res.Sound, arg1: Dynamic, arg2: Dynamic, arg3: String): level._LevelAudio.Event {
+        throw "stub: playEvent not decompiled";
+    }
 
-  function playEventOn(snd: hxd.res.Sound.Sound, target: Entity, volume: Dynamic, pitch: Dynamic, group: String): level.LevelAudio.LevelAudio {}
+    public function playEventAt(arg0: hxd.res.Sound, arg1: Float, arg2: Float, arg3: Dynamic, arg4: Dynamic, arg5: String): level._LevelAudio.Event {
+        throw "stub: playEventAt not decompiled";
+    }
 
-  function postUpdate() {}
+    public function playEventOn(arg0: hxd.res.Sound, arg1: Entity, arg2: Dynamic, arg3: Dynamic, arg4: String): level._LevelAudio.Event {
+        throw "stub: playEventOn not decompiled";
+    }
 
-  function compareEvent(a: level.LevelAudio.LevelAudio, b: level.LevelAudio.LevelAudio): Int {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public function compareEvent(arg0: level._LevelAudio.Event, arg1: level._LevelAudio.Event): Int {
+        throw "stub: compareEvent not decompiled";
+    }
 
-  function pause() {}
+    public override function onDispose(): Void {
+    }
 
-  function resume() {}
+    public override function pause(): Void {
+    }
 
-  function getSfxChannelGroup(event: level.LevelAudio.LevelAudio): hxd.snd.Channel.ChannelGroup {}
+    public override function resume(): Void {
+    }
 
-  function canPlaySfxOn(chan: hxd.snd.Channel.ChannelGroup): Bool {}
+    public function getSfxChannelGroup(arg0: level._LevelAudio.Event): hxd.snd.ChannelGroup {
+        throw "stub: getSfxChannelGroup not decompiled";
+    }
+
+    public function canPlaySfxOn(arg0: hxd.snd.ChannelGroup): Bool {
+        throw "stub: canPlaySfxOn not decompiled";
+    }
 }
 
-class _LevelAudio.Event {
-  var next: _LevelAudio.Event;
-  var nextOnHold: _LevelAudio.Event;
-  var snd: hxd.res.Sound.Sound;
-  var group: String;
-  var pos: h2d.col.Point.Point;
-  var volume: Float;
-  var pitch: Float;
-  var lowPass: Dynamic;
-  var target: Entity;
-  var loop: Bool;
-  var fadeInTime: Float;
-  var holdCond: Dynamic;
-  var fadeOutTime: Float;
-  var channel: hxd.snd.Channel.Channel;
-  var update: Dynamic;
-  static var cleanName: EReg;
+class Event {
+    public static var cleanName: EReg;
+    public var next: level._LevelAudio.Event;
+    public var nextOnHold: level._LevelAudio.Event;
+    public var snd: hxd.res.Sound;
+    public var group: String;
+    public var pos: h2d.col.Point;
+    public var volume: Float;
+    public var pitch: Float;
+    public var lowPass: Dynamic;
+    public var target: Entity;
+    public var loop: Bool;
+    public var fadeInTime: Float;
+    public var holdCond: Dynamic;
+    public var fadeOutTime: Float;
+    public var channel: hxd.snd.Channel;
+    public var update: Dynamic;
 
-  function __constructor__(snd: hxd.res.Sound.Sound, volume: Float, pitch: Dynamic, group: String, pos: h2d.col.Point.Point, target: Entity) {}
+    public function new(arg0: hxd.res.Sound, arg1: Float, arg2: Dynamic, arg3: String, arg4: h2d.col.Point, arg5: Entity) {
+    }
 
-  function holdWhile(cond: Dynamic, loop: Dynamic, fadeOutTime: Dynamic, update: Dynamic) {}
+    public function holdWhile(arg0: Dynamic, arg1: Ref, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function fadeInOut(fadeIn: Float, fadeOut: Float) {}
+    public function fadeInOut(arg0: Float, arg1: Float): Void {
+    }
 }
 
-class _LevelAudio.Zone {
-  var cxMin: Float;
-  var cyMin: Float;
-  var cxMax: Float;
-  var cyMax: Float;
-  var space: hxd.snd.effect.Spatialization.Spatialization;
-  var <none>: Dynamic;
+class Zone {
+    public var cxMin: Float;
+    public var cyMin: Float;
+    public var cxMax: Float;
+    public var cyMax: Float;
+    public var space: hxd.snd.effect.Spatialization;
+    public var : Dynamic;
 
-  function __constructor__(space: hxd.snd.effect.Spatialization.Spatialization, cxMin: Float, cyMin: Float, cxMax: Float, cyMax: Float) {}
+    public function new(arg0: hxd.snd.effect.Spatialization, arg1: Float, arg2: Float, arg3: Float, arg4: Float) {
+    }
 
-  function update(listener: h3d.Vector.Vector) {}
+    public function update(arg0: h3d.Vector): Void {
+    }
 }
 
-class _LevelAudio.Segment {
-  var vertical: Bool;
-  var ref: Float;
-  var from: Dynamic;
-  var to: Dynamic;
-  var space: hxd.snd.effect.Spatialization.Spatialization;
-  var <none>: Dynamic;
+class Segment {
+    public var vertical: Bool;
+    public var ref: Float;
+    public var from: Dynamic;
+    public var to: Dynamic;
+    public var space: hxd.snd.effect.Spatialization;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function update(listener: h3d.Vector.Vector) {}
+    public function update(arg0: h3d.Vector): Void {
+    }
 }
-

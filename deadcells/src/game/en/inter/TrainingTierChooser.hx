@@ -1,30 +1,43 @@
 package en.inter;
+
 class TrainingTierChooser extends en.Interactive {
-  var brutalitySprite: libs.heaps.slib.HSprite.HSprite;
-  var tacticSprite: libs.heaps.slib.HSprite.HSprite;
-  var survivalSprite: libs.heaps.slib.HSprite.HSprite;
-  var brutalityGlow: hxsl.Macros.Macros;
-  var tacticGlow: hxsl.Macros.Macros;
-  var survivalGlow: hxsl.Macros.Macros;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var brutalitySprite: libs.heaps.slib.HSprite;
+    public var tacticSprite: libs.heaps.slib.HSprite;
+    public var survivalSprite: libs.heaps.slib.HSprite;
+    public var brutalityGlow: shader.GradientHiLo;
+    public var tacticGlow: shader.GradientHiLo;
+    public var survivalGlow: shader.GradientHiLo;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function get_training(): tool.training.TrainingMode.TrainingMode {}
+    public function get_training(): tool.training.TrainingMode {
+        throw "stub: get_training not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function applyShaderColors() {}
+    public function applyShaderColors(): Void {
+    }
 
-  function onApplyOptions() {}
+    public function onApplyOptions(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

@@ -1,89 +1,125 @@
 package level.disp;
+
 class DookuArena extends level.DynamicBiomeDisp {
-  var fallingObjectParallax: hl.types.ArrayObj<Dynamic>;
-  var fallingObject: hl.types.ArrayObj<Dynamic>;
-  var parralaxesPhase1: hl.types.ArrayObj<Dynamic>;
-  var parralaxesPhase2: hl.types.ArrayObj<Dynamic>;
-  var destroyedParralaxesPerPhase: hl.types.ArrayObj<Dynamic>;
-  var allParallaxes: hl.types.ArrayObj<Dynamic>;
-  var columnSize: Int;
-  var parallaxToRotate: hl.types.ArrayObj<Dynamic>;
-  var horizonCY: Int;
-  var horizonY: Float;
-  var centerX: Float;
-  var phase: Int;
-  var destroyPhase: Int;
-  var dookuCandle: libs.heaps.slib.HSprite.HSprite;
-  var candleAnchorPoint: Parallax;
-  var foDissolveSpeed: Float;
-  var sbBgTop: Dynamic;
-  var sbAddTop: Dynamic;
-  var sbTop: Dynamic;
-  var sbBg: libs.heaps.slib.HSprite.HSpriteBatch;
-  var sbLightning: libs.heaps.slib.HSprite.HSpriteBatch;
-  var emitterSpot: tool.FPoint.FPoint;
-  var mobPreload: hl.types.ArrayObj<Dynamic>;
-  var thunderSoundsDeck: hl.types.ArrayObj<Dynamic>;
-  var intensityTween: libs.misc.Tweenie.Tweenie;
+    public var fallingObjectParallax: Array<Dynamic>;
+    public var fallingObject: Array<Dynamic>;
+    public var parralaxesPhase1: Array<Dynamic>;
+    public var parralaxesPhase2: Array<Dynamic>;
+    public var destroyedParralaxesPerPhase: Array<Dynamic>;
+    public var allParallaxes: Array<Dynamic>;
+    public var columnSize: Int;
+    public var parallaxToRotate: Array<Dynamic>;
+    public var horizonCY: Int;
+    public var horizonY: Float;
+    public var centerX: Float;
+    public var phase: Int;
+    public var destroyPhase: Int;
+    public var dookuCandle: libs.heaps.slib.HSprite;
+    public var candleAnchorPoint: Parallax;
+    public var foDissolveSpeed: Float;
+    public var sbBgTop: light.TopFx;
+    public var sbAddTop: light.TopFx;
+    public var sbTop: light.TopFx;
+    public var sbBg: libs.heaps.slib.HSpriteBatch;
+    public var sbLightning: libs.heaps.slib.HSpriteBatch;
+    public var emitterSpot: tool.FPoint;
+    public var mobPreload: Array<Dynamic>;
+    public var thunderSoundsDeck: Array<Dynamic>;
+    public var intensityTween: libs.misc.Tween;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome1: String, biome2: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+        super();
+    }
 
-  function getParallax(id: String): Parallax {}
+    public function getParallax(arg0: String): Parallax {
+        throw "stub: getParallax not decompiled";
+    }
 
-  function computeHorizonY() {}
+    public function computeHorizonY(): Void {
+    }
 
-  static function getBlendRatioAt(_: DookuArena, py: Float, _: Float): Float {}
+    public override function getBlendRatioAt(arg0: Float, arg1: Float): Float {
+        throw "stub: getBlendRatioAt not decompiled";
+    }
 
-  function render() {}
+    public override function render(): Void {
+    }
 
-  function renderBackWalls() {}
+    public function renderBackWalls(): Void {
+    }
 
-  function renderFrise() {}
+    public function renderFrise(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function startPhase(phase: Int, noParallax: Dynamic) {}
+    public function startPhase(arg0: Int, arg1: Ref): Void {
+    }
 
-  function incDestroyPhase() {}
+    public function incDestroyPhase(): Void {
+    }
 
-  function renderParallaxes() {}
+    public function renderParallaxes(): Void {
+    }
 
-  function renderParallaxesPhase() {}
+    public function renderParallaxesPhase(): Void {
+    }
 
-  function onAfterRenderParallaxes(phase: Int) {}
+    public function onAfterRenderParallaxes(arg0: Int): Void {
+    }
 
-  function destroyAllParallaxes() {}
+    public function destroyAllParallaxes(): Void {
+    }
 
-  function initFallingObject(afterDissolve: Dynamic) {}
+    public function initFallingObject(arg0: Ref): Void {
+    }
 
-  function initThunderLoop() {}
+    public function initThunderLoop(): Void {
+    }
 
-  function initThunder(index: Int, time: Float, isLastThunder: Bool) {}
+    public function initThunder(arg0: Int, arg1: Float, arg2: Bool): Void {
+    }
 
-  function thunder(thunderDepth: Int, time: Float) {}
+    public function thunder(arg0: Int, arg1: Float): Void {
+    }
 
-  function lightningFx(pData: Dynamic) {}
+    public function lightningFx(arg0: Dynamic): Void {
+    }
 
-  function thunderSoundDelay(thunderDepth: Int) {}
+    public function thunderSoundDelay(arg0: Int): Void {
+    }
 
-  function stopThunder() {}
+    public function stopThunder(): Void {
+    }
 
-  function createFallingObject(par: Dynamic) {}
+    public function createFallingObject(arg0: Dynamic): Void {
+    }
 
-  function isAColumn(name: String): Bool {}
+    public function isAColumn(arg0: String): Bool {
+        throw "stub: isAColumn not decompiled";
+    }
 
-  function onAddParallax(inf: Dynamic, p: Parallax, pg: ParallaxGroup) {}
+    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    }
 
-  function getBmpChild(p: Parallax): h2d.Bitmap.Bitmap {}
+    public function getBmpChild(arg0: Parallax): h2d.Bitmap {
+        throw "stub: getBmpChild not decompiled";
+    }
 
-  function dissolveAllFallingObj(forS: Dynamic) {}
+    public function dissolveAllFallingObj(arg0: Ref): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getDepthFromInfos(inf: Dynamic): Int {}
+    public function getDepthFromInfos(arg0: Dynamic): Int {
+        throw "stub: getDepthFromInfos not decompiled";
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

@@ -1,64 +1,84 @@
+class ParallaxElement extends h2d.BatchElement {
+    public var layer: ParallaxLayer;
+    public var px: Float;
+    public var py: Float;
+    public var px0: Float;
+    public var py0: Float;
+    public var cullX: Float;
+    public var cullY: Float;
+    public var cullW: Float;
+    public var cullH: Float;
+
+    public function new(arg0: h2d.Tile) {
+        super();
+    }
+
+    public override function remove(): Void {
+    }
+
+    public function setPosition(arg0: Float, arg1: Float): Void {
+    }
+
+    public function scaleTo(arg0: Float, arg1: Float): Void {
+    }
+}
 
 class ParallaxLayer {
-  var scrollX: Float;
-  var scrollY: Float;
-  var prio: Int;
-  var parent: ParallaxBatch;
-  var first: h2d.SpriteBatch.SpriteBatch;
-  var last: h2d.SpriteBatch.SpriteBatch;
-  var offsetX: Float;
-  var offsetY: Float;
+    public var scrollX: Float;
+    public var scrollY: Float;
+    public var prio: Int;
+    public var parent: ParallaxBatch;
+    public var first: h2d.BatchElement;
+    public var last: h2d.BatchElement;
+    public var offsetX: Float;
+    public var offsetY: Float;
 
-  function __constructor__(p: ParallaxBatch, prio: Int) {}
+    public function new(arg0: ParallaxBatch, arg1: Int) {
+    }
 
-  function add(e: ParallaxBatch.ParallaxBatch): ParallaxBatch.ParallaxBatch {}
+    public function add(arg0: ParallaxElement): ParallaxElement {
+        throw "stub: add not decompiled";
+    }
 
-  function delete(e: ParallaxBatch.ParallaxBatch) {}
+    public function delete(arg0: ParallaxElement): Void {
+    }
 
-  function alloc(t: h2d.Tile.Tile): ParallaxBatch.ParallaxBatch {}
+    public function alloc(arg0: h2d.Tile): ParallaxElement {
+        throw "stub: alloc not decompiled";
+    }
 
-  function hfill(tiles: hl.types.ArrayObj<Dynamic>, y: Float, from: Dynamic, to: Dynamic, density: Dynamic, rnd: Dynamic, onAdd: Dynamic) {}
+    public function hfill(arg0: Array<Dynamic>, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic): Void {
+    }
 
-  function vfill(tiles: hl.types.ArrayObj<Dynamic>, x: Float, from: Dynamic, to: Dynamic, density: Dynamic, rnd: Dynamic, onAdd: Dynamic) {}
+    public function vfill(arg0: Array<Dynamic>, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic): Void {
+    }
 
-  function hfillRand(tiles: hl.types.ArrayObj<Dynamic>, y: Float, from: Dynamic, to: Dynamic, minSpace: Int, maxSpace: Int, rnd: Dynamic) {}
+    public function hfillRand(arg0: Array<Dynamic>, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Int, arg5: Int, arg6: Dynamic): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
 
 class ParallaxBatch extends libs.heaps.slib.HSpriteBatch {
-  var layers: hl.types.ArrayObj<Dynamic>;
-  var bounds: h2d.col.Bounds.Bounds;
-  var view: Viewport;
-  var vwid: Float;
-  var vhei: Float;
+    public var layers: Array<Dynamic>;
+    public var bounds: h2d.col.Bounds;
+    public var view: Viewport;
+    public var vwid: Float;
+    public var vhei: Float;
 
-  function __constructor__(tile: h2d.Tile.Tile, bounds: h2d.col.Bounds.Bounds, viewport: Viewport, p: h2d.Object.Object) {}
+    public function new(arg0: h2d.Tile, arg1: h2d.col.Bounds, arg2: Viewport, arg3: h2d.Object) {
+        super();
+    }
 
-  static function sortLayers(a: ParallaxBatch.ParallaxBatch, b: ParallaxBatch.ParallaxBatch): Int {}
+    public static function sortLayers(arg0: ParallaxLayer, arg1: ParallaxLayer): Int {
+        throw "stub: sortLayers not decompiled";
+    }
 
-  function createLayer(prio: Int, scrollX: Dynamic, scrollY: Dynamic): ParallaxBatch.ParallaxBatch {}
+    public function createLayer(arg0: Int, arg1: Dynamic, arg2: Dynamic): ParallaxLayer {
+        throw "stub: createLayer not decompiled";
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public override function sync(arg0: h2d.RenderContext): Void {
+    }
 }
-
-class ParallaxElement extends h2d.BatchElement {
-  var layer: ParallaxBatch.ParallaxBatch;
-  var px: Float;
-  var py: Float;
-  var px0: Float;
-  var py0: Float;
-  var cullX: Float;
-  var cullY: Float;
-  var cullW: Float;
-  var cullH: Float;
-
-  function __constructor__(t: h2d.Tile.Tile) {}
-
-  function remove() {}
-
-  function setPosition(x: Float, y: Float) {}
-
-  function scaleTo(w: Float, h: Float) {}
-}
-

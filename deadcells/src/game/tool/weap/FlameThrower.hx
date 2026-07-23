@@ -1,20 +1,31 @@
 package tool.weap;
+
 class FlameThrower extends tool.Weapon {
-  var l: light.PointLight.PointLight;
-  var firing: Bool;
+    public var l: light.PointLight;
+    public var firing: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_shootX(): Float {}
+    public override function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function isFiring(): Bool {}
+    public function isFiring(): Bool {
+        throw "stub: isFiring not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function tick() {}
+    public function tick(): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 }
-

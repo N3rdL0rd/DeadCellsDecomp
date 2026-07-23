@@ -1,11 +1,15 @@
 package cine;
+
 class FlyingSwordCine extends GameCinematic {
-  var hero: en.Hero.Hero;
+    public var hero: en.Hero;
 
-  function __constructor__(h: en.Hero.Hero, doorPosX: Float, doorPosY: Float, door: en.FlyingSwordDoor.FlyingSwordDoor, sword: en.SpeakingFlyingSword.SpeakingFlyingSword) {}
+    public function new(arg0: en.Hero, arg1: Float, arg2: Float, arg3: en.FlyingSwordDoor, arg4: en.SpeakingFlyingSword) {
+        super();
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

@@ -1,47 +1,72 @@
 package en.mob;
+
 class Earthquaker extends en.Mob {
-  var fallCxs: hl.types.ArrayBytes<Int>;
-  var fallCy: Int;
-  var lastFrame: Int;
-  static var FOOT_GROUND_F0: Int;
-  static var FOOT_GROUND_F1: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var FOOT_GROUND_F0: Int;
+    public static var FOOT_GROUND_F1: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var fallCxs: Array<Int>;
+    public var fallCy: Int;
+    public var lastFrame: Int;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Earthquaker {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Earthquaker {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function isMovingAtWalkSpeed(): Bool {}
+    public override function isMovingAtWalkSpeed(): Bool {
+        throw "stub: isMovingAtWalkSpeed not decompiled";
+    }
 
-  function legHitAt(x: Float, y: Float, isHeavy: Bool) {}
+    public function legHitAt(arg0: Float, arg1: Float, arg2: Bool): Void {
+    }
 
-  function fallRocks() {}
+    public function fallRocks(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

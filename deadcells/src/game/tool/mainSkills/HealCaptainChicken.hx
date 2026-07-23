@@ -1,32 +1,51 @@
 package tool.mainSkills;
+
 class HealCaptainChicken extends tool.mainSkills.Heal {
-  var healCalls: Int;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var healCalls: Int;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function isEnabled(): Bool {}
+    public function isEnabled(): Bool {
+        throw "stub: isEnabled not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function passiveFixedUpdate() {}
+    public function passiveFixedUpdate(): Void {
+    }
 
-  function onStart() {}
+    public override function onStart(): Void {
+    }
 
-  function triggerHeal() {}
+    public function triggerHeal(): Void {
+    }
 
-  function prepare(): Bool {}
+    public function prepare(): Bool {
+        throw "stub: prepare not decompiled";
+    }
 
-  function canUse(): Bool {}
+    public override function canUse(): Bool {
+        throw "stub: canUse not decompiled";
+    }
 
-  function onFountainRefill() {}
+    public override function onFountainRefill(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

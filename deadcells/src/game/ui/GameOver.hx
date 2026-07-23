@@ -1,18 +1,23 @@
 package ui;
+
 class GameOver extends ui.Process {
-  var f: h2d.Flow.Flow;
-  var topLine: libs.heaps.slib.HSprite.HSprite;
-  var mainText: ui.Text.Text;
-  var cellText: ui.Text.Text;
-  var botLine: libs.heaps.slib.HSprite.HSprite;
-  static var ME: GameOver;
+    public static var ME: ui.GameOver;
+    public var f: h2d.Flow;
+    public var topLine: libs.heaps.slib.HSprite;
+    public var mainText: ui.Text;
+    public var cellText: ui.Text;
+    public var botLine: libs.heaps.slib.HSprite;
 
-  function __constructor__(str: Dynamic, isReal: Bool, customFont: Dynamic) {}
+    public function new(arg0: Dynamic, arg1: Bool, arg2: Dynamic) {
+        super();
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

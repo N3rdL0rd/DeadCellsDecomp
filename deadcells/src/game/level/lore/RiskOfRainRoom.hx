@@ -1,31 +1,44 @@
 package level.lore;
+
 class RiskOfRainRoom extends level.LoreManager {
-  var tw: libs.misc.Tweenie.Tweenie;
-  var golemLightSpr: libs.heaps.slib.HSprite.HSprite;
-  var golemLight: light.PointLight.PointLight;
-  var droneLightSpr: libs.heaps.slib.HSprite.HSprite;
-  var droneLight: light.PointLight.PointLight;
-  var stayAliveText: ui.Text.Text;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var tw: libs.misc.Tweenie;
+    public var golemLightSpr: libs.heaps.slib.HSprite;
+    public var golemLight: light.PointLight;
+    public var droneLightSpr: libs.heaps.slib.HSprite;
+    public var droneLight: light.PointLight;
+    public var stayAliveText: ui.Text;
 
-  function __constructor__(l: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function attachSprite(sInf: Dynamic): Bool {}
+    public override function attachSprite(arg0: Dynamic): Bool {
+        throw "stub: attachSprite not decompiled";
+    }
 
-  function startGolemFadeOutTw() {}
+    public function startGolemFadeOutTw(): Void {
+    }
 
-  function startGolemFadeInTw() {}
+    public function startGolemFadeInTw(): Void {
+    }
 
-  function onDropLoot(e: en.inter.Examinable.Examinable, by: Entity, examinableId: String) {}
+    public override function onDropLoot(arg0: en.inter.Examinable, arg1: Entity, arg2: String): Void {
+    }
 
-  function onCustomEvent(id: String, e: en.inter.Examinable.Examinable) {}
+    public override function onCustomEvent(arg0: String, arg1: en.inter.Examinable): Void {
+    }
 
-  function postUpdate(dt: Float) {}
+    public override function postUpdate(arg0: Float): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

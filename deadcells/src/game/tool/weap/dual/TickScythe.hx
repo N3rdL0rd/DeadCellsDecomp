@@ -1,62 +1,95 @@
 package tool.weap.dual;
-class CombinedTickScythe extends tool.Weapon.Weapon {
-  var rightS: tool.weap.dual.TickScythe.TickScythe;
-  var leftS: tool.weap.dual.TickScythe.TickScythe;
-  var combo: Int;
-  var lastWeap: tool.Weapon.Weapon;
-
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
-
-  function onExecute(): Bool {}
-
-  function setWeaponGlow() {}
-
-  function tryToCancel(byWeapon: Bool): Bool {}
-
-  function dynOnInterrupt(s: tool.Weapon.WeaponSkill, r: Float) {}
-
-  function cancelChain() {}
-
-  function fixedUpdate() {}
-
-  function isCharging(): Bool {}
-}
 
 class TickScythe extends tool.weap.dual.SharedComboWeapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function dispose(): Void {
+    }
 
-  function dispose() {}
+    public function get_otherAreas(): Array<Dynamic> {
+        throw "stub: get_otherAreas not decompiled";
+    }
 
-  function get_otherAreas(): hl.types.ArrayObj<Dynamic> {}
+    public function canHitBis(arg0: Entity): Bool {
+        throw "stub: canHitBis not decompiled";
+    }
 
-  function canHitBis(e: Entity): Bool {}
+    public function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public function onOwnerDamaged(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onOwnerDamaged(a: tool.atk.AttackData.AttackData) {}
+    public function deathWave(arg0: Entity, arg1: Float): Void {
+    }
+}
 
-  function deathWave(e: Entity, baseDamage: Float) {}
+class CombinedTickScythe extends tool.Weapon {
+    public var rightS: tool.weap.dual.TickScytheRight;
+    public var leftS: tool.weap.dual.TickScytheLeft;
+    public var combo: Int;
+    public var lastWeap: tool.Weapon;
+
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
+
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
+
+    public override function setWeaponGlow(): Void {
+    }
+
+    public override function tryToCancel(arg0: Bool): Bool {
+        throw "stub: tryToCancel not decompiled";
+    }
+
+    public override function dynOnInterrupt(arg0: tool.WeaponSkill, arg1: Float): Void {
+    }
+
+    public override function cancelChain(): Void {
+    }
+
+    public override function fixedUpdate(): Void {
+    }
+
+    public override function isCharging(): Bool {
+        throw "stub: isCharging not decompiled";
+    }
 }
 
 class TickScytheRight extends tool.weap.dual.TickScythe {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
-
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 }
 
 class TickScytheLeft extends tool.weap.dual.TickScythe {
-  var areaBis: hl.types.ArrayObj<Dynamic>;
+    public var areaBis: Array<Dynamic>;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_otherAreas(): hl.types.ArrayObj<Dynamic> {}
+    public override function get_otherAreas(): Array<Dynamic> {
+        throw "stub: get_otherAreas not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 }
-

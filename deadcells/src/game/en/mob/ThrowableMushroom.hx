@@ -1,103 +1,156 @@
 package en.mob;
+
 class ThrowableMushroom extends en.Mob {
-  var hidingSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var hidingSkillInf: Dynamic;
-  var chargingSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var chargingSkillInf: Dynamic;
-  var gotoLaurelSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var gotoLaurelSkillInf: Dynamic;
-  var landExplosionSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var chargingDir: Int;
-  var chargingCX: Int;
-  var chargingCY: Int;
-  var gardener: en.mob.boss.GardenerBoss.GardenerBoss;
-  var laurelCalling: en.mob.Pitcher.Pitcher;
-  var inHand: Bool;
-  var launching: Bool;
-  var fromBoss: Bool;
-  var oneChargeYet: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var hidingSkill: tool.skill.OldMobSkill;
+    public var hidingSkillInf: Dynamic;
+    public var chargingSkill: tool.skill.OldMobSkill;
+    public var chargingSkillInf: Dynamic;
+    public var gotoLaurelSkill: tool.skill.OldMobSkill;
+    public var gotoLaurelSkillInf: Dynamic;
+    public var landExplosionSkill: tool.skill.OldMobSkill;
+    public var chargingDir: Int;
+    public var chargingCX: Int;
+    public var chargingCY: Int;
+    public var gardener: en.mob.boss.GardenerBoss;
+    public var laurelCalling: en.mob.Pitcher;
+    public var inHand: Bool;
+    public var launching: Bool;
+    public var fromBoss: Bool;
+    public var oneChargeYet: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): ThrowableMushroom {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.ThrowableMushroom {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function canUseAggressiveTeleport(): Bool {}
+    public override function canUseAggressiveTeleport(): Bool {
+        throw "stub: canUseAggressiveTeleport not decompiled";
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function setAffectS(x: Int, sec: Float, v: Dynamic, ignoreResist: Dynamic) {}
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function isOnSamePf(aTarget: Entity): Bool {}
+    public function isOnSamePf(arg0: Entity): Bool {
+        throw "stub: isOnSamePf not decompiled";
+    }
 
-  function targetSeesMe(): Bool {}
+    public function targetSeesMe(): Bool {
+        throw "stub: targetSeesMe not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function canBeRevealedBy(h: en.Hero.Hero): Bool {}
+    public override function canBeRevealedBy(arg0: en.Hero): Bool {
+        throw "stub: canBeRevealedBy not decompiled";
+    }
 
-  function startHiding() {}
+    public function startHiding(): Void {
+    }
 
-  function stopHiding() {}
+    public function stopHiding(): Void {
+    }
 
-  function stopCharging(fromWall: Dynamic) {}
+    public function stopCharging(arg0: Ref): Void {
+    }
 
-  function bumpIntoTheAir() {}
+    public function bumpIntoTheAir(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function laurelCalled(l: en.mob.Pitcher.Pitcher) {}
+    public function laurelCalled(arg0: en.mob.Pitcher): Void {
+    }
 
-  function prepareForLaunch() {}
+    public function prepareForLaunch(): Void {
+    }
 
-  function startLaunch() {}
+    public function startLaunch(): Void {
+    }
 
-  function finishedLaunchAt(cx: Int, cy: Int, succesful: Bool, target: Entity) {}
+    public function finishedLaunchAt(arg0: Int, arg1: Int, arg2: Bool, arg3: Entity): Void {
+    }
 
-  function landExplosion() {}
+    public function landExplosion(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class NunchuckThrowableMushroom extends en.mob.ThrowableMushroom {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): NunchuckThrowableMushroom {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.NunchuckThrowableMushroom {
+        throw "stub: create not decompiled";
+    }
 
-  function onCineEnd() {}
+    public function onCineEnd(): Void {
+    }
 
-  function dropLoot() {}
+    public function dropLoot(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

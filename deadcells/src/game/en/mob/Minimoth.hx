@@ -1,33 +1,49 @@
 package en.mob;
+
 class Minimoth extends en.Mob {
-  var rollInfo: Dynamic;
-  var roll: tool.skill.OldMobSkill.OldMobSkill;
-  var wave: tool.skill.OldMobSkill.OldMobSkill;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var rollInfo: Dynamic;
+    public var roll: tool.skill.OldMobSkill;
+    public var wave: tool.skill.OldMobSkill;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Minimoth {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Minimoth {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function stopRoll() {}
+    public function stopRoll(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

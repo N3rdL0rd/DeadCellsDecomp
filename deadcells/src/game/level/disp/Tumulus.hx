@@ -1,63 +1,91 @@
 package level.disp;
+
 class Tumulus extends level.BiomeDisp {
-  var biome: String;
-  var glowShader: shader.GlowKey.GlowKey;
-  var groupAlpha: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupOutsideBackWalls: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var cloudGroups: hl.types.ArrayObj<Dynamic>;
-  var godrayLayer: h2d.Object.Object;
-  var godrayLayerSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var rainLayer: h2d.Object.Object;
-  var rainLayerSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var windLayer: h2d.Object.Object;
-  var windLayerSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbNormalProps: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var startingRectTopOutlineTumulus: hl.types.ArrayObj<Dynamic>;
+    public var biome: String;
+    public var glowShader: shader.GlowKey;
+    public var groupAlpha: libs.heaps.StaticGeometryGroup;
+    public var groupOutsideBackWalls: libs.heaps.StaticGeometryGroup;
+    public var cloudGroups: Array<Dynamic>;
+    public var godrayLayer: h2d.Object;
+    public var godrayLayerSb: libs.heaps.slib.HSpriteBatch;
+    public var rainLayer: h2d.Object;
+    public var rainLayerSb: libs.heaps.slib.HSpriteBatch;
+    public var windLayer: h2d.Object;
+    public var windLayerSb: libs.heaps.slib.HSpriteBatch;
+    public var sbNormalProps: libs.heaps.slib.HSpriteBatch;
+    public var startingRectTopOutlineTumulus: Array<Dynamic>;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function addGodRays(x: Float, y: Float, wid: Float, hei: Float, infos: Dynamic): ParallaxEmitter {}
+    public function addGodRays(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Dynamic): ParallaxEmitter {
+        throw "stub: addGodRays not decompiled";
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function displayPlatformBottom(rect: Dynamic) {}
+    public function displayPlatformBottom(arg0: libs.tilemap.Rectangle): Void {
+    }
 
-  function cutValueInSmallParts(value: Int, maxPart: Int): hl.types.ArrayBytes<Int> {}
+    public function cutValueInSmallParts(arg0: Int, arg1: Int): Array<Int> {
+        throw "stub: cutValueInSmallParts not decompiled";
+    }
 
-  function createRainDropEmitter(rect: Dynamic, isHorizontal: Bool, tick: Dynamic) {}
+    public function createRainDropEmitter(arg0: libs.tilemap.Rectangle, arg1: Bool, arg2: Ref): Void {
+    }
 
-  function disposeAlcove(rects: hl.types.ArrayObj<Dynamic>, spriteName: String, spriteWidth: Int) {}
+    public function disposeAlcove(arg0: Array<Dynamic>, arg1: String, arg2: Int): Void {
+    }
 
-  function addTumulusCandle(px: Float, py: Float, variant: String) {}
+    public function addTumulusCandle(arg0: Float, arg1: Float, arg2: String): Void {
+    }
 
-  function onAddFloorJunk(deckEntry: Dynamic, px: Float, py: Float, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public override function onAddFloorJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 
-  function renderParallax(infos: Dynamic, parallaxName: String) {}
+    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateTumulusSide(room: level.Room.Room, startX: Int, endX: Int) {}
+    public function decorateTumulusSide(arg0: level.Room, arg1: Int, arg2: Int): Void {
+    }
 
-  function displayLittleTumulus() {}
+    public function displayLittleTumulus(): Void {
+    }
 
-  function findDirtExtRectangleCandidate(room: level.Room.Room, startX: Int, endX: Int): hl.types.ArrayObj<Dynamic> {}
+    public function findDirtExtRectangleCandidate(arg0: level.Room, arg1: Int, arg2: Int): Array<Dynamic> {
+        throw "stub: findDirtExtRectangleCandidate not decompiled";
+    }
 
-  function prepareDirtExtRectangle(rectCandidates: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function prepareDirtExtRectangle(arg0: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: prepareDirtExtRectangle not decompiled";
+    }
 
-  function renderDirtExtRectangle(rectCanditates: hl.types.ArrayObj<Dynamic>) {}
+    public function renderDirtExtRectangle(arg0: Array<Dynamic>): Void {
+    }
 
-  function displayTumulusBottom(room: level.Room.Room) {}
+    public function displayTumulusBottom(arg0: level.Room): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function addHangedDeadBody(cx: Int, cy: Int) {}
+    public function addHangedDeadBody(arg0: Int, arg1: Int): Void {
+    }
 
-  function reloadRenderConf() {}
+    public function reloadRenderConf(): Void {
+    }
 }
-

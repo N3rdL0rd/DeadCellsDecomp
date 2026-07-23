@@ -1,24 +1,33 @@
 package tool;
+
 class Path {
-  var length: Int;
-  var data: hl.types.ArrayObj<Dynamic>;
-  var offset: Int;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var length: Int;
+    public var data: Array<Dynamic>;
+    public var offset: Int;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function grow() {}
+    public function grow(): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

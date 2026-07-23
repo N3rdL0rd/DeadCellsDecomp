@@ -1,48 +1,72 @@
 package en.mob.boss.gardener;
+
 class Sickle extends en.Bullet {
-  var from: en.mob.boss.GardenerBoss.GardenerBoss;
-  var inf: Dynamic;
-  var sickleHitBox: tool.Area.Area;
-  var animationTracks: haxe.ds.StringMap;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var from: en.mob.boss.GardenerBoss;
+    public var inf: Dynamic;
+    public var sickleHitBox: tool.Area;
+    public var animationTracks: haxe.ds.StringMap;
 
-  function onBulletHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Ref) {
+        super();
+    }
 
-  function onBlock(byEntity: Bool) {}
+    public function init(): Void {
+    }
 
-  function __constructor__(_from: Entity, a: tool.atk.AttackData.AttackData, ang: Float, spd: Dynamic) {}
+    public override function initGfx(): Void {
+    }
 
-  function init() {}
+    public function onTouchWall(arg0: Int): Void {
+    }
 
-  function initGfx() {}
+    public function destroy(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public function kill(): Void {
+    }
 
-  function destroy() {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function kill() {}
+    public function checkCollisions(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function accelerateTowardsParent(): Void {
+    }
 
-  function checkCollisions() {}
+    public function updateTrajectory(): Void {
+    }
 
-  function accelerateTowardsParent() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function updateTrajectory() {}
+    public function get_headX(): Float {
+        throw "stub: get_headX not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public function get_headY(): Float {
+        throw "stub: get_headY not decompiled";
+    }
 
-  function get_headX(): Float {}
+    public override function doTail(): Void {
+    }
 
-  function get_headY(): Float {}
+    public override function postUpdate(): Void {
+    }
 
-  function doTail() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 
-  function getCLID(): Int {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

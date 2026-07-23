@@ -1,65 +1,99 @@
 package level.disp;
+
 class Castle extends level.BiomeDisp {
-  var biome: String;
-  var glowShader: shader.GlowKey.GlowKey;
-  var bgGlowShader: shader.GlowKey.GlowKey;
-  var sprGc: hl.types.ArrayObj<Dynamic>;
-  var lightFxs: hl.types.ArrayObj<Dynamic>;
-  var torchLights: hl.types.ArrayObj<Dynamic>;
-  var godRays: hl.types.ArrayObj<Dynamic>;
-  var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var alcoveGlows: hl.types.ArrayObj<Dynamic>;
-  var groundWallDecks: hl.types.ArrayObj<Dynamic>;
-  var groundWallDecksL: hl.types.ArrayObj<Dynamic>;
-  var groundWallDecksR: hl.types.ArrayObj<Dynamic>;
-  var landmarksActivated: Bool;
-  var torchBack: h2d.Tile.Tile;
-  var shovelPaintPlaced: Bool;
+    public var biome: String;
+    public var glowShader: shader.GlowKey;
+    public var bgGlowShader: shader.GlowKey;
+    public var sprGc: Array<Dynamic>;
+    public var lightFxs: Array<Dynamic>;
+    public var torchLights: Array<Dynamic>;
+    public var godRays: Array<Dynamic>;
+    public var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch;
+    public var alcoveGlows: Array<Dynamic>;
+    public var groundWallDecks: Array<Dynamic>;
+    public var groundWallDecksL: Array<Dynamic>;
+    public var groundWallDecksR: Array<Dynamic>;
+    public var landmarksActivated: Bool;
+    public var torchBack: h2d.Tile;
+    public var shovelPaintPlaced: Bool;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function getStampWallThreshold(): Float {}
+    public override function getStampWallThreshold(): Float {
+        throw "stub: getStampWallThreshold not decompiled";
+    }
 
-  function getFloorJunkNames(): String {}
+    public function getFloorJunkNames(): String {
+        throw "stub: getFloorJunkNames not decompiled";
+    }
 
-  function getWallJunkNames(): String {}
+    public function getWallJunkNames(): String {
+        throw "stub: getWallJunkNames not decompiled";
+    }
 
-  function getHighlightColor(): String {}
+    public override function getHighlightColor(): String {
+        throw "stub: getHighlightColor not decompiled";
+    }
 
-  function getOverWaterLight(): String {}
+    public override function getOverWaterLight(): String {
+        throw "stub: getOverWaterLight not decompiled";
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function getSpecificJunkName(): String {}
+    public function getSpecificJunkName(): String {
+        throw "stub: getSpecificJunkName not decompiled";
+    }
 
-  function getSpecificJunkGlowName(): String {}
+    public function getSpecificJunkGlowName(): String {
+        throw "stub: getSpecificJunkGlowName not decompiled";
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function addColumn(px: Int, py: Int, height: Int, pivotX: Dynamic) {}
+    public function addColumn(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addStatues(z: level.DecoTypes.DecoTypes) {}
+    public function addStatues(arg0: level.DecoZone): Void {
+    }
 
-  function canStampOn(df: Int): Bool {}
+    public override function canStampOn(arg0: Int): Bool {
+        throw "stub: canStampOn not decompiled";
+    }
 
-  function canAddTorch(cx: Int, cy: Int): Bool {}
+    public function canAddTorch(arg0: Int, arg1: Int): Bool {
+        throw "stub: canAddTorch not decompiled";
+    }
 
-  function addAlcoves(zone: level.DecoTypes.DecoTypes, _size: Int, _postFix: String, _maxCount: Int) {}
+    public function addAlcoves(arg0: level.DecoZone, arg1: Int, arg2: String, arg3: Int): Void {
+    }
 
-  function createHoleGrid(r: level.Room.Room, rGrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public override function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: createHoleGrid not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 }
-

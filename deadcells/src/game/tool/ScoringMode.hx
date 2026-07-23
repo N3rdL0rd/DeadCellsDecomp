@@ -1,34 +1,49 @@
 package tool;
+
 class ScoringMode {
-  var game: pr.Game.Game;
-  var exploScore: libs.VarSecure.VarSecure;
-  var initialTimeS: Float;
-  var started: Bool;
-  var endOpened: Bool;
-  var isSuccess: Bool;
-  var curseMult: Int;
-  var isBossBattle: Bool;
-  var isFail: Bool;
-  var startedWithAssistMode: Bool;
+    public var game: pr.Game;
+    public var exploScore: libs.VarSecure;
+    public var initialTimeS: Float;
+    public var started: Bool;
+    public var endOpened: Bool;
+    public var isSuccess: Bool;
+    public var curseMult: Int;
+    public var isBossBattle: Bool;
+    public var isFail: Bool;
+    public var startedWithAssistMode: Bool;
 
-  static function getLevel(index: Int): String {}
+    public function new(arg0: pr.Game) {
+    }
 
-  function __constructor__(game: pr.Game.Game) {}
+    public static function getLevel(arg0: Int): String {
+        throw "stub: getLevel not decompiled";
+    }
 
-  function initScore() {}
+    public function initScore(): Void {
+    }
 
-  function startBossBattle() {}
+    public function startBossBattle(): Void {
+    }
 
-  function addScore(v: Int): Int {}
+    public function addScore(arg0: Int): Int {
+        throw "stub: addScore not decompiled";
+    }
 
-  function getBonusPoints(): Int {}
+    public function getBonusPoints(): Int {
+        throw "stub: getBonusPoints not decompiled";
+    }
 
-  function hasBonusPoints(): Bool {}
+    public function hasBonusPoints(): Bool {
+        throw "stub: hasBonusPoints not decompiled";
+    }
 
-  function endScoring() {}
+    public function endScoring(): Void {
+    }
 
-  function getTimeLeftS(): Float {}
+    public function getTimeLeftS(): Float {
+        throw "stub: getTimeLeftS not decompiled";
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

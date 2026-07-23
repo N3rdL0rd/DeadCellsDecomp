@@ -1,30 +1,48 @@
 package level.disp;
+
 class CastleAlchemy extends level.disp.Castle {
-  var smokes: hl.types.ArrayObj<Dynamic>;
-  var shelvesScroll: hl.types.ArrayObj<Dynamic>;
+    public var smokes: Array<Dynamic>;
+    public var shelvesScroll: Array<Dynamic>;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function getSpecificJunkName(): String {}
+    public override function getSpecificJunkName(): String {
+        throw "stub: getSpecificJunkName not decompiled";
+    }
 
-  function getSpecificJunkGlowName(): String {}
+    public override function getSpecificJunkGlowName(): String {
+        throw "stub: getSpecificJunkGlowName not decompiled";
+    }
 
-  function addHoleBackground(room: level.Room.Room, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function addShelvesScroller(posX: Int, posY: Int, maxDelta: Int, name: String, roomX: Int, roomWidth: Int): Dynamic {}
+    public function addShelvesScroller(arg0: Int, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int): Dynamic {
+        throw "stub: addShelvesScroller not decompiled";
+    }
 
-  function renderBackground() {}
+    public override function renderBackground(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function addAlcoves(zone: level.DecoTypes.DecoTypes, _size: Int, _postFix: String, _maxCount: Int) {}
+    public override function addAlcoves(arg0: level.DecoZone, arg1: Int, arg2: String, arg3: Int): Void {
+    }
 
-  function getFloorJunkNames(): String {}
+    public override function getFloorJunkNames(): String {
+        throw "stub: getFloorJunkNames not decompiled";
+    }
 
-  function getWallJunkNames(): String {}
+    public override function getWallJunkNames(): String {
+        throw "stub: getWallJunkNames not decompiled";
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 }
-

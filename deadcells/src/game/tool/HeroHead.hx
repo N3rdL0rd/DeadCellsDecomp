@@ -1,98 +1,131 @@
 package tool;
+
 class HeroHead {
-  var level: pr.Level.Level;
-  var hero: en.Hero.Hero;
-  var parent: h2d.Object.Object;
-  var lastLookingBackward: Bool;
-  var lastHeadBehind: Bool;
-  var isMoving: Bool;
-  var heroHasHead: Bool;
-  var forcedPos: tool.FPoint.FPoint;
-  var forcedCustomHead: Dynamic;
-  var customHead: Bool;
-  var customHeadSpr: libs.heaps.slib.HSprite.HSprite;
-  var _customHeadInfoCache: Dynamic;
-  var headParts: hl.types.ArrayObj<Dynamic>;
-  var isPlayingInitialAnim: Bool;
-  var alwaysShowHead: Bool;
-  var customHeadInf: Dynamic;
-  var customEyeInf: Dynamic;
-  var customBackInf: Dynamic;
-  var customBackSpr: libs.heaps.slib.HSprite.HSprite;
-  var alwaysShowBack: Bool;
-  var pool: libs.heaps.HParticle.HParticle;
-  var headNormalSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var headAddSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var headBlack: Int;
-  var eye: libs.heaps.slib.HSprite.HSprite;
-  var alwaysShowEye: Bool;
-  var eyeDir: Float;
-  var cd: tool.Cooldown.Cooldown;
-  var headModes: hl.types.ArrayObj<Dynamic>;
-  var cineHeadMode: Dynamic;
-  var fromUI: Bool;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var level: pr.Level;
+    public var hero: en.Hero;
+    public var parent: h2d.Object;
+    public var lastLookingBackward: Bool;
+    public var lastHeadBehind: Bool;
+    public var isMoving: Bool;
+    public var heroHasHead: Bool;
+    public var forcedPos: tool.FPoint;
+    public var forcedCustomHead: Dynamic;
+    public var customHead: Bool;
+    public var customHeadSpr: libs.heaps.slib.HSprite;
+    public var _customHeadInfoCache: Dynamic;
+    public var headParts: Array<Dynamic>;
+    public var isPlayingInitialAnim: Bool;
+    public var alwaysShowHead: Bool;
+    public var customHeadInf: Dynamic;
+    public var customEyeInf: Dynamic;
+    public var customBackInf: Dynamic;
+    public var customBackSpr: libs.heaps.slib.HSprite;
+    public var alwaysShowBack: Bool;
+    public var pool: libs.heaps.ParticlePool;
+    public var headNormalSb: libs.heaps.slib.HSpriteBatch;
+    public var headAddSb: libs.heaps.slib.HSpriteBatch;
+    public var headBlack: Int;
+    public var eye: libs.heaps.slib.HSprite;
+    public var alwaysShowEye: Bool;
+    public var eyeDir: Float;
+    public var cd: tool.Cooldown;
+    public var headModes: Array<Dynamic>;
+    public var cineHeadMode: tool.HeadMode;
+    public var fromUI: Bool;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function get_headMode(): Dynamic {}
+    public function get_headMode(): tool.HeadMode {
+        throw "stub: get_headMode not decompiled";
+    }
 
-  function init(level: pr.Level.Level, parent: h2d.Object.Object, fromUI: Dynamic) {}
+    public function init(arg0: pr.Level, arg1: h2d.Object, arg2: Ref): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function initHead(level: pr.Level.Level, layer: Int) {}
+    public function initHead(arg0: pr.Level, arg1: Int): Void {
+    }
 
-  function initCustomHead() {}
+    public function initCustomHead(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function pushHeadMode(mode: Dynamic, durationS: Float, id: Dynamic) {}
+    public function pushHeadMode(arg0: tool.HeadMode, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function stopHeadMode(id: Int) {}
+    public function stopHeadMode(arg0: Int): Void {
+    }
 
-  function resetHeadMode() {}
+    public function resetHeadMode(): Void {
+    }
 
-  function setForcedPos(x: Float, y: Float) {}
+    public function setForcedPos(arg0: Float, arg1: Float): Void {
+    }
 
-  function updateHeadFx(ftime: Float) {}
+    public function updateHeadFx(arg0: Float): Void {
+    }
 
-  function setHeadNormal(ftime: Float) {}
+    public function setHeadNormal(arg0: Float): Void {
+    }
 
-  function setHeadBehind(ftime: Float) {}
+    public function setHeadBehind(arg0: Float): Void {
+    }
 
-  function setHeadBackward(ftime: Float) {}
+    public function setHeadBackward(arg0: Float): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function eyeShine(c: Int) {}
+    public function eyeShine(arg0: Int): Void {
+    }
 
-  function _headPartUpdate(p: libs.heaps.HParticle.HParticle) {}
+    public function _headPartUpdate(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function killAllParticles() {}
+    public function killAllParticles(): Void {
+    }
 
-  function customHeadFx() {}
+    public function customHeadFx(): Void {
+    }
 
-  function mainNormalFx() {}
+    public function mainNormalFx(): Void {
+    }
 
-  function mainFireFx(c0: Int, c1: Int) {}
+    public function mainFireFx(arg0: Int, arg1: Int): Void {
+    }
 
-  function mainElectricFx(c0: Int, c1: Int) {}
+    public function mainElectricFx(arg0: Int, arg1: Int): Void {
+    }
 
-  function tailEyeFx(color: Int) {}
+    public function tailEyeFx(arg0: Int): Void {
+    }
 
-  function tailNoEyeFx(color: Int) {}
+    public function tailNoEyeFx(arg0: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

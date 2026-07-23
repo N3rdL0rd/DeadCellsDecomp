@@ -1,29 +1,43 @@
 package light;
+
 class DepthMap {
-  var depthByObjects: haxe.ds.ObjectMap;
-  var maxDepth: Int;
-  var objectsCount: Int;
-  var currentObjectIndex: Int;
-  var objectHierarchyBuffer: hl.types.ArrayObj<Dynamic>;
+    public var depthByObjects: haxe.ds.ObjectMap;
+    public var maxDepth: Int;
+    public var objectsCount: Int;
+    public var currentObjectIndex: Int;
+    public var objectHierarchyBuffer: Array<Dynamic>;
 
-  function __constructor__(layerCount: Int) {}
+    public function new(arg0: Int) {
+    }
 
-  function build(rootLayer: h2d.Layers.Layers, layerCount: Int) {}
+    public function build(arg0: h2d.Layers, arg1: Int): Void {
+    }
 
-  function getLayerDepth(object: h2d.Object.Object): Float {}
+    public function getLayerDepth(arg0: h2d.Object): Float {
+        throw "stub: getLayerDepth not decompiled";
+    }
 
-  function getObjectDepth(object: h2d.Object.Object): Float {}
+    public function getObjectDepth(arg0: h2d.Object): Float {
+        throw "stub: getObjectDepth not decompiled";
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function computeLayerDepth(layerIndex: Int): Float {}
+    public function computeLayerDepth(arg0: Int): Float {
+        throw "stub: computeLayerDepth not decompiled";
+    }
 
-  function computeObjectDepth(objectIndex: Int): Float {}
+    public function computeObjectDepth(arg0: Int): Float {
+        throw "stub: computeObjectDepth not decompiled";
+    }
 
-  function addLayerContent(layer: h2d.Layers.Layers, layerCount: Int) {}
+    public function addLayerContent(arg0: h2d.Layers, arg1: Int): Void {
+    }
 
-  function addObjectHierarchy(root: h2d.Object.Object, layerIndex: Int) {}
+    public function addObjectHierarchy(arg0: h2d.Object, arg1: Int): Void {
+    }
 
-  function addObject(object: h2d.Object.Object, layerIndex: Int) {}
+    public function addObject(arg0: h2d.Object, arg1: Int): Void {
+    }
 }
-

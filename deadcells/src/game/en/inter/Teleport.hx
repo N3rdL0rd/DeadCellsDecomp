@@ -1,54 +1,81 @@
 package en.inter;
+
 class Teleport extends en.Interactive {
-  var opened: Bool;
-  var revealed: Bool;
-  var broken: Bool;
-  var pentagram: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var runes: hl.types.ArrayObj<Dynamic>;
-  var tLight: tool.EntityLight.EntityLight;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var opened: Bool;
+    public var revealed: Bool;
+    public var broken: Bool;
+    public var pentagram: libs.heaps.slib.HSpriteBE;
+    public var runes: Array<Dynamic>;
+    public var tLight: tool.EntityLight;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function initOpenedGfx(animated: Bool) {}
+    public function initOpenedGfx(arg0: Bool): Void {
+    }
 
-  function minimapTracking() {}
+    public function minimapTracking(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onTouch(e: Entity) {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function startTeleport(hero: en.Hero.Hero, to: Entity) {}
+    public function startTeleport(arg0: en.Hero, arg1: Entity): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function open() {}
+    public function open(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function outOfGameUpdate() {}
+    public function outOfGameUpdate(): Void {
+    }
 
-  function isHeroShouldRevealTeleporter(verticalOffset: Int): Bool {}
+    public function isHeroShouldRevealTeleporter(arg0: Int): Bool {
+        throw "stub: isHeroShouldRevealTeleporter not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

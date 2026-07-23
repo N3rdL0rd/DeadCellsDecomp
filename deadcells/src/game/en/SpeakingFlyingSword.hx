@@ -1,33 +1,47 @@
 package en;
+
 class SpeakingFlyingSword extends Entity {
-  var cachedPositionX: Float;
-  var cachedPositionY: Float;
-  var anchorPositionX: Float;
-  var moveState: Bool;
-  var idleState: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var cachedPositionX: Float;
+    public var cachedPositionY: Float;
+    public var anchorPositionX: Float;
+    public var moveState: Bool;
+    public var idleState: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dir: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+        super();
+    }
 
-  function initSpeechDeck() {}
+    public override function initSpeechDeck(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function playFirstAnim() {}
+    public function playFirstAnim(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function forceEquipItem() {}
+    public function forceEquipItem(): Void {
+    }
 
-  function setIdleState() {}
+    public function setIdleState(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

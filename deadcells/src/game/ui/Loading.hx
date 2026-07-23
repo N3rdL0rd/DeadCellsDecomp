@@ -1,39 +1,49 @@
 package ui;
+
 class Loading extends h2d.Layers {
-  var w: Int;
-  var h: Int;
-  var bgMask: h2d.Graphics.Graphics;
-  var loadingFlow: h2d.Flow.Flow;
-  var spr: libs.heaps.slib.HSprite.HSprite;
-  var text: ui.Text.Text;
-  var lvlContent: h2d.Object.Object;
-  var lvlBmp: h2d.Bitmap.Bitmap;
-  var lvlFlow: h2d.Flow.Flow;
-  var subFlow: h2d.Flow.Flow;
-  var lvlName: ui.Text.Text;
-  var lvlDesc: ui.Text.Text;
-  var lvlTexts: hl.types.ArrayObj<Dynamic>;
-  var lines: hl.types.ArrayObj<Dynamic>;
-  var tgCorners: h2d.TileGroup.TileGroup;
-  var cornerTile: h2d.Tile.Tile;
-  static var LLD: Dynamic;
+    public static var LLD: Dynamic;
+    public var w: Int;
+    public var h: Int;
+    public var bgMask: h2d.Graphics;
+    public var loadingFlow: h2d.Flow;
+    public var spr: libs.heaps.slib.HSprite;
+    public var text: ui.Text;
+    public var lvlContent: h2d.Object;
+    public var lvlBmp: h2d.Bitmap;
+    public var lvlFlow: h2d.Flow;
+    public var subFlow: h2d.Flow;
+    public var lvlName: ui.Text;
+    public var lvlDesc: ui.Text;
+    public var lvlTexts: Array<Dynamic>;
+    public var lines: Array<Dynamic>;
+    public var tgCorners: h2d.TileGroup;
+    public var cornerTile: h2d.Tile;
 
-  function __constructor__(p: h2d.Object.Object) {}
+    public function new(arg0: h2d.Object) {
+        super();
+    }
 
-  function addText() {}
+    public function addText(): Void {
+    }
 
-  function setColor(col: Dynamic) {}
+    public function setColor(arg0: Dynamic): Void {
+    }
 
-  function setDispData(data: Dynamic) {}
+    public function setDispData(arg0: Dynamic): Void {
+    }
 
-  function addLine() {}
+    public function addLine(): Void {
+    }
 
-  function showContent() {}
+    public function showContent(): Void {
+    }
 
-  function hideContent() {}
+    public function hideContent(): Void {
+    }
 
-  function onResize(w: Int, h: Int) {}
+    public function onResize(arg0: Int, arg1: Int): Void {
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public function sync(arg0: h2d.RenderContext): Void {
+    }
 }
-

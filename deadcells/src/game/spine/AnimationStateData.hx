@@ -1,12 +1,27 @@
 package spine;
-class AnimationStateDataKey {
-  var a1: spine.Animation.Animation;
-  var a2: spine.Animation.Animation;
 
-  function __constructor__() {}
+class AnimationStateData {
+    public var skeletonData: spine.SkeletonData;
+    public var animationToMixTime: haxe.ds.IntMap;
+    public var tempAnimationStateDataKey: spine.AnimationStateDataKey;
+    public var defaultMix: Float;
 
-  function getHashCode(): Int {}
-
-  function equals(obj: Dynamic): Bool {}
+    public function new(arg0: spine.SkeletonData) {
+    }
 }
 
+class AnimationStateDataKey {
+    public var a1: spine.Animation;
+    public var a2: spine.Animation;
+
+    public function new() {
+    }
+
+    public function getHashCode(): Int {
+        throw "stub: getHashCode not decompiled";
+    }
+
+    public function equals(arg0: Dynamic): Bool {
+        throw "stub: equals not decompiled";
+    }
+}

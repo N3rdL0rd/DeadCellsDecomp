@@ -1,48 +1,72 @@
 package en.inter.npc;
+
 class BossRushNPC extends en.inter.Npc {
-  var headFlip: Bool;
-  var rseed: libs.Rand.Rand;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var headFlip: Bool;
+    public var rseed: libs.Rand;
 
-  function __constructor__(lvl: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function setHeadFlip(v: Bool) {}
+    public function setHeadFlip(arg0: Bool): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function checkForCine(hero: en.Hero.Hero) {}
+    public function checkForCine(arg0: en.Hero): Void {
+    }
 
-  function onEndCine() {}
+    public function onEndCine(): Void {
+    }
 
-  function talkEnterBossRush() {}
+    public function talkEnterBossRush(): Void {
+    }
 
-  function talkBossRushBegin() {}
+    public function talkBossRushBegin(): Void {
+    }
 
-  function talkBossRushContinue() {}
+    public function talkBossRushContinue(): Void {
+    }
 
-  function talkBossRushFinish() {}
+    public function talkBossRushFinish(): Void {
+    }
 
-  function talkBossRushDied() {}
+    public function talkBossRushDied(): Void {
+    }
 
-  function onGreet(h: en.Hero.Hero) {}
+    public override function onGreet(arg0: en.Hero): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

@@ -1,26 +1,34 @@
 package tool.skill;
-class SkillSound extends tool.skill.Skill.SkillEvent {
-  var sound: hxd.res.Sound.Sound;
-  var path: String;
-  var fadeIn: Float;
-  var fadeOut: Float;
-  var pitch: Dynamic;
-  var volume: Float;
-  var spatialized: Bool;
-  var holdWhileTrigger: Bool;
-  var loopWhileHeld: Bool;
-  var holdCond: Dynamic;
 
-  function __constructor__(path: String, skill: tool.skill.Skill.Skill, delay: Float, customId: String, trigger: Dynamic, minMaxRatio: Dynamic) {}
+class SkillSound extends tool.skill.SkillEvent {
+    public var sound: hxd.res.Sound;
+    public var path: String;
+    public var fadeIn: Float;
+    public var fadeOut: Float;
+    public var pitch: Dynamic;
+    public var volume: Float;
+    public var spatialized: Bool;
+    public var holdWhileTrigger: Bool;
+    public var loopWhileHeld: Bool;
+    public var holdCond: Dynamic;
 
-  function setPlayParams(fadeInOutDur: Dynamic, pitch: Dynamic, volume: Dynamic, spatialized: Dynamic) {}
+    public function new(arg0: String, arg1: tool.skill.Skill, arg2: Float, arg3: String, arg4: Dynamic, arg5: Dynamic) {
+        super();
+    }
 
-  function setLoopParams(holdWhileTrigger: Dynamic, loopWhileHeld: Dynamic) {}
+    public function setPlayParams(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function tryTrigger(overrideDir: Dynamic, ratio: Dynamic): Bool {}
+    public function setLoopParams(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function trigger(overrideDir: Dynamic) {}
+    public override function tryTrigger(arg0: Dynamic, arg1: Dynamic): Bool {
+        throw "stub: tryTrigger not decompiled";
+    }
 
-  function update() {}
+    public override function trigger(arg0: Dynamic): Void {
+    }
+
+    public override function update(): Void {
+    }
 }
-

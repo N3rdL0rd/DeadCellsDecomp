@@ -1,22 +1,33 @@
 package level.struct;
+
 class AncientTemple extends level.LevelStruct {
-  var branches: hl.types.ArrayObj<Dynamic>;
-  var mainCombats: hl.types.ArrayObj<Dynamic>;
+    public var branches: Array<Dynamic>;
+    public var mainCombats: Array<Dynamic>;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function createExitBranch(end: level.RoomNode.RoomNode) {}
+    public function createExitBranch(arg0: level.RoomNode): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function buildEssentialLoreRooms() {}
+    public override function buildEssentialLoreRooms(): Void {
+    }
 
-  function canGenerateThisLoreRoom(lore: Dynamic): Bool {}
+    public override function canGenerateThisLoreRoom(arg0: Dynamic): Bool {
+        throw "stub: canGenerateThisLoreRoom not decompiled";
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 }
-

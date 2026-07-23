@@ -1,20 +1,28 @@
 package en;
+
 class FirePillarHorizontal extends en.FirePillar {
-  var leftLoadFx: libs.heaps.HParticle.HParticle;
-  var rightLoadFx: libs.heaps.HParticle.HParticle;
-  var leftPillarFx: libs.heaps.HParticle.HParticle;
-  var rightPillarFx: libs.heaps.HParticle.HParticle;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var leftLoadFx: libs.heaps.HParticle;
+    public var rightLoadFx: libs.heaps.HParticle;
+    public var leftPillarFx: libs.heaps.HParticle;
+    public var rightPillarFx: libs.heaps.HParticle;
 
-  function __constructor__(dooku: en.mob.boss.DookuBeast.DookuBeast, skillName: String, cx: Int, cy: Int, pillarWid: Float, pillarHei: Float, delay: Float, dookuPf: en.inter.DookuBreakableFloor.DookuBreakableFloor) {}
+    public function new(arg0: en.mob.boss.DookuBeast, arg1: String, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: en.inter.DookuBreakableFloor) {
+        super();
+    }
 
-  function playCreationFx() {}
+    public override function playCreationFx(): Void {
+    }
 
-  function playPillarFx(id: String) {}
+    public override function playPillarFx(arg0: String): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

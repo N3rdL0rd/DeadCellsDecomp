@@ -1,301 +1,447 @@
 package en.mob.boss;
+
 class Queen extends en.mob.Boss {
-  var middlePoint: tool.CPoint.CPoint;
-  var attackDealtMemory: Dynamic;
-  var attackReceivedMemory: Dynamic;
-  var initialAttackDone: Bool;
-  var nbQuickStrike: Int;
-  var nbCombo: Int;
-  var nbTeleport: Int;
-  var comboEnderDone: Bool;
-  var shieldAnnoyanceLevel: Int;
-  var attackChain: hl.types.ArrayObj<Dynamic>;
-  var activeCutLines: hl.types.ArrayObj<Dynamic>;
-  var shieldTaunts: hl.types.ArrayObj<Dynamic>;
-  var comboStarterAttacks: hl.types.ArrayObj<Dynamic>;
-  var comboStarterAttacksDeck: libs.RandDeck.RandDeck;
-  var quickMeleeAttacks: hl.types.ArrayObj<Dynamic>;
-  var quickMeleeAttacksDeck: libs.RandDeck.RandDeck;
-  var comboEnderAttacks: hl.types.ArrayObj<Dynamic>;
-  var comboEnderAttacksDeck: libs.RandDeck.RandDeck;
-  var antiShieldAttacks: hl.types.ArrayObj<Dynamic>;
-  var antiShieldAttacksDeck: libs.RandDeck.RandDeck;
-  var gapCloserSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var swapSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var preventFallingFromBump: Bool;
-  var firewaveAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var lungeAttack: tool.skill.OldMobSkill.OldMobSkill;
-  var lungeAttackArea: tool.Area.Area;
-  var comboAttack: tool.skill.OldMobSkill.OldMobSkill;
-  var overshieldAttack: tool.skill.OldMobSkill.OldMobSkill;
-  var grabAttack: tool.skill.OldMobSkill.OldMobSkill;
-  var throwHeroSkill: tool.skill.OldSkill.OldSkill;
-  var shockWaveAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var tauntAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var grabbedHero: en.Hero.Hero;
-  var backDashSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var repelBulletSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var repelBulletSkillInf: Dynamic;
-  var parrySkill: tool.skill.OldSkill.OldSkill;
-  var parrySkillInf: Dynamic;
-  var parryCounterAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var disableGrenadeSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var groundStompAnswerAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var removeRootAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var fallTpSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var maxFallBeforeTp: Int;
-  var maxFallLeniency: Int;
-  var destroyTurretAttack: tool.skill.OldMobSkill.OldMobSkill;
-  var killPetSkill: tool.skill.OldMobSkill.OldMobSkill;
-  var dispellAOESkill: tool.skill.OldMobSkill.OldMobSkill;
-  var voronoi: h2d.col.Voronoi.Voronoi;
-  var jumpSpeed: Float;
-  var lastCutReady: Bool;
-  var safeSpot: Dynamic;
-  var headPool: libs.heaps.HParticle.HParticle;
-  var headNormalSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var headAddSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var headBlack: Int;
-  var eye: libs.heaps.slib.HSprite.HSprite;
-  var eyeLeft: libs.heaps.slib.HSprite.HSprite;
-  var eyeRight: libs.heaps.slib.HSprite.HSprite;
-  var eyeDir: Float;
-  var lastHeadPos: tool.FPoint.FPoint;
-  var eyeOffsetX: Float;
-  var eyeOffsetY: Float;
-  var bossRushModifiers: Dynamic;
-  var ambiantChannel: hxd.snd.Channel.Channel;
-  var registeredFx: hl.types.ArrayObj<Dynamic>;
-  var isAntiShieldCombo: Bool;
-  var isInPlaceForCutScreen: Bool;
-  var focusedActive: en.Active.Active;
-  var focusedGrenade: en.Grenade.Grenade;
-  var focusedPet: Entity;
-  var delayedBreachFrom: tool.atk.AttackData.AttackData;
-  var sbQueenFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var lastChargeRatio: Float;
-  var lastHandX: Float;
-  var lastHandY: Float;
-  var <none>: Dynamic;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var middlePoint: tool.CPoint;
+    public var attackDealtMemory: Dynamic;
+    public var attackReceivedMemory: Dynamic;
+    public var initialAttackDone: Bool;
+    public var nbQuickStrike: Int;
+    public var nbCombo: Int;
+    public var nbTeleport: Int;
+    public var comboEnderDone: Bool;
+    public var shieldAnnoyanceLevel: Int;
+    public var attackChain: Array<Dynamic>;
+    public var activeCutLines: Array<Dynamic>;
+    public var shieldTaunts: Array<Dynamic>;
+    public var comboStarterAttacks: Array<Dynamic>;
+    public var comboStarterAttacksDeck: libs.RandDeck;
+    public var quickMeleeAttacks: Array<Dynamic>;
+    public var quickMeleeAttacksDeck: libs.RandDeck;
+    public var comboEnderAttacks: Array<Dynamic>;
+    public var comboEnderAttacksDeck: libs.RandDeck;
+    public var antiShieldAttacks: Array<Dynamic>;
+    public var antiShieldAttacksDeck: libs.RandDeck;
+    public var gapCloserSkill: tool.skill.OldMobSkill;
+    public var swapSkill: tool.skill.OldMobSkill;
+    public var preventFallingFromBump: Bool;
+    public var firewaveAtk: tool.skill.OldMobSkill;
+    public var lungeAttack: tool.skill.OldMobSkill;
+    public var lungeAttackArea: tool.Area;
+    public var comboAttack: tool.skill.OldMobSkill;
+    public var overshieldAttack: tool.skill.OldMobSkill;
+    public var grabAttack: tool.skill.OldMobSkill;
+    public var throwHeroSkill: tool.skill.OldSkill;
+    public var shockWaveAtk: tool.skill.OldMobSkill;
+    public var tauntAtk: tool.skill.OldMobSkill;
+    public var grabbedHero: en.Hero;
+    public var backDashSkill: tool.skill.OldMobSkill;
+    public var repelBulletSkill: tool.skill.OldMobSkill;
+    public var repelBulletSkillInf: Dynamic;
+    public var parrySkill: tool.skill.OldSkill;
+    public var parrySkillInf: Dynamic;
+    public var parryCounterAtk: tool.skill.OldMobSkill;
+    public var disableGrenadeSkill: tool.skill.OldMobSkill;
+    public var groundStompAnswerAtk: tool.skill.OldMobSkill;
+    public var removeRootAtk: tool.skill.OldMobSkill;
+    public var fallTpSkill: tool.skill.OldMobSkill;
+    public var maxFallBeforeTp: Int;
+    public var maxFallLeniency: Int;
+    public var destroyTurretAttack: tool.skill.OldMobSkill;
+    public var killPetSkill: tool.skill.OldMobSkill;
+    public var dispellAOESkill: tool.skill.OldMobSkill;
+    public var voronoi: h2d.col.Voronoi;
+    public var jumpSpeed: Float;
+    public var lastCutReady: Bool;
+    public var safeSpot: Dynamic;
+    public var headPool: libs.heaps.ParticlePool;
+    public var headNormalSb: libs.heaps.slib.HSpriteBatch;
+    public var headAddSb: libs.heaps.slib.HSpriteBatch;
+    public var headBlack: Int;
+    public var eye: libs.heaps.slib.HSprite;
+    public var eyeLeft: libs.heaps.slib.HSprite;
+    public var eyeRight: libs.heaps.slib.HSprite;
+    public var eyeDir: Float;
+    public var lastHeadPos: tool.FPoint;
+    public var eyeOffsetX: Float;
+    public var eyeOffsetY: Float;
+    public var bossRushModifiers: Dynamic;
+    public var ambiantChannel: hxd.snd.Channel;
+    public var registeredFx: Array<Dynamic>;
+    public var isAntiShieldCombo: Bool;
+    public var isInPlaceForCutScreen: Bool;
+    public var focusedActive: en.Active;
+    public var focusedGrenade: en.Grenade;
+    public var focusedPet: Entity;
+    public var delayedBreachFrom: tool.atk.AttackData;
+    public var sbQueenFx: libs.heaps.slib.HSpriteBatch;
+    public var lastChargeRatio: Float;
+    public var lastHandX: Float;
+    public var lastHandY: Float;
+    public var : Dynamic;
+
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
+
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.boss.Queen {
+        throw "stub: create not decompiled";
+    }
+
+    public function get_isInCutScreenPhase(): Bool {
+        throw "stub: get_isInCutScreenPhase not decompiled";
+    }
+
+    public function get_isInTutorialPhase(): Bool {
+        throw "stub: get_isInTutorialPhase not decompiled";
+    }
+
+    public function get_headDir(): Int {
+        throw "stub: get_headDir not decompiled";
+    }
+
+    public function interpolate(arg0: Float, arg1: libs.misc.TType): Float {
+        throw "stub: interpolate not decompiled";
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public override function setReady(): Void {
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Queen {}
+    public override function init(): Void {
+    }
 
-  function get_isInCutScreenPhase(): Bool {}
+    public function initJumpSpeed(): Void {
+    }
 
-  function get_isInTutorialPhase(): Bool {}
+    public function idleToAnim(arg0: String): String {
+        throw "stub: idleToAnim not decompiled";
+    }
 
-  function get_headDir(): Int {}
+    public function animToIdle(arg0: String): String {
+        throw "stub: animToIdle not decompiled";
+    }
 
-  function interpolate(step: Float, type: Dynamic): Float {}
+    public function loadToAnim(arg0: String): String {
+        throw "stub: loadToAnim not decompiled";
+    }
 
-  function setReady() {}
+    public function initAffectResists(): Void {
+    }
 
-  function init() {}
+    public function initSkills(): Void {
+    }
 
-  function initJumpSpeed() {}
+    public function doCutLineAttack(arg0: Dynamic, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function idleToAnim(id: String): String {}
+    public function singleCutLineAttack(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function animToIdle(id: String): String {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function loadToAnim(id: String): String {}
+    public function initOffensiveSkills(): Void {
+    }
 
-  function initAffectResists() {}
+    public function releaseGrabbedHero(): Void {
+    }
 
-  function initSkills() {}
+    public function initDefensiveSkills(): Void {
+    }
 
-  function doCutLineAttack(cutLine: Dynamic, width: Float, power: Dynamic) {}
+    public function cutGrenade(arg0: en.Grenade): Void {
+    }
 
-  function singleCutLineAttack(centerX: Float, centerY: Float, angle: Float) {}
+    public function meleeCutLineAttack(arg0: String): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function initMeleeAtk(arg0: String, arg1: Bool, arg2: Array<Int>, arg3: Ref, arg4: String): tool.skill.OldMobSkill {
+        throw "stub: initMeleeAtk not decompiled";
+    }
 
-  function initOffensiveSkills() {}
+    public function playFx(arg0: String, arg1: Ref, arg2: tool.skill.OldSkill): libs.heaps.HParticle {
+        throw "stub: playFx not decompiled";
+    }
 
-  function releaseGrabbedHero() {}
+    public function interruptSkills(): Void {
+    }
 
-  function initDefensiveSkills() {}
+    public function cleanRegisteredFx(): Void {
+    }
 
-  function cutGrenade(gr: en.Grenade.Grenade) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function meleeCutLineAttack(skillName: String) {}
+    public function dash(arg0: Int): Void {
+    }
 
-  function initMeleeAtk(skillName: String, comboEnder: Bool, attackTags: hl.types.ArrayBytes<Int>, fxOnStart: Dynamic, followUp: String): tool.skill.OldMobSkill.OldMobSkill {}
+    public function dashTo(arg0: Float): Void {
+    }
 
-  function playFx(fxId: String, speed: Dynamic, skill: tool.skill.OldSkill.OldSkill): libs.heaps.HParticle.HParticle {}
+    public function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function interruptSkills() {}
+    public function onStep(): Void {
+    }
 
-  function cleanRegisteredFx() {}
+    public function checkDashHit(): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function stopDash(): Void {
+    }
 
-  function dash(dist: Int) {}
+    public function createCounterBullet(arg0: en.Bullet): en.Bullet {
+        throw "stub: createCounterBullet not decompiled";
+    }
 
-  function dashTo(targetX: Float) {}
+    public function canTpBehind(arg0: Entity): Bool {
+        throw "stub: canTpBehind not decompiled";
+    }
 
-  function canApplyRepelling(): Bool {}
+    public function chainComboAttack(arg0: Bool): Void {
+    }
 
-  function onStep() {}
+    public function needsCloseUp(arg0: tool.skill.OldMobSkill): Bool {
+        throw "stub: needsCloseUp not decompiled";
+    }
 
-  function checkDashHit() {}
+    public function chainAntiShieldCombo(arg0: Bool): Void {
+    }
 
-  function stopDash() {}
+    public function chainComboEnder(): Void {
+    }
 
-  function createCounterBullet(cBullet: en.Bullet.Bullet): en.Bullet.Bullet {}
+    public function resetAttackDealtMemory(): Void {
+    }
 
-  function canTpBehind(e: Entity): Bool {}
+    public function resetAttackReceivedMemory(): Void {
+    }
 
-  function chainComboAttack(canQuickMove: Bool) {}
+    public function switchToDefensive(): Void {
+    }
 
-  function needsCloseUp(atk: tool.skill.OldMobSkill.OldMobSkill): Bool {}
+    public function startNextCombo(): Void {
+    }
 
-  function chainAntiShieldCombo(canQuickMove: Bool) {}
+    public function tauntShieldFury(): Void {
+    }
 
-  function chainComboEnder() {}
+    public function switchToOffensive(): Void {
+    }
 
-  function resetAttackDealtMemory() {}
+    public function aiLocked(): Bool {
+        throw "stub: aiLocked not decompiled";
+    }
 
-  function resetAttackReceivedMemory() {}
+    public override function canLevelUp(): Bool {
+        throw "stub: canLevelUp not decompiled";
+    }
 
-  function switchToDefensive() {}
+    public override function prepareLevelUp(): Void {
+    }
 
-  function startNextCombo() {}
+    public override function onScream(): Void {
+    }
 
-  function tauntShieldFury() {}
+    public function cancelCutScreenPhase(): Void {
+    }
 
-  function switchToOffensive() {}
+    public function getComboStarter(): tool.skill.OldMobSkill {
+        throw "stub: getComboStarter not decompiled";
+    }
 
-  function aiLocked(): Bool {}
+    public function isIgnoredBullet(arg0: en.Bullet): Bool {
+        throw "stub: isIgnoredBullet not decompiled";
+    }
 
-  function canLevelUp(): Bool {}
+    public function getIncomingEnemyBullets(): Array<Dynamic> {
+        throw "stub: getIncomingEnemyBullets not decompiled";
+    }
 
-  function prepareLevelUp() {}
+    public function detectedUrgentThreat(): Bool {
+        throw "stub: detectedUrgentThreat not decompiled";
+    }
 
-  function onScream() {}
+    public function choseDefensiveMove(): tool.skill.OldMobSkill {
+        throw "stub: choseDefensiveMove not decompiled";
+    }
 
-  function cancelCutScreenPhase() {}
+    public function behaviourAi(): Void {
+    }
 
-  function getComboStarter(): tool.skill.OldMobSkill.OldMobSkill {}
+    public function checkForBreach(arg0: tool.atk.AttackData): Void {
+    }
 
-  function isIgnoredBullet(bullet: en.Bullet.Bullet): Bool {}
+    public function onBreach(arg0: tool.atk.AttackData): Void {
+    }
 
-  function getIncomingEnemyBullets(): hl.types.ArrayObj<Dynamic> {}
+    public override function dispose(): Void {
+    }
 
-  function detectedUrgentThreat(): Bool {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function choseDefensiveMove(): tool.skill.OldMobSkill.OldMobSkill {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function behaviourAi() {}
+    public function startDelayedBreach(arg0: Ref): Void {
+    }
 
-  function checkForBreach(a: tool.atk.AttackData.AttackData) {}
+    public function onFatalFallDamage(): Void {
+    }
 
-  function onBreach(a: tool.atk.AttackData.AttackData) {}
+    public function respawnOnLastStable(arg0: Float): Void {
+    }
 
-  function dispose() {}
+    public function get_headTracks(): Array<Int> {
+        throw "stub: get_headTracks not decompiled";
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function get_headX(): Float {
+        throw "stub: get_headX not decompiled";
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function get_headY(): Float {
+        throw "stub: get_headY not decompiled";
+    }
 
-  function startDelayedBreach(t: Dynamic) {}
+    public function get_handTracks(): Array<Int> {
+        throw "stub: get_handTracks not decompiled";
+    }
 
-  function onFatalFallDamage() {}
+    public function get_handX(): Float {
+        throw "stub: get_handX not decompiled";
+    }
 
-  function respawnOnLastStable(immunityS: Float) {}
+    public function get_handY(): Float {
+        throw "stub: get_handY not decompiled";
+    }
 
-  function get_headTracks(): hl.types.ArrayBytes<Int> {}
+    public function getBlendMode(): h2d.BlendMode {
+        throw "stub: getBlendMode not decompiled";
+    }
 
-  function get_headX(): Float {}
+    public function initGfx(): Void {
+    }
 
-  function get_headY(): Float {}
+    public function initHeadFx(): Void {
+    }
 
-  function get_handTracks(): hl.types.ArrayBytes<Int> {}
+    public function _trackHand(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function get_handX(): Float {}
+    public function fxChargeHand(arg0: Float, arg1: Float): Void {
+    }
 
-  function get_handY(): Float {}
+    public function fxChargeEntity(arg0: Entity, arg1: Float, arg2: Float): Void {
+    }
 
-  function getBlendMode(): Dynamic {}
+    public function handGlintFx(): Void {
+    }
 
-  function initGfx() {}
+    public function startHandSmokeS(arg0: Float): Void {
+    }
 
-  function initHeadFx() {}
+    public function stopHandSmoke(): Void {
+    }
 
-  function _trackHand(p: libs.heaps.HParticle.HParticle) {}
+    public function onDelayedVolteStart(): Void {
+    }
 
-  function fxChargeHand(ratio: Float, totalChargeDuration: Float) {}
+    public function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function fxChargeEntity(e: Entity, ratio: Float, totalChargeDuration: Float) {}
+    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
 
-  function handGlintFx(tracked: Queen) {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function startHandSmokeS(duration: Float) {}
+    public function onLeaveMap(): Void {
+    }
 
-  function stopHandSmoke() {}
+    public function createBodyPart(): Array<Dynamic> {
+        throw "stub: createBodyPart not decompiled";
+    }
 
-  function onDelayedVolteStart() {}
+    public override function onDie(): Void {
+    }
 
-  function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic) {}
+    public function dropLoot(): Void {
+    }
 
-  function setPosPixel(x: Float, y: Float) {}
+    public function getVolteDelay(): Float {
+        throw "stub: getVolteDelay not decompiled";
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function onLeaveMap() {}
+    public function disposeGfx(): Void {
+    }
 
-  function createBodyPart(): hl.types.ArrayObj<Dynamic> {}
+    public function beforeRender(): Void {
+    }
 
-  function onDie() {}
+    public function updateHeadFx(arg0: Float): Void {
+    }
 
-  function dropLoot() {}
+    public function eyeShine(arg0: Int): Void {
+    }
 
-  function getVolteDelay(): Float {}
+    public function _headPartUpdate(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public function postUpdate(): Void {
+    }
 
-  function disposeGfx() {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function beforeRender() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function updateHeadFx(ftime: Float) {}
+    public function fxSplitScreen(arg0: Dynamic): Void {
+    }
 
-  function eyeShine(c: Int) {}
+    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function _headPartUpdate(p: libs.heaps.HParticle.HParticle) {}
+    public function setHeadPosition(arg0: en.mob.boss.HeadPosition, arg1: Float): Void {
+    }
 
-  function postUpdate() {}
+    public function getDiminishingFactor(arg0: Int, arg1: Int, arg2: Int, arg3: Dynamic): Float {
+        throw "stub: getDiminishingFactor not decompiled";
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function giveHeadFeedback(arg0: String): Void {
+    }
 
-  function fxSplitScreen(line: Dynamic) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function setHeadPosition(direction: Dynamic, duration: Float) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getDiminishingFactor(key: Int, fullPowerUses: Int, absoluteMaxUses: Int, overrideResetTime: Dynamic): Float {}
+    public override function unserializeInit(): Void {
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function giveHeadFeedback(headItem: String) {}
-
-  function getCLID(): Int {}
-
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getSerializeSchema(): hxbit.Schema.Schema {}
-
-  function unserializeInit() {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

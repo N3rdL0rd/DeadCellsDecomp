@@ -1,41 +1,59 @@
 package tool.weap;
+
 class TentacleWhip extends tool.Weapon {
-  var hookX: Dynamic;
-  var spr: libs.heaps.slib.HSprite.HSprite;
-  var cinf: Dynamic;
-  var chain: tool.HookChain.HookChain;
-  var lastGrapX: Float;
-  var sprLevel: pr.Level.Level;
-  var lastX: Float;
+    public var hookX: Dynamic;
+    public var spr: libs.heaps.slib.HSprite;
+    public var cinf: Dynamic;
+    public var chain: tool.HookChain;
+    public var lastGrapX: Float;
+    public var sprLevel: pr.Level;
+    public var lastX: Float;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function prepare(attackSpeed: Float) {}
+    public override function prepare(arg0: Float): Void {
+    }
 
-  function isReady(): Bool {}
+    public override function isReady(): Bool {
+        throw "stub: isReady not decompiled";
+    }
 
-  function dynOnFxFrame(cinf: Dynamic) {}
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function dynOnInterrupt(s: tool.Weapon.Weapon, r: Float) {}
+    public override function dynOnInterrupt(arg0: tool.WeaponSkill, arg1: Float): Void {
+    }
 
-  function launchTentacle(cinf: Dynamic) {}
+    public function launchTentacle(arg0: Dynamic): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function incrementCycle() {}
+    public override function incrementCycle(): Void {
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function punchHit() {}
+    public function punchHit(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function stopPull() {}
+    public function stopPull(): Void {
+    }
 
-  function pullOwnerTo(hookX: Int, canChainWithCrit: Bool) {}
+    public function pullOwnerTo(arg0: Int, arg1: Bool): Void {
+    }
 }
-

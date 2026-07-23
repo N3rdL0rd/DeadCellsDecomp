@@ -1,10 +1,13 @@
 package cine.dlcp;
+
 class MeetCollectorShanoa extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var shanoa: en.inter.npc.CollectorShanoa.CollectorShanoa;
+    public var hero: en.Hero;
+    public var shanoa: en.inter.npc.CollectorShanoa;
 
-  function __constructor__(hero: en.Hero.Hero, shanoa: en.inter.npc.CollectorShanoa.CollectorShanoa) {}
+    public function new(arg0: en.Hero, arg1: en.inter.npc.CollectorShanoa) {
+        super();
+    }
 
-  function onComplete() {}
+    public function onComplete(): Void {
+    }
 }
-

@@ -1,43 +1,64 @@
 package en.inter;
+
 class DookuBreakableFloor extends en.inter.FloatingPlatform {
-  var killRespawnOffset: Int;
-  var respawnTimeBase: Int;
-  var savedSnappeds: hl.types.ArrayObj<Dynamic>;
-  var targetTween: libs.misc.Tweenie.Tweenie;
-  var brightLerp: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var killRespawnOffset: Int;
+    public var respawnTimeBase: Int;
+    public var savedSnappeds: Array<Dynamic>;
+    public var targetTween: libs.misc.Tween;
+    public var brightLerp: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, customId: String, spawnYOffset: Dynamic, waitTime: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Dynamic, arg5: Dynamic) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function target(duration: Float) {}
+    public function target(arg0: Float): Void {
+    }
 
-  function killPf(overrideRespawnTime: Dynamic, variance: Dynamic, force: Dynamic) {}
+    public function killPf(arg0: Dynamic, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function respawn() {}
+    public function respawn(): Void {
+    }
 
-  function laserImpactFeedback() {}
+    public function laserImpactFeedback(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function destroy() {}
+    public override function destroy(): Void {
+    }
 
-  function targetedOrBroken(): Bool {}
+    public function targetedOrBroken(): Bool {
+        throw "stub: targetedOrBroken not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

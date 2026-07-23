@@ -1,42 +1,61 @@
 package en.bu;
+
 class GodAxeBullet extends en.Bullet {
-  var rot: Float;
-  var rotDir: Int;
-  var weapon: tool.weap.GodAxeWeapon.GodAxeWeapon;
-  var retinas: hl.types.ArrayObj<Dynamic>;
-  var glowColIn: Int;
-  var glowColOut: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var rot: Float;
+    public var rotDir: Int;
+    public var weapon: tool.weap.GodAxeWeapon;
+    public var retinas: Array<Dynamic>;
+    public var glowColIn: Int;
+    public var glowColOut: Int;
 
-  function onBlock(byEnt: Bool) {}
+    public function new(arg0: en.Hero, arg1: tool.atk.AttackData, arg2: tool.weap.GodAxeWeapon, arg3: Float, arg4: Float, arg5: Int, arg6: Int) {
+        super();
+    }
 
-  function __constructor__(from: en.Hero.Hero, atk: tool.atk.AttackData.AttackData, weap: tool.weap.GodAxeWeapon.GodAxeWeapon, ang: Float, spd: Float, colIn: Int, colOut: Int) {}
+    public override function playBlockSound(): Void {
+    }
 
-  function playBlockSound() {}
+    public function init(): Void {
+    }
 
-  function init() {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function dispose(): Void {
+    }
 
-  function dispose() {}
+    public override function initAmmo(arg0: en.loot.Ammo): Void {
+    }
 
-  function initAmmo(a: en.loot.Ammo.Ammo) {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

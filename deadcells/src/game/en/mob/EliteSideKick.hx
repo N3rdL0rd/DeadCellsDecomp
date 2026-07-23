@@ -1,33 +1,52 @@
 package en.mob;
-class EliteSideKick extends en.Mob.Mob {
-  var lostParentCpt: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  static function preloadGfx(): libs.heaps.slib.SpriteLib.SpriteLib {}
+class EliteSideKick extends en.Mob {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var lostParentCpt: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, e: en.Mob.Mob) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Mob) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, e: en.Mob.Mob): EliteSideKick {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Mob): en.mob.EliteSideKick {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public static function preloadGfx(): libs.heaps.slib.SpriteLib {
+        throw "stub: preloadGfx not decompiled";
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function initGfx(): Void {
+    }
 
-  function reveal() {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function initSkills() {}
+    public override function reveal(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function initSkills(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

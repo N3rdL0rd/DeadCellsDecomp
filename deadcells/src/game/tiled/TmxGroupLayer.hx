@@ -1,15 +1,24 @@
 package tiled;
-class TmxGroupLayer extends Dynamic {
-  var children: hl.types.ArrayObj<Dynamic>;
 
-  function __constructor__() {}
+class TmxGroupLayer extends tiled.TmxBaseLayer {
+    public var children: Array<Dynamic>;
 
-  function addChild(layer: Dynamic) {}
+    public function new() {
+        super();
+    }
 
-  function iterator(): tiled.TmxLayerIterator.TmxLayerIterator {}
+    public function addChild(arg0: tiled.TmxBaseLayer): Void {
+    }
 
-  function findTileLayer(name: String): Dynamic {}
+    public function iterator(): tiled.TmxLayerIterator {
+        throw "stub: iterator not decompiled";
+    }
 
-  function findObjectLayer(name: String): Dynamic {}
+    public function findTileLayer(arg0: String): tiled.TmxTileLayer {
+        throw "stub: findTileLayer not decompiled";
+    }
+
+    public function findObjectLayer(arg0: String): tiled.TmxObjectLayer {
+        throw "stub: findObjectLayer not decompiled";
+    }
 }
-

@@ -1,36 +1,55 @@
 package en.mob;
+
 class OrbLauncher extends en.Mob {
-  var flail: en.bu.Flail.Flail;
-  var launchAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var color: Int;
-  var smokeBombAttk: tool.skill.OldSkill.OldSkill;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var flail: en.bu.Flail;
+    public var launchAtk: tool.skill.OldMobSkill;
+    public var color: Int;
+    public var smokeBombAttk: tool.skill.OldSkill;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): OrbLauncher {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.OrbLauncher {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,26 +1,42 @@
 package tool.weap;
+
 class QueenRapier extends tool.Weapon {
-  var sbGroupQueenRapierFx: libs.heaps.SpriteBatchGroup.SpriteBatchGroup;
-  var currentFxScroller: light.LightedLayers.LightedLayers;
+    public var sbGroupQueenRapierFx: libs.heaps.SpriteBatchGroup;
+    public var currentFxScroller: light.LightedLayers;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_sliceLength(): Float {}
+    public function get_sliceLength(): Float {
+        throw "stub: get_sliceLength not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public override function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function getStrikeAngle(c: Int): Float {}
+    public function getStrikeAngle(arg0: Int): Float {
+        throw "stub: getStrikeAngle not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function onLevelChanged(lvl: pr.Level.Level) {}
+    public override function onLevelChanged(arg0: pr.Level): Void {
+    }
 
-  function queenStrike(target: Entity, x: Float, y: Float, angle: Float) {}
+    public function queenStrike(arg0: Entity, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function queenStrikeTrigger() {}
+    public function queenStrikeTrigger(): Void {
+    }
 }
-

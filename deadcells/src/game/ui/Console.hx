@@ -1,25 +1,33 @@
 package ui;
+
 class Console extends h2d.Console {
-  var flags: haxe.ds.StringMap;
-  var logBuffer: tool.RingBuffer.RingBuffer;
-  static var ME: Console;
-  static var HIDE_UI: String;
-  static var HIDE_DEBUG: String;
-  static var HIDE_CONSOLE: String;
-  static var VP: String;
+    public static var ME: ui.Console;
+    public static var HIDE_UI: String;
+    public static var HIDE_DEBUG: String;
+    public static var HIDE_CONSOLE: String;
+    public static var VP: String;
+    public var flags: haxe.ds.StringMap;
+    public var logBuffer: tool.RingBuffer;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function onEvent(e: Dynamic) {}
+    public override function onEvent(arg0: hxd.Event): Void {
+    }
 
-  function log(logText: Dynamic) {}
+    public override function log(arg0: String, arg1: Dynamic): Void {
+    }
 
-  function logError(e: Dynamic) {}
+    public function logError(arg0: Dynamic): Void {
+    }
 
-  function updateUIVisibility() {}
+    public function updateUIVisibility(): Void {
+    }
 
-  function activateDebug() {}
+    public function activateDebug(): Void {
+    }
 
-  function onRemove() {}
+    public override function onRemove(): Void {
+    }
 }
-

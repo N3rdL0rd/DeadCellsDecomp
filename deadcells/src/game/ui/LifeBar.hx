@@ -1,30 +1,34 @@
 package ui;
+
 class LifeBar {
-  var outline: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var bg: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var bar: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var lastMax: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var lines: hl.types.ArrayObj<Dynamic>;
-  var lastPause: Float;
-  var visible: Bool;
-  var x: Float;
-  var y: Float;
-  var max: Float;
-  var wid: Int;
-  var hei: Int;
-  var padding: Int;
-  var col: Int;
-  var lineCol: Int;
-  var lineAlpha: Float;
-  var sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var lastV: Float;
+    public var outline: libs.heaps.slib.HSpriteBE;
+    public var bg: libs.heaps.slib.HSpriteBE;
+    public var bar: libs.heaps.slib.HSpriteBE;
+    public var lastMax: libs.heaps.slib.HSpriteBE;
+    public var lines: Array<Dynamic>;
+    public var lastPause: Float;
+    public var visible: Bool;
+    public var x: Float;
+    public var y: Float;
+    public var max: Float;
+    public var wid: Int;
+    public var hei: Int;
+    public var padding: Int;
+    public var col: Int;
+    public var lineCol: Int;
+    public var lineAlpha: Float;
+    public var sb: libs.heaps.slib.HSpriteBatch;
+    public var lastV: Float;
 
-  function __constructor__(col: Int, wid: Int, hei: Int, sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch) {}
+    public function new(arg0: Int, arg1: Int, arg2: Int, arg3: libs.heaps.slib.HSpriteBatch) {
+    }
 
-  function init(max: Float, subBarSize: Dynamic) {}
+    public function init(arg0: Float, arg1: Dynamic): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function update(dt: Float) {}
+    public function update(arg0: Float): Void {
+    }
 }
-

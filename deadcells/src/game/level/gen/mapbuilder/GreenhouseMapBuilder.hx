@@ -1,10 +1,14 @@
 package level.gen.mapbuilder;
+
 class GreenhouseMapBuilder extends level.gen.MapBuilder {
+    public function new(arg0: User, arg1: Dynamic, arg2: Int, arg3: Dynamic, arg4: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand.Rand) {}
+    public override function fillRoomData(arg0: level.RoomNode, arg1: level.Room, arg2: level.LevelMap, arg3: Array<Dynamic>, arg4: Array<Dynamic>): Void {
+    }
 
-  function fillRoomData(rn: level.RoomNode.RoomNode, rd: level.Room.Room, dat: level.LevelMap.LevelMap, inRoomCells: hl.types.ArrayObj<Dynamic>, drooms: hl.types.ArrayObj<Dynamic>) {}
-
-  function shouldKeepUnusedLink(room: level.Room.Room, roomNode: level.RoomNode.RoomNode, link: level.Room.RoomTemplateLink, allRooms: hl.types.ArrayObj<Dynamic>): Bool {}
+    public function shouldKeepUnusedLink(arg0: level.Room, arg1: level.RoomNode, arg2: level.RoomTemplateLink, arg3: Array<Dynamic>): Bool {
+        throw "stub: shouldKeepUnusedLink not decompiled";
+    }
 }
-

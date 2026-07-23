@@ -1,17 +1,21 @@
 package tool;
+
 class FrameProfiler {
-  var frames: haxe.io.Bytes;
-  var length: Int;
-  var index: Int;
-  var last: Float;
-  var lastRun: Float;
+    public var frames: haxe.io.Bytes;
+    public var length: Int;
+    public var index: Int;
+    public var last: Float;
+    public var lastRun: Float;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 
-  function beforePresent() {}
+    public function beforePresent(): Void {
+    }
 
-  function afterPresent() {}
+    public function afterPresent(): Void {
+    }
 }
-

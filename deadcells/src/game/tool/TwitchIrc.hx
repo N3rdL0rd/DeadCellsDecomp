@@ -1,63 +1,85 @@
 package tool;
+
 class TwitchIrc {
-  var host: String;
-  var port: Int;
-  var tls: Bool;
-  var playerUser: String;
-  var playerDisplayName: String;
-  var pass: String;
-  var channels: haxe.ds.StringMap;
-  var mainChannel: String;
-  var connected: Bool;
-  var logged: Bool;
-  var lastActive: Float;
-  var sock: sys.net.Socket;
-  var sarr: hl.types.ArrayObj<Dynamic>;
-  var waitWrite: Bool;
-  var handshaking: Bool;
-  var buf: haxe.io.Bytes;
-  var bufpos: Int;
-  var failure: Int;
-  var reconnect: Float;
-  var destroyed: Bool;
-  var recentMessages: haxe.ds.StringMap;
-  static var CMD_PREFIX: String;
-  static var REG_CMD: EReg;
+    public static var CMD_PREFIX: String;
+    public static var REG_CMD: EReg;
+    public var host: String;
+    public var port: Int;
+    public var tls: Bool;
+    public var playerUser: String;
+    public var playerDisplayName: String;
+    public var pass: String;
+    public var channels: haxe.ds.StringMap;
+    public var mainChannel: String;
+    public var connected: Bool;
+    public var logged: Bool;
+    public var lastActive: Float;
+    public var sock: sys.net.Socket;
+    public var sarr: Array<Dynamic>;
+    public var waitWrite: Bool;
+    public var handshaking: Bool;
+    public var buf: haxe.io.Bytes;
+    public var bufpos: Int;
+    public var failure: Int;
+    public var reconnect: Float;
+    public var destroyed: Bool;
+    public var recentMessages: haxe.ds.StringMap;
 
-  function onSubscribe(msgId: String, subscriber: String, giftSentBy: String) {}
+    public function new() {
+    }
 
-  function onJoin(channel: String) {}
+    public function join(arg0: String): Bool {
+        throw "stub: join not decompiled";
+    }
 
-  function onMessage(m: tool.TwitchMessage.TwitchMessage) {}
+    public function connect(): Void {
+    }
 
-  function __constructor__() {}
+    public function __ircConnect(): Void {
+    }
 
-  function join(channel: String): Bool {}
+    public function close(): Void {
+    }
 
-  function connect() {}
+    public function destroy(): Void {
+    }
 
-  function __ircConnect() {}
+    public function sync(): Void {
+    }
 
-  function close() {}
+    public function send(arg0: String, arg1: Array<Dynamic>): Void {
+    }
 
-  function destroy() {}
+    public function readData(): Bool {
+        throw "stub: readData not decompiled";
+    }
 
-  function sync() {}
+    public function onData(arg0: String, arg1: haxe.ds.StringMap, arg2: String, arg3: Array<Dynamic>): Void {
+    }
 
-  function send(cmd: String, params: hl.types.ArrayObj<Dynamic>) {}
+    public function sendMessage(arg0: String, arg1: String): Bool {
+        throw "stub: sendMessage not decompiled";
+    }
 
-  function readData(): Bool {}
+    public function onConnect(): Void {
+    }
 
-  function onData(prefix: String, tags: haxe.ds.StringMap, cmd: String, params: hl.types.ArrayObj<Dynamic>) {}
+    public function countRecentActiveUsers(): Int {
+        throw "stub: countRecentActiveUsers not decompiled";
+    }
 
-  function sendMessage(channel: String, msg: String): Bool {}
+    public function onLogged(): Void {
+    }
 
-  function onConnect() {}
+    public function _error(arg0: Dynamic): Void {
+    }
 
-  function countRecentActiveUsers(): Int {}
+    public function onJoin(arg0: String): Void {
+    }
 
-  function onLogged() {}
+    public function onMessage(arg0: tool.TwitchMessage): Void {
+    }
 
-  function _error(e: Dynamic) {}
+    public function onSubscribe(arg0: String, arg1: String, arg2: String): Void {
+    }
 }
-

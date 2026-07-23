@@ -1,157 +1,221 @@
 package en.mob.boss;
+
 class MamaTick extends en.mob.Boss {
-  var rseed: libs.Rand.Rand;
-  var battleground: hl.types.ArrayBytes<Int>;
-  var leftSide: Int;
-  var rightSide: Int;
-  var eyeSocketSpr: libs.heaps.slib.HSprite.HSprite;
-  var blinkSocketSpr: libs.heaps.slib.HSprite.HSprite;
-  var hitSocketSpr: libs.heaps.slib.HSprite.HSprite;
-  var socketEye: en.mob.boss.mamaTick.TickEye.TickEye;
-  var backSpr: libs.heaps.slib.HSprite.HSprite;
-  var frontSpr: libs.heaps.slib.HSprite.HSprite;
-  var shineSpr: libs.heaps.slib.HSprite.HSprite;
-  var mouthSpr: libs.heaps.slib.HSprite.HSprite;
-  var eyeSB: h2d.SpriteBatch.SpriteBatch;
-  var eyes: hl.types.ArrayObj<Dynamic>;
-  var sprOffsetX: Float;
-  var sprOffsetY: Float;
-  var leftArm: en.mob.boss.mamaTick.TickArm.TickArm;
-  var rightArm: en.mob.boss.mamaTick.TickArm.TickArm;
-  var furyArms: hl.types.ArrayObj<Dynamic>;
-  var leftWall: en.mob.boss.mamaTick.TickWall.TickWall;
-  var rightWall: en.mob.boss.mamaTick.TickWall.TickWall;
-  var breathRatio: Float;
-  var breathTween: libs.misc.Tweenie.Tweenie;
-  var isOnSide: Bool;
-  var furiesAtk: hl.types.ArrayObj<Dynamic>;
-  var bossRushModifiers: Dynamic;
-  var impaleInf: Dynamic;
-  var slashInf: hl.types.ArrayObj<Dynamic>;
-  var spitInf: Dynamic;
-  var changePosInf: Dynamic;
-  var changeSideInf: Dynamic;
-  var diagoSlashInf: Dynamic;
-  var harvestInf: Dynamic;
-  var harvestArea: tool.Area.Area;
-  var changePosSfx: hxd.res.Sound.Sound;
-  var changeSideSfx: hxd.res.Sound.Sound;
-  var furies: hl.types.ArrayObj<Dynamic>;
-  var furryDone: Bool;
-  var slashHit: Int;
-  var isEmerged: Bool;
-  var <none>: Dynamic;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var rseed: libs.Rand;
+    public var battleground: Array<Int>;
+    public var leftSide: Int;
+    public var rightSide: Int;
+    public var eyeSocketSpr: libs.heaps.slib.HSprite;
+    public var blinkSocketSpr: libs.heaps.slib.HSprite;
+    public var hitSocketSpr: libs.heaps.slib.HSprite;
+    public var socketEye: en.mob.boss.mamaTick.TickEye;
+    public var backSpr: libs.heaps.slib.HSprite;
+    public var frontSpr: libs.heaps.slib.HSprite;
+    public var shineSpr: libs.heaps.slib.HSprite;
+    public var mouthSpr: libs.heaps.slib.HSprite;
+    public var eyeSB: h2d.SpriteBatch;
+    public var eyes: Array<Dynamic>;
+    public var sprOffsetX: Float;
+    public var sprOffsetY: Float;
+    public var leftArm: en.mob.boss.mamaTick.TickArm;
+    public var rightArm: en.mob.boss.mamaTick.TickArm;
+    public var furyArms: Array<Dynamic>;
+    public var leftWall: en.mob.boss.mamaTick.TickWall;
+    public var rightWall: en.mob.boss.mamaTick.TickWall;
+    public var breathRatio: Float;
+    public var breathTween: libs.misc.Tween;
+    public var isOnSide: Bool;
+    public var furiesAtk: Array<Dynamic>;
+    public var bossRushModifiers: Dynamic;
+    public var impaleInf: Dynamic;
+    public var slashInf: Array<Dynamic>;
+    public var spitInf: Dynamic;
+    public var changePosInf: Dynamic;
+    public var changeSideInf: Dynamic;
+    public var diagoSlashInf: Dynamic;
+    public var harvestInf: Dynamic;
+    public var harvestArea: tool.Area;
+    public var changePosSfx: hxd.res.Sound;
+    public var changeSideSfx: hxd.res.Sound;
+    public var furies: Array<Dynamic>;
+    public var furryDone: Bool;
+    public var slashHit: Int;
+    public var isEmerged: Bool;
+    public var : Dynamic;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): MamaTick {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.boss.MamaTick {
+        throw "stub: create not decompiled";
+    }
 
-  function setReady() {}
+    public override function setReady(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function getMobSprites(): hl.types.ArrayObj<Dynamic> {}
+    public function getMobSprites(): Array<Dynamic> {
+        throw "stub: getMobSprites not decompiled";
+    }
 
-  function enableOutline() {}
+    public function enableOutline(): Void {
+    }
 
-  function disableOutline() {}
+    public function disableOutline(): Void {
+    }
 
-  function setOutlineColor(color: Int) {}
+    public function setOutlineColor(arg0: Int): Void {
+    }
 
-  function breathIn() {}
+    public function breathIn(): Void {
+    }
 
-  function breathOut() {}
+    public function breathOut(): Void {
+    }
 
-  function initEyes() {}
+    public function initEyes(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onScream() {}
+    public override function onScream(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onBossLevelUp() {}
+    public override function onBossLevelUp(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function cancelDelayers() {}
+    public function cancelDelayers(): Void {
+    }
 
-  function colorBlink(c: Int, pow: Dynamic, t: Dynamic) {}
+    public function colorBlink(arg0: Int, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function submerge(t: Float) {}
+    public function submerge(arg0: Float): Void {
+    }
 
-  function emerge(t: Float, target: Float) {}
+    public function emerge(arg0: Float, arg1: Float): Void {
+    }
 
-  function initSkillsInf() {}
+    public function initSkillsInf(): Void {
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function initChangePosition() {}
+    public function initChangePosition(): Void {
+    }
 
-  function goToSide() {}
+    public function goToSide(): Void {
+    }
 
-  function initChangeSide() {}
+    public function initChangeSide(): Void {
+    }
 
-  function onInterrupt() {}
+    public function onInterrupt(): Void {
+    }
 
-  function impale(arm: en.mob.boss.mamaTick.TickArm.TickArm, x: Float) {}
+    public function impale(arg0: en.mob.boss.mamaTick.TickArm, arg1: Float): Void {
+    }
 
-  function initImpale() {}
+    public function initImpale(): Void {
+    }
 
-  function initFury(duration: Float, delays: hl.types.ArrayBytes<Float>): tool.skill.OldMobSkill.OldMobSkill {}
+    public function initFury(arg0: Float, arg1: Array<Float>): tool.skill.OldMobSkill {
+        throw "stub: initFury not decompiled";
+    }
 
-  function initPyramidFury() {}
+    public function initPyramidFury(): Void {
+    }
 
-  function initReversePyramidFury() {}
+    public function initReversePyramidFury(): Void {
+    }
 
-  function initLeftWaveFury() {}
+    public function initLeftWaveFury(): Void {
+    }
 
-  function initRightWaveFury() {}
+    public function initRightWaveFury(): Void {
+    }
 
-  function initRandomFury() {}
+    public function initRandomFury(): Void {
+    }
 
-  function initSlash(id: Int, followUp: Dynamic) {}
+    public function initSlash(arg0: Int, arg1: Ref): Void {
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function spit(cx: Int, cy: Int) {}
+    public function spit(arg0: Int, arg1: Int): Void {
+    }
 
-  function initSpit() {}
+    public function initSpit(): Void {
+    }
 
-  function initDiagonalSlash() {}
+    public function initDiagonalSlash(): Void {
+    }
 
-  function initHarvest() {}
+    public function initHarvest(): Void {
+    }
 
-  function publicEmerge() {}
+    public function publicEmerge(): Void {
+    }
 
-  function publicSubmerge() {}
+    public function publicSubmerge(): Void {
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

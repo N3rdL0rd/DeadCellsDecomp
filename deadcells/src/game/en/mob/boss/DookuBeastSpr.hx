@@ -1,56 +1,78 @@
 package en.mob.boss;
+
 class DookuBeastSpr {
-  var rx: Float;
-  var ry: Float;
-  var dooku: en.mob.boss.DookuBeast.DookuBeast;
-  var anim: spine.SpineAnimation.SpineAnimation;
-  var headBone: spine.Bone.Bone;
-  var leftHandBone: spine.Bone.Bone;
-  var glowShader: shader.GlowKey.GlowKey;
-  var baseColor: Int;
-  var targetInnerColor: Int;
-  var targetOuterColor: Int;
-  var colorLerpSpeed: Float;
-  var glowPower: Float;
-  var __uid: Int;
-  var <none>: Dynamic;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var rx: Float;
+    public var ry: Float;
+    public var dooku: en.mob.boss.DookuBeast;
+    public var anim: spine.SpineAnimation;
+    public var headBone: spine.Bone;
+    public var leftHandBone: spine.Bone;
+    public var glowShader: shader.GlowKey;
+    public var baseColor: Int;
+    public var targetInnerColor: Int;
+    public var targetOuterColor: Int;
+    public var colorLerpSpeed: Float;
+    public var glowPower: Float;
+    public var __uid: Int;
+    public var : Dynamic;
+    public var : Dynamic;
 
-  function __constructor__(dooku: en.mob.boss.DookuBeast.DookuBeast, rx: Float, ry: Float) {}
+    public function new(arg0: en.mob.boss.DookuBeast, arg1: Float, arg2: Float) {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function resetGlowToBaseColor() {}
+    public function resetGlowToBaseColor(): Void {
+    }
 
-  function lerpGlowColorTo(innerColor: Int, outerColor: Int, lerpSpeed: Dynamic, power: Dynamic) {}
+    public function lerpGlowColorTo(arg0: Int, arg1: Int, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function getSpecificBone(name: String): spine.Bone.Bone {}
+    public function getSpecificBone(arg0: String): spine.Bone {
+        throw "stub: getSpecificBone not decompiled";
+    }
 
-  function setVisible(state: Bool) {}
+    public function setVisible(arg0: Bool): Void {
+    }
 
-  function isPlaying(names: String): Bool {}
+    public function isPlaying(arg0: String): Bool {
+        throw "stub: isPlaying not decompiled";
+    }
 
-  function start(entry: spine.AnimationState.AnimationState) {}
+    public function start(arg0: spine.TrackEntry): Void {
+    }
 
-  function interrupt(entry: spine.AnimationState.AnimationState) {}
+    public function interrupt(arg0: spine.TrackEntry): Void {
+    }
 
-  function end(entry: spine.AnimationState.AnimationState) {}
+    public function end(arg0: spine.TrackEntry): Void {
+    }
 
-  function dispose(entry: spine.AnimationState.AnimationState) {}
+    public function dispose(arg0: spine.TrackEntry): Void {
+    }
 
-  function event(entry: spine.AnimationState.AnimationState, event: Dynamic) {}
+    public function event(arg0: spine.TrackEntry, arg1: spine.Event): Void {
+    }
 
-  function complete(entry: spine.AnimationState.AnimationState) {}
+    public function complete(arg0: spine.TrackEntry): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

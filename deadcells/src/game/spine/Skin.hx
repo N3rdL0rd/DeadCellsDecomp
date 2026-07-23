@@ -1,21 +1,38 @@
 package spine;
+
 class Skin {
-  var name: String;
-  var attachments: haxe.ds.IntMap<Dynamic>;
-  var lookup: Dynamic;
-  var keyPool: spine.support.utils.Pool.Pool;
+    public var name: String;
+    public var attachments: haxe.ds.IntMap;
+    public var lookup: spine.Key;
+    public var keyPool: spine.support.utils.Pool;
 
-  function __constructor__(name: String) {}
+    public function new(arg0: String) {
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
 
-class _Skin.KeyPool extends spine.support.utils.Pool {
+class Key {
+    public var slotIndex: Int;
+    public var name: String;
+    public var hashCode: Int;
 
-  function __constructor__(initialCapacity: Int) {}
-
-  function newObject(): Dynamic {}
+    public function new() {
+    }
 }
 
+class KeyPool extends spine.support.utils.Pool {
+    public function new(arg0: Int) {
+        super();
+    }
+
+    public override function newObject(): Dynamic {
+        throw "stub: newObject not decompiled";
+    }
+}

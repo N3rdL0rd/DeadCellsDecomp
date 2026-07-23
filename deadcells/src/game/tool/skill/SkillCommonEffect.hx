@@ -1,32 +1,46 @@
 package tool.skill;
-class SkillCommonEffect extends tool.skill.Skill.SkillEvent {
-  var target: Dynamic;
-  var bumpX: Float;
-  var bumpY: Float;
-  var cautiousBumpX: Float;
-  var cautiousBumpY: Float;
-  var stunS: Float;
 
-  function __constructor__(skill: tool.skill.Skill.Skill, delay: Float, customId: String, trigger: Dynamic, minMaxRatio: Dynamic) {}
+class SkillCommonEffect extends tool.skill.SkillEvent {
+    public var target: Dynamic;
+    public var bumpX: Float;
+    public var bumpY: Float;
+    public var cautiousBumpX: Float;
+    public var cautiousBumpY: Float;
+    public var stunS: Float;
 
-  function setTarget(target: Dynamic) {}
+    public function new(arg0: tool.skill.Skill, arg1: Float, arg2: String, arg3: Dynamic, arg4: Dynamic) {
+        super();
+    }
 
-  function initBump(bump: Dynamic) {}
+    public function setTarget(arg0: Dynamic): Void {
+    }
 
-  function initCautiousBump(cautiousBump: Dynamic) {}
+    public function initBump(arg0: Dynamic): Void {
+    }
 
-  function initStun(stunS: Float) {}
+    public function initCautiousBump(arg0: Dynamic): Void {
+    }
 
-  function trigger(overrideDir: Dynamic) {}
+    public function initStun(arg0: Float): Void {
+    }
 
-  function triggerBump(e: Entity) {}
+    public override function trigger(arg0: Dynamic): Void {
+    }
 
-  function triggerCautiousBump(e: Entity) {}
+    public function triggerBump(arg0: Entity): Void {
+    }
 
-  function triggerStun(e: Entity) {}
+    public function triggerCautiousBump(arg0: Entity): Void {
+    }
 
-  function getEntitiesFromTarget(target: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function triggerStun(arg0: Entity): Void {
+    }
 
-  function getClosestOpponent(): Entity {}
+    public function getEntitiesFromTarget(arg0: Dynamic): Array<Dynamic> {
+        throw "stub: getEntitiesFromTarget not decompiled";
+    }
+
+    public function getClosestOpponent(): Entity {
+        throw "stub: getClosestOpponent not decompiled";
+    }
 }
-

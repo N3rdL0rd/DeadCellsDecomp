@@ -1,43 +1,66 @@
 package en.inter;
+
 class DeadCultist extends en.Interactive {
-  var hasBlueprintToDrop: Bool;
-  var hasBeenActivated: Bool;
-  var deadCultistID: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var hasBlueprintToDrop: Bool;
+    public var hasBeenActivated: Bool;
+    public var deadCultistID: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, deadCultistID: Int, dir: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onFocusHomunculus(by: en.Homunculus.Homunculus) {}
+    public override function onFocusHomunculus(arg0: en.Homunculus): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function canBeActivatedByHomunculus(by: en.Homunculus.Homunculus): Bool {}
+    public override function canBeActivatedByHomunculus(arg0: en.Homunculus): Bool {
+        throw "stub: canBeActivatedByHomunculus not decompiled";
+    }
 
-  function onActivateHomunculus(hom: en.Homunculus.Homunculus) {}
+    public override function onActivateHomunculus(arg0: en.Homunculus): Void {
+    }
 
-  function dropSkin() {}
+    public function dropSkin(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

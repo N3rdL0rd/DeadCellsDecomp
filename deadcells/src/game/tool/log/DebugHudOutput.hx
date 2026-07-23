@@ -1,11 +1,13 @@
 package tool.log;
+
 class DebugHudOutput {
-  var bgColor: Int;
-  var severityData: haxe.ds.EnumValueMap;
-  var <none>: Dynamic;
+    public var bgColor: Int;
+    public var severityData: haxe.ds.EnumValueMap;
+    public var : Dynamic;
 
-  function __constructor__(data: Dynamic) {}
+    public function new(arg0: Dynamic) {
+    }
 
-  function receiveLog(logEntry: Dynamic) {}
+    public function receiveLog(arg0: Dynamic): Void {
+    }
 }
-

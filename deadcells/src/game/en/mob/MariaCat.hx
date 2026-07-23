@@ -1,64 +1,98 @@
 package en.mob;
+
 class MariaCat extends en.Mob {
-  var jumpData: hxbit.Macros.Macros;
-  var teleJump: tool.skill.mobSkill.TeleJump.TeleJump;
-  var lastJumpPos: tool.CPoint.CPoint;
-  var maria: en.inter.npc.Maria.Maria;
-  var maxJumpDistance: Float;
-  var positionDecisionHelper: tool.DecisionHelper.DecisionHelper;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var teleJump: tool.skill.mobSkill.TeleJump;
+    public var lastJumpPos: tool.CPoint;
+    public var maria: en.inter.npc.Maria;
+    public var maxJumpDistance: Float;
+    public var positionDecisionHelper: tool.DecisionHelper;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): MariaCat {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.MariaCat {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function canBeHit(): Bool {}
+    public function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onBeginLongPress() {}
+    public function onBeginLongPress(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function getFleePosition(): Dynamic {}
+    public function getFleePosition(): Dynamic {
+        throw "stub: getFleePosition not decompiled";
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function setAttackTarget(target: Entity) {}
+    public override function setAttackTarget(arg0: Entity): Void {
+    }
 
-  function setNemesisTarget(e: Entity) {}
+    public override function setNemesisTarget(arg0: Entity): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function behaviour_platformPatrol() {}
+    public override function behaviour_platformPatrol(): Void {
+    }
 
-  function forceTelejump() {}
+    public function forceTelejump(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

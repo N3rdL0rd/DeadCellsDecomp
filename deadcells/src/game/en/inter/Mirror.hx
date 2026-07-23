@@ -1,43 +1,58 @@
 package en.inter;
+
 class Mirror extends en.Interactive {
-  var root: h2d.Object.Object;
-  var alphaMap: hxsl.Macros.Macros;
-  var alphaMapSU: Float;
-  var alphaMapSV: Float;
-  var alphaMapDU: Float;
-  var alphaMapDV: Float;
-  var floatingY: Float;
-  var varDX: Float;
-  var varDY: Float;
-  var mirrorOff: libs.heaps.slib.HSprite.HSprite;
-  var libMonsters: libs.heaps.slib.SpriteLib.SpriteLib;
-  var mobId: String;
-  var mobSprite: libs.heaps.slib.HSprite.HSprite;
-  var fdAlpha: Dynamic;
-  var fdSprite: Dynamic;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var root: h2d.Object;
+    public var alphaMap: h3d.shader.AlphaMap;
+    public var alphaMapSU: Float;
+    public var alphaMapSV: Float;
+    public var alphaMapDU: Float;
+    public var alphaMapDV: Float;
+    public var floatingY: Float;
+    public var varDX: Float;
+    public var varDY: Float;
+    public var mirrorOff: libs.heaps.slib.HSprite;
+    public var libMonsters: libs.heaps.slib.SpriteLib;
+    public var mobId: String;
+    public var mobSprite: libs.heaps.slib.HSprite;
+    public var fdAlpha: libs.heaps.slib.FrameData;
+    public var fdSprite: libs.heaps.slib.FrameData;
 
-  function __constructor__(level: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function showMob(instant: Dynamic) {}
+    public function showMob(arg0: Ref): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

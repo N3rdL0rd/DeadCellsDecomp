@@ -1,9 +1,12 @@
 package ui.we;
-class Text extends ui.Window.WindowElement {
-  var tf: ui.Text.Text;
 
-  function __constructor__(w: ui.Window.Window, str: String, col: Dynamic, big: Dynamic) {}
+class Text extends ui.WindowElement {
+    public var tf: ui.Text;
 
-  function beforeReflow() {}
+    public function new(arg0: ui.Window, arg1: String, arg2: Dynamic, arg3: Dynamic) {
+        super();
+    }
+
+    public override function beforeReflow(): Void {
+    }
 }
-

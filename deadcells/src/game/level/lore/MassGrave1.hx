@@ -1,14 +1,21 @@
 package level.lore;
+
 class MassGrave1 extends level.LoreManager {
-  var _pile: tool.CPoint.CPoint;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var _pile: tool.CPoint;
 
-  function __constructor__(l: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function get_pile(): tool.CPoint.CPoint {}
+    public function get_pile(): tool.CPoint {
+        throw "stub: get_pile not decompiled";
+    }
 
-  function postUpdate(dt: Float) {}
+    public override function postUpdate(arg0: Float): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

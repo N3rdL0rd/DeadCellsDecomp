@@ -1,19 +1,29 @@
 package tool.weap;
-class Starfury extends tool.Weapon.Weapon {
-  var hitEntities: hl.types.ArrayObj<Dynamic>;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+class Starfury extends tool.Weapon {
+    public var hitEntities: Array<Dynamic>;
 
-  function onExecute(): Bool {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onHitFromBackpack(weapon: tool.Weapon.Weapon, target: Entity) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function shootStars(count: Int) {}
+    public function onHitFromBackpack(arg0: tool.Weapon, arg1: Entity): Void {
+    }
 
-  function pickEnemies(count: Int): hl.types.ArrayObj<Dynamic> {}
+    public function shootStars(arg0: Int): Void {
+    }
 
-  function dispose() {}
+    public function pickEnemies(arg0: Int): Array<Dynamic> {
+        throw "stub: pickEnemies not decompiled";
+    }
+
+    public override function dispose(): Void {
+    }
 }
-

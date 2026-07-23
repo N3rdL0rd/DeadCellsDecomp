@@ -1,13 +1,17 @@
 package spine.attachments;
+
 class VertexAttachment extends spine.attachments.Attachment {
-  var id: Int;
-  var bones: hl.types.ArrayBytes<Int>;
-  var vertices: hl.types.ArrayBytes<Float>;
-  var worldVerticesLength: Int;
-  static var nextID: Int;
+    public static var nextID: Int;
+    public var id: Int;
+    public var bones: Array<Int>;
+    public var vertices: Array<Float>;
+    public var worldVerticesLength: Int;
 
-  function __constructor__(name: String) {}
+    public function new(arg0: String) {
+        super();
+    }
 
-  function applyDeform(sourceAttachment: VertexAttachment): Bool {}
+    public function applyDeform(arg0: spine.attachments.VertexAttachment): Bool {
+        throw "stub: applyDeform not decompiled";
+    }
 }
-

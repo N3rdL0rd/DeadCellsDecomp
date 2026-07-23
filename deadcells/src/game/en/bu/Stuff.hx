@@ -1,32 +1,46 @@
 package en.bu;
+
 class Stuff extends en.Bullet {
-  var rotationSpeed: Float;
-  var color: Int;
-  var ang: Float;
-  var stunTime: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var rotationSpeed: Float;
+    public var color: Int;
+    public var ang: Float;
+    public var stunTime: Float;
 
-  function onBulletHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Float) {
+        super();
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, c: Int, stunTime: Float) {}
+    public function init(): Void {
+    }
 
-  function init() {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public function generateOnionSkinBetween(arg0: Entity, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function generateOnionSkinBetween(e: Entity, ox: Float, tx: Float, onionDist: Float) {}
+    public override function setSpriteTransform(): Void {
+    }
 
-  function setSpriteTransform() {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 }
-

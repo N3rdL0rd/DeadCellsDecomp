@@ -1,36 +1,54 @@
 package tool;
+
 class Tutorial {
-  var dones: haxe.ds.StringMap;
-  var current: String;
-  var lastT: Float;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var dones: haxe.ds.StringMap;
+    public var current: String;
+    public var lastT: Float;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function prepareSave(): Bool {}
+    public function prepareSave(): Bool {
+        throw "stub: prepareSave not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function cancel(id: String) {}
+    public function cancel(arg0: String): Void {
+    }
 
-  function tryToStart(id: String): Bool {}
+    public function tryToStart(arg0: String): Bool {
+        throw "stub: tryToStart not decompiled";
+    }
 
-  function complete(id: String, force: Dynamic): Bool {}
+    public function complete(arg0: String, arg1: Ref): Bool {
+        throw "stub: complete not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,21 +1,33 @@
 package tool.weap.bow;
+
 class AlchemicGun extends tool.weap.BaseBow {
-  var gunCycle: Int;
+    public var gunCycle: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function initAnimIds() {}
+    public override function initAnimIds(): Void {
+    }
 
-  function getAnimId(): String {}
+    public override function getAnimId(): String {
+        throw "stub: getAnimId not decompiled";
+    }
 
-  function getShootAnimId(): String {}
+    public override function getShootAnimId(): String {
+        throw "stub: getShootAnimId not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function onBowCharging(r: Float) {}
+    public override function onBowCharging(arg0: Float): Void {
+    }
 
-  function explode(b: en.Bullet.Bullet, te: Entity) {}
+    public function explode(arg0: en.Bullet, arg1: Entity): Void {
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 }
-

@@ -1,12 +1,18 @@
 package tool.weap;
+
 class Cross extends tool.Weapon {
-  var throwHeight: Float;
-  var putain: hl.types.ArrayObj<Dynamic>;
+    public var throwHeight: Float;
+    public var putain: Array<Dynamic>;
 
-  function __constructor__(owner: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 }
-

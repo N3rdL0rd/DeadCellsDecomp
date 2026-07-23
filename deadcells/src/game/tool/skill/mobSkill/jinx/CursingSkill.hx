@@ -1,8 +1,10 @@
 package tool.skill.mobSkill.jinx;
+
 class CursingSkill extends tool.skill.MobSkill {
+    public function new(arg0: String, arg1: en.Mob, arg2: Ref) {
+        super();
+    }
 
-  function __constructor__(id: String, ownerMob: en.Mob.Mob, autoGetInf: Dynamic) {}
-
-  function tryHitEntities(skillArea: tool.skill.SkillArea.SkillArea, targets: hl.types.ArrayObj<Dynamic>, triggerOnHitEvent: Dynamic) {}
+    public function tryHitEntities(arg0: tool.skill.SkillArea, arg1: Array<Dynamic>, arg2: Ref): Void {
+    }
 }
-

@@ -1,59 +1,84 @@
 package en.inter;
+
 class BreakableWall extends en.Interactive {
-  var cwid: Int;
-  var chei: Int;
-  var root: h2d.Object.Object;
-  var blocks: hl.types.ArrayObj<Dynamic>;
-  var canister: libs.heaps.slib.HSprite.HSprite;
-  var lightSegment: light.Visibility.Visibility;
-  var canGlow: shader.GlowKey.GlowKey;
-  var canGlowInner1: Int;
-  var canGlowInner2: Int;
-  var lastHitDir: Int;
-  var shake: Float;
-  var broken: Bool;
-  var glowRatio: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var cwid: Int;
+    public var chei: Int;
+    public var root: h2d.Object;
+    public var blocks: Array<Dynamic>;
+    public var canister: libs.heaps.slib.HSprite;
+    public var lightSegment: light.Wall;
+    public var canGlow: shader.GlowKey;
+    public var canGlowInner1: Int;
+    public var canGlowInner2: Int;
+    public var lastHitDir: Int;
+    public var shake: Float;
+    public var broken: Bool;
+    public var glowRatio: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, width: Int, height: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDie() {}
+    public function onDie(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function onAttackMissed(a: tool.atk.AttackData.AttackData) {}
+    public function onAttackMissed(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onAttackMissedEarly(a: tool.atk.AttackData.AttackData) {}
+    public function onAttackMissedEarly(arg0: tool.atk.AttackData): Void {
+    }
 
-  function failBreak(source: Entity) {}
+    public function failBreak(arg0: Entity): Void {
+    }
 
-  function canReceiveAttack(a: tool.atk.AttackData.AttackData): Bool {}
+    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+        throw "stub: canReceiveAttack not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,16 +1,23 @@
 package tool.weap;
+
 class BaseballBat extends tool.Weapon {
-  var legStun: Float;
-  var legRadius: Float;
+    public var legStun: Float;
+    public var legRadius: Float;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onBeforeCurSkillPrepare() {}
+    public override function onBeforeCurSkillPrepare(): Void {
+    }
 
-  function incrementCycle() {}
+    public override function incrementCycle(): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 }
-

@@ -1,31 +1,48 @@
 package en.gr;
-class RepeledGrenade extends en.Grenade.Grenade {
-  var item: tool.InventItem.InventItem;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  function onAfterHit(target: Entity, atk: tool.atk.AttackData.AttackData) {}
+class RepeledGrenade extends en.Grenade {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var item: tool.InventItem;
 
-  function onBeforeHit(target: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public function new(arg0: en.Hero, arg1: en.Grenade, arg2: tool.InventItem, arg3: Int) {
+        super();
+    }
 
-  function onTrigger() {}
+    public override function initGfx(): Void {
+    }
 
-  function __constructor__(h: en.Hero.Hero, g: en.Grenade.Grenade, i: tool.InventItem.InventItem, tier: Int) {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function counter(arg0: tool.InventItem, arg1: Int, arg2: Ref): Array<Dynamic> {
+        throw "stub: counter not decompiled";
+    }
 
-  function init() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function counter(item: tool.InventItem.InventItem, tier: Int, playSound: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function onAfterHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBeforeHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
+
+    public function onTrigger(): Void {
+    }
 }
-

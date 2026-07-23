@@ -1,12 +1,17 @@
 package en;
+
 class GodRay extends en.LoreDeco {
+    public function new(arg0: level.LevelDisp, arg1: level.Marker, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Dynamic, arg11: Ref, arg12: Ref) {
+        super();
+    }
 
-  function __constructor__(lDisp: level.LevelDisp.LevelDisp, m: hxbit.Macros.Macros, casePosX: Int, casePosY: Int, xr: Float, yr: Float, setFlags: Dynamic, abortFlags: Dynamic, onBounds: Dynamic, _templateFlip: Dynamic, dir: Dynamic, ratio: Dynamic, reload: Dynamic) {}
+    public override function getAtlas(): libs.heaps.slib.SpriteLib {
+        throw "stub: getAtlas not decompiled";
+    }
 
-  function getAtlas(): libs.heaps.slib.SpriteLib.SpriteLib {}
+    public override function addNormalMap(): Void {
+    }
 
-  function addNormalMap() {}
-
-  function colorizeSprite() {}
+    public override function colorizeSprite(): Void {
+    }
 }
-

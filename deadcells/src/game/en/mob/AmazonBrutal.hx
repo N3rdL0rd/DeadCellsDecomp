@@ -1,106 +1,159 @@
 package en.mob;
+
 class AmazonBrutal extends en.mob.AmazonBase {
-  var tryToPreventDeathBool: Bool;
-  var forcedTp: Bool;
-  var earlyDashPhase: Bool;
-  var skillsPattern: hl.types.ArrayObj<Dynamic>;
-  var targetWall: Dynamic;
-  var targetWallPos: Dynamic;
-  var cineTargetWallPos: Dynamic;
-  var lastWall: Dynamic;
-  var walking: Bool;
-  var wallSide: String;
-  var spotInBossRoom: tool.CPoint.CPoint;
-  var infTeleport: Dynamic;
-  var hitCountOnDash: Int;
-  var stoppedDashFromFrost: Bool;
-  var brutalBossRushModifiers: Dynamic;
-  var sbFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var tryToPreventDeathBool: Bool;
+    public var forcedTp: Bool;
+    public var earlyDashPhase: Bool;
+    public var skillsPattern: Array<Dynamic>;
+    public var targetWall: Dynamic;
+    public var targetWallPos: Dynamic;
+    public var cineTargetWallPos: Dynamic;
+    public var lastWall: Dynamic;
+    public var walking: Bool;
+    public var wallSide: String;
+    public var spotInBossRoom: tool.CPoint;
+    public var infTeleport: Dynamic;
+    public var hitCountOnDash: Int;
+    public var stoppedDashFromFrost: Bool;
+    public var brutalBossRushModifiers: Dynamic;
+    public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, reveal: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, reveal: Bool): AmazonBrutal {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): en.mob.AmazonBrutal {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function registerToManager() {}
+    public override function registerToManager(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function findSpotInBossRoom() {}
+    public function findSpotInBossRoom(): Void {
+    }
 
-  function getWallPosition(): Dynamic {}
+    public function getWallPosition(): Dynamic {
+        throw "stub: getWallPosition not decompiled";
+    }
 
-  function startClimbing() {}
+    public function startClimbing(): Void {
+    }
 
-  function nextSkill() {}
+    public function nextSkill(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function stopDashPhase() {}
+    public function stopDashPhase(): Void {
+    }
 
-  function startDashPhase(_targetWall: Dynamic, forceTP: Dynamic) {}
+    public function startDashPhase(arg0: Dynamic, arg1: Ref): Void {
+    }
 
-  function getDashSpeed(): Float {}
+    public function getDashSpeed(): Float {
+        throw "stub: getDashSpeed not decompiled";
+    }
 
-  function forceMeleePhase() {}
+    public function forceMeleePhase(): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function canBeBreach(a: tool.atk.AttackData.AttackData): Bool {}
+    public function canBeBreach(arg0: tool.atk.AttackData): Bool {
+        throw "stub: canBeBreach not decompiled";
+    }
 
-  function getChargingOldSkill(): tool.skill.OldSkill.OldSkill {}
+    public function getChargingOldSkill(): tool.skill.OldSkill {
+        throw "stub: getChargingOldSkill not decompiled";
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function behaviourAloneBossFight() {}
+    public function behaviourAloneBossFight(): Void {
+    }
 
-  function duringChaseOrBossFightWithSisters() {}
+    public function duringChaseOrBossFightWithSisters(): Void {
+    }
 
-  function meleeAtk() {}
+    public function meleeAtk(): Void {
+    }
 
-  function dashPhaseSpinning() {}
+    public function dashPhaseSpinning(): Void {
+    }
 
-  function cineDashPhaseSpinning() {}
+    public function cineDashPhaseSpinning(): Void {
+    }
 
-  function forceTeleport(): Bool {}
+    public function forceTeleport(): Bool {
+        throw "stub: forceTeleport not decompiled";
+    }
 
-  function scream() {}
+    public function scream(): Void {
+    }
 
-  function onLeaveMap() {}
+    public function onLeaveMap(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function preUpdate() {}
+    public function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public override function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

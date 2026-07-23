@@ -1,50 +1,65 @@
 package ui;
+
 class CustomItemManager extends ui.Process {
-  var blackBG: libs.heaps.slib.HSprite.HSprite;
-  var controller: tool.Controller.Controller;
-  var title: ui.Text.Text;
-  var mask: h2d.Mask.Mask;
-  var inter: h2d.Interactive.Interactive;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
-  var fbItems: ui.FlowBox.FlowBox;
-  var wrapperItem: h2d.Object.Object;
-  var items: hl.types.ArrayObj<Dynamic>;
-  var flowHelp: h2d.Flow.Flow;
-  var wid: Int;
-  var hei: Int;
-  var cg: ui.CustomGame.CustomGame;
-  var group: Dynamic;
-  var curX: Int;
-  var curY: Int;
-  var selectionSG: h2d.ScaleGrid.ScaleGrid;
-  var itemDesc: ui.NewItemDesc.NewItemDesc;
-  var metaItems: hl.types.ArrayObj<Dynamic>;
+    public var blackBG: libs.heaps.slib.HSprite;
+    public var controller: tool.ControllerAccess;
+    public var title: ui.Text;
+    public var mask: h2d.Mask;
+    public var inter: h2d.Interactive;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
+    public var fbItems: ui.FlowBox;
+    public var wrapperItem: h2d.Object;
+    public var items: Array<Dynamic>;
+    public var flowHelp: h2d.Flow;
+    public var wid: Int;
+    public var hei: Int;
+    public var cg: ui.CustomGame;
+    public var group: Dynamic;
+    public var curX: Int;
+    public var curY: Int;
+    public var selectionSG: h2d.ScaleGrid;
+    public var itemDesc: ui.NewItemDesc;
+    public var metaItems: Array<Dynamic>;
 
-  function __constructor__(cg: ui.CustomGame.CustomGame, group: Dynamic, metaItems: hl.types.ArrayObj<Dynamic>) {}
+    public function new(arg0: ui.CustomGame, arg1: Dynamic, arg2: Array<Dynamic>) {
+        super();
+    }
 
-  function showGroup() {}
+    public function showGroup(): Void {
+    }
 
-  function getItemAt(cx: Int, cy: Int): Dynamic {}
+    public function getItemAt(arg0: Int, arg1: Int): Dynamic {
+        throw "stub: getItemAt not decompiled";
+    }
 
-  function selectItem(dx: Int, dy: Int) {}
+    public function selectItem(arg0: Int, arg1: Int): Void {
+    }
 
-  function updateSelection() {}
+    public function updateSelection(): Void {
+    }
 
-  function updateScrollingBox() {}
+    public function updateScrollingBox(): Void {
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function toggleAll() {}
+    public function toggleAll(): Void {
+    }
 
-  function defaultAll() {}
+    public function defaultAll(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

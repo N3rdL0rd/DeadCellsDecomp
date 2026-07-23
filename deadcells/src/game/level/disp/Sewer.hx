@@ -1,48 +1,71 @@
 package level.disp;
+
 class Sewer extends level.BiomeDisp {
-  var PROBA_ALCO_PARAL: Int;
-  var old: Bool;
-  var arPipes: hl.types.ArrayObj<Dynamic>;
-  var arDPforParalax: hl.types.ArrayObj<Dynamic>;
-  var arTunnel: hl.types.ArrayObj<Dynamic>;
-  var cacheArTunnel: hl.types.ArrayObj<Dynamic>;
+    public var PROBA_ALCO_PARAL: Int;
+    public var old: Bool;
+    public var arPipes: Array<Dynamic>;
+    public var arDPforParalax: Array<Dynamic>;
+    public var arTunnel: Array<Dynamic>;
+    public var cacheArTunnel: Array<Dynamic>;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap, old: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: Ref) {
+        super();
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function addAlcove(r: level.Room.Room) {}
+    public function addAlcove(arg0: level.Room): Void {
+    }
 
-  function createHoleGrid(r: level.Room.Room, rgrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public override function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: createHoleGrid not decompiled";
+    }
 
-  function createAlcoveHole(r: level.Room.Room, dp: Dynamic, wid: Int, hei: Int, cx: Int, cy: Int, rgrid: hl.types.ArrayObj<Dynamic>) {}
+    public function createAlcoveHole(arg0: level.Room, arg1: level.DecoPlatform, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Array<Dynamic>): Void {
+    }
 
-  function addHoleBackground(r: level.Room.Room, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public override function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function renderFloorStamps() {}
+    public override function renderFloorStamps(): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addGridFloor(z: level.DecoTypes.DecoTypes) {}
+    public function addGridFloor(arg0: level.DecoZone): Void {
+    }
 
-  function addPipeFall(z: level.DecoTypes.DecoTypes) {}
+    public function addPipeFall(arg0: level.DecoZone): Void {
+    }
 
-  function renderFrontWalls() {}
+    public override function renderFrontWalls(): Void {
+    }
 
-  function renderBackWalls() {}
+    public override function renderBackWalls(): Void {
+    }
 
-  function hasTunnelAt(cx: Int, cy: Int): Bool {}
+    public function hasTunnelAt(arg0: Int, arg1: Int): Bool {
+        throw "stub: hasTunnelAt not decompiled";
+    }
 
-  function setPipes(lastP: Dynamic, offX: Dynamic, offY: Dynamic, onBW: Dynamic) {}
+    public function setPipes(arg0: Dynamic, arg1: Ref, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function drawPipe(cx: Int, cy: Int, childs: hl.types.ArrayObj<Dynamic>): Dynamic {}
+    public function drawPipe(arg0: Int, arg1: Int, arg2: Array<Dynamic>): Dynamic {
+        throw "stub: drawPipe not decompiled";
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function drawPipes(p: Dynamic, parent: Dynamic, onBW: Dynamic, breakRecursion: Dynamic) {}
+    public function drawPipes(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 }
-

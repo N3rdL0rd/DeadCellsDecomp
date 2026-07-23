@@ -1,42 +1,64 @@
 package en.ltrap;
+
 class TimedShooter extends en.LevelTrap {
-  var ang: Float;
-  var tickS: Float;
-  var offsetF: Float;
-  var oldTime: Float;
-  var end: tool.CPoint.CPoint;
-  var shoot: tool.skill.OldSkill.OldSkill;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var ang: Float;
+    public var tickS: Float;
+    public var offsetF: Float;
+    public var oldTime: Float;
+    public var end: tool.CPoint;
+    public var shoot: tool.skill.OldSkill;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, a: Float, offsetS: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Dynamic) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function _isOnScreen(): Bool {}
+    public function _isOnScreen(): Bool {
+        throw "stub: _isOnScreen not decompiled";
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

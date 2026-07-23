@@ -1,26 +1,41 @@
 package en.inter;
+
 class LauncherExplosiveBarrel extends en.inter.ExplosiveBarrel {
-  var shouldCrit: Bool;
-  var attackData: tool.atk.AttackData.AttackData;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var shouldCrit: Bool;
+    public var attackData: tool.atk.AttackData;
 
-  function __constructor__(lvl: pr.Level.Level, x: Float, y: Float, atk: tool.atk.AttackData.AttackData, lessBright: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Float, arg2: Float, arg3: tool.atk.AttackData, arg4: Ref) {
+        super();
+    }
 
-  function getSkillId(): String {}
+    public override function getSkillId(): String {
+        throw "stub: getSkillId not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function createAttack(target: Entity, dmg: Float): tool.atk.AttackData.AttackData {}
+    public override function createAttack(arg0: Entity, arg1: Float): tool.atk.AttackData {
+        throw "stub: createAttack not decompiled";
+    }
 
-  function setActivatedByHero(byHero: Bool) {}
+    public override function setActivatedByHero(arg0: Bool): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

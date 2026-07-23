@@ -1,45 +1,59 @@
 package level.disp;
+
 class TopClockTower extends level.BiomeDisp {
-  var speedMult: Float;
-  var oldSpeedMult: Float;
-  var biome: String;
-  var clockX: Int;
-  var clockY: Int;
-  var minutePointer: libs.heaps.slib.HSprite.HSprite;
-  var hourPointer: libs.heaps.slib.HSprite.HSprite;
-  var runes: hl.types.ArrayObj<Dynamic>;
-  var angccFixed: Float;
-  var circleClockFixed: libs.heaps.slib.HSprite.HSprite;
-  var angccRotating: Float;
-  var circleClockRotating: libs.heaps.slib.HSprite.HSprite;
-  var gears: hl.types.ArrayObj<Dynamic>;
-  var clockIsBroken: Bool;
-  var bossRoom: level.Room.Room;
-  var lc: hxbit.Macros.Macros;
-  var sbAlcovesTorches: libs.heaps.slib.HSprite.HSpriteBatch;
+    public var speedMult: Float;
+    public var oldSpeedMult: Float;
+    public var biome: String;
+    public var clockX: Int;
+    public var clockY: Int;
+    public var minutePointer: libs.heaps.slib.HSprite;
+    public var hourPointer: libs.heaps.slib.HSprite;
+    public var runes: Array<Dynamic>;
+    public var angccFixed: Float;
+    public var circleClockFixed: libs.heaps.slib.HSprite;
+    public var angccRotating: Float;
+    public var circleClockRotating: libs.heaps.slib.HSprite;
+    public var gears: Array<Dynamic>;
+    public var clockIsBroken: Bool;
+    public var bossRoom: level.Room;
+    public var lc: level.Marker;
+    public var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function renderBackWalls() {}
+    public override function renderBackWalls(): Void {
+    }
 
-  function createHoleGrid(r: level.Room.Room, rGrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public override function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: createHoleGrid not decompiled";
+    }
 
-  function renderFloorStamps() {}
+    public override function renderFloorStamps(): Void {
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function renderBackGround() {}
+    public function renderBackGround(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

@@ -1,12 +1,17 @@
 package tool.weap.bow;
+
 class InfiniteBow extends tool.weap.BaseBow {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public function set_cycle(arg0: Int): Int {
+        throw "stub: set_cycle not decompiled";
+    }
 
-  function set_cycle(v: Int): Int {}
-
-  function incrementCycle() {}
+    public function incrementCycle(): Void {
+    }
 }
-

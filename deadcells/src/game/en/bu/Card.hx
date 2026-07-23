@@ -1,43 +1,62 @@
 package en.bu;
+
 class Card extends en.Bullet {
-  var fromWeapon: tool.weap.ThrowingCards.ThrowingCards;
-  var isGoingBackToHero: Bool;
-  var rotationAng: Float;
-  var shootAng: Float;
-  var spd: Float;
-  var t: Float;
-  var sinSign: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var fromWeapon: tool.weap.ThrowingCards;
+    public var isGoingBackToHero: Bool;
+    public var rotationAng: Float;
+    public var shootAng: Float;
+    public var spd: Float;
+    public var t: Float;
+    public var sinSign: Int;
 
-  function onBulletHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Bool) {
+        super();
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, _isGoingBackToHero: Bool) {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function dispose(): Void {
+    }
 
-  function dispose() {}
+    public override function createAmmoDrop(): en.loot.Ammo {
+        throw "stub: createAmmoDrop not decompiled";
+    }
 
-  function createAmmoDrop(): en.loot.Ammo.Ammo {}
+    public override function shootFromWeapon(arg0: tool.Weapon, arg1: Ref, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function shootFromWeapon(w: tool.Weapon.Weapon, useAmmo: Dynamic, xOff: Dynamic, yOff: Dynamic) {}
+    public override function vanish(): Void {
+    }
 
-  function vanish() {}
+    public override function playBlockSound(): Void {
+    }
 
-  function playBlockSound() {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function spriteUpdate(): Void {
+    }
 
-  function spriteUpdate() {}
+    public function setShootAngle(arg0: Float): Void {
+    }
 
-  function setShootAngle(newAng: Float) {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 }
-

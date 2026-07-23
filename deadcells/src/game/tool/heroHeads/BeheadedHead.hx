@@ -1,18 +1,26 @@
 package tool.heroHeads;
+
 class BeheadedHead extends tool.HeroHead {
-  var deal: libs.heaps.slib.HSprite.HSprite;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var deal: libs.heaps.slib.HSprite;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function init(level: pr.Level.Level, parent: h2d.Object.Object, fromUI: Dynamic) {}
+    public override function init(arg0: pr.Level, arg1: h2d.Object, arg2: Ref): Void {
+    }
 
-  function initHead(level: pr.Level.Level, layer: Int) {}
+    public override function initHead(arg0: pr.Level, arg1: Int): Void {
+    }
 
-  function updateHeadFx(ftime: Float) {}
+    public override function updateHeadFx(arg0: Float): Void {
+    }
 
-  function mainFireFx(c0: Int, c1: Int) {}
+    public override function mainFireFx(arg0: Int, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

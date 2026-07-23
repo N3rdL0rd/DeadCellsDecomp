@@ -1,23 +1,34 @@
 package tool.weap;
+
 class Scissor extends tool.Weapon {
-  var delayer: libs.Delayer.Delayer;
-  var mobDead: Bool;
-  var lastRndFrame: Int;
+    public var delayer: libs.Delayer;
+    public var mobDead: Bool;
+    public var lastRndFrame: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function setRandomFrame() {}
+    public function setRandomFrame(): Void {
+    }
 
-  function createAttack(critical: Dynamic): tool.atk.AttackData.AttackData {}
+    public function createAttack(arg0: Ref): tool.atk.AttackData {
+        throw "stub: createAttack not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function createSlice(e: Entity) {}
+    public function createSlice(arg0: Entity): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 }
-

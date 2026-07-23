@@ -1,203 +1,295 @@
 package pr;
+
 class Game extends libs.Process {
-  var gameSignals: Dynamic;
-  var user: User;
-  var data: tool.GameData.GameData;
-  var dmgTracking: haxe.ds.StringMap;
-  var hero: en.Hero.Hero;
-  var curLevel: pr.Level.Level;
-  var subLevels: hl.types.ArrayObj<Dynamic>;
-  var serverStats: Dynamic;
-  var nextTwitchGameplayMod: Dynamic;
-  var gameplayMods: hl.types.ArrayObj<Dynamic>;
-  var outlines: hl.types.ArrayObj<Dynamic>;
-  var outlineColor: h3d.Vector.Vector;
-  var darkness: hl.types.ArrayObj<Dynamic>;
-  var _pauseAfterFrames: Int;
-  var controller: tool.Controller.Controller;
-  var curCine: GameCinematic;
-  var konamiCodeIdx: Int;
-  var endGameLoots: hl.types.ArrayObj<Dynamic>;
-  var ctrap: h2d.Interactive.Interactive;
-  var hud: ui.HUD.HUD;
-  var log: ui.LogManager.LogManager;
-  var twitch: tool.TwitchIrc.TwitchIrc;
-  var twitchVotes: hl.types.ArrayObj<Dynamic>;
-  var twitchParallelSubscribers: Int;
-  var voteWinMan: ui.VoteWindowManager.VoteWindowManager;
-  var twitchServerSocket: tool.twitch.CustomSocketConnection.CustomSocketConnection;
-  var twitchServerInterface: tool.twitch.SocketDynamicMapping.SocketDynamicMapping;
-  var scoring: tool.ScoringMode.ScoringMode;
-  var training: tool.training.TrainingMode.TrainingMode;
-  var bossRush: tool.bossRush.BossRushMode.BossRushMode;
-  var bonusQuarterScrollLevels: Dynamic;
-  var shopTypeChance: Int;
-  var explorationBonusIncentiveLevel: String;
-  var infection: pr.Infection.Infection;
-  var cursedChestsSpawnMul: Int;
-  var cursedChestsBonusChance: Float;
-  var endGameAchievements: hl.types.ArrayObj<Dynamic>;
-  var shopMimicBiomeDepth: Dynamic;
-  var spawnMimicInNextLevel: Bool;
-  var endGamePopUps: hl.types.ArrayObj<Dynamic>;
-  var nextCursedLevels: hl.types.ArrayObj<Dynamic>;
-  var cursedLevelsCount: Int;
-  var nextLevelOverridenExit: Dynamic;
-  var keyModdedSave: haxe.ds.StringMap;
-  var lockAssistModeValues: Bool;
-  var checkedMods: Bool;
-  var wasModalPause: Bool;
-  var recentSlowMos: Int;
-  var lastVoteUpdate: hl.types.ArrayDyn;
-  var lastChickenUpdate: String;
-  var lastBossUpdate: String;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var ME: Game;
-  static var KONAMI_CODE: hl.types.ArrayBytes<Int>;
-  static var KEYBOARD_KONAMI_CODE: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var ME: pr.Game;
+    public static var KONAMI_CODE: Array<Int>;
+    public static var KEYBOARD_KONAMI_CODE: Array<Int>;
+    public static var __clid: Int;
+    public var gameSignals: tool.signals.GameSignals;
+    public var user: User;
+    public var data: tool.GameData;
+    public var dmgTracking: haxe.ds.StringMap;
+    public var hero: en.Hero;
+    public var curLevel: pr.Level;
+    public var subLevels: Array<Dynamic>;
+    public var serverStats: Dynamic;
+    public var nextTwitchGameplayMod: level.GameplayMod;
+    public var gameplayMods: Array<Dynamic>;
+    public var outlines: Array<Dynamic>;
+    public var outlineColor: h3d.Vector;
+    public var darkness: Array<Dynamic>;
+    public var _pauseAfterFrames: Int;
+    public var controller: tool.ControllerAccess;
+    public var curCine: GameCinematic;
+    public var konamiCodeIdx: Int;
+    public var endGameLoots: Array<Dynamic>;
+    public var ctrap: h2d.Interactive;
+    public var hud: ui.HUD;
+    public var log: ui.LogManager;
+    public var twitch: tool.TwitchIrc;
+    public var twitchVotes: Array<Dynamic>;
+    public var twitchParallelSubscribers: Int;
+    public var voteWinMan: ui.VoteWindowManager;
+    public var twitchServerSocket: tool.twitch.CustomSocketConnection;
+    public var twitchServerInterface: tool.twitch.SocketFunctionMapping;
+    public var scoring: tool.ScoringMode;
+    public var training: tool.training.TrainingMode;
+    public var bossRush: tool.bossRush.BossRushMode;
+    public var bonusQuarterScrollLevels: Dynamic;
+    public var shopTypeChance: Int;
+    public var explorationBonusIncentiveLevel: String;
+    public var infection: pr.Infection;
+    public var cursedChestsSpawnMul: Int;
+    public var cursedChestsBonusChance: Float;
+    public var endGameAchievements: Array<Dynamic>;
+    public var shopMimicBiomeDepth: Dynamic;
+    public var spawnMimicInNextLevel: Bool;
+    public var endGamePopUps: Array<Dynamic>;
+    public var nextCursedLevels: Array<Dynamic>;
+    public var cursedLevelsCount: Int;
+    public var nextLevelOverridenExit: Dynamic;
+    public var keyModdedSave: haxe.ds.StringMap;
+    public var lockAssistModeValues: Bool;
+    public var checkedMods: Bool;
+    public var wasModalPause: Bool;
+    public var recentSlowMos: Int;
+    public var lastVoteUpdate: Array<Dynamic>;
+    public var lastChickenUpdate: String;
+    public var lastBossUpdate: String;
+    public var __uid: Int;
+    public var : Dynamic;
+
+    public function new(arg0: User, arg1: tool.GameData) {
+        super();
+    }
+
+    public function isScoring(): Bool {
+        throw "stub: isScoring not decompiled";
+    }
+
+    public function isTraining(): Bool {
+        throw "stub: isTraining not decompiled";
+    }
+
+    public function isBossRush(): Bool {
+        throw "stub: isBossRush not decompiled";
+    }
+
+    public function get_isInSubMode(): Bool {
+        throw "stub: get_isInSubMode not decompiled";
+    }
+
+    public function checkModsLoading(arg0: libs.misc.Cinematic): Void {
+    }
+
+    public function gameGenData(): Void {
+    }
+
+    public function transitionToLevel(): Void {
+    }
+
+    public function initMods(): Void {
+    }
+
+    public function hasGameplayMod(arg0: level.GameplayMod): Bool {
+        throw "stub: hasGameplayMod not decompiled";
+    }
+
+    public function onReload(): Void {
+    }
+
+    public function prepareSave(): Bool {
+        throw "stub: prepareSave not decompiled";
+    }
+
+    public override function init(): Void {
+    }
 
-  function __constructor__(u: User, dat: tool.GameData.GameData) {}
+    public function initTwitchConnection(): Void {
+    }
 
-  function isScoring(): Bool {}
+    public function connectToTwitchExtension(arg0: String): Void {
+    }
 
-  function isTraining(): Bool {}
+    public function initExtensionBindings(): Void {
+    }
 
-  function isBossRush(): Bool {}
+    public function disconnectTwitchExtension(): Void {
+    }
 
-  function get_isInSubMode(): Bool {}
+    public function sendTwitchExtensionMessage(arg0: String, arg1: String): Void {
+    }
 
-  function checkModsLoading(cm: libs.misc.Cinematic.Cinematic) {}
+    public function onTwitchJoin(arg0: String): Void {
+    }
 
-  function gameGenData() {}
+    public function refuseChatMessage(arg0: tool.TwitchMessage): Void {
+    }
 
-  function transitionToLevel() {}
+    public function onTwitchMessage(arg0: tool.TwitchMessage): Void {
+    }
 
-  function initMods() {}
+    public function triggerBossAction(arg0: String): Void {
+    }
 
-  function hasGameplayMod(m: Dynamic): Bool {}
+    public function onTwitchSubscribe(arg0: String, arg1: String, arg2: String): Void {
+    }
 
-  function onReload() {}
+    public function launchChickenVote(): Void {
+    }
 
-  function prepareSave(): Bool {}
+    public function banCurrentChicken(): Void {
+    }
 
-  function init() {}
+    public function killTwitchVotes(arg0: hl.Class): Void {
+    }
 
-  function initTwitchConnection() {}
+    public function getUniqId(): Int {
+        throw "stub: getUniqId not decompiled";
+    }
 
-  function connectToTwitchExtension(address: String) {}
+    public function unlockVortexBadSeedHead(): Void {
+    }
 
-  function initExtensionBindings() {}
+    public function genSecretLevel(arg0: pr.Level, arg1: tool.InventItem): level.LevelMap {
+        throw "stub: genSecretLevel not decompiled";
+    }
 
-  function disconnectTwitchExtension() {}
+    public function hasRevealedAllFriendsSkin(): Bool {
+        throw "stub: hasRevealedAllFriendsSkin not decompiled";
+    }
 
-  function sendTwitchExtensionMessage(type: String, data: String) {}
+    public function canSpawnEvents(): Bool {
+        throw "stub: canSpawnEvents not decompiled";
+    }
 
-  function onTwitchJoin(chan: String) {}
+    public function isCompatibleHead(arg0: String): Bool {
+        throw "stub: isCompatibleHead not decompiled";
+    }
 
-  function refuseChatMessage(m: tool.TwitchMessage.TwitchMessage) {}
+    public function loadMainLevel(arg0: cine.LevelTransition, arg1: String, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function onTwitchMessage(m: tool.TwitchMessage.TwitchMessage) {}
+    public function chooseNextIncentiveLevel(arg0: Dynamic): Void {
+    }
 
-  function triggerBossAction(keyword: String) {}
+    public function chooseNextCursedLevels(arg0: Dynamic): Void {
+    }
 
-  function onTwitchSubscribe(msgId: String, subscriber: String, giftSentBy: String) {}
+    public function areGatesUnlocked(arg0: Dynamic): Bool {
+        throw "stub: areGatesUnlocked not decompiled";
+    }
 
-  function launchChickenVote() {}
+    public function checkForNextPopUp(): Void {
+    }
 
-  function banCurrentChicken() {}
+    public function saveHeroPetStates(): Array<Dynamic> {
+        throw "stub: saveHeroPetStates not decompiled";
+    }
 
-  function killTwitchVotes(c: hl.Class) {}
+    public function resetPetSavedState(arg0: Array<Dynamic>): Void {
+    }
 
-  function getUniqId(): Int {}
+    public function activateSubLevel(arg0: level.LevelMap, arg1: Dynamic, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function unlockVortexBadSeedHead() {}
+    public function hasCinematic(): Bool {
+        throw "stub: hasCinematic not decompiled";
+    }
 
-  function genSecretLevel(refLevel: pr.Level.Level, item: tool.InventItem.InventItem): level.LevelMap.LevelMap {}
+    public function initHero(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.UsableBody, arg4: Bool, arg5: pr.Level): en.Hero {
+        throw "stub: initHero not decompiled";
+    }
 
-  function hasRevealedAllFriendsSkin(): Bool {}
+    public function onEvent(arg0: hxd.Event): Void {
+    }
 
-  function canSpawnEvents(): Bool {}
+    public function onInputPressed(arg0: Int): Void {
+    }
 
-  function isCompatibleHead(headId: String): Bool {}
+    public function onActPressed(arg0: Dynamic, arg1: Bool): Void {
+    }
 
-  function loadMainLevel(cine: cine.LevelTransition.LevelTransition, id: String, activate: Dynamic, forcedSeed: Dynamic) {}
+    public function konamiCode(): Void {
+    }
 
-  function chooseNextIncentiveLevel(lInfos: Dynamic) {}
+    public override function pause(): Void {
+    }
 
-  function chooseNextCursedLevels(lInfos: Dynamic) {}
+    public function modalPause(arg0: Ref): Void {
+    }
 
-  function areGatesUnlocked(nextLevel: Dynamic): Bool {}
+    public override function resume(): Void {
+    }
 
-  function checkForNextPopUp() {}
+    public function blur(): Void {
+    }
 
-  function saveHeroPetStates(): hl.types.ArrayObj<Dynamic> {}
+    public function trackDmg(arg0: String, arg1: Float): Void {
+    }
 
-  function resetPetSavedState(savedStates: hl.types.ArrayObj<Dynamic>) {}
+    public function pauseGameIfAvailable(): Void {
+    }
 
-  function activateSubLevel(map: level.LevelMap.LevelMap, linkId: Dynamic, shouldSave: Dynamic, outAnim: Dynamic) {}
+    public function onSteamOverlay(arg0: Bool): Void {
+    }
 
-  function hasCinematic(): Bool {}
+    public override function onDispose(): Void {
+    }
 
-  function initHero(lvl: pr.Level.Level, cx: Int, cy: Int, from: en.UsableBody.UsableBody, fromDeadBody: Bool, oldLevel: pr.Level.Level): en.Hero.Hero {}
+    public override function onResize(): Void {
+    }
 
-  function onEvent(e: Dynamic) {}
+    public function onApplyOptions(): Void {
+    }
 
-  function onInputPressed(key: Int) {}
+    public function addScore(arg0: Entity, arg1: Int): Void {
+    }
 
-  function onActPressed(act: Dynamic, isKey: Bool) {}
+    public function getBiomeVisitCount(arg0: String): Dynamic {
+        throw "stub: getBiomeVisitCount not decompiled";
+    }
 
-  function konamiCode() {}
+    public function isGameTimeRunning(): Bool {
+        throw "stub: isGameTimeRunning not decompiled";
+    }
 
-  function pause() {}
+    public function decreasingSlowMo(arg0: Float, arg1: Float): Void {
+    }
 
-  function modalPause(audioEffect: Dynamic) {}
+    public function compareArray(arg0: Array<Dynamic>, arg1: Array<Dynamic>): Bool {
+        throw "stub: compareArray not decompiled";
+    }
 
-  function resume() {}
+    public function updateTwitchData(arg0: Ref): Void {
+    }
 
-  function blur() {}
+    public override function update(): Void {
+    }
 
-  function trackDmg(source: String, dmg: Float) {}
+    public override function postUpdate(): Void {
+    }
 
-  function pauseGameIfAvailable() {}
+    public function updateServerStatsHistory(): Void {
+    }
 
-  function onSteamOverlay(active: Bool) {}
+    public function incrStatsEarnedCells(arg0: Int): Void {
+    }
 
-  function onDispose() {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function onResize() {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function onApplyOptions() {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function addScore(from: Entity, v: Int) {}
+    public function unserializeInit(): Void {
+    }
 
-  function getBiomeVisitCount(id: String): Dynamic {}
-
-  function isGameTimeRunning(): Bool {}
-
-  function decreasingSlowMo(durationS: Float, spd: Float) {}
-
-  function compareArray(a: hl.types.ArrayDyn, b: hl.types.ArrayDyn): Bool {}
-
-  function updateTwitchData(forced: Dynamic) {}
-
-  function update() {}
-
-  function postUpdate() {}
-
-  function updateServerStatsHistory() {}
-
-  function incrStatsEarnedCells(v: Int) {}
-
-  function getCLID(): Int {}
-
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getSerializeSchema(): hxbit.Schema.Schema {}
-
-  function unserializeInit() {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,57 +1,85 @@
 package level.gen;
+
 class MapGenerator {
-  var lastError: level.RoomNode.RoomNode;
-  var autoRetry: Int;
-  var valid: Bool;
-  var placedRooms: hl.types.ArrayObj<Dynamic>;
-  var rects: haxe.ds.List<Dynamic>;
-  var tries: Int;
-  var ldat: Dynamic;
-  var root: level.RoomNode.RoomNode;
-  var rnd: libs.Rand.Rand;
-  var res: Dynamic;
-  var ltick: Dynamic;
-  var xMin: Int;
-  var xMax: Int;
-  var yMin: Int;
-  var yMax: Int;
-  var tplUseCounts: Dynamic;
-  var allTemplates: hl.types.ArrayObj<Dynamic>;
-  var templates: Dynamic;
-  static var MAX_TRIES: Int;
+    public static var MAX_TRIES: Int;
+    public var lastError: level.RoomNode;
+    public var autoRetry: Int;
+    public var valid: Bool;
+    public var placedRooms: Array<Dynamic>;
+    public var rects: haxe.ds.List;
+    public var tries: Int;
+    public var ldat: Dynamic;
+    public var root: level.RoomNode;
+    public var rnd: libs.Rand;
+    public var res: Dynamic;
+    public var ltick: Dynamic;
+    public var xMin: Int;
+    public var xMax: Int;
+    public var yMin: Int;
+    public var yMax: Int;
+    public var tplUseCounts: Dynamic;
+    public var allTemplates: Array<Dynamic>;
+    public var templates: Dynamic;
 
-  function __constructor__(ldat: Dynamic, root: level.RoomNode.RoomNode, rnd: libs.Rand.Rand, res: Dynamic, loadingTick: Dynamic) {}
+    public function new(arg0: Dynamic, arg1: level.RoomNode, arg2: libs.Rand, arg3: Dynamic, arg4: Dynamic) {
+    }
 
-  function get_levelLeftToRight(): Bool {}
+    public function get_levelLeftToRight(): Bool {
+        throw "stub: get_levelLeftToRight not decompiled";
+    }
 
-  function generate() {}
+    public function generate(): Void {
+    }
 
-  function sortChildrenAndGetZRoots(): hl.types.ArrayObj<Dynamic> {}
+    public function sortChildrenAndGetZRoots(): Array<Dynamic> {
+        throw "stub: sortChildrenAndGetZRoots not decompiled";
+    }
 
-  function tryGenerateMap(): Bool {}
+    public function tryGenerateMap(): Bool {
+        throw "stub: tryGenerateMap not decompiled";
+    }
 
-  function getAllValidExitCombos(parentRoom: level.RoomNode.RoomNode): hl.types.ArrayObj<Dynamic> {}
+    public function getAllValidExitCombos(arg0: level.RoomNode): Array<Dynamic> {
+        throw "stub: getAllValidExitCombos not decompiled";
+    }
 
-  function getAllLinkSwaps(links: hl.types.ArrayObj<Dynamic>, filter: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function getAllLinkSwaps(arg0: Array<Dynamic>, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: getAllLinkSwaps not decompiled";
+    }
 
-  function tryExitCombo(parentRoom: level.RoomNode.RoomNode, ec: hl.types.ArrayObj<Dynamic>): Bool {}
+    public function tryExitCombo(arg0: level.RoomNode, arg1: Array<Dynamic>): Bool {
+        throw "stub: tryExitCombo not decompiled";
+    }
 
-  function tryPlaceChildren(context: Dynamic): Bool {}
+    public function tryPlaceChildren(arg0: Dynamic): Bool {
+        throw "stub: tryPlaceChildren not decompiled";
+    }
 
-  function chooseTemplate(validTemplates: hl.types.ArrayObj<Dynamic>, context: Dynamic): Dynamic {}
+    public function chooseTemplate(arg0: Array<Dynamic>, arg1: Dynamic): Dynamic {
+        throw "stub: chooseTemplate not decompiled";
+    }
 
-  function setTemplatesScore(validTemplates: hl.types.ArrayObj<Dynamic>, context: Dynamic) {}
+    public function setTemplatesScore(arg0: Array<Dynamic>, arg1: Dynamic): Void {
+    }
 
-  function checkLinkConstraint(childRoom: level.RoomNode.RoomNode, parentLink: level.RoomTemplate.RoomTemplate): Bool {}
+    public function checkLinkConstraint(arg0: level.RoomNode, arg1: level.RoomTemplateLink): Bool {
+        throw "stub: checkLinkConstraint not decompiled";
+    }
 
-  function addRects(room: level.RoomNode.RoomNode, rects: haxe.ds.List<Dynamic>) {}
+    public function addRects(arg0: level.RoomNode, arg1: haxe.ds.List): Void {
+    }
 
-  function getValidTemplates(context: Dynamic, placedRects: haxe.ds.List<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function getValidTemplates(arg0: Dynamic, arg1: haxe.ds.List): Array<Dynamic> {
+        throw "stub: getValidTemplates not decompiled";
+    }
 
-  function getTemplates(node: level.RoomNode.RoomNode, altKind: String): hl.types.ArrayObj<Dynamic> {}
+    public function getTemplates(arg0: level.RoomNode, arg1: String): Array<Dynamic> {
+        throw "stub: getTemplates not decompiled";
+    }
 
-  function filterByNumberExit(validTemplates: hl.types.ArrayObj<Dynamic>, node: level.RoomNode.RoomNode, culled: hl.types.ArrayObj<Dynamic>) {}
+    public function filterByNumberExit(arg0: Array<Dynamic>, arg1: level.RoomNode, arg2: Array<Dynamic>): Void {
+    }
 
-  function filterByChildrenConstraints(validTemplates: hl.types.ArrayObj<Dynamic>, node: level.RoomNode.RoomNode, culled: hl.types.ArrayObj<Dynamic>) {}
+    public function filterByChildrenConstraints(arg0: Array<Dynamic>, arg1: level.RoomNode, arg2: Array<Dynamic>): Void {
+    }
 }
-

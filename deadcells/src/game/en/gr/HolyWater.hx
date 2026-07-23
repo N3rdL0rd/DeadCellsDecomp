@@ -1,86 +1,129 @@
 package en.gr;
+
 class HolyWater extends en.gr.GrenadeSkill {
-  var prevDir: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var prevDir: Int;
 
-  function onTrigger() {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(h: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function init(): Void {
+    }
 
-  function init() {}
+    public function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
-}
-
-class HolyRain extends Entity {
-  var item: tool.InventItem.InventItem;
-  var tickRate: Float;
-  var sbRain: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-
-  function __constructor__(parent: Entity, item: tool.InventItem.InventItem, lvl: pr.Level.Level) {}
-
-  function init() {}
-
-  function initGfx() {}
-
-  function onCooldownEnd(k: String, subIndex: Int) {}
-
-  function destroy() {}
-
-  function fixedUpdate() {}
-
-  function getCLID(): Int {}
-
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getSerializeSchema(): hxbit.Schema.Schema {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onTrigger(): Void {
+    }
 }
 
 class HolyFire extends Entity {
-  var item: tool.InventItem.InventItem;
-  var tickRate: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var item: tool.InventItem;
+    public var tickRate: Float;
 
-  function __constructor__(parent: Entity, item: tool.InventItem.InventItem, lvl: pr.Level.Level, px: Float, py: Float) {}
+    public function new(arg0: Entity, arg1: tool.InventItem, arg2: pr.Level, arg3: Float, arg4: Float) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
 
+class HolyRain extends Entity {
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var item: tool.InventItem;
+    public var tickRate: Float;
+    public var sbRain: libs.heaps.slib.HSpriteBatch;
+
+    public function new(arg0: Entity, arg1: tool.InventItem, arg2: pr.Level) {
+        super();
+    }
+
+    public override function init(): Void {
+    }
+
+    public override function initGfx(): Void {
+    }
+
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
+
+    public override function destroy(): Void {
+    }
+
+    public override function fixedUpdate(): Void {
+    }
+
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
+}

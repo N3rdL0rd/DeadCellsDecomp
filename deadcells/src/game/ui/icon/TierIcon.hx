@@ -1,10 +1,13 @@
 package ui.icon;
+
 class TierIcon extends h2d.Bitmap {
-  var tierKind: String;
-  var tileName: String;
+    public var tierKind: String;
+    public var tileName: String;
 
-  function __constructor__(tierKind: String, parent: h2d.Object.Object) {}
+    public function new(arg0: String, arg1: h2d.Object) {
+        super();
+    }
 
-  function initTierIcon() {}
+    public function initTierIcon(): Void {
+    }
 }
-

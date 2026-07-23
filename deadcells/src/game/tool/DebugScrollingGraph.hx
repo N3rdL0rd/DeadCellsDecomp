@@ -1,45 +1,62 @@
 package tool;
+
 class DebugScrollingGraph extends h2d.Drawable {
-  var histogramX: Int;
-  var highThreshold: Float;
-  var mainLoopEvent: haxe.MainEvent;
-  var tile: h2d.Tile.Tile;
-  var fbuf: hl.types.ArrayBytes_Single;
-  var buffer: h3d.Buffer.Buffer;
-  var nQuads: Int;
-  static var enabled: Bool;
-  static var fpsGraph: DebugScrollingGraph;
-  static var fxGraph: DebugScrollingGraph;
+    public static var enabled: Bool;
+    public static var fpsGraph: tool.DebugScrollingGraph;
+    public static var fxGraph: tool.DebugScrollingGraph;
+    public var histogramX: Int;
+    public var highThreshold: Float;
+    public var mainLoopEvent: haxe.MainEvent;
+    public var tile: h2d.Tile;
+    public var fbuf: Array<Dynamic>;
+    public var buffer: h3d.Buffer;
+    public var nQuads: Int;
 
-  function __constructor__(parent: h2d.Object.Object, nHistoryEntries: Int) {}
+    public function new(arg0: h2d.Object, arg1: Int) {
+        super();
+    }
 
-  static function toggle() {}
+    public static function toggle(): Void {
+    }
 
-  function shutdown() {}
+    public function shutdown(): Void {
+    }
 
-  function getValueNow(): Float {}
+    public function getValueNow(): Float {
+        throw "stub: getValueNow not decompiled";
+    }
 
-  function afterPresent() {}
+    public function afterPresent(): Void {
+    }
 
-  function setVertex(vertexNumber: Int, x: Float, y: Float, r: Float, g: Float, b: Float, a: Float) {}
+    public function setVertex(arg0: Int, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Float): Void {
+    }
 
-  function setQuad(quadNumber: Int, x: Float, y: Float, w: Float, h: Float, r: Float, g: Float, b: Float) {}
+    public function setQuad(arg0: Int, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Float, arg7: Float): Void {
+    }
 
-  function draw(ctx: h2d.RenderContext.RenderContext) {}
+    public function draw(arg0: h2d.RenderContext): Void {
+    }
 }
 
 class FrameProfilerRealTime extends tool.DebugScrollingGraph {
-  var last: Float;
+    public var last: Float;
 
-  function __constructor__(parent: h2d.Object.Object, nHistoryEntries: Int) {}
+    public function new(arg0: h2d.Object, arg1: Int) {
+        super();
+    }
 
-  function getValueNow(): Float {}
+    public override function getValueNow(): Float {
+        throw "stub: getValueNow not decompiled";
+    }
 }
 
 class ParticleProfilerRealTime extends tool.DebugScrollingGraph {
+    public function new(arg0: h2d.Object, arg1: Int) {
+        super();
+    }
 
-  function __constructor__(parent: h2d.Object.Object, nHistoryEntries: Int) {}
-
-  function getValueNow(): Float {}
+    public override function getValueNow(): Float {
+        throw "stub: getValueNow not decompiled";
+    }
 }
-

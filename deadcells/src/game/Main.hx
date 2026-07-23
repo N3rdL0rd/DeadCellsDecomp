@@ -1,82 +1,117 @@
+class Main extends libs.Process {
+    public static var ME: Main;
+    public static var GAME_VERSION: Int;
+    public static var saveScoreUnavailableWarningShown: Bool;
+    public var options: Options;
+    public var user: User;
+    public var pixelScale: Float;
+    public var audio: Audio;
+    public var uiManager: uicore.UIManager;
+    public var mask: h2d.Object;
+    public var loading: ui.Loading;
+    public var prepareAssets: Bool;
+    public var vpMask: h2d.Graphics;
+    public var dailyParam: Dynamic;
+    public var streamStatus: tool.Result;
+    public var mainSignals: tool.signals.MainSignals;
+    public var waitToSave: Bool;
+    public var waitToExit: Int;
+    public var curProcess: libs.Process;
+    public var isLoading: Bool;
+    public var secondDone: Bool;
 
-class Main extends libs.Process.Process {
-  var options: Options;
-  var user: User;
-  var pixelScale: Float;
-  var audio: Audio;
-  var uiManager: uicore.UIManager.UIManager;
-  var mask: h2d.Object.Object;
-  var loading: ui.Loading.Loading;
-  var prepareAssets: Bool;
-  var vpMask: h2d.Graphics.Graphics;
-  var dailyParam: Dynamic;
-  var streamStatus: Dynamic;
-  var mainSignals: Dynamic;
-  var waitToSave: Bool;
-  var waitToExit: Int;
-  var curProcess: libs.Process.Process;
-  var isLoading: Bool;
-  var secondDone: Bool;
-  static var ME: Main;
-  static var GAME_VERSION: Int;
-  static var saveScoreUnavailableWarningShown: Bool;
+    public function new() {
+        super();
+    }
 
-  function onNextLoad(game: pr.Game.Game) {}
+    public static function canOpenURL(): Bool {
+        throw "stub: canOpenURL not decompiled";
+    }
 
-  static function openUrlInBrowser(url: String) {}
+    public static function openUrlInBrowser(arg0: String): Void {
+    }
 
-  function __constructor__() {}
+    public static function openURL(arg0: String): Void {
+    }
 
-  static function canOpenURL(): Bool {}
+    public function checkSaveCompat(): Void {
+    }
 
-  static function openURL(url: String) {}
+    public function createOptions(): Void {
+    }
 
-  function checkSaveCompat() {}
+    public function initChroma(): Void {
+    }
 
-  function createOptions() {}
+    public function onSecondFrame(): Void {
+    }
 
-  function initChroma() {}
+    public function loadDailySeed(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function onSecondFrame() {}
+    public override function onDispose(): Void {
+    }
 
-  function loadDailySeed(onLoad: Dynamic, onFail: Dynamic) {}
+    public function cleanUser(): Void {
+    }
 
-  function onDispose() {}
+    public function writeSave(): Bool {
+        throw "stub: writeSave not decompiled";
+    }
 
-  function cleanUser() {}
+    public function onExit(): Bool {
+        throw "stub: onExit not decompiled";
+    }
 
-  function writeSave(): Bool {}
+    public function initGlobalGameUI(): Void {
+    }
 
-  function onExit(): Bool {}
+    public function launchGame(arg0: LaunchMode, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function initGlobalGameUI() {}
+    public function getGame(arg0: LaunchMode): pr.Game {
+        throw "stub: getGame not decompiled";
+    }
 
-  function launchGame(mode: Dynamic, tpause: Dynamic, fadeOutS: Dynamic) {}
+    public function initGame(arg0: LaunchMode, arg1: Bool, arg2: Bool, arg3: Bool): pr.Game {
+        throw "stub: initGame not decompiled";
+    }
 
-  function getGame(mode: Dynamic): pr.Game.Game {}
+    public function localToGlobal(arg0: h2d.Object, arg1: Ref, arg2: Ref): h2d.col.Point {
+        throw "stub: localToGlobal not decompiled";
+    }
 
-  function initGame(mode: Dynamic, useDebug: Bool, isTwitch: Bool, isCustom: Bool): pr.Game.Game {}
+    public function transition(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function localToGlobal(spr: h2d.Object.Object, ptX: Dynamic, ptY: Dynamic): h2d.col.Point.Point {}
+    public function initLoading(): Void {
+    }
 
-  function transition(col: Dynamic, next: Dynamic, pause: Dynamic, fadeOutS: Dynamic, dispData: Dynamic) {}
+    public function refreshLoadingText(): Void {
+    }
 
-  function initLoading() {}
+    public function showLoading(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function refreshLoadingText() {}
+    public function hideLoading(): Void {
+    }
 
-  function showLoading(col: Dynamic, dispData: Dynamic) {}
+    public function fadeIn(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function hideLoading() {}
+    public function fadeOut(arg0: Ref): Void {
+    }
 
-  function fadeIn(col: Dynamic, dispData: Dynamic, multFade: Dynamic, onEnd: Dynamic) {}
+    public override function onResize(): Void {
+    }
 
-  function fadeOut(multFade: Dynamic) {}
+    public override function update(): Void {
+    }
 
-  function onResize() {}
+    public function isStreamConfigured(): Bool {
+        throw "stub: isStreamConfigured not decompiled";
+    }
 
-  function update() {}
-
-  function isStreamConfigured(): Bool {}
+    public function onNextLoad(arg0: pr.Game): Void {
+    }
 }
-

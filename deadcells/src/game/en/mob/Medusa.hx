@@ -1,93 +1,136 @@
 package en.mob;
+
 class Medusa extends en.mob.Boss {
-  var headSnakesInf: Dynamic;
-  var headSnakesArea: tool.Area.Area;
-  var gorgonLookAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var tailWhipAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var frenzyAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var frenzyFollowUpAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var frenzyFollowUpAnimSuffixes: hl.types.ArrayObj<Dynamic>;
-  var frenzyFollowUpAnimId: Int;
-  var frenzyFollowUpCurSuffix: String;
-  var frenzyMissed: Int;
-  var frenzyMissedMax: Int;
-  var frenzyDirToHero: Int;
-  var headSnakes: libs.heaps.slib.HSprite.HSprite;
-  var lookDarkness: h2d.Graphics.Graphics;
-  var lookAtkFx: libs.heaps.HParticle.HParticle;
-  var sightCone: h2d.Graphics.Graphics;
-  var sightConeHeight: Float;
-  var isPlayingDeathAnim: Bool;
-  var sbFx: libs.heaps.slib.HSprite.HSpriteBatch;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var headSnakesInf: Dynamic;
+    public var headSnakesArea: tool.Area;
+    public var gorgonLookAtk: tool.skill.OldMobSkill;
+    public var tailWhipAtk: tool.skill.OldMobSkill;
+    public var frenzyAtk: tool.skill.OldMobSkill;
+    public var frenzyFollowUpAtk: tool.skill.OldMobSkill;
+    public var frenzyFollowUpAnimSuffixes: Array<Dynamic>;
+    public var frenzyFollowUpAnimId: Int;
+    public var frenzyFollowUpCurSuffix: String;
+    public var frenzyMissed: Int;
+    public var frenzyMissedMax: Int;
+    public var frenzyDirToHero: Int;
+    public var headSnakes: libs.heaps.slib.HSprite;
+    public var lookDarkness: h2d.Graphics;
+    public var lookAtkFx: libs.heaps.HParticle;
+    public var sightCone: h2d.Graphics;
+    public var sightConeHeight: Float;
+    public var isPlayingDeathAnim: Bool;
+    public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Medusa {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Medusa {
+        throw "stub: create not decompiled";
+    }
 
-  function get_headX(): Float {}
+    public function get_headX(): Float {
+        throw "stub: get_headX not decompiled";
+    }
 
-  function get_headY(): Float {}
+    public function get_headY(): Float {
+        throw "stub: get_headY not decompiled";
+    }
 
-  function canBeElite(): Bool {}
+    public function canBeElite(): Bool {
+        throw "stub: canBeElite not decompiled";
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public function setElite(arg0: Bool): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function setReady() {}
+    public override function setReady(): Void {
+    }
 
-  function changeDirAnim() {}
+    public function changeDirAnim(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function spriteUpdate() {}
+    public function spriteUpdate(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function medusaLookUpdate() {}
+    public function medusaLookUpdate(): Void {
+    }
 
-  function medusaLookEnd() {}
+    public function medusaLookEnd(): Void {
+    }
 
-  function updateSightCone() {}
+    public function updateSightCone(): Void {
+    }
 
-  function tryStopFrenzyAttack() {}
+    public function tryStopFrenzyAttack(): Void {
+    }
 
-  function prepareheadSnakes() {}
+    public function prepareheadSnakes(): Void {
+    }
 
-  function executeheadSnakes() {}
+    public function executeheadSnakes(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function kill() {}
+    public function kill(): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function tpHeroBackToTraining() {}
+    public function tpHeroBackToTraining(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

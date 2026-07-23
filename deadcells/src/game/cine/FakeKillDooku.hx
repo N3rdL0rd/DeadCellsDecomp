@@ -1,32 +1,46 @@
 package cine;
-class SpawnTheBeast extends Entity {
-  var boss: en.mob.boss.DookuBeast.DookuBeast;
-  var bossRoom: level.Room.Room;
-  var container: Dynamic;
-  var mask: h2d.Bitmap.Bitmap;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
-
-  function createDookuBeast(hero: en.Hero.Hero, bossRoom: level.Room.Room): en.mob.boss.DookuBeast.DookuBeast {}
-
-  function spawn(hero: en.Hero.Hero, mainCine: cine.FakeKillDooku.FakeKillDooku) {}
-
-  function destroy() {}
-
-  function postUpdate() {}
-
-  function getCLID(): Int {}
-
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
-}
 
 class FakeKillDooku extends GameCinematic {
-  var manager: en.DookuManager.DookuManager;
+    public var manager: en.DookuManager;
 
-  function __constructor__(hero: en.Hero.Hero, manager: en.DookuManager.DookuManager, instant: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: en.DookuManager, arg2: Ref) {
+        super();
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
 
+class SpawnTheBeast extends Entity {
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var boss: en.mob.boss.DookuBeast;
+    public var bossRoom: level.Room;
+    public var container: light.TopFx;
+    public var mask: h2d.Bitmap;
+
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
+
+    public function createDookuBeast(arg0: en.Hero, arg1: level.Room): en.mob.boss.DookuBeast {
+        throw "stub: createDookuBeast not decompiled";
+    }
+
+    public function spawn(arg0: en.Hero, arg1: cine.FakeKillDooku): Void {
+    }
+
+    public override function destroy(): Void {
+    }
+
+    public override function postUpdate(): Void {
+    }
+
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
+}

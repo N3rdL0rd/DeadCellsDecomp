@@ -1,73 +1,109 @@
 package level.disp;
+
 class DookuCastle extends level.BiomeDisp {
-  var maxParallaxY: Int;
-  var animatedPaintingsDeck: libs.RandDeck.RandDeck;
-  var sbLevelBackAdd: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var alcovePositions: hl.types.ArrayObj<Dynamic>;
-  var suspendedLightsInf: hl.types.ArrayObj<Dynamic>;
-  var bigRoomsBounds: hl.types.ArrayObj<Dynamic>;
-  var roofTilesWidths: hl.types.ArrayObj<Dynamic>;
-  var towerTilesWidths: hl.types.ArrayObj<Dynamic>;
-  var customParallaxElements: hl.types.ArrayObj<Dynamic>;
+    public var maxParallaxY: Int;
+    public var animatedPaintingsDeck: libs.RandDeck;
+    public var sbLevelBackAdd: libs.heaps.slib.HSpriteBatch;
+    public var alcovePositions: Array<Dynamic>;
+    public var suspendedLightsInf: Array<Dynamic>;
+    public var bigRoomsBounds: Array<Dynamic>;
+    public var roofTilesWidths: Array<Dynamic>;
+    public var towerTilesWidths: Array<Dynamic>;
+    public var customParallaxElements: Array<Dynamic>;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function fillDecks() {}
+    public override function fillDecks(): Void {
+    }
 
-  function fillAnimatedPaintingsDeck() {}
+    public function fillAnimatedPaintingsDeck(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function renderParallaxes() {}
+    public function renderParallaxes(): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes, outside: Dynamic) {}
+    public function addAlcoves(arg0: level.DecoZone, arg1: Ref): Void {
+    }
 
-  function addStatuesToAlcoves() {}
+    public function addStatuesToAlcoves(): Void {
+    }
 
-  function addSmallWindows(z: level.DecoTypes.DecoTypes) {}
+    public function addSmallWindows(arg0: level.DecoZone): Void {
+    }
 
-  function addSuspendedCages(z: level.DecoTypes.DecoTypes) {}
+    public function addSuspendedCages(arg0: level.DecoZone): Void {
+    }
 
-  function addAnimatedPainting(x: Float, floorY: Float) {}
+    public function addAnimatedPainting(arg0: Float, arg1: Float): Void {
+    }
 
-  function renderBackWalls() {}
+    public override function renderBackWalls(): Void {
+    }
 
-  function renderWallTransitions() {}
+    public override function renderWallTransitions(): Void {
+    }
 
-  function renderFrise() {}
+    public function renderFrise(): Void {
+    }
 
-  function renderCrenels() {}
+    public function renderCrenels(): Void {
+    }
 
-  function createHoleGrid(r: level.Room.Room, rGrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public override function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: createHoleGrid not decompiled";
+    }
 
-  function addHoleBackground(room: level.Room.Room, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public override function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function roomIsPartOfBigRoom(room: level.Room.Room): Bool {}
+    public function roomIsPartOfBigRoom(arg0: level.Room): Bool {
+        throw "stub: roomIsPartOfBigRoom not decompiled";
+    }
 
-  function computeBigRoomCoords(xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public function computeBigRoomCoords(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function addBigRoomBackground(xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public function addBigRoomBackground(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function placeWindow(cx: Int, cy: Int, hei: Int, wid: Int, nameBot: String, botHei: Int, nameMid: String, midHei: Int, nameTop: String, topHei: Int, abortFlags: Dynamic) {}
+    public function placeWindow(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: String, arg5: Int, arg6: String, arg7: Int, arg8: String, arg9: Int, arg10: Dynamic): Void {
+    }
 
-  function placeColumn(cx: Int, cyTop: Int, cyBot: Int, hei: Int, nameBot: String, nameMid: String, nameBeforeTop: String, nameTop: String, nameLeftCorner: String, nameRightCorner: String, overrideGroup: libs.heaps.StaticGeometryGroup.StaticGeometryGroup) {}
+    public function placeColumn(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: String, arg5: String, arg6: String, arg7: String, arg8: String, arg9: String, arg10: libs.heaps.StaticGeometryGroup): Void {
+    }
 
-  function placeRoof(cx: Int, cy: Int, hei: Int, wid: Int, layer: String) {}
+    public function placeRoof(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: String): Void {
+    }
 
-  function addCustomParallaxElement(name: String, posX: Int, posY: Int, speedX: Float, speedY: Float): Dynamic {}
+    public function addCustomParallaxElement(arg0: String, arg1: Int, arg2: Int, arg3: Float, arg4: Float): Dynamic {
+        throw "stub: addCustomParallaxElement not decompiled";
+    }
 
-  function moveHauntedArmorsToAlcoves() {}
+    public function moveHauntedArmorsToAlcoves(): Void {
+    }
 
-  function getParallaxScrollMaxY(inf: Dynamic): Dynamic {}
+    public function getParallaxScrollMaxY(arg0: Dynamic): Dynamic {
+        throw "stub: getParallaxScrollMaxY not decompiled";
+    }
 
-  function getGeometryGroupFromLayer(layer: String): libs.heaps.StaticGeometryGroup.StaticGeometryGroup {}
+    public function getGeometryGroupFromLayer(arg0: String): libs.heaps.StaticGeometryGroup {
+        throw "stub: getGeometryGroupFromLayer not decompiled";
+    }
 }
-

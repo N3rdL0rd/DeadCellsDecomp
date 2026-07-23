@@ -1,22 +1,33 @@
 package tool.mainSkills;
+
 class JumpBeheaded extends tool.mainSkills.Jump {
-  var jumpExtra: Int;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var jumpExtra: Int;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function passiveFixedUpdate() {}
+    public override function passiveFixedUpdate(): Void {
+    }
 
-  function normalJump() {}
+    public override function normalJump(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

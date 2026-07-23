@@ -1,10 +1,12 @@
 package tool.log;
+
 class TraceOutput {
-  var minSeverity: Dynamic;
-  var <none>: Dynamic;
+    public var minSeverity: tool.log.Severity;
+    public var : Dynamic;
 
-  function __constructor__(data: Dynamic) {}
+    public function new(arg0: Dynamic) {
+    }
 
-  function receiveLog(logEntry: Dynamic) {}
+    public function receiveLog(arg0: Dynamic): Void {
+    }
 }
-

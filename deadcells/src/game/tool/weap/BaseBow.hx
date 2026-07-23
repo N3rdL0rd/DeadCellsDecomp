@@ -1,49 +1,78 @@
 package tool.weap;
+
 class BaseBow extends tool.Weapon {
-  var chargeAnims: hl.types.ArrayObj<Dynamic>;
-  var shootAnims: hl.types.ArrayObj<Dynamic>;
-  var autoFireTickS: Float;
-  var startAnimRatio: Float;
-  var bowChargeF: Float;
-  var fullChargeAnnounce: Int;
-  var overlapAnimSpeed: Float;
+    public var chargeAnims: Array<Dynamic>;
+    public var shootAnims: Array<Dynamic>;
+    public var autoFireTickS: Float;
+    public var startAnimRatio: Float;
+    public var bowChargeF: Float;
+    public var fullChargeAnnounce: Int;
+    public var overlapAnimSpeed: Float;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function initAnimIds() {}
+    public function initAnimIds(): Void {
+    }
 
-  function dynOnAttackAnim(cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function isPlayingAttackAnim(): Bool {}
+    public override function isPlayingAttackAnim(): Bool {
+        throw "stub: isPlayingAttackAnim not decompiled";
+    }
 
-  function getAnimSpeed(): Dynamic {}
+    public function getAnimSpeed(): Dynamic {
+        throw "stub: getAnimSpeed not decompiled";
+    }
 
-  function onBowChargeStart() {}
+    public function onBowChargeStart(): Void {
+    }
 
-  function onBowCharging(r: Float) {}
+    public function onBowCharging(arg0: Float): Void {
+    }
 
-  function getBowElapsedChargeS(): Float {}
+    public function getBowElapsedChargeS(): Float {
+        throw "stub: getBowElapsedChargeS not decompiled";
+    }
 
-  function getFullChargeRatio(): Float {}
+    public function getFullChargeRatio(): Float {
+        throw "stub: getFullChargeRatio not decompiled";
+    }
 
-  function isFullCharge(): Bool {}
+    public function isFullCharge(): Bool {
+        throw "stub: isFullCharge not decompiled";
+    }
 
-  function interrupt() {}
+    public override function interrupt(): Void {
+    }
 
-  function getAnimId(): String {}
+    public function getAnimId(): String {
+        throw "stub: getAnimId not decompiled";
+    }
 
-  function getShootAnimId(): String {}
+    public function getShootAnimId(): String {
+        throw "stub: getShootAnimId not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function playShootAnim() {}
+    public function playShootAnim(): Void {
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public function shoot(arg0: Array<Dynamic>): Void {
+    }
 
-  function dynamicChargeExecute() {}
+    public function dynamicChargeExecute(): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 }
-

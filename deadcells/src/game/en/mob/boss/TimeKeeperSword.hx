@@ -1,41 +1,61 @@
 package en.mob.boss;
+
 class TimeKeeperSword extends Entity {
-  var heiC: Int;
-  var be: en.mob.boss.TimeKeeper.TimeKeeper;
-  var area: tool.Area.Area;
-  var ceilY: Int;
-  var ots: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var heiC: Int;
+    public var be: en.mob.boss.TimeKeeper;
+    public var area: tool.Area;
+    public var ceilY: Int;
+    public var ots: Array<Dynamic>;
 
-  function __constructor__(be: en.mob.boss.TimeKeeper.TimeKeeper, lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: en.mob.boss.TimeKeeper, arg1: pr.Level, arg2: Int, arg3: Int) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function canBeHit(): Bool {}
+    public override function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function disappear() {}
+    public function disappear(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

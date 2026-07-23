@@ -1,80 +1,120 @@
 package en.loot;
+
 class Ammo extends en.Loot {
-  var item: tool.InventItem.InventItem;
-  var dr: Float;
-  var ang: Float;
-  var shakeRotSpd: Float;
-  var baseAng: Float;
-  var bounces: Int;
-  var snappedEnt: Entity;
-  var snapOff: Dynamic;
-  var allowManualRecovery: Bool;
-  var stuckInWall: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var item: tool.InventItem;
+    public var dr: Float;
+    public var ang: Float;
+    public var shakeRotSpd: Float;
+    public var baseAng: Float;
+    public var bounces: Int;
+    public var snappedEnt: Entity;
+    public var snapOff: Dynamic;
+    public var allowManualRecovery: Bool;
+    public var stuckInWall: Bool;
 
-  function onManualPickUp() {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.Team) {
+        super();
+    }
 
-  function beforeFallFromEntity() {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.Team): en.loot.Ammo {
+        throw "stub: create not decompiled";
+    }
 
-  function doCustomFx() {}
+    public static function countOnEntity(arg0: Entity): Int {
+        throw "stub: countOnEntity not decompiled";
+    }
 
-  function doCustomUpdate() {}
+    public static function dropFromEntity(arg0: Entity, arg1: Dynamic, arg2: Dynamic): Bool {
+        throw "stub: dropFromEntity not decompiled";
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, team: tool.Team.Team): Ammo {}
+    public override function initGfx(): Void {
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, team: tool.Team.Team) {}
+    public override function startMagnet(arg0: Entity): Void {
+    }
 
-  static function dropFromEntity(e: Entity, n: Dynamic, immediateGrab: Dynamic): Bool {}
+    public function stickInWall(arg0: en.Bullet): Void {
+    }
 
-  static function countOnEntity(e: Entity): Int {}
+    public function stickToEntity(arg0: en.Bullet, arg1: Entity): Void {
+    }
 
-  function initGfx() {}
+    public function bulletBlocked(arg0: en.Bullet): Void {
+    }
 
-  function startMagnet(e: Entity) {}
+    public function bulletVanish(arg0: en.Bullet): Void {
+    }
 
-  function stickInWall(b: en.Bullet.Bullet) {}
+    public function droppedByMob(arg0: String): Void {
+    }
 
-  function stickToEntity(b: en.Bullet.Bullet, e: Entity) {}
+    public override function canBePickedUpBy(arg0: Entity): Bool {
+        throw "stub: canBePickedUpBy not decompiled";
+    }
 
-  function bulletBlocked(b: en.Bullet.Bullet) {}
+    public function retrieve(arg0: en.Hero): Void {
+    }
 
-  function bulletVanish(b: en.Bullet.Bullet) {}
+    public override function pickUp(arg0: en.Hero): Void {
+    }
 
-  function droppedByMob(sprId: String) {}
+    public override function dispose(): Void {
+    }
 
-  function canBePickedUpBy(e: Entity): Bool {}
+    public function onTouchGround(): Void {
+    }
 
-  function retrieve(h: en.Hero.Hero) {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function pickUp(h: en.Hero.Hero) {}
+    public function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function dispose() {}
+    public function onLeaveMap(): Void {
+    }
 
-  function onTouchGround() {}
+    public function fallFromEntity(arg0: Dynamic): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function fallFromEntity(immediateGrab: Dynamic) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function unserializeInit(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function doCustomUpdate(): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function doCustomFx(): Void {
+    }
 
-  function unserializeInit() {}
+    public function beforeFallFromEntity(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onManualPickUp(): Void {
+    }
 }
-

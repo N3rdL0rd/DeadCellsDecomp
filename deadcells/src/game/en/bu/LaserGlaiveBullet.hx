@@ -1,38 +1,55 @@
 package en.bu;
+
 class LaserGlaiveBullet extends en.Bullet {
-  var hitEntities: hl.types.ArrayObj<Dynamic>;
-  var bounceCount: Int;
-  var speed: Float;
-  var bounceDmgMul: Float;
-  var critBounce: Int;
-  var currentHitFrame: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var hitEntities: Array<Dynamic>;
+    public var bounceCount: Int;
+    public var speed: Float;
+    public var bounceDmgMul: Float;
+    public var critBounce: Int;
+    public var currentHitFrame: Int;
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, speed: Float, bounceDmgMul: Float, critBounce: Int, pierceCount: Int) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function onCooldownEnd(cooldownName: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function bounce() {}
+    public function bounce(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

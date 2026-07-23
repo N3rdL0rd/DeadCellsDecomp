@@ -1,78 +1,123 @@
 package tool.weap.dual;
-class SnakeSwordSwap extends tool.Weapon.Weapon {
-  var isFirstWeapon: Bool;
-  var nextIsAttack: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+class SnakeSwordBase extends tool.Weapon {
+    public var isFirstWeapon: Bool;
 
-  function get_cycle(): Int {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function cycleIsAttack(): Bool {}
+    public function getOtherWeapon(): tool.Weapon {
+        throw "stub: getOtherWeapon not decompiled";
+    }
 
-  function incrementCycle() {}
+    public override function incrementCycle(): Void {
+    }
 
-  function getOtherWeapon(): tool.Weapon.Weapon {}
+    public function swapWeapon(): Void {
+    }
 
-  function getPerfectTiming(): Bool {}
+    public function onSwapCreate(): Void {
+    }
 
-  function dynOnInterrupt(s: tool.Weapon.WeaponSkill, r: Float) {}
+    public function getLastWeaponCycle(): Int {
+        throw "stub: getLastWeaponCycle not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function swapWeapon() {}
+    public function onCreateAttack(arg0: tool.atk.AttackData): tool.atk.AttackData {
+        throw "stub: onCreateAttack not decompiled";
+    }
 
-  function fixedUpdate() {}
-
-  function dynOnFxFrame(s: tool.Weapon.WeaponSkill, cinf: Dynamic) {}
-}
-
-class SnakeSwordBase extends tool.Weapon.Weapon {
-  var isFirstWeapon: Bool;
-
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
-
-  function getOtherWeapon(): tool.Weapon.Weapon {}
-
-  function incrementCycle() {}
-
-  function swapWeapon() {}
-
-  function onSwapCreate() {}
-
-  function getLastWeaponCycle(): Int {}
-
-  function onExecute(): Bool {}
-
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
-
-  function onCreateAttack(atk: tool.atk.AttackData.AttackData): tool.atk.AttackData.AttackData {}
-
-  function dynOnFxFrame(s: tool.Weapon.WeaponSkill, cinf: Dynamic) {}
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 }
 
 class SnakeSwordWeapon extends tool.weap.dual.SnakeSwordBase {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function onSwapCreate(): Void {
+    }
 
-  function onSwapCreate() {}
+    public override function swapWeapon(): Void {
+    }
 
-  function swapWeapon() {}
-
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 }
 
 class SnakeSwordWeaponAlt extends tool.weap.dual.SnakeSwordBase {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function onSwapCreate(): Void {
+    }
 
-  function onSwapCreate() {}
+    public override function swapWeapon(): Void {
+    }
 
-  function swapWeapon() {}
+    public override function onCreateAttack(arg0: tool.atk.AttackData): tool.atk.AttackData {
+        throw "stub: onCreateAttack not decompiled";
+    }
 
-  function onCreateAttack(atk: tool.atk.AttackData.AttackData): tool.atk.AttackData.AttackData {}
-
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 }
 
+class SnakeSwordSwap extends tool.Weapon {
+    public var isFirstWeapon: Bool;
+    public var nextIsAttack: Bool;
+
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
+
+    public override function get_cycle(): Int {
+        throw "stub: get_cycle not decompiled";
+    }
+
+    public function cycleIsAttack(): Bool {
+        throw "stub: cycleIsAttack not decompiled";
+    }
+
+    public override function incrementCycle(): Void {
+    }
+
+    public function getOtherWeapon(): tool.Weapon {
+        throw "stub: getOtherWeapon not decompiled";
+    }
+
+    public function getPerfectTiming(): Bool {
+        throw "stub: getPerfectTiming not decompiled";
+    }
+
+    public override function dynOnInterrupt(arg0: tool.WeaponSkill, arg1: Float): Void {
+    }
+
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
+
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
+
+    public function swapWeapon(): Void {
+    }
+
+    public override function fixedUpdate(): Void {
+    }
+
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
+}

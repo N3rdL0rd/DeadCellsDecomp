@@ -1,42 +1,71 @@
 package en.mob.boss.giant;
+
 class SecondaryHand extends en.mob.boss.giant.HandBase {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  function __constructor__(giant: en.mob.boss.Giant.Giant, right: Bool, damageTier: Int, lifeTier: Int) {}
+    public function new(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int) {
+        super();
+    }
 
-  static function create(giant: en.mob.boss.Giant.Giant, right: Bool, damageTier: Int, lifeTier: Int): SecondaryHand {}
+    public static function create(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int): en.mob.boss.giant.SecondaryHand {
+        throw "stub: create not decompiled";
+    }
 
-  function get_idleX(): Float {}
+    public override function get_idleX(): Float {
+        throw "stub: get_idleX not decompiled";
+    }
 
-  function get_idleY(): Float {}
+    public override function get_idleY(): Float {
+        throw "stub: get_idleY not decompiled";
+    }
 
-  function getShootY(): Float {}
+    public override function getShootY(): Float {
+        throw "stub: getShootY not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initGridPatterns() {}
+    public override function initGridPatterns(): Void {
+    }
 
-  function canChoose(): Bool {}
+    public override function canChoose(): Bool {
+        throw "stub: canChoose not decompiled";
+    }
 
-  function canChooseAction(newAction: Dynamic): Bool {}
+    public override function canChooseAction(arg0: en.mob.boss.giant.GHAction): Bool {
+        throw "stub: canChooseAction not decompiled";
+    }
 
-  function doSuperCharge(inf: Dynamic, atk: tool.skill.OldMobSkill.OldMobSkill) {}
+    public override function doSuperCharge(arg0: Dynamic, arg1: tool.skill.OldMobSkill): Void {
+    }
 
-  function doBulletHell(inf: Dynamic, atk: tool.skill.OldMobSkill.OldMobSkill) {}
+    public override function doBulletHell(arg0: Dynamic, arg1: tool.skill.OldMobSkill): Void {
+    }
 
-  function addToBody(body: h2d.Layers.Layers) {}
+    public override function addToBody(arg0: h2d.Layers): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function startAction(action: Dynamic) {}
+    public override function startAction(arg0: en.mob.boss.giant.GHAction): Void {
+    }
 
-  function chooseAction(): Dynamic {}
+    public override function chooseAction(): en.mob.boss.giant.GHAction {
+        throw "stub: chooseAction not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

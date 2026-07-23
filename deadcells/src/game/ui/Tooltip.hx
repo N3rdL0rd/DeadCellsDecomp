@@ -1,40 +1,57 @@
 package ui;
+
 class Tooltip extends ui.Window {
-  var x: Float;
-  var y: Float;
-  var offset: Int;
-  var pos: Dynamic;
-  var pointer: libs.heaps.slib.HSprite.HSprite;
-  var visible: Bool;
-  var clampInScreen: Bool;
-  var trackedEnt: Entity;
-  var itemDesc: ui.NewItemDesc.NewItemDesc;
-  var level: pr.Level.Level;
+    public var x: Float;
+    public var y: Float;
+    public var offset: Int;
+    public var pos: ui.Position;
+    public var pointer: libs.heaps.slib.HSprite;
+    public var visible: Bool;
+    public var clampInScreen: Bool;
+    public var trackedEnt: Entity;
+    public var itemDesc: ui.NewItemDesc;
+    public var level: pr.Level;
 
-  function __constructor__(level: pr.Level.Level, plan: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Dynamic) {
+        super();
+    }
 
-  function show() {}
+    public function show(): Void {
+    }
 
-  function hide(instant: Dynamic) {}
+    public function hide(arg0: Ref): Void {
+    }
 
-  function trackEntity(viewport: Viewport, e: Entity, pos: Dynamic, off: Dynamic) {}
+    public function trackEntity(arg0: Viewport, arg1: Entity, arg2: ui.Position, arg3: Dynamic): Void {
+    }
 
-  function addPointer() {}
+    public function addPointer(): Void {
+    }
 
-  function newItem(i: tool.InventItem.InventItem, buyValue: Dynamic, sellValue: Dynamic) {}
+    public function newItem(arg0: tool.InventItem, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function clear() {}
+    public override function clear(): Void {
+    }
 
-  function render() {}
+    public override function render(): Void {
+    }
 
-  function getTrackedX(): Float {}
+    public function getTrackedX(): Float {
+        throw "stub: getTrackedX not decompiled";
+    }
 
-  function getTrackedY(): Float {}
+    public function getTrackedY(): Float {
+        throw "stub: getTrackedY not decompiled";
+    }
 
-  function getSize(): Dynamic {}
+    public function getSize(): Dynamic {
+        throw "stub: getSize not decompiled";
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

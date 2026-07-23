@@ -1,22 +1,35 @@
 package en.dookuInteractions;
+
 class DookuInteractionCurseFood extends en.dookuInteractions.DookuInteraction {
-  var possibleFoods: hl.types.ArrayObj<Dynamic>;
-  var food: en.inter.ItemDrop.ItemDrop;
+    public var possibleFoods: Array<Dynamic>;
+    public var food: en.inter.ItemDrop;
 
-  function __constructor__(parent: en.dookuInteractions.DookuInteractionsManager.DookuInteractionsManager) {}
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+        super();
+    }
 
-  function initTexts() {}
+    public override function initTexts(): Void {
+    }
 
-  function canTrigger(): Bool {}
+    public override function canTrigger(): Bool {
+        throw "stub: canTrigger not decompiled";
+    }
 
-  function onStartup() {}
+    public override function onStartup(): Void {
+    }
 
-  function dynOnExecute() {}
+    public override function dynOnExecute(): Void {
+    }
 
-  function getRandomFood(): en.inter.ItemDrop.ItemDrop {}
+    public function getRandomFood(): en.inter.ItemDrop {
+        throw "stub: getRandomFood not decompiled";
+    }
 
-  function getDookuPos(): Dynamic {}
+    public override function getDookuPos(): h2d.col.IPoint {
+        throw "stub: getDookuPos not decompiled";
+    }
 
-  function getDookuDir(): Int {}
+    public override function getDookuDir(): Int {
+        throw "stub: getDookuDir not decompiled";
+    }
 }
-

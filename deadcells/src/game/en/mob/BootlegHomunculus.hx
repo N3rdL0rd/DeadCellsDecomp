@@ -1,36 +1,52 @@
 package en.mob;
+
 class BootlegHomunculus extends en.mob.BootlegBase {
-  var homunculusOut: Bool;
-  var homunculus: en.mob.WeakHomunculusHead.WeakHomunculusHead;
-  var throwHead: tool.skill.OldMobSkill.OldMobSkill;
-  var throwHeadInf: Dynamic;
-  var recallHead: tool.skill.OldMobSkill.OldMobSkill;
-  var recallHeadInf: Dynamic;
-  var dmgTier: Int;
-  var lifeTier: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var homunculusOut: Bool;
+    public var homunculus: en.mob.WeakHomunculusHead;
+    public var throwHead: tool.skill.OldMobSkill;
+    public var throwHeadInf: Dynamic;
+    public var recallHead: tool.skill.OldMobSkill;
+    public var recallHeadInf: Dynamic;
+    public var dmgTier: Int;
+    public var lifeTier: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, reveal: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, reveal: Bool): BootlegHomunculus {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): en.mob.BootlegHomunculus {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

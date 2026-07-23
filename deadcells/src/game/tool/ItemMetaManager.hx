@@ -1,139 +1,243 @@
 package tool;
+
 class ItemMetaManager {
-  var _user: User;
-  var itemProgress: hl.types.ArrayObj<Dynamic>;
-  var permanentItems: hl.types.ArrayObj<Dynamic>;
-  var forgeInvestedCells: haxe.ds.IntMap<Dynamic>;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var _user: User;
+    public var itemProgress: Array<Dynamic>;
+    public var permanentItems: Array<Dynamic>;
+    public var forgeInvestedCells: haxe.ds.IntMap;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(user: User) {}
+    public function new(arg0: User) {
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function importOldUser(user: User) {}
+    public function importOldUser(arg0: User): Void {
+    }
 
-  function revealAllBaseItems() {}
+    public function revealAllBaseItems(): Void {
+    }
 
-  function revealItem(k: String, showAsNew: Bool): Bool {}
+    public function revealItem(arg0: String, arg1: Bool): Bool {
+        throw "stub: revealItem not decompiled";
+    }
 
-  function getItemProgress(k: String): tool.ItemMetaManager.ItemMetaManager {}
+    public function getItemProgress(arg0: String): tool.ItemProgress {
+        throw "stub: getItemProgress not decompiled";
+    }
 
-  function hasUnlockedItem(k: String): Bool {}
+    public function hasUnlockedItem(arg0: String): Bool {
+        throw "stub: hasUnlockedItem not decompiled";
+    }
 
-  function unlockItem(k: String): Bool {}
+    public function unlockItem(arg0: String): Bool {
+        throw "stub: unlockItem not decompiled";
+    }
 
-  function relockItem(k: String) {}
+    public function relockItem(arg0: String): Void {
+    }
 
-  function unrevealItem(k: String) {}
+    public function unrevealItem(arg0: String): Void {
+    }
 
-  function getAllLockedItems(): hl.types.ArrayObj<Dynamic> {}
+    public function getAllLockedItems(): Array<Dynamic> {
+        throw "stub: getAllLockedItems not decompiled";
+    }
 
-  function getAllUnlockedWeapons(): hl.types.ArrayObj<Dynamic> {}
+    public function getAllUnlockedWeapons(): Array<Dynamic> {
+        throw "stub: getAllUnlockedWeapons not decompiled";
+    }
 
-  function getAllUnlockedSkills(): hl.types.ArrayObj<Dynamic> {}
+    public function getAllUnlockedSkills(): Array<Dynamic> {
+        throw "stub: getAllUnlockedSkills not decompiled";
+    }
 
-  function getAllUnlockedPerks(): hl.types.ArrayObj<Dynamic> {}
+    public function getAllUnlockedPerks(): Array<Dynamic> {
+        throw "stub: getAllUnlockedPerks not decompiled";
+    }
 
-  function getAllMetaUnlocked(): hl.types.ArrayObj<Dynamic> {}
+    public function getAllMetaUnlocked(): Array<Dynamic> {
+        throw "stub: getAllMetaUnlocked not decompiled";
+    }
 
-  function hasRevealedItem(k: String): Bool {}
+    public function hasRevealedItem(arg0: String): Bool {
+        throw "stub: hasRevealedItem not decompiled";
+    }
 
-  function hasRevealedItemOrInCollector(k: String): Bool {}
+    public function hasRevealedItemOrInCollector(arg0: String): Bool {
+        throw "stub: hasRevealedItemOrInCollector not decompiled";
+    }
 
-  function countUnlockedItems(): Int {}
+    public function countUnlockedItems(): Int {
+        throw "stub: countUnlockedItems not decompiled";
+    }
 
-  function getAllMetaKeys(): hl.types.ArrayObj<Dynamic> {}
+    public function getAllMetaKeys(): Array<Dynamic> {
+        throw "stub: getAllMetaKeys not decompiled";
+    }
 
-  function hasPermanentItem(k: String): Bool {}
+    public function hasPermanentItem(arg0: String): Bool {
+        throw "stub: hasPermanentItem not decompiled";
+    }
 
-  function addPermanentItem(k: String): Bool {}
+    public function addPermanentItem(arg0: String): Bool {
+        throw "stub: addPermanentItem not decompiled";
+    }
 
-  function hasItemToUnlock(): Bool {}
+    public function hasItemToUnlock(): Bool {
+        throw "stub: hasItemToUnlock not decompiled";
+    }
 
-  function getDeathMoneyRetrieval(forcedMetaMoneyCount: Dynamic): Int {}
+    public function getDeathMoneyRetrieval(arg0: Ref): Int {
+        throw "stub: getDeathMoneyRetrieval not decompiled";
+    }
 
-  function getForgeMaxRefineCount(): Int {}
+    public function getForgeMaxRefineCount(): Int {
+        throw "stub: getForgeMaxRefineCount not decompiled";
+    }
 
-  function getForgeRefineProgress(): Int {}
+    public function getForgeRefineProgress(): Int {
+        throw "stub: getForgeRefineProgress not decompiled";
+    }
 
-  function getMetaMoneyCount(): Int {}
+    public function getMetaMoneyCount(): Int {
+        throw "stub: getMetaMoneyCount not decompiled";
+    }
 
-  function getHealingsCount(): Int {}
+    public function getHealingsCount(): Int {
+        throw "stub: getHealingsCount not decompiled";
+    }
 
-  function getRecycleCount(): Int {}
+    public function getRecycleCount(): Int {
+        throw "stub: getRecycleCount not decompiled";
+    }
 
-  function canRecycle(): Bool {}
+    public function canRecycle(): Bool {
+        throw "stub: canRecycle not decompiled";
+    }
 
-  function canInvestOnItem(k: String): Bool {}
+    public function canInvestOnItem(arg0: String): Bool {
+        throw "stub: canInvestOnItem not decompiled";
+    }
 
-  function investOnItemProgress(k: String): Bool {}
+    public function investOnItemProgress(arg0: String): Bool {
+        throw "stub: investOnItemProgress not decompiled";
+    }
 
-  function listSkinAvailable(): hl.types.ArrayObj<Dynamic> {}
+    public function listSkinAvailable(): Array<Dynamic> {
+        throw "stub: listSkinAvailable not decompiled";
+    }
 
-  function listHeadsAvailable(): hl.types.ArrayObj<Dynamic> {}
+    public function listHeadsAvailable(): Array<Dynamic> {
+        throw "stub: listHeadsAvailable not decompiled";
+    }
 
-  function canUseSkinRoom(): Bool {}
+    public function canUseSkinRoom(): Bool {
+        throw "stub: canUseSkinRoom not decompiled";
+    }
 
-  function cleanDuplicatedItemProgress() {}
+    public function cleanDuplicatedItemProgress(): Void {
+    }
 
-  function f_getMaxUpgradeLevel(): Int {}
+    public function f_getMaxUpgradeLevel(): Int {
+        throw "stub: f_getMaxUpgradeLevel not decompiled";
+    }
 
-  function f_getMaxCells(upLevel: Int): Float {}
+    public function f_getMaxCells(arg0: Int): Float {
+        throw "stub: f_getMaxCells not decompiled";
+    }
 
-  function f_getMaxCellsOnCurrentBC(upLevel: Int): Int {}
+    public function f_getMaxCellsOnCurrentBC(arg0: Int): Int {
+        throw "stub: f_getMaxCellsOnCurrentBC not decompiled";
+    }
 
-  function f_getInvestedCells(upLevel: Int): Float {}
+    public function f_getInvestedCells(arg0: Int): Float {
+        throw "stub: f_getInvestedCells not decompiled";
+    }
 
-  function f_getRawInvestedRatio(upLevel: Int): Float {}
+    public function f_getRawInvestedRatio(arg0: Int): Float {
+        throw "stub: f_getRawInvestedRatio not decompiled";
+    }
 
-  function f_getUnlockedLootRatio(upLevel: Int): Float {}
+    public function f_getUnlockedLootRatio(arg0: Int): Float {
+        throw "stub: f_getUnlockedLootRatio not decompiled";
+    }
 
-  function f_getIngameLootRatio(upLevel: Int): Float {}
+    public function f_getIngameLootRatio(arg0: Int): Float {
+        throw "stub: f_getIngameLootRatio not decompiled";
+    }
 
-  function f_getMaxLootRatio(upLevel: Int): Float {}
+    public function f_getMaxLootRatio(arg0: Int): Float {
+        throw "stub: f_getMaxLootRatio not decompiled";
+    }
 
-  function f_isBarComplete(upLevel: Int): Bool {}
+    public function f_isBarComplete(arg0: Int): Bool {
+        throw "stub: f_isBarComplete not decompiled";
+    }
 
-  function f_canInvestOn(upLevel: Int): Bool {}
+    public function f_canInvestOn(arg0: Int): Bool {
+        throw "stub: f_canInvestOn not decompiled";
+    }
 
-  function f_investOn(upLevel: Int): Bool {}
+    public function f_investOn(arg0: Int): Bool {
+        throw "stub: f_investOn not decompiled";
+    }
 
-  function f_getMinBCRequiredCurrent(upLevel: Int, currentProgress: Float): Int {}
+    public function f_getMinBCRequiredCurrent(arg0: Int, arg1: Float): Int {
+        throw "stub: f_getMinBCRequiredCurrent not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class ItemProgress {
-  var itemId: String;
-  var investedCells: Int;
-  var isNew: Bool;
-  var unlocked: Bool;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var itemId: String;
+    public var investedCells: Int;
+    public var isNew: Bool;
+    public var unlocked: Bool;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(i: String) {}
+    public function new(arg0: String) {
+    }
 
-  function hasTag(t: String): Bool {}
+    public function hasTag(arg0: String): Bool {
+        throw "stub: hasTag not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

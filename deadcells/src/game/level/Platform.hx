@@ -1,30 +1,44 @@
 package level;
+
 class Platform {
-  var lMap: level.LevelMap.LevelMap;
-  var left: Int;
-  var walkY: Int;
-  var collY: Int;
-  var wid: Int;
-  var heights: hl.types.ArrayBytes<Int>;
-  var minHeight: Int;
-  var maxHeight: Int;
-  var occupations: haxe.ds.IntMap<Dynamic>;
-  var occupiedCount: Int;
+    public var lMap: level.LevelMap;
+    public var left: Int;
+    public var walkY: Int;
+    public var collY: Int;
+    public var wid: Int;
+    public var heights: Array<Int>;
+    public var minHeight: Int;
+    public var maxHeight: Int;
+    public var occupations: haxe.ds.IntMap;
+    public var occupiedCount: Int;
 
-  function __constructor__(map: level.LevelMap.LevelMap, left: Int, y: Int, wid: Int) {}
+    public function new(arg0: level.LevelMap, arg1: Int, arg2: Int, arg3: Int) {
+    }
 
-  function getPoints(): hl.types.ArrayObj<Dynamic> {}
+    public function getPoints(): Array<Dynamic> {
+        throw "stub: getPoints not decompiled";
+    }
 
-  function getFreePoints(): hl.types.ArrayObj<Dynamic> {}
+    public function getFreePoints(): Array<Dynamic> {
+        throw "stub: getFreePoints not decompiled";
+    }
 
-  function addOccupation(globalCx: Int, dist: Dynamic) {}
+    public function addOccupation(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function listFreeXs(borderDist: Dynamic, inRoom: level.Room.Room, isFreeCond: Dynamic): hl.types.ArrayBytes<Int> {}
+    public function listFreeXs(arg0: Dynamic, arg1: level.Room, arg2: Dynamic): Array<Int> {
+        throw "stub: listFreeXs not decompiled";
+    }
 
-  function overlapsRoom(rid: Int): Bool {}
+    public function overlapsRoom(arg0: Int): Bool {
+        throw "stub: overlapsRoom not decompiled";
+    }
 
-  function hasRoomType(t: String): Bool {}
+    public function hasRoomType(arg0: String): Bool {
+        throw "stub: hasRoomType not decompiled";
+    }
 
-  function isInRoomGroup(roomGroup: Int): Bool {}
+    public function isInRoomGroup(arg0: Int): Bool {
+        throw "stub: isInRoomGroup not decompiled";
+    }
 }
-

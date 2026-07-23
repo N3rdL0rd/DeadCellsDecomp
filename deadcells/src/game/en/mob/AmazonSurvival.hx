@@ -1,129 +1,202 @@
 package en.mob;
+
 class AmazonSurvival extends en.mob.AmazonBase {
-  var jumpData: hxbit.Macros.Macros;
-  var isRunning: Bool;
-  var teleportPhase: Bool;
-  var atkType: Dynamic;
-  var ballAttackNoPullCount: Int;
-  var tryToPreventDeathBool: Bool;
-  var wreckingBallChain: Bool;
-  var needResetFromPos: Bool;
-  var firstBossFightPotionTaken: Bool;
-  var secondBossFightPotionTaken: Bool;
-  var chainHookRight: tool.HookChainSurvival.HookChainSurvival;
-  var chainHookLeft: tool.HookChainSurvival.HookChainSurvival;
-  var walking: Bool;
-  var ccMissedToCc2: Int;
-  var ccNextIsCc2: Bool;
-  var ccMissedCounter: Int;
-  var ccTouched: Bool;
-  var survivalBossRushModifiers: Dynamic;
-  var sbFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var chainLeft: AmazonSurvivalChain;
-  var chainRight: AmazonSurvivalChain;
-  var animTracks: haxe.ds.StringMap;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var isRunning: Bool;
+    public var teleportPhase: Bool;
+    public var atkType: en.mob.BallAtkType;
+    public var ballAttackNoPullCount: Int;
+    public var tryToPreventDeathBool: Bool;
+    public var wreckingBallChain: Bool;
+    public var needResetFromPos: Bool;
+    public var firstBossFightPotionTaken: Bool;
+    public var secondBossFightPotionTaken: Bool;
+    public var chainHookRight: tool.HookChainSurvival;
+    public var chainHookLeft: tool.HookChainSurvival;
+    public var walking: Bool;
+    public var ccMissedToCc2: Int;
+    public var ccNextIsCc2: Bool;
+    public var ccMissedCounter: Int;
+    public var ccTouched: Bool;
+    public var survivalBossRushModifiers: Dynamic;
+    public var sbFx: libs.heaps.slib.HSpriteBatch;
+    public var chainLeft: en.mob.AmazonSurvivalChain;
+    public var chainRight: en.mob.AmazonSurvivalChain;
+    public var animTracks: haxe.ds.StringMap;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, reveal: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, reveal: Bool): AmazonSurvival {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): en.mob.AmazonSurvival {
+        throw "stub: create not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_ballLeftTipTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_ballLeftTipTracks(): Array<Int> {
+        throw "stub: get_ballLeftTipTracks not decompiled";
+    }
 
-  function get_ballRightTipTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_ballRightTipTracks(): Array<Int> {
+        throw "stub: get_ballRightTipTracks not decompiled";
+    }
 
-  function get_handLeftTipTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_handLeftTipTracks(): Array<Int> {
+        throw "stub: get_handLeftTipTracks not decompiled";
+    }
 
-  function get_handRightTipTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_handRightTipTracks(): Array<Int> {
+        throw "stub: get_handRightTipTracks not decompiled";
+    }
 
-  function get_ballLeftX(): Float {}
+    public function get_ballLeftX(): Float {
+        throw "stub: get_ballLeftX not decompiled";
+    }
 
-  function get_ballLeftY(): Float {}
+    public function get_ballLeftY(): Float {
+        throw "stub: get_ballLeftY not decompiled";
+    }
 
-  function get_ballRightX(): Float {}
+    public function get_ballRightX(): Float {
+        throw "stub: get_ballRightX not decompiled";
+    }
 
-  function get_ballRightY(): Float {}
+    public function get_ballRightY(): Float {
+        throw "stub: get_ballRightY not decompiled";
+    }
 
-  function get_handLeftX(): Float {}
+    public function get_handLeftX(): Float {
+        throw "stub: get_handLeftX not decompiled";
+    }
 
-  function get_handLeftY(): Float {}
+    public function get_handLeftY(): Float {
+        throw "stub: get_handLeftY not decompiled";
+    }
 
-  function get_handRightX(): Float {}
+    public function get_handRightX(): Float {
+        throw "stub: get_handRightX not decompiled";
+    }
 
-  function get_handRightY(): Float {}
+    public function get_handRightY(): Float {
+        throw "stub: get_handRightY not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function registerToManager() {}
+    public override function registerToManager(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function chooseDestination(): Dynamic {}
+    public function chooseDestination(): Dynamic {
+        throw "stub: chooseDestination not decompiled";
+    }
 
-  function unlockAi() {}
+    public function unlockAi(): Void {
+    }
 
-  function bump(_dx: Float, _dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function scream() {}
+    public function scream(): Void {
+    }
 
-  function teleportIf(): Bool {}
+    public function teleportIf(): Bool {
+        throw "stub: teleportIf not decompiled";
+    }
 
-  function pullBack(_atkType: Dynamic) {}
+    public function pullBack(arg0: en.mob.BallAtkType): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function touchHeroWreckingBall(): Bool {}
+    public function touchHeroWreckingBall(): Bool {
+        throw "stub: touchHeroWreckingBall not decompiled";
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onLeaveMap() {}
+    public function onLeaveMap(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function killWreckingBallAtq() {}
+    public function killWreckingBallAtq(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function preUpdate() {}
+    public function preUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public override function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
 
 class AmazonSurvivalChain extends tool.Chain {
+    public function new() {
+        super();
+    }
 
-  function __constructor__() {}
-
-  function createSegment(_lastsegmentLenght: Dynamic): tool.Chain.Chain {}
+    public override function createSegment(arg0: Dynamic): tool.ChainSegment {
+        throw "stub: createSegment not decompiled";
+    }
 }
-

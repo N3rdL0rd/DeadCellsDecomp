@@ -1,154 +1,211 @@
 package en;
+
 class AmazonManager extends Entity {
-  var nearbyPlatforms: hl.types.ArrayObj<Dynamic>;
-  var amazonSurvival: en.mob.AmazonSurvival.AmazonSurvival;
-  var amazonTactic: en.mob.AmazonTactic.AmazonTactic;
-  var amazonBrutal: en.mob.AmazonBrutal.AmazonBrutal;
-  var fireScroll: Bool;
-  var fireInitDone: Bool;
-  var lastKnownHeroRoom: level.Room.Room;
-  var lastRoom: level.Room.Room;
-  var activeAmazon: hl.types.ArrayObj<Dynamic>;
-  var hero: en.Hero.Hero;
-  var hitAreaFire: tool.Area.Area;
-  var fireHitUpOffset: Float;
-  var fireHitDownOffset: Float;
-  var fireHitMinDamageDist: Float;
-  var fireHitMaxDamageDist: Float;
-  var chaseStarted: Bool;
-  var fireStarted: Bool;
-  var fireTargetY: Float;
-  var currentFireSpeed: Float;
-  var noChase: Bool;
-  var currentHeroRoom: level.Room.Room;
-  var heroTriggeredBossRoom: Bool;
-  var heroYOnBossRoomStart: Float;
-  var offsetMinCameraY: Int;
-  var phase: Int;
-  var inFightAmazon: Int;
-  var fightAmazonIndex: Int;
-  var restCycle: Int;
-  var timeInBossRoom: hl.types.ArrayBytes<Float>;
-  var factorBossdeactivated: hl.types.ArrayBytes<Float>;
-  var bossRestCycleCount: hl.types.ArrayBytes<Int>;
-  var timeBossRest: hl.types.ArrayBytes<Float>;
-  var phaseLifeRatio: hl.types.ArrayBytes<Float>;
-  var timeInAscension: Float;
-  var factorBossdeactivatedAsc: Float;
-  var entranceRoom: level.Room.Room;
-  var chasePhase: Int;
-  var chaseFleeSpot1: tool.CPoint.CPoint;
-  var chaseFleeSpot2: tool.CPoint.CPoint;
-  var chaseFleeSpot3: tool.CPoint.CPoint;
-  var canPlaceFire: Bool;
-  var fireMinX: Int;
-  var fireMaxX: Int;
-  var fireFatalFallOffsetCase: Int;
-  var fireStopBeforeBossSpot1: tool.CPoint.CPoint;
-  var fireStopBeforeBossSpot2: tool.CPoint.CPoint;
-  var fireStopBeforeBossSpot3: tool.CPoint.CPoint;
-  var fireStopBeforeBossOffsetCase: Int;
-  var playerQuitedLastBossFight: Bool;
-  var fireStopDuringBossSpot: tool.CPoint.CPoint;
-  var gameTimeAtStartS: Float;
-  var sanicAchievementChecked: Bool;
-  var shouldDropSanicBlueprint: Bool;
-  var canTrackHeroOutOfBossRoom: Bool;
-  var openedDoors: Bool;
-  var afterImageAmazon: libs.heaps.slib.HSprite.HSprite;
-  var fireAmbientChannel: hxd.snd.Channel.Channel;
-  var smogGradientInBossFightMode: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var nearbyPlatforms: Array<Dynamic>;
+    public var amazonSurvival: en.mob.AmazonSurvival;
+    public var amazonTactic: en.mob.AmazonTactic;
+    public var amazonBrutal: en.mob.AmazonBrutal;
+    public var fireScroll: Bool;
+    public var fireInitDone: Bool;
+    public var lastKnownHeroRoom: level.Room;
+    public var lastRoom: level.Room;
+    public var activeAmazon: Array<Dynamic>;
+    public var hero: en.Hero;
+    public var hitAreaFire: tool.Area;
+    public var fireHitUpOffset: Float;
+    public var fireHitDownOffset: Float;
+    public var fireHitMinDamageDist: Float;
+    public var fireHitMaxDamageDist: Float;
+    public var chaseStarted: Bool;
+    public var fireStarted: Bool;
+    public var fireTargetY: Float;
+    public var currentFireSpeed: Float;
+    public var noChase: Bool;
+    public var currentHeroRoom: level.Room;
+    public var heroTriggeredBossRoom: Bool;
+    public var heroYOnBossRoomStart: Float;
+    public var offsetMinCameraY: Int;
+    public var phase: Int;
+    public var inFightAmazon: Int;
+    public var fightAmazonIndex: Int;
+    public var restCycle: Int;
+    public var timeInBossRoom: Array<Float>;
+    public var factorBossdeactivated: Array<Float>;
+    public var bossRestCycleCount: Array<Int>;
+    public var timeBossRest: Array<Float>;
+    public var phaseLifeRatio: Array<Float>;
+    public var timeInAscension: Float;
+    public var factorBossdeactivatedAsc: Float;
+    public var entranceRoom: level.Room;
+    public var chasePhase: Int;
+    public var chaseFleeSpot1: tool.CPoint;
+    public var chaseFleeSpot2: tool.CPoint;
+    public var chaseFleeSpot3: tool.CPoint;
+    public var canPlaceFire: Bool;
+    public var fireMinX: Int;
+    public var fireMaxX: Int;
+    public var fireFatalFallOffsetCase: Int;
+    public var fireStopBeforeBossSpot1: tool.CPoint;
+    public var fireStopBeforeBossSpot2: tool.CPoint;
+    public var fireStopBeforeBossSpot3: tool.CPoint;
+    public var fireStopBeforeBossOffsetCase: Int;
+    public var playerQuitedLastBossFight: Bool;
+    public var fireStopDuringBossSpot: tool.CPoint;
+    public var gameTimeAtStartS: Float;
+    public var sanicAchievementChecked: Bool;
+    public var shouldDropSanicBlueprint: Bool;
+    public var canTrackHeroOutOfBossRoom: Bool;
+    public var openedDoors: Bool;
+    public var afterImageAmazon: libs.heaps.slib.HSprite;
+    public var fireAmbientChannel: hxd.snd.Channel;
+    public var smogGradientInBossFightMode: Bool;
 
-  function onBossFightCinematicStarted() {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+        super();
+    }
 
-  function onBossFightRoomLeft() {}
+    public function get_currentTimeInBossRoom(): Float {
+        throw "stub: get_currentTimeInBossRoom not decompiled";
+    }
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, hero: en.Hero.Hero) {}
+    public function get_allAmazonsDefeated(): Bool {
+        throw "stub: get_allAmazonsDefeated not decompiled";
+    }
 
-  function get_currentTimeInBossRoom(): Float {}
+    public override function init(): Void {
+    }
 
-  function get_allAmazonsDefeated(): Bool {}
+    public override function initGfx(): Void {
+    }
 
-  function init() {}
+    public override function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function initGfx() {}
+    public function overrideLevelInitMusic(): Void {
+    }
 
-  function canBeHit(): Bool {}
+    public function startFightMusic(arg0: Bool): Void {
+    }
 
-  function overrideLevelInitMusic() {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function startFightMusic(playIntro: Bool) {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onDie(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function onDie() {}
+    public function checkActiveAmazon(): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public function onAmazonDeath(): Void {
+    }
 
-  function checkActiveAmazon() {}
+    public function checkPrctTowerAscent(): Float {
+        throw "stub: checkPrctTowerAscent not decompiled";
+    }
 
-  function onAmazonDeath() {}
+    public function initFireStartingPoint(): Void {
+    }
 
-  function checkPrctTowerAscent(): Float {}
+    public function heroSecurityCheck(): Void {
+    }
 
-  function initFireStartingPoint() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function heroSecurityCheck() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function updateFireSfxVolume(): Void {
+    }
 
-  function postUpdate() {}
+    public function activateDeactivateAmazonsBossRoom(): Void {
+    }
 
-  function updateFireSfxVolume() {}
+    public function activateDeactivateAmazons(): Void {
+    }
 
-  function activateDeactivateAmazonsBossRoom() {}
+    public function resetBossFightData(): Void {
+    }
 
-  function activateDeactivateAmazons() {}
+    public function brutalDashAttackManagement(): Void {
+    }
 
-  function resetBossFightData() {}
+    public function updateCurrentRoom(): Void {
+    }
 
-  function brutalDashAttackManagement() {}
+    public override function destroy(): Void {
+    }
 
-  function updateCurrentRoom() {}
+    public function initChaseFleeSpots(): Void {
+    }
 
-  function destroy() {}
+    public function getChaseFleeSpotX(arg0: Int): Int {
+        throw "stub: getChaseFleeSpotX not decompiled";
+    }
 
-  function initChaseFleeSpots() {}
+    public function getChaseFleeSpotY(arg0: Int): Int {
+        throw "stub: getChaseFleeSpotY not decompiled";
+    }
 
-  function getChaseFleeSpotX(amazonIndex: Int): Int {}
+    public function initFireStopBeforeBossSpots(): Void {
+    }
 
-  function getChaseFleeSpotY(amazonIndex: Int): Int {}
+    public function getFireStopBeforeBossSpotY(): Float {
+        throw "stub: getFireStopBeforeBossSpotY not decompiled";
+    }
 
-  function initFireStopBeforeBossSpots() {}
+    public function initCurrentFireStopDuringnBossSpot(): Void {
+    }
 
-  function getFireStopBeforeBossSpotY(): Float {}
+    public function initSanicAchievement(): Void {
+    }
 
-  function initCurrentFireStopDuringnBossSpot() {}
+    public function checkSanicAchievement(): Void {
+    }
 
-  function initSanicAchievement() {}
+    public function checkSanicAchievementDrop(): Void {
+    }
 
-  function checkSanicAchievement() {}
+    public function dropSanicBlueprint(arg0: Int, arg1: Int): Void {
+    }
 
-  function checkSanicAchievementDrop() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function dropSanicBlueprint(dropX: Int, dropY: Int) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserializeInit(): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserializeInit() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBossFightRoomLeft(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onBossFightCinematicStarted(): Void {
+    }
 }
-

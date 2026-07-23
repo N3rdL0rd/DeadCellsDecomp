@@ -1,62 +1,95 @@
 package en.tpet;
+
 class CaptainChicken extends en.TwitchPet {
-  var color: Int;
-  var tx: Float;
-  var ty: Float;
-  var delayedDirVal: Int;
-  var userNick: String;
-  var displayName: String;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var color: Int;
+    public var tx: Float;
+    public var ty: Float;
+    public var delayedDirVal: Int;
+    public var userNick: String;
+    public var displayName: String;
 
-  static function getCurrent(): CaptainChicken {}
+    public function new(arg0: pr.Level, arg1: Entity, arg2: String, arg3: String) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, p: Entity, u: String, dname: String) {}
+    public static function getCurrent(): en.tpet.CaptainChicken {
+        throw "stub: getCurrent not decompiled";
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function say(str: String, bgCol: Dynamic, offsetX: Dynamic, offsetY: Dynamic) {}
+    public function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function startFlight() {}
+    public function startFlight(): Void {
+    }
 
-  function stopFlight() {}
+    public function stopFlight(): Void {
+    }
 
-  function getBeneathPf(): level.Platform.Platform {}
+    public function getBeneathPf(): level.Platform {
+        throw "stub: getBeneathPf not decompiled";
+    }
 
-  function delayedDir(d: Int) {}
+    public function delayedDir(arg0: Int): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function depop() {}
+    public override function depop(): Void {
+    }
 
-  function goto(x: Float, y: Float) {}
+    public function goto(arg0: Float, arg1: Float): Void {
+    }
 
-  function onHeroTeleport() {}
+    public override function onHeroTeleport(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

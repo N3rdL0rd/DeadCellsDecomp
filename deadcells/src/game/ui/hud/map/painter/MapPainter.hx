@@ -1,27 +1,39 @@
 package ui.hud.map.painter;
+
 class MapPainter {
-  var level: pr.Level.Level;
-  var hasReflectFlag: Bool;
-  var hasHorizonFlag: Bool;
-  var waterMarkers: hl.types.ArrayObj<Dynamic>;
-  var horizonY: Int;
-  var currentColorGrid: hl.types.ArrayObj<Dynamic>;
-  var currentAltColorGrid: hl.types.ArrayObj<Dynamic>;
+    public var level: pr.Level;
+    public var hasReflectFlag: Bool;
+    public var hasHorizonFlag: Bool;
+    public var waterMarkers: Array<Dynamic>;
+    public var horizonY: Int;
+    public var currentColorGrid: Array<Dynamic>;
+    public var currentAltColorGrid: Array<Dynamic>;
 
-  function __constructor__(level: pr.Level.Level) {}
+    public function new(arg0: pr.Level) {
+    }
 
-  function initWaterMarkers() {}
+    public function initWaterMarkers(): Void {
+    }
 
-  function computeHorizon() {}
+    public function computeHorizon(): Void {
+    }
 
-  function initColorGrids() {}
+    public function initColorGrids(): Void {
+    }
 
-  function getColorGrid(refreshLocaly: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function getColorGrid(arg0: Ref): Array<Dynamic> {
+        throw "stub: getColorGrid not decompiled";
+    }
 
-  function getAltColorGrid(refreshLocaly: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function getAltColorGrid(arg0: Ref): Array<Dynamic> {
+        throw "stub: getAltColorGrid not decompiled";
+    }
 
-  function getColorFor(x: Int, y: Int): Int {}
+    public function getColorFor(arg0: Int, arg1: Int): Int {
+        throw "stub: getColorFor not decompiled";
+    }
 
-  function getAltColorFor(x: Int, y: Int): Dynamic {}
+    public function getAltColorFor(arg0: Int, arg1: Int): Dynamic {
+        throw "stub: getAltColorFor not decompiled";
+    }
 }
-

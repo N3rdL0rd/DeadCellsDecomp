@@ -1,63 +1,99 @@
 package tool.weap.dual;
+
 class LanternMelee extends tool.Weapon {
-  var markedEnemies: hl.types.ArrayObj<Dynamic>;
+    public var markedEnemies: Array<Dynamic>;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function gainSoul(e: Entity) {}
+    public function gainSoul(arg0: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 }
 
 class LanternRanged extends tool.weap.BaseBow {
-  var recentPos: tool.FPoint.FPoint;
-  var souls: hl.types.ArrayObj<Dynamic>;
-  var maxDist: Float;
-  var maxSpeed: Float;
-  var bulletSoul: en.SmallSoul.SmallSoul;
-  var ringOffset: Float;
-  var lastNbSoulCast: Int;
+    public var recentPos: tool.FPoint;
+    public var souls: Array<Dynamic>;
+    public var maxDist: Float;
+    public var maxSpeed: Float;
+    public var bulletSoul: en.SmallSoul;
+    public var ringOffset: Float;
+    public var lastNbSoulCast: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function createSoulFrom(e: Entity): en.SmallSoul.SmallSoul {}
+    public function createSoulFrom(arg0: Entity): en.SmallSoul {
+        throw "stub: createSoulFrom not decompiled";
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function gainSoul(e: Entity) {}
+    public function gainSoul(arg0: Entity): Void {
+    }
 
-  function consumeSoul(): en.SmallSoul.SmallSoul {}
+    public function consumeSoul(): en.SmallSoul {
+        throw "stub: consumeSoul not decompiled";
+    }
 
-  function interrupt() {}
+    public override function interrupt(): Void {
+    }
 
-  function playShootAnim() {}
+    public override function playShootAnim(): Void {
+    }
 
-  function initAnimIds() {}
+    public override function initAnimIds(): Void {
+    }
 
-  function killEntities() {}
+    public function killEntities(): Void {
+    }
 
-  function getNbSoulCast(): Int {}
+    public function getNbSoulCast(): Int {
+        throw "stub: getNbSoulCast not decompiled";
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 
-  function shootSingleSoul(index: Int, total: Int, targeted: hl.types.ArrayObj<Dynamic>): en.Bullet.Bullet {}
+    public function shootSingleSoul(arg0: Int, arg1: Int, arg2: Array<Dynamic>): en.Bullet {
+        throw "stub: shootSingleSoul not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function getTargetSpot(index: Int): h2d.col.Point.Point {}
+    public function getTargetSpot(arg0: Int): h2d.col.Point {
+        throw "stub: getTargetSpot not decompiled";
+    }
 
-  function getChargedTargetSpot(index: Int): h2d.col.Point.Point {}
+    public function getChargedTargetSpot(arg0: Int): h2d.col.Point {
+        throw "stub: getChargedTargetSpot not decompiled";
+    }
 
-  function getNormalTargetSpot(index: Int): h2d.col.Point.Point {}
+    public function getNormalTargetSpot(arg0: Int): h2d.col.Point {
+        throw "stub: getNormalTargetSpot not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

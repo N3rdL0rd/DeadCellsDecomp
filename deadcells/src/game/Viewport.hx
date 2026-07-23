@@ -1,102 +1,138 @@
-
 class Viewport extends libs.Process {
-  var x: Float;
-  var y: Float;
-  var realX: Float;
-  var realY: Float;
-  var oldRealX: Float;
-  var oldRealY: Float;
-  var wid: Int;
-  var hei: Int;
-  var tx: Float;
-  var ty: Float;
-  var dx: Float;
-  var dy: Float;
-  var tracked: Entity;
-  var tiltX: Float;
-  var tiltY: Float;
-  var tiltDistX: Float;
-  var tiltDistY: Float;
-  var combat: tool.FPoint.FPoint;
-  var poi: tool.FPoint.FPoint;
-  var horizontal: Float;
-  var vertical: Float;
-  var bAng: Float;
-  var bDist: Float;
-  var customSlowSpeed: Float;
-  var minZoom: Float;
-  var zoom: Float;
-  var newVpRect: Dynamic;
-  var debugMarks: haxe.ds.StringMap;
-  var level: pr.Level.Level;
-  var shakeX: Float;
-  var shakeY: Float;
-  var bmpFocus: libs.heaps.slib.HSprite.HSprite;
-  var padding: Int;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var NATIVE_WIDTH: Int;
-  static var NATIVE_HEIGHT: Int;
-  static var __clid: Int;
+    public static var NATIVE_WIDTH: Int;
+    public static var NATIVE_HEIGHT: Int;
+    public static var __clid: Int;
+    public var x: Float;
+    public var y: Float;
+    public var realX: Float;
+    public var realY: Float;
+    public var oldRealX: Float;
+    public var oldRealY: Float;
+    public var wid: Int;
+    public var hei: Int;
+    public var tx: Float;
+    public var ty: Float;
+    public var dx: Float;
+    public var dy: Float;
+    public var tracked: Entity;
+    public var tiltX: Float;
+    public var tiltY: Float;
+    public var tiltDistX: Float;
+    public var tiltDistY: Float;
+    public var combat: tool.FPoint;
+    public var poi: tool.FPoint;
+    public var horizontal: Float;
+    public var vertical: Float;
+    public var bAng: Float;
+    public var bDist: Float;
+    public var customSlowSpeed: Float;
+    public var minZoom: Float;
+    public var zoom: Float;
+    public var newVpRect: Dynamic;
+    public var debugMarks: haxe.ds.StringMap;
+    public var level: pr.Level;
+    public var shakeX: Float;
+    public var shakeY: Float;
+    public var bmpFocus: libs.heaps.slib.HSprite;
+    public var padding: Int;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(lvl: pr.Level.Level) {}
+    public function new(arg0: pr.Level) {
+        super();
+    }
 
-  static function damp(a: Float, b: Float, rate: Float, tmod: Float): Float {}
+    public static function damp(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Float {
+        throw "stub: damp not decompiled";
+    }
 
-  function set_zoom(v: Float): Float {}
+    public function set_zoom(arg0: Float): Float {
+        throw "stub: set_zoom not decompiled";
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function track(e: Entity, immediate: Dynamic) {}
+    public function track(arg0: Entity, arg1: Dynamic): Void {
+    }
 
-  function stopTracking() {}
+    public function stopTracking(): Void {
+    }
 
-  function jumpToTarget() {}
+    public function jumpToTarget(): Void {
+    }
 
-  function bumpAng(ang: Float, pow: Dynamic) {}
+    public function bumpAng(arg0: Float, arg1: Dynamic): Void {
+    }
 
-  function bumpDir(dir: Int, pow: Dynamic) {}
+    public function bumpDir(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function shakeS(xPow: Float, yPow: Float, d: Float) {}
+    public function shakeS(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function shakeReversedS(xPow: Float, yPow: Float, d: Float) {}
+    public function shakeReversedS(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function cancelShake() {}
+    public function cancelShake(): Void {
+    }
 
-  function zoomFromTo(from: Float, to: Float, sec: Float, ease: Dynamic) {}
+    public function zoomFromTo(arg0: Float, arg1: Float, arg2: Float, arg3: libs.misc.TType): Void {
+    }
 
-  function updateSizes() {}
+    public function updateSizes(): Void {
+    }
 
-  function getOffsetX(): Float {}
+    public function getOffsetX(): Float {
+        throw "stub: getOffsetX not decompiled";
+    }
 
-  function getOffsetY(): Float {}
+    public function getOffsetY(): Float {
+        throw "stub: getOffsetY not decompiled";
+    }
 
-  function goTo(x: Float, y: Float, immediate: Dynamic) {}
+    public function goTo(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function getNormalizeScreenPos(ox: Float, oy: Float): tool.FPoint.FPoint {}
+    public function getNormalizeScreenPos(arg0: Float, arg1: Float): tool.FPoint {
+        throw "stub: getNormalizeScreenPos not decompiled";
+    }
 
-  function showFocus(x: Float, y: Float, alpha: Dynamic) {}
+    public function showFocus(arg0: Float, arg1: Float, arg2: Ref): Void {
+    }
 
-  function closeFocus() {}
+    public function closeFocus(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function updateRealPos() {}
+    public function updateRealPos(): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

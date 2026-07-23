@@ -1,100 +1,190 @@
 package tool.mod.script;
+
 class RoomNode {
-  var p_RoomNode: level.RoomNode.RoomNode;
-  static var p_RoomMap: haxe.ds.ObjectMap;
+    public static var p_RoomMap: haxe.ds.ObjectMap;
+    public var p_RoomNode: level.RoomNode;
 
-  function __constructor__(_roomNode: level.RoomNode.RoomNode) {}
+    public function new(arg0: level.RoomNode) {
+    }
 
-  static function p_getRoomNodeFromLevelRoomNode(_levelRoomNode: level.RoomNode.RoomNode): RoomNode {}
+    public static function p_getRoomNodeFromLevelRoomNode(arg0: level.RoomNode): tool.mod.script.RoomNode {
+        throw "stub: p_getRoomNodeFromLevelRoomNode not decompiled";
+    }
 
-  function get_parent(): RoomNode {}
+    public function get_parent(): tool.mod.script.RoomNode {
+        throw "stub: get_parent not decompiled";
+    }
 
-  function get_root(): RoomNode {}
+    public function get_root(): tool.mod.script.RoomNode {
+        throw "stub: get_root not decompiled";
+    }
 
-  function get_firstChild(): RoomNode {}
+    public function get_firstChild(): tool.mod.script.RoomNode {
+        throw "stub: get_firstChild not decompiled";
+    }
 
-  function get_constraint(): Dynamic {}
+    public function get_constraint(): level.LinkConstraint {
+        throw "stub: get_constraint not decompiled";
+    }
 
-  function get_childrenCount(): Int {}
+    public function get_childrenCount(): Int {
+        throw "stub: get_childrenCount not decompiled";
+    }
 
-  function get_parentCount(): Int {}
+    public function get_parentCount(): Int {
+        throw "stub: get_parentCount not decompiled";
+    }
 
-  function get_type(): String {}
+    public function get_type(): String {
+        throw "stub: get_type not decompiled";
+    }
 
-  function get_group(): String {}
+    public function get_group(): String {
+        throw "stub: get_group not decompiled";
+    }
 
-  function get_spawnDistance(): Int {}
+    public function get_spawnDistance(): Int {
+        throw "stub: get_spawnDistance not decompiled";
+    }
 
-  function addFlag(_flag: Dynamic): RoomNode {}
+    public function addFlag(arg0: level.RoomFlag): tool.mod.script.RoomNode {
+        throw "stub: addFlag not decompiled";
+    }
 
-  function hasFlag(_flag: Dynamic): Bool {}
+    public function hasFlag(arg0: level.RoomFlag): Bool {
+        throw "stub: hasFlag not decompiled";
+    }
 
-  function isSpecificRoom(_roomName: String): Bool {}
+    public function isSpecificRoom(arg0: String): Bool {
+        throw "stub: isSpecificRoom not decompiled";
+    }
 
-  function setName(_roomName: String): RoomNode {}
+    public function setName(arg0: String): tool.mod.script.RoomNode {
+        throw "stub: setName not decompiled";
+    }
 
-  function getName(): String {}
+    public function getName(): String {
+        throw "stub: getName not decompiled";
+    }
 
-  function setSubTeleport(_targetRoom: RoomNode): RoomNode {}
+    public function setSubTeleport(arg0: tool.mod.script.RoomNode): tool.mod.script.RoomNode {
+        throw "stub: setSubTeleport not decompiled";
+    }
 
-  function chain(_node: RoomNode): RoomNode {}
+    public function chain(arg0: tool.mod.script.RoomNode): tool.mod.script.RoomNode {
+        throw "stub: chain not decompiled";
+    }
 
-  function branchBetween(_start: String, _end: String, _minSpawnDistance: Dynamic): RoomNode {}
+    public function branchBetween(arg0: String, arg1: String, arg2: Dynamic): tool.mod.script.RoomNode {
+        throw "stub: branchBetween not decompiled";
+    }
 
-  function branchBetweenMultipleEnds(_start: String, _ends: hl.types.ArrayObj<Dynamic>, _minSpawnDistance: Int): RoomNode {}
+    public function branchBetweenMultipleEnds(arg0: String, arg1: Array<Dynamic>, arg2: Int): tool.mod.script.RoomNode {
+        throw "stub: branchBetweenMultipleEnds not decompiled";
+    }
 
-  function branchOrAddBetween(_start: String, _ends: hl.types.ArrayObj<Dynamic>, _minSpawnDistance: Int): RoomNode {}
+    public function branchOrAddBetween(arg0: String, arg1: Array<Dynamic>, arg2: Int): tool.mod.script.RoomNode {
+        throw "stub: branchOrAddBetween not decompiled";
+    }
 
-  function addBefore(_roomName: String): RoomNode {}
+    public function addBefore(arg0: String): tool.mod.script.RoomNode {
+        throw "stub: addBefore not decompiled";
+    }
 
-  function addAfter(_roomName: String): RoomNode {}
+    public function addAfter(arg0: String): tool.mod.script.RoomNode {
+        throw "stub: addAfter not decompiled";
+    }
 
-  function addChild(_room: RoomNode): RoomNode {}
+    public function addChild(arg0: tool.mod.script.RoomNode): tool.mod.script.RoomNode {
+        throw "stub: addChild not decompiled";
+    }
 
-  function addBetween(_firstRoomName: String, _secondRoomName: String, _minSpawnDistance: Int): RoomNode {}
+    public function addBetween(arg0: String, arg1: String, arg2: Int): tool.mod.script.RoomNode {
+        throw "stub: addBetween not decompiled";
+    }
 
-  function addBetweenMultipleEnds(_firstRoomName: String, _secondRoomNames: hl.types.ArrayObj<Dynamic>, _minSpawnDistance: Int): RoomNode {}
+    public function addBetweenMultipleEnds(arg0: String, arg1: Array<Dynamic>, arg2: Int): tool.mod.script.RoomNode {
+        throw "stub: addBetweenMultipleEnds not decompiled";
+    }
 
-  function addZChild(_node: RoomNode): RoomNode {}
+    public function addZChild(arg0: tool.mod.script.RoomNode): tool.mod.script.RoomNode {
+        throw "stub: addZChild not decompiled";
+    }
 
-  function addZChildWithClue(_node: RoomNode, _clue: Dynamic): RoomNode {}
+    public function addZChildWithClue(arg0: tool.mod.script.RoomNode, arg1: level.ZDoorContentClue): tool.mod.script.RoomNode {
+        throw "stub: addZChildWithClue not decompiled";
+    }
 
-  function addZLink(_roomName: String): RoomNode {}
+    public function addZLink(arg0: String): tool.mod.script.RoomNode {
+        throw "stub: addZLink not decompiled";
+    }
 
-  function isMainLevel(): Bool {}
+    public function isMainLevel(): Bool {
+        throw "stub: isMainLevel not decompiled";
+    }
 
-  function isMetaGate(): Bool {}
+    public function isMetaGate(): Bool {
+        throw "stub: isMetaGate not decompiled";
+    }
 
-  function isParentOf(_node: RoomNode): Bool {}
+    public function isParentOf(arg0: tool.mod.script.RoomNode): Bool {
+        throw "stub: isParentOf not decompiled";
+    }
 
-  function hasParentType(_type: String): Bool {}
+    public function hasParentType(arg0: String): Bool {
+        throw "stub: hasParentType not decompiled";
+    }
 
-  function hasParentMetaGate(_includeSelf: Bool): Bool {}
+    public function hasParentMetaGate(arg0: Bool): Bool {
+        throw "stub: hasParentMetaGate not decompiled";
+    }
 
-  function isChildOf(_node: RoomNode): Bool {}
+    public function isChildOf(arg0: tool.mod.script.RoomNode): Bool {
+        throw "stub: isChildOf not decompiled";
+    }
 
-  function calcTypeDistance(_typeName: String, _checkThis: Bool): Int {}
+    public function calcTypeDistance(arg0: String, arg1: Bool): Int {
+        throw "stub: calcTypeDistance not decompiled";
+    }
 
-  function setType(_typeName: String) {}
+    public function setType(arg0: String): Void {
+    }
 
-  function setGroup(_groupName: String) {}
+    public function setGroup(arg0: String): Void {
+    }
 
-  function setConstraint(_constraint: Dynamic): RoomNode {}
+    public function setConstraint(arg0: level.LinkConstraint): tool.mod.script.RoomNode {
+        throw "stub: setConstraint not decompiled";
+    }
 
-  function setChildPriority(_priority: Int) {}
+    public function setChildPriority(arg0: Int): Void {
+    }
 
-  function forceBiome(_biomeName: String): RoomNode {}
+    public function forceBiome(arg0: String): tool.mod.script.RoomNode {
+        throw "stub: forceBiome not decompiled";
+    }
 
-  function setAsZRoot(): RoomNode {}
+    public function setAsZRoot(): tool.mod.script.RoomNode {
+        throw "stub: setAsZRoot not decompiled";
+    }
 
-  function setItemInWall(_itemName: String): RoomNode {}
+    public function setItemInWall(arg0: String): tool.mod.script.RoomNode {
+        throw "stub: setItemInWall not decompiled";
+    }
 
-  function countChildren(_conditionDynamic: Dynamic): Int {}
+    public function countChildren(arg0: Dynamic): Int {
+        throw "stub: countChildren not decompiled";
+    }
 
-  function calcDistanceToCondition(_conditionDynamic: Dynamic, _checkThis: Bool): Int {}
+    public function calcDistanceToCondition(arg0: Dynamic, arg1: Bool): Int {
+        throw "stub: calcDistanceToCondition not decompiled";
+    }
 
-  function searchParent(_conditionDynamic: Dynamic): RoomNode {}
+    public function searchParent(arg0: Dynamic): tool.mod.script.RoomNode {
+        throw "stub: searchParent not decompiled";
+    }
 
-  function getChild(_index: Int): RoomNode {}
+    public function getChild(arg0: Int): tool.mod.script.RoomNode {
+        throw "stub: getChild not decompiled";
+    }
 }
-

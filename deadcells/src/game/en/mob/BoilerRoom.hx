@@ -1,125 +1,192 @@
 package en.mob;
+
 class BoilerRoom extends en.Mob {
-  var areaVertUp: tool.Area.Area;
-  var areaVertBot: tool.Area.Area;
-  var tentacles: hl.types.ArrayObj<Dynamic>;
-  var tentacleCount: Int;
-  var hitPosition: tool.FPoint.FPoint;
-  var chargePosition: tool.FPoint.FPoint;
-  var cachedPosition: tool.FPoint.FPoint;
-  var hasCCTarget: Bool;
-  var cachedPawMode: Bool;
-  var oneWayToDestroyCandidates: hl.types.ArrayObj<Dynamic>;
-  var bodyAnimatedX: Bool;
-  var bodyAnimatedY: Bool;
-  var animPositionX: Float;
-  var animPositionY: Float;
-  var bodyChargePositionY: Float;
-  var bodyChargePositionX: Float;
-  var bodyHitPositionX: Float;
-  var bodyHitPositionY: Float;
-  var path: hl.types.ArrayObj<Dynamic>;
-  var moveTo: tool.CPoint.CPoint;
-  var targetPoint: tool.CPoint.CPoint;
-  var eye: libs.heaps.slib.HSprite.HSprite;
-  var eyeGlowShader: shader.GlowKey.GlowKey;
-  var inCeiling: Bool;
-  var t: Float;
-  var black: Bool;
-  var moveSounds: hl.types.ArrayObj<Dynamic>;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var areaVertUp: tool.Area;
+    public var areaVertBot: tool.Area;
+    public var tentacles: Array<Dynamic>;
+    public var tentacleCount: Int;
+    public var hitPosition: tool.FPoint;
+    public var chargePosition: tool.FPoint;
+    public var cachedPosition: tool.FPoint;
+    public var hasCCTarget: Bool;
+    public var cachedPawMode: Bool;
+    public var oneWayToDestroyCandidates: Array<Dynamic>;
+    public var bodyAnimatedX: Bool;
+    public var bodyAnimatedY: Bool;
+    public var animPositionX: Float;
+    public var animPositionY: Float;
+    public var bodyChargePositionY: Float;
+    public var bodyChargePositionX: Float;
+    public var bodyHitPositionX: Float;
+    public var bodyHitPositionY: Float;
+    public var path: Array<Dynamic>;
+    public var moveTo: tool.CPoint;
+    public var targetPoint: tool.CPoint;
+    public var eye: libs.heaps.slib.HSprite;
+    public var eyeGlowShader: shader.GlowKey;
+    public var inCeiling: Bool;
+    public var t: Float;
+    public var black: Bool;
+    public var moveSounds: Array<Dynamic>;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, _black: Bool): BoilerRoom {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, _black: Bool) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): en.mob.BoilerRoom {
+        throw "stub: create not decompiled";
+    }
 
-  function get_eyePosX(): Float {}
+    public function get_eyePosX(): Float {
+        throw "stub: get_eyePosX not decompiled";
+    }
 
-  function get_eyePosY(): Float {}
+    public function get_eyePosY(): Float {
+        throw "stub: get_eyePosY not decompiled";
+    }
 
-  function get_targetSprPosX(): Float {}
+    public function get_targetSprPosX(): Float {
+        throw "stub: get_targetSprPosX not decompiled";
+    }
 
-  function get_targetSprPosY(): Float {}
+    public function get_targetSprPosY(): Float {
+        throw "stub: get_targetSprPosY not decompiled";
+    }
 
-  function get_globalUiX(): Float {}
+    public function get_globalUiX(): Float {
+        throw "stub: get_globalUiX not decompiled";
+    }
 
-  function get_globalUiY(): Float {}
+    public function get_globalUiY(): Float {
+        throw "stub: get_globalUiY not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function updateIsInCeilingState() {}
+    public function updateIsInCeilingState(): Void {
+    }
 
-  function initEye() {}
+    public function initEye(): Void {
+    }
 
-  function canCrawlThrought(x: Int, y: Int): Bool {}
+    public function canCrawlThrought(arg0: Int, arg1: Int): Bool {
+        throw "stub: canCrawlThrought not decompiled";
+    }
 
-  function initPaws() {}
+    public function initPaws(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function interruptSkills() {}
+    public override function interruptSkills(): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function isCrawling(): Bool {}
+    public function isCrawling(): Bool {
+        throw "stub: isCrawling not decompiled";
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function onPathGenerated(genPath: hl.types.ArrayObj<Dynamic>) {}
+    public function onPathGenerated(arg0: Array<Dynamic>): Void {
+    }
 
-  function checkSkillNearby(id: String): Bool {}
+    public function checkSkillNearby(arg0: String): Bool {
+        throw "stub: checkSkillNearby not decompiled";
+    }
 
-  function randomPointInTheRoom(): tool.CPoint.CPoint {}
+    public function randomPointInTheRoom(): tool.CPoint {
+        throw "stub: randomPointInTheRoom not decompiled";
+    }
 
-  function forbiddenPosition(x: Int, y: Int): Bool {}
+    public function forbiddenPosition(arg0: Int, arg1: Int): Bool {
+        throw "stub: forbiddenPosition not decompiled";
+    }
 
-  function lookAtDelayed(e: Entity): Bool {}
+    public override function lookAtDelayed(arg0: Entity): Bool {
+        throw "stub: lookAtDelayed not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function spriteUpdate() {}
+    public function spriteUpdate(): Void {
+    }
 
-  function updatePaws() {}
+    public function updatePaws(): Void {
+    }
 
-  function updateEye() {}
+    public function updateEye(): Void {
+    }
 
-  function updateGlow() {}
+    public function updateGlow(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function sightCheckCase(tx: Int, ty: Int, ignoreOneWay: Dynamic, ignoreSpotType: Dynamic): Bool {}
+    public function sightCheckCase(arg0: Int, arg1: Int, arg2: Ref, arg3: Dynamic): Bool {
+        throw "stub: sightCheckCase not decompiled";
+    }
 
-  function minimapTracking() {}
+    public override function minimapTracking(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function dropLoot() {}
+    public override function dropLoot(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

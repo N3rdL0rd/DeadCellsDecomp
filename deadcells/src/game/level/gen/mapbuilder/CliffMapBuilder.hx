@@ -1,15 +1,24 @@
 package level.gen.mapbuilder;
+
 class CliffMapBuilder extends level.gen.MapBuilder {
-  var inRoomCells: hl.types.ArrayObj<Dynamic>;
+    public var inRoomCells: Array<Dynamic>;
 
-  function __constructor__(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: Int, arg3: Dynamic, arg4: libs.Rand) {
+        super();
+    }
 
-  function getExtColl(dat: level.LevelMap.LevelMap, room: level.Room.Room, cy: Int): Int {}
+    public function getExtColl(arg0: level.LevelMap, arg1: level.Room, arg2: Int): Int {
+        throw "stub: getExtColl not decompiled";
+    }
 
-  function isBorder(room: level.Room.Room): Bool {}
+    public function isBorder(arg0: level.Room): Bool {
+        throw "stub: isBorder not decompiled";
+    }
 
-  function removeCollisionOutOfRooms(dat: level.LevelMap.LevelMap, drooms: hl.types.ArrayObj<Dynamic>, inRoomCells: hl.types.ArrayObj<Dynamic>, hasError: Bool) {}
+    public override function removeCollisionOutOfRooms(arg0: level.LevelMap, arg1: Array<Dynamic>, arg2: Array<Dynamic>, arg3: Bool): Void {
+    }
 
-  function afterLevelMapInitProcess(levelMap: level.LevelMap.LevelMap): level.LevelMap.LevelMap {}
+    public override function afterLevelMapInitProcess(arg0: level.LevelMap): level.LevelMap {
+        throw "stub: afterLevelMapInitProcess not decompiled";
+    }
 }
-

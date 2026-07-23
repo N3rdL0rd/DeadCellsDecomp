@@ -1,52 +1,82 @@
 package level.struct;
+
 class PurpleGarden extends level.LevelStruct {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function solvedBridgeEnigma(): Bool {
+        throw "stub: solvedBridgeEnigma not decompiled";
+    }
 
-  function solvedBridgeEnigma(): Bool {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public function addSecondaryExits(): Void {
+    }
 
-  function addSecondaryExits() {}
+    public function addFirstCombatPlateauAfter(arg0: level.RoomNode, arg1: Int): level.RoomNode {
+        throw "stub: addFirstCombatPlateauAfter not decompiled";
+    }
 
-  function addFirstCombatPlateauAfter(startNode: level.RoomNode.RoomNode, number: Int): level.RoomNode.RoomNode {}
+    public function addSecondCombatPlateauAfter(arg0: level.RoomNode, arg1: Int): level.RoomNode {
+        throw "stub: addSecondCombatPlateauAfter not decompiled";
+    }
 
-  function addSecondCombatPlateauAfter(startNode: level.RoomNode.RoomNode, number: Int): level.RoomNode.RoomNode {}
+    public function buildTowerAfter(arg0: level.RoomNode, arg1: Int): level.RoomNode {
+        throw "stub: buildTowerAfter not decompiled";
+    }
 
-  function buildTowerAfter(startNode: level.RoomNode.RoomNode, stages: Int): level.RoomNode.RoomNode {}
+    public function addBridgeEnigma(): Void {
+    }
 
-  function addBridgeEnigma() {}
+    public function addMerchants(arg0: Array<Dynamic>, arg1: Array<Dynamic>): Void {
+    }
 
-  function addMerchants(towerNodes: hl.types.ArrayObj<Dynamic>, secondPlateauNodes: hl.types.ArrayObj<Dynamic>) {}
+    public function addTreasures(arg0: Array<Dynamic>, arg1: Array<Dynamic>): Void {
+    }
 
-  function addTreasures(firstPlateauNodes: hl.types.ArrayObj<Dynamic>, secondPlateauNodes: hl.types.ArrayObj<Dynamic>) {}
+    public function addFixedLoot(): Void {
+    }
 
-  function addFixedLoot() {}
+    public function addChainAltar(): Void {
+    }
 
-  function addChainAltar() {}
+    public function addCursedChest(arg0: Array<Dynamic>): Void {
+    }
 
-  function addCursedChest(towerNodes: hl.types.ArrayObj<Dynamic>) {}
+    public function powerTowerMerchant(arg0: Array<Dynamic>): Void {
+    }
 
-  function powerTowerMerchant(towerNodes: hl.types.ArrayObj<Dynamic>) {}
+    public function weaponTowerMerchant(arg0: Array<Dynamic>): Void {
+    }
 
-  function weaponTowerMerchant(towerNodes: hl.types.ArrayObj<Dynamic>) {}
+    public function powerBuildingMerchant(arg0: Array<Dynamic>): Void {
+    }
 
-  function powerBuildingMerchant(secondPlateauNodes: hl.types.ArrayObj<Dynamic>) {}
+    public function gardenTreasure(arg0: Array<Dynamic>): Void {
+    }
 
-  function gardenTreasure(firstPlateauNodes: hl.types.ArrayObj<Dynamic>) {}
+    public function buildingTreasure(arg0: Array<Dynamic>): Void {
+    }
 
-  function buildingTreasure(secondPlateauNodes: hl.types.ArrayObj<Dynamic>) {}
+    public function getAvailableUndergroundNode(arg0: Ref, arg1: Ref): level.RoomNode {
+        throw "stub: getAvailableUndergroundNode not decompiled";
+    }
 
-  function getAvailableUndergroundNode(prioritizeFarthest: Dynamic, getBest: Dynamic): level.RoomNode.RoomNode {}
+    public override function buildEliteRooms(): Void {
+    }
 
-  function buildEliteRooms() {}
+    public function buildGardenLoreRooms(): Void {
+    }
 
-  function buildGardenLoreRooms() {}
+    public override function finalize(): Void {
+    }
 
-  function finalize() {}
-
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 }
-

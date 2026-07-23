@@ -1,34 +1,52 @@
 package en.bu;
+
 class Homing extends en.Bullet {
-  var target: Entity;
-  var baseSpeed: Float;
-  var speed: Float;
-  var ang: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var target: Entity;
+    public var baseSpeed: Float;
+    public var speed: Float;
+    public var ang: Float;
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, t: Entity) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Entity) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function defaultCanHit(e: Entity): Bool {}
+    public override function defaultCanHit(arg0: Entity): Bool {
+        throw "stub: defaultCanHit not decompiled";
+    }
 
-  function canHome(): Bool {}
+    public function canHome(): Bool {
+        throw "stub: canHome not decompiled";
+    }
 
-  function onCantHome() {}
+    public function onCantHome(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,128 +1,188 @@
 package ui;
-class CustomGame extends ui.Process {
-  var isForMod: Bool;
-  var curPage: Dynamic;
-  var bg: ui.BG.BG;
-  var title: ui.Text.Text;
-  var achievWarning: ui.Text.Text;
-  var controller: tool.Controller.Controller;
-  var mask: h2d.Mask.Mask;
-  var inter: h2d.Interactive.Interactive;
-  var mainFlow: h2d.Flow.Flow;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
-  var ts: pr.TitleScreen.TitleScreen;
-  var user: User;
-  var cgData: Achievements.Achievements;
-  var customPresetNameCache: hl.types.ArrayObj<Dynamic>;
-  var widgets: hl.types.ArrayObj<Dynamic>;
-  var curWidgetId: Int;
-  var curWidgetIdMain: Int;
-  var waitingForSeed: Bool;
-  var selection: libs.heaps.slib.HSprite.HSprite;
-  var selectionSG: h2d.ScaleGrid.ScaleGrid;
-  var arItemGroups: hl.types.ArrayBytes<Int>;
-
-  function __constructor__(ts: pr.TitleScreen.TitleScreen, isForMod: Bool) {}
-
-  function setAchievWarning() {}
-
-  function redraw() {}
-
-  function cacheCustomPresetName(slot: Int) {}
-
-  function openNextGroup(curGroup: Int) {}
-
-  function openPrevGroup(curGroup: Int) {}
-
-  function createPresetRadioWidget(pr: Dynamic, str: String, subStr: String, onValidate: Dynamic, slotCustom: Dynamic): ui.CustomGame.CustomGame {}
-
-  function createSimpleText(bTile: h2d.Tile.Tile, str: String, textColor: Dynamic): ui.Text.Text {}
-
-  function createButtonWidget(str: String, subStr: String, onVal: Dynamic): ui.CustomGame.CustomGame {}
-
-  function createCustomSlider(str: String, tiles: hl.types.ArrayObj<Dynamic>, isEnable: Bool, value: Int, userMetaValue: Int, onUpdateValue: Dynamic): ui.CustomGame.CustomGame {}
-
-  function createToggleWidget(str: String, subStr: String, isEnable: Bool, onUpdateValue: Dynamic): ui.CustomGame.CustomGame {}
-
-  function createRadioWidget(str: String, subStr: String, onValidate: Dynamic, isEnable: Bool): ui.CustomGame.CustomGame {}
-
-  function createSliderWidget(str: String, subStr: String, isEnable: Bool, value: Int, min: Int, max: Int, step: Int, onUpdateValue: Dynamic): ui.CustomGame.CustomGame {}
-
-  function createBaseEquipmentWidget(): ui.CustomGame.CustomGame {}
-
-  function createVariousMetaWidget() {}
-
-  function createItemsGroupWidget(group: Int) {}
-
-  function createItemWrapper(group: Int) {}
-
-  function createItemWidget(id: String, parent: h2d.Object.Object): ui.CustomGame.CustomGame {}
-
-  function createNumberWidget(str: String, subStr: String, value: Int, numDigit: Int, isEnable: Bool, onUpdateValue: Dynamic): ui.CustomGame.CustomGame {}
-
-  function presetReset() {}
-
-  function presetSpeedRun() {}
-
-  function presetOnlyTier(t: String) {}
-
-  function presetFullCloseCombat() {}
-
-  function presetFullDistance() {}
-
-  function presetGlassNinja() {}
-
-  function presetMegafection() {}
-
-  function presetFireAndFlame() {}
-
-  function presetCustom(slot: Int) {}
-
-  function updatePreset() {}
-
-  function flash() {}
-
-  function select(id: Int, noScroll: Dynamic) {}
-
-  function updateSelectionPos() {}
-
-  function blur(sigma: Dynamic, gain: Dynamic) {}
-
-  function unblur() {}
-
-  function onResize() {}
-
-  function close(launchGame: Bool) {}
-
-  function onDispose() {}
-
-  function update() {}
-
-  function postUpdate() {}
-}
 
 class CGWidget extends h2d.Flow {
-  var cg: ui.CustomGame.CustomGame;
-  var isEnable: Bool;
-  var onValidate: Dynamic;
-  var onUpdate: Dynamic;
-  var onToggleEnable: Dynamic;
-  var isItem: Bool;
-  var hasAlt: Bool;
-  var isSlider: Bool;
-  var achiev: libs.heaps.slib.HSprite.HSprite;
+    public var cg: ui.CustomGame;
+    public var isEnable: Bool;
+    public var onValidate: Dynamic;
+    public var onUpdate: Dynamic;
+    public var onToggleEnable: Dynamic;
+    public var isItem: Bool;
+    public var hasAlt: Bool;
+    public var isSlider: Bool;
+    public var achiev: libs.heaps.slib.HSprite;
 
-  function getGlobalY(from: h2d.Object.Object): Float {}
+    public function new(arg0: ui.CustomGame, arg1: Bool, arg2: h2d.Object) {
+        super();
+    }
 
-  function getGlobalX(from: h2d.Object.Object): Float {}
+    public function disableAchievement(): Void {
+    }
 
-  function __constructor__(cg: ui.CustomGame.CustomGame, isEnable: Bool, parent: h2d.Object.Object) {}
+    public override function reflow(): Void {
+    }
 
-  function disableAchievement() {}
+    public function set_isEnable(arg0: Bool): Bool {
+        throw "stub: set_isEnable not decompiled";
+    }
 
-  function reflow() {}
+    public function getGlobalY(arg0: h2d.Object): Float {
+        throw "stub: getGlobalY not decompiled";
+    }
 
-  function set_isEnable(b: Bool): Bool {}
+    public function getGlobalX(arg0: h2d.Object): Float {
+        throw "stub: getGlobalX not decompiled";
+    }
 }
 
+class CustomGame extends ui.Process {
+    public var isForMod: Bool;
+    public var curPage: ui.CGPage;
+    public var bg: ui.BG;
+    public var title: ui.Text;
+    public var achievWarning: ui.Text;
+    public var controller: tool.ControllerAccess;
+    public var mask: h2d.Mask;
+    public var inter: h2d.Interactive;
+    public var mainFlow: h2d.Flow;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
+    public var ts: pr.TitleScreen;
+    public var user: User;
+    public var cgData: CustomGameData;
+    public var customPresetNameCache: Array<Dynamic>;
+    public var widgets: Array<Dynamic>;
+    public var curWidgetId: Int;
+    public var curWidgetIdMain: Int;
+    public var waitingForSeed: Bool;
+    public var selection: libs.heaps.slib.HSprite;
+    public var selectionSG: h2d.ScaleGrid;
+    public var arItemGroups: Array<Int>;
+
+    public function new(arg0: pr.TitleScreen, arg1: Bool) {
+        super();
+    }
+
+    public function setAchievWarning(): Void {
+    }
+
+    public function redraw(): Void {
+    }
+
+    public function cacheCustomPresetName(arg0: Int): Void {
+    }
+
+    public function openNextGroup(arg0: Int): Void {
+    }
+
+    public function openPrevGroup(arg0: Int): Void {
+    }
+
+    public function createPresetRadioWidget(arg0: CGPreset, arg1: String, arg2: String, arg3: Dynamic, arg4: Dynamic): ui.CGWidget {
+        throw "stub: createPresetRadioWidget not decompiled";
+    }
+
+    public function createSimpleText(arg0: h2d.Tile, arg1: String, arg2: Ref): ui.Text {
+        throw "stub: createSimpleText not decompiled";
+    }
+
+    public function createButtonWidget(arg0: String, arg1: String, arg2: Dynamic): ui.CGWidget {
+        throw "stub: createButtonWidget not decompiled";
+    }
+
+    public function createCustomSlider(arg0: String, arg1: Array<Dynamic>, arg2: Bool, arg3: Int, arg4: Int, arg5: Dynamic): ui.CGWidget {
+        throw "stub: createCustomSlider not decompiled";
+    }
+
+    public function createToggleWidget(arg0: String, arg1: String, arg2: Bool, arg3: Dynamic): ui.CGWidget {
+        throw "stub: createToggleWidget not decompiled";
+    }
+
+    public function createRadioWidget(arg0: String, arg1: String, arg2: Dynamic, arg3: Bool): ui.CGWidget {
+        throw "stub: createRadioWidget not decompiled";
+    }
+
+    public function createSliderWidget(arg0: String, arg1: String, arg2: Bool, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Dynamic): ui.CGWidget {
+        throw "stub: createSliderWidget not decompiled";
+    }
+
+    public function createBaseEquipmentWidget(): ui.CGWidget {
+        throw "stub: createBaseEquipmentWidget not decompiled";
+    }
+
+    public function createVariousMetaWidget(): Void {
+    }
+
+    public function createItemsGroupWidget(arg0: Int): Void {
+    }
+
+    public function createItemWrapper(arg0: Int): Void {
+    }
+
+    public function createItemWidget(arg0: String, arg1: h2d.Object): ui.CGWidget {
+        throw "stub: createItemWidget not decompiled";
+    }
+
+    public function createNumberWidget(arg0: String, arg1: String, arg2: Int, arg3: Int, arg4: Bool, arg5: Dynamic): ui.CGWidget {
+        throw "stub: createNumberWidget not decompiled";
+    }
+
+    public function presetReset(): Void {
+    }
+
+    public function presetSpeedRun(): Void {
+    }
+
+    public function presetOnlyTier(arg0: String): Void {
+    }
+
+    public function presetFullCloseCombat(): Void {
+    }
+
+    public function presetFullDistance(): Void {
+    }
+
+    public function presetGlassNinja(): Void {
+    }
+
+    public function presetMegafection(): Void {
+    }
+
+    public function presetFireAndFlame(): Void {
+    }
+
+    public function presetCustom(arg0: Int): Void {
+    }
+
+    public function updatePreset(): Void {
+    }
+
+    public function flash(): Void {
+    }
+
+    public function select(arg0: Int, arg1: Ref): Void {
+    }
+
+    public function updateSelectionPos(): Void {
+    }
+
+    public override function blur(arg0: Ref, arg1: Ref): Void {
+    }
+
+    public override function unblur(): Void {
+    }
+
+    public override function onResize(): Void {
+    }
+
+    public function close(arg0: Bool): Void {
+    }
+
+    public override function onDispose(): Void {
+    }
+
+    public function update(): Void {
+    }
+
+    public function postUpdate(): Void {
+    }
+}

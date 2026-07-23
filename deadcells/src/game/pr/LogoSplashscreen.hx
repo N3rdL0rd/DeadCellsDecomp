@@ -1,32 +1,41 @@
 package pr;
+
 class LogoSplashscreen extends libs.Process {
-  var controller: tool.Controller.Controller;
-  var bg: h2d.Bitmap.Bitmap;
-  var ready: Bool;
-  var nextWhenReady: Bool;
-  var secondLogo: Bool;
-  var logoMT: h2d.Bitmap.Bitmap;
-  var logoEvilEmpire: h2d.Bitmap.Bitmap;
-  var delay: Float;
-  var heightOffset: Int;
-  var tween: libs.misc.Tweenie.Tweenie;
-  var frame: Int;
-  static var BG: Int;
+    public static var BG: Int;
+    public var controller: tool.ControllerAccess;
+    public var bg: h2d.Bitmap;
+    public var ready: Bool;
+    public var nextWhenReady: Bool;
+    public var secondLogo: Bool;
+    public var logoMT: h2d.Bitmap;
+    public var logoEvilEmpire: h2d.Bitmap;
+    public var delay: Float;
+    public var heightOffset: Int;
+    public var tween: libs.misc.Tween;
+    public var frame: Int;
 
-  function nextProcess() {}
+    public function new(arg0: Ref) {
+        super();
+    }
 
-  function __constructor__(delay: Dynamic) {}
+    public override function onResize(): Void {
+    }
 
-  function onResize() {}
+    public override function onDispose(): Void {
+    }
 
-  function onDispose() {}
+    public function displaySecondLogo(): Void {
+    }
 
-  function displaySecondLogo() {}
+    public function displaySecondLogoInstant(): Void {
+    }
 
-  function displaySecondLogoInstant() {}
+    public function next(arg0: Dynamic): Void {
+    }
 
-  function next(manual: Dynamic) {}
+    public override function update(): Void {
+    }
 
-  function update() {}
+    public function nextProcess(): Void {
+    }
 }
-

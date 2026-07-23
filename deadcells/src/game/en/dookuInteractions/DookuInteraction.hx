@@ -1,43 +1,62 @@
 package en.dookuInteractions;
+
 class DookuInteraction {
-  var type: String;
-  var ID: Int;
-  var parent: DookuInteractionsManager;
-  var phase: Int;
-  var startupTimer: Float;
-  var executeTimer: Float;
-  var recoveryTimer: Float;
-  var uses: Int;
-  var textsToSay: hl.types.ArrayObj<Dynamic>;
+    public var type: String;
+    public var ID: Int;
+    public var parent: en.dookuInteractions.DookuInteractionsManager;
+    public var phase: Int;
+    public var startupTimer: Float;
+    public var executeTimer: Float;
+    public var recoveryTimer: Float;
+    public var uses: Int;
+    public var textsToSay: Array<Dynamic>;
 
-  function __constructor__(parent: DookuInteractionsManager) {}
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+    }
 
-  function initTexts() {}
+    public function initTexts(): Void {
+    }
 
-  function update(tmod: Float) {}
+    public function update(arg0: Float): Void {
+    }
 
-  function canTrigger(): Bool {}
+    public function canTrigger(): Bool {
+        throw "stub: canTrigger not decompiled";
+    }
 
-  function onTriggerFail() {}
+    public function onTriggerFail(): Void {
+    }
 
-  function triggerStartup() {}
+    public function triggerStartup(): Void {
+    }
 
-  function onStartup() {}
+    public function onStartup(): Void {
+    }
 
-  function triggerExecute() {}
+    public function triggerExecute(): Void {
+    }
 
-  function dynOnExecute() {}
+    public function dynOnExecute(): Void {
+    }
 
-  function triggerRecovery() {}
+    public function triggerRecovery(): Void {
+    }
 
-  function onRecovery() {}
+    public function onRecovery(): Void {
+    }
 
-  function disable() {}
+    public function disable(): Void {
+    }
 
-  function getDookuPos(): Dynamic {}
+    public function getDookuPos(): h2d.col.IPoint {
+        throw "stub: getDookuPos not decompiled";
+    }
 
-  function getPlatformPointNextToTarget(target: Entity): Dynamic {}
+    public function getPlatformPointNextToTarget(arg0: Entity): h2d.col.IPoint {
+        throw "stub: getPlatformPointNextToTarget not decompiled";
+    }
 
-  function getDookuDir(): Int {}
+    public function getDookuDir(): Int {
+        throw "stub: getDookuDir not decompiled";
+    }
 }
-

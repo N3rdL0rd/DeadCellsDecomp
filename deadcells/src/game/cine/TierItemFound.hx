@@ -1,11 +1,15 @@
 package cine;
+
 class TierItemFound extends GameCinematic {
-  var icon: ui.icon.Icon.Icon;
+    public var icon: ui.icon.Icon;
 
-  function __constructor__(hero: en.Hero.Hero, e: Entity, item: tool.InventItem.InventItem, iconX: Float, iconY: Float, onComplete: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: Entity, arg2: tool.InventItem, arg3: Float, arg4: Float, arg5: Dynamic) {
+        super();
+    }
 
-  function destroyItem(fromShrine: Bool, e: Entity) {}
+    public function destroyItem(arg0: Bool, arg1: Entity): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

@@ -1,22 +1,38 @@
 package en.mob;
+
 class LancerPurple extends en.mob.Lancer {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): LancerPurple {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.LancerPurple {
+        throw "stub: create not decompiled";
+    }
 
-  function getKind(): String {}
+    public override function getKind(): String {
+        throw "stub: getKind not decompiled";
+    }
 
-  function getLib(): libs.heaps.slib.SpriteLib.SpriteLib {}
+    public override function getLib(): libs.heaps.slib.SpriteLib {
+        throw "stub: getLib not decompiled";
+    }
 
-  function getNormalMap(): h3d.mat.Texture.Texture {}
+    public override function getNormalMap(): h3d.mat.Texture {
+        throw "stub: getNormalMap not decompiled";
+    }
 
-  function createBodyPart(): hl.types.ArrayObj<Dynamic> {}
+    public function createBodyPart(): Array<Dynamic> {
+        throw "stub: createBodyPart not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

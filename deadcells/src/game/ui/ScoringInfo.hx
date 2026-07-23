@@ -1,37 +1,46 @@
 package ui;
+
 class ScoringInfo extends ui.Process {
-  var killed: Bool;
-  var wrapper: h2d.Object.Object;
-  var leftPart: h2d.Object.Object;
-  var comboBG: libs.heaps.slib.HSprite.HSprite;
-  var textComboNum: h2d.Text.Text;
-  var textCombo: ui.Text.Text;
-  var fxNovaCombo: libs.heaps.slib.HSprite.HSprite;
-  var rightPart: h2d.Object.Object;
-  var scoreBG: libs.heaps.slib.HSprite.HSprite;
-  var textScore: h2d.Text.Text;
-  var textTime: ui.Text.Text;
-  var fxNovaTime: libs.heaps.slib.HSprite.HSprite;
-  var previousMultCombo: Int;
-  var previousTime: Int;
-  var isHidden: Bool;
-  var warningValue: hl.types.ArrayBytes<Int>;
-  static var ME: ScoringInfo;
+    public static var ME: ui.ScoringInfo;
+    public var killed: Bool;
+    public var wrapper: h2d.Object;
+    public var leftPart: h2d.Object;
+    public var comboBG: libs.heaps.slib.HSprite;
+    public var textComboNum: h2d.Text;
+    public var textCombo: ui.Text;
+    public var fxNovaCombo: libs.heaps.slib.HSprite;
+    public var rightPart: h2d.Object;
+    public var scoreBG: libs.heaps.slib.HSprite;
+    public var textScore: h2d.Text;
+    public var textTime: ui.Text;
+    public var fxNovaTime: libs.heaps.slib.HSprite;
+    public var previousMultCombo: Int;
+    public var previousTime: Int;
+    public var isHidden: Bool;
+    public var warningValue: Array<Int>;
 
-  function __constructor__(hud: ui.HUD.HUD) {}
+    public function new(arg0: ui.HUD) {
+        super();
+    }
 
-  function kill(instant: Dynamic) {}
+    public function kill(arg0: Ref): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function checkCombo() {}
+    public function checkCombo(): Void {
+    }
 
-  function fxCombo() {}
+    public function fxCombo(): Void {
+    }
 
-  function fxTime() {}
+    public function fxTime(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

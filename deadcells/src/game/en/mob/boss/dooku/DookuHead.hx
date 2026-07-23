@@ -1,60 +1,92 @@
 package en.mob.boss.dooku;
+
 class DookuHead extends Entity {
-  var targetAngle: Float;
-  var targetPos: tool.CPoint.CPoint;
-  var hero: en.Hero.Hero;
-  var dooku: en.mob.boss.DookuBeast.DookuBeast;
-  var holdCond: Dynamic;
-  var lastHeadFx: libs.heaps.HParticle.HParticle;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var targetAngle: Float;
+    public var targetPos: tool.CPoint;
+    public var hero: en.Hero;
+    public var dooku: en.mob.boss.DookuBeast;
+    public var holdCond: Dynamic;
+    public var lastHeadFx: libs.heaps.HParticle;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dooku: en.mob.boss.DookuBeast.DookuBeast) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.boss.DookuBeast) {
+        super();
+    }
 
-  function get_shouldOpen(): Bool {}
+    public function get_shouldOpen(): Bool {
+        throw "stub: get_shouldOpen not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function setAngle() {}
+    public function setAngle(): Void {
+    }
 
-  function updateSpr() {}
+    public function updateSpr(): Void {
+    }
 
-  function isTargetBetween(min: Float, max: Float, inclusive: Dynamic): Bool {}
+    public function isTargetBetween(arg0: Float, arg1: Float, arg2: Ref): Bool {
+        throw "stub: isTargetBetween not decompiled";
+    }
 
-  function changeSpr(openMouthSpr: String, newSpr: String) {}
+    public function changeSpr(arg0: String, arg1: String): Void {
+    }
 
-  function getFxSpr(): String {}
+    public function getFxSpr(): String {
+        throw "stub: getFxSpr not decompiled";
+    }
 
-  function waitSprFor(time: Float) {}
+    public function waitSprFor(arg0: Float): Void {
+    }
 
-  function onChangeSpr() {}
+    public function onChangeSpr(): Void {
+    }
 
-  function targetAndLock(tCx: Int, tCy: Int) {}
+    public function targetAndLock(arg0: Int, arg1: Int): Void {
+    }
 
-  function lock() {}
+    public function lock(): Void {
+    }
 
-  function setAndlockSpr(newSpr: String, cond: Dynamic, forcedTargetAngle: Dynamic) {}
+    public function setAndlockSpr(arg0: String, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function unlockHead() {}
+    public function unlockHead(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function onFatalFallDamage() {}
+    public override function onFatalFallDamage(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

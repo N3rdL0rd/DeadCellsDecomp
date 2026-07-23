@@ -1,22 +1,36 @@
 package tool.atk.atkTargets;
+
 class HeroAttackTarget extends tool.atk.AttackTargetImpl {
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function __constructor__(parent: en.Hero.Hero) {}
+    public override function preAttack(arg0: tool.atk.AttackData): Void {
+    }
 
-  function preAttack(atk: tool.atk.AttackData.AttackData) {}
+    public override function preHitResultUpdate(arg0: tool.atk.AttackData): Void {
+    }
 
-  function preHitResultUpdate(atk: tool.atk.AttackData.AttackData) {}
+    public override function updateHitResult(arg0: HitResult, arg1: tool.atk.AttackData): HitResult {
+        throw "stub: updateHitResult not decompiled";
+    }
 
-  function updateHitResult(hitResult: Dynamic, atk: tool.atk.AttackData.AttackData): Dynamic {}
+    public override function computeBonusMul(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeBonusMul not decompiled";
+    }
 
-  function computeBonusMul(atk: tool.atk.AttackData.AttackData): Float {}
+    public override function computeReduceMul(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeReduceMul not decompiled";
+    }
 
-  function computeReduceMul(atk: tool.atk.AttackData.AttackData): Float {}
+    public override function computeDamageCap(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeDamageCap not decompiled";
+    }
 
-  function computeDamageCap(atk: tool.atk.AttackData.AttackData): Float {}
+    public override function computeDamageNegation(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeDamageNegation not decompiled";
+    }
 
-  function computeDamageNegation(atk: tool.atk.AttackData.AttackData): Float {}
-
-  function postHitResultUpdate(atk: tool.atk.AttackData.AttackData) {}
+    public override function postHitResultUpdate(arg0: tool.atk.AttackData): Void {
+    }
 }
-

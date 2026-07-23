@@ -1,41 +1,62 @@
 package en.active;
+
 class GroundSaw extends en.Active {
-  var saws: hl.types.ArrayObj<Dynamic>;
-  var sawSprites: hl.types.ArrayObj<Dynamic>;
-  var hasSound: Bool;
-  var left: Int;
-  var right: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var saws: Array<Dynamic>;
+    public var sawSprites: Array<Dynamic>;
+    public var hasSound: Bool;
+    public var left: Int;
+    public var right: Int;
 
-  static function create(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem): GroundSaw {}
+    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
+    public static function create(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem): en.active.GroundSaw {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function checkFallHit(e: en.Mob.Mob, floors: Float): Bool {}
+    public function checkFallHit(arg0: en.Mob, arg1: Float): Bool {
+        throw "stub: checkFallHit not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

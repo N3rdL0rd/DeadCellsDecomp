@@ -1,45 +1,68 @@
 package tool.weap;
+
 class Club extends tool.Weapon {
-  var trueChargeF: Float;
-  var fullChargeAnnounceDone: Bool;
-  var _isFullCharge: Bool;
-  var brokenSfx: hxd.res.Sound.Sound;
-  var touchGroundSfx: hxd.res.Sound.Sound;
+    public var trueChargeF: Float;
+    public var fullChargeAnnounceDone: Bool;
+    public var _isFullCharge: Bool;
+    public var brokenSfx: hxd.res.Sound;
+    public var touchGroundSfx: hxd.res.Sound;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function getTrueElapsedChargeS(): Float {}
+    public function getTrueElapsedChargeS(): Float {
+        throw "stub: getTrueElapsedChargeS not decompiled";
+    }
 
-  function getFullChargeRatio(): Float {}
+    public function getFullChargeRatio(): Float {
+        throw "stub: getFullChargeRatio not decompiled";
+    }
 
-  function isFullCharge(): Bool {}
+    public function isFullCharge(): Bool {
+        throw "stub: isFullCharge not decompiled";
+    }
 
-  function initSkill(idx: Int, chainInf: Dynamic, skill: tool.Weapon.Weapon) {}
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 }
 
 class ClubBroken extends tool.Weapon {
-  var woodRechargeFXDone: Bool;
+    public var woodRechargeFXDone: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onAnticipate() {}
+    public override function onAnticipate(): Void {
+    }
 
-  function woodRechargeFX() {}
+    public function woodRechargeFX(): Void {
+    }
 
-  function woodRechargeCompleteFX() {}
+    public function woodRechargeCompleteFX(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

@@ -1,42 +1,65 @@
 package tool.mainSkills;
-class DiveAttack extends tool.HeroMainSkill.HeroMainSkill {
-  var heightIgnored: Int;
-  var sfxEnabled: Bool;
-  static var DEFAULT_HEIGHT_IGNORED: Int;
-  static var __clid: Int;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+class DiveAttack extends tool.HeroMainSkill {
+    public static var DEFAULT_HEIGHT_IGNORED: Int;
+    public static var __clid: Int;
+    public var heightIgnored: Int;
+    public var sfxEnabled: Bool;
 
-  function init() {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function destroy() {}
+    public override function init(): Void {
+    }
 
-  function activeFixedUpdate() {}
+    public override function destroy(): Void {
+    }
 
-  function isUsingInputs(): Bool {}
+    public override function activeFixedUpdate(): Void {
+    }
 
-  function canUse(): Bool {}
+    public override function isUsingInputs(): Bool {
+        throw "stub: isUsingInputs not decompiled";
+    }
 
-  function onStart() {}
+    public override function canUse(): Bool {
+        throw "stub: canUse not decompiled";
+    }
 
-  function onOwnerLand(height: Float) {}
+    public override function onStart(): Void {
+    }
 
-  function onOwnerTouch(e: Entity) {}
+    public function onOwnerLand(arg0: Float): Void {
+    }
 
-  function onEnd() {}
+    public function onOwnerTouch(arg0: Entity): Void {
+    }
 
-  function onCancel() {}
+    public override function onEnd(): Void {
+    }
 
-  function overrideHeightIgnored(val: Int) {}
+    public override function onCancel(): Void {
+    }
 
-  function canBeInterruptedBy(heroSkill: tool.HeroMainSkill.HeroMainSkill): Bool {}
+    public function overrideHeightIgnored(arg0: Int): Void {
+    }
 
-  function isDiving(): Bool {}
+    public override function canBeInterruptedBy(arg0: tool.HeroMainSkill): Bool {
+        throw "stub: canBeInterruptedBy not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function isDiving(): Bool {
+        throw "stub: isDiving not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserializeInit(): Void {
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

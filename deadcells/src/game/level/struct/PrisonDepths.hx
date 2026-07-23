@@ -1,14 +1,22 @@
 package level.struct;
+
 class PrisonDepths extends level.struct.CursedLevel {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public override function getEntranceRoomKind(): String {
+        throw "stub: getEntranceRoomKind not decompiled";
+    }
 
-  function getEntranceRoomKind(): String {}
+    public override function getExitLevelKind(): String {
+        throw "stub: getExitLevelKind not decompiled";
+    }
 
-  function getExitLevelKind(): String {}
+    public override function getZExitLevelKind(): String {
+        throw "stub: getZExitLevelKind not decompiled";
+    }
 
-  function getZExitLevelKind(): String {}
-
-  function finalizeCursedLevel() {}
+    public override function finalizeCursedLevel(): Void {
+    }
 }
-

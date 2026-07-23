@@ -1,36 +1,52 @@
 package tool.weap;
+
 class KingScepter extends tool.Weapon {
-  var dashingF: Float;
-  var spinning: Bool;
-  var isFirstSpin: Bool;
-  var spinCount: Int;
+    public var dashingF: Float;
+    public var spinning: Bool;
+    public var isFirstSpin: Bool;
+    public var spinCount: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function onDodge() {}
+    public function onDodge(): Void {
+    }
 
-  function cancelAll() {}
+    public function cancelAll(): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 
-  function push(e: Entity) {}
+    public function push(arg0: Entity): Void {
+    }
 
-  function jumpAndStartSpin(e: Entity) {}
+    public function jumpAndStartSpin(arg0: Entity): Void {
+    }
 
-  function stopSpin() {}
+    public function stopSpin(): Void {
+    }
 
-  function onOwnerTouchGround() {}
+    public function onOwnerTouchGround(): Void {
+    }
 
-  function onOwnerTouch(e: Entity) {}
+    public function onOwnerTouch(arg0: Entity): Void {
+    }
 
-  function checkHit(e: Entity) {}
+    public function checkHit(arg0: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 }
-

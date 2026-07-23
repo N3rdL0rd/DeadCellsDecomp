@@ -1,259 +1,370 @@
 package libs.heaps;
+
+class Emitter {
+    public var id: String;
+    public var x: Float;
+    public var y: Float;
+    public var wid: Float;
+    public var hei: Float;
+    public var cd: libs.Cooldown;
+    public var delayer: libs.Delayer;
+    public var activeCond: Dynamic;
+    public var active: Bool;
+    public var dt: Float;
+    public var destroyed: Bool;
+    public var tickS: Float;
+    public var padding: Int;
+    public var permanent: Bool;
+
+    public function new(arg0: String, arg1: Int) {
+    }
+
+    public function get_top(): Float {
+        throw "stub: get_top not decompiled";
+    }
+
+    public function get_bottom(): Float {
+        throw "stub: get_bottom not decompiled";
+    }
+
+    public function get_left(): Float {
+        throw "stub: get_left not decompiled";
+    }
+
+    public function get_right(): Float {
+        throw "stub: get_right not decompiled";
+    }
+
+    public function setPosition(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
+
+    public function setSize(arg0: Float, arg1: Float): Void {
+    }
+
+    public function setDurationS(arg0: Float): Void {
+    }
+
+    public function set_active(arg0: Bool): Bool {
+        throw "stub: set_active not decompiled";
+    }
+
+    public function dispose(): Void {
+    }
+
+    public function update(arg0: Float): Void {
+    }
+
+    public function onDispose(): Void {
+    }
+
+    public function onUpdate(): Void {
+    }
+
+    public function onDeactivate(): Void {
+    }
+
+    public function onActivate(): Void {
+    }
+}
+
+class HParticleNode {
+    public var p: libs.heaps.HParticle;
+    public var prev: libs.heaps._HParticle.HParticleNode;
+    public var next: libs.heaps._HParticle.HParticleNode;
+
+    public function new(arg0: libs.heaps.HParticle) {
+    }
+
+    public function unlink(): Void {
+    }
+
+    public function insertBefore(arg0: libs.heaps._HParticle.HParticleNode): Void {
+    }
+}
+
+class HParticleList {
+    public var head: libs.heaps._HParticle.HParticleNode;
+    public var tail: libs.heaps._HParticle.HParticleNode;
+
+    public function new() {
+    }
+
+    public function first(): libs.heaps._HParticle.HParticleNode {
+        throw "stub: first not decompiled";
+    }
+
+    public function last(): libs.heaps._HParticle.HParticleNode {
+        throw "stub: last not decompiled";
+    }
+
+    public function isEmpty(): Bool {
+        throw "stub: isEmpty not decompiled";
+    }
+}
+
 class ParticlePool {
-  var size: Int;
-  var nalloc: Int;
-  var busyList_DontKillEarly: libs.heaps.HParticle.HParticle;
-  var busyList_Killable: libs.heaps.HParticle.HParticle;
-  var freeList: libs.heaps.HParticle.HParticle;
-  var excessAllocs: Int;
-  var oldAllocId: Dynamic;
-  var particleLimiterPass: Int;
-  var particleLimiterBlock: Int;
-  var particleLimiterCount: Int;
+    public var size: Int;
+    public var nalloc: Int;
+    public var busyList_DontKillEarly: libs.heaps._HParticle.HParticleList;
+    public var busyList_Killable: libs.heaps._HParticle.HParticleList;
+    public var freeList: libs.heaps._HParticle.HParticleList;
+    public var excessAllocs: Int;
+    public var oldAllocId: Dynamic;
+    public var particleLimiterPass: Int;
+    public var particleLimiterBlock: Int;
+    public var particleLimiterCount: Int;
 
-  function __constructor__(tile: h2d.Tile.Tile, count: Int, fps: Int) {}
+    public function new(arg0: h2d.Tile, arg1: Int, arg2: Int) {
+    }
 
-  function alloc(sb: h2d.SpriteBatch.SpriteBatch, fxTile: Dynamic, x: Float, y: Float, bDontKillEarly: Dynamic, pos: Dynamic, emptyTile: Dynamic, ignoreParticleLimit: Dynamic, gravityFactor: Dynamic): libs.heaps.HParticle.HParticle {}
+    public function alloc(arg0: h2d.SpriteBatch, arg1: tool.FxTile, arg2: Float, arg3: Float, arg4: Ref, arg5: Dynamic, arg6: tool.FxTile, arg7: Ref, arg8: Ref): libs.heaps.HParticle {
+        throw "stub: alloc not decompiled";
+    }
 
-  function free(p: libs.heaps.HParticle.HParticle) {}
+    public function free(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function getAllocateds(): Int {}
+    public function getAllocateds(): Int {
+        throw "stub: getAllocateds not decompiled";
+    }
 
-  function killAll() {}
+    public function killAll(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function update(dt: Float, updateCb: Dynamic) {}
-}
-
-class _HParticle.HParticleList {
-  var head: libs.heaps.HParticle.HParticle;
-  var tail: libs.heaps.HParticle.HParticle;
-
-  function __constructor__() {}
-
-  function first(): libs.heaps.HParticle.HParticle {}
-
-  function last(): libs.heaps.HParticle.HParticle {}
-
-  function isEmpty(): Bool {}
-}
-
-class _HParticle.HParticleNode {
-  var p: libs.heaps.HParticle.HParticle;
-  var prev: _HParticle.HParticleNode;
-  var next: _HParticle.HParticleNode;
-
-  function __constructor__(p: libs.heaps.HParticle.HParticle) {}
-
-  function unlink() {}
-
-  function insertBefore(newNext: _HParticle.HParticleNode) {}
+    public function update(arg0: Float, arg1: Dynamic): Void {
+    }
 }
 
 class HParticle extends h2d.BatchElement {
-  var pool: libs.heaps.HParticle.HParticle;
-  var poolNode: libs.heaps.HParticle.HParticle;
-  var poolIdx: Int;
-  var dx: Float;
-  var dy: Float;
-  var da: Float;
-  var ds: Float;
-  var dsX: Float;
-  var dsY: Float;
-  var dsFrict: Float;
-  var scaleMul: Float;
-  var scaleXMul: Float;
-  var scaleYMul: Float;
-  var dr: Float;
-  var frictX: Float;
-  var frictY: Float;
-  var gx: Float;
-  var gy: Float;
-  var bounceMul: Float;
-  var bounds: h2d.col.Bounds.Bounds;
-  var groundY: Float;
-  var groupId: String;
-  var fadeOutSpeed: Float;
-  var maxAlpha: Float;
-  var alphaFlicker: Float;
-  var gravityFactor: Float;
-  var rLifeF: Float;
-  var maxLifeF: Float;
-  var delayF: Float;
-  var onStart: Dynamic;
-  var onBounce: Dynamic;
-  var onUpdate: Dynamic;
-  var onKill: Dynamic;
-  var pixel: Bool;
-  var killOnLifeOut: Bool;
-  var killed: Bool;
-  var userData: Dynamic;
-  var fromColor: Int;
-  var toColor: Int;
-  var dColor: Float;
-  var rColor: Float;
-  var data0: Float;
-  var data1: Float;
-  var data2: Float;
-  var data3: Float;
-  var data4: Float;
-  var data5: Float;
-  var data6: Float;
-  var data7: Float;
-  var fps: Int;
-  var batchGroup: libs.heaps.SpriteBatchGroup.SpriteBatchGroup;
-  var animLib: libs.heaps.slib.SpriteLib.SpriteLib;
-  var animId: String;
-  var animCursor: Float;
-  var animXr: Float;
-  var animYr: Float;
-  var animLoop: Bool;
-  var animStop: Bool;
-  var animSpd: Float;
-  static var DEFAULT_BOUNDS: h2d.col.Bounds.Bounds;
+    public static var DEFAULT_BOUNDS: h2d.col.Bounds;
+    public var pool: libs.heaps.ParticlePool;
+    public var poolNode: libs.heaps._HParticle.HParticleNode;
+    public var poolIdx: Int;
+    public var dx: Float;
+    public var dy: Float;
+    public var da: Float;
+    public var ds: Float;
+    public var dsX: Float;
+    public var dsY: Float;
+    public var dsFrict: Float;
+    public var scaleMul: Float;
+    public var scaleXMul: Float;
+    public var scaleYMul: Float;
+    public var dr: Float;
+    public var frictX: Float;
+    public var frictY: Float;
+    public var gx: Float;
+    public var gy: Float;
+    public var bounceMul: Float;
+    public var bounds: h2d.col.Bounds;
+    public var groundY: Float;
+    public var groupId: String;
+    public var fadeOutSpeed: Float;
+    public var maxAlpha: Float;
+    public var alphaFlicker: Float;
+    public var gravityFactor: Float;
+    public var rLifeF: Float;
+    public var maxLifeF: Float;
+    public var delayF: Float;
+    public var onStart: Dynamic;
+    public var onBounce: Dynamic;
+    public var onUpdate: Dynamic;
+    public var onKill: Dynamic;
+    public var pixel: Bool;
+    public var killOnLifeOut: Bool;
+    public var killed: Bool;
+    public var userData: Dynamic;
+    public var fromColor: Int;
+    public var toColor: Int;
+    public var dColor: Float;
+    public var rColor: Float;
+    public var data0: Float;
+    public var data1: Float;
+    public var data2: Float;
+    public var data3: Float;
+    public var data4: Float;
+    public var data5: Float;
+    public var data6: Float;
+    public var data7: Float;
+    public var fps: Int;
+    public var batchGroup: libs.heaps.SpriteBatchGroup;
+    public var animLib: libs.heaps.slib.SpriteLib;
+    public var animId: String;
+    public var animCursor: Float;
+    public var animXr: Float;
+    public var animYr: Float;
+    public var animLoop: Bool;
+    public var animStop: Bool;
+    public var animSpd: Float;
 
-  function __constructor__(p: libs.heaps.HParticle.HParticle, tile: h2d.Tile.Tile, fps: Int, x: Dynamic, y: Dynamic) {}
+    public function new(arg0: libs.heaps.ParticlePool, arg1: h2d.Tile, arg2: Int, arg3: Ref, arg4: Ref) {
+        super();
+    }
 
-  function playAnimAndKill(lib: libs.heaps.slib.SpriteLib.SpriteLib, k: String, spd: Dynamic) {}
+    public function playAnimAndKill(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref): Void {
+    }
 
-  function playAnimLoop(lib: libs.heaps.slib.SpriteLib.SpriteLib, k: String, spd: Dynamic) {}
+    public function playAnimLoop(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref): Void {
+    }
 
-  function playAnimAndStop(lib: libs.heaps.slib.SpriteLib.SpriteLib, k: String, spd: Dynamic) {}
+    public function playAnimAndStop(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref): Void {
+    }
 
-  function setAnimSpeed(spd: Float): HParticle {}
+    public function setAnimSpeed(arg0: Float): libs.heaps.HParticle {
+        throw "stub: setAnimSpeed not decompiled";
+    }
 
-  function setAnimDuration(d: Float): HParticle {}
+    public function setAnimDuration(arg0: Float): libs.heaps.HParticle {
+        throw "stub: setAnimDuration not decompiled";
+    }
 
-  function setScale(v: Float) {}
+    public function setScale(arg0: Float): Void {
+    }
 
-  function setPosition(x: Float, y: Float) {}
+    public function setPosition(arg0: Float, arg1: Float): Void {
+    }
 
-  function reset(sb: h2d.SpriteBatch.SpriteBatch, tile: h2d.Tile.Tile, x: Dynamic, y: Dynamic, gravityFactor: Dynamic) {}
+    public function reset(arg0: h2d.SpriteBatch, arg1: h2d.Tile, arg2: Ref, arg3: Ref, arg4: Ref): Void {
+    }
 
-  function colorAnimS(from: Int, to: Int, t: Float) {}
+    public function colorAnimS(arg0: Int, arg1: Int, arg2: Float): Void {
+    }
 
-  function rnd(min: Float, max: Float, sign: Dynamic): Float {}
+    public function rnd(arg0: Float, arg1: Float, arg2: Ref): Float {
+        throw "stub: rnd not decompiled";
+    }
 
-  function irnd(min: Int, max: Int, sign: Dynamic): Int {}
+    public function irnd(arg0: Int, arg1: Int, arg2: Ref): Int {
+        throw "stub: irnd not decompiled";
+    }
 
-  function set_maxAlpha(v: Float): Float {}
+    public function set_maxAlpha(arg0: Float): Float {
+        throw "stub: set_maxAlpha not decompiled";
+    }
 
-  function setCenterRatio(xr: Float, yr: Float) {}
+    public function setCenterRatio(arg0: Float, arg1: Float): Void {
+    }
 
-  function set_frict(v: Float): Float {}
+    public function set_frict(arg0: Float): Float {
+        throw "stub: set_frict not decompiled";
+    }
 
-  function get_frict(): Float {}
+    public function get_frict(): Float {
+        throw "stub: get_frict not decompiled";
+    }
 
-  function uncolorize() {}
+    public function uncolorize(): Void {
+    }
 
-  function colorize(c: Int, ratio: Dynamic) {}
+    public function colorize(arg0: Int, arg1: Ref): Void {
+    }
 
-  function fade(targetAlpha: Float, fadeInSpd: Dynamic, fadeOutSpd: Dynamic) {}
+    public function fade(arg0: Float, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function setFadeS(targetAlpha: Float, fadeInDurationS: Float, fadeOutDurationS: Float) {}
+    public function setFadeS(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function fadeIn(alpha: Float, spd: Float) {}
+    public function fadeIn(arg0: Float, arg1: Float): Void {
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function clone(): HParticle {}
+    public function clone(): libs.heaps.HParticle {
+        throw "stub: clone not decompiled";
+    }
 
-  function set_delayS(d: Float): Float {}
+    public function set_delayS(arg0: Float): Float {
+        throw "stub: set_delayS not decompiled";
+    }
 
-  function get_delayS(): Float {}
+    public function get_delayS(): Float {
+        throw "stub: get_delayS not decompiled";
+    }
 
-  function set_delayF(d: Float): Float {}
+    public function set_delayF(arg0: Float): Float {
+        throw "stub: set_delayF not decompiled";
+    }
 
-  function set_lifeS(v: Float): Float {}
+    public function set_lifeS(arg0: Float): Float {
+        throw "stub: set_lifeS not decompiled";
+    }
 
-  function set_lifeF(v: Float): Float {}
+    public function set_lifeF(arg0: Float): Float {
+        throw "stub: set_lifeF not decompiled";
+    }
 
-  function mulLife(f: Float) {}
+    public function mulLife(arg0: Float): Void {
+    }
 
-  function get_remainingLifeS(): Float {}
+    public function get_remainingLifeS(): Float {
+        throw "stub: get_remainingLifeS not decompiled";
+    }
 
-  function get_curLifeRatio(): Float {}
+    public function get_curLifeRatio(): Float {
+        throw "stub: get_curLifeRatio not decompiled";
+    }
 
-  function initAsKilled() {}
+    public function initAsKilled(): Void {
+    }
 
-  function kill() {}
+    public function kill(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function isAlive(): Bool {}
+    public function isAlive(): Bool {
+        throw "stub: isAlive not decompiled";
+    }
 
-  function getSpeed(): Float {}
+    public function getSpeed(): Float {
+        throw "stub: getSpeed not decompiled";
+    }
 
-  function sign(): Int {}
+    public function sign(): Int {
+        throw "stub: sign not decompiled";
+    }
 
-  function randFloat(f: Float): Float {}
+    public function randFloat(arg0: Float): Float {
+        throw "stub: randFloat not decompiled";
+    }
 
-  function moveAng(a: Float, spd: Float) {}
+    public function moveAng(arg0: Float, arg1: Float): Void {
+    }
 
-  function moveTo(x: Float, y: Float, spd: Float) {}
+    public function moveTo(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function moveAwayFrom(x: Float, y: Float, spd: Float) {}
+    public function moveAwayFrom(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function getMoveAng(): Float {}
+    public function getMoveAng(): Float {
+        throw "stub: getMoveAng not decompiled";
+    }
 
-  function applyAnimFrame() {}
+    public function applyAnimFrame(): Void {
+    }
 
-  function resetAnimCursor() {}
+    public function resetAnimCursor(): Void {
+    }
 
-  function optimPow(v: Float, p: Float): Float {}
+    public function optimPow(arg0: Float, arg1: Float): Float {
+        throw "stub: optimPow not decompiled";
+    }
 
-  function updatePart(dt: Float) {}
+    public function updatePart(arg0: Float): Void {
+    }
 
-  function setBatchGroup(spriteBatchGroup: libs.heaps.SpriteBatchGroup.SpriteBatchGroup) {}
+    public function setBatchGroup(arg0: libs.heaps.SpriteBatchGroup): Void {
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
-
-class Emitter {
-  var id: String;
-  var x: Float;
-  var y: Float;
-  var wid: Float;
-  var hei: Float;
-  var cd: libs.Cooldown.Cooldown;
-  var delayer: libs.Delayer.Delayer;
-  var activeCond: Dynamic;
-  var active: Bool;
-  var dt: Float;
-  var destroyed: Bool;
-  var tickS: Float;
-  var padding: Int;
-  var permanent: Bool;
-
-  function onDispose() {}
-
-  function onDeactivate() {}
-
-  function onActivate() {}
-
-  function onUpdate() {}
-
-  function __constructor__(id: String, fps: Int) {}
-
-  function get_top(): Float {}
-
-  function get_bottom(): Float {}
-
-  function get_left(): Float {}
-
-  function get_right(): Float {}
-
-  function setPosition(x: Float, y: Float, w: Dynamic, h: Dynamic) {}
-
-  function setSize(w: Float, h: Float) {}
-
-  function setDurationS(t: Float) {}
-
-  function set_active(v: Bool): Bool {}
-
-  function dispose() {}
-
-  function update(dt: Float) {}
-}
-

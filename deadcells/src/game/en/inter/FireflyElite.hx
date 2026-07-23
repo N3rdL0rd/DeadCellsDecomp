@@ -1,43 +1,64 @@
 package en.inter;
+
 class FireflyElite extends en.Interactive {
-  var color: Int;
-  var tx: Float;
-  var ty: Float;
-  var skillInf: Dynamic;
-  var parentMob: en.Mob.Mob;
-  var shoot: tool.skill.OldSkill.OldSkill;
-  var canShoot: Bool;
-  var shootAng: Float;
-  var shootCount: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var color: Int;
+    public var tx: Float;
+    public var ty: Float;
+    public var skillInf: Dynamic;
+    public var parentMob: en.Mob;
+    public var shoot: tool.skill.OldSkill;
+    public var canShoot: Bool;
+    public var shootAng: Float;
+    public var shootCount: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, m: en.Mob.Mob, inf: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Mob, arg4: Dynamic) {
+        super();
+    }
 
-  static function getFromOwner(e: Entity): FireflyElite {}
+    public static function getFromOwner(arg0: Entity): en.inter.FireflyElite {
+        throw "stub: getFromOwner not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

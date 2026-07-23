@@ -1,19 +1,29 @@
 package ui.icon;
-class Icon extends h2d.Bitmap.Bitmap {
-  var foreground: h2d.Bitmap.Bitmap;
 
-  function __constructor__(tile: h2d.Tile.Tile, parent: h2d.Object.Object) {}
+class Icon extends h2d.Bitmap {
+    public var foreground: h2d.Bitmap;
 
-  static function createItemIcon(itemKind: String, parent: h2d.Object.Object): Icon {}
+    public function new(arg0: h2d.Tile, arg1: h2d.Object) {
+        super();
+    }
 
-  static function createMobIcon(mobKind: String, parent: h2d.Object.Object): Icon {}
+    public static function createMobIcon(arg0: String, arg1: h2d.Object): ui.icon.Icon {
+        throw "stub: createMobIcon not decompiled";
+    }
 
-  function addForeground(tile: h2d.Tile.Tile) {}
+    public static function createItemIcon(arg0: String, arg1: h2d.Object): ui.icon.Icon {
+        throw "stub: createItemIcon not decompiled";
+    }
 
-  function removeForegound() {}
+    public function addForeground(arg0: h2d.Tile): Void {
+    }
 
-  function setCenterRatio(px: Dynamic, py: Dynamic) {}
+    public function removeForegound(): Void {
+    }
 
-  function scaleToSize(w: Int, h: Int) {}
+    public function setCenterRatio(arg0: Ref, arg1: Ref): Void {
+    }
+
+    public function scaleToSize(arg0: Int, arg1: Int): Void {
+    }
 }
-

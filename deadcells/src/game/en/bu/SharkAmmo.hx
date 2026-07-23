@@ -1,35 +1,52 @@
 package en.bu;
+
 class SharkAmmo extends en.loot.Ammo {
-  var victim: Entity;
-  var hero: en.Hero.Hero;
-  var hasSnapped: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var victim: Entity;
+    public var hero: en.Hero;
+    public var hasSnapped: Bool;
 
-  function beforeFallFromEntity() {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: Entity) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, parent: Entity): SharkAmmo {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: Entity): en.bu.SharkAmmo {
+        throw "stub: create not decompiled";
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, parent: Entity) {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function stickToEntity(arg0: en.Bullet, arg1: Entity): Void {
+    }
 
-  function stickToEntity(b: en.Bullet.Bullet, e: Entity) {}
+    public function snapEntity(arg0: Entity, arg1: Int): Void {
+    }
 
-  function snapEntity(e: Entity, bDir: Int) {}
+    public function init(): Void {
+    }
 
-  function init() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function startMagnet(arg0: Entity): Void {
+    }
 
-  function startMagnet(e: Entity) {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function stickInWall(arg0: en.Bullet): Void {
+    }
 
-  function stickInWall(b: en.Bullet.Bullet) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function beforeFallFromEntity(): Void {
+    }
 }
-

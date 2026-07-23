@@ -1,11 +1,14 @@
 package libs.data;
+
 class GetAudio {
-  var onAudioError: Dynamic;
-  static var SFX_ROOT: String;
-  static var SFX_FORMAT: String;
+    public static var SFX_ROOT: String;
+    public static var SFX_FORMAT: String;
+    public var onAudioError: Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function get(id: String, sType: Dynamic): hxd.res.Sound.Sound {}
+    public function get(arg0: String, arg1: libs.data.SoundType): hxd.res.Sound {
+        throw "stub: get not decompiled";
+    }
 }
-

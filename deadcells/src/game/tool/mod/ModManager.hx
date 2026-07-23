@@ -1,58 +1,87 @@
 package tool.mod;
-class ModManager {
-  var originalPak: hxd.fmt.pak.FileSystem.FileSystem;
-  var modStates: hl.types.ArrayObj<Dynamic>;
-  var workshopTest: Bool;
-  static var instance: ModManager;
-
-  function __constructor__(_originalPak: hxd.fmt.pak.FileSystem.FileSystem) {}
-
-  function onSteamInit() {}
-
-  function refreshModsList() {}
-
-  function deactivateAllMods(_workshopTest: Dynamic): Bool {}
-
-  function retrieveActivatedModsIDs(_activatedMods: hl.types.ArrayObj<Dynamic>) {}
-
-  function reloadAssets() {}
-
-  function getMods(): hl.types.ArrayObj<Dynamic> {}
-
-  function onSaveLoaded(_activatedMods: hl.types.ArrayObj<Dynamic>) {}
-
-  function needReload(modIds: hl.types.ArrayObj<Dynamic>): Bool {}
-
-  function activateMod(_modID: haxe._Int64.___Int64) {}
-
-  function findMod(_modID: haxe._Int64.___Int64): tool.mod.ModManager.ModManager {}
-
-  function loadModPak(_path: String): Bool {}
-
-  function unloadModPak(_mod: tool.mod.ModManager.ModManager): Bool {}
-
-  function unloadModPakFromPath(pakPath: String): Bool {}
-
-  function onItemDownloaded(_item: steam.ugc.Item.Item) {}
-
-  function onItemInstalled(_item: steam.ugc.Item.Item) {}
-}
 
 class ModState {
-  var item: steam.ugc.Item.Item;
-  var shouldWarn: Bool;
-  var hasScripts: Bool;
-  var activated: Bool;
-  var name: String;
-  var pakPath: String;
-  var fileList: hl.types.ArrayObj<Dynamic>;
+    public var item: steam.ugc.Item;
+    public var shouldWarn: Bool;
+    public var hasScripts: Bool;
+    public var activated: Bool;
+    public var name: String;
+    public var pakPath: String;
+    public var fileList: Array<Dynamic>;
 
-  function __constructor__(_item: steam.ugc.Item.Item, _name: String, _pakPath: String, _hasScripts: Bool) {}
+    public function new(arg0: steam.ugc.Item, arg1: String, arg2: String, arg3: Bool) {
+    }
 
-  function isCompatibleWith(_modIDs: hl.types.ArrayObj<Dynamic>): Bool {}
+    public function isCompatibleWith(arg0: Array<Dynamic>): Bool {
+        throw "stub: isCompatibleWith not decompiled";
+    }
 
-  function isCompatibleWithMod(_otherModState: ModState): Bool {}
+    public function isCompatibleWithMod(arg0: tool.mod.ModState): Bool {
+        throw "stub: isCompatibleWithMod not decompiled";
+    }
 
-  function updateFileList() {}
+    public function updateFileList(): Void {
+    }
 }
 
+class ModManager {
+    public static var instance: tool.mod.ModManager;
+    public var originalPak: hxd.fmt.pak.FileSystem;
+    public var modStates: Array<Dynamic>;
+    public var workshopTest: Bool;
+
+    public function new(arg0: hxd.fmt.pak.FileSystem) {
+    }
+
+    public function onSteamInit(): Void {
+    }
+
+    public function refreshModsList(): Void {
+    }
+
+    public function deactivateAllMods(arg0: Ref): Bool {
+        throw "stub: deactivateAllMods not decompiled";
+    }
+
+    public function retrieveActivatedModsIDs(arg0: Array<Dynamic>): Void {
+    }
+
+    public function reloadAssets(): Void {
+    }
+
+    public function getMods(): Array<Dynamic> {
+        throw "stub: getMods not decompiled";
+    }
+
+    public function onSaveLoaded(arg0: Array<Dynamic>): Void {
+    }
+
+    public function needReload(arg0: Array<Dynamic>): Bool {
+        throw "stub: needReload not decompiled";
+    }
+
+    public function activateMod(arg0: haxe._Int64.___Int64): Void {
+    }
+
+    public function findMod(arg0: haxe._Int64.___Int64): tool.mod.ModState {
+        throw "stub: findMod not decompiled";
+    }
+
+    public function loadModPak(arg0: String): Bool {
+        throw "stub: loadModPak not decompiled";
+    }
+
+    public function unloadModPak(arg0: tool.mod.ModState): Bool {
+        throw "stub: unloadModPak not decompiled";
+    }
+
+    public function unloadModPakFromPath(arg0: String): Bool {
+        throw "stub: unloadModPakFromPath not decompiled";
+    }
+
+    public function onItemDownloaded(arg0: steam.ugc.Item): Void {
+    }
+
+    public function onItemInstalled(arg0: steam.ugc.Item): Void {
+    }
+}

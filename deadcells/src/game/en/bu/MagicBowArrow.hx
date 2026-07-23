@@ -1,39 +1,58 @@
 package en.bu;
+
 class MagicBowArrow extends en.Bullet {
-  var target: Entity;
-  var speed: Float;
-  var currAng: Float;
-  var homingRange: Float;
-  var startHomingDist: Float;
-  var homingAngleThreshold: Float;
-  var distanceCheckPassed: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var target: Entity;
+    public var speed: Float;
+    public var currAng: Float;
+    public var homingRange: Float;
+    public var startHomingDist: Float;
+    public var homingAngleThreshold: Float;
+    public var distanceCheckPassed: Bool;
 
-  function onReachMaxDist() {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Dynamic) {
+        super();
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, range: Float, dist: Float, homingAng: Float, spd: Dynamic) {}
+    public static function mod(arg0: Float, arg1: Float): Float {
+        throw "stub: mod not decompiled";
+    }
 
-  static function mod(a: Float, n: Float): Float {}
+    public override function initOrigin(arg0: Float, arg1: Float): Void {
+    }
 
-  function initOrigin(x: Float, y: Float) {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function chooseTarget(arg0: Array<Dynamic>): Entity {
+        throw "stub: chooseTarget not decompiled";
+    }
 
-  function chooseTarget(candidates: hl.types.ArrayObj<Dynamic>): Entity {}
+    public function disableTracking(): Void {
+    }
 
-  function disableTracking() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onReachMaxDist(): Void {
+    }
 }
-

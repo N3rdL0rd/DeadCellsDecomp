@@ -1,91 +1,113 @@
 package tool;
+
+class ScarfSegment {
+    public var manager: tool.ScarfManager;
+    public var scarf: tool.Scarf;
+    public var infos: Dynamic;
+    public var owner: Entity;
+    public var spr: libs.heaps.slib.HSpriteBE;
+    public var parent: tool.ScarfSegment;
+    public var linkedSeg: tool.ScarfSegment;
+    public var isFront: Bool;
+    public var depth: Float;
+    public var maxLength: Float;
+    public var runFactor: Float;
+    public var oscilFactor: Float;
+    public var extraSprLength: Int;
+    public var invertFront: Bool;
+    public var needLayerUpdate: Bool;
+    public var dt: Float;
+    public var endX: Float;
+    public var endY: Float;
+    public var dx: Float;
+    public var dy: Float;
+    public var thickMovement: Float;
+    public var defaultScaleFactor: Float;
+    public var infDepthScaleFactor: Float;
+    public var infRotScale: Float;
+    public var infBackColor: Dynamic;
+
+    public function new(arg0: tool.ScarfManager, arg1: tool.Scarf, arg2: tool.ScarfSegment, arg3: Float, arg4: Dynamic) {
+    }
+
+    public function invertFrontAndBack(): Void {
+    }
+
+    public function dispose(): Void {
+    }
+
+    public function push(arg0: Float): Void {
+    }
+
+    public function gotoFrontLayer(): Void {
+    }
+
+    public function gotoBackLayer(): Void {
+    }
+
+    public function postUpdate(arg0: Float): Void {
+    }
+
+    public function instantTurnScarfDirection(): Void {
+    }
+}
+
 class ScarfManager {
-  var sbFront: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbBack: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var owner: Entity;
-  var scarfs: hl.types.ArrayObj<Dynamic>;
-  var blendMode: Dynamic;
+    public var sbFront: libs.heaps.slib.HSpriteBatch;
+    public var sbBack: libs.heaps.slib.HSpriteBatch;
+    public var owner: Entity;
+    public var scarfs: Array<Dynamic>;
+    public var blendMode: h2d.BlendMode;
 
-  static function create(e: Entity, id: String): ScarfManager {}
+    public function new(arg0: Entity) {
+    }
 
-  function __constructor__(e: Entity) {}
+    public static function create(arg0: Entity, arg1: String): tool.ScarfManager {
+        throw "stub: create not decompiled";
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function push(pow: Float, forRigid: Dynamic) {}
+    public function push(arg0: Float, arg1: Ref): Void {
+    }
 
-  function overrideBlendMode(blendMode: Dynamic) {}
+    public function overrideBlendMode(arg0: h2d.BlendMode): Void {
+    }
 
-  function restoreBlendMode() {}
+    public function restoreBlendMode(): Void {
+    }
 }
 
 class Scarf {
-  var manager: ScarfManager;
-  var segs: hl.types.ArrayObj<Dynamic>;
-  var infos: Dynamic;
-  var owner: Entity;
-  var linkedScarf: Scarf;
-  var lastOwnerDir: Int;
-  var customAttach: String;
-  var isRigidScarf: Bool;
-  var isCape: Bool;
+    public var manager: tool.ScarfManager;
+    public var segs: Array<Dynamic>;
+    public var infos: Dynamic;
+    public var owner: Entity;
+    public var linkedScarf: tool.Scarf;
+    public var lastOwnerDir: Int;
+    public var customAttach: String;
+    public var isRigidScarf: Bool;
+    public var isCape: Bool;
 
-  function __constructor__(m: ScarfManager, scarfInf: Dynamic) {}
+    public function new(arg0: tool.ScarfManager, arg1: Dynamic) {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function push(pow: Float, forRigid: Dynamic) {}
+    public function push(arg0: Float, arg1: Ref): Void {
+    }
 
-  function instantTurnScarfDirection() {}
+    public function instantTurnScarfDirection(): Void {
+    }
 }
-
-class ScarfSegment {
-  var manager: tool.ScarfSegment.ScarfSegment;
-  var scarf: tool.ScarfSegment.ScarfSegment;
-  var infos: Dynamic;
-  var owner: Entity;
-  var spr: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var parent: ScarfSegment;
-  var linkedSeg: ScarfSegment;
-  var isFront: Bool;
-  var depth: Float;
-  var maxLength: Float;
-  var runFactor: Float;
-  var oscilFactor: Float;
-  var extraSprLength: Int;
-  var invertFront: Bool;
-  var needLayerUpdate: Bool;
-  var dt: Float;
-  var endX: Float;
-  var endY: Float;
-  var dx: Float;
-  var dy: Float;
-  var thickMovement: Float;
-  var defaultScaleFactor: Float;
-  var infDepthScaleFactor: Float;
-  var infRotScale: Float;
-  var infBackColor: Dynamic;
-
-  function __constructor__(m: tool.ScarfSegment.ScarfSegment, s: tool.ScarfSegment.ScarfSegment, p: ScarfSegment, depth: Float, scarfInf: Dynamic) {}
-
-  function invertFrontAndBack() {}
-
-  function dispose() {}
-
-  function push(pow: Float) {}
-
-  function gotoFrontLayer() {}
-
-  function gotoBackLayer() {}
-
-  function postUpdate(dt: Float) {}
-
-  function instantTurnScarfDirection() {}
-}
-

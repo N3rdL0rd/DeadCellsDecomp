@@ -1,40 +1,62 @@
 package en.loot;
+
 class BossCell extends en.Loot {
-  var item: tool.InventItem.InventItem;
-  var c: ui.BossCell.BossCell;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var item: tool.InventItem;
+    public var c: ui.BossCell;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, k: String): BossCell {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, k: String) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String): en.loot.BossCell {
+        throw "stub: create not decompiled";
+    }
 
-  function onTouchGround() {}
+    public function onTouchGround(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function pickUp(h: en.Hero.Hero) {}
+    public override function pickUp(arg0: en.Hero): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

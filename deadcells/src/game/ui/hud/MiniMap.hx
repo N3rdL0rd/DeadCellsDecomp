@@ -1,133 +1,208 @@
 package ui.hud;
+
 class MiniMap extends ui.Process {
-  var level: pr.Level.Level;
-  var innerWid: Int;
-  var innerHei: Int;
-  var baseScale: Float;
-  var minScale: Float;
-  var followEntity: Entity;
-  var vpX: Float;
-  var vpY: Float;
-  var worldMapVpX: Float;
-  var prevWorldMapVpX: Float;
-  var worldMapVpY: Float;
-  var prevWorldMapVpY: Float;
-  var bgBorders: ui.UIBox.UIBox;
-  var bgHighlight: ui.UIBox.UIBox;
-  var highlightTime: Float;
-  var blackBG: libs.heaps.slib.HSprite.HSprite;
-  var bgPool: libs.heaps.HParticle.HParticle;
-  var bgSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var mask: ui.hud.map.MapMask.MapMask;
-  var worldMapMask: h2d.Mask.Mask;
-  var container: Dynamic;
-  var fow: ui.hud.map.MapFow.MapFow;
-  var map: h2d.Layers.Layers;
-  var worldMap: h2d.Layers.Layers;
-  var bgContainer: h2d.Object.Object;
-  var fgContainer: h2d.Object.Object;
-  var fgIcons: h2d.Object.Object;
-  var fTitle: h2d.Flow.Flow;
-  var title: ui.Text.Text;
-  var subText: ui.Text.Text;
-  var line: libs.heaps.slib.HSprite.HSprite;
-  var fControl: h2d.Flow.Flow;
-  var cells: h2d.TileGroup.TileGroup;
-  var altCells: h2d.TileGroup.TileGroup;
-  var sbGame: libs.heaps.slib.HSprite.HSpriteBatch;
-  var sbIcon: libs.heaps.slib.HSprite.HSpriteBatch;
-  var sbIconWithShader: libs.heaps.slib.HSprite.HSpriteBatch;
-  var newTracker: Bool;
-  var trackers: hl.types.ArrayObj<Dynamic>;
-  var target: Dynamic;
-  var hasAlreadyRevealedTP: Bool;
-  var focusPoints: hl.types.ArrayObj<Dynamic>;
-  var currentFocusPoint: Int;
-  var links: hl.types.ArrayObj<Dynamic>;
-  var heroTracker: Dynamic;
-  var heroSonar: libs.heaps.slib.HSprite.HSprite;
-  var heroGlow: libs.heaps.slib.HSprite.HSprite;
-  var tpSonars: hl.types.ArrayObj<Dynamic>;
-  var isFullscreen: Bool;
-  var controller: tool.Controller.Controller;
-  var painter: ui.hud.map.painter.MapPainter.MapPainter;
-  var _showWorldMap: Bool;
-  var worldMapStruct: ui.WorldMap.WorldMap;
-  var worldMapSize: Dynamic;
-  static var INNER_PADDING: Int;
-  static var ICON_SCALE: Float;
-  static var REFRESH_RANGE: Int;
+    public static var INNER_PADDING: Int;
+    public static var ICON_SCALE: Float;
+    public static var REFRESH_RANGE: Int;
+    public var level: pr.Level;
+    public var innerWid: Int;
+    public var innerHei: Int;
+    public var baseScale: Float;
+    public var minScale: Float;
+    public var followEntity: Entity;
+    public var vpX: Float;
+    public var vpY: Float;
+    public var worldMapVpX: Float;
+    public var prevWorldMapVpX: Float;
+    public var worldMapVpY: Float;
+    public var prevWorldMapVpY: Float;
+    public var bgBorders: ui.UIBox;
+    public var bgHighlight: ui.UIBox;
+    public var highlightTime: Float;
+    public var blackBG: libs.heaps.slib.HSprite;
+    public var bgPool: libs.heaps.ParticlePool;
+    public var bgSb: libs.heaps.slib.HSpriteBatch;
+    public var mask: ui.hud.map.MapMask;
+    public var worldMapMask: h2d.Mask;
+    public var container: ui.hud.map.MapContainer;
+    public var fow: ui.hud.map.MapFow;
+    public var map: h2d.Layers;
+    public var worldMap: h2d.Layers;
+    public var bgContainer: h2d.Object;
+    public var fgContainer: h2d.Object;
+    public var fgIcons: h2d.Object;
+    public var fTitle: h2d.Flow;
+    public var title: ui.Text;
+    public var subText: ui.Text;
+    public var line: libs.heaps.slib.HSprite;
+    public var fControl: h2d.Flow;
+    public var cells: h2d.TileGroup;
+    public var altCells: h2d.TileGroup;
+    public var sbGame: libs.heaps.slib.HSpriteBatch;
+    public var sbIcon: libs.heaps.slib.HSpriteBatch;
+    public var sbIconWithShader: libs.heaps.slib.HSpriteBatch;
+    public var newTracker: Bool;
+    public var trackers: Array<Dynamic>;
+    public var target: ui.hud.MMTarget;
+    public var hasAlreadyRevealedTP: Bool;
+    public var focusPoints: Array<Dynamic>;
+    public var currentFocusPoint: Int;
+    public var links: Array<Dynamic>;
+    public var heroTracker: ui.hud.MMTracker;
+    public var heroSonar: libs.heaps.slib.HSprite;
+    public var heroGlow: libs.heaps.slib.HSprite;
+    public var tpSonars: Array<Dynamic>;
+    public var isFullscreen: Bool;
+    public var controller: tool.ControllerAccess;
+    public var painter: ui.hud.map.painter.MapPainter;
+    public var _showWorldMap: Bool;
+    public var worldMapStruct: ui.WorldMap;
+    public var worldMapSize: Dynamic;
 
-  function __constructor__(p: libs.Process.Process, lvl: pr.Level.Level, fowPNG: haxe.io.Bytes) {}
+    public function new(arg0: libs.Process, arg1: pr.Level, arg2: haxe.io.Bytes) {
+        super();
+    }
 
-  function get_outerWid(): Int {}
+    public function get_outerWid(): Int {
+        throw "stub: get_outerWid not decompiled";
+    }
 
-  function get_outerHei(): Int {}
+    public function get_outerHei(): Int {
+        throw "stub: get_outerHei not decompiled";
+    }
 
-  function invalidateMinimap() {}
+    public function invalidateMinimap(): Void {
+    }
 
-  function forceRenderRooms() {}
+    public function forceRenderRooms(): Void {
+    }
 
-  function get_showWorldMap(): Bool {}
+    public function get_showWorldMap(): Bool {
+        throw "stub: get_showWorldMap not decompiled";
+    }
 
-  function set_showWorldMap(v: Bool): Bool {}
+    public function set_showWorldMap(arg0: Bool): Bool {
+        throw "stub: set_showWorldMap not decompiled";
+    }
 
-  function initPainter() {}
+    public function initPainter(): Void {
+    }
 
-  function getFowPixels(): hxd.Pixels.Pixels {}
+    public function getFowPixels(): hxd.Pixels {
+        throw "stub: getFowPixels not decompiled";
+    }
 
-  function initUI() {}
+    public function initUI(): Void {
+    }
 
-  function updateTitles() {}
+    public function updateTitles(): Void {
+    }
 
-  function initContainers(fowPNG: haxe.io.Bytes) {}
+    public function initContainers(arg0: haxe.io.Bytes): Void {
+    }
 
-  function setSize(w: Int, h: Int, s: Float) {}
+    public function setSize(arg0: Int, arg1: Int, arg2: Float): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function track(e: Entity, col: Dynamic, iconId: String, forcedIconColor: Dynamic, blink: Dynamic, customTile: h2d.Tile.Tile, text: String, itemKind: String) {}
+    public function track(arg0: Entity, arg1: Dynamic, arg2: String, arg3: Dynamic, arg4: Dynamic, arg5: h2d.Tile, arg6: String, arg7: String): Void {
+    }
 
-  function disposeTracker(td: Dynamic) {}
+    public function disposeTracker(arg0: ui.hud.MMTracker): Void {
+    }
 
-  function stopTracking(e: Entity) {}
+    public function stopTracking(arg0: Entity): Void {
+    }
 
-  function focusOnFullscreen(e: Entity) {}
+    public function focusOnFullscreen(arg0: Entity): Void {
+    }
 
-  function renderWorldMap(force: Dynamic) {}
+    public function renderWorldMap(arg0: Ref): Void {
+    }
 
-  function renderRooms(refreshMinimapLocaly: Dynamic) {}
+    public function renderRooms(arg0: Ref): Void {
+    }
 
-  function fullscreen() {}
+    public function fullscreen(): Void {
+    }
 
-  function scrollThroughFocusPoints() {}
+    public function scrollThroughFocusPoints(): Void {
+    }
 
-  function restore() {}
+    public function restore(): Void {
+    }
 
-  function revealRoom(r: level.Room.Room) {}
+    public function revealRoom(arg0: level.Room): Void {
+    }
 
-  function revealAll() {}
+    public function revealAll(): Void {
+    }
 
-  function chooseTarget(origin: Entity, targets: hl.types.ArrayObj<Dynamic>, onChoose: Dynamic) {}
+    public function chooseTarget(arg0: Entity, arg1: Array<Dynamic>, arg2: Dynamic): Void {
+    }
 
-  function cancelChooseTarget() {}
+    public function cancelChooseTarget(): Void {
+    }
 
-  function swapTarget(ta: Float) {}
+    public function swapTarget(arg0: Float): Void {
+    }
 
-  function setCurTarget(e: Entity) {}
+    public function setCurTarget(arg0: Entity): Void {
+    }
 
-  function linkBetween(fx: Int, fy: Int, tx: Int, ty: Int) {}
+    public function linkBetween(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function clampWorldMapVp() {}
+    public function clampWorldMapVp(): Void {
+    }
 
-  function handleWorldMapMovements() {}
+    public function handleWorldMapMovements(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function addSmokePart() {}
+    public function addSmokePart(): Void {
+    }
 }
 
+class MMTracker {
+    public var e: Entity;
+    public var dot: h2d.BatchElement;
+    public var icons: Array<Dynamic>;
+    public var blink: Bool;
+    public var textWrapper: h2d.Object;
+    public var text: ui.hud.map.Text;
+
+    public function new(arg0: Entity, arg1: h2d.BatchElement, arg2: Array<Dynamic>, arg3: Bool, arg4: h2d.Object, arg5: ui.hud.map.Text) {
+    }
+}
+
+class MMTarget {
+    public var origin: Entity;
+    public var targets: Array<Dynamic>;
+    public var current: Entity;
+    public var highlight: h2d.ScaleGrid;
+    public var line: h2d.ScaleGrid;
+    public var onChoose: Dynamic;
+
+    public function new(arg0: Entity, arg1: Array<Dynamic>, arg2: Entity, arg3: h2d.ScaleGrid, arg4: h2d.ScaleGrid, arg5: Dynamic) {
+    }
+}
+
+class MMLink {
+    public var from: tool.CPoint;
+    public var to: tool.CPoint;
+    public var line: h2d.BatchElement;
+
+    public function new(arg0: tool.CPoint, arg1: tool.CPoint, arg2: h2d.BatchElement) {
+    }
+}

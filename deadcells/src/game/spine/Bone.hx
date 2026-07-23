@@ -1,39 +1,43 @@
 package spine;
+
 class Bone {
-  var data: BoneData;
-  var skeleton: spine.Skeleton.Skeleton;
-  var parent: Bone;
-  var children: hl.types.ArrayObj<Dynamic>;
-  var x: Float;
-  var y: Float;
-  var rotation: Float;
-  var scaleX: Float;
-  var scaleY: Float;
-  var shearX: Float;
-  var shearY: Float;
-  var ax: Float;
-  var ay: Float;
-  var arotation: Float;
-  var ascaleX: Float;
-  var ascaleY: Float;
-  var ashearX: Float;
-  var ashearY: Float;
-  var appliedValid: Bool;
-  var a: Float;
-  var b: Float;
-  var worldX: Float;
-  var c: Float;
-  var d: Float;
-  var worldY: Float;
-  var sorted: Bool;
-  var <none>: Dynamic;
+    public var data: spine.BoneData;
+    public var skeleton: spine.Skeleton;
+    public var parent: spine.Bone;
+    public var children: Array<Dynamic>;
+    public var x: Float;
+    public var y: Float;
+    public var rotation: Float;
+    public var scaleX: Float;
+    public var scaleY: Float;
+    public var shearX: Float;
+    public var shearY: Float;
+    public var ax: Float;
+    public var ay: Float;
+    public var arotation: Float;
+    public var ascaleX: Float;
+    public var ascaleY: Float;
+    public var ashearX: Float;
+    public var ashearY: Float;
+    public var appliedValid: Bool;
+    public var a: Float;
+    public var b: Float;
+    public var worldX: Float;
+    public var c: Float;
+    public var d: Float;
+    public var worldY: Float;
+    public var sorted: Bool;
+    public var : Dynamic;
 
-  function __constructor__(data: BoneData, skeleton: spine.Skeleton.Skeleton, parent: Bone) {}
+    public function new(arg0: spine.BoneData, arg1: spine.Skeleton, arg2: spine.Bone) {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function updateWorldTransform() {}
+    public function updateWorldTransform(): Void {
+    }
 
-  function updateWorldTransformWithData(x: Float, y: Float, rotation: Float, scaleX: Float, scaleY: Float, shearX: Float, shearY: Float) {}
+    public function updateWorldTransformWithData(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Float): Void {
+    }
 }
-

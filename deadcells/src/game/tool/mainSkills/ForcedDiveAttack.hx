@@ -1,15 +1,24 @@
 package tool.mainSkills;
+
 class ForcedDiveAttack extends tool.mainSkills.DiveAttack {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic, enableSfx: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic, arg3: Ref) {
+        super();
+    }
 
-  function isEnabled(): Bool {}
+    public function isEnabled(): Bool {
+        throw "stub: isEnabled not decompiled";
+    }
 
-  function canUse(): Bool {}
+    public override function canUse(): Bool {
+        throw "stub: canUse not decompiled";
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

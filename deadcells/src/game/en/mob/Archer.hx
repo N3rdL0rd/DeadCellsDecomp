@@ -1,36 +1,61 @@
 package en.mob;
+
 class Archer extends en.Mob {
-  var swap: tool.skill.OldSkill.OldSkill;
-  var dodge: tool.skill.OldSkill.OldSkill;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var swap: tool.skill.OldSkill;
+    public var dodge: tool.skill.OldSkill;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Archer {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Archer {
+        throw "stub: create not decompiled";
+    }
 
-  function getKind(): String {}
+    public function getKind(): String {
+        throw "stub: getKind not decompiled";
+    }
 
-  function getLib(): libs.heaps.slib.SpriteLib.SpriteLib {}
+    public function getLib(): libs.heaps.slib.SpriteLib {
+        throw "stub: getLib not decompiled";
+    }
 
-  function getNormalMap(): h3d.mat.Texture.Texture {}
+    public function getNormalMap(): h3d.mat.Texture {
+        throw "stub: getNormalMap not decompiled";
+    }
 
-  function getPivotY(): Float {}
+    public function getPivotY(): Float {
+        throw "stub: getPivotY not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function getSkillSpeedMul(): Float {}
+    public override function getSkillSpeedMul(): Float {
+        throw "stub: getSkillSpeedMul not decompiled";
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

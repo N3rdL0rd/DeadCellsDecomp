@@ -1,16 +1,25 @@
 package en.inter.exit;
+
 class RichterCastleExit extends en.inter.exit.BgDoor {
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, destLevel: String, _destName: String, _destColor: Dynamic, shouldServeAsTp: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String, arg5: Dynamic, arg6: Dynamic) {
+        super();
+    }
 
-  function startExitCinematic(hero: en.Hero.Hero) {}
+    public override function startExitCinematic(arg0: en.Hero): Void {
+    }
 
-  function getDestName(): String {}
+    public function getDestName(): String {
+        throw "stub: getDestName not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

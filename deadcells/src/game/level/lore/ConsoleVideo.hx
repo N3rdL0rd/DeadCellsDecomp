@@ -1,19 +1,28 @@
 package level.lore;
+
 class ConsoleVideo extends level.LoreManager {
-  var _pt: tool.CPoint.CPoint;
-  var treasure: en.inter.TreasureChest.TreasureChest;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var _pt: tool.CPoint;
+    public var treasure: en.inter.TreasureChest;
 
-  function __constructor__(l: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function get_pt(): tool.CPoint.CPoint {}
+    public function get_pt(): tool.CPoint {
+        throw "stub: get_pt not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onCustomEvent(id: String, e: en.inter.Examinable.Examinable) {}
+    public override function onCustomEvent(arg0: String, arg1: en.inter.Examinable): Void {
+    }
 
-  function postUpdate(dt: Float) {}
+    public override function postUpdate(arg0: Float): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

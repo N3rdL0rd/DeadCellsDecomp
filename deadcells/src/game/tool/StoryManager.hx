@@ -1,52 +1,77 @@
 package tool;
+
 class StoryManager {
-  var counters: haxe.ds.StringMap;
-  var npcProgresses: haxe.ds.EnumValueMap;
-  var loreRoomRunIds: Dynamic;
-  var visitedLoreRooms: Dynamic;
-  var plannedLores: hl.types.ArrayBytes<Int>;
-  var storyDataVersion: Int;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var DEBUG_LORE: Bool;
-  static var __clid: Int;
+    public static var DEBUG_LORE: Bool;
+    public static var __clid: Int;
+    public var counters: haxe.ds.StringMap;
+    public var npcProgresses: haxe.ds.EnumValueMap;
+    public var loreRoomRunIds: Dynamic;
+    public var visitedLoreRooms: Dynamic;
+    public var plannedLores: Array<Int>;
+    public var storyDataVersion: Int;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function onNewGame(gameSeed: Int) {}
+    public function onNewGame(arg0: Int): Void {
+    }
 
-  function onLoadMainLevel(game: pr.Game.Game, k: String) {}
+    public function onLoadMainLevel(arg0: pr.Game, arg1: String): Void {
+    }
 
-  function getNpcProgress(id: Dynamic): Dynamic {}
+    public function getNpcProgress(arg0: NpcId): Dynamic {
+        throw "stub: getNpcProgress not decompiled";
+    }
 
-  function incNpcProgress(id: Dynamic) {}
+    public function incNpcProgress(arg0: NpcId): Void {
+    }
 
-  function setNpcProgress(id: Dynamic, v: Int) {}
+    public function setNpcProgress(arg0: NpcId, arg1: Int): Void {
+    }
 
-  function setBitFlag(id: String, slot: Int, value: Bool) {}
+    public function setBitFlag(arg0: String, arg1: Int, arg2: Bool): Void {
+    }
 
-  function markLoreRoomAsVisited(k: String) {}
+    public function markLoreRoomAsVisited(arg0: String): Void {
+    }
 
-  function hasEverVisitedLoreRoom(k: String): Bool {}
+    public function hasEverVisitedLoreRoom(arg0: String): Bool {
+        throw "stub: hasEverVisitedLoreRoom not decompiled";
+    }
 
-  function markLoreRoomAsGenerated(l: Dynamic, k: String) {}
+    public function markLoreRoomAsGenerated(arg0: Dynamic, arg1: String): Void {
+    }
 
-  function wasLoreRoomGeneratedRecently(r: String): Bool {}
+    public function wasLoreRoomGeneratedRecently(arg0: String): Bool {
+        throw "stub: wasLoreRoomGeneratedRecently not decompiled";
+    }
 
-  function levelRequiresLoreRoom(ldata: Dynamic): Bool {}
+    public function levelRequiresLoreRoom(arg0: Dynamic): Bool {
+        throw "stub: levelRequiresLoreRoom not decompiled";
+    }
 
-  function cleanStoryData() {}
+    public function cleanStoryData(): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

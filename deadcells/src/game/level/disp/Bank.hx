@@ -1,56 +1,90 @@
 package level.disp;
+
 class Bank extends level.BiomeDisp {
-  var darkSprites: hl.types.ArrayObj<Dynamic>;
-  var candleLights: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
+    public var darkSprites: Array<Dynamic>;
+    public var candleLights: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function addStoneStamps() {}
+    public function addStoneStamps(): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addSuspendedChest(z: level.DecoTypes.DecoTypes, px: Int, py: Int, phei: Int) {}
+    public function addSuspendedChest(arg0: level.DecoZone, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function addAlcoves(zone: level.DecoTypes.DecoTypes, _size: Int) {}
+    public function addAlcoves(arg0: level.DecoZone, arg1: Int): Void {
+    }
 
-  function renderStructures() {}
+    public override function renderStructures(): Void {
+    }
 
-  function renderBackWalls() {}
+    public override function renderBackWalls(): Void {
+    }
 
-  function renderTorches() {}
+    public function renderTorches(): Void {
+    }
 
-  function getStampWallThreshold(): Float {}
+    public override function getStampWallThreshold(): Float {
+        throw "stub: getStampWallThreshold not decompiled";
+    }
 
-  function canStampOnAlt(df: Int, canBePlaced: Dynamic): Bool {}
+    public function canStampOnAlt(arg0: Int, arg1: Ref): Bool {
+        throw "stub: canStampOnAlt not decompiled";
+    }
 
-  function addWallStamp(cx: Int, cy: Int, size: Int, id: String): Bool {}
+    public override function addWallStamp(arg0: Int, arg1: Int, arg2: Int, arg3: String): Bool {
+        throw "stub: addWallStamp not decompiled";
+    }
 
-  function addCeilingStamps(name: String, scale: Dynamic, ratio: Dynamic) {}
+    public override function addCeilingStamps(arg0: String, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function addCeilingStampTile(cx: Int, cy: Int, t: h2d.Tile.Tile) {}
+    public override function addCeilingStampTile(arg0: Int, arg1: Int, arg2: h2d.Tile): Void {
+    }
 
-  function canAddWallPatternOn(df: Int): Bool {}
+    public function canAddWallPatternOn(arg0: Int): Bool {
+        throw "stub: canAddWallPatternOn not decompiled";
+    }
 
-  function tryAddWallPattern(cx: Int, cy: Int, size: Int, id: String): Bool {}
+    public function tryAddWallPattern(arg0: Int, arg1: Int, arg2: Int, arg3: String): Bool {
+        throw "stub: tryAddWallPattern not decompiled";
+    }
 
-  function renderWindows() {}
+    public function renderWindows(): Void {
+    }
 
-  function canPlaceWindowAt(cx: Int, cy: Int, size: Int): Bool {}
+    public function canPlaceWindowAt(arg0: Int, arg1: Int, arg2: Int): Bool {
+        throw "stub: canPlaceWindowAt not decompiled";
+    }
 
-  function checkWindowBorder(cx: Int, cy: Int): Bool {}
+    public function checkWindowBorder(arg0: Int, arg1: Int): Bool {
+        throw "stub: checkWindowBorder not decompiled";
+    }
 
-  function isOnlyCollision(cx: Int, cy: Int): Bool {}
+    public function isOnlyCollision(arg0: Int, arg1: Int): Bool {
+        throw "stub: isOnlyCollision not decompiled";
+    }
 
-  function renderWallTransitions() {}
+    public override function renderWallTransitions(): Void {
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

@@ -1,32 +1,46 @@
 package en.deco.paintings;
+
 class MedusaPainting extends en.deco.paintings.AnimatedPaintingBase {
-  var playedAnim: Bool;
-  var shouldReset: Bool;
-  var resetDistCase: Float;
-  static var baseSpriteName: String;
-  static var animSpriteName: String;
-  static var fadeSpriteName: String;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var baseSpriteName: String;
+    public static var animSpriteName: String;
+    public static var fadeSpriteName: String;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var playedAnim: Bool;
+    public var shouldReset: Bool;
+    public var resetDistCase: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, _speed: Float, _resetDistCase: Float) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function playAnim() {}
+    public function playAnim(): Void {
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

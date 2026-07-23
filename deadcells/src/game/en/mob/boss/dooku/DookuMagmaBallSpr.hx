@@ -1,38 +1,53 @@
 package en.mob.boss.dooku;
+
 class DookuMagmaBallSpr {
-  var rx: Float;
-  var ry: Float;
-  var magmaBall: en.mob.boss.dooku.DookuMagmaBall.DookuMagmaBall;
-  var anim: spine.SpineAnimation.SpineAnimation;
-  var __uid: Int;
-  var <none>: Dynamic;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var rx: Float;
+    public var ry: Float;
+    public var magmaBall: en.mob.boss.dooku.DookuMagmaBall;
+    public var anim: spine.SpineAnimation;
+    public var __uid: Int;
+    public var : Dynamic;
+    public var : Dynamic;
 
-  function __constructor__(magmaBall: en.mob.boss.dooku.DookuMagmaBall.DookuMagmaBall, rx: Float, ry: Float) {}
+    public function new(arg0: en.mob.boss.dooku.DookuMagmaBall, arg1: Float, arg2: Float) {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function start(entry: spine.AnimationState.AnimationState) {}
+    public function start(arg0: spine.TrackEntry): Void {
+    }
 
-  function interrupt(entry: spine.AnimationState.AnimationState) {}
+    public function interrupt(arg0: spine.TrackEntry): Void {
+    }
 
-  function end(entry: spine.AnimationState.AnimationState) {}
+    public function end(arg0: spine.TrackEntry): Void {
+    }
 
-  function dispose(entry: spine.AnimationState.AnimationState) {}
+    public function dispose(arg0: spine.TrackEntry): Void {
+    }
 
-  function event(entry: spine.AnimationState.AnimationState, event: Dynamic) {}
+    public function event(arg0: spine.TrackEntry, arg1: spine.Event): Void {
+    }
 
-  function complete(entry: spine.AnimationState.AnimationState) {}
+    public function complete(arg0: spine.TrackEntry): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

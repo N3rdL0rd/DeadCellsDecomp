@@ -1,58 +1,122 @@
 package libs.heaps.slib;
-class SpriteLib {
-  var groups: haxe.ds.StringMap;
-  var defaultCenterX: Float;
-  var defaultCenterY: Float;
-  var currentGroup: Dynamic;
-  var gridX: Int;
-  var gridY: Int;
-  var children: hl.types.ArrayObj<Dynamic>;
-  var pages: hl.types.ArrayObj<Dynamic>;
-  var normalPages: hl.types.ArrayObj<Dynamic>;
-  static var TMOD: Float;
 
-  function __constructor__(pages: hl.types.ArrayObj<Dynamic>, normalPages: hl.types.ArrayObj<Dynamic>) {}
+class FrameData {
+    public var page: Int;
+    public var x: Int;
+    public var y: Int;
+    public var wid: Int;
+    public var hei: Int;
+    public var realX: Int;
+    public var realY: Int;
+    public var realWid: Int;
+    public var realHei: Int;
+    public var tile: h2d.Tile;
 
-  function reloadUsing(l: SpriteLib) {}
-
-  function destroy() {}
-
-  function isDestroyed(): Bool {}
-
-  function preventAutoDispose() {}
-
-  function ensureTexturesAllocated() {}
-
-  function createGroup(k: String): Dynamic {}
-
-  function getTileSize(k: String, frame: Dynamic): tool.CPoint.CPoint {}
-
-  function getAllFramesSize(k: String): hl.types.ArrayObj<Dynamic> {}
-
-  function getNormalMapFromGroup(groupName: String): h3d.mat.Texture.Texture {}
-
-  function getNormalMapFromSprite(sprite: libs.heaps.slib.HSprite.HSprite): h3d.mat.Texture.Texture {}
-
-  function sliceCustom(groupName: String, page: Int, frame: Int, x: Int, y: Int, wid: Int, hei: Int, realX: Int, realY: Int, realWid: Int, realHei: Int): Dynamic {}
-
-  function resliceCustom(groupName: String, frame: Int, fd: Dynamic): Dynamic {}
-
-  function toString(): String {}
-
-  function addChild(s: Dynamic) {}
-
-  function removeChild(s: Dynamic) {}
-
-  function be_get(sb: h2d.SpriteBatch.SpriteBatch, k: String, f: Dynamic, xr: Dynamic, yr: Dynamic): h2d.SpriteBatch.SpriteBatch {}
-
-  function getTile(g: String, frame: Dynamic, pivotX: Dynamic, pivotY: Dynamic, flipMode: Dynamic): h2d.Tile.Tile {}
-
-  function updTile(t: h2d.Tile.Tile, g: String, frame: Dynamic, pivotX: Dynamic, pivotY: Dynamic, flipMode: Dynamic): h2d.Tile.Tile {}
-
-  function getTileRandom(g: String, px: Dynamic, py: Dynamic, rndFunc: Dynamic, flipMode: Dynamic): h2d.Tile.Tile {}
-
-  function __defineAnim(group: String, anim: hl.types.ArrayBytes<Int>) {}
-
-  function __string(): hl.Bytes {}
+    public function new(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Int, arg8: Int, arg9: h2d.Tile) {
+    }
 }
 
+class LibGroup {
+    public var id: String;
+    public var page: Int;
+    public var maxWid: Int;
+    public var maxHei: Int;
+    public var frames: Array<Dynamic>;
+    public var anim: Array<Int>;
+
+    public function new(arg0: String, arg1: Int, arg2: Int, arg3: Int, arg4: Array<Dynamic>, arg5: Array<Int>) {
+    }
+}
+
+class SpriteLib {
+    public static var TMOD: Float;
+    public var groups: haxe.ds.StringMap;
+    public var defaultCenterX: Float;
+    public var defaultCenterY: Float;
+    public var currentGroup: libs.heaps.slib.LibGroup;
+    public var gridX: Int;
+    public var gridY: Int;
+    public var children: Array<Dynamic>;
+    public var pages: Array<Dynamic>;
+    public var normalPages: Array<Dynamic>;
+
+    public function new(arg0: Array<Dynamic>, arg1: Array<Dynamic>) {
+    }
+
+    public function reloadUsing(arg0: libs.heaps.slib.SpriteLib): Void {
+    }
+
+    public function destroy(): Void {
+    }
+
+    public function isDestroyed(): Bool {
+        throw "stub: isDestroyed not decompiled";
+    }
+
+    public function preventAutoDispose(): Void {
+    }
+
+    public function ensureTexturesAllocated(): Void {
+    }
+
+    public function createGroup(arg0: String): libs.heaps.slib.LibGroup {
+        throw "stub: createGroup not decompiled";
+    }
+
+    public function getTileSize(arg0: String, arg1: Ref): tool.CPoint {
+        throw "stub: getTileSize not decompiled";
+    }
+
+    public function getAllFramesSize(arg0: String): Array<Dynamic> {
+        throw "stub: getAllFramesSize not decompiled";
+    }
+
+    public function getNormalMapFromGroup(arg0: String): h3d.mat.Texture {
+        throw "stub: getNormalMapFromGroup not decompiled";
+    }
+
+    public function getNormalMapFromSprite(arg0: libs.heaps.slib.HSprite): h3d.mat.Texture {
+        throw "stub: getNormalMapFromSprite not decompiled";
+    }
+
+    public function sliceCustom(arg0: String, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Int, arg8: Int, arg9: Int, arg10: Int): libs.heaps.slib.FrameData {
+        throw "stub: sliceCustom not decompiled";
+    }
+
+    public function resliceCustom(arg0: String, arg1: Int, arg2: libs.heaps.slib.FrameData): libs.heaps.slib.FrameData {
+        throw "stub: resliceCustom not decompiled";
+    }
+
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
+
+    public function addChild(arg0: Dynamic): Void {
+    }
+
+    public function removeChild(arg0: Dynamic): Void {
+    }
+
+    public function be_get(arg0: h2d.SpriteBatch, arg1: String, arg2: Ref, arg3: Ref, arg4: Ref): h2d.BatchElement {
+        throw "stub: be_get not decompiled";
+    }
+
+    public function getTile(arg0: String, arg1: Ref, arg2: Ref, arg3: Ref, arg4: libs.heaps.slib.TileFlipMode): h2d.Tile {
+        throw "stub: getTile not decompiled";
+    }
+
+    public function updTile(arg0: h2d.Tile, arg1: String, arg2: Ref, arg3: Ref, arg4: Ref, arg5: libs.heaps.slib.TileFlipMode): h2d.Tile {
+        throw "stub: updTile not decompiled";
+    }
+
+    public function getTileRandom(arg0: String, arg1: Ref, arg2: Ref, arg3: Dynamic, arg4: libs.heaps.slib.TileFlipMode): h2d.Tile {
+        throw "stub: getTileRandom not decompiled";
+    }
+
+    public function __defineAnim(arg0: String, arg1: Array<Int>): Void {
+    }
+
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
+}

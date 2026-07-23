@@ -1,177 +1,267 @@
 package en.mob.boss.giant;
+
 class HandBase extends en.Mob {
-  var right: Bool;
-  var giant: en.mob.boss.Giant.Giant;
-  var forceClosed: Bool;
-  var shootGrid: en.mob.boss.giant.HandBase.HandBase;
-  var groundedCX: Int;
-  var idleTime: Float;
-  var curAction: Dynamic;
-  var landed: Bool;
-  var moveTargetX: Float;
-  var moveTargetY: Float;
-  var moveTargetTolerance: Float;
-  var moveTargetTime: Float;
-  var moveTargetReached: Bool;
-  var moveTargetSkill: String;
-  var laserViseOnlyOnNextShoot: Bool;
-  var impulseDir: Int;
-  var justGotKilled: Bool;
-  var arm: en.mob.boss.giant.Arm.Arm;
-  var vx: Dynamic;
-  var vy: Dynamic;
-  var vr: Dynamic;
-  var maskShader: hxsl.Macros.Macros;
-  var time: Float;
-  var shootGridPatterns: libs.RandDeck.RandDeck;
-  var overFx: libs.heaps.slib.HSprite.HSprite;
-  var glowFx: libs.heaps.slib.HSprite.HSprite;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var right: Bool;
+    public var giant: en.mob.boss.Giant;
+    public var forceClosed: Bool;
+    public var shootGrid: en.mob.boss.giant.ShootGridPattern;
+    public var groundedCX: Int;
+    public var idleTime: Float;
+    public var curAction: en.mob.boss.giant.GHAction;
+    public var landed: Bool;
+    public var moveTargetX: Float;
+    public var moveTargetY: Float;
+    public var moveTargetTolerance: Float;
+    public var moveTargetTime: Float;
+    public var moveTargetReached: Bool;
+    public var moveTargetSkill: String;
+    public var laserViseOnlyOnNextShoot: Bool;
+    public var impulseDir: Int;
+    public var justGotKilled: Bool;
+    public var arm: en.mob.boss.giant.Arm;
+    public var vx: tool.Ref;
+    public var vy: tool.Ref;
+    public var vr: tool.Ref;
+    public var maskShader: h3d.shader.AlphaMap;
+    public var time: Float;
+    public var shootGridPatterns: libs.RandDeck;
+    public var overFx: libs.heaps.slib.HSprite;
+    public var glowFx: libs.heaps.slib.HSprite;
 
-  static function create(giant: en.mob.boss.Giant.Giant, right: Bool, damageTier: Int, lifeTier: Int): HandBase {}
+    public function new(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int) {
+        super();
+    }
 
-  function __constructor__(giant: en.mob.boss.Giant.Giant, right: Bool, damageTier: Int, lifeTier: Int) {}
+    public static function create(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int): en.mob.boss.giant.HandBase {
+        throw "stub: create not decompiled";
+    }
 
-  function get_idleX(): Float {}
+    public function get_idleX(): Float {
+        throw "stub: get_idleX not decompiled";
+    }
 
-  function get_idleY(): Float {}
+    public function get_idleY(): Float {
+        throw "stub: get_idleY not decompiled";
+    }
 
-  function getShootY(): Float {}
+    public function getShootY(): Float {
+        throw "stub: getShootY not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGridPatterns() {}
+    public function initGridPatterns(): Void {
+    }
 
-  function canApplyColorSwap(): Bool {}
+    public override function canApplyColorSwap(): Bool {
+        throw "stub: canApplyColorSwap not decompiled";
+    }
 
-  function setGlowAlpha(v: Float, dir: Dynamic) {}
+    public function setGlowAlpha(arg0: Float, arg1: Dynamic): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function getMobSprites(): hl.types.ArrayObj<Dynamic> {}
+    public override function getMobSprites(): Array<Dynamic> {
+        throw "stub: getMobSprites not decompiled";
+    }
 
-  function moveTo(targetX: Float, targetY: Float, time: Float, skill: String, tolerance: Dynamic) {}
+    public function moveTo(arg0: Float, arg1: Float, arg2: Float, arg3: String, arg4: Ref): Void {
+    }
 
-  function moveToStep() {}
+    public function moveToStep(): Void {
+    }
 
-  function canHaveRepellingWith(e: Entity): Bool {}
+    public override function canHaveRepellingWith(arg0: Entity): Bool {
+        throw "stub: canHaveRepellingWith not decompiled";
+    }
 
-  function setAction(newAction: Dynamic) {}
+    public function setAction(arg0: en.mob.boss.giant.GHAction): Void {
+    }
 
-  function resetAction() {}
+    public function resetAction(): Void {
+    }
 
-  function onRecover() {}
+    public function onRecover(): Void {
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function interruptSkills() {}
+    public override function interruptSkills(): Void {
+    }
 
-  function stopMove() {}
+    public function stopMove(): Void {
+    }
 
-  function getIdleMinTime(): Float {}
+    public function getIdleMinTime(): Float {
+        throw "stub: getIdleMinTime not decompiled";
+    }
 
-  function canChoose(): Bool {}
+    public function canChoose(): Bool {
+        throw "stub: canChoose not decompiled";
+    }
 
-  function canChooseAction(newAction: Dynamic): Bool {}
+    public function canChooseAction(arg0: en.mob.boss.giant.GHAction): Bool {
+        throw "stub: canChooseAction not decompiled";
+    }
 
-  function chooseAction(): Dynamic {}
+    public function chooseAction(): en.mob.boss.giant.GHAction {
+        throw "stub: chooseAction not decompiled";
+    }
 
-  function shockWaveHit(x: Float, y: Float, power: Dynamic) {}
+    public function shockWaveHit(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function doSuperCharge(inf: Dynamic, atk: tool.skill.OldMobSkill.OldMobSkill) {}
+    public function doSuperCharge(arg0: Dynamic, arg1: tool.skill.OldMobSkill): Void {
+    }
 
-  function doBulletHell(inf: Dynamic, atk: tool.skill.OldMobSkill.OldMobSkill) {}
+    public function doBulletHell(arg0: Dynamic, arg1: tool.skill.OldMobSkill): Void {
+    }
 
-  function doStompHell(inf: Dynamic, atk: tool.skill.OldMobSkill.OldMobSkill) {}
+    public function doStompHell(arg0: Dynamic, arg1: tool.skill.OldMobSkill): Void {
+    }
 
-  function bulletHellWave(nbullets: Int, offset: Float, speed: Float, a: tool.atk.AttackData.AttackData) {}
+    public function bulletHellWave(arg0: Int, arg1: Float, arg2: Float, arg3: tool.atk.AttackData): Void {
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function cineStomp() {}
+    public function cineStomp(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function doIdle() {}
+    public function doIdle(): Void {
+    }
 
-  function isSwiping(): Bool {}
+    public function isSwiping(): Bool {
+        throw "stub: isSwiping not decompiled";
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function canReceiveAttack(a: tool.atk.AttackData.AttackData): Bool {}
+    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+        throw "stub: canReceiveAttack not decompiled";
+    }
 
-  function onLeaveMap() {}
+    public function onLeaveMap(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onStep() {}
+    public function onStep(): Void {
+    }
 
-  function checkSwipeDamages() {}
+    public function checkSwipeDamages(): Void {
+    }
 
-  function checkStompDamages(skillInfo: String) {}
+    public function checkStompDamages(arg0: String): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function startAction(action: Dynamic) {}
+    public function startAction(arg0: en.mob.boss.giant.GHAction): Void {
+    }
 
-  function onStompTrackReach() {}
+    public function onStompTrackReach(): Void {
+    }
 
-  function updateStomp() {}
+    public function updateStomp(): Void {
+    }
 
-  function updateSwipe() {}
+    public function updateSwipe(): Void {
+    }
 
-  function updateGrounded() {}
+    public function updateGrounded(): Void {
+    }
 
-  function updateDoubleStomp() {}
+    public function updateDoubleStomp(): Void {
+    }
 
-  function updateStompHell() {}
+    public function updateStompHell(): Void {
+    }
 
-  function updateAction() {}
+    public function updateAction(): Void {
+    }
 
-  function addToBody(body: h2d.Layers.Layers) {}
+    public function addToBody(arg0: h2d.Layers): Void {
+    }
 
-  function getArmAttachPoint(): h2d.col.Point.Point {}
+    public function getArmAttachPoint(): h2d.col.Point {
+        throw "stub: getArmAttachPoint not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class ShootGridPattern {
-  var grid: hl.types.ArrayObj<Dynamic>;
-  var wid: Int;
-  var hei: Int;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var grid: Array<Dynamic>;
+    public var wid: Int;
+    public var hei: Int;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(grid: hl.types.ArrayBytes<Int>, wid: Int, hei: Int) {}
+    public function new(arg0: Array<Int>, arg1: Int, arg2: Int) {
+    }
 
-  function get(x: Int, y: Int): Bool {}
+    public function get(arg0: Int, arg1: Int): Bool {
+        throw "stub: get not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

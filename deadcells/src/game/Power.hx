@@ -1,59 +1,86 @@
-
 class Power {
-  var owner: Entity;
-  var tier: Int;
-  var cd: tool.Cooldown.Cooldown;
-  var destroyed: Bool;
-  var item: tool.InventItem.InventItem;
-  var accu: Float;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var owner: Entity;
+    public var tier: Int;
+    public var cd: tool.Cooldown;
+    public var destroyed: Bool;
+    public var item: tool.InventItem;
+    public var accu: Float;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(owner: Entity, item: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+    }
 
-  function shouldChangeLevelWithHero(): Bool {}
+    public function shouldChangeLevelWithHero(): Bool {
+        throw "stub: shouldChangeLevelWithHero not decompiled";
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function onHeroLevelChanged(oldLevel: pr.Level.Level) {}
+    public function onHeroLevelChanged(arg0: pr.Level): Void {
+    }
 
-  function onEnd() {}
+    public function onEnd(): Void {
+    }
 
-  function getModifiedDuration(d: Float): Float {}
+    public function getModifiedDuration(arg0: Float): Float {
+        throw "stub: getModifiedDuration not decompiled";
+    }
 
-  function setDurationS(v: Float) {}
+    public function setDurationS(arg0: Float): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function preUpdate() {}
+    public function preUpdate(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onOwnerDeath() {}
+    public function onOwnerDeath(): Void {
+    }
 
-  function onDurationEnd() {}
+    public function onDurationEnd(): Void {
+    }
 
-  function secToFrames(v: Float): Float {}
+    public function secToFrames(arg0: Float): Float {
+        throw "stub: secToFrames not decompiled";
+    }
 
-  function framesToSec(v: Float): Float {}
+    public function framesToSec(arg0: Float): Float {
+        throw "stub: framesToSec not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

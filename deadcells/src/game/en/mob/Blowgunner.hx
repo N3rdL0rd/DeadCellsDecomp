@@ -1,72 +1,114 @@
 package en.mob;
+
 class Blowgunner extends en.Mob {
-  var shootOffsetDist: Float;
-  var shootOffsetX: Float;
-  var shootOffsetY: Float;
-  var shoot: tool.skill.OldMobSkill.OldMobSkill;
-  var teleJump: tool.skill.mobSkill.TeleJump.TeleJump;
-  var teleJumpInf: Dynamic;
-  var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
-  var distAngMax: Float;
-  var shootAng: Dynamic;
-  var aimingSpot: tool.CPoint.CPoint;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var shootOffsetDist: Float;
+    public var shootOffsetX: Float;
+    public var shootOffsetY: Float;
+    public var shoot: tool.skill.OldMobSkill;
+    public var teleJump: tool.skill.mobSkill.TeleJump;
+    public var teleJumpInf: Dynamic;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var distAngMax: Float;
+    public var shootAng: Dynamic;
+    public var aimingSpot: tool.CPoint;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Blowgunner {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Blowgunner {
+        throw "stub: create not decompiled";
+    }
 
-  function get_blowgunTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_blowgunTracks(): Array<Int> {
+        throw "stub: get_blowgunTracks not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function getJumpingSpot(): Dynamic {}
+    public function getJumpingSpot(): Dynamic {
+        throw "stub: getJumpingSpot not decompiled";
+    }
 
-  function getAnimRatioFromAng(ang: Float): Float {}
+    public function getAnimRatioFromAng(arg0: Float): Float {
+        throw "stub: getAnimRatioFromAng not decompiled";
+    }
 
-  function setAtkLoadAngle(ang: Float) {}
+    public function setAtkLoadAngle(arg0: Float): Void {
+    }
 
-  function setAtkAngle(ang: Float) {}
+    public function setAtkAngle(arg0: Float): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onJumpEnd() {}
+    public function onJumpEnd(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function abortTelejump() {}
+    public function abortTelejump(): Void {
+    }
 
-  function getAimingSpot(): tool.CPoint.CPoint {}
+    public function getAimingSpot(): tool.CPoint {
+        throw "stub: getAimingSpot not decompiled";
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function behaviour_platformPatrol() {}
+    public override function behaviour_platformPatrol(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,54 +1,78 @@
 package en.mob;
+
 class JavelinSnake extends en.Mob {
-  var stuckInGroundJavelin: en.bu.JavelinAmmo.JavelinAmmo;
-  var currentJavelinBullet: en.bu.Javelin.Javelin;
-  var angMax: Float;
-  var javelinThrowDistMax: Float;
-  var javelinThrowDistMin: Float;
-  var runningMoveSpeedMul: Float;
-  var baseMoveSpeedMulCache: Float;
-  var isRunning: Bool;
-  var lastAttackUsed: Bool;
-  var tailHasBeenQueued: Bool;
-  var javelinAndTeleportPhase: Bool;
-  var hasJavelinTarget: Bool;
-  var javelinTargetCX: Int;
-  var javelinTargetCY: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var stuckInGroundJavelin: en.bu.JavelinAmmo;
+    public var currentJavelinBullet: en.bu.Javelin;
+    public var angMax: Float;
+    public var javelinThrowDistMax: Float;
+    public var javelinThrowDistMin: Float;
+    public var runningMoveSpeedMul: Float;
+    public var baseMoveSpeedMulCache: Float;
+    public var isRunning: Bool;
+    public var lastAttackUsed: Bool;
+    public var tailHasBeenQueued: Bool;
+    public var javelinAndTeleportPhase: Bool;
+    public var hasJavelinTarget: Bool;
+    public var javelinTargetCX: Int;
+    public var javelinTargetCY: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): JavelinSnake {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.JavelinSnake {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

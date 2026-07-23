@@ -1,40 +1,61 @@
 package en.inter.npc;
+
 class TailorDaughter extends en.inter.Npc {
-  var pose: Int;
-  var sid: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var pose: Int;
+    public var sid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function onGreet(h: en.Hero.Hero) {}
+    public override function onGreet(arg0: en.Hero): Void {
+    }
 
-  function onEndCine() {}
+    public function onEndCine(): Void {
+    }
 
-  function onFocus() {}
+    public override function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function openHeadSelectUI() {}
+    public function openHeadSelectUI(): Void {
+    }
 
-  function checkHeads(): Bool {}
+    public function checkHeads(): Bool {
+        throw "stub: checkHeads not decompiled";
+    }
 
-  function giveHeadFeedback(headItem: String) {}
+    public function giveHeadFeedback(arg0: String): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

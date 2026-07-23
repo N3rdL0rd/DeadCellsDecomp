@@ -1,64 +1,90 @@
 package en.ltrap;
+
 class CarnivorousPlant extends en.LevelTrap {
-  var tClose: Float;
-  var tOpen: Float;
-  var hitArea: tool.Area.Area;
-  var fromGardenerBoss: Bool;
-  var roomSide: Int;
-  var placedOnGround: Bool;
-  var rootSprite: libs.heaps.slib.HSprite.HSprite;
-  var backSprite: libs.heaps.slib.HSprite.HSprite;
-  var frontSprite: libs.heaps.slib.HSprite.HSprite;
-  var heroWasInside: Bool;
-  var plantStretch: Float;
-  var rootStretch: Float;
-  var bumpAnimRatio: Float;
-  var announced: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var tClose: Float;
+    public var tOpen: Float;
+    public var hitArea: tool.Area;
+    public var fromGardenerBoss: Bool;
+    public var roomSide: Int;
+    public var placedOnGround: Bool;
+    public var rootSprite: libs.heaps.slib.HSprite;
+    public var backSprite: libs.heaps.slib.HSprite;
+    public var frontSprite: libs.heaps.slib.HSprite;
+    public var heroWasInside: Bool;
+    public var plantStretch: Float;
+    public var rootStretch: Float;
+    public var bumpAnimRatio: Float;
+    public var announced: Bool;
 
-  function __constructor__(l: pr.Level.Level, x: Int, y: Int, _roomSide: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function syncNormalTextureFor(spr: libs.heaps.slib.HSprite.HSprite, nrmShader: hxsl.Macros.Macros) {}
+    public function syncNormalTextureFor(arg0: libs.heaps.slib.HSprite, arg1: shader.NormalMap): Void {
+    }
 
-  function setOpenSprites() {}
+    public function setOpenSprites(): Void {
+    }
 
-  function setClosedSprites() {}
+    public function setClosedSprites(): Void {
+    }
 
-  function open() {}
+    public function open(): Void {
+    }
 
-  function close() {}
+    public function close(): Void {
+    }
 
-  function setCollisionState(opened: Bool) {}
+    public function setCollisionState(arg0: Bool): Void {
+    }
 
-  function removeCollision() {}
+    public function removeCollision(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function bumpEntity(e: Entity) {}
+    public function bumpEntity(arg0: Entity): Void {
+    }
 
-  function kill() {}
+    public function kill(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

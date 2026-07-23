@@ -1,47 +1,64 @@
 package level.disp;
+
 class QueenArena extends level.BiomeDisp {
-  var biome: String;
-  var flameFxBefore: hl.types.ArrayObj<Dynamic>;
-  var flameFxBehind: hl.types.ArrayObj<Dynamic>;
-  var flameFxUnder: hl.types.ArrayObj<Dynamic>;
-  var parallaxFireFront: Parallax;
-  var sbFireFront: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var frontInf: Dynamic;
-  var fireDarkColor: Int;
-  var fireLightColor: Int;
-  var parallaxComets: Parallax;
-  var sbComets: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var cometsInf: Dynamic;
-  var parallaxToRotate: hl.types.ArrayObj<Dynamic>;
-  var paddingBefore: Float;
-  var paddingAfter: Float;
+    public var biome: String;
+    public var flameFxBefore: Array<Dynamic>;
+    public var flameFxBehind: Array<Dynamic>;
+    public var flameFxUnder: Array<Dynamic>;
+    public var parallaxFireFront: Parallax;
+    public var sbFireFront: libs.heaps.slib.HSpriteBatch;
+    public var frontInf: Dynamic;
+    public var fireDarkColor: Int;
+    public var fireLightColor: Int;
+    public var parallaxComets: Parallax;
+    public var sbComets: libs.heaps.slib.HSpriteBatch;
+    public var cometsInf: Dynamic;
+    public var parallaxToRotate: Array<Dynamic>;
+    public var paddingBefore: Float;
+    public var paddingAfter: Float;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function initParallaxFXSpritebatch(inf: Dynamic, fxtile: h2d.Tile.Tile): Dynamic {}
+    public function initParallaxFXSpritebatch(arg0: Dynamic, arg1: h2d.Tile): Dynamic {
+        throw "stub: initParallaxFXSpritebatch not decompiled";
+    }
 
-  function renderParallax(inf: Dynamic, parallaxName: String) {}
+    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    }
 
-  function onAddParallax(inf: Dynamic, p: Parallax, pg: ParallaxGroup) {}
+    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    }
 
-  function addLoreDeco(m: hxbit.Macros.Macros, casePosX: Int, casePosY: Int, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, onBounds: Dynamic, _templateFlip: Dynamic, dir: Dynamic, ratio: Dynamic, reload: Dynamic) {}
+    public override function addLoreDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
+    }
 
-  function renderFrontCorners() {}
+    public function renderFrontCorners(): Void {
+    }
 
-  function renderWaterPools() {}
+    public override function renderWaterPools(): Void {
+    }
 
-  function addCliffLights() {}
+    public override function addCliffLights(): Void {
+    }
 
-  function invLerp(a: Float, b: Float, value: Float, clamp: Dynamic): Float {}
+    public function invLerp(arg0: Float, arg1: Float, arg2: Float, arg3: Ref): Float {
+        throw "stub: invLerp not decompiled";
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

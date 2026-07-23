@@ -1,20 +1,27 @@
 package ui;
+
 class SummaryBossRuneEffect extends h2d.Layers {
-  var isInUI: Bool;
-  var maxWid: Dynamic;
-  var wid: Int;
-  var hei: Int;
-  var parentProcess: libs.Process.Process;
-  var previousPS: Float;
+    public var isInUI: Bool;
+    public var maxWid: Dynamic;
+    public var wid: Int;
+    public var hei: Int;
+    public var parentProcess: libs.Process;
+    public var previousPS: Float;
 
-  function __constructor__(p: libs.Process.Process, maxWid: Dynamic, isInUI: Dynamic) {}
+    public function new(arg0: libs.Process, arg1: Dynamic, arg2: Dynamic) {
+        super();
+    }
 
-  function get_pixelScale(): Float {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function onResize() {}
+    public function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

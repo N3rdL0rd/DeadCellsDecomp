@@ -1,19 +1,28 @@
 package en.bu;
-class CounteredBullet extends en.Bullet.Bullet {
-  var color: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  function onBlock(byEnt: Bool) {}
+class CounteredBullet extends en.Bullet {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var color: Int;
 
-  function __constructor__(from: Entity, bullet: en.Bullet.Bullet, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, c: Int) {}
+    public function new(arg0: Entity, arg1: en.Bullet, arg2: tool.atk.AttackData, arg3: Float, arg4: Float, arg5: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

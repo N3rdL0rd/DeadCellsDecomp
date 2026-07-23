@@ -1,28 +1,44 @@
 package en.mob;
+
 class BackShield extends en.Mob {
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): BackShield {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.BackShield {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function setDirDelayed(d: Int): Bool {}
+    public override function setDirDelayed(arg0: Int): Bool {
+        throw "stub: setDirDelayed not decompiled";
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function contactAttack(e: Entity) {}
+    public override function contactAttack(arg0: Entity): Void {
+    }
 
-  function ccRepel(e: Entity) {}
+    public function ccRepel(arg0: Entity): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

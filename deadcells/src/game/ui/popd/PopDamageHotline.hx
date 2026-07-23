@@ -1,12 +1,17 @@
 package ui.popd;
+
 class PopDamageHotline extends ui.PopDamage {
-  var textLayer: hl.types.ArrayObj<Dynamic>;
-  var jiggle: Float;
+    public var textLayer: Array<Dynamic>;
+    public var jiggle: Float;
 
-  static function create(e: Entity, ad: tool.atk.AttackData.AttackData, dmgIdx: Int, big: Dynamic, customFont: Dynamic): PopDamageHotline {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Int, arg3: Ref, arg4: Dynamic) {
+        super();
+    }
 
-  function __constructor__(e: Entity, ad: tool.atk.AttackData.AttackData, dmgIdx: Int, big: Dynamic, customFont: Dynamic) {}
+    public static function create(arg0: Entity, arg1: tool.atk.AttackData, arg2: Int, arg3: Ref, arg4: Dynamic): ui.popd.PopDamageHotline {
+        throw "stub: create not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

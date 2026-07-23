@@ -1,52 +1,78 @@
 package level.disp;
+
 class Greenhouse extends level.DynamicBiomeDisp {
-  var fogs: hl.types.ArrayObj<Dynamic>;
-  var glowShader: shader.GlowKey.GlowKey;
-  var groupAlpha: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var horizonCY: Int;
-  var horizonY: Float;
-  var centerX: Float;
-  var surfaceDeck: libs.RandList.RandList;
-  var undergroundDeck: libs.RandList.RandList;
+    public var fogs: Array<Dynamic>;
+    public var glowShader: shader.GlowKey;
+    public var groupAlpha: libs.heaps.StaticGeometryGroup;
+    public var horizonCY: Int;
+    public var horizonY: Float;
+    public var centerX: Float;
+    public var surfaceDeck: libs.RandList;
+    public var undergroundDeck: libs.RandList;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome1: String, biome2: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+        super();
+    }
 
-  function computeHorizonY() {}
+    public function computeHorizonY(): Void {
+    }
 
-  function render() {}
+    public override function render(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function isInGreenhouse(r: level.Room.Room): Bool {}
+    public function isInGreenhouse(arg0: level.Room): Bool {
+        throw "stub: isInGreenhouse not decompiled";
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 
-  function addFlask(groupName: String, px: Float, py: Float, rx: Dynamic, ry: Dynamic, i: Dynamic) {}
+    public function addFlask(arg0: String, arg1: Float, arg2: Float, arg3: Ref, arg4: Ref, arg5: Dynamic): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function placeWindowsInRect(r: Dynamic, winW: Int, nameBot: String, botHei: Int, nameMid: String, midHei: Int, nameTop: String, topHei: Int): Bool {}
+    public function placeWindowsInRect(arg0: libs.tilemap.Rectangle, arg1: Int, arg2: String, arg3: Int, arg4: String, arg5: Int, arg6: String, arg7: Int): Bool {
+        throw "stub: placeWindowsInRect not decompiled";
+    }
 
-  function placeWindow(cx: Int, cy: Int, hei: Int, wid: Int, nameBot: String, botHei: Int, nameMid: String, midHei: Int, nameTop: String, topHei: Int) {}
+    public function placeWindow(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: String, arg5: Int, arg6: String, arg7: Int, arg8: String, arg9: Int): Void {
+    }
 
-  function generateParallax(inf: Dynamic): Parallax {}
+    public function generateParallax(arg0: Dynamic): Parallax {
+        throw "stub: generateParallax not decompiled";
+    }
 
-  function generateParallaxGroup(inf: Dynamic): ParallaxGroup {}
+    public function generateParallaxGroup(arg0: Dynamic): ParallaxGroup {
+        throw "stub: generateParallaxGroup not decompiled";
+    }
 
-  function renderParallax(infos: Dynamic, parallaxName: String) {}
+    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    }
 
-  function initJunkDecks() {}
+    public function initJunkDecks(): Void {
+    }
 
-  function addJunk(z: level.DecoTypes.DecoTypes) {}
+    public function addJunk(arg0: level.DecoZone): Void {
+    }
 
-  function addJunkInFloorZone(z: level.DecoTypes.DecoTypes, density: Float, deck: libs.RandList.RandList) {}
+    public function addJunkInFloorZone(arg0: level.DecoZone, arg1: Float, arg2: libs.RandList): Void {
+    }
 
-  static function getBlendRatioAt(_: Greenhouse, py: Float, _: Float): Float {}
+    public override function getBlendRatioAt(arg0: Float, arg1: Float): Float {
+        throw "stub: getBlendRatioAt not decompiled";
+    }
 
-  function heroLightUpdate() {}
+    public function heroLightUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

@@ -1,21 +1,30 @@
 package pow;
+
 class BatVolley extends Power {
-  var leftToThrow: Int;
-  var spawnOrder: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var leftToThrow: Int;
+    public var spawnOrder: Array<Int>;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function initThrowBat() {}
+    public function initThrowBat(): Void {
+    }
 
-  function throwBat() {}
+    public function throwBat(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

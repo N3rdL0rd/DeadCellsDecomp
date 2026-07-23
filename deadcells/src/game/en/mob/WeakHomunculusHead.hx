@@ -1,82 +1,115 @@
 package en.mob;
+
 class WeakHomunculusHead extends Entity {
-  var body: en.mob.BootlegHomunculus.BootlegHomunculus;
-  var skillInf: Dynamic;
-  var comeBackDir: Int;
-  var attachedToBody: Bool;
-  var frameWalkSpd: Float;
-  var frameClimbSpeed: Float;
-  var moveCos: Float;
-  var accelFactor: Float;
-  var jumpExtra: Int;
-  var wallClimbing: Bool;
-  var onHead: Bool;
-  var rotation: Float;
-  var color: Int;
-  var hasMoveSounds: Bool;
-  var victim: Entity;
-  var backParts: hl.types.ArrayObj<Dynamic>;
-  var parts: hl.types.ArrayObj<Dynamic>;
-  var eye: libs.heaps.slib.HSprite.HSprite;
-  var pool: libs.heaps.HParticle.HParticle;
-  var fxSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var ligamentSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var ligaments: hl.types.ArrayObj<Dynamic>;
-  var bodyScale: Float;
-  var moveSoundToggle: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var body: en.mob.BootlegHomunculus;
+    public var skillInf: Dynamic;
+    public var comeBackDir: Int;
+    public var attachedToBody: Bool;
+    public var frameWalkSpd: Float;
+    public var frameClimbSpeed: Float;
+    public var moveCos: Float;
+    public var accelFactor: Float;
+    public var jumpExtra: Int;
+    public var wallClimbing: Bool;
+    public var onHead: Bool;
+    public var rotation: Float;
+    public var color: Int;
+    public var hasMoveSounds: Bool;
+    public var victim: Entity;
+    public var backParts: Array<Dynamic>;
+    public var parts: Array<Dynamic>;
+    public var eye: libs.heaps.slib.HSprite;
+    public var pool: libs.heaps.ParticlePool;
+    public var fxSb: libs.heaps.slib.HSpriteBatch;
+    public var ligamentSb: libs.heaps.slib.HSpriteBatch;
+    public var ligaments: Array<Dynamic>;
+    public var bodyScale: Float;
+    public var moveSoundToggle: Bool;
 
-  function onReattach() {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.BootlegHomunculus, arg4: Dynamic, arg5: Bool) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, body: en.mob.BootlegHomunculus.BootlegHomunculus, skillInf: Dynamic, attachedToBody: Bool) {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function shouldSave(): Bool {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function initSpeechDeck(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function onRelocate(): Void {
+    }
 
-  function onRelocate() {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic) {}
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
 
-  function setPosPixel(x: Float, y: Float) {}
+    public override function setDepth(arg0: Int): Void {
+    }
 
-  function setDepth(layer: Int) {}
+    public override function setSpriteParent(arg0: h2d.Object): Void {
+    }
 
-  function setSpriteParent(body: h2d.Object.Object) {}
+    public override function dispose(): Void {
+    }
 
-  function dispose() {}
+    public override function onDie(): Void {
+    }
 
-  function onDie() {}
+    public function dash(arg0: Int): Void {
+    }
 
-  function dash(dir: Int) {}
+    public function comeBack(): Void {
+    }
 
-  function comeBack() {}
+    public function isAttachedToVictim(): Bool {
+        throw "stub: isAttachedToVictim not decompiled";
+    }
 
-  function isAttachedToVictim(): Bool {}
+    public override function onLand(arg0: Float): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public override function canCrawlThrought(arg0: Int, arg1: Int): Bool {
+        throw "stub: canCrawlThrought not decompiled";
+    }
 
-  function canCrawlThrought(x: Int, y: Int): Bool {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onTouchGround(): Void {
+    }
 
-  function onTouchGround() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onReattach(): Void {
+    }
 }
-

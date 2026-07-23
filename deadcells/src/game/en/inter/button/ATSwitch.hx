@@ -1,26 +1,40 @@
 package en.inter.button;
+
 class ATSwitch extends en.inter.button.Button {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function minimapTracking() {}
+    public function minimapTracking(): Void {
+    }
 
-  function canActivate(by: en.Hero.Hero): Bool {}
+    public override function canActivate(arg0: en.Hero): Bool {
+        throw "stub: canActivate not decompiled";
+    }
 
-  function onActivationFail(by: en.Hero.Hero) {}
+    public override function onActivationFail(arg0: en.Hero): Void {
+    }
 
-  function setActivated() {}
+    public override function setActivated(): Void {
+    }
 
-  function onActivationSuccess(by: en.Hero.Hero) {}
+    public override function onActivationSuccess(arg0: en.Hero): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

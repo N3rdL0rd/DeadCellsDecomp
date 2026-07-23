@@ -1,20 +1,26 @@
 package tool;
+
 class Consume {
-  var root: h2d.Object.Object;
-  var parts: libs.heaps.HParticle.HParticle;
-  var batch: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var map: h3d.mat.Texture.Texture;
-  var wid: Int;
-  var hei: Int;
+    public var root: h2d.Object;
+    public var parts: libs.heaps.ParticlePool;
+    public var batch: libs.heaps.slib.HSpriteBatch;
+    public var map: h3d.mat.Texture;
+    public var wid: Int;
+    public var hei: Int;
 
-  function __constructor__(spr: libs.heaps.slib.HSprite.HSprite, glowingBorder: Bool) {}
+    public function new(arg0: libs.heaps.slib.HSprite, arg1: Bool) {
+    }
 
-  static function genPoints(wid: Int, hei: Int, n: Int, dir: Dynamic, rng: libs.Rand.Rand): hl.types.ArrayObj<Dynamic> {}
+    public static function genPoints(arg0: Int, arg1: Int, arg2: Int, arg3: tool.ConsumeDir, arg4: libs.Rand): Array<Dynamic> {
+        throw "stub: genPoints not decompiled";
+    }
 
-  function update(tmod: Float) {}
+    public function update(arg0: Float): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function consume(dir: Dynamic, nparts: Int, spreadDuration: Float, totalDuration: Float) {}
+    public function consume(arg0: tool.ConsumeDir, arg1: Int, arg2: Float, arg3: Float): Void {
+    }
 }
-

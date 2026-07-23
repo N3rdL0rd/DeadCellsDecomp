@@ -1,12 +1,16 @@
 package pr.infection;
+
 class FasterAggressiveTeleport extends pr.infection.VariableInfectionRule {
+    public function new(arg0: pr.Infection, arg1: String, arg2: Dynamic) {
+        super();
+    }
 
-  function __constructor__(infection: pr.Infection.Infection, ruleId: String, variable: Dynamic) {}
+    public override function checkData(): Void {
+    }
 
-  function checkData() {}
+    public override function onActivate(): Void {
+    }
 
-  function onActivate() {}
-
-  function onDeactivate() {}
+    public override function onDeactivate(): Void {
+    }
 }
-

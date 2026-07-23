@@ -1,11 +1,15 @@
 package light;
-class Background extends h2d.Object.Object {
-  var lightedLayers: light.LightedLayers.LightedLayers;
 
-  function __constructor__(parent: h2d.Object.Object) {}
+class Background extends h2d.Object {
+    public var lightedLayers: light.LightedLayers;
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public function new(arg0: h2d.Object) {
+        super();
+    }
 
-  function drawRec(ctx: h2d.RenderContext.RenderContext) {}
+    public override function sync(arg0: h2d.RenderContext): Void {
+    }
+
+    public override function drawRec(arg0: h2d.RenderContext): Void {
+    }
 }
-

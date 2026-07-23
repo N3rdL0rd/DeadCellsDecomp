@@ -1,22 +1,27 @@
 package ui;
+
 class UpgradeCell extends h2d.Object {
-  var proc: libs.Process.Process;
-  var outers: hl.types.ArrayObj<Dynamic>;
-  var cores: hl.types.ArrayObj<Dynamic>;
-  var coreLight: libs.heaps.slib.HSprite.HSprite;
-  var center: Bool;
-  var cellScale: Float;
-  var coreColor: Int;
-  var outColor: Int;
-  var id: Int;
-  var radius: Int;
+    public var proc: libs.Process;
+    public var outers: Array<Dynamic>;
+    public var cores: Array<Dynamic>;
+    public var coreLight: libs.heaps.slib.HSprite;
+    public var center: Bool;
+    public var cellScale: Float;
+    public var coreColor: Int;
+    public var outColor: Int;
+    public var id: Int;
+    public var radius: Int;
 
-  function __constructor__(p: libs.Process.Process, center: Dynamic, scale: Dynamic, colorOverride: Dynamic) {}
+    public function new(arg0: libs.Process, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic) {
+        super();
+    }
 
-  function onRemove() {}
+    public override function onRemove(): Void {
+    }
 
-  function setBlendMode(m: Dynamic) {}
+    public function setBlendMode(arg0: h2d.BlendMode): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

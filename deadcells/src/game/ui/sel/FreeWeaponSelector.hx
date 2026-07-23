@@ -1,32 +1,47 @@
 package ui.sel;
+
 class FreeWeaponSelector extends ui.sel.TieredItemSelector {
-  var level: Int;
-  var maxLevel: Int;
-  var quality: Int;
-  var maxQuality: Int;
-  var colorless: Bool;
-  var weaponSpawner: en.inter.TrainingWeaponSpawner.TrainingWeaponSpawner;
+    public var level: Int;
+    public var maxLevel: Int;
+    public var quality: Int;
+    public var maxQuality: Int;
+    public var colorless: Bool;
+    public var weaponSpawner: en.inter.TrainingWeaponSpawner;
 
-  function __constructor__(validateCb: Dynamic, tier: String, level: Dynamic, quality: Dynamic, colorless: Dynamic, legendary: Dynamic, weaponSpawner: en.inter.TrainingWeaponSpawner.TrainingWeaponSpawner) {}
+    public function new(arg0: Dynamic, arg1: String, arg2: Ref, arg3: Ref, arg4: Ref, arg5: Ref, arg6: en.inter.TrainingWeaponSpawner) {
+        super();
+    }
 
-  function setControlLabel() {}
+    public function setControlLabel(): Void {
+    }
 
-  function controlsUpdate(): Bool {}
+    public function controlsUpdate(): Bool {
+        throw "stub: controlsUpdate not decompiled";
+    }
 
-  function increaseLevel(v: Int) {}
+    public function increaseLevel(arg0: Int): Void {
+    }
 
-  function decreaseLevel(v: Int) {}
+    public function decreaseLevel(arg0: Int): Void {
+    }
 
-  function increaseQuality(v: Int) {}
+    public function increaseQuality(arg0: Int): Void {
+    }
 
-  function toggleColorless() {}
+    public function toggleColorless(): Void {
+    }
 
-  function onUpdateWeaponProperties() {}
+    public function onUpdateWeaponProperties(): Void {
+    }
 
-  function isLegendary(): Bool {}
+    public function isLegendary(): Bool {
+        throw "stub: isLegendary not decompiled";
+    }
 
-  function getInventItem(): tool.InventItem.InventItem {}
+    public function getInventItem(): tool.InventItem {
+        throw "stub: getInventItem not decompiled";
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 }
-

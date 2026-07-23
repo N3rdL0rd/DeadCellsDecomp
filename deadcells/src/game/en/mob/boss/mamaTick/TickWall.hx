@@ -1,25 +1,37 @@
 package en.mob.boss.mamaTick;
+
 class TickWall extends en.inter.ForceField {
-  var arms: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var arms: Array<Dynamic>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, startClosed: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function open() {}
+    public override function open(): Void {
+    }
 
-  function close(feedbacks: Dynamic) {}
+    public override function close(arg0: Dynamic): Void {
+    }
 
-  function show() {}
+    public function show(): Void {
+    }
 
-  function hide() {}
+    public function hide(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

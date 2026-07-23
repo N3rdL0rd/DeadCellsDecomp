@@ -1,38 +1,56 @@
 package en.bu;
+
 class DookuMagmaBall extends en.Bullet {
-  var color: Int;
-  var baseSpd: Float;
-  var speedTween: libs.misc.Tweenie.Tweenie;
-  var alphaTween: libs.misc.Tweenie.Tweenie;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var color: Int;
+    public var baseSpd: Float;
+    public var speedTween: libs.misc.Tween;
+    public var alphaTween: libs.misc.Tween;
 
-  function onCountered() {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int) {
+        super();
+    }
 
-  function onBulletHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public function init(): Void {
+    }
 
-  function onBlock(byEnt: Bool) {}
+    public override function initGfx(): Void {
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, c: Int) {}
+    public override function vanish(): Void {
+    }
 
-  function init() {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function initGfx() {}
+    public function destroy(): Void {
+    }
 
-  function vanish() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function destroy() {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function onCountered(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

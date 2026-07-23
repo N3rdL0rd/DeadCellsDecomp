@@ -1,128 +1,175 @@
 package libs;
-class _AsyncHttp.AsyncHttpWorker {
-  var queue: haxe.ds.List<Dynamic>;
-  var actives: haxe.ds.List<Dynamic>;
-  var waitRead: hl.types.ArrayObj<Dynamic>;
-  var waitWrite: hl.types.ArrayObj<Dynamic>;
-  var callbacks: haxe.ds.List<Dynamic>;
-
-  function __constructor__() {}
-
-  function add(req: libs.AsyncHttp.AsyncHttp) {}
-
-  function mainUpdate() {}
-
-  function runCallbacks() {}
-
-  function update() {}
-
-  function startNewRequests() {}
-
-  function wantWrite(req: libs.AsyncHttp.AsyncHttp) {}
-
-  function wantRead(req: libs.AsyncHttp.AsyncHttp) {}
-
-  function closeReq(req: libs.AsyncHttp.AsyncHttp) {}
-
-  function onError(req: libs.AsyncHttp.AsyncHttp, error: Dynamic) {}
-
-  function onStatus(req: libs.AsyncHttp.AsyncHttp, status: Int) {}
-
-  function onProgress(req: libs.AsyncHttp.AsyncHttp, read: Bool, done: Int, total: Int, force: Dynamic) {}
-
-  function onComplete(req: libs.AsyncHttp.AsyncHttp) {}
-}
 
 class AsyncHttp {
-  var url: String;
-  var postData: haxe.io.Bytes;
-  var headers: hl.types.ArrayObj<Dynamic>;
-  var params: hl.types.ArrayObj<Dynamic>;
-  var post: Bool;
-  var responseData: haxe.io.Bytes;
-  var responseHeaders: haxe.ds.StringMap;
-  var status: Dynamic;
-  var chunk_size: Dynamic;
-  var chunk_buf: haxe.io.Bytes;
-  var file: Dynamic;
-  var boundary: String;
-  var method: String;
-  var requestData: haxe.io.Bytes;
-  var requestTotalSize: Int;
-  var requestSent: Int;
-  var multipart: Bool;
-  var closed: Bool;
-  var cancelled: Bool;
-  var handshaking: Bool;
-  var secure: Bool;
-  var chunked: Bool;
-  var cencoding: String;
-  var idleTimeout: Float;
-  var timeout: Float;
-  var started: Dynamic;
-  var lastActive: Float;
-  var lastProgress: Float;
-  var sock: sys.net.Socket;
-  var hbuffer: haxe.io.BytesBuffer;
-  var output: haxe.io.BytesOutput;
-  var buf: haxe.io.Bytes;
-  var bufsize: Int;
-  var bufpos: Int;
-  var size: Dynamic;
-  var host: String;
-  var port: Int;
-  static var DEFAULT_IDLE_TIMEOUT: Float;
-  static var DEFAULT_TIMEOUT: Float;
-  static var WORKER: libs.AsyncHttp.AsyncHttp;
-  static var CHUNK_RE: EReg;
-  static var REG_ABSOLUTE: EReg;
+    public static var DEFAULT_IDLE_TIMEOUT: Float;
+    public static var DEFAULT_TIMEOUT: Float;
+    public static var WORKER: libs._AsyncHttp.AsyncHttpWorker;
+    public static var CHUNK_RE: EReg;
+    public static var REG_ABSOLUTE: EReg;
+    public var url: String;
+    public var postData: haxe.io.Bytes;
+    public var headers: Array<Dynamic>;
+    public var params: Array<Dynamic>;
+    public var post: Bool;
+    public var responseData: haxe.io.Bytes;
+    public var responseHeaders: haxe.ds.StringMap;
+    public var status: Dynamic;
+    public var chunk_size: Dynamic;
+    public var chunk_buf: haxe.io.Bytes;
+    public var file: Dynamic;
+    public var boundary: String;
+    public var method: String;
+    public var requestData: haxe.io.Bytes;
+    public var requestTotalSize: Int;
+    public var requestSent: Int;
+    public var multipart: Bool;
+    public var closed: Bool;
+    public var cancelled: Bool;
+    public var handshaking: Bool;
+    public var secure: Bool;
+    public var chunked: Bool;
+    public var cencoding: String;
+    public var idleTimeout: Float;
+    public var timeout: Float;
+    public var started: Dynamic;
+    public var lastActive: Float;
+    public var lastProgress: Float;
+    public var sock: sys.net.Socket;
+    public var hbuffer: haxe.io.BytesBuffer;
+    public var output: haxe.io.BytesOutput;
+    public var buf: haxe.io.Bytes;
+    public var bufsize: Int;
+    public var bufpos: Int;
+    public var size: Dynamic;
+    public var host: String;
+    public var port: Int;
 
-  function onError(e: Dynamic) {}
+    public function new(arg0: String) {
+    }
 
-  function onProgress(read: Bool, doneSize: Int, totalSize: Int) {}
+    public static function getWorker(): libs._AsyncHttp.AsyncHttpWorker {
+        throw "stub: getWorker not decompiled";
+    }
 
-  function onRedirect(url: String) {}
+    public function setParameter(arg0: String, arg1: String): libs.AsyncHttp {
+        throw "stub: setParameter not decompiled";
+    }
 
-  function onStatus(status: Int) {}
+    public function setIdleTimeout(arg0: Float): libs.AsyncHttp {
+        throw "stub: setIdleTimeout not decompiled";
+    }
 
-  function onData(data: haxe.io.Bytes) {}
+    public function setTimeout(arg0: Float): libs.AsyncHttp {
+        throw "stub: setTimeout not decompiled";
+    }
 
-  function __constructor__(url: String) {}
+    public function request(arg0: Dynamic): Void {
+    }
 
-  static function getWorker(): libs.AsyncHttp.AsyncHttp {}
+    public function doStart(): Void {
+    }
 
-  function setParameter(param: String, value: String): AsyncHttp {}
+    public function onResolve(arg0: Int, arg1: Int, arg2: hl.Bytes): Void {
+    }
 
-  function setIdleTimeout(s: Float): AsyncHttp {}
+    public function doConnect(arg0: sys.net.Host): Void {
+    }
 
-  function setTimeout(s: Float): AsyncHttp {}
+    public function doWrite(): Void {
+    }
 
-  function request(post: Dynamic) {}
+    public function writeRequest(): Bool {
+        throw "stub: writeRequest not decompiled";
+    }
 
-  function doStart() {}
+    public function writeData(): Bool {
+        throw "stub: writeData not decompiled";
+    }
 
-  function onResolve(status: Int, ipv4: Int, ipv6: hl.Bytes) {}
+    public function doRead(): Void {
+    }
 
-  function doConnect(host: sys.net.Host) {}
+    public function readHeader(): Bool {
+        throw "stub: readHeader not decompiled";
+    }
 
-  function doWrite() {}
+    public function parseHeader(): Void {
+    }
 
-  function writeRequest(): Bool {}
+    public function readData(): Bool {
+        throw "stub: readData not decompiled";
+    }
 
-  function writeData(): Bool {}
+    public function readChunk(arg0: EReg, arg1: haxe.io.Output, arg2: haxe.io.Bytes, arg3: Int): Bool {
+        throw "stub: readChunk not decompiled";
+    }
 
-  function doRead() {}
+    public function resolveUrl(arg0: String): String {
+        throw "stub: resolveUrl not decompiled";
+    }
 
-  function readHeader(): Bool {}
+    public function close(): Void {
+    }
 
-  function parseHeader() {}
+    public function onProgress(arg0: Bool, arg1: Int, arg2: Int): Void {
+    }
 
-  function readData(): Bool {}
+    public function onError(arg0: libs.HttpError): Void {
+    }
 
-  function readChunk(chunk_re: EReg, api: haxe.io.Output, buf: haxe.io.Bytes, len: Int): Bool {}
+    public function onStatus(arg0: Int): Void {
+    }
 
-  function resolveUrl(u: String): String {}
+    public function onRedirect(arg0: String): Void {
+    }
 
-  function close() {}
+    public function onData(arg0: haxe.io.Bytes): Void {
+    }
 }
 
+class AsyncHttpWorker {
+    public var queue: haxe.ds.List;
+    public var actives: haxe.ds.List;
+    public var waitRead: Array<Dynamic>;
+    public var waitWrite: Array<Dynamic>;
+    public var callbacks: haxe.ds.List;
+
+    public function new() {
+    }
+
+    public function add(arg0: libs.AsyncHttp): Void {
+    }
+
+    public function mainUpdate(): Void {
+    }
+
+    public function runCallbacks(): Void {
+    }
+
+    public function update(): Void {
+    }
+
+    public function startNewRequests(): Void {
+    }
+
+    public function wantWrite(arg0: libs.AsyncHttp): Void {
+    }
+
+    public function wantRead(arg0: libs.AsyncHttp): Void {
+    }
+
+    public function closeReq(arg0: libs.AsyncHttp): Void {
+    }
+
+    public function onError(arg0: libs.AsyncHttp, arg1: libs.HttpError): Void {
+    }
+
+    public function onStatus(arg0: libs.AsyncHttp, arg1: Int): Void {
+    }
+
+    public function onProgress(arg0: libs.AsyncHttp, arg1: Bool, arg2: Int, arg3: Int, arg4: Dynamic): Void {
+    }
+
+    public function onComplete(arg0: libs.AsyncHttp): Void {
+    }
+}

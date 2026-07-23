@@ -1,28 +1,36 @@
 package ui;
+
 class Pointer extends ui.Process {
-  var e: Entity;
-  var label: ui.Text.Text;
-  var arrow: libs.heaps.slib.HSprite.HSprite;
-  var timer: Float;
-  var x: Float;
-  var y: Float;
-  var closeDistCase: Float;
-  var killOnReach: Bool;
-  var forceOnIt: Bool;
-  var areaOffsetX: Float;
-  var areaOffsetY: Float;
-  static var ALL: hl.types.ArrayObj<Dynamic>;
+    public static var ALL: Array<Dynamic>;
+    public var e: Entity;
+    public var label: ui.Text;
+    public var arrow: libs.heaps.slib.HSprite;
+    public var timer: Float;
+    public var x: Float;
+    public var y: Float;
+    public var closeDistCase: Float;
+    public var killOnReach: Bool;
+    public var forceOnIt: Bool;
+    public var areaOffsetX: Float;
+    public var areaOffsetY: Float;
 
-  static function kill(e: Entity) {}
+    public function new(arg0: Entity, arg1: String, arg2: Float, arg3: Int) {
+        super();
+    }
 
-  function __constructor__(e: Entity, str: String, sec: Float, col: Int) {}
+    public static function kill(arg0: Entity): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function getPlayerEntity(): Entity {}
+    public function getPlayerEntity(): Entity {
+        throw "stub: getPlayerEntity not decompiled";
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

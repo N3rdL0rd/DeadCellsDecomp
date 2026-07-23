@@ -1,77 +1,102 @@
+class Audio extends libs.Process {
+    public static var ME: Audio;
+    public static var a: libs.data.GetAudio;
+    public var musicChanGroup: hxd.snd.ChannelGroup;
+    public var jingleChanGroup: hxd.snd.ChannelGroup;
+    public var uiChanGroup: hxd.snd.ChannelGroup;
+    public var sfxChanGroup: hxd.snd.ChannelGroup;
+    public var ambientChanGroup: hxd.snd.ChannelGroup;
+    public var sfxActiveChanGroup: hxd.snd.ChannelGroup;
+    public var sfxEnmChanGroup: hxd.snd.ChannelGroup;
+    public var sfxEnvChanGroup: hxd.snd.ChannelGroup;
+    public var sfxHeroChanGroup: hxd.snd.ChannelGroup;
+    public var sfxInterChanGroup: hxd.snd.ChannelGroup;
+    public var sfxNpcChanGroup: hxd.snd.ChannelGroup;
+    public var sfxWeaponChanGroup: hxd.snd.ChannelGroup;
+    public var ambientSoundGroup: hxd.snd.SoundGroup;
+    public var localEventSoundGroup: hxd.snd.SoundGroup;
+    public var speechEventSoundGroup: hxd.snd.SoundGroup;
+    public var currentMusicName: String;
+    public var reverbMix: Float;
+    public var keyFrameCineMute: Bool;
+    public var music: hxd.snd.Channel;
+    public var musicOverride: hxd.snd.Channel;
+    public var reverbChanGroups: Array<Dynamic>;
+    public var reverb: hxd.snd.effect.Reverb;
+    public var levelFilter: hxd.snd.effect.LowPass;
+    public var musicFilter: hxd.snd.effect.LowPass;
+    public var modalEffectMix: Float;
+    public var jingleEffectMix: Float;
+    public var timeEffectMix: Float;
+    public var musicVolumeOverride: Float;
+    public var reportedAudioErrors: haxe.ds.StringMap;
 
-class Audio extends libs.Process.Process {
-  var musicChanGroup: Dynamic;
-  var jingleChanGroup: Dynamic;
-  var uiChanGroup: Dynamic;
-  var sfxChanGroup: Dynamic;
-  var ambientChanGroup: Dynamic;
-  var sfxActiveChanGroup: Dynamic;
-  var sfxEnmChanGroup: Dynamic;
-  var sfxEnvChanGroup: Dynamic;
-  var sfxHeroChanGroup: Dynamic;
-  var sfxInterChanGroup: Dynamic;
-  var sfxNpcChanGroup: Dynamic;
-  var sfxWeaponChanGroup: Dynamic;
-  var ambientSoundGroup: Dynamic;
-  var localEventSoundGroup: Dynamic;
-  var speechEventSoundGroup: Dynamic;
-  var currentMusicName: String;
-  var reverbMix: Float;
-  var keyFrameCineMute: Bool;
-  var music: hxd.snd.Channel.Channel;
-  var musicOverride: hxd.snd.Channel.Channel;
-  var reverbChanGroups: hl.types.ArrayObj<Dynamic>;
-  var reverb: hxd.snd.effect.Reverb.Reverb;
-  var levelFilter: Dynamic;
-  var musicFilter: Dynamic;
-  var modalEffectMix: Float;
-  var jingleEffectMix: Float;
-  var timeEffectMix: Float;
-  var musicVolumeOverride: Float;
-  var reportedAudioErrors: haxe.ds.StringMap;
-  static var ME: Audio;
-  static var a: libs.data.GetAudio.GetAudio;
+    public function new(arg0: libs.Process) {
+        super();
+    }
 
-  function __constructor__(p: libs.Process.Process) {}
+    public function reset(): Void {
+    }
 
-  function reset() {}
+    public function setReverb(arg0: hxd.snd.effect.ReverbPreset): Void {
+    }
 
-  function setReverb(preset: hxd.snd.effect.Reverb.ReverbPreset) {}
+    public function set_reverbMix(arg0: Float): Float {
+        throw "stub: set_reverbMix not decompiled";
+    }
 
-  function set_reverbMix(v: Float): Float {}
+    public function playMusic(arg0: hxd.res.Sound, arg1: hxd.res.Sound): hxd.snd.Channel {
+        throw "stub: playMusic not decompiled";
+    }
 
-  function playMusic(loop: hxd.res.Sound.Sound, intro: hxd.res.Sound.Sound): hxd.snd.Channel.Channel {}
+    public function stopMusic(arg0: Dynamic): Void {
+    }
 
-  function stopMusic(d: Dynamic) {}
+    public function fadeMusicToVolume(arg0: Float, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function fadeMusicToVolume(volume: Float, d: Dynamic, onEndCb: Dynamic) {}
+    public function fadeMainMusicToVolume(arg0: Float, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function fadeMainMusicToVolume(volume: Float, d: Dynamic, onEndCb: Dynamic) {}
+    public function fadeOverrideMusicToVolume(arg0: Float, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function fadeOverrideMusicToVolume(volume: Float, d: Dynamic, onEndCb: Dynamic) {}
+    public function overrideMusic(arg0: hxd.res.Sound, arg1: hxd.res.Sound, arg2: Dynamic): Void {
+    }
 
-  function overrideMusic(loop: hxd.res.Sound.Sound, intro: hxd.res.Sound.Sound, crossFadeTime: Dynamic) {}
+    public function stopOverrideMusic(arg0: Dynamic): Void {
+    }
 
-  function stopOverrideMusic(crossFadeTime: Dynamic) {}
+    public function setOverrideMusicPosition(arg0: Ref): Void {
+    }
 
-  function setOverrideMusicPosition(position: Dynamic) {}
+    public function getOverrideMusicPosition(): Float {
+        throw "stub: getOverrideMusicPosition not decompiled";
+    }
 
-  function getOverrideMusicPosition(): Float {}
+    public function playUIEvent(arg0: hxd.res.Sound, arg1: Dynamic): hxd.snd.Channel {
+        throw "stub: playUIEvent not decompiled";
+    }
 
-  function playUIEvent(snd: hxd.res.Sound.Sound, volume: Dynamic): hxd.snd.Channel.Channel {}
+    public function playSpeechEvent(arg0: hxd.res.Sound, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function playSpeechEvent(snd: hxd.res.Sound.Sound, volume: Dynamic, pitch: Dynamic) {}
+    public function fadeTimeDistortEffect(arg0: Float, arg1: Ref): Void {
+    }
 
-  function fadeTimeDistortEffect(tgt: Float, time: Dynamic) {}
+    public function fadeModalEffect(arg0: Float, arg1: Ref): Void {
+    }
 
-  function fadeModalEffect(tgt: Float, time: Dynamic) {}
+    public function overrideMusicVolume(arg0: Float, arg1: Ref): Void {
+    }
 
-  function overrideMusicVolume(tgt: Float, time: Dynamic) {}
+    public function playJingle(arg0: hxd.res.Sound, arg1: Ref, arg2: Ref, arg3: Ref): hxd.snd.Channel {
+        throw "stub: playJingle not decompiled";
+    }
 
-  function playJingle(snd: hxd.res.Sound.Sound, musicWaitTime: Dynamic, musicOutTime: Dynamic, musicInTime: Dynamic): hxd.snd.Channel.Channel {}
+    public override function update(): Void {
+    }
 
-  function update() {}
-
-  function updatePriorities() {}
+    public function updatePriorities(): Void {
+    }
 }
-

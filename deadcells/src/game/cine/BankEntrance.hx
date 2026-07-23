@@ -1,9 +1,12 @@
 package cine;
+
 class BankEntrance extends GameCinematic {
-  var walkTo: Entity;
+    public var walkTo: Entity;
 
-  function __constructor__(hero: en.Hero.Hero, hasBanker: Bool, goldenSkin: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: Bool, arg2: Ref) {
+        super();
+    }
 
-  function dropKey(hasBanker: Bool) {}
+    public function dropKey(arg0: Bool): Void {
+    }
 }
-

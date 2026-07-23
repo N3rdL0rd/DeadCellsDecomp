@@ -1,87 +1,138 @@
 package en.mob;
+
 class HauntedArmor extends en.Mob {
-  var canWakeUp: Bool;
-  var awaken: Bool;
-  var throwInf: Dynamic;
-  var throwAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var fakeStatue: libs.heaps.slib.HSprite.HSprite;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var canWakeUp: Bool;
+    public var awaken: Bool;
+    public var throwInf: Dynamic;
+    public var throwAtk: tool.skill.OldMobSkill;
+    public var fakeStatue: libs.heaps.slib.HSprite;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, canWakeUp: Bool): HauntedArmor {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, canWakeUp: Bool) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): en.mob.HauntedArmor {
+        throw "stub: create not decompiled";
+    }
 
-  function setPosPixel(x: Float, y: Float) {}
+    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
 
-  function shouldRun(): Bool {}
+    public function shouldRun(): Bool {
+        throw "stub: shouldRun not decompiled";
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function getAltEliteForm(): String {}
+    public override function getAltEliteForm(): String {
+        throw "stub: getAltEliteForm not decompiled";
+    }
 
-  function onEliteWakeUp() {}
+    public override function onEliteWakeUp(): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function aiLocked(): Bool {}
+    public override function aiLocked(): Bool {
+        throw "stub: aiLocked not decompiled";
+    }
 
-  function awake() {}
+    public function awake(): Void {
+    }
 
-  function endAwake() {}
+    public function endAwake(): Void {
+    }
 
-  function throwAxe() {}
+    public function throwAxe(): Void {
+    }
 
-  function onBreach(a: tool.atk.AttackData.AttackData) {}
+    public override function onBreach(arg0: tool.atk.AttackData): Void {
+    }
 
-  function createBodyPart(): hl.types.ArrayObj<Dynamic> {}
+    public override function createBodyPart(): Array<Dynamic> {
+        throw "stub: createBodyPart not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
 
 class HauntedArmorAxe extends Entity {
-  var attackData: tool.atk.AttackData.AttackData;
-  var tick: Float;
-  var rotationSpeed: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var attackData: tool.atk.AttackData;
+    public var tick: Float;
+    public var rotationSpeed: Float;
 
-  function __constructor__(from: en.mob.HauntedArmor.HauntedArmor, angle: Float, speed: Float, baseDamage: Float, tick: Float, rotationSpeed: Float) {}
+    public function new(arg0: en.mob.HauntedArmor, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) {
+        super();
+    }
 
-  function get_targetSprPosY(): Float {}
+    public override function get_targetSprPosY(): Float {
+        throw "stub: get_targetSprPosY not decompiled";
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

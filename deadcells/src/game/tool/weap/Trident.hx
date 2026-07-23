@@ -1,40 +1,64 @@
 package tool.weap;
+
 class Trident extends tool.Weapon {
-  var hasBegunCharge: Bool;
-  var isDoingCharge: Bool;
-  var isCrit: Bool;
-  var canTurnNbLeft: Int;
-  var cancelByWeapon: Bool;
-  var stabbedEntity: Entity;
+    public var hasBegunCharge: Bool;
+    public var isDoingCharge: Bool;
+    public var isCrit: Bool;
+    public var canTurnNbLeft: Int;
+    public var cancelByWeapon: Bool;
+    public var stabbedEntity: Entity;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function canInterruptCharge(): Bool {}
+    public function canInterruptCharge(): Bool {
+        throw "stub: canInterruptCharge not decompiled";
+    }
 
-  function isReady(): Bool {}
+    public override function isReady(): Bool {
+        throw "stub: isReady not decompiled";
+    }
 
-  function canStartChargeEarly(): Bool {}
+    public override function canStartChargeEarly(): Bool {
+        throw "stub: canStartChargeEarly not decompiled";
+    }
 
-  function canCancel(): Bool {}
+    public override function canCancel(): Bool {
+        throw "stub: canCancel not decompiled";
+    }
 
-  function allowTurnDuringCharge(): Bool {}
+    public override function allowTurnDuringCharge(): Bool {
+        throw "stub: allowTurnDuringCharge not decompiled";
+    }
 
-  function onOwnerTurned() {}
+    public override function onOwnerTurned(): Void {
+    }
 
-  function initSkill(idx: Int, chainInf: Dynamic, s: tool.Weapon.Weapon) {}
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function set_cycle(v: Int): Int {}
+    public override function set_cycle(arg0: Int): Int {
+        throw "stub: set_cycle not decompiled";
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function tryToCancel(byWeapon: Bool): Bool {}
+    public override function tryToCancel(arg0: Bool): Bool {
+        throw "stub: tryToCancel not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function doChargeAttack(r: Float) {}
+    public function doChargeAttack(arg0: Float): Void {
+    }
 }
-

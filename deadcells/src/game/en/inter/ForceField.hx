@@ -1,32 +1,48 @@
 package en.inter;
-class ForceField extends en.Interactive.Interactive {
-  var closed: Bool;
-  var cHei: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, startClosed: Bool) {}
+class ForceField extends en.Interactive {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var closed: Bool;
+    public var cHei: Int;
 
-  function minimapTracking() {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+        super();
+    }
 
-  function onDistantTrigger(trigger: en.Interactive.Interactive, by: Entity) {}
+    public function minimapTracking(): Void {
+    }
 
-  function applyCollisions() {}
+    public override function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
+    }
 
-  function open() {}
+    public function applyCollisions(): Void {
+    }
 
-  function close(feedbacks: Dynamic) {}
+    public function open(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function close(arg0: Dynamic): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

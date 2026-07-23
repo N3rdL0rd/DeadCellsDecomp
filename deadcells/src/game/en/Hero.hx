@@ -1,620 +1,946 @@
 package en;
+
 class Hero extends Entity {
-  var tutoTip: ui.LightTip.LightTip;
-  var runAnims: hl.types.ArrayObj<Dynamic>;
-  var runSpd: Float;
-  var accelFactor: Float;
-  var focused: Entity;
-  var bodyHei: Float;
-  var crouchHei: Float;
-  var walkCycle: Float;
-  var frameWalkSpd: Float;
-  var climbPhase: Bool;
-  var climbPushDir: Int;
-  var runFrames: Float;
-  var invisibilityTimer: Float;
-  var inWaterTimer: Int;
-  var curseCounter: Int;
-  var curCurseMaxReached: Int;
-  var spdComboKills: Int;
-  var spdComboFrames: Float;
-  var curRally: Float;
-  var lastHitTimer: Float;
-  var lastParryShield: tool.weap.BaseShield.BaseShield;
-  var trail: hl.types.ArrayObj<Dynamic>;
-  var curTrail: Int;
-  var scarf: tool.ScarfSegment.ScarfSegment;
-  var oldTime: Float;
-  var pauseInfection: Bool;
-  var controller: tool.Controller.Controller;
-  var weaponsManager: tool.hero.HeroWeaponsManager.HeroWeaponsManager;
-  var mainSkillsManager: tool.hero.HeroMainSkillsManager.HeroMainSkillsManager;
-  var activeSkillsManager: tool.hero.HeroActiveSkillsManager.HeroActiveSkillsManager;
-  var type: String;
-  var _infos: Dynamic;
-  var sideKicks: hl.types.ArrayObj<Dynamic>;
-  var lastHeadPos: tool.FPoint.FPoint;
-  var animationTracks: haxe.ds.StringMap;
-  var inventory: tool.Inventory.Inventory;
-  var blueprints: hl.types.ArrayObj<Dynamic>;
-  var awake: Bool;
-  var cells: Int;
-  var goldCombo: Int;
-  var darknessCounter: Float;
-  var darknessDeferred: Dynamic;
-  var darknessHoles: hl.types.ArrayObj<Dynamic>;
-  var edgeClimbSounds: hl.types.ArrayObj<Dynamic>;
-  var vineClimbSounds: hl.types.ArrayObj<Dynamic>;
-  var chainClimbSounds: hl.types.ArrayObj<Dynamic>;
-  var pipeClimbSounds: hl.types.ArrayObj<Dynamic>;
-  var woodClimbSounds: hl.types.ArrayObj<Dynamic>;
-  var ropeLadderClimbSounds: hl.types.ArrayObj<Dynamic>;
-  var ropeLadderPurpleClimbSounds: hl.types.ArrayObj<Dynamic>;
-  var footStepStoneSounds: hl.types.ArrayObj<Dynamic>;
-  var footStepWetStoneSounds: hl.types.ArrayObj<Dynamic>;
-  var footStepWaterSounds: hl.types.ArrayObj<Dynamic>;
-  var footStepWoodSounds: hl.types.ArrayObj<Dynamic>;
-  var footStepWetWoodSounds: hl.types.ArrayObj<Dynamic>;
-  var footStepPipeSounds: hl.types.ArrayObj<Dynamic>;
-  var footStepWetPipeSounds: hl.types.ArrayObj<Dynamic>;
-  var footStepAdd: hl.types.ArrayObj<Dynamic>;
-  var customHitSound: hl.types.ArrayObj<Dynamic>;
-  var customAtkSound: hl.types.ArrayObj<Dynamic>;
-  var footStepFramesWalk: hl.types.ArrayBytes<Int>;
-  var footStepFramesRun: hl.types.ArrayBytes<Int>;
-  var footStepFramesRunDance: hl.types.ArrayBytes<Int>;
-  var footStepFramesRunFast: hl.types.ArrayBytes<Int>;
-  var footStepFramesRunInjured: hl.types.ArrayBytes<Int>;
-  var footStepFramesRunFastInjured: hl.types.ArrayBytes<Int>;
-  var nearbyMobCounts: hl.types.ArrayBytes<Int>;
-  var curseLabel: ui.LightTip.LightTip;
-  var entitiesLinked: hl.types.ArrayObj<Dynamic>;
-  var selfLight: tool.EntityLight.EntityLight;
-  var noDamageDuringBossBattle: Dynamic;
-  var heroHead: tool.HeroHead.HeroHead;
-  var eyeShine: Bool;
-  var heroSignals: Dynamic;
-  var lockMap: Bool;
-  var assistMapRevealed: Bool;
-  var speedComboRun: Float;
-  var runSpeedOnTrap: Float;
-  var heroLightIntensityMin: Float;
-  var heroLightIntensityMax: Float;
-  var cameraTiltDelay: Float;
-  var poisonedWaterDelay: Float;
-  var modBloodthirstMinLife: Float;
-  var modBloodthirstDamageValue: Float;
-  var modBloodthirstDamageDelay: Float;
-  var darknessHitPowerMin: Float;
-  var darknessHitPowerMax: Float;
-  var darknessHitPowerMaxRatio: Float;
-  var infectionMobLeftPercentage: Float;
-  var infectionReductionOnMobKill: Float;
-  var infectionMax: Int;
-  var infectionTierCount: Int;
-  var infectionSpeedReductions: hl.types.ArrayBytes<Float>;
-  var infectionSpeedMobLeftPercentages: hl.types.ArrayBytes<Float>;
-  var homonculusMainColor: Int;
-  var perfectKillsCount: Int;
-  var needReleaseActivate: Bool;
-  var smallHitbox: Bool;
-  var tailUpdate: Dynamic;
-  var lastFootStepFrame: Int;
-  var lastSprPage: Int;
-  static var MAX_NEARBY_DIST: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var MAX_NEARBY_DIST: Int;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var tutoTip: ui.LightTip;
+    public var runAnims: Array<Dynamic>;
+    public var runSpd: Float;
+    public var accelFactor: Float;
+    public var focused: Entity;
+    public var bodyHei: Float;
+    public var crouchHei: Float;
+    public var walkCycle: Float;
+    public var frameWalkSpd: Float;
+    public var climbPhase: Bool;
+    public var climbPushDir: Int;
+    public var runFrames: Float;
+    public var invisibilityTimer: Float;
+    public var inWaterTimer: Int;
+    public var curseCounter: Int;
+    public var curCurseMaxReached: Int;
+    public var spdComboKills: Int;
+    public var spdComboFrames: Float;
+    public var curRally: Float;
+    public var lastHitTimer: Float;
+    public var lastParryShield: tool.weap.BaseShield;
+    public var trail: Array<Dynamic>;
+    public var curTrail: Int;
+    public var scarf: tool.ScarfManager;
+    public var oldTime: Float;
+    public var pauseInfection: Bool;
+    public var controller: tool.ControllerAccess;
+    public var weaponsManager: tool.hero.HeroWeaponsManager;
+    public var mainSkillsManager: tool.hero.HeroMainSkillsManager;
+    public var activeSkillsManager: tool.hero.HeroActiveSkillsManager;
+    public var type: String;
+    public var _infos: Dynamic;
+    public var sideKicks: Array<Dynamic>;
+    public var lastHeadPos: tool.FPoint;
+    public var animationTracks: haxe.ds.StringMap;
+    public var inventory: tool.Inventory;
+    public var blueprints: Array<Dynamic>;
+    public var awake: Bool;
+    public var cells: Int;
+    public var goldCombo: Int;
+    public var darknessCounter: Float;
+    public var darknessDeferred: light.DarknessRemover;
+    public var darknessHoles: Array<Dynamic>;
+    public var edgeClimbSounds: Array<Dynamic>;
+    public var vineClimbSounds: Array<Dynamic>;
+    public var chainClimbSounds: Array<Dynamic>;
+    public var pipeClimbSounds: Array<Dynamic>;
+    public var woodClimbSounds: Array<Dynamic>;
+    public var ropeLadderClimbSounds: Array<Dynamic>;
+    public var ropeLadderPurpleClimbSounds: Array<Dynamic>;
+    public var footStepStoneSounds: Array<Dynamic>;
+    public var footStepWetStoneSounds: Array<Dynamic>;
+    public var footStepWaterSounds: Array<Dynamic>;
+    public var footStepWoodSounds: Array<Dynamic>;
+    public var footStepWetWoodSounds: Array<Dynamic>;
+    public var footStepPipeSounds: Array<Dynamic>;
+    public var footStepWetPipeSounds: Array<Dynamic>;
+    public var footStepAdd: Array<Dynamic>;
+    public var customHitSound: Array<Dynamic>;
+    public var customAtkSound: Array<Dynamic>;
+    public var footStepFramesWalk: Array<Int>;
+    public var footStepFramesRun: Array<Int>;
+    public var footStepFramesRunDance: Array<Int>;
+    public var footStepFramesRunFast: Array<Int>;
+    public var footStepFramesRunInjured: Array<Int>;
+    public var footStepFramesRunFastInjured: Array<Int>;
+    public var nearbyMobCounts: Array<Int>;
+    public var curseLabel: ui.LightTip;
+    public var entitiesLinked: Array<Dynamic>;
+    public var selfLight: tool.EntityLight;
+    public var noDamageDuringBossBattle: Dynamic;
+    public var heroHead: tool.HeroHead;
+    public var eyeShine: Bool;
+    public var heroSignals: tool.signals.HeroSignals;
+    public var lockMap: Bool;
+    public var assistMapRevealed: Bool;
+    public var speedComboRun: Float;
+    public var runSpeedOnTrap: Float;
+    public var heroLightIntensityMin: Float;
+    public var heroLightIntensityMax: Float;
+    public var cameraTiltDelay: Float;
+    public var poisonedWaterDelay: Float;
+    public var modBloodthirstMinLife: Float;
+    public var modBloodthirstDamageValue: Float;
+    public var modBloodthirstDamageDelay: Float;
+    public var darknessHitPowerMin: Float;
+    public var darknessHitPowerMax: Float;
+    public var darknessHitPowerMaxRatio: Float;
+    public var infectionMobLeftPercentage: Float;
+    public var infectionReductionOnMobKill: Float;
+    public var infectionMax: Int;
+    public var infectionTierCount: Int;
+    public var infectionSpeedReductions: Array<Float>;
+    public var infectionSpeedMobLeftPercentages: Array<Float>;
+    public var homonculusMainColor: Int;
+    public var perfectKillsCount: Int;
+    public var needReleaseActivate: Bool;
+    public var smallHitbox: Bool;
+    public var tailUpdate: Dynamic;
+    public var lastFootStepFrame: Int;
+    public var lastSprPage: Int;
 
-  function onHeroDie() {}
+    public function new(arg0: pr.Game, arg1: String) {
+        super();
+    }
 
-  function onSetPosCase(cx: Int, cy: Int) {}
+    public static function create(arg0: pr.Game, arg1: String): en.Hero {
+        throw "stub: create not decompiled";
+    }
 
-  static function create(game: pr.Game.Game, kind: String): Hero {}
+    public function get_isRollParry(): Bool {
+        throw "stub: get_isRollParry not decompiled";
+    }
 
-  function __constructor__(game: pr.Game.Game, heroType: String) {}
+    public function get_infos(): Dynamic {
+        throw "stub: get_infos not decompiled";
+    }
 
-  function get_isRollParry(): Bool {}
+    public override function createAttackSource(): Void {
+    }
 
-  function get_infos(): Dynamic {}
+    public override function createAttackTarget(): Void {
+    }
 
-  function createAttackSource() {}
+    public function createHead(): tool.HeroHead {
+        throw "stub: createHead not decompiled";
+    }
 
-  function createAttackTarget() {}
+    public function get_darknessCounterMax(): Float {
+        throw "stub: get_darknessCounterMax not decompiled";
+    }
 
-  function createHead(): tool.HeroHead.HeroHead {}
+    public function reduceDarkness(arg0: Float): Void {
+    }
 
-  function get_darknessCounterMax(): Float {}
+    public function shouldTurn(): Bool {
+        throw "stub: shouldTurn not decompiled";
+    }
 
-  function reduceDarkness(factor: Float) {}
+    public function shouldGetFlawlessAchievement(): Bool {
+        throw "stub: shouldGetFlawlessAchievement not decompiled";
+    }
 
-  function shouldTurn(): Bool {}
+    public override function init(): Void {
+    }
 
-  function shouldGetFlawlessAchievement(): Bool {}
+    public function initCDBData(): Void {
+    }
 
-  function init() {}
+    public override function initSpeechDeck(): Void {
+    }
 
-  function initCDBData() {}
+    public function hasAnySpeedBuff(): Bool {
+        throw "stub: hasAnySpeedBuff not decompiled";
+    }
 
-  function initSpeechDeck() {}
+    public function speedBuffTimeLeftS(): Float {
+        throw "stub: speedBuffTimeLeftS not decompiled";
+    }
 
-  function hasAnySpeedBuff(): Bool {}
+    public function getInfectionMax(): Float {
+        throw "stub: getInfectionMax not decompiled";
+    }
 
-  function speedBuffTimeLeftS(): Float {}
+    public function getTierInfectionCount(): Int {
+        throw "stub: getTierInfectionCount not decompiled";
+    }
 
-  function getInfectionMax(): Float {}
+    public function setInfection(arg0: Float, arg1: Dynamic): Void {
+    }
 
-  function getTierInfectionCount(): Int {}
+    public function refreshInfectionHud(): Void {
+    }
 
-  function setInfection(n: Float, notify: Dynamic) {}
+    public function notifyAboutInfectionTier(arg0: Bool): Void {
+    }
 
-  function refreshInfectionHud() {}
+    public function getInfectionTickLimitS(): Dynamic {
+        throw "stub: getInfectionTickLimitS not decompiled";
+    }
 
-  function notifyAboutInfectionTier(notify: Bool) {}
+    public function addInfection(arg0: Float, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function getInfectionTickLimitS(): Dynamic {}
+    public function removeInfection(arg0: Float, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function addInfection(n: Float, notify: Dynamic, forced: Dynamic) {}
+    public override function statusNeedsToBlink(arg0: Dynamic, arg1: String): Bool {
+        throw "stub: statusNeedsToBlink not decompiled";
+    }
 
-  function removeInfection(n: Float, notify: Dynamic, fromMobKill: Dynamic) {}
+    public function initSpeedComboTimer(): Void {
+    }
 
-  function statusNeedsToBlink(pa: Dynamic, s: String): Bool {}
+    public function addKillCount(arg0: en.Mob): Void {
+    }
 
-  function initSpeedComboTimer() {}
+    public function onMobDeath(arg0: en.Mob): Void {
+    }
 
-  function addKillCount(mob: en.Mob.Mob) {}
+    public function onOpponentAdded(arg0: Entity): Void {
+    }
 
-  function onMobDeath(mob: en.Mob.Mob) {}
+    public override function onReload(): Void {
+    }
 
-  function onOpponentAdded(opponent: Entity) {}
+    public function updateMaxLife(): Void {
+    }
 
-  function onReload() {}
+    public function overrideMaxLife(arg0: Int): Void {
+    }
 
-  function updateMaxLife() {}
+    public override function setSurvivalTier(arg0: Int): Void {
+    }
 
-  function overrideMaxLife(newMaxLife: Int) {}
+    public override function setBrutalityTier(arg0: Int): Void {
+    }
 
-  function setSurvivalTier(v: Int) {}
+    public override function setTacticTier(arg0: Int): Void {
+    }
 
-  function setBrutalityTier(v: Int) {}
+    public function computeTiers(): Void {
+    }
 
-  function setTacticTier(v: Int) {}
+    public override function prepareSave(): Bool {
+        throw "stub: prepareSave not decompiled";
+    }
 
-  function computeTiers() {}
+    public function initAnims(): Void {
+    }
 
-  function prepareSave(): Bool {}
+    public override function initGfx(): Void {
+    }
 
-  function initAnims() {}
+    public function getSkinInfo(): Dynamic {
+        throw "stub: getSkinInfo not decompiled";
+    }
 
-  function initGfx() {}
+    public function applySkin(arg0: String): Void {
+    }
 
-  function getSkinInfo(): Dynamic {}
+    public function initScarf(): Void {
+    }
 
-  function applySkin(skinId: String) {}
+    public function getGlowColorsData(): Array<Dynamic> {
+        throw "stub: getGlowColorsData not decompiled";
+    }
 
-  function initScarf() {}
+    public function initColorMap(): Void {
+    }
 
-  function getGlowColorsData(): hl.types.ArrayObj<Dynamic> {}
+    public override function minimapTracking(): Void {
+    }
 
-  function initColorMap() {}
+    public function onLevelChanged(arg0: pr.Level): Void {
+    }
 
-  function minimapTracking() {}
+    public override function disposeGfx(): Void {
+    }
 
-  function onLevelChanged(oldLevel: pr.Level.Level) {}
+    public function hasSkin(arg0: String, arg1: String): Bool {
+        throw "stub: hasSkin not decompiled";
+    }
 
-  function disposeGfx() {}
+    public function hasAPurpleSkin(): Bool {
+        throw "stub: hasAPurpleSkin not decompiled";
+    }
 
-  function hasSkin(model: String, itemId: String): Bool {}
+    public function onPickupLoot(arg0: en.Loot): Void {
+    }
 
-  function hasAPurpleSkin(): Bool {}
+    public function addMoney(arg0: Int, arg1: Ref): Void {
+    }
 
-  function onPickupLoot(loot: en.Loot.Loot) {}
+    public function substractMoney(arg0: Int, arg1: Ref): Void {
+    }
 
-  function addMoney(v: Int, noStats: Dynamic) {}
+    public function tryToSubstractMoney(arg0: Int, arg1: Ref): Int {
+        throw "stub: tryToSubstractMoney not decompiled";
+    }
 
-  function substractMoney(v: Int, noStats: Dynamic) {}
+    public function addDebt(arg0: Int, arg1: Ref): Void {
+    }
 
-  function tryToSubstractMoney(v: Int, noStats: Dynamic): Int {}
+    public function substractDebt(arg0: Int, arg1: Ref): Void {
+    }
 
-  function addDebt(v: Int, noStats: Dynamic) {}
+    public function addGoldCombo(arg0: Int): Void {
+    }
 
-  function substractDebt(v: Int, noStats: Dynamic) {}
+    public function addCells(arg0: Int, arg1: Ref): Void {
+    }
 
-  function addGoldCombo(v: Int) {}
+    public function substractCells(arg0: Int, arg1: Ref): Void {
+    }
 
-  function addCells(v: Int, noStats: Dynamic) {}
+    public function wakeup(arg0: pr.Level, arg1: Int, arg2: Int): Void {
+    }
 
-  function substractCells(v: Int, noStats: Dynamic) {}
+    public override function get_headX(): Float {
+        throw "stub: get_headX not decompiled";
+    }
 
-  function wakeup(lvl: pr.Level.Level, cx: Int, cy: Int) {}
+    public override function get_headY(): Float {
+        throw "stub: get_headY not decompiled";
+    }
 
-  function get_headX(): Float {}
+    public function getTrackerPositionY(arg0: String): Float {
+        throw "stub: getTrackerPositionY not decompiled";
+    }
 
-  function get_headY(): Float {}
+    public function getTrackerPositionX(arg0: String): Float {
+        throw "stub: getTrackerPositionX not decompiled";
+    }
 
-  function getTrackerPositionY(trackerName: String): Float {}
+    public override function dispose(): Void {
+    }
 
-  function getTrackerPositionX(trackerName: String): Float {}
+    public override function initLife(arg0: Float, arg1: Dynamic): Void {
+    }
 
-  function dispose() {}
+    public function setLifeAndRally(arg0: Int, arg1: Int): Void {
+    }
 
-  function initLife(v: Float, max: Dynamic) {}
+    public function toggleFullInvincibility(arg0: Bool): Void {
+    }
 
-  function setLifeAndRally(life: Int, rally: Int) {}
+    public function refillAllAmmo(): Void {
+    }
 
-  function toggleFullInvincibility(on: Bool) {}
+    public function clean(): Void {
+    }
 
-  function refillAllAmmo() {}
+    public function addSideKick(arg0: en.Mob): Void {
+    }
 
-  function clean() {}
+    public function clearSideKicks(): Void {
+    }
 
-  function addSideKick(sKick: en.Mob.Mob) {}
+    public function clearPets(): Void {
+    }
 
-  function clearSideKicks() {}
+    public function onEquipedItemsChange(arg0: Ref, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function clearPets() {}
+    public function updatePokemonableIcons(): Void {
+    }
 
-  function onEquipedItemsChange(updateHUD: Dynamic, duringHeroInit: Dynamic, duringItemTransform: Dynamic) {}
+    public function dropAndUpdateItem(arg0: tool.InventItem): tool.InventItem {
+        throw "stub: dropAndUpdateItem not decompiled";
+    }
 
-  function updatePokemonableIcons() {}
+    public function hasBlueprint(arg0: String): Bool {
+        throw "stub: hasBlueprint not decompiled";
+    }
 
-  function dropAndUpdateItem(i: tool.InventItem.InventItem): tool.InventItem.InventItem {}
+    public function pickBlueprint(arg0: String): Bool {
+        throw "stub: pickBlueprint not decompiled";
+    }
 
-  function hasBlueprint(k: String): Bool {}
+    public function revealBlueprints(): Void {
+    }
 
-  function pickBlueprint(k: String): Bool {}
+    public function removeRevealedBlueprints(): Void {
+    }
 
-  function revealBlueprints() {}
+    public function getItemIconPos(arg0: Entity): tool.FPoint {
+        throw "stub: getItemIconPos not decompiled";
+    }
 
-  function removeRevealedBlueprints() {}
+    public function removeTemporaryItems(): Void {
+    }
 
-  function getItemIconPos(e: Entity): tool.FPoint.FPoint {}
+    public function reapplyTemporaryItems(): Void {
+    }
 
-  function removeTemporaryItems() {}
+    public function pickItem(arg0: Entity, arg1: tool.InventItem, arg2: Dynamic): Void {
+    }
 
-  function reapplyTemporaryItems() {}
+    public function onAfterPickItem(arg0: tool.InventItem): Void {
+    }
 
-  function pickItem(from: Entity, i: tool.InventItem.InventItem, onComplete: Dynamic) {}
+    public function onItemRecycling(arg0: tool.InventItem): Void {
+    }
 
-  function onAfterPickItem(i: tool.InventItem.InventItem) {}
+    public function applyItemPickEffect(arg0: Entity, arg1: tool.InventItem): Void {
+    }
 
-  function onItemRecycling(i: tool.InventItem.InventItem) {}
+    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function applyItemPickEffect(from: Entity, i: tool.InventItem.InventItem) {}
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
 
-  function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic) {}
+    public function hasWeaponEquipped(arg0: String): Bool {
+        throw "stub: hasWeaponEquipped not decompiled";
+    }
 
-  function setPosPixel(x: Float, y: Float) {}
+    public function hasWeaponEquippedInBackpack(arg0: String): Bool {
+        throw "stub: hasWeaponEquippedInBackpack not decompiled";
+    }
 
-  function hasWeaponEquipped(id: String): Bool {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function hasWeaponEquippedInBackpack(id: String): Bool {}
+    public function onHitGlobalShield(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onAttackMissed(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onHitGlobalShield(a: tool.atk.AttackData.AttackData) {}
+    public function onPerfectParry(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onAttackMissed(atk: tool.atk.AttackData.AttackData) {}
+    public function resetKillCount(): Void {
+    }
 
-  function onPerfectParry(a: tool.atk.AttackData.AttackData) {}
+    public function removeFlawlessLoot(arg0: tool.atk.AttackData): Void {
+    }
 
-  function resetKillCount() {}
+    public function checkCursedWeaponHit(arg0: tool.atk.AttackData): Void {
+    }
 
-  function removeFlawlessLoot(a: tool.atk.AttackData.AttackData) {}
+    public function damageFeedback(arg0: tool.atk.AttackData, arg1: Float): Void {
+    }
 
-  function checkCursedWeaponHit(a: tool.atk.AttackData.AttackData) {}
+    public function getHitSound(): hxd.res.Sound {
+        throw "stub: getHitSound not decompiled";
+    }
 
-  function damageFeedback(a: tool.atk.AttackData.AttackData, dmgRatio: Float) {}
+    public function tryToPlayAtkSound(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function getHitSound(): hxd.res.Sound.Sound {}
+    public function updateLifeBar(): Void {
+    }
 
-  function tryToPlayAtkSound(chance: Dynamic, baseVolume: Dynamic) {}
+    public function reduceCurse(arg0: Int): Void {
+    }
 
-  function updateLifeBar() {}
+    public function curse(arg0: Int, arg1: String, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function reduceCurse(n: Int) {}
+    public function displayCursePopup(arg0: Int, arg1: String, arg2: Ref): Void {
+    }
 
-  function curse(count: Int, reason: String, hidePopup: Dynamic, useAltSound: Dynamic) {}
+    public function endCurse(): Void {
+    }
 
-  function displayCursePopup(count: Int, reason: String, hidePopup: Dynamic) {}
+    public function oneHitProtectionTrigger(): Void {
+    }
 
-  function endCurse() {}
+    public function applyDamnedVigorEffect(): Void {
+    }
 
-  function oneHitProtectionTrigger() {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function applyDamnedVigorEffect() {}
+    public function deathRespawn(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public function checkContinueMode(arg0: tool.atk.AttackData): Bool {
+        throw "stub: checkContinueMode not decompiled";
+    }
 
-  function deathRespawn() {}
+    public function checkLifeRemaining(): Bool {
+        throw "stub: checkLifeRemaining not decompiled";
+    }
 
-  function checkContinueMode(a: tool.atk.AttackData.AttackData): Bool {}
+    public function tryToApplyYoloPerk(): Bool {
+        throw "stub: tryToApplyYoloPerk not decompiled";
+    }
 
-  function checkLifeRemaining(): Bool {}
+    public function tryToApplyWishesPerk(arg0: tool.InventItem): Void {
+    }
 
-  function tryToApplyYoloPerk(): Bool {}
+    public function onOwnAttackDealt(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function tryToApplyWishesPerk(itemToLeg: tool.InventItem.InventItem) {}
+    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+        throw "stub: canReceiveAttack not decompiled";
+    }
 
-  function onOwnAttackDealt(atk: tool.atk.AttackData.AttackData, target: Entity) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function canReceiveAttack(a: tool.atk.AttackData.AttackData): Bool {}
+    public override function getAdjustedWeightFactor(arg0: Entity): Float {
+        throw "stub: getAdjustedWeightFactor not decompiled";
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function getAdjustedWeightFactor(against: Entity): Float {}
+    public function isFallingTooFast(): Bool {
+        throw "stub: isFallingTooFast not decompiled";
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function isFallingTooFast(): Bool {}
+    public function landStun(arg0: Float, arg1: Bool): Void {
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function breakBreakableGround(arg0: Int, arg1: Int): Void {
+    }
 
-  function landStun(sec: Float, stun: Bool) {}
+    public function pushFloatingPlatform(arg0: Int, arg1: Int, arg2: Float): Void {
+    }
 
-  function breakBreakableGround(x: Int, y: Int) {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function pushFloatingPlatform(x: Int, y: Int, force: Float) {}
+    public override function onTouchGround(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function onLand(arg0: Float): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function onLand(height: Float) {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onLeaveMap() {}
+    public function getBestRespawnPointAfterFatalFall(arg0: Bool): tool.CPoint {
+        throw "stub: getBestRespawnPointAfterFatalFall not decompiled";
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function onFatalFallDamage(): Void {
+    }
 
-  function getBestRespawnPointAfterFatalFall(debug: Bool): tool.CPoint.CPoint {}
+    public function respawnOnLastStable(arg0: Bool, arg1: Float): Void {
+    }
 
-  function onFatalFallDamage() {}
+    public function tryToShieldRepelGrenades(): Void {
+    }
 
-  function respawnOnLastStable(hasClimbAnim: Bool, immunityS: Float) {}
+    public function tryToKickGrenades(arg0: tool.Area, arg1: tool.InventItem, arg2: Float, arg3: Int, arg4: tool.weap.BaseShield, arg5: Dynamic): Void {
+    }
 
-  function tryToShieldRepelGrenades() {}
+    public function setFocus(arg0: Entity): Void {
+    }
 
-  function tryToKickGrenades(a: tool.Area.Area, item: tool.InventItem.InventItem, repel: Float, tier: Int, shield: tool.weap.BaseShield.BaseShield, onRepel: Dynamic) {}
+    public function clearFocus(): Void {
+    }
 
-  function setFocus(e: Entity) {}
+    public function activateFocus(arg0: Bool): Void {
+    }
 
-  function clearFocus() {}
+    public function setHeadMode(arg0: tool.HeadMode, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function activateFocus(longPress: Bool) {}
+    public function setHeadDepth(arg0: Int): Void {
+    }
 
-  function setHeadMode(m: Dynamic, durationS: Float, id: Dynamic) {}
+    public function updateInteraction(): Void {
+    }
 
-  function setHeadDepth(layer: Int) {}
+    public function resetHeadMode(): Void {
+    }
 
-  function updateInteraction() {}
+    public function lockControlsF(arg0: Float): Void {
+    }
 
-  function resetHeadMode() {}
+    public function lockControlsS(arg0: Float): Void {
+    }
 
-  function lockControlsF(frames: Float) {}
+    public function lockControlFromSkill(arg0: Float): Void {
+    }
 
-  function lockControlsS(sec: Float) {}
+    public function cancelSkillControlLock(): Void {
+    }
 
-  function lockControlFromSkill(sec: Float) {}
+    public function applyHudLockFade(): Void {
+    }
 
-  function cancelSkillControlLock() {}
+    public function controlsLocked(arg0: Ref): Bool {
+        throw "stub: controlsLocked not decompiled";
+    }
 
-  function applyHudLockFade() {}
+    public function moveControlled(): Bool {
+        throw "stub: moveControlled not decompiled";
+    }
 
-  function controlsLocked(isMenu: Dynamic): Bool {}
+    public override function kill(): Void {
+    }
 
-  function moveControlled(): Bool {}
+    public override function onDie(): Void {
+    }
 
-  function kill() {}
+    public function startDeathCine(): Void {
+    }
 
-  function onDie() {}
+    public function fullHeal(): Void {
+    }
 
-  function startDeathCine() {}
+    public override function get_weight(): Float {
+        throw "stub: get_weight not decompiled";
+    }
 
-  function fullHeal() {}
+    public function drawTrail(arg0: Int, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function get_weight(): Float {}
+    public function copyTrail(arg0: libs.heaps.slib.HSprite, arg1: libs.heaps.slib.HSprite): Void {
+    }
 
-  function drawTrail(col: Int, add: Dynamic, alpha: Dynamic) {}
+    public function blink(arg0: Float): Void {
+    }
 
-  function copyTrail(from: libs.heaps.slib.HSprite.HSprite, to: libs.heaps.slib.HSprite.HSprite) {}
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function blink(frames: Float) {}
+    public override function refreshIcons(): Void {
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public override function getAffectResist(arg0: Dynamic): Float {
+        throw "stub: getAffectResist not decompiled";
+    }
 
-  function refreshIcons() {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function getAffectResist(a: Dynamic): Float {}
+    public function updateBodyHeight(): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function isExplorersInstinctActive(): Bool {
+        throw "stub: isExplorersInstinctActive not decompiled";
+    }
 
-  function updateBodyHeight() {}
+    public override function onEnterRoom(arg0: level.Room): Void {
+    }
 
-  function isExplorersInstinctActive(): Bool {}
+    public function getCurrentShopMusic(arg0: level.MerchantData): hxd.res.Sound {
+        throw "stub: getCurrentShopMusic not decompiled";
+    }
 
-  function onEnterRoom(r: level.Room.Room) {}
+    public function triggerExplorerInstinct(arg0: Ref): Void {
+    }
 
-  function getCurrentShopMusic(merchant: hxbit.Macros.Macros): hxd.res.Sound.Sound {}
+    public override function onLeaveRoom(arg0: level.Room): Void {
+    }
 
-  function triggerExplorerInstinct(feedback: Dynamic) {}
+    public function triggerOnUseAffixes(arg0: tool.InventItem): Void {
+    }
 
-  function onLeaveRoom(r: level.Room.Room) {}
+    public function triggerOnStopAffixes(arg0: tool.InventItem): Void {
+    }
 
-  function triggerOnUseAffixes(i: tool.InventItem.InventItem) {}
+    public function resetCooldownForItem(arg0: tool.InventItem): Void {
+    }
 
-  function triggerOnStopAffixes(i: tool.InventItem.InventItem) {}
+    public function startCooldownForItem(arg0: tool.InventItem, arg1: Dynamic): Void {
+    }
 
-  function resetCooldownForItem(item: tool.InventItem.InventItem) {}
+    public function reduceCooldownForItem(arg0: tool.InventItem, arg1: Float): Void {
+    }
 
-  function startCooldownForItem(item: tool.InventItem.InventItem, overrideTime: Dynamic) {}
+    public function transformInventoryItem(arg0: tool.InventItem, arg1: tool.InventItem): tool.InventItem {
+        throw "stub: transformInventoryItem not decompiled";
+    }
 
-  function reduceCooldownForItem(item: tool.InventItem.InventItem, sec: Float) {}
+    public function restoreDepletedItems(): Void {
+    }
 
-  function transformInventoryItem(i: tool.InventItem.InventItem, forItem: tool.InventItem.InventItem): tool.InventItem.InventItem {}
+    public function pushScarf(arg0: Float, arg1: Ref): Void {
+    }
 
-  function restoreDepletedItems() {}
+    public function cancelMainSkills(arg0: hl.Class): Void {
+    }
 
-  function pushScarf(pow: Float, forRigid: Dynamic) {}
+    public function _setPerkCooldownS(arg0: tool.InventItem, arg1: Float): Void {
+    }
 
-  function cancelMainSkills(type: hl.Class) {}
+    public function setPerkCooldownS(arg0: tool.InventItem, arg1: String, arg2: Float): Void {
+    }
 
-  function _setPerkCooldownS(item: tool.InventItem.InventItem, s: Float) {}
+    public function _hasPerkCooldownFor(arg0: tool.InventItem): Bool {
+        throw "stub: _hasPerkCooldownFor not decompiled";
+    }
 
-  function setPerkCooldownS(item: tool.InventItem.InventItem, perkKind: String, s: Float) {}
+    public function hasPerkCooldownFor(arg0: tool.InventItem, arg1: String): Bool {
+        throw "stub: hasPerkCooldownFor not decompiled";
+    }
 
-  function _hasPerkCooldownFor(item: tool.InventItem.InventItem): Bool {}
+    public function _unsetPerkCooldown(arg0: tool.InventItem): Void {
+    }
 
-  function hasPerkCooldownFor(item: tool.InventItem.InventItem, perkKind: String): Bool {}
+    public function unsetPerkCooldown(arg0: tool.InventItem, arg1: String): Void {
+    }
 
-  function _unsetPerkCooldown(item: tool.InventItem.InventItem) {}
+    public function removeLevelPerkCd(arg0: Bool): Void {
+    }
 
-  function unsetPerkCooldown(item: tool.InventItem.InventItem, perkKind: String) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function removeLevelPerkCd(sub: Bool) {}
+    public function canWallGrab(): Bool {
+        throw "stub: canWallGrab not decompiled";
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function canJumpThroughUp(): Bool {
+        throw "stub: canJumpThroughUp not decompiled";
+    }
 
-  function canWallGrab(): Bool {}
+    public function canBreakDoors(): Bool {
+        throw "stub: canBreakDoors not decompiled";
+    }
 
-  function canJumpThroughUp(): Bool {}
+    public function canBreakTiles(): Bool {
+        throw "stub: canBreakTiles not decompiled";
+    }
 
-  function canBreakDoors(): Bool {}
+    public function canUseInteractive(arg0: en.Interactive): Bool {
+        throw "stub: canUseInteractive not decompiled";
+    }
 
-  function canBreakTiles(): Bool {}
+    public function isItemUseful(arg0: tool.InventItem): Bool {
+        throw "stub: isItemUseful not decompiled";
+    }
 
-  function canUseInteractive(inter: en.Interactive.Interactive): Bool {}
+    public function onUseInteractive(arg0: en.Interactive): Void {
+    }
 
-  function isItemUseful(item: tool.InventItem.InventItem): Bool {}
+    public function onUnlockItem(arg0: String): Void {
+    }
 
-  function onUseInteractive(inter: en.Interactive.Interactive) {}
+    public function isChargingSkill(): Bool {
+        throw "stub: isChargingSkill not decompiled";
+    }
 
-  function onUnlockItem(kind: String) {}
+    public function chargingSkillAllowCrouch(): Bool {
+        throw "stub: chargingSkillAllowCrouch not decompiled";
+    }
 
-  function isChargingSkill(): Bool {}
+    public function interruptHeroSkills(): Void {
+    }
 
-  function chargingSkillAllowCrouch(): Bool {}
+    public function reduceAllActiveCooldowns(arg0: Float): Void {
+    }
 
-  function interruptHeroSkills() {}
+    public function unlockControls(): Void {
+    }
 
-  function reduceAllActiveCooldowns(sec: Float) {}
+    public function airControl(): Void {
+    }
 
-  function unlockControls() {}
+    public function inDanger(): Bool {
+        throw "stub: inDanger not decompiled";
+    }
 
-  function airControl() {}
+    public function onInvisibilityBreakingAction(): Void {
+    }
 
-  function inDanger(): Bool {}
+    public function onCombatAction(): Void {
+    }
 
-  function onInvisibilityBreakingAction() {}
+    public function inCombat(): Bool {
+        throw "stub: inCombat not decompiled";
+    }
 
-  function onCombatAction() {}
+    public function commonCliffGrabEffect(): Void {
+    }
 
-  function inCombat(): Bool {}
+    public function cliffGrab(): Void {
+    }
 
-  function commonCliffGrabEffect() {}
+    public function playClimbSfx(): Void {
+    }
 
-  function cliffGrab() {}
+    public function startHoldPull(): Void {
+    }
 
-  function playClimbSfx() {}
+    public function startClimbing(arg0: Bool): Void {
+    }
 
-  function startHoldPull() {}
+    public function stopClimbing(): Void {
+    }
 
-  function startClimbing(onLadder: Bool) {}
+    public function exitLadderTop(arg0: Int): Void {
+    }
 
-  function stopClimbing() {}
+    public function getDoTValue(arg0: tool.InventItem, arg1: Dynamic, arg2: Entity, arg3: tool.Weapon): Float {
+        throw "stub: getDoTValue not decompiled";
+    }
 
-  function exitLadderTop(tcy: Int) {}
+    public function toxinLoverAspect(arg0: Ref): Void {
+    }
 
-  function getDoTValue(item: tool.InventItem.InventItem, baseValue: Dynamic, target: Entity, weapon: tool.Weapon.Weapon): Float {}
+    public override function preUpdate(): Void {
+    }
 
-  function toxinLoverAspect(forcePoison: Dynamic) {}
+    public override function beforeRender(): Void {
+    }
 
-  function preUpdate() {}
+    public function isPlayingRunAnim(): Bool {
+        throw "stub: isPlayingRunAnim not decompiled";
+    }
 
-  function beforeRender() {}
+    public function playStepSound(): Void {
+    }
 
-  function isPlayingRunAnim(): Bool {}
+    public function get_fxRunSmoke(): Dynamic {
+        throw "stub: get_fxRunSmoke not decompiled";
+    }
 
-  function playStepSound() {}
+    public override function postUpdate(): Void {
+    }
 
-  function get_fxRunSmoke(): Dynamic {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function postUpdate() {}
+    public override function onEnterWater(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function onEnterWater() {}
+    public function updateTutorials(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function createTutoTip(): ui.LightTip {
+        throw "stub: createTutoTip not decompiled";
+    }
 
-  function updateTutorials() {}
+    public function createTutoControlTip(arg0: Int, arg1: String): ui.LightTip {
+        throw "stub: createTutoControlTip not decompiled";
+    }
 
-  function createTutoTip(): ui.LightTip.LightTip {}
+    public function cancelTuto(): Void {
+    }
 
-  function createTutoControlTip(c: Int, str: String): ui.LightTip.LightTip {}
+    public override function canCrawlThrought(arg0: Int, arg1: Int): Bool {
+        throw "stub: canCrawlThrought not decompiled";
+    }
 
-  function cancelTuto() {}
+    public function onTeleportation(): Void {
+    }
 
-  function canCrawlThrought(x: Int, y: Int): Bool {}
+    public function resetTpItems(): Void {
+    }
 
-  function onTeleportation() {}
+    public function resetChargeDashItems(): Void {
+    }
 
-  function resetTpItems() {}
+    public function transformInventoryPerk(arg0: tool.InventItem, arg1: tool.InventItem): Void {
+    }
 
-  function resetChargeDashItems() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function transformInventoryPerk(i: tool.InventItem.InventItem, forperk: tool.InventItem.InventItem) {}
+    public function setPauseInfection(arg0: Bool): Void {
+    }
 
-  function fixedUpdate() {}
+    public function updateInfection(): Void {
+    }
 
-  function setPauseInfection(state: Bool) {}
+    public function checkInfectionTierLevel(arg0: Float): Int {
+        throw "stub: checkInfectionTierLevel not decompiled";
+    }
 
-  function updateInfection() {}
+    public function cleanupSidekicks(): Void {
+    }
 
-  function checkInfectionTierLevel(normPercentMobsLeft: Float): Int {}
+    public function onBuffEnds(): Void {
+    }
 
-  function cleanupSidekicks() {}
+    public override function heal(arg0: Int): Void {
+    }
 
-  function onBuffEnds() {}
+    public override function setDepth(arg0: Int): Void {
+    }
 
-  function heal(v: Int) {}
+    public function onHeroAlphaChanged(arg0: Float, arg1: Float): Void {
+    }
 
-  function setDepth(layer: Int) {}
+    public function highlighHudSlotFor(arg0: tool.InventItem, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function onHeroAlphaChanged(oldVal: Float, newVal: Float) {}
+    public function hudInitItems(): Void {
+    }
 
-  function highlighHudSlotFor(item: tool.InventItem.InventItem, color: Dynamic, time: Dynamic) {}
+    public function hudSetMoney(arg0: Int): Void {
+    }
 
-  function hudInitItems() {}
+    public function hudSetCells(arg0: Int): Void {
+    }
 
-  function hudSetMoney(value: Int) {}
+    public function hudSetSurvival(arg0: Int, arg1: Ref): Void {
+    }
 
-  function hudSetCells(value: Int) {}
+    public function hudSetBrutality(arg0: Int, arg1: Ref): Void {
+    }
 
-  function hudSetSurvival(value: Int, animated: Dynamic) {}
+    public function hudSetTactic(arg0: Int, arg1: Ref): Void {
+    }
 
-  function hudSetBrutality(value: Int, animated: Dynamic) {}
+    public function hudOnItemPick(arg0: tool.InventItem, arg1: Float, arg2: Float): Void {
+    }
 
-  function hudSetTactic(value: Int, animated: Dynamic) {}
+    public function hudUpdateKeyStock(): Void {
+    }
 
-  function hudOnItemPick(item: tool.InventItem.InventItem, x: Float, y: Float) {}
+    public function hudUpdatePerkStock(): Void {
+    }
 
-  function hudUpdateKeyStock() {}
+    public function initSFXArrays(): Void {
+    }
 
-  function hudUpdatePerkStock() {}
+    public function createGrenadeFromAffix(arg0: tool.InventItem): Void {
+    }
 
-  function initSFXArrays() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function createGrenadeFromAffix(item: tool.InventItem.InventItem) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserializeInit(): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserializeInit() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onHeroDie(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onSetPosCase(arg0: Int, arg1: Int): Void {
+    }
 }
-

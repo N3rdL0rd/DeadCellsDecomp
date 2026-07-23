@@ -1,26 +1,42 @@
 package en;
+
 class ShovelPaint extends Entity {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function canReceiveAttack(a: tool.atk.AttackData.AttackData): Bool {}
+    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+        throw "stub: canReceiveAttack not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

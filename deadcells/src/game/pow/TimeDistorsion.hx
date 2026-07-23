@@ -1,22 +1,33 @@
 package pow;
+
 class TimeDistorsion extends Power {
-  var endSfxLaunched: Bool;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var endSfxLaunched: Bool;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function shouldChangeLevelWithHero(): Bool {}
+    public override function shouldChangeLevelWithHero(): Bool {
+        throw "stub: shouldChangeLevelWithHero not decompiled";
+    }
 
-  function tick() {}
+    public function tick(): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,19 +1,29 @@
 package tool.weap;
+
 class Lightning extends tool.Weapon {
-  var ticks: Int;
-  var curveDir: Int;
-  var active: Bool;
+    public var ticks: Int;
+    public var curveDir: Int;
+    public var active: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function isActive(): Bool {}
+    public function isActive(): Bool {
+        throw "stub: isActive not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public override function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function tick() {}
+    public function tick(): Void {
+    }
 
-  function checkForQuadTreeElementsOnWay(startX: Float, startY: Float, endX: Float, endY: Float) {}
+    public function checkForQuadTreeElementsOnWay(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 }
-

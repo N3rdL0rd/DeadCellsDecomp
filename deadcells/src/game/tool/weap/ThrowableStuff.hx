@@ -1,14 +1,20 @@
 package tool.weap;
+
 class ThrowableStuff extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function onOwnerAttackResultDealt(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function onOwnerAttackResultDealt(atk: tool.atk.AttackData.AttackData, target: Entity) {}
+    public function gainAmmo(): Void {
+    }
 
-  function gainAmmo() {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
-
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 }
-

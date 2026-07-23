@@ -1,64 +1,103 @@
 package tool.mainSkills;
+
 class RichterDodge extends tool.mainSkills.Dodge {
-  var dodgeLock: Bool;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var dodgeLock: Bool;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function destroy() {}
+    public override function destroy(): Void {
+    }
 
-  function passivePreUpdate() {}
+    public function passivePreUpdate(): Void {
+    }
 
-  function activeFixedUpdate() {}
+    public function activeFixedUpdate(): Void {
+    }
 
-  function activePostUpdate() {}
+    public function activePostUpdate(): Void {
+    }
 
-  function canUse(): Bool {}
+    public override function canUse(): Bool {
+        throw "stub: canUse not decompiled";
+    }
 
-  function onReady() {}
+    public function onReady(): Void {
+    }
 
-  function onStart() {}
+    public override function onStart(): Void {
+    }
 
-  function onEnd() {}
+    public function onEnd(): Void {
+    }
 
-  function onCancel() {}
+    public override function onCancel(): Void {
+    }
 
-  function applyDodgeMovement() {}
+    public function applyDodgeMovement(): Void {
+    }
 
-  function applyEndDodgeMovement() {}
+    public function applyEndDodgeMovement(): Void {
+    }
 
-  function extendDodgeRoll(sec: Float) {}
+    public function extendDodgeRoll(arg0: Float): Void {
+    }
 
-  function createOnionSkin(alpha: Dynamic, sec: Dynamic) {}
+    public function createOnionSkin(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function onBackpackWeaponHit(weapon: tool.Weapon.Weapon, target: Entity) {}
+    public function onBackpackWeaponHit(arg0: tool.Weapon, arg1: Entity): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function onPickItem(from: Entity, i: tool.InventItem.InventItem) {}
+    public function onPickItem(arg0: Entity, arg1: tool.InventItem): Void {
+    }
 
-  function shouldHaveSmallHitbox(): Bool {}
+    public function shouldHaveSmallHitbox(): Bool {
+        throw "stub: shouldHaveSmallHitbox not decompiled";
+    }
 
-  function canWallGrab(): Bool {}
+    public function canWallGrab(): Bool {
+        throw "stub: canWallGrab not decompiled";
+    }
 
-  function canJumpThroughUp(): Bool {}
+    public function canJumpThroughUp(): Bool {
+        throw "stub: canJumpThroughUp not decompiled";
+    }
 
-  function canPreventStuckInWall(cx: Int, cy: Int): Bool {}
+    public function canPreventStuckInWall(arg0: Int, arg1: Int): Bool {
+        throw "stub: canPreventStuckInWall not decompiled";
+    }
 
-  function canBreakDoors(): Bool {}
+    public function canBreakDoors(): Bool {
+        throw "stub: canBreakDoors not decompiled";
+    }
 
-  function canBreakTiles(): Bool {}
+    public function canBreakTiles(): Bool {
+        throw "stub: canBreakTiles not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

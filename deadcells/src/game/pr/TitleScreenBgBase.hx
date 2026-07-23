@@ -1,31 +1,42 @@
 package pr;
+
 class TitleScreenBgBase extends libs.Process {
-  var bg: libs.heaps.slib.HSprite.HSprite;
-  var front: libs.heaps.slib.HSprite.HSprite;
-  var fxSbAdd: libs.heaps.slib.HSprite.HSpriteBatch;
-  var fxSbNormal: libs.heaps.slib.HSprite.HSpriteBatch;
-  var pool: libs.heaps.HParticle.HParticle;
-  var wrapper: h2d.Object.Object;
-  var titleLib: libs.heaps.slib.SpriteLib.SpriteLib;
+    public var bg: libs.heaps.slib.HSprite;
+    public var front: libs.heaps.slib.HSprite;
+    public var fxSbAdd: libs.heaps.slib.HSpriteBatch;
+    public var fxSbNormal: libs.heaps.slib.HSpriteBatch;
+    public var pool: libs.heaps.ParticlePool;
+    public var wrapper: h2d.Object;
+    public var titleLib: libs.heaps.slib.SpriteLib;
 
-  function __constructor__(wrapper: h2d.Object.Object, titleLib: libs.heaps.slib.SpriteLib.SpriteLib) {}
+    public function new(arg0: h2d.Object, arg1: libs.heaps.slib.SpriteLib) {
+        super();
+    }
 
-  function initTitleScreen() {}
+    public function initTitleScreen(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 
-  function addFx() {}
+    public function addFx(): Void {
+    }
 
-  function updateTitleScreen() {}
+    public function updateTitleScreen(): Void {
+    }
 
-  function blur(sigma: Dynamic, gain: Dynamic) {}
+    public function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function unblur() {}
+    public function unblur(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

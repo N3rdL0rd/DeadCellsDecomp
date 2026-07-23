@@ -1,70 +1,115 @@
 package ui.sel;
+
 class BossSelector extends ui.sel.GridSelector {
-  var separators: hl.types.ArrayObj<Dynamic>;
-  var toggleSwitch: Int;
-  var bossEntry: haxe.ds.IntMap<Dynamic>;
-  var pickedBoss: hl.types.ArrayObj<Dynamic>;
-  var sectionsCallbacks: hl.types.ArrayObj<Dynamic>;
-  var parentDoor: en.inter.door.BossRushDoor.BossRushDoor;
+    public var separators: Array<Dynamic>;
+    public var toggleSwitch: Int;
+    public var bossEntry: haxe.ds.IntMap;
+    public var pickedBoss: Array<Dynamic>;
+    public var sectionsCallbacks: Array<Dynamic>;
+    public var parentDoor: en.inter.door.BossRushDoor;
 
-  function __constructor__(parentDoor: en.inter.door.BossRushDoor.BossRushDoor) {}
+    public function new(arg0: en.inter.door.BossRushDoor) {
+        super();
+    }
 
-  function get_wid(): Int {}
+    public override function get_wid(): Int {
+        throw "stub: get_wid not decompiled";
+    }
 
-  function get_entryWid(): Int {}
+    public override function get_entryWid(): Int {
+        throw "stub: get_entryWid not decompiled";
+    }
 
-  function get_entryHei(): Int {}
+    public override function get_entryHei(): Int {
+        throw "stub: get_entryHei not decompiled";
+    }
 
-  function get_maxPixelHei(): Int {}
+    public override function get_maxPixelHei(): Int {
+        throw "stub: get_maxPixelHei not decompiled";
+    }
 
-  function initGrid() {}
+    public override function initGrid(): Void {
+    }
 
-  function createNewSectionText(f: h2d.Flow.Flow, sectionName: String): ui.Text.Text {}
+    public override function createNewSectionText(arg0: h2d.Flow, arg1: String): ui.Text {
+        throw "stub: createNewSectionText not decompiled";
+    }
 
-  function initEntries(size: Int) {}
+    public override function initEntries(arg0: Int): Void {
+    }
 
-  function addEntryAt(i: Int, cx: Int, cy: Int, sectionIdx: Dynamic): Dynamic {}
+    public override function addEntryAt(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Dynamic {
+        throw "stub: addEntryAt not decompiled";
+    }
 
-  function pickBoss(i: Int, state: Dynamic) {}
+    public function pickBoss(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function _pickBoss(i: Int, state: Dynamic) {}
+    public function _pickBoss(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function addOrderListSection(lastSection: h2d.Flow.Flow): ui.FlowBox.FlowBox {}
+    public function addOrderListSection(arg0: h2d.Flow): ui.FlowBox {
+        throw "stub: addOrderListSection not decompiled";
+    }
 
-  function updateOrderList() {}
+    public function updateOrderList(): Void {
+    }
 
-  function getSectionIndex(index: Int): Int {}
+    public function getSectionIndex(arg0: Int): Int {
+        throw "stub: getSectionIndex not decompiled";
+    }
 
-  function getBossSpr(i: Int, modified: Dynamic): libs.heaps.slib.HSprite.HSprite {}
+    public function getBossSpr(arg0: Int, arg1: Ref): libs.heaps.slib.HSprite {
+        throw "stub: getBossSpr not decompiled";
+    }
 
-  function setBossSpr(bossSpr: libs.heaps.slib.HSprite.HSprite, i: Int, modified: Dynamic) {}
+    public function setBossSpr(arg0: libs.heaps.slib.HSprite, arg1: Int, arg2: Ref): Void {
+    }
 
-  function getIconBmp(i: Int, p: h2d.Object.Object): h2d.Object.Object {}
+    public override function getIconBmp(arg0: Int, arg1: h2d.Object): h2d.Object {
+        throw "stub: getIconBmp not decompiled";
+    }
 
-  function getLockSprite(p: h2d.Object.Object, i: Dynamic): h2d.Object.Object {}
+    public override function getLockSprite(arg0: h2d.Object, arg1: Dynamic): h2d.Object {
+        throw "stub: getLockSprite not decompiled";
+    }
 
-  function beforeUpdateSelection() {}
+    public override function beforeUpdateSelection(): Void {
+    }
 
-  function updateSelection(scroll: Dynamic) {}
+    public override function updateSelection(arg0: Ref): Void {
+    }
 
-  function updateItemBackground(sectionIndex: Int, itemIndex: Int, state: Int, hasCursor: Bool) {}
+    public function updateItemBackground(arg0: Int, arg1: Int, arg2: Int, arg3: Bool): Void {
+    }
 
-  function updateBackground(bgSpr: libs.heaps.slib.HSprite.HSprite, bgFrontSpr: libs.heaps.slib.HSprite.HSprite, state: Int, hasCursor: Bool) {}
+    public function updateBackground(arg0: libs.heaps.slib.HSprite, arg1: libs.heaps.slib.HSprite, arg2: Int, arg3: Bool): Void {
+    }
 
-  function getSelectedState(index: Int): Dynamic {}
+    public function getSelectedState(arg0: Int): Dynamic {
+        throw "stub: getSelectedState not decompiled";
+    }
 
-  function isEntryLocked(i: Int): Bool {}
+    public override function isEntryLocked(arg0: Int): Bool {
+        throw "stub: isEntryLocked not decompiled";
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function toggleAll() {}
+    public function toggleAll(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onValidate() {}
+    public override function onValidate(): Void {
+    }
 
-  function confirm() {}
+    public function confirm(): Void {
+    }
 
-  function getTitleText(): String {}
+    public override function getTitleText(): String {
+        throw "stub: getTitleText not decompiled";
+    }
 }
-

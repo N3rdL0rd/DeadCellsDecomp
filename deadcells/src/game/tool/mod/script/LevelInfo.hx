@@ -1,28 +1,30 @@
 package tool.mod.script;
+
 class LevelInfo {
-  var id: String;
-  var name: String;
-  var biome: String;
-  var transitionTo: Dynamic;
-  var worldDepth: Int;
-  var baseMobTier: Int;
-  var extraMobTier: Int;
-  var props: tool.mod.script.LevelProps.LevelProps;
-  var baseLootLevel: Int;
-  var cellBonus: Float;
-  var tripleUps: Int;
-  var doubleUps: Int;
-  var mobDensity: Float;
-  var eliteWanderChance: Float;
-  var eliteRoomChance: Float;
-  var flags: Int;
-  var flagsProps: Dynamic;
-  var lootFlags: Int;
-  var gold: Int;
-  var loreDescriptions: hl.types.ArrayObj<Dynamic>;
+    public var id: String;
+    public var name: String;
+    public var biome: String;
+    public var transitionTo: Dynamic;
+    public var worldDepth: Int;
+    public var baseMobTier: Int;
+    public var extraMobTier: Int;
+    public var props: tool.mod.script.LevelProps;
+    public var baseLootLevel: Int;
+    public var cellBonus: Float;
+    public var tripleUps: Int;
+    public var doubleUps: Int;
+    public var mobDensity: Float;
+    public var eliteWanderChance: Float;
+    public var eliteRoomChance: Float;
+    public var flags: Int;
+    public var flagsProps: Dynamic;
+    public var lootFlags: Int;
+    public var gold: Int;
+    public var loreDescriptions: Array<Dynamic>;
 
-  function __constructor__(_cdbLevelInfo: Dynamic) {}
+    public function new(arg0: Dynamic) {
+    }
 
-  function p_CopyInfoFrom(_cdbLevelInfo: Dynamic) {}
+    public function p_CopyInfoFrom(arg0: Dynamic): Void {
+    }
 }
-

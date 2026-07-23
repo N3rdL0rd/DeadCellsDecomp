@@ -1,40 +1,56 @@
 package en.ltrap;
+
 class RotatingAxes extends en.LevelTrap {
-  var ang: Float;
-  var angOffset: Float;
-  var bRadius: Float;
-  var syncGroup: Int;
-  var speed: Float;
-  var axe0: libs.heaps.slib.HSprite.HSprite;
-  var axe1: libs.heaps.slib.HSprite.HSprite;
-  var chains0: hl.types.ArrayObj<Dynamic>;
-  var chains1: hl.types.ArrayObj<Dynamic>;
-  var secondLastTail: Dynamic;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var ang: Float;
+    public var angOffset: Float;
+    public var bRadius: Float;
+    public var syncGroup: Int;
+    public var speed: Float;
+    public var axe0: libs.heaps.slib.HSprite;
+    public var axe1: libs.heaps.slib.HSprite;
+    public var chains0: Array<Dynamic>;
+    public var chains1: Array<Dynamic>;
+    public var secondLastTail: Dynamic;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, syncGroup: Int, radiusCase: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Dynamic) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function hitHero(e: Entity, axeID: Int) {}
+    public function hitHero(arg0: Entity, arg1: Int): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

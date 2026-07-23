@@ -1,49 +1,67 @@
 package level.disp;
+
 class SwampHeart extends level.BiomeDisp {
-  var water: h2d.col.Bounds.Bounds;
-  var horizonY: Float;
-  var mainY: Float;
-  var frontY: Float;
-  var boats: hl.types.ArrayObj<Dynamic>;
-  var sbWaterFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbPollenFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbDisplaceFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var mTickVfxTop: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var mTickVfxNormal: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var parallaxVFillName: String;
-  var flyingInsects: hl.types.ArrayObj<Dynamic>;
-  var swampSeq: Int;
+    public var water: h2d.col.Bounds;
+    public var horizonY: Float;
+    public var mainY: Float;
+    public var frontY: Float;
+    public var boats: Array<Dynamic>;
+    public var sbWaterFx: libs.heaps.slib.HSpriteBatch;
+    public var sbPollenFx: libs.heaps.slib.HSpriteBatch;
+    public var sbDisplaceFx: libs.heaps.slib.HSpriteBatch;
+    public var mTickVfxTop: libs.heaps.slib.HSpriteBatch;
+    public var mTickVfxNormal: libs.heaps.slib.HSpriteBatch;
+    public var parallaxVFillName: String;
+    public var flyingInsects: Array<Dynamic>;
+    public var swampSeq: Int;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function addWater() {}
+    public function addWater(): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function renderForeground() {}
+    public function renderForeground(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function parallaxHFill(p: ParallaxGroup, tiles: hl.types.ArrayObj<Dynamic>, inf: Dynamic, rng: Dynamic, onAdd: Dynamic, y: Dynamic, randomAdditionalTile: h2d.Tile.Tile) {}
+    public function parallaxHFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Ref, arg6: h2d.Tile): Void {
+    }
 
-  function getParallaxOnAddCallback(p: ParallaxGroup, tiles: hl.types.ArrayObj<Dynamic>, inf: Dynamic): Dynamic {}
+    public function getParallaxOnAddCallback(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic): Dynamic {
+        throw "stub: getParallaxOnAddCallback not decompiled";
+    }
 
-  function initCloudShader() {}
+    public function initCloudShader(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function addWallDeco(dir: Int) {}
+    public function addWallDeco(arg0: Int): Void {
+    }
 
-  function createInsects(type: Dynamic, count: Int) {}
+    public function createInsects(arg0: level.disp.InsectType, arg1: Int): Void {
+    }
 
-  function resetInsect(insect: Dynamic) {}
+    public function resetInsect(arg0: Dynamic): Void {
+    }
 }
-

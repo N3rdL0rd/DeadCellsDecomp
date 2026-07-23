@@ -1,68 +1,106 @@
 package level.struct;
+
 class Greenhouse extends level.LevelStruct {
-  var deadends: hl.types.ArrayObj<Dynamic>;
-  var rightGreenhouses: hl.types.ArrayObj<Dynamic>;
-  var leftGreenhouses: hl.types.ArrayObj<Dynamic>;
-  var parentOfPDExit: level.RoomNode.RoomNode;
-  var replacedRoom: hl.types.ArrayObj<Dynamic>;
-  static var SMALL: Dynamic;
-  static var MEDIUM: Dynamic;
-  static var BIG: Dynamic;
+    public static var SMALL: Dynamic;
+    public static var MEDIUM: Dynamic;
+    public static var BIG: Dynamic;
+    public var deadends: Array<Dynamic>;
+    public var rightGreenhouses: Array<Dynamic>;
+    public var leftGreenhouses: Array<Dynamic>;
+    public var parentOfPDExit: level.RoomNode;
+    public var replacedRoom: Array<Dynamic>;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildGreenhousePath(roomBefore: level.RoomNode.RoomNode, roomAfter: level.RoomNode.RoomNode, sizes: hl.types.ArrayObj<Dynamic>, toLeft: Dynamic) {}
+    public function buildGreenhousePath(arg0: level.RoomNode, arg1: level.RoomNode, arg2: Array<Dynamic>, arg3: Ref): Void {
+    }
 
-  function buildGreenhouse(enter: String, width: Int, height: Int, startDepth: Int, startH: Dynamic, exitH: Dynamic, fromRight: Dynamic, toLeft: Dynamic, addDeadends: Dynamic): GreenhouseData {}
+    public function buildGreenhouse(arg0: String, arg1: Int, arg2: Int, arg3: Int, arg4: Ref, arg5: Ref, arg6: Ref, arg7: Ref, arg8: Ref): level.struct.GreenhouseData {
+        throw "stub: buildGreenhouse not decompiled";
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function nearTp(roomNode: level.RoomNode.RoomNode, distance: Dynamic): Bool {}
+    public function nearTp(arg0: level.RoomNode, arg1: Dynamic): Bool {
+        throw "stub: nearTp not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function placeMetaSecrets() {}
+    public function placeMetaSecrets(): Void {
+    }
 
-  function buildEssentialLoreRooms() {}
+    public override function buildEssentialLoreRooms(): Void {
+    }
 
-  function getParentQueenLore(): Dynamic {}
+    public function getParentQueenLore(): Dynamic {
+        throw "stub: getParentQueenLore not decompiled";
+    }
 
-  function addLoreRoom(lore: Dynamic, overrideStructMode: Dynamic) {}
+    public override function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function replaceDeadEnd(type: String, scoreDynamic: Dynamic): level.RoomNode.RoomNode {}
+    public function replaceDeadEnd(arg0: String, arg1: Dynamic): level.RoomNode {
+        throw "stub: replaceDeadEnd not decompiled";
+    }
 
-  function splitWithTP(roomNode: level.RoomNode.RoomNode) {}
+    public function splitWithTP(arg0: level.RoomNode): Void {
+    }
 
-  function replaceByRunicZDoor(content: level.RoomNode.RoomNode, neededRunes: Int, clue: Dynamic, combatRooms: Dynamic, combatGroup: Dynamic): level.RoomNode.RoomNode {}
+    public function replaceByRunicZDoor(arg0: level.RoomNode, arg1: Int, arg2: level.ZDoorContentClue, arg3: Dynamic, arg4: Dynamic): level.RoomNode {
+        throw "stub: replaceByRunicZDoor not decompiled";
+    }
 }
 
 class GreenhouseData {
-  var maze: tool.Labyrinth.Labyrinth;
-  var height: Int;
-  var width: Int;
-  var nodeMap: haxe.ds.ObjectMap;
-  var entrance: level.RoomNode.RoomNode;
-  var defaultExit: level.RoomNode.RoomNode;
-  var depth: Int;
+    public var maze: tool.Labyrinth;
+    public var height: Int;
+    public var width: Int;
+    public var nodeMap: haxe.ds.ObjectMap;
+    public var entrance: level.RoomNode;
+    public var defaultExit: level.RoomNode;
+    public var depth: Int;
 
-  function __constructor__(maze: tool.Labyrinth.Labyrinth, nodeMap: haxe.ds.ObjectMap, entranceDepth: Int) {}
+    public function new(arg0: tool.Labyrinth, arg1: haxe.ds.ObjectMap, arg2: Int) {
+    }
 
-  function getMazeNode(room: level.RoomNode.RoomNode): tool.Labyrinth.LabyrinthNode {}
+    public function getMazeNode(arg0: level.RoomNode): tool.LabyrinthNode {
+        throw "stub: getMazeNode not decompiled";
+    }
 
-  function isCorner(nodeMap: tool.Labyrinth.LabyrinthNode): Bool {}
+    public function isCorner(arg0: tool.LabyrinthNode): Bool {
+        throw "stub: isCorner not decompiled";
+    }
 
-  function getDepthOf(node: tool.Labyrinth.LabyrinthNode): Int {}
+    public function getDepthOf(arg0: tool.LabyrinthNode): Int {
+        throw "stub: getDepthOf not decompiled";
+    }
 
-  function getMaxDepth(): Int {}
+    public function getMaxDepth(): Int {
+        throw "stub: getMaxDepth not decompiled";
+    }
 
-  function get_topRooms(): hl.types.ArrayObj<Dynamic> {}
+    public function get_topRooms(): Array<Dynamic> {
+        throw "stub: get_topRooms not decompiled";
+    }
 
-  function get_bottomRooms(): hl.types.ArrayObj<Dynamic> {}
+    public function get_bottomRooms(): Array<Dynamic> {
+        throw "stub: get_bottomRooms not decompiled";
+    }
 
-  function get_leftRooms(): hl.types.ArrayObj<Dynamic> {}
+    public function get_leftRooms(): Array<Dynamic> {
+        throw "stub: get_leftRooms not decompiled";
+    }
 
-  function get_rightRooms(): hl.types.ArrayObj<Dynamic> {}
+    public function get_rightRooms(): Array<Dynamic> {
+        throw "stub: get_rightRooms not decompiled";
+    }
 }
-

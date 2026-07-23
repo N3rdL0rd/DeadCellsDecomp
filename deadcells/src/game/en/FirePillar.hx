@@ -1,47 +1,70 @@
 package en;
+
 class FirePillar extends Entity {
-  var dooku: en.mob.boss.DookuBeast.DookuBeast;
-  var dookuPf: en.inter.DookuBreakableFloor.DookuBreakableFloor;
-  var area: tool.Area.Area;
-  var skillName: String;
-  var skillInfos: Dynamic;
-  var pillarWid: Float;
-  var pillarHei: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var dooku: en.mob.boss.DookuBeast;
+    public var dookuPf: en.inter.DookuBreakableFloor;
+    public var area: tool.Area;
+    public var skillName: String;
+    public var skillInfos: Dynamic;
+    public var pillarWid: Float;
+    public var pillarHei: Float;
 
-  function __constructor__(dooku: en.mob.boss.DookuBeast.DookuBeast, skillName: String, cx: Int, cy: Int, pillarWid: Float, pillarHei: Float, delay: Float, dookuPf: en.inter.DookuBreakableFloor.DookuBreakableFloor) {}
+    public function new(arg0: en.mob.boss.DookuBeast, arg1: String, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: en.inter.DookuBreakableFloor) {
+        super();
+    }
 
-  function playCreationFx() {}
+    public function playCreationFx(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function createArea(): tool.Area.Area {}
+    public function createArea(): tool.Area {
+        throw "stub: createArea not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initPillar() {}
+    public function initPillar(): Void {
+    }
 
-  function playPillarFx(id: String) {}
+    public function playPillarFx(arg0: String): Void {
+    }
 
-  function createTouchAttack(): tool.atk.AttackData.AttackData {}
+    public function createTouchAttack(): tool.atk.AttackData {
+        throw "stub: createTouchAttack not decompiled";
+    }
 
-  function checkTouchOpponents() {}
+    public function checkTouchOpponents(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

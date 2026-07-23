@@ -1,39 +1,88 @@
 package tool.skill.mobSkill;
+
 class TeleJump extends tool.skill.OldMobSkill {
-  var jumpData: TeleJumpData;
-  var point: Dynamic;
-  var maxDistance: Int;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var point: Dynamic;
+    public var maxDistance: Int;
 
-  function onJumpEnd() {}
+    public function new(arg0: String, arg1: en.Mob) {
+        super();
+    }
 
-  function chargeAnimSequence() {}
+    public function setTeleJumpData(arg0: tool.skill.mobSkill.TeleJumpData): Void {
+    }
 
-  function onJumpChargeStartCallback() {}
+    public function defaultOnChargeStart(): Void {
+    }
 
-  function chooseDestination(): Dynamic {}
+    public override function initWithInfo(arg0: Dynamic): Void {
+    }
 
-  function dynOnChargeStart() {}
+    public function forceSetPoint(arg0: Int, arg1: Int): Void {
+    }
 
-  function onJumpEndCallback() {}
+    public function defaultOnExecute(arg0: Float): Void {
+    }
 
-  function onExecuteSucceed() {}
+    public function updateJump(): Void {
+    }
 
-  function listAlikes(): hl.types.ArrayObj<Dynamic> {}
+    public function onJumpEnd(): Void {
+    }
 
-  function dynOnExecute(ratio: Float) {}
+    public function onJumpEndCallback(): Void {
+    }
 
-  function __constructor__(id: String, from: en.Mob.Mob) {}
+    public function onJumpChargeStartCallback(): Void {
+    }
 
-  function setTeleJumpData(data: TeleJumpData) {}
+    public function listAlikes(): Array<Dynamic> {
+        throw "stub: listAlikes not decompiled";
+    }
 
-  function defaultOnChargeStart() {}
+    public function dynOnExecute(arg0: Float): Void {
+    }
 
-  function initWithInfo(inf: Dynamic) {}
+    public function onExecuteSucceed(): Void {
+    }
 
-  function forceSetPoint(newX: Int, newY: Int) {}
+    public function chooseDestination(): Dynamic {
+        throw "stub: chooseDestination not decompiled";
+    }
 
-  function defaultOnExecute(ratio: Float) {}
+    public function dynOnChargeStart(): Void {
+    }
 
-  function updateJump() {}
+    public function chargeAnimSequence(): Void {
+    }
 }
 
+class TeleJumpData {
+    public static var __clid: Int;
+    public var jumpFrom: tool.FPoint;
+    public var jumpTo: tool.FPoint;
+    public var jumpRatio: Float;
+    public var jumpSpeed: Float;
+    public var __uid: Int;
+    public var : Dynamic;
+
+    public function new() {
+    }
+
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public function unserializeInit(): Void {
+    }
+
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
+}

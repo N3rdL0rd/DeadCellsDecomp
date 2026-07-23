@@ -1,22 +1,30 @@
 package libs;
+
 class VarSecure {
-  var key1: Int;
-  var key2: Int;
-  var value: Dynamic;
-  var check: Dynamic;
-  var dummies: hl.types.ArrayDyn;
-  var bug: Bool;
+    public var key1: Int;
+    public var key2: Int;
+    public var value: Dynamic;
+    public var check: Dynamic;
+    public var dummies: Array<Dynamic>;
+    public var bug: Bool;
 
-  function __constructor__(init: Dynamic) {}
+    public function new(arg0: Dynamic) {
+    }
 
-  function get(): Int {}
+    public function get(): Int {
+        throw "stub: get not decompiled";
+    }
 
-  function setValue(v: Int) {}
+    public function setValue(arg0: Int): Void {
+    }
 
-  function addValue(v: Int) {}
+    public function addValue(arg0: Int): Void {
+    }
 
-  function fullRand(): Int {}
+    public function fullRand(): Int {
+        throw "stub: fullRand not decompiled";
+    }
 
-  function updateDummies() {}
+    public function updateDummies(): Void {
+    }
 }
-

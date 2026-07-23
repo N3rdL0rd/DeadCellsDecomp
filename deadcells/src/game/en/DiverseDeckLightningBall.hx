@@ -1,41 +1,65 @@
 package en;
+
 class DiverseDeckLightningBall extends Entity {
-  var lastAng: Float;
-  var angStep: Float;
-  var power: pow.DiverseDeck.DiverseDeck;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var lastAng: Float;
+    public var angStep: Float;
+    public var power: pow.DiverseDeckBase;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, baseAng: Dynamic, power: pow.DiverseDeck.DiverseDeck) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: pow.DiverseDeckBase) {
+        super();
+    }
 
-  function get_parentHero(): en.Hero.Hero {}
+    public function get_parentHero(): en.Hero {
+        throw "stub: get_parentHero not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function get_targetSprPosY(): Float {}
+    public override function get_targetSprPosY(): Float {
+        throw "stub: get_targetSprPosY not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function doDamage(e: Entity): Bool {}
+    public function doDamage(arg0: Entity): Bool {
+        throw "stub: doDamage not decompiled";
+    }
 
-  function getNextTarget(prevTargets: hl.types.ArrayObj<Dynamic>, rangeCase: Float): Entity {}
+    public function getNextTarget(arg0: Array<Dynamic>, arg1: Float): Entity {
+        throw "stub: getNextTarget not decompiled";
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

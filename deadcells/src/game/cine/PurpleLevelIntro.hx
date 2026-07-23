@@ -1,14 +1,19 @@
 package cine;
+
 class PurpleLevelIntro extends GameCinematic {
-  var finalStageTxt: ui.Text.Text;
-  var lvlNameTxt: ui.Text.Text;
-  var triangle: h2d.Bitmap.Bitmap;
-  var textScale: Float;
+    public var finalStageTxt: ui.Text;
+    public var lvlNameTxt: ui.Text;
+    public var triangle: h2d.Bitmap;
+    public var textScale: Float;
 
-  function __constructor__(mainId: String, hero: en.Hero.Hero) {}
+    public function new(arg0: String, arg1: en.Hero) {
+        super();
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function shouldTextScaleUp(): Bool {}
+    public function shouldTextScaleUp(): Bool {
+        throw "stub: shouldTextScaleUp not decompiled";
+    }
 }
-

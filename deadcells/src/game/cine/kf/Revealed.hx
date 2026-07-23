@@ -1,11 +1,15 @@
 package cine.kf;
+
 class Revealed extends GameCinematic {
-  var hero: en.Hero.Hero;
+    public var hero: en.Hero;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function doHeroJump() {}
+    public function doHeroJump(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

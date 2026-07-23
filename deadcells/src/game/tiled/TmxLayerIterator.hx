@@ -1,11 +1,16 @@
 package tiled;
+
 class TmxLayerIterator {
-  var queue: hl.types.ArrayObj<Dynamic>;
+    public var queue: Array<Dynamic>;
 
-  function __constructor__(root: tiled.TmxGroupLayer.TmxGroupLayer) {}
+    public function new(arg0: tiled.TmxGroupLayer) {
+    }
 
-  function hasNext(): Bool {}
+    public function hasNext(): Bool {
+        throw "stub: hasNext not decompiled";
+    }
 
-  function next(): Dynamic {}
+    public function next(): tiled.TmxBaseLayer {
+        throw "stub: next not decompiled";
+    }
 }
-

@@ -1,42 +1,65 @@
 package en.inter.elevator;
+
 class PurpleElevator extends en.inter.elevator.SimpleElevator {
-  var activated: Bool;
-  var cineRotation: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var activated: Bool;
+    public var cineRotation: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, w: Int, h: Int, initAtTop: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  function renderPlatform() {}
+    public function renderPlatform(): Void {
+    }
 
-  function isReady(): Bool {}
+    public function isReady(): Bool {
+        throw "stub: isReady not decompiled";
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function refusal(hero: en.Hero.Hero) {}
+    public function refusal(arg0: en.Hero): Void {
+    }
 
-  function initChains() {}
+    public function initChains(): Void {
+    }
 
-  function onFocus() {}
+    public override function onFocus(): Void {
+    }
 
-  function isGoingTo(cy: Int): Bool {}
+    public function isGoingTo(arg0: Int): Bool {
+        throw "stub: isGoingTo not decompiled";
+    }
 
-  function onArrival(aDir: Int) {}
+    public function onArrival(arg0: Int): Void {
+    }
 
-  function cineShake() {}
+    public function cineShake(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

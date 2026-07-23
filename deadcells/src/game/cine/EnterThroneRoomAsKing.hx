@@ -1,15 +1,18 @@
 package cine;
+
 class EnterThroneRoomAsKing extends GameCinematic {
-  var boss: en.mob.boss.KingsHand.KingsHand;
-  var hero: en.Hero.Hero;
-  var forceFieldsClosed: Bool;
-  var forceFields: hl.types.ArrayObj<Dynamic>;
-  var firstForceFieldX: Int;
-  var impactX: Float;
-  var impactY: Float;
+    public var boss: en.mob.boss.KingsHand;
+    public var hero: en.Hero;
+    public var forceFieldsClosed: Bool;
+    public var forceFields: Array<Dynamic>;
+    public var firstForceFieldX: Int;
+    public var impactX: Float;
+    public var impactY: Float;
 
-  function __constructor__(_hero: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

@@ -1,43 +1,63 @@
 package en.bu;
+
 class MobThrowingAxe extends en.Bullet {
-  var rot: Float;
-  var rotDir: Int;
-  var accel: Float;
-  var comingBack: Bool;
-  var retinas: hl.types.ArrayObj<Dynamic>;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var rot: Float;
+    public var rotDir: Int;
+    public var accel: Float;
+    public var comingBack: Bool;
+    public var retinas: Array<Dynamic>;
 
-  function onBlock(byEnt: Bool) {}
+    public function new(arg0: en.Mob, arg1: tool.atk.AttackData, arg2: Int, arg3: Float) {
+        super();
+    }
 
-  function __constructor__(from: en.Mob.Mob, atk: tool.atk.AttackData.AttackData, throwDir: Int, dCase: Float) {}
+    public function init(): Void {
+    }
 
-  function init() {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function dispose(): Void {
+    }
 
-  function dispose() {}
+    public override function onHitWall(): Void {
+    }
 
-  function onHitWall() {}
+    public function comeBack(): Void {
+    }
 
-  function comeBack() {}
+    public override function reachMaxDist(): Void {
+    }
 
-  function reachMaxDist() {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

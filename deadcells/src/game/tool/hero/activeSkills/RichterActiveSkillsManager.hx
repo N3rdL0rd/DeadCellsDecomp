@@ -1,41 +1,64 @@
 package tool.hero.activeSkills;
+
 class RichterActiveSkillsManager extends tool.hero.activeSkills.BeheadedActiveSkillsManager {
-  var hearts: Int;
-  static var MAX_HEARTS: Int;
-  static var __clid: Int;
+    public static var MAX_HEARTS: Int;
+    public static var __clid: Int;
+    public var hearts: Int;
 
-  function __constructor__(h: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function set_hearts(v: Int): Int {}
+    public function set_hearts(arg0: Int): Int {
+        throw "stub: set_hearts not decompiled";
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onEquippedItemsUpdated(duringHeroInit: Bool, duringItemTransform: Bool) {}
+    public function onEquippedItemsUpdated(arg0: Bool, arg1: Bool): Void {
+    }
 
-  function applyHudLockFade() {}
+    public function applyHudLockFade(): Void {
+    }
 
-  function useSkillItem(id: Int, i: tool.InventItem.InventItem) {}
+    public override function useSkillItem(arg0: Int, arg1: tool.InventItem): Void {
+    }
 
-  function startCooldownForItem(item: tool.InventItem.InventItem, overrideTime: Dynamic) {}
+    public function startCooldownForItem(arg0: tool.InventItem, arg1: Dynamic): Void {
+    }
 
-  function canUseActiveSkill(id: Int): Bool {}
+    public override function canUseActiveSkill(arg0: Int): Bool {
+        throw "stub: canUseActiveSkill not decompiled";
+    }
 
-  function getHeartsCost(id: Int): Int {}
+    public function getHeartsCost(arg0: Int): Int {
+        throw "stub: getHeartsCost not decompiled";
+    }
 
-  function onHeartsUpdate(newValue: Int) {}
+    public function onHeartsUpdate(arg0: Int): Void {
+    }
 
-  function hudSetHearts(value: Int, max: Int, animated: Dynamic) {}
+    public function hudSetHearts(arg0: Int, arg1: Int, arg2: Ref): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

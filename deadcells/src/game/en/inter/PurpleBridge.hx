@@ -1,42 +1,62 @@
 package en.inter;
-class PurpleBridge extends en.Interactive.Interactive {
-  var gapLength: Int;
-  var isBridgeUp: Bool;
-  var bridgeSpr: libs.heaps.slib.HSprite.HSprite;
-  var mechaSpr: hl.types.ArrayObj<Dynamic>;
-  var chain: tool.Chain.Chain;
-  var chainEndPoint: tool.CPoint.CPoint;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+class PurpleBridge extends en.Interactive {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var gapLength: Int;
+    public var isBridgeUp: Bool;
+    public var bridgeSpr: libs.heaps.slib.HSprite;
+    public var mechaSpr: Array<Dynamic>;
+    public var chain: tool.Chain;
+    public var chainEndPoint: tool.CPoint;
 
-  function init() {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public function init(): Void {
+    }
 
-  function destroy() {}
+    public function initGfx(): Void {
+    }
 
-  function postUpdate() {}
+    public function destroy(): Void {
+    }
 
-  function detectGap() {}
+    public function postUpdate(): Void {
+    }
 
-  function getGapLength(gapDir: Int): Int {}
+    public function detectGap(): Void {
+    }
 
-  function setBridgeCollisions() {}
+    public function getGapLength(arg0: Int): Int {
+        throw "stub: getGapLength not decompiled";
+    }
 
-  function onDistantTrigger(trigger: en.Interactive.Interactive, by: Entity) {}
+    public function setBridgeCollisions(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

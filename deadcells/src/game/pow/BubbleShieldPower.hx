@@ -1,27 +1,40 @@
 package pow;
+
 class BubbleShieldPower extends Power {
-  var repelGrenadeArea: tool.Area.Area;
-  var parriedSomething: Bool;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var repelGrenadeArea: tool.Area;
+    public var parriedSomething: Bool;
 
-  static function createCounterBullet(owner: en.Hero.Hero, item: tool.InventItem.InventItem, sourceAtk: tool.atk.AttackData.AttackData, cBullet: en.Bullet.Bullet): en.Bullet.Bullet {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public static function createCounterBullet(arg0: en.Hero, arg1: tool.InventItem, arg2: tool.atk.AttackData, arg3: en.Bullet): en.Bullet {
+        throw "stub: createCounterBullet not decompiled";
+    }
 
-  function setDurationS(duration: Float) {}
+    public override function setDurationS(arg0: Float): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function _killParticlesOnEndUpdate(p: libs.heaps.HParticle.HParticle) {}
+    public function _killParticlesOnEndUpdate(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function applyOwnerAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public function applyOwnerAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function shieldCounterAttack(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public function shieldCounterAttack(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

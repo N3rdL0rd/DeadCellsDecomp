@@ -1,30 +1,44 @@
 package en.bu;
+
 class CannonBullet extends en.Bullet {
-  var reflectLight: libs.heaps.slib.HSprite.HSprite;
-  var weaponProps: Dynamic;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var reflectLight: libs.heaps.slib.HSprite;
+    public var weaponProps: Dynamic;
 
-  function __constructor__(from: Entity, a: tool.atk.AttackData.AttackData, ang: Float, weaponProps: Dynamic, spd: Dynamic) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Dynamic, arg4: Dynamic) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function explode(bomb: Entity, a: tool.atk.AttackData.AttackData) {}
+    public function explode(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 
-  function transitionToGrenade() {}
+    public function transitionToGrenade(): Void {
+    }
 
-  function reachMaxDist() {}
+    public override function reachMaxDist(): Void {
+    }
 
-  function onStep() {}
+    public override function onStep(): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

@@ -1,18 +1,28 @@
 package pow;
+
 class ExtraHeal extends Power {
-  var cooldownToSet: Float;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var cooldownToSet: Float;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function shouldChangeLevelWithHero(): Bool {}
+    public override function shouldChangeLevelWithHero(): Bool {
+        throw "stub: shouldChangeLevelWithHero not decompiled";
+    }
 
-  function get_hudSkill(): ui.hud.Skill.Skill {}
+    public function get_hudSkill(): ui.hud.Skill {
+        throw "stub: get_hudSkill not decompiled";
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

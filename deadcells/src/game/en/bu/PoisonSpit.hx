@@ -1,40 +1,56 @@
 package en.bu;
+
 class PoisonSpit extends en.Bullet {
-  var mainColor: Int;
-  var tailColor: Int;
-  var secondaryColor: Int;
-  var lightColor: Int;
-  var dirtColor: Int;
-  var fxColor: Int;
-  var lightPow: Float;
-  var r: Float;
-  var rSec: Float;
-  var sec: libs.heaps.slib.HSprite.HSprite;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var mainColor: Int;
+    public var tailColor: Int;
+    public var secondaryColor: Int;
+    public var lightColor: Int;
+    public var dirtColor: Int;
+    public var fxColor: Int;
+    public var lightPow: Float;
+    public var r: Float;
+    public var rSec: Float;
+    public var sec: libs.heaps.slib.HSprite;
 
-  function onBlock(byEnt: Bool) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Ref, arg4: Ref, arg5: Ref, arg6: Ref, arg7: Ref, arg8: Ref) {
+        super();
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, mainColor: Dynamic, tailColor: Dynamic, secondaryColor: Dynamic, lightColor: Dynamic, dirtColor: Dynamic, fxColor: Dynamic) {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function dispose(): Void {
+    }
 
-  function dispose() {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

@@ -1,82 +1,124 @@
 package en.inter;
+
 class FloatingPlatform extends en.Interactive {
-  var accelStep: Float;
-  var enabled: Bool;
-  var attractPoint: tool.CPoint.CPoint;
-  var active: Bool;
-  var snappeds: hl.types.ArrayObj<Dynamic>;
-  var lastCy: Int;
-  var offsetX: Int;
-  var offsetY: Int;
-  var chei: Int;
-  var cwid: Int;
-  var customId: String;
-  var floatingPf: level.Platform.Platform;
-  var targetCol: Int;
-  var maxForce: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var accelStep: Float;
+    public var enabled: Bool;
+    public var attractPoint: tool.CPoint;
+    public var active: Bool;
+    public var snappeds: Array<Dynamic>;
+    public var lastCy: Int;
+    public var offsetX: Int;
+    public var offsetY: Int;
+    public var chei: Int;
+    public var cwid: Int;
+    public var customId: String;
+    public var floatingPf: level.Platform;
+    public var targetCol: Int;
+    public var maxForce: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, customId: String, maxForce: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Ref) {
+        super();
+    }
 
-  function get_leftX(): Int {}
+    public function get_leftX(): Int {
+        throw "stub: get_leftX not decompiled";
+    }
 
-  function get_rightX(): Int {}
+    public function get_rightX(): Int {
+        throw "stub: get_rightX not decompiled";
+    }
 
-  function get_floorY(): Int {}
+    public function get_floorY(): Int {
+        throw "stub: get_floorY not decompiled";
+    }
 
-  function get_pfCenterX(): Float {}
+    public function get_pfCenterX(): Float {
+        throw "stub: get_pfCenterX not decompiled";
+    }
 
-  function get_rFootY(): Float {}
+    public function get_rFootY(): Float {
+        throw "stub: get_rFootY not decompiled";
+    }
 
-  function canBeHit(): Bool {}
+    public function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function initSize(chei: Int, cwid: Int, offsetX: Dynamic, offsetY: Dynamic) {}
+    public function initSize(arg0: Int, arg1: Int, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function initCol() {}
+    public function initCol(): Void {
+    }
 
-  function setAsNotAStablePos(value: Bool) {}
+    public function setAsNotAStablePos(arg0: Bool): Void {
+    }
 
-  function clearCol() {}
+    public function clearCol(): Void {
+    }
 
-  function resetLastCy() {}
+    public function resetLastCy(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function onDie() {}
+    public function onDie(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function recreatePlatform() {}
+    public function recreatePlatform(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function addForce(pushDy: Float) {}
+    public function addForce(arg0: Float): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onLeaveMap() {}
+    public function onLeaveMap(): Void {
+    }
 
-  function onFatalFallDamage() {}
+    public function onFatalFallDamage(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

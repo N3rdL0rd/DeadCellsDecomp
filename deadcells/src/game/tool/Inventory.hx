@@ -1,114 +1,204 @@
 package tool;
+
 class Inventory {
-  var items: hl.types.ArrayObj<Dynamic>;
-  var nbWeapons: Int;
-  var nbActives: Int;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var items: Array<Dynamic>;
+    public var nbWeapons: Int;
+    public var nbActives: Int;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function clone(): Inventory {}
+    public function clone(): tool.Inventory {
+        throw "stub: clone not decompiled";
+    }
 
-  function add(i: tool.InventItem.InventItem): tool.InventItem.InventItem {}
+    public function add(arg0: tool.InventItem): tool.InventItem {
+        throw "stub: add not decompiled";
+    }
 
-  function putInBackpack(i: tool.InventItem.InventItem): tool.InventItem.InventItem {}
+    public function putInBackpack(arg0: tool.InventItem): tool.InventItem {
+        throw "stub: putInBackpack not decompiled";
+    }
 
-  function hasTalisman(): Bool {}
+    public function hasTalisman(): Bool {
+        throw "stub: hasTalisman not decompiled";
+    }
 
-  function getTalisman(): tool.InventItem.InventItem {}
+    public function getTalisman(): tool.InventItem {
+        throw "stub: getTalisman not decompiled";
+    }
 
-  function remove(ii: tool.InventItem.InventItem) {}
+    public function remove(arg0: tool.InventItem): Void {
+    }
 
-  function replace(old: tool.InventItem.InventItem, by: tool.InventItem.InventItem) {}
+    public function replace(arg0: tool.InventItem, arg1: tool.InventItem): Void {
+    }
 
-  function removeAll(k: String) {}
+    public function removeAll(arg0: String): Void {
+    }
 
-  function hasPerk(): Bool {}
+    public function hasPerk(): Bool {
+        throw "stub: hasPerk not decompiled";
+    }
 
-  function removeAllPerks() {}
+    public function removeAllPerks(): Void {
+    }
 
-  function getAllPerks(): hl.types.ArrayObj<Dynamic> {}
+    public function getAllPerks(): Array<Dynamic> {
+        throw "stub: getAllPerks not decompiled";
+    }
 
-  function hasAspect(): Bool {}
+    public function hasAspect(): Bool {
+        throw "stub: hasAspect not decompiled";
+    }
 
-  function removeAllAspects() {}
+    public function removeAllAspects(): Void {
+    }
 
-  function removeOne(k: String): Bool {}
+    public function removeOne(arg0: String): Bool {
+        throw "stub: removeOne not decompiled";
+    }
 
-  function equip(gi: tool.InventItem.InventItem): Bool {}
+    public function equip(arg0: tool.InventItem): Bool {
+        throw "stub: equip not decompiled";
+    }
 
-  function getEquippedWeaponOn(posId: Int): tool.InventItem.InventItem {}
+    public function getEquippedWeaponOn(arg0: Int): tool.InventItem {
+        throw "stub: getEquippedWeaponOn not decompiled";
+    }
 
-  function swapWeapons() {}
+    public function swapWeapons(): Void {
+    }
 
-  function swapSkills() {}
+    public function swapSkills(): Void {
+    }
 
-  function swapItems(shouldSwapWeapons: Bool) {}
+    public function swapItems(arg0: Bool): Void {
+    }
 
-  function getBackpackWeapon(): tool.InventItem.InventItem {}
+    public function getBackpackWeapon(): tool.InventItem {
+        throw "stub: getBackpackWeapon not decompiled";
+    }
 
-  function hasEmptyWeaponSlot(): Bool {}
+    public function hasEmptyWeaponSlot(): Bool {
+        throw "stub: hasEmptyWeaponSlot not decompiled";
+    }
 
-  function hasNoWeaponEquipped(): Bool {}
+    public function hasNoWeaponEquipped(): Bool {
+        throw "stub: hasNoWeaponEquipped not decompiled";
+    }
 
-  function hasDualWeapon(): Bool {}
+    public function hasDualWeapon(): Bool {
+        throw "stub: hasDualWeapon not decompiled";
+    }
 
-  function hasBackpackSlot(): Bool {}
+    public function hasBackpackSlot(): Bool {
+        throw "stub: hasBackpackSlot not decompiled";
+    }
 
-  function hasWeaponInBackpack(): Bool {}
+    public function hasWeaponInBackpack(): Bool {
+        throw "stub: hasWeaponInBackpack not decompiled";
+    }
 
-  function canPutInBackpack(i: tool.InventItem.InventItem): Bool {}
+    public function canPutInBackpack(arg0: tool.InventItem): Bool {
+        throw "stub: canPutInBackpack not decompiled";
+    }
 
-  function isEquiped(item: tool.InventItem.InventItem): Bool {}
+    public function isEquiped(arg0: tool.InventItem): Bool {
+        throw "stub: isEquiped not decompiled";
+    }
 
-  function countItemKind(ik: String): Int {}
+    public function countItemKind(arg0: String): Int {
+        throw "stub: countItemKind not decompiled";
+    }
 
-  function removeAllEquipments() {}
+    public function removeAllEquipments(): Void {
+    }
 
-  function countItemGroup(g: Int): Int {}
+    public function countItemGroup(arg0: Int): Int {
+        throw "stub: countItemGroup not decompiled";
+    }
 
-  function getItemGroup(g: Int): hl.types.ArrayObj<Dynamic> {}
+    public function getItemGroup(arg0: Int): Array<Dynamic> {
+        throw "stub: getItemGroup not decompiled";
+    }
 
-  function countTacticUp(withAffix: Dynamic): Int {}
+    public function countTacticUp(arg0: Ref): Int {
+        throw "stub: countTacticUp not decompiled";
+    }
 
-  function countSurvivalUp(withAffix: Dynamic): Int {}
+    public function countSurvivalUp(arg0: Ref): Int {
+        throw "stub: countSurvivalUp not decompiled";
+    }
 
-  function countBrutalityUp(withAffix: Dynamic): Int {}
+    public function countBrutalityUp(arg0: Ref): Int {
+        throw "stub: countBrutalityUp not decompiled";
+    }
 
-  function getMainTier(withAffix: Bool): String {}
+    public function getMainTier(arg0: Bool): String {
+        throw "stub: getMainTier not decompiled";
+    }
 
-  function getDamageReduction(): Float {}
+    public function getDamageReduction(): Float {
+        throw "stub: getDamageReduction not decompiled";
+    }
 
-  function hasEquipedTag(t: String): Bool {}
+    public function hasEquipedTag(arg0: String): Bool {
+        throw "stub: hasEquipedTag not decompiled";
+    }
 
-  function hasEquipedAffix(k: String): Bool {}
+    public function hasEquipedAffix(arg0: String): Bool {
+        throw "stub: hasEquipedAffix not decompiled";
+    }
 
-  function hasItemKindOrTransformed(k: String, ignoreLegendary: Dynamic): Bool {}
+    public function hasItemKindOrTransformed(arg0: String, arg1: Dynamic): Bool {
+        throw "stub: hasItemKindOrTransformed not decompiled";
+    }
 
-  function hasItem(k: String): Bool {}
+    public function hasItem(arg0: String): Bool {
+        throw "stub: hasItem not decompiled";
+    }
 
-  function findItemKindOrTransformed(k: String, ignoreLegendary: Dynamic): tool.InventItem.InventItem {}
+    public function findItemKindOrTransformed(arg0: String, arg1: Dynamic): tool.InventItem {
+        throw "stub: findItemKindOrTransformed not decompiled";
+    }
 
-  function getActiveOn(posID: Int): tool.InventItem.InventItem {}
+    public function getActiveOn(arg0: Int): tool.InventItem {
+        throw "stub: getActiveOn not decompiled";
+    }
 
-  function getByPermanentId(permanentID: Int): tool.InventItem.InventItem {}
+    public function getByPermanentId(arg0: Int): tool.InventItem {
+        throw "stub: getByPermanentId not decompiled";
+    }
 
-  function hasEmptyActiveSlot(): Bool {}
+    public function hasEmptyActiveSlot(): Bool {
+        throw "stub: hasEmptyActiveSlot not decompiled";
+    }
 
-  function needPlayerDecision(item: tool.InventItem.InventItem): Bool {}
+    public function needPlayerDecision(arg0: tool.InventItem): Bool {
+        throw "stub: needPlayerDecision not decompiled";
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

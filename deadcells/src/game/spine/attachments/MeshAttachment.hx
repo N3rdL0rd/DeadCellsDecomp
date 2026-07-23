@@ -1,20 +1,24 @@
 package spine.attachments;
-class MeshAttachment extends spine.attachments.VertexAttachment.VertexAttachment {
-  var region: Dynamic;
-  var path: String;
-  var regionUVs: hl.types.ArrayBytes<Float>;
-  var uvs: hl.types.ArrayBytes<Float>;
-  var triangles: hl.types.ArrayBytes<Int>;
-  var color: Dynamic;
-  var hullLength: Int;
-  var parentMesh: MeshAttachment;
-  var inheritDeform: Bool;
-  var edges: hl.types.ArrayBytes<Int>;
-  var width: Float;
-  var height: Float;
 
-  function __constructor__(name: String) {}
+class MeshAttachment extends spine.attachments.VertexAttachment {
+    public var region: spine.support.graphics.TextureRegion;
+    public var path: String;
+    public var regionUVs: Array<Float>;
+    public var uvs: Array<Float>;
+    public var triangles: Array<Int>;
+    public var color: spine.support.graphics.Color;
+    public var hullLength: Int;
+    public var parentMesh: spine.attachments.MeshAttachment;
+    public var inheritDeform: Bool;
+    public var edges: Array<Int>;
+    public var width: Float;
+    public var height: Float;
 
-  function applyDeform(sourceAttachment: spine.attachments.VertexAttachment.VertexAttachment): Bool {}
+    public function new(arg0: String) {
+        super();
+    }
+
+    public override function applyDeform(arg0: spine.attachments.VertexAttachment): Bool {
+        throw "stub: applyDeform not decompiled";
+    }
 }
-

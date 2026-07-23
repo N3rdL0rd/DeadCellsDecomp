@@ -1,58 +1,87 @@
 package en.inter.npc;
+
 class AlucardNpc extends en.inter.Npc {
-  var headFlip: Bool;
-  var rseed: libs.Rand.Rand;
-  var coffin: en.AlucardCoffin.AlucardCoffin;
-  var richterTrigger: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var headFlip: Bool;
+    public var rseed: libs.Rand;
+    public var coffin: en.AlucardCoffin;
+    public var richterTrigger: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function talkAfterEncounterCine() {}
+    public function talkAfterEncounterCine(): Void {
+    }
 
-  function talkAfterDeath() {}
+    public function talkAfterDeath(): Void {
+    }
 
-  function talkAfterPrisonCine() {}
+    public function talkAfterPrisonCine(): Void {
+    }
 
-  function talkAfterClockInPrisonCine() {}
+    public function talkAfterClockInPrisonCine(): Void {
+    }
 
-  function talkAfterClockCine() {}
+    public function talkAfterClockCine(): Void {
+    }
 
-  function talkAfterDookuCine() {}
+    public function talkAfterDookuCine(): Void {
+    }
 
-  function onEndCine(popup: Dynamic) {}
+    public function onEndCine(arg0: Ref): Void {
+    }
 
-  function canGreet(h: en.Hero.Hero): Bool {}
+    public override function canGreet(arg0: en.Hero): Bool {
+        throw "stub: canGreet not decompiled";
+    }
 
-  function onGreet(h: en.Hero.Hero) {}
+    public override function onGreet(arg0: en.Hero): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function richterModeUpdate() {}
+    public function richterModeUpdate(): Void {
+    }
 
-  function onFocus() {}
+    public override function onFocus(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

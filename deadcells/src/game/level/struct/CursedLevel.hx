@@ -1,22 +1,35 @@
 package level.struct;
+
 class CursedLevel extends level.LevelStruct {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public function getEntranceRoomKind(): String {
+        throw "stub: getEntranceRoomKind not decompiled";
+    }
 
-  function getEntranceRoomKind(): String {}
+    public function getExitLevelKind(): String {
+        throw "stub: getExitLevelKind not decompiled";
+    }
 
-  function getExitLevelKind(): String {}
+    public function getZExitLevelKind(): String {
+        throw "stub: getZExitLevelKind not decompiled";
+    }
 
-  function getZExitLevelKind(): String {}
+    public function finalizeCursedLevel(): Void {
+    }
 
-  function finalizeCursedLevel() {}
+    public override function buildLoreRooms(): Void {
+    }
 
-  function buildLoreRooms() {}
+    public override function addTeleports(): Void {
+    }
 
-  function addTeleports() {}
-
-  function buildEliteRooms() {}
+    public override function buildEliteRooms(): Void {
+    }
 }
-

@@ -1,82 +1,113 @@
 package en.inter;
+
 class SwitchBossRune extends en.Interactive {
-  var controller: tool.Controller.Controller;
-  var isActivated: Bool;
-  var needToDropStick: Bool;
-  var needToDropValidate: Bool;
-  var hasBossRune: Bool;
-  var previousBossRuneActivated: Int;
-  var isLocked: Bool;
-  var summary: ui.SummaryBossRuneEffect.SummaryBossRuneEffect;
-  var ttbr: en.inter.SwitchBossRune.SwitchBossRune;
-  var cellsContainer: h2d.Object.Object;
-  var cells: hl.types.ArrayObj<Dynamic>;
-  var dataCells: hl.types.ArrayObj<Dynamic>;
-  var tweensBack: hl.types.ArrayObj<Dynamic>;
-  var offSetX: Int;
-  var backX: Int;
-  var mask: libs.heaps.slib.HSprite.HSprite;
-  var lightOn: tool.EntityLight.EntityLight;
-  var lightOff: tool.EntityLight.EntityLight;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var controller: tool.ControllerAccess;
+    public var isActivated: Bool;
+    public var needToDropStick: Bool;
+    public var needToDropValidate: Bool;
+    public var hasBossRune: Bool;
+    public var previousBossRuneActivated: Int;
+    public var isLocked: Bool;
+    public var summary: ui.SummaryBossRuneEffect;
+    public var ttbr: en.inter.ToolTipBossRune;
+    public var cellsContainer: h2d.Object;
+    public var cells: Array<Dynamic>;
+    public var dataCells: Array<Dynamic>;
+    public var tweensBack: Array<Dynamic>;
+    public var offSetX: Int;
+    public var backX: Int;
+    public var mask: libs.heaps.slib.HSprite;
+    public var lightOn: tool.EntityLight;
+    public var lightOff: tool.EntityLight;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function close() {}
+    public function close(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function updateCells(add: Bool) {}
+    public function updateCells(arg0: Bool): Void {
+    }
 
-  function updateLight() {}
+    public function updateLight(): Void {
+    }
 
-  function lock() {}
+    public function lock(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class ToolTipBossRune extends ui.Process {
-  var sbr: en.inter.SwitchBossRune.SwitchBossRune;
-  var fb: ui.FlowBox.FlowBox;
-  var oldFb: ui.FlowBox.FlowBox;
-  var iconLeft: ui.ControlIcon.ControlIcon;
-  var iconRight: ui.ControlIcon.ControlIcon;
+    public var sbr: en.inter.SwitchBossRune;
+    public var fb: ui.FlowBox;
+    public var oldFb: ui.FlowBox;
+    public var iconLeft: ui.ControlIcon;
+    public var iconRight: ui.ControlIcon;
 
-  function __constructor__(sbr: en.inter.SwitchBossRune.SwitchBossRune) {}
+    public function new(arg0: en.inter.SwitchBossRune) {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function updateDetails(add: Dynamic) {}
+    public function updateDetails(arg0: Dynamic): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

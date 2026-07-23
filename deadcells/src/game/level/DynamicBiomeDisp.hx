@@ -1,55 +1,82 @@
 package level;
+
 class DynamicBiomeDisp extends level.BiomeDisp {
-  var mainBiome: Dynamic;
-  var otherBiome: Dynamic;
-  var dynamicLights: hl.types.ArrayObj<Dynamic>;
-  var cachedLightConfs: Dynamic;
-  var config: Dynamic;
-  var mainDustConf: Dynamic;
-  var otherDustConf: Dynamic;
-  var mainCamFogConf: Dynamic;
-  var otherCamFogConf: Dynamic;
+    public var mainBiome: Dynamic;
+    public var otherBiome: Dynamic;
+    public var dynamicLights: Array<Dynamic>;
+    public var cachedLightConfs: Dynamic;
+    public var config: Dynamic;
+    public var mainDustConf: Dynamic;
+    public var otherDustConf: Dynamic;
+    public var mainCamFogConf: Dynamic;
+    public var otherCamFogConf: Dynamic;
 
-  static function readLightConf(lightKind: String, biomeKind: String): Dynamic {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String, arg4: Dynamic, arg5: Array<Dynamic>) {
+        super();
+    }
 
-  function __constructor__(level: pr.Level.Level, map: level.LevelMap.LevelMap, mainBiomeKind: String, otherBiomeKind: String, blendConfiguration: Dynamic, parallaxInfo: hl.types.ArrayObj<Dynamic>) {}
+    public static function readLightConf(arg0: String, arg1: String): Dynamic {
+        throw "stub: readLightConf not decompiled";
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function reloadRenderConf() {}
+    public function reloadRenderConf(): Void {
+    }
 
-  function reloadBlends() {}
+    public function reloadBlends(): Void {
+    }
 
-  function getBlendRatioAt(px: Float, py: Float): Float {}
+    public function getBlendRatioAt(arg0: Float, arg1: Float): Float {
+        throw "stub: getBlendRatioAt not decompiled";
+    }
 
-  function getViewportBlendRatio(): Float {}
+    public function getViewportBlendRatio(): Float {
+        throw "stub: getViewportBlendRatio not decompiled";
+    }
 
-  function updateAmbianceBlends() {}
+    public function updateAmbianceBlends(): Void {
+    }
 
-  function readOrCacheLightConf(lightKind: String, biomeKind: String): Dynamic {}
+    public function readOrCacheLightConf(arg0: String, arg1: String): Dynamic {
+        throw "stub: readOrCacheLightConf not decompiled";
+    }
 
-  function applyLightConf(light: light.PointLight.PointLight, lightKind: String, radius: Dynamic) {}
+    public function applyLightConf(arg0: light.PointLight, arg1: String, arg2: Ref): Void {
+    }
 
-  function reloadLightConfs() {}
+    public function reloadLightConfs(): Void {
+    }
 
-  function updateDynamicLights() {}
+    public function updateDynamicLights(): Void {
+    }
 
-  function reloadDustConf() {}
+    public function reloadDustConf(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function loadCamFogConf(biome: Dynamic): Dynamic {}
+    public function loadCamFogConf(arg0: Dynamic): Dynamic {
+        throw "stub: loadCamFogConf not decompiled";
+    }
 
-  function loadCamFog(dat: Dynamic) {}
+    public function loadCamFog(arg0: Dynamic): Void {
+    }
 
-  function updateCameraFog() {}
+    public function updateCameraFog(): Void {
+    }
 
-  function updateAmbientLight() {}
+    public function updateAmbientLight(): Void {
+    }
 
-  function updateShadows() {}
+    public function updateShadows(): Void {
+    }
 
-  function updateAmbientFog() {}
+    public function updateAmbientFog(): Void {
+    }
 
-  function updateGroundSmoke() {}
+    public function updateGroundSmoke(): Void {
+    }
 }
-

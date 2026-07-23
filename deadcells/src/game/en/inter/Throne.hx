@@ -1,63 +1,99 @@
 package en.inter;
+
 class Throne extends en.Interactive {
-  var fireSpots: hl.types.ArrayObj<Dynamic>;
-  var glow: libs.heaps.slib.HSprite.HSprite;
-  var isEndingState: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var fireSpots: Array<Dynamic>;
+    public var glow: libs.heaps.slib.HSprite;
+    public var isEndingState: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function kingIsDead(): Bool {}
+    public function kingIsDead(): Bool {
+        throw "stub: kingIsDead not decompiled";
+    }
 
-  function inBossBattle(): Bool {}
+    public function inBossBattle(): Bool {
+        throw "stub: inBossBattle not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function setEndingRTCState() {}
+    public function setEndingRTCState(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function loseShield() {}
+    public function loseShield(): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onFocusHomunculus(by: en.Homunculus.Homunculus) {}
+    public override function onFocusHomunculus(arg0: en.Homunculus): Void {
+    }
 
-  function canBeActivatedByHomunculus(by: en.Homunculus.Homunculus): Bool {}
+    public override function canBeActivatedByHomunculus(arg0: en.Homunculus): Bool {
+        throw "stub: canBeActivatedByHomunculus not decompiled";
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function onActivateHomunculus(hom: en.Homunculus.Homunculus) {}
+    public override function onActivateHomunculus(arg0: en.Homunculus): Void {
+    }
 
-  function nextScene(by: en.Hero.Hero) {}
+    public function nextScene(arg0: en.Hero): Void {
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function globalShieldFx() {}
+    public function globalShieldFx(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

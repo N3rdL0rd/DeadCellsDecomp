@@ -1,19 +1,25 @@
 package cine;
+
 class TentacleDLC3Cine extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var tentacle: en.MessengerTtcl.MessengerTtcl;
-  var note: en.inter.TentacleNote.TentacleNote;
-  var bringKey: Bool;
-  var itemsGiven: Bool;
+    public var hero: en.Hero;
+    public var tentacle: en.MessengerTtcl;
+    public var note: en.inter.TentacleNote;
+    public var bringKey: Bool;
+    public var itemsGiven: Bool;
 
-  function __constructor__(h: en.Hero.Hero, _tentacle: en.MessengerTtcl.MessengerTtcl, _note: en.inter.TentacleNote.TentacleNote, bringKey: Bool) {}
+    public function new(arg0: en.Hero, arg1: en.MessengerTtcl, arg2: en.inter.TentacleNote, arg3: Bool) {
+        super();
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onSkipCine() {}
+    public function onSkipCine(): Void {
+    }
 
-  function dropKey() {}
+    public function dropKey(): Void {
+    }
 }
-

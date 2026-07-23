@@ -1,47 +1,70 @@
 package en;
+
 class ThrowingAxeEntity extends Entity {
-  var weapon: tool.Weapon.Weapon;
-  var infos: Dynamic;
-  var attackData: tool.atk.AttackData.AttackData;
-  var originCx: Int;
-  var originCy: Int;
-  var lastCx: Int;
-  var lastCy: Int;
-  var isGoingDown: Bool;
-  var canTouch: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var weapon: tool.Weapon;
+    public var infos: Dynamic;
+    public var attackData: tool.atk.AttackData;
+    public var originCx: Int;
+    public var originCy: Int;
+    public var lastCx: Int;
+    public var lastCy: Int;
+    public var isGoingDown: Bool;
+    public var canTouch: Bool;
 
-  function __constructor__(from: Entity, w: tool.Weapon.Weapon, angle: Float) {}
+    public function new(arg0: Entity, arg1: tool.Weapon, arg2: Float) {
+        super();
+    }
 
-  function set_canTouch(v: Bool): Bool {}
+    public function set_canTouch(arg0: Bool): Bool {
+        throw "stub: set_canTouch not decompiled";
+    }
 
-  function updateStatus() {}
+    public function updateStatus(): Void {
+    }
 
-  function get_targetSprPosY(): Float {}
+    public override function get_targetSprPosY(): Float {
+        throw "stub: get_targetSprPosY not decompiled";
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function onTouchValidEntity(e: Entity) {}
+    public function onTouchValidEntity(arg0: Entity): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

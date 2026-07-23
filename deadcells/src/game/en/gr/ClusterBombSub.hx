@@ -1,20 +1,30 @@
 package en.gr;
+
 class ClusterBombSub extends en.gr.GrenadeSkill {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  function onTrigger() {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem, arg2: Float) {
+        super();
+    }
 
-  function onExplode() {}
+    public function init(): Void {
+    }
 
-  function __constructor__(h: en.Hero.Hero, i: tool.InventItem.InventItem, t: Float) {}
+    public function initGfx(): Void {
+    }
 
-  function init() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function initGfx() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function onExplode(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onTrigger(): Void {
+    }
 }
-

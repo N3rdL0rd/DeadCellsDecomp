@@ -1,25 +1,37 @@
 package en.gr;
+
 class Magnet extends en.gr.GrenadeSkill {
-  var prevDir: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var prevDir: Int;
 
-  function onTrigger() {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(h: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function init(): Void {
+    }
 
-  function init() {}
+    public function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onTrigger(): Void {
+    }
 }
-

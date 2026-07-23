@@ -1,36 +1,50 @@
 package en;
+
 class FlyingSwordDoor extends Entity {
-  var cachedPosition: Float;
-  var ang: Float;
-  var moveState: Bool;
-  var baseGround: Float;
-  var animDir: Int;
-  var startingPosX: Float;
-  var startingPosY: Float;
-  var shakePower: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var cachedPosition: Float;
+    public var ang: Float;
+    public var moveState: Bool;
+    public var baseGround: Float;
+    public var animDir: Int;
+    public var startingPosX: Float;
+    public var startingPosY: Float;
+    public var shakePower: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, animDirection: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function openDoor(offset: Dynamic) {}
+    public function openDoor(arg0: Dynamic): Void {
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function shake(power: Float, t: Float) {}
+    public function shake(arg0: Float, arg1: Float): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

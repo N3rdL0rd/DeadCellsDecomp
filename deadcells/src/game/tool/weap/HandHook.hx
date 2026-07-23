@@ -1,16 +1,24 @@
 package tool.weap;
+
 class HandHook extends tool.Weapon {
-  var shouldDrag: Bool;
-  var enemiesToDrag: hl.types.ArrayObj<Dynamic>;
+    public var shouldDrag: Bool;
+    public var enemiesToDrag: Array<Dynamic>;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function tryToCancel(byWeapon: Bool): Bool {}
+    public override function tryToCancel(arg0: Bool): Bool {
+        throw "stub: tryToCancel not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 }
-

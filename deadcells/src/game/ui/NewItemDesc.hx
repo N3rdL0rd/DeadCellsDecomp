@@ -1,29 +1,37 @@
 package ui;
-class NewItemDesc extends h2d.Layers.Layers {
-  var ii: tool.InventItem.InventItem;
-  var pprocess: ui.Process.Process;
-  var sellValue: Dynamic;
-  var buyValue: Dynamic;
-  var mainTier: String;
-  var useNeutralName: Bool;
-  var box: ui.UIBox.UIBox;
-  var scrollableContent: h2d.Layers.Layers;
-  var scrollableContentHeight: Float;
-  var scrollableMask: h2d.Mask.Mask;
-  var isIngame: Bool;
-  var wid: Int;
-  var hei: Int;
 
-  function __constructor__(process: ui.Process.Process, ii: tool.InventItem.InventItem, askedWid: Dynamic, p: h2d.Object.Object, includeSynergy: Dynamic, _useNeutralName: Dynamic) {}
+class NewItemDesc extends h2d.Layers {
+    public var ii: tool.InventItem;
+    public var pprocess: ui.Process;
+    public var sellValue: Dynamic;
+    public var buyValue: Dynamic;
+    public var mainTier: String;
+    public var useNeutralName: Bool;
+    public var box: ui.UIBox;
+    public var scrollableContent: h2d.Layers;
+    public var scrollableContentHeight: Float;
+    public var scrollableMask: h2d.Mask;
+    public var isIngame: Bool;
+    public var wid: Int;
+    public var hei: Int;
 
-  function get_pixelScale(): Float {}
+    public function new(arg0: ui.Process, arg1: tool.InventItem, arg2: Ref, arg3: h2d.Object, arg4: Ref, arg5: Ref) {
+        super();
+    }
 
-  function setItem(ii: tool.InventItem.InventItem) {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 
-  function onResize(askedWid: Dynamic, askedHei: Dynamic) {}
+    public function setItem(arg0: tool.InventItem): Void {
+    }
 
-  function setWeaponMainInfo(mainInfo: ui.Text.Text) {}
+    public function onResize(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function colorize(spr: libs.heaps.slib.HSprite.HSprite, colLegend: Int, defCol: Int, colorless: Int) {}
+    public function setWeaponMainInfo(arg0: ui.Text): Void {
+    }
+
+    public function colorize(arg0: libs.heaps.slib.HSprite, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 }
-

@@ -1,20 +1,28 @@
 package shader;
+
 class ColorSwapping extends hxsl.Shader {
-  var MAX_COLORS_COUNT__: Int;
-  var colorsCount__: Int;
-  var sources__: hl.types.ArrayObj<Dynamic>;
-  var targets__: hl.types.ArrayObj<Dynamic>;
-  static var SRC: String;
-  static var _SHADER: hxsl.SharedShader.SharedShader;
+    public static var SRC: String;
+    public static var _SHADER: hxsl.SharedShader;
+    public var MAX_COLORS_COUNT__: Int;
+    public var colorsCount__: Int;
+    public var sources__: Array<Dynamic>;
+    public var targets__: Array<Dynamic>;
 
-  function __constructor__(colorsData: hl.types.ArrayObj<Dynamic>) {}
+    public function new(arg0: Array<Dynamic>) {
+        super();
+    }
 
-  function setColorsData(colorsData: hl.types.ArrayObj<Dynamic>) {}
+    public function setColorsData(arg0: Array<Dynamic>): Void {
+    }
 
-  function updateConstants(globals: hxsl.Globals.Globals) {}
+    public override function updateConstants(arg0: hxsl.Globals): Void {
+    }
 
-  function getParamValue(index: Int): Dynamic {}
+    public override function getParamValue(arg0: Int): Dynamic {
+        throw "stub: getParamValue not decompiled";
+    }
 
-  function getParamFloatValue(index: Int): Float {}
+    public override function getParamFloatValue(arg0: Int): Float {
+        throw "stub: getParamFloatValue not decompiled";
+    }
 }
-

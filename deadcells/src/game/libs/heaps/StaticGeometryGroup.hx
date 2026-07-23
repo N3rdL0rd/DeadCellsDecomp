@@ -1,24 +1,39 @@
 package libs.heaps;
+
 class StaticGeometryGroup extends libs.heaps.MultiTileObject_h2d_TileGroup {
+    public function new(arg0: Array<Dynamic>, arg1: h2d.Object) {
+        super();
+    }
 
-  function __constructor__(libs: hl.types.ArrayObj<Dynamic>, parent: h2d.Object.Object) {}
+    public function add(arg0: Int, arg1: Int, arg2: h2d.Tile): Void {
+    }
 
-  function add(x: Int, y: Int, tile: h2d.Tile.Tile) {}
+    public function getTileGroups(): Dynamic {
+        throw "stub: getTileGroups not decompiled";
+    }
 
-  function getTileGroups(): Dynamic {}
+    public function exists(arg0: String, arg1: Int, arg2: Ref): Bool {
+        throw "stub: exists not decompiled";
+    }
 
-  function exists(spriteName: String, frame: Int, useNoBloodIfExist: Dynamic): Bool {}
+    public function getTile(arg0: String, arg1: Int, arg2: Ref, arg3: Ref, arg4: libs.heaps.slib.TileFlipMode, arg5: Ref): h2d.Tile {
+        throw "stub: getTile not decompiled";
+    }
 
-  function getTile(spriteName: String, frame: Int, pivotX: Dynamic, pivotY: Dynamic, flipMode: Dynamic, useNoBloodIfExist: Dynamic): h2d.Tile.Tile {}
+    public function getTileRandom(arg0: String, arg1: Ref, arg2: Ref, arg3: Dynamic, arg4: libs.heaps.slib.TileFlipMode, arg5: Ref): h2d.Tile {
+        throw "stub: getTileRandom not decompiled";
+    }
 
-  function getTileRandom(spriteName: String, pivotX: Dynamic, pivotY: Dynamic, rndFunc: Dynamic, flipMode: Dynamic, useNoBloodIfExist: Dynamic): h2d.Tile.Tile {}
+    public function getTileCount(): Int {
+        throw "stub: getTileCount not decompiled";
+    }
 
-  function getTileCount(): Int {}
+    public function invalidate(): Void {
+    }
 
-  function invalidate() {}
+    public function clear(): Void {
+    }
 
-  function clear() {}
-
-  function dispose() {}
+    public function dispose(): Void {
+    }
 }
-

@@ -1,14 +1,19 @@
 package tool.weap.sh;
+
 class Rampart extends tool.weap.BaseShield {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function onShieldCounterSuccessful(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function onShieldCounterSuccessful(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public override function onOwnerAttackResultReceived(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onOwnerAttackResultReceived(a: tool.atk.AttackData.AttackData) {}
+    public function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onOwnerCooldownEnd(k: String, idx: Int) {}
-
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

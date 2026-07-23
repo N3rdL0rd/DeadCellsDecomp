@@ -1,24 +1,32 @@
 package tool.skill;
+
 class SkillEvent {
-  var canTrigger: Bool;
-  var skill: tool.skill.Skill.Skill;
-  var delay: Float;
-  var customId: String;
-  var skillTrigger: Dynamic;
-  var curRatio: Float;
-  var minRatio: Float;
-  var maxRatio: Float;
+    public var canTrigger: Bool;
+    public var skill: tool.skill.Skill;
+    public var delay: Float;
+    public var customId: String;
+    public var skillTrigger: Dynamic;
+    public var curRatio: Float;
+    public var minRatio: Float;
+    public var maxRatio: Float;
 
-  function __constructor__(skill: tool.skill.Skill.Skill, delay: Dynamic, customId: String, trigger: Dynamic, minMaxRatio: Dynamic) {}
+    public function new(arg0: tool.skill.Skill, arg1: Ref, arg2: String, arg3: Dynamic, arg4: Dynamic) {
+    }
 
-  function tryTrigger(overrideDir: Dynamic, ratio: Dynamic): Bool {}
+    public function tryTrigger(arg0: Dynamic, arg1: Dynamic): Bool {
+        throw "stub: tryTrigger not decompiled";
+    }
 
-  function isInRatioRange(): Bool {}
+    public function isInRatioRange(): Bool {
+        throw "stub: isInRatioRange not decompiled";
+    }
 
-  function trigger(overrideDir: Dynamic) {}
+    public function trigger(arg0: Dynamic): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

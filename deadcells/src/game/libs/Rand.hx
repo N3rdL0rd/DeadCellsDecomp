@@ -1,21 +1,35 @@
 package libs;
+
 class Rand {
-  var seed: Float;
+    public var seed: Float;
 
-  function __constructor__(seed: Int) {}
+    public function new(arg0: Int) {
+    }
 
-  function random(n: Int): Int {}
+    public function random(arg0: Int): Int {
+        throw "stub: random not decompiled";
+    }
 
-  function range(min: Float, max: Float, randSign: Dynamic): Float {}
+    public function range(arg0: Float, arg1: Float, arg2: Dynamic): Float {
+        throw "stub: range not decompiled";
+    }
 
-  function arrayPick(a: hl.types.ArrayDyn): Dynamic {}
+    public function arrayPick(arg0: Array<Dynamic>): Dynamic {
+        throw "stub: arrayPick not decompiled";
+    }
 
-  function arraySplice(a: hl.types.ArrayDyn): Dynamic {}
+    public function arraySplice(arg0: Array<Dynamic>): Dynamic {
+        throw "stub: arraySplice not decompiled";
+    }
 
-  function vectorPick(a: hl.types.ArrayDyn): Dynamic {}
+    public function vectorPick(arg0: Array<Dynamic>): Dynamic {
+        throw "stub: vectorPick not decompiled";
+    }
 
-  function rand(): Float {}
+    public function rand(): Float {
+        throw "stub: rand not decompiled";
+    }
 
-  function initSeed(n: Int, k: Dynamic) {}
+    public function initSeed(arg0: Int, arg1: Dynamic): Void {
+    }
 }
-

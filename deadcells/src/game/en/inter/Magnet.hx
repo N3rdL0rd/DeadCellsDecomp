@@ -1,34 +1,52 @@
 package en.inter;
+
 class Magnet extends en.Interactive {
-  var infos: Dynamic;
-  var item: tool.InventItem.InventItem;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var infos: Dynamic;
+    public var item: tool.InventItem;
 
-  function onExplode() {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Int, arg5: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, radius: Float, tier: Int, i: tool.InventItem.InventItem) {}
+    public function init(): Void {
+    }
 
-  function init() {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function magnetAll(arg0: Array<Dynamic>, arg1: Float): Void {
+    }
 
-  function magnetAll(all: hl.types.ArrayObj<Dynamic>, pow: Float) {}
+    public function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function explode(): Void {
+    }
 
-  function explode() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onExplode(): Void {
+    }
 }
-

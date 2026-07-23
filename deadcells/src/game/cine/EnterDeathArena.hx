@@ -1,8 +1,11 @@
 package cine;
+
 class EnterDeathArena extends GameCinematic {
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function __constructor__(hero: en.Hero.Hero) {}
-
-  function getDiveAttackData(): Dynamic {}
+    public function getDiveAttackData(): Dynamic {
+        throw "stub: getDiveAttackData not decompiled";
+    }
 }
-

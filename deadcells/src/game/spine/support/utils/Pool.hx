@@ -1,17 +1,24 @@
 package spine.support.utils;
+
 class Pool {
-  var max: Int;
-  var peak: Int;
-  var freeObjects: hl.types.ArrayDyn;
+    public var max: Int;
+    public var peak: Int;
+    public var freeObjects: Array<Dynamic>;
 
-  function __constructor__(initialCapacity: Dynamic, max: Dynamic) {}
+    public function new(arg0: Ref, arg1: Ref) {
+    }
 
-  function free(object: Dynamic) {}
+    public function free(arg0: Dynamic): Void {
+    }
 
-  function reset(object: Dynamic) {}
+    public function reset(arg0: Dynamic): Void {
+    }
 
-  function newObject(): Dynamic {}
+    public function newObject(): Dynamic {
+        throw "stub: newObject not decompiled";
+    }
 
-  function obtain(): Dynamic {}
+    public function obtain(): Dynamic {
+        throw "stub: obtain not decompiled";
+    }
 }
-

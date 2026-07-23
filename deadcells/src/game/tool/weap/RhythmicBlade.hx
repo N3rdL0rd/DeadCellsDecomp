@@ -1,42 +1,60 @@
 package tool.weap;
+
 class RhythmicBlade extends tool.Weapon {
-  var shouldCrit: Bool;
-  var shouldCritNext: Bool;
-  var hasMashedButton: Bool;
-  var prevSkillInf: Dynamic;
-  var beatFx: libs.heaps.slib.HSprite.HSprite;
-  var currentFxScroller: light.LightedLayers.LightedLayers;
-  var tw: libs.misc.Tweenie.Tweenie;
-  var beatFxActivated: Bool;
-  var beatFxY: Float;
-  var beatFxAlpha: Float;
+    public var shouldCrit: Bool;
+    public var shouldCritNext: Bool;
+    public var hasMashedButton: Bool;
+    public var prevSkillInf: Dynamic;
+    public var beatFx: libs.heaps.slib.HSprite;
+    public var currentFxScroller: light.LightedLayers;
+    public var tw: libs.misc.Tweenie;
+    public var beatFxActivated: Bool;
+    public var beatFxY: Float;
+    public var beatFxAlpha: Float;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function dynOnFxFrame(cinf: Dynamic) {}
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function prepare(attackSpeed: Float) {}
+    public override function prepare(arg0: Float): Void {
+    }
 
-  function onAnticipate() {}
+    public override function onAnticipate(): Void {
+    }
 
-  function updateBeatFx(correct: Bool) {}
+    public function updateBeatFx(arg0: Bool): Void {
+    }
 
-  function resetBeatFx() {}
+    public function resetBeatFx(): Void {
+    }
 
-  function getRealCurArea(): tool.Area.Area {}
+    public function getRealCurArea(): tool.Area {
+        throw "stub: getRealCurArea not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function cancelChain() {}
+    public override function cancelChain(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function isLastCycle(): Bool {}
+    public override function isLastCycle(): Bool {
+        throw "stub: isLastCycle not decompiled";
+    }
 
-  function setWeaponGlow() {}
+    public override function setWeaponGlow(): Void {
+    }
 }
-

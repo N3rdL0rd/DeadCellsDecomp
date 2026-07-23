@@ -1,17 +1,25 @@
 package shader.slider;
+
 class ColorHueSlider extends shader.slider.ColorSlider {
-  var currentColor__: h3d.Vector.Vector;
-  static var SRC: String;
-  static var _SHADER: hxsl.SharedShader.SharedShader;
+    public static var SRC: String;
+    public static var _SHADER: hxsl.SharedShader;
+    public var currentColor__: h3d.Vector;
 
-  function __constructor__(color: Dynamic, width: Dynamic, step: Dynamic) {}
+    public function new(arg0: Dynamic, arg1: Ref, arg2: Ref) {
+        super();
+    }
 
-  function updateColor(color: Dynamic) {}
+    public function updateColor(arg0: Dynamic): Void {
+    }
 
-  function updateConstants(globals: hxsl.Globals.Globals) {}
+    public override function updateConstants(arg0: hxsl.Globals): Void {
+    }
 
-  function getParamValue(index: Int): Dynamic {}
+    public override function getParamValue(arg0: Int): Dynamic {
+        throw "stub: getParamValue not decompiled";
+    }
 
-  function getParamFloatValue(index: Int): Float {}
+    public override function getParamFloatValue(arg0: Int): Float {
+        throw "stub: getParamFloatValue not decompiled";
+    }
 }
-

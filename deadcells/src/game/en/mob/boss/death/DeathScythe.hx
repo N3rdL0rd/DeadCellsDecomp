@@ -1,42 +1,63 @@
 package en.mob.boss.death;
+
 class DeathScythe extends Entity {
-  var move: tool.mv.MvFly.MvFly;
-  var target: tool.FPoint.FPoint;
-  var baseSpeed: Float;
-  var power: Dynamic;
-  var dmgArea: tool.Area.Area;
-  var scytheFx: libs.heaps.slib.HSprite.HSprite;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var move: tool.mv.MvFly;
+    public var target: tool.FPoint;
+    public var baseSpeed: Float;
+    public var power: Dynamic;
+    public var dmgArea: tool.Area;
+    public var scytheFx: libs.heaps.slib.HSprite;
 
-  function onHit(e: Entity, a: tool.atk.AttackData.AttackData) {}
+    public function new(arg0: pr.Level, arg1: Float, arg2: Float, arg3: en.Mob, arg4: tool.FPoint, arg5: Dynamic, arg6: Float) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Float, y: Float, parent: en.Mob.Mob, target: tool.FPoint.FPoint, power: Dynamic, speedMul: Float) {}
+    public override function init(): Void {
+    }
 
-  function init() {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function disposeGfx(): Void {
+    }
 
-  function disposeGfx() {}
+    public override function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function canBeHit(): Bool {}
+    public function canHit(arg0: Entity): Bool {
+        throw "stub: canHit not decompiled";
+    }
 
-  function canHit(e: Entity): Bool {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 }
-

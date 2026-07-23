@@ -1,12 +1,15 @@
 package light;
+
 class Light extends light.DeferredSprite {
-  var color: h3d.Vector.Vector;
-  var depth: Float;
-  var volume: LightGraphics;
-  static var GROUP: Int;
+    public static var GROUP: Int;
+    public var color: h3d.Vector;
+    public var depth: Float;
+    public var volume: light.LightGraphics;
 
-  function __constructor__(p: h2d.Object.Object) {}
+    public function new(arg0: h2d.Object) {
+        super();
+    }
 
-  function setColor(c: Int) {}
+    public function setColor(arg0: Int): Void {
+    }
 }
-

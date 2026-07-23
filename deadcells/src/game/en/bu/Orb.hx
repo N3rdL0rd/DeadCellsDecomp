@@ -1,36 +1,52 @@
 package en.bu;
+
 class Orb extends en.Bullet {
-  var item: tool.InventItem.InventItem;
-  var startColor: Int;
-  var endColor: Int;
-  var curDmg: Float;
-  var speed: Float;
-  var tickrate: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var item: tool.InventItem;
+    public var startColor: Int;
+    public var endColor: Int;
+    public var curDmg: Float;
+    public var speed: Float;
+    public var tickrate: Float;
 
-  function __constructor__(from: Entity, item: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function block(byEnt: Bool) {}
+    public override function block(arg0: Bool): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function explode() {}
+    public function explode(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

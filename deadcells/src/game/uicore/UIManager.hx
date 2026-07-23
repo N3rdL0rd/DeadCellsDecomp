@@ -1,17 +1,23 @@
 package uicore;
-class UIManager extends libs.Process.Process {
-  var windows: hl.types.ArrayObj<Dynamic>;
-  var controller: tool.Controller.Controller;
-  static var ME: UIManager;
 
-  function __constructor__(parent: libs.Process.Process) {}
+class UIManager extends libs.Process {
+    public static var ME: uicore.UIManager;
+    public var windows: Array<Dynamic>;
+    public var controller: tool.ControllerAccess;
 
-  function update() {}
+    public function new(arg0: libs.Process) {
+        super();
+    }
 
-  function handleActions() {}
+    public override function update(): Void {
+    }
 
-  function handleAction(action: Int, pressed: Bool) {}
+    public function handleActions(): Void {
+    }
 
-  function onResize() {}
+    public function handleAction(arg0: Int, arg1: Bool): Void {
+    }
+
+    public override function onResize(): Void {
+    }
 }
-

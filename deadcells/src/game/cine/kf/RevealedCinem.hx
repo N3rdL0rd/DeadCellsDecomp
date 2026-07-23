@@ -1,17 +1,24 @@
 package cine.kf;
+
 class RevealedCinem extends cine.KeyframesCinematic {
-  var endMask: h2d.Graphics.Graphics;
+    public var endMask: h2d.Graphics;
 
-  function __constructor__(onStarted: Dynamic) {}
+    public function new(arg0: Dynamic) {
+        super();
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function next() {}
+    public override function next(): Void {
+    }
 
-  function _rock(p: libs.heaps.HParticle.HParticle) {}
+    public function _rock(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function risingRocksFar() {}
+    public function risingRocksFar(): Void {
+    }
 }
-

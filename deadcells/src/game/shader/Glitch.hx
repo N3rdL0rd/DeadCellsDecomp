@@ -1,22 +1,30 @@
 package shader;
+
 class Glitch extends hxsl.Shader {
-  var inputTexture__: h3d.mat.Texture.Texture;
-  var inputScale__: h3d.Vector.Vector;
-  var noiseTexture__: h3d.mat.Texture.Texture;
-  var noiseScale__: h3d.Vector.Vector;
-  var blockSize__: Float;
-  var offsetSize__: h3d.Vector.Vector;
-  static var SRC: String;
-  static var _SHADER: hxsl.SharedShader.SharedShader;
+    public static var SRC: String;
+    public static var _SHADER: hxsl.SharedShader;
+    public var inputTexture__: h3d.mat.Texture;
+    public var inputScale__: h3d.Vector;
+    public var noiseTexture__: h3d.mat.Texture;
+    public var noiseScale__: h3d.Vector;
+    public var blockSize__: Float;
+    public var offsetSize__: h3d.Vector;
 
-  function __constructor__(tex: h3d.mat.Texture.Texture, noise: h3d.mat.Texture.Texture) {}
+    public function new(arg0: h3d.mat.Texture, arg1: h3d.mat.Texture) {
+        super();
+    }
 
-  function updateSpriteTexture(tex: h3d.mat.Texture.Texture) {}
+    public function updateSpriteTexture(arg0: h3d.mat.Texture): Void {
+    }
 
-  function updateConstants(globals: hxsl.Globals.Globals) {}
+    public override function updateConstants(arg0: hxsl.Globals): Void {
+    }
 
-  function getParamValue(index: Int): Dynamic {}
+    public override function getParamValue(arg0: Int): Dynamic {
+        throw "stub: getParamValue not decompiled";
+    }
 
-  function getParamFloatValue(index: Int): Float {}
+    public override function getParamFloatValue(arg0: Int): Float {
+        throw "stub: getParamFloatValue not decompiled";
+    }
 }
-

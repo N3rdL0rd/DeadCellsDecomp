@@ -1,24 +1,37 @@
 package tool.weap;
+
 class HydraSpell extends tool.Weapon {
-  var fxCircle: libs.heaps.slib.HSprite.HSprite;
-  var lastFxCircle: libs.heaps.slib.HSprite.HSprite;
+    public var fxCircle: libs.heaps.slib.HSprite;
+    public var lastFxCircle: libs.heaps.slib.HSprite;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_maxCycle(): Int {}
+    public function get_maxCycle(): Int {
+        throw "stub: get_maxCycle not decompiled";
+    }
 
-  function isLastCycle(): Bool {}
+    public override function isLastCycle(): Bool {
+        throw "stub: isLastCycle not decompiled";
+    }
 
-  function cancelChain() {}
+    public override function cancelChain(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function doTail(b: en.Bullet.Bullet, p: Float, col: Dynamic) {}
+    public function doTail(arg0: en.Bullet, arg1: Float, arg2: Ref): Void {
+    }
 
-  function deleteFxCircle(instant: Dynamic) {}
+    public function deleteFxCircle(arg0: Ref): Void {
+    }
 }
-

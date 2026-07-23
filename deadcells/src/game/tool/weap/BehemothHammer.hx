@@ -1,23 +1,32 @@
 package tool.weap;
+
 class BehemothHammer extends tool.Weapon {
-  var animations: hl.types.ArrayObj<Dynamic>;
-  var animIndex: Int;
-  var hammerChargeF: Int;
-  var preloadFxF: Int;
-  var preloadFx: libs.heaps.slib.HSprite.HSprite;
+    public var animations: Array<Dynamic>;
+    public var animIndex: Int;
+    public var hammerChargeF: Int;
+    public var preloadFxF: Int;
+    public var preloadFx: libs.heaps.slib.HSprite;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function interrupt() {}
+    public override function interrupt(): Void {
+    }
 
-  function dynamicChargeExecute() {}
+    public function dynamicChargeExecute(): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function dynOnAttackAnim(cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 }
-

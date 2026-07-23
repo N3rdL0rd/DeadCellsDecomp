@@ -1,57 +1,72 @@
 package tool;
+
 class HookChainTimeKeeper extends libs.Process {
-  var wrapper: h2d.Object.Object;
-  var owner: en.Mob.Mob;
-  var parts: hl.types.ArrayObj<Dynamic>;
-  var grappling: libs.heaps.slib.HSprite.HSprite;
-  var grapplingWid: Int;
-  var hookRadius: Float;
-  var maxChainLength: Float;
-  var oscil: Float;
-  var tensionOverride: Dynamic;
-  var ang: Float;
-  var isBack: Bool;
-  var dx: Float;
-  var dy: Float;
-  var wx: Float;
-  var wy: Float;
-  var lastWx: Float;
-  var lastWy: Float;
-  var hooked: Entity;
-  var item: tool.InventItem.InventItem;
-  var atkData: tool.atk.AttackData.AttackData;
-  var targetGetter: Dynamic;
-  var canRetract: Bool;
-  var lastX: Float;
-  var lastY: Float;
-  var curve: Float;
-  var cr: Float;
-  var circleDebug: h2d.Graphics.Graphics;
-  var circleDebug2: h2d.Graphics.Graphics;
-  var onions: hl.types.ArrayObj<Dynamic>;
+    public var wrapper: h2d.Object;
+    public var owner: en.Mob;
+    public var parts: Array<Dynamic>;
+    public var grappling: libs.heaps.slib.HSprite;
+    public var grapplingWid: Int;
+    public var hookRadius: Float;
+    public var maxChainLength: Float;
+    public var oscil: Float;
+    public var tensionOverride: Dynamic;
+    public var ang: Float;
+    public var isBack: Bool;
+    public var dx: Float;
+    public var dy: Float;
+    public var wx: Float;
+    public var wy: Float;
+    public var lastWx: Float;
+    public var lastWy: Float;
+    public var hooked: Entity;
+    public var item: tool.InventItem;
+    public var atkData: tool.atk.AttackData;
+    public var targetGetter: Dynamic;
+    public var canRetract: Bool;
+    public var lastX: Float;
+    public var lastY: Float;
+    public var curve: Float;
+    public var cr: Float;
+    public var circleDebug: h2d.Graphics;
+    public var circleDebug2: h2d.Graphics;
+    public var onions: Array<Dynamic>;
 
-  function onHook(e: Entity) {}
+    public function new(arg0: en.Mob, arg1: String, arg2: String, arg3: Float, arg4: Dynamic, arg5: Dynamic) {
+        super();
+    }
 
-  function onRetractComplete(hasHookedSomeone: Bool) {}
+    public function launch(arg0: tool.atk.AttackData, arg1: Float): Void {
+    }
 
-  function onRetractStart() {}
+    public function isExtending(): Bool {
+        throw "stub: isExtending not decompiled";
+    }
 
-  function onReachNothing() {}
+    public function isRetracting(): Bool {
+        throw "stub: isRetracting not decompiled";
+    }
 
-  function __constructor__(e: en.Mob.Mob, k: String, idProjectile: String, len: Float, targetGetter: Dynamic, color: Dynamic) {}
+    public function retract(): Void {
+    }
 
-  function launch(a: tool.atk.AttackData.AttackData, ang: Float) {}
+    public override function onDispose(): Void {
+    }
 
-  function isExtending(): Bool {}
+    public override function update(): Void {
+    }
 
-  function isRetracting(): Bool {}
+    public override function postUpdate(): Void {
+    }
 
-  function retract() {}
+    public function onHook(arg0: Entity): Void {
+    }
 
-  function onDispose() {}
+    public function onRetractComplete(arg0: Bool): Void {
+    }
 
-  function update() {}
+    public function onRetractStart(): Void {
+    }
 
-  function postUpdate() {}
+    public function onReachNothing(): Void {
+    }
 }
-

@@ -1,22 +1,27 @@
 package cine;
+
 class HeroDeathRespawn extends GameCinematic {
-  var containerBack: Dynamic;
-  var containerFront: Dynamic;
-  var hero: en.Hero.Hero;
-  var corpse: en.Hero.HeroDeadCorpse;
-  var maskBack: h2d.Bitmap.Bitmap;
-  var maskFront: h2d.Bitmap.Bitmap;
-  var attacker: Entity;
-  var respawnCx: Int;
-  var respawnCy: Int;
-  var fxSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
+    public var containerBack: light.TopFx;
+    public var containerFront: light.TopFx;
+    public var hero: en.Hero;
+    public var corpse: en.HeroDeadCorpse;
+    public var maskBack: h2d.Bitmap;
+    public var maskFront: h2d.Bitmap;
+    public var attacker: Entity;
+    public var respawnCx: Int;
+    public var respawnCy: Int;
+    public var fxSb: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(e: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function respawn() {}
+    public function respawn(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

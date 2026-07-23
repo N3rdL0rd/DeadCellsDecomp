@@ -1,80 +1,110 @@
 package en.mob.boss.gardener;
+
 class Mushroom extends en.Interactive {
-  var coll: en.mob.boss.GardenerBoss.GardenerBoss;
-  var gardenerBoss: en.mob.boss.GardenerBoss.GardenerBoss;
-  var inf: Dynamic;
-  var inWall: Bool;
-  var unKillable: Bool;
-  var excited: Bool;
-  var willBeThrown: Bool;
-  var thrown: Bool;
-  var killCounter: Int;
-  var duration: Float;
-  var damage: Float;
-  var mobDamage: Float;
-  var range: Float;
-  var breachBonus: Float;
-  var forceX: Float;
-  var forceY: Float;
-  var rotationSpeed: Float;
-  var minTimeAfterHit: Float;
-  var minTimeAfterWallBounce: Float;
-  var _teamMush: String;
-  var sideOfTheRoom: Int;
-  var bumpForce: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var coll: en.mob.boss.GardenerBoss;
+    public var gardenerBoss: en.mob.boss.GardenerBoss;
+    public var inf: Dynamic;
+    public var inWall: Bool;
+    public var unKillable: Bool;
+    public var excited: Bool;
+    public var willBeThrown: Bool;
+    public var thrown: Bool;
+    public var killCounter: Int;
+    public var duration: Float;
+    public var damage: Float;
+    public var mobDamage: Float;
+    public var range: Float;
+    public var breachBonus: Float;
+    public var forceX: Float;
+    public var forceY: Float;
+    public var rotationSpeed: Float;
+    public var minTimeAfterHit: Float;
+    public var minTimeAfterWallBounce: Float;
+    public var _teamMush: String;
+    public var sideOfTheRoom: Int;
+    public var bumpForce: Float;
 
-  function __constructor__(level: pr.Level.Level, cx: Int, cy: Int, coll: en.mob.boss.GardenerBoss.GardenerBoss, _sideOfTheRoom: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.boss.GardenerBoss, arg4: Dynamic) {
+        super();
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function createMushroom() {}
+    public function createMushroom(): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function updateColorTeam() {}
+    public function updateColorTeam(): Void {
+    }
 
-  function bounce() {}
+    public function bounce(): Void {
+    }
 
-  function popUp(posX: Float) {}
+    public function popUp(arg0: Float): Void {
+    }
 
-  function willExplode() {}
+    public function willExplode(): Void {
+    }
 
-  function flashRed() {}
+    public function flashRed(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public function onTouchWall(arg0: Int): Void {
+    }
 
-  function onTouchGround() {}
+    public function onTouchGround(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDie() {}
+    public function onDie(): Void {
+    }
 
-  function kill() {}
+    public function kill(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

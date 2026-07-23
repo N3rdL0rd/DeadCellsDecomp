@@ -1,21 +1,31 @@
 package pow;
+
 class Pokecharge extends Power {
-  var target: en.Mob.Mob;
-  var ok: Bool;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var target: en.Mob;
+    public var ok: Bool;
 
-  function __constructor__(owner: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onDurationEnd() {}
+    public override function onDurationEnd(): Void {
+    }
 
-  function removeItem() {}
+    public function removeItem(): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function isTooFar(): Bool {}
+    public function isTooFar(): Bool {
+        throw "stub: isTooFar not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

@@ -1,24 +1,34 @@
 package level.struct;
+
 class Cliff extends level.LevelStruct {
-  var branches: hl.types.ArrayObj<Dynamic>;
-  var mainPath: hl.types.ArrayObj<Dynamic>;
-  var loreHost: hl.types.ArrayObj<Dynamic>;
-  var benchLoreHost: hl.types.ArrayObj<Dynamic>;
-  var zDoorHost: hl.types.ArrayObj<Dynamic>;
-  var verticalSpacers: hl.types.ArrayObj<Dynamic>;
+    public var branches: Array<Dynamic>;
+    public var mainPath: Array<Dynamic>;
+    public var loreHost: Array<Dynamic>;
+    public var benchLoreHost: Array<Dynamic>;
+    public var zDoorHost: Array<Dynamic>;
+    public var verticalSpacers: Array<Dynamic>;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function createCliffEnigma() {}
+    public function createCliffEnigma(): Void {
+    }
 
-  function addInside(roomNode: level.RoomNode.RoomNode) {}
+    public function addInside(arg0: level.RoomNode): Void {
+    }
 
-  function createTeleportBefore(ref: level.RoomNode.RoomNode, group: Dynamic): level.RoomNode.RoomNode {}
+    public override function createTeleportBefore(arg0: level.RoomNode, arg1: Dynamic): level.RoomNode {
+        throw "stub: createTeleportBefore not decompiled";
+    }
 
-  function addLoreRoom(lore: Dynamic, overrideStructMode: Dynamic) {}
+    public override function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 }
-

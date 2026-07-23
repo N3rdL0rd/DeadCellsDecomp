@@ -1,117 +1,177 @@
 package pow;
+
 class DiverseDeckBase extends PassivePower {
-  var deckOrder: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var deckOrder: Array<Dynamic>;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function getNextItem(): tool.InventItem.InventItem {}
+    public function getNextItem(): tool.InventItem {
+        throw "stub: getNextItem not decompiled";
+    }
 
-  function getItemKind(): String {}
+    public function getItemKind(): String {
+        throw "stub: getItemKind not decompiled";
+    }
 
-  function doActive() {}
+    public override function doActive(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getBestClosestTarget(): en.Mob.Mob {}
+    public function getBestClosestTarget(): en.Mob {
+        throw "stub: getBestClosestTarget not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
-}
-
-class DiverseDeckCatalyst extends pow.DiverseDeckBase {
-  static var __clid: Int;
-
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
-
-  function doActive() {}
-
-  function kill(onActive: Bool) {}
-
-  function getCLID(): Int {}
-}
-
-class DiverseDeckElectro extends pow.DiverseDeckBase {
-  var ddLightningBalls: hl.types.ArrayObj<Dynamic>;
-  var endLightningCount: Int;
-  var legMaxOrbs: Int;
-  var posId: Int;
-  static var __clid: Int;
-
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
-
-  function init() {}
-
-  function onLevelChanged(lvl: pr.Level.Level) {}
-
-  function initBalls() {}
-
-  function doPassive() {}
-
-  function doActive() {}
-
-  function kill(onActive: Bool) {}
-
-  function onCooldownEnd(k: String, subIndex: Int) {}
-
-  function lightning() {}
-
-  function onSkillActivated(k: String, id: Int) {}
-
-  function onDispose() {}
-
-  function getCLID(): Int {}
-
-  function unserializeInit() {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class DiverseDeckJuggernaut extends pow.DiverseDeckBase {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function doActive() {}
+    public override function doActive(): Void {
+    }
 
-  function kill(onActive: Bool) {}
+    public function kill(arg0: Bool): Void {
+    }
 
-  function onOwnerPerfectParry(a: tool.atk.AttackData.AttackData) {}
+    public function onOwnerPerfectParry(arg0: tool.atk.AttackData): Void {
+    }
 
-  function getScale(scalingMul: Float): Float {}
+    public function getScale(arg0: Float): Float {
+        throw "stub: getScale not decompiled";
+    }
 
-  function addBonusLife(amount: Float, duration: Float) {}
+    public function addBonusLife(arg0: Float, arg1: Float): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+}
+
+class DiverseDeckElectro extends pow.DiverseDeckBase {
+    public static var __clid: Int;
+    public var ddLightningBalls: Array<Dynamic>;
+    public var endLightningCount: Int;
+    public var legMaxOrbs: Int;
+    public var posId: Int;
+
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
+
+    public function init(): Void {
+    }
+
+    public function onLevelChanged(arg0: pr.Level): Void {
+    }
+
+    public function initBalls(): Void {
+    }
+
+    public function doPassive(): Void {
+    }
+
+    public override function doActive(): Void {
+    }
+
+    public function kill(arg0: Bool): Void {
+    }
+
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
+
+    public function lightning(): Void {
+    }
+
+    public function onSkillActivated(arg0: String, arg1: Int): Void {
+    }
+
+    public function onDispose(): Void {
+    }
+
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public override function unserializeInit(): Void {
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
+}
+
+class DiverseDeckCatalyst extends pow.DiverseDeckBase {
+    public static var __clid: Int;
+
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
+
+    public override function doActive(): Void {
+    }
+
+    public function kill(arg0: Bool): Void {
+    }
+
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
 
 class DiverseDeckWatcher extends pow.DiverseDeckBase {
-  var legCharge: Int;
-  var maxChargeNeeded: Int;
-  static var gameDataChargekeyName: String;
-  static var __clid: Int;
+    public static var gameDataChargekeyName: String;
+    public static var __clid: Int;
+    public var legCharge: Int;
+    public var maxChargeNeeded: Int;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function onOwnerAttackResultDealt(atk: tool.atk.AttackData.AttackData, target: Entity) {}
+    public function onOwnerAttackResultDealt(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function gainCharge() {}
+    public function gainCharge(): Void {
+    }
 
-  function getCharge(): Int {}
+    public function getCharge(): Int {
+        throw "stub: getCharge not decompiled";
+    }
 
-  function onBeforeOwnerApplyAttackResult(a: tool.atk.AttackData.AttackData): Bool {}
+    public function onBeforeOwnerApplyAttackResult(arg0: tool.atk.AttackData): Bool {
+        throw "stub: onBeforeOwnerApplyAttackResult not decompiled";
+    }
 
-  function doActive() {}
+    public override function doActive(): Void {
+    }
 
-  function kill(onActive: Bool) {}
+    public function kill(arg0: Bool): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

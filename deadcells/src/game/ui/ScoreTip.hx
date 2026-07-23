@@ -1,22 +1,27 @@
 package ui;
+
 class ScoreTip extends ui.Process {
-  var f: h2d.Flow.Flow;
-  var hs: libs.heaps.slib.HSprite.HSprite;
-  var text: ui.Text.Text;
-  var e: Entity;
-  var level: pr.Level.Level;
-  var offY: Float;
-  var distance: Float;
-  var isTop: Bool;
-  var fromX: Float;
-  var fromY: Float;
+    public var f: h2d.Flow;
+    public var hs: libs.heaps.slib.HSprite;
+    public var text: ui.Text;
+    public var e: Entity;
+    public var level: pr.Level;
+    public var offY: Float;
+    public var distance: Float;
+    public var isTop: Bool;
+    public var fromX: Float;
+    public var fromY: Float;
 
-  function __constructor__(e: Entity, v: Dynamic, stepExtra: Dynamic, isTop: Dynamic) {}
+    public function new(arg0: Entity, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic) {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

@@ -1,21 +1,30 @@
 package ui.sel;
+
 class BiomeMobsSelector extends ui.sel.BiomeSelector {
-  var mobsFlow: h2d.Flow.Flow;
-  var mobs: hl.types.ArrayObj<Dynamic>;
-  var mobsIcons: hl.types.ArrayObj<Dynamic>;
+    public var mobsFlow: h2d.Flow;
+    public var mobs: Array<Dynamic>;
+    public var mobsIcons: Array<Dynamic>;
 
-  function __constructor__(groups: hl.types.ArrayBytes<Int>, validateCb: Dynamic, preSelectedBiome: String) {}
+    public function new(arg0: Array<Int>, arg1: Dynamic, arg2: String) {
+        super();
+    }
 
-  function initGrid() {}
+    public override function initGrid(): Void {
+    }
 
-  function initRightFlow() {}
+    public override function initRightFlow(): Void {
+    }
 
-  function updateRightFlow() {}
+    public override function updateRightFlow(): Void {
+    }
 
-  function updateTextsPosition(resize: Dynamic) {}
+    public override function updateTextsPosition(arg0: Ref): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function getTitleText(): String {}
+    public override function getTitleText(): String {
+        throw "stub: getTitleText not decompiled";
+    }
 }
-

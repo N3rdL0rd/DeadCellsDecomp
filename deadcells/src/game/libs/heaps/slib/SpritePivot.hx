@@ -1,14 +1,16 @@
 package libs.heaps.slib;
+
 class SpritePivot {
-  var isUndefined: Bool;
-  var usingFactor: Bool;
-  var coordX: Float;
-  var coordY: Float;
-  var centerFactorX: Float;
-  var centerFactorY: Float;
+    public var isUndefined: Bool;
+    public var usingFactor: Bool;
+    public var coordX: Float;
+    public var coordY: Float;
+    public var centerFactorX: Float;
+    public var centerFactorY: Float;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function copyFrom(from: SpritePivot) {}
+    public function copyFrom(arg0: libs.heaps.slib.SpritePivot): Void {
+    }
 }
-

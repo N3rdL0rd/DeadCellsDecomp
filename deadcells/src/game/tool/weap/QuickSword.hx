@@ -1,15 +1,22 @@
 package tool.weap;
+
 class QuickSword extends tool.Weapon {
-  var chainHits: Int;
+    public var chainHits: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function onOwnerDamaged(a: tool.atk.AttackData.AttackData) {}
+    public function onOwnerDamaged(arg0: tool.atk.AttackData): Void {
+    }
 }
-

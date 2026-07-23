@@ -1,15 +1,16 @@
+class Parallax extends h2d.Object {
+    public var scrollX: Float;
+    public var scrollY: Float;
+    public var bounds: h2d.col.Bounds;
+    public var view: Viewport;
+    public var vwid: Float;
+    public var vhei: Float;
+    public var limitBounds: h2d.col.Bounds;
 
-class Parallax extends h2d.Object.Object {
-  var scrollX: Float;
-  var scrollY: Float;
-  var bounds: h2d.col.Bounds.Bounds;
-  var view: Viewport;
-  var vwid: Float;
-  var vhei: Float;
-  var limitBounds: h2d.col.Bounds.Bounds;
+    public function new(arg0: h2d.col.Bounds, arg1: Viewport, arg2: h2d.Object, arg3: h2d.col.Bounds) {
+        super();
+    }
 
-  function __constructor__(bounds: h2d.col.Bounds.Bounds, viewport: Viewport, p: h2d.Object.Object, limitBounds: h2d.col.Bounds.Bounds) {}
-
-  function calcAbsPos() {}
+    public override function calcAbsPos(): Void {
+    }
 }
-

@@ -1,32 +1,45 @@
 package level.disp;
+
 class BeholderPit extends level.BiomeDisp {
-  var biome: String;
-  var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var smallDoorTiles: hl.types.ArrayObj<Dynamic>;
-  var sprites: hl.types.ArrayObj<Dynamic>;
+    public var biome: String;
+    public var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch;
+    public var smallDoorTiles: Array<Dynamic>;
+    public var sprites: Array<Dynamic>;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addPillar(z: level.DecoTypes.DecoTypes) {}
+    public function addPillar(arg0: level.DecoZone): Void {
+    }
 
-  function addVault(z: level.DecoTypes.DecoTypes) {}
+    public function addVault(arg0: level.DecoZone): Void {
+    }
 
-  function addSmallDoors(z: level.DecoTypes.DecoTypes) {}
+    public function addSmallDoors(arg0: level.DecoZone): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function addCandleBones(z: level.DecoTypes.DecoTypes) {}
+    public function addCandleBones(arg0: level.DecoZone): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

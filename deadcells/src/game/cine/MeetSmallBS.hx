@@ -1,9 +1,12 @@
 package cine;
+
 class MeetSmallBS extends GameCinematic {
-  var sbs: en.inter.npc.SmallBlacksmith.SmallBlacksmith;
+    public var sbs: en.inter.npc.SmallBlacksmith;
 
-  function __constructor__(sbs: en.inter.npc.SmallBlacksmith.SmallBlacksmith) {}
+    public function new(arg0: en.inter.npc.SmallBlacksmith) {
+        super();
+    }
 
-  function onComplete() {}
+    public function onComplete(): Void {
+    }
 }
-

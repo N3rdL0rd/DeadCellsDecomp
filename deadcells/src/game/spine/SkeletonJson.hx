@@ -1,11 +1,24 @@
 package spine;
+
 class SkeletonJson {
-  var attachmentLoader: Dynamic;
-  var scale: Float;
-  var linkedMeshes: hl.types.ArrayObj<Dynamic>;
+    public var attachmentLoader: Dynamic;
+    public var scale: Float;
+    public var linkedMeshes: Array<Dynamic>;
 
-  function __constructor__(attachmentLoader: Dynamic) {}
+    public function new(arg0: Dynamic) {
+    }
 
-  function readAttachment(map: Dynamic, skin: spine.Skin.Skin, slotIndex: Int, name: String, skeletonData: spine.SkeletonData.SkeletonData): spine.attachments.Attachment.Attachment {}
+    public function readAttachment(arg0: Dynamic, arg1: spine.Skin, arg2: Int, arg3: String, arg4: spine.SkeletonData): spine.attachments.Attachment {
+        throw "stub: readAttachment not decompiled";
+    }
 }
 
+class LinkedMesh {
+    public var parent: String;
+    public var skin: String;
+    public var slotIndex: Int;
+    public var mesh: spine.attachments.MeshAttachment;
+
+    public function new(arg0: spine.attachments.MeshAttachment, arg1: String, arg2: Int, arg3: String) {
+    }
+}

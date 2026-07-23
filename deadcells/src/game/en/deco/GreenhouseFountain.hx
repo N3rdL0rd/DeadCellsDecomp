@@ -1,33 +1,46 @@
 package en.deco;
+
 class GreenhouseFountain extends en.Deco {
-  var cont: h2d.Object.Object;
-  var water: h2d.Bitmap.Bitmap;
-  var smallWater: h2d.Bitmap.Bitmap;
-  var top: libs.heaps.slib.HSprite.HSprite;
-  var spec: libs.heaps.slib.HSprite.HSprite;
-  var heiWater: Int;
-  var widWater: Int;
-  var speedWater: Float;
-  var waterSurfaceY: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var cont: h2d.Object;
+    public var water: h2d.Bitmap;
+    public var smallWater: h2d.Bitmap;
+    public var top: libs.heaps.slib.HSprite;
+    public var spec: libs.heaps.slib.HSprite;
+    public var heiWater: Int;
+    public var widWater: Int;
+    public var speedWater: Float;
+    public var waterSurfaceY: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, h: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

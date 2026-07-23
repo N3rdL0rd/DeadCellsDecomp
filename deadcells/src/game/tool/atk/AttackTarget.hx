@@ -1,44 +1,73 @@
 package tool.atk;
+
 class AttackTargetImpl {
-  var parent: Entity;
-  var <none>: Dynamic;
+    public var parent: Entity;
+    public var : Dynamic;
 
-  function __constructor__(parent: Entity) {}
+    public function new(arg0: Entity) {
+    }
 
-  function onHitInit(atk: tool.atk.AttackData.AttackData) {}
+    public function onHitInit(arg0: tool.atk.AttackData): Void {
+    }
 
-  function shouldMissEarly(atk: tool.atk.AttackData.AttackData): Bool {}
+    public function shouldMissEarly(arg0: tool.atk.AttackData): Bool {
+        throw "stub: shouldMissEarly not decompiled";
+    }
 
-  function preAttack(atk: tool.atk.AttackData.AttackData) {}
+    public function preAttack(arg0: tool.atk.AttackData): Void {
+    }
 
-  function updateAffixes(atk: tool.atk.AttackData.AttackData) {}
+    public function updateAffixes(arg0: tool.atk.AttackData): Void {
+    }
 
-  function updateHitResult(hitResult: Dynamic, atk: tool.atk.AttackData.AttackData): Dynamic {}
+    public function updateHitResult(arg0: HitResult, arg1: tool.atk.AttackData): HitResult {
+        throw "stub: updateHitResult not decompiled";
+    }
 
-  function computeBonusMul(atk: tool.atk.AttackData.AttackData): Float {}
+    public function computeBonusMul(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeBonusMul not decompiled";
+    }
 
-  function computeBonusAdd(atk: tool.atk.AttackData.AttackData): Float {}
+    public function computeBonusAdd(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeBonusAdd not decompiled";
+    }
 
-  function computeReduceMul(atk: tool.atk.AttackData.AttackData): Float {}
+    public function computeReduceMul(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeReduceMul not decompiled";
+    }
 
-  function computeDamageCap(atk: tool.atk.AttackData.AttackData): Float {}
+    public function computeDamageCap(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeDamageCap not decompiled";
+    }
 
-  function computeDamageNegation(atk: tool.atk.AttackData.AttackData): Float {}
+    public function computeDamageNegation(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeDamageNegation not decompiled";
+    }
 
-  function preHitResultUpdate(atk: tool.atk.AttackData.AttackData) {}
+    public function preHitResultUpdate(arg0: tool.atk.AttackData): Void {
+    }
 
-  function applyHit(atk: tool.atk.AttackData.AttackData) {}
+    public function applyHit(arg0: tool.atk.AttackData): Void {
+    }
 
-  function applyMiss(atk: tool.atk.AttackData.AttackData) {}
+    public function applyMiss(arg0: tool.atk.AttackData): Void {
+    }
 
-  function postHitResultUpdate(atk: tool.atk.AttackData.AttackData) {}
+    public function postHitResultUpdate(arg0: tool.atk.AttackData): Void {
+    }
 
-  function isFrontBlockingAttack(atk: tool.atk.AttackData.AttackData): Bool {}
+    public function isFrontBlockingAttack(arg0: tool.atk.AttackData): Bool {
+        throw "stub: isFrontBlockingAttack not decompiled";
+    }
 
-  function isBackBlockingAttack(atk: tool.atk.AttackData.AttackData): Bool {}
+    public function isBackBlockingAttack(arg0: tool.atk.AttackData): Bool {
+        throw "stub: isBackBlockingAttack not decompiled";
+    }
 
-  function isFacingAttack(atk: tool.atk.AttackData.AttackData): Bool {}
+    public function isFacingAttack(arg0: tool.atk.AttackData): Bool {
+        throw "stub: isFacingAttack not decompiled";
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 }
-

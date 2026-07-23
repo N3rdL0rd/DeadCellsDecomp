@@ -1,34 +1,45 @@
 package spine;
+
 class Skeleton {
-  var data: SkeletonData;
-  var bones: hl.types.ArrayObj<Dynamic>;
-  var slots: hl.types.ArrayObj<Dynamic>;
-  var drawOrder: hl.types.ArrayObj<Dynamic>;
-  var ikConstraints: hl.types.ArrayObj<Dynamic>;
-  var transformConstraints: hl.types.ArrayObj<Dynamic>;
-  var pathConstraints: hl.types.ArrayObj<Dynamic>;
-  var cache: hl.types.ArrayObj<Dynamic>;
-  var cacheReset: hl.types.ArrayObj<Dynamic>;
-  var skin: spine.Skin.Skin;
-  var color: Dynamic;
-  var time: Float;
-  var flipX: Bool;
-  var flipY: Bool;
-  var x: Float;
-  var y: Float;
+    public var data: spine.SkeletonData;
+    public var bones: Array<Dynamic>;
+    public var slots: Array<Dynamic>;
+    public var drawOrder: Array<Dynamic>;
+    public var ikConstraints: Array<Dynamic>;
+    public var transformConstraints: Array<Dynamic>;
+    public var pathConstraints: Array<Dynamic>;
+    public var cache: Array<Dynamic>;
+    public var cacheReset: Array<Dynamic>;
+    public var skin: spine.Skin;
+    public var color: spine.support.graphics.Color;
+    public var time: Float;
+    public var flipX: Bool;
+    public var flipY: Bool;
+    public var x: Float;
+    public var y: Float;
 
-  function __constructor__(data: SkeletonData) {}
+    public function new(arg0: spine.SkeletonData) {
+    }
 
-  function sortBone(bone: spine.Bone.Bone) {}
+    public function sortBone(arg0: spine.Bone): Void {
+    }
 
-  function sortReset(bones: hl.types.ArrayObj<Dynamic>) {}
+    public function sortReset(arg0: Array<Dynamic>): Void {
+    }
 
-  function getBones(): hl.types.ArrayObj<Dynamic> {}
+    public function getBones(): Array<Dynamic> {
+        throw "stub: getBones not decompiled";
+    }
 
-  function findBone(boneName: String): spine.Bone.Bone {}
+    public function findBone(arg0: String): spine.Bone {
+        throw "stub: findBone not decompiled";
+    }
 
-  function findSlot(slotName: String): Dynamic {}
+    public function findSlot(arg0: String): spine.Slot {
+        throw "stub: findSlot not decompiled";
+    }
 
-  function getAttachment(slotIndex: Int, attachmentName: String): spine.attachments.Attachment.Attachment {}
+    public function getAttachment(arg0: Int, arg1: String): spine.attachments.Attachment {
+        throw "stub: getAttachment not decompiled";
+    }
 }
-

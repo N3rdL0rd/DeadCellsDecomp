@@ -1,55 +1,89 @@
 package tool.hero.activeSkills;
+
 class BeheadedActiveSkillsManager extends tool.hero.HeroActiveSkillsManager {
-  var collectorSpinSpeedMul: Float;
-  var leechBuffSpeedMul: Float;
-  var wingsSpeedMul: Float;
-  var bubblePowers: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var collectorSpinSpeedMul: Float;
+    public var leechBuffSpeedMul: Float;
+    public var wingsSpeedMul: Float;
+    public var bubblePowers: Array<Dynamic>;
 
-  function __constructor__(h: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function spawnGrenadeSkill(i: tool.InventItem.InventItem, infos: Dynamic) {}
+    public function spawnGrenadeSkill(arg0: tool.InventItem, arg1: Dynamic): Void {
+    }
 
-  function spawnSideKickSkill(i: tool.InventItem.InventItem, infos: Dynamic) {}
+    public function spawnSideKickSkill(arg0: tool.InventItem, arg1: Dynamic): Void {
+    }
 
-  function spawnDeployedTrapSkill(id: Int, i: tool.InventItem.InventItem, infos: Dynamic) {}
+    public function spawnDeployedTrapSkill(arg0: Int, arg1: tool.InventItem, arg2: Dynamic): Void {
+    }
 
-  function spawnPowerSkill(id: Int, i: tool.InventItem.InventItem, infos: Dynamic): Bool {}
+    public function spawnPowerSkill(arg0: Int, arg1: tool.InventItem, arg2: Dynamic): Bool {
+        throw "stub: spawnPowerSkill not decompiled";
+    }
 
-  function useSkillItem(id: Int, i: tool.InventItem.InventItem) {}
+    public override function useSkillItem(arg0: Int, arg1: tool.InventItem): Void {
+    }
 
-  function activatePassivePower(k: String, id: Int) {}
+    public function activatePassivePower(arg0: String, arg1: Int): Void {
+    }
 
-  function canUseActiveSkill(id: Int): Bool {}
+    public override function canUseActiveSkill(arg0: Int): Bool {
+        throw "stub: canUseActiveSkill not decompiled";
+    }
 
-  function hasAnySpeedBuff(): Bool {}
+    public override function hasAnySpeedBuff(): Bool {
+        throw "stub: hasAnySpeedBuff not decompiled";
+    }
 
-  function speedBuffTimeLeftS(): Float {}
+    public override function speedBuffTimeLeftS(): Float {
+        throw "stub: speedBuffTimeLeftS not decompiled";
+    }
 
-  function getRunSpeedMul(): Float {}
+    public override function getRunSpeedMul(): Float {
+        throw "stub: getRunSpeedMul not decompiled";
+    }
 
-  function getDodgeSpeedMul(): Float {}
+    public override function getDodgeSpeedMul(): Float {
+        throw "stub: getDodgeSpeedMul not decompiled";
+    }
 
-  function getClimbSpeedMul(): Float {}
+    public override function getClimbSpeedMul(): Float {
+        throw "stub: getClimbSpeedMul not decompiled";
+    }
 
-  function onTryApplyAttackResult(a: tool.atk.AttackData.AttackData): Bool {}
+    public override function onTryApplyAttackResult(arg0: tool.atk.AttackData): Bool {
+        throw "stub: onTryApplyAttackResult not decompiled";
+    }
 
-  function applyAttackResultOnIceArmor(a: tool.atk.AttackData.AttackData): Bool {}
+    public function applyAttackResultOnIceArmor(arg0: tool.atk.AttackData): Bool {
+        throw "stub: applyAttackResultOnIceArmor not decompiled";
+    }
 
-  function onOwnerCooldownEnd(k: String, subIndex: Int) {}
+    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

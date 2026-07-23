@@ -1,29 +1,44 @@
 package en.bu;
+
 class HomingBullet extends en.Bullet {
-  var target: Entity;
-  var speed: Float;
-  var ang: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var target: Entity;
+    public var speed: Float;
+    public var ang: Float;
 
-  function __constructor__(from: Entity, target: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Dynamic, spriteName: String, lifeDuration: Float) {}
+    public function new(arg0: Entity, arg1: Entity, arg2: tool.atk.AttackData, arg3: Float, arg4: Ref, arg5: String, arg6: Float) {
+        super();
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function setSpriteTransform() {}
+    public override function setSpriteTransform(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function normalizeAngle(ang: Float): Float {}
+    public function normalizeAngle(arg0: Float): Float {
+        throw "stub: normalizeAngle not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

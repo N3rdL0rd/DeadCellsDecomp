@@ -1,25 +1,37 @@
 package tool.weap.dual;
-class HardLightGun extends tool.Weapon {
-
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
-
-  function gainAmmo() {}
-
-  function get_shootY(): Float {}
-
-  function onExecute(): Bool {}
-}
 
 class HardLightSword extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function gainAmmo(): Void {
+    }
 
-  function gainAmmo() {}
+    public function tryAddMark(arg0: Entity): Void {
+    }
 
-  function tryAddMark(e: Entity) {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
-
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 }
 
+class HardLightGun extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
+
+    public function gainAmmo(): Void {
+    }
+
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
+
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
+}

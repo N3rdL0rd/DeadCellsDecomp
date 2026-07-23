@@ -1,45 +1,70 @@
 package en.mob;
+
 class Necromant extends en.Mob {
-  var reviveSkill: tool.skill.OldSkill.OldSkill;
-  var reviveSkillInf: Dynamic;
-  var nbRevive: Int;
-  var revivedEntities: hl.types.ArrayObj<Dynamic>;
-  var isFleeing: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var reviveSkill: tool.skill.OldSkill;
+    public var reviveSkillInf: Dynamic;
+    public var nbRevive: Int;
+    public var revivedEntities: Array<Dynamic>;
+    public var isFleeing: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Necromant {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Necromant {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function getTargetBarrierCx(): Int {}
+    public function getTargetBarrierCx(): Int {
+        throw "stub: getTargetBarrierCx not decompiled";
+    }
 
-  function getReviveTarget(): Entity {}
+    public function getReviveTarget(): Entity {
+        throw "stub: getReviveTarget not decompiled";
+    }
 
-  function isInDangerFrom(aTarget: Entity): Bool {}
+    public function isInDangerFrom(arg0: Entity): Bool {
+        throw "stub: isInDangerFrom not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

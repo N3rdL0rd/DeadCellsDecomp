@@ -1,11 +1,15 @@
 package level.disp;
+
 class Observatory extends level.disp.Astrolab {
-  var curBiome: Int;
+    public var curBiome: Int;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

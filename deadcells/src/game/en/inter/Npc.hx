@@ -1,53 +1,81 @@
 package en.inter;
+
 class Npc extends en.Interactive {
-  var h: en.Hero.Hero;
-  var progress: Int;
-  var npcId: Dynamic;
-  var greetDistance: Int;
-  var requireNoMobAround: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var h: en.Hero;
+    public var progress: Int;
+    public var npcId: NpcId;
+    public var greetDistance: Int;
+    public var requireNoMobAround: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, id: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: NpcId) {
+        super();
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function autoPlace(r: level.Room.Room, npcMarkerId: String, dir: Dynamic) {}
+    public function autoPlace(arg0: level.Room, arg1: String, arg2: Dynamic): Void {
+    }
 
-  function stopTalking() {}
+    public function stopTalking(): Void {
+    }
 
-  function talkFor(s: Float) {}
+    public function talkFor(arg0: Float): Void {
+    }
 
-  function say(str: String, bgCol: Dynamic, offsetX: Dynamic, offsetY: Dynamic) {}
+    public function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function closeAllSays() {}
+    public function closeAllSays(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function checkCanGreet() {}
+    public function checkCanGreet(): Void {
+    }
 
-  function onGreet(h: en.Hero.Hero) {}
+    public function onGreet(arg0: en.Hero): Void {
+    }
 
-  function canGreet(h: en.Hero.Hero): Bool {}
+    public function canGreet(arg0: en.Hero): Bool {
+        throw "stub: canGreet not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

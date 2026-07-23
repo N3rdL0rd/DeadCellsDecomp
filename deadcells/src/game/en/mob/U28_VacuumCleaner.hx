@@ -1,85 +1,127 @@
 package en.mob;
+
 class U28_VacuumCleaner extends en.Mob {
-  var state: Dynamic;
-  var moneyValue: Int;
-  var upgradeMultiplier: Float;
-  var groundSpikeRange: Float;
-  var spikes: hl.types.ArrayObj<Dynamic>;
-  var light: tool.EntityLight.EntityLight;
-  var tcx: Int;
-  var tcy: Int;
-  var haveSeenHero: Bool;
-  var nextIsTeleport: Bool;
-  var countForTeleport: Int;
-  var sbFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var fxGoldGorger: libs.heaps.slib.SpriteLib.SpriteLib;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var state: en.mob.VacuumState;
+    public var moneyValue: Int;
+    public var upgradeMultiplier: Float;
+    public var groundSpikeRange: Float;
+    public var spikes: Array<Dynamic>;
+    public var light: tool.EntityLight;
+    public var tcx: Int;
+    public var tcy: Int;
+    public var haveSeenHero: Bool;
+    public var nextIsTeleport: Bool;
+    public var countForTeleport: Int;
+    public var sbFx: libs.heaps.slib.HSpriteBatch;
+    public var fxGoldGorger: libs.heaps.slib.SpriteLib;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): U28_VacuumCleaner {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function preloadGfx(): libs.heaps.slib.SpriteLib.SpriteLib {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.U28_VacuumCleaner {
+        throw "stub: create not decompiled";
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function preloadGfx(): libs.heaps.slib.SpriteLib {
+        throw "stub: preloadGfx not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function updateNextIsTeleport() {}
+    public function updateNextIsTeleport(): Void {
+    }
 
-  function resetNextIsTeleport(newCount: Dynamic) {}
+    public function resetNextIsTeleport(arg0: Ref): Void {
+    }
 
-  function teleportTo(x: Int, y: Int): Bool {}
+    public function teleportTo(arg0: Int, arg1: Int): Bool {
+        throw "stub: teleportTo not decompiled";
+    }
 
-  function addSpikes(tcx: Int, tcy: Int, width: Dynamic) {}
+    public function addSpikes(arg0: Int, arg1: Int, arg2: Ref): Void {
+    }
 
-  function pickUp(value: Dynamic) {}
+    public function pickUp(arg0: Ref): Void {
+    }
 
-  function upgrade(tier: Int, lifeToAdd: Dynamic, newUpgradeMul: Dynamic, instantEvolve: Dynamic) {}
+    public function upgrade(arg0: Int, arg1: Ref, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function endEvolve() {}
+    public function endEvolve(): Void {
+    }
 
-  function setAffectResistPerState() {}
+    public function setAffectResistPerState(): Void {
+    }
 
-  function updateVisual(goldPickValue: Dynamic) {}
+    public function updateVisual(arg0: Ref): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function drop(amount: Int, speed: Float) {}
+    public function drop(arg0: Int, arg1: Float): Void {
+    }
 
-  function dropStackedGold(goldAmount: Int, dropNumber: Int, speed: Dynamic) {}
+    public function dropStackedGold(arg0: Int, arg1: Int, arg2: Ref): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function walkToTarget() {}
+    public function walkToTarget(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function createBodyPart(): hl.types.ArrayObj<Dynamic> {}
+    public override function createBodyPart(): Array<Dynamic> {
+        throw "stub: createBodyPart not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

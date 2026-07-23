@@ -1,9 +1,12 @@
 package ui.hud.map;
+
 class MapMask extends h2d.Mask {
-  var fow: ui.hud.map.MapFow.MapFow;
+    public var fow: ui.hud.map.MapFow;
 
-  function __constructor__(fow: ui.hud.map.MapFow.MapFow) {}
+    public function new(arg0: ui.hud.map.MapFow) {
+        super();
+    }
 
-  function drawRec(ctx: h2d.RenderContext.RenderContext) {}
+    public override function drawRec(arg0: h2d.RenderContext): Void {
+    }
 }
-

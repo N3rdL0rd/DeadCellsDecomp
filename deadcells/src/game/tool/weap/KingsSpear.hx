@@ -1,15 +1,22 @@
 package tool.weap;
+
 class KingsSpear extends tool.Weapon {
-  var recentDeaths: Int;
+    public var recentDeaths: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function onOwnerCooldownEnd(k: String, idx: Int) {}
+    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function setWeaponGlow() {}
+    public override function setWeaponGlow(): Void {
+    }
 }
-

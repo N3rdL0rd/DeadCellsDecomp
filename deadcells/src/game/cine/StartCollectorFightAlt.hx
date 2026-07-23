@@ -1,10 +1,13 @@
 package cine;
+
 class StartCollectorFightAlt extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var boss: en.mob.boss.Collector.Collector;
+    public var hero: en.Hero;
+    public var boss: en.mob.boss.Collector;
 
-  function __constructor__(hero: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

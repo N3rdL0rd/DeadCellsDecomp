@@ -1,19 +1,28 @@
 package pow;
+
 class SmokeBomb extends Power {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function finishCast() {}
+    public function finishCast(): Void {
+    }
 
-  function onOwnerAttackDealt(atk: tool.atk.AttackData.AttackData, target: Entity) {}
+    public function onOwnerAttackDealt(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

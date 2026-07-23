@@ -1,18 +1,29 @@
 package tool.weap.bow;
+
 class Blowgun extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function getAnimRatioFromAng(arg0: Float): Float {
+        throw "stub: getAnimRatioFromAng not decompiled";
+    }
 
-  function getAnimRatioFromAng(ang: Float): Float {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function dynOnAttackAnim(cinf: Dynamic) {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
-
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

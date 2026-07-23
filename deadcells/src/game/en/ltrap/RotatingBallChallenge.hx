@@ -1,31 +1,47 @@
 package en.ltrap;
+
 class RotatingBallChallenge extends en.ltrap.RotatingBall {
-  var useOnChallenge: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var useOnChallenge: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, syncGroup: Int, radiusCase: Dynamic, newSpeed: Dynamic, forcedDir: Dynamic, useOnChallenge: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Ref) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function setChainSprite() {}
+    public override function setChainSprite(): Void {
+    }
 
-  function setBallSprite() {}
+    public override function setBallSprite(): Void {
+    }
 
-  function setBloodSprite() {}
+    public override function setBloodSprite(): Void {
+    }
 
-  function onHitHero(h: en.Hero.Hero) {}
+    public override function onHitHero(arg0: en.Hero): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

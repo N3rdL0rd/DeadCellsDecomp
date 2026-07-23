@@ -1,24 +1,35 @@
 package en.gr;
-class ChickenGrenade extends en.Grenade.Grenade {
-  var parentItem: tool.InventItem.InventItem;
-  var parentHero: en.Hero.Hero;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  function __constructor__(e: Entity, pHero: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+class ChickenGrenade extends en.Grenade {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var parentItem: tool.InventItem;
+    public var parentHero: en.Hero;
 
-  function init() {}
+    public function new(arg0: Entity, arg1: en.Hero, arg2: tool.InventItem) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function init(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function initGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function explosion(g: en.Grenade.Grenade, power: Float, range: Float, bonus: Float, stackTime: Float) {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function explosion(arg0: en.Grenade, arg1: Float, arg2: Float, arg3: Float, arg4: Float): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
+
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

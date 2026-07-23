@@ -1,25 +1,38 @@
 package tool.mainSkills;
+
 class Jump extends tool.HeroMainSkill {
-  var holdNormalJumpLock: Float;
-  var blackboard: hxbit.Macros.Macros;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var holdNormalJumpLock: Float;
+    public var blackboard: tool.mainSkills.blackboards.JumpBlackBoard;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function passiveFixedUpdate() {}
+    public override function passiveFixedUpdate(): Void {
+    }
 
-  function canUse(): Bool {}
+    public override function canUse(): Bool {
+        throw "stub: canUse not decompiled";
+    }
 
-  function isUsingInputs(): Bool {}
+    public override function isUsingInputs(): Bool {
+        throw "stub: isUsingInputs not decompiled";
+    }
 
-  function onStart() {}
+    public override function onStart(): Void {
+    }
 
-  function normalJump() {}
+    public function normalJump(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

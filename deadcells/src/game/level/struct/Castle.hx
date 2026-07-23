@@ -1,25 +1,35 @@
 package level.struct;
+
 class Castle extends level.LevelStruct {
-  var numHallway: Int;
-  var branches: hl.types.ArrayObj<Dynamic>;
-  var zDoors: hl.types.ArrayObj<Dynamic>;
-  var zBosses: hl.types.ArrayObj<Dynamic>;
-  static var hallwayBiome: hl.types.ArrayObj<Dynamic>;
+    public static var hallwayBiome: Array<Dynamic>;
+    public var numHallway: Int;
+    public var branches: Array<Dynamic>;
+    public var zDoors: Array<Dynamic>;
+    public var zBosses: Array<Dynamic>;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildHallways() {}
+    public function buildHallways(): Void {
+    }
 
-  function createHallway(mainEntrance: level.RoomNode.RoomNode, mainExit: level.RoomNode.RoomNode) {}
+    public function createHallway(arg0: level.RoomNode, arg1: level.RoomNode): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function buildTriggeredDoors(cRooms: hl.types.ArrayObj<Dynamic>) {}
+    public override function buildTriggeredDoors(arg0: Array<Dynamic>): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 }
-

@@ -1,30 +1,43 @@
 package en.deco;
+
 class GodRay extends en.Deco {
-  var godRays: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var baseAlpha: Float;
-  var offsetAlpha: Float;
-  var speedAlpha: Float;
-  var dust: Dynamic;
-  var dustColor: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var godRays: libs.heaps.slib.HSpriteBE;
+    public var baseAlpha: Float;
+    public var offsetAlpha: Float;
+    public var speedAlpha: Float;
+    public var dust: en.deco.Dust;
+    public var dustColor: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, baseAlpha: Float, offsetAlpha: Float, speedAlpha: Float, dust: Dynamic, dustColor: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float, arg5: Float, arg6: en.deco.Dust, arg7: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

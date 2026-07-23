@@ -1,44 +1,64 @@
 package en.inter;
+
 class SecretLever extends en.Interactive {
-  var portal: en.inter.Portal.Portal;
-  var isUsed: Bool;
-  var runeScale: Float;
-  var runeShake: Float;
-  var rune: libs.heaps.slib.HSprite.HSprite;
-  var int: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var portal: en.inter.Portal;
+    public var isUsed: Bool;
+    public var runeScale: Float;
+    public var runeShake: Float;
+    public var rune: libs.heaps.slib.HSprite;
+    public var int: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, portal: en.inter.Portal.Portal) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.inter.Portal) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function enableOutline() {}
+    public function enableOutline(): Void {
+    }
 
-  function disableOutline() {}
+    public function disableOutline(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

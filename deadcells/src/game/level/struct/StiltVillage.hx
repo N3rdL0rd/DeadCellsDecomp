@@ -1,28 +1,43 @@
 package level.struct;
+
 class StiltVillage extends level.LevelStruct {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public function createLargeBuildingBefore(arg0: level.RoomNode, arg1: Int, arg2: level.RoomNode): Void {
+    }
 
-  function createLargeBuildingBefore(tr: level.RoomNode.RoomNode, innerWid: Int, topContent: level.RoomNode.RoomNode) {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public function addBuildingContent(arg0: level.RoomNode, arg1: Int, arg2: level.RoomNode, arg3: level.ZDoorContentClue): Void {
+    }
 
-  function addBuildingContent(bn: level.RoomNode.RoomNode, combatRooms: Int, content: level.RoomNode.RoomNode, clue: Dynamic) {}
+    public override function addTeleports(): Void {
+    }
 
-  function addTeleports() {}
+    public override function getOutsideLoreRoomSpot(): level.RoomNode {
+        throw "stub: getOutsideLoreRoomSpot not decompiled";
+    }
 
-  function getOutsideLoreRoomSpot(): level.RoomNode.RoomNode {}
+    public override function getInsideLoreRoomSpot(): level.RoomNode {
+        throw "stub: getInsideLoreRoomSpot not decompiled";
+    }
 
-  function getInsideLoreRoomSpot(): level.RoomNode.RoomNode {}
+    public override function finalize(): Void {
+    }
 
-  function finalize() {}
+    public override function buildEssentialLoreRooms(): Void {
+    }
 
-  function buildEssentialLoreRooms() {}
+    public override function buildLoreRooms(): Void {
+    }
 
-  function buildLoreRooms() {}
-
-  function addLoreRoom(lore: Dynamic, overrideStructMode: Dynamic) {}
+    public override function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 }
-

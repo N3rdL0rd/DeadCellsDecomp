@@ -1,62 +1,91 @@
 package en.mob;
+
 class Mimic extends en.Mob {
-  var jumpData: hxbit.Macros.Macros;
-  var explode: tool.skill.OldMobSkill.OldMobSkill;
-  var hideSpr: libs.heaps.slib.HSprite.HSprite;
-  var spikesInf: Dynamic;
-  var explodeInf: Dynamic;
-  var spikes: tool.skill.OldMobSkill.OldMobSkill;
-  var teleJump: tool.skill.mobSkill.TeleJump.TeleJump;
-  var sfxBip: hxd.res.Sound.Sound;
-  var sfxAppear: hxd.res.Sound.Sound;
-  var shouldExplode: Bool;
-  var hasAppearFxBeenPlayed: Bool;
-  var angleSign: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var explode: tool.skill.OldMobSkill;
+    public var hideSpr: libs.heaps.slib.HSprite;
+    public var spikesInf: Dynamic;
+    public var explodeInf: Dynamic;
+    public var spikes: tool.skill.OldMobSkill;
+    public var teleJump: tool.skill.mobSkill.TeleJump;
+    public var sfxBip: hxd.res.Sound;
+    public var sfxAppear: hxd.res.Sound;
+    public var shouldExplode: Bool;
+    public var hasAppearFxBeenPlayed: Bool;
+    public var angleSign: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Mimic {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Mimic {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function reveal() {}
+    public override function reveal(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function updateEnrageEffects(delay: Float) {}
+    public function updateEnrageEffects(arg0: Float): Void {
+    }
 
-  function smokeEffect(color: Dynamic, dy: Dynamic, alpha: Dynamic) {}
+    public function smokeEffect(arg0: Ref, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function canBeRevealedBy(h: en.Hero.Hero): Bool {}
+    public override function canBeRevealedBy(arg0: en.Hero): Bool {
+        throw "stub: canBeRevealedBy not decompiled";
+    }
 
-  function shootSpikes() {}
+    public function shootSpikes(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

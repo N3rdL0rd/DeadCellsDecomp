@@ -1,94 +1,147 @@
 package level;
-class MobGenInfos {
-  var mobId: String;
-  var quantityFactor: Float;
-  var singleRoomRatio: Float;
-  var minCombatsBefore: Int;
-  var maxCombatsBefore: Int;
-  var minDiff: Int;
-  var maxDiff: Int;
-  var requiredLevel: String;
-  var requiredDepth: hl.types.ArrayDyn;
-  var maxSpawn: Dynamic;
-  var cdbProps: Dynamic;
-  var minPackSize: Int;
-  var maxPackSize: Int;
-  var spawnWith: hl.types.ArrayObj<Dynamic>;
-
-  static function fromCdb(data: Dynamic): MobGenInfos {}
-
-  function __constructor__(id: String, qty: Dynamic) {}
-
-  function setPack(min: Int, max: Dynamic) {}
-
-  function getPackCount(rndFunc: Dynamic): Int {}
-
-  function setMaxSpawn(count: Int) {}
-}
 
 class MobsGen {
-  var user: User;
-  var lInfos: Dynamic;
-  var maps: hl.types.ArrayObj<Dynamic>;
-  var rooms: hl.types.ArrayObj<Dynamic>;
-  var rseed: libs.Rand.Rand;
-  var minMobs: Float;
-  var totalMobCount: Float;
-  var bonusTotalMobCount: Int;
-  var platforms: hl.types.ArrayObj<Dynamic>;
-  var pfPerMob: Dynamic;
-  var roomMaxMobs: haxe.ds.ObjectMap;
-  var pfMaxMobs: haxe.ds.IntMap<Dynamic>;
-  var inStone: Bool;
-  var ltick: Dynamic;
-  static var LAST_LOG: hl.types.ArrayObj<Dynamic>;
-  static var LAST_MIN: Int;
-  static var LAST_TOTAL: Int;
-  static var LAST_ELITES: Int;
-  static var MIN_PLATFORM_WIDTH: Int;
+    public static var LAST_LOG: Array<Dynamic>;
+    public static var LAST_MIN: Int;
+    public static var LAST_TOTAL: Int;
+    public static var LAST_ELITES: Int;
+    public static var MIN_PLATFORM_WIDTH: Int;
+    public var user: User;
+    public var lInfos: Dynamic;
+    public var maps: Array<Dynamic>;
+    public var rooms: Array<Dynamic>;
+    public var rseed: libs.Rand;
+    public var minMobs: Float;
+    public var totalMobCount: Float;
+    public var bonusTotalMobCount: Int;
+    public var platforms: Array<Dynamic>;
+    public var pfPerMob: Dynamic;
+    public var roomMaxMobs: haxe.ds.ObjectMap;
+    public var pfMaxMobs: haxe.ds.IntMap;
+    public var inStone: Bool;
+    public var ltick: Dynamic;
 
-  function __constructor__(u: User, rseed: libs.Rand.Rand, maps: hl.types.ArrayObj<Dynamic>, inStone: Dynamic, loadingTick: Dynamic, bonusTotalMobCount: Dynamic) {}
+    public function new(arg0: User, arg1: libs.Rand, arg2: Array<Dynamic>, arg3: Ref, arg4: Dynamic, arg5: Ref) {
+    }
 
-  static function parsePlatforms(map: level.LevelMap.LevelMap, room: level.Room.Room): hl.types.ArrayObj<Dynamic> {}
+    public static function parsePlatforms(arg0: level.LevelMap, arg1: level.Room): Array<Dynamic> {
+        throw "stub: parsePlatforms not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function filterAvailableMobs(m: Dynamic): Bool {}
+    public function filterAvailableMobs(arg0: Dynamic): Bool {
+        throw "stub: filterAvailableMobs not decompiled";
+    }
 
-  function getAvailableMobs(extraMobs: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function getAvailableMobs(arg0: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: getAvailableMobs not decompiled";
+    }
 
-  function placeSingleRoomMobs(m: level.MobsGen.MobsGen, singleRoomsUsed: haxe.ds.IntMap<Dynamic>): Bool {}
+    public function placeSingleRoomMobs(arg0: level.MobGenInfos, arg1: haxe.ds.IntMap): Bool {
+        throw "stub: placeSingleRoomMobs not decompiled";
+    }
 
-  function placeClassicMobs(m: level.MobsGen.MobsGen, quantitySum: Float): Bool {}
+    public function placeClassicMobs(arg0: level.MobGenInfos, arg1: Float): Bool {
+        throw "stub: placeClassicMobs not decompiled";
+    }
 
-  function placeMobsOnPlatforms(avMobs: hl.types.ArrayObj<Dynamic>) {}
+    public function placeMobsOnPlatforms(arg0: Array<Dynamic>): Void {
+    }
 
-  function getLevelMaxDist(): Int {}
+    public function getLevelMaxDist(): Int {
+        throw "stub: getLevelMaxDist not decompiled";
+    }
 
-  function fillPlacementData(placedMobs: hl.types.ArrayObj<Dynamic>, levelMaxDist: Int): Int {}
+    public function fillPlacementData(arg0: Array<Dynamic>, arg1: Int): Int {
+        throw "stub: fillPlacementData not decompiled";
+    }
 
-  function addBosses(placedMobs: hl.types.ArrayObj<Dynamic>, realPlacedCount: Int): Int {}
+    public function addBosses(arg0: Array<Dynamic>, arg1: Int): Int {
+        throw "stub: addBosses not decompiled";
+    }
 
-  function eliteTransform(placedMobs: hl.types.ArrayObj<Dynamic>, isChallenge: Bool) {}
+    public function eliteTransform(arg0: Array<Dynamic>, arg1: Bool): Void {
+    }
 
-  function addElites(placedMobs: hl.types.ArrayObj<Dynamic>) {}
+    public function addElites(arg0: Array<Dynamic>): Void {
+    }
 
-  function processRoomMarkers(levelMaxDist: Int) {}
+    public function processRoomMarkers(arg0: Int): Void {
+    }
 
-  function generate(extraMobs: hl.types.ArrayObj<Dynamic>) {}
+    public function generate(arg0: Array<Dynamic>): Void {
+    }
 
-  function hasRequiredDepth(levelDepth: Int, depthList: hl.types.ArrayDyn): Bool {}
+    public function hasRequiredDepth(arg0: Int, arg1: Array<Dynamic>): Bool {
+        throw "stub: hasRequiredDepth not decompiled";
+    }
 
-  function getDmgTier(map: level.LevelMap.LevelMap, room: level.Room.Room, levelMaxDist: Int): Int {}
+    public function getDmgTier(arg0: level.LevelMap, arg1: level.Room, arg2: Int): Int {
+        throw "stub: getDmgTier not decompiled";
+    }
 
-  function getLifeTier(map: level.LevelMap.LevelMap, room: level.Room.Room, levelMaxDist: Int): Int {}
+    public function getLifeTier(arg0: level.LevelMap, arg1: level.Room, arg2: Int): Int {
+        throw "stub: getLifeTier not decompiled";
+    }
 
-  function pickBestPlatform(lmob: level.MobsGen.MobsGen, r: level.Room.Room): Dynamic {}
+    public function pickBestPlatform(arg0: level.MobGenInfos, arg1: level.Room): level.MobPlatform {
+        throw "stub: pickBestPlatform not decompiled";
+    }
 
-  function testMobConstraint(pf: Dynamic, lm: level.MobsGen.MobsGen): Bool {}
+    public function testMobConstraint(arg0: level.MobPlatform, arg1: level.MobGenInfos): Bool {
+        throw "stub: testMobConstraint not decompiled";
+    }
 
-  function countTotal(room: level.Room.Room, pf: Dynamic): Float {}
+    public function countTotal(arg0: level.Room, arg1: level.MobPlatform): Float {
+        throw "stub: countTotal not decompiled";
+    }
 
-  function countKind(k: String, room: level.Room.Room, pf: Dynamic): Int {}
+    public function countKind(arg0: String, arg1: level.Room, arg2: level.MobPlatform): Int {
+        throw "stub: countKind not decompiled";
+    }
 }
 
+class MobPlatform extends level.Platform {
+    public var room: level.Room;
+    public var mobs: Array<Dynamic>;
+
+    public function new(arg0: level.LevelMap, arg1: level.Room, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
+}
+
+class MobGenInfos {
+    public var mobId: String;
+    public var quantityFactor: Float;
+    public var singleRoomRatio: Float;
+    public var minCombatsBefore: Int;
+    public var maxCombatsBefore: Int;
+    public var minDiff: Int;
+    public var maxDiff: Int;
+    public var requiredLevel: String;
+    public var requiredDepth: Array<Dynamic>;
+    public var maxSpawn: Dynamic;
+    public var cdbProps: Dynamic;
+    public var minPackSize: Int;
+    public var maxPackSize: Int;
+    public var spawnWith: Array<Dynamic>;
+
+    public function new(arg0: String, arg1: Ref) {
+    }
+
+    public static function fromCdb(arg0: Dynamic): level.MobGenInfos {
+        throw "stub: fromCdb not decompiled";
+    }
+
+    public function setPack(arg0: Int, arg1: Dynamic): Void {
+    }
+
+    public function getPackCount(arg0: Dynamic): Int {
+        throw "stub: getPackCount not decompiled";
+    }
+
+    public function setMaxSpawn(arg0: Int): Void {
+    }
+}

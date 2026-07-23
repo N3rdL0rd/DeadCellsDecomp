@@ -1,70 +1,105 @@
 package en.mob;
+
 class TimeKeeperBot extends en.Mob {
-  var prevSprX: Float;
-  var dash: tool.skill.OldSkill.OldSkill;
-  var dashInf: Dynamic;
-  var isDashing: Bool;
-  var dashCount: Int;
-  var dashArea: tool.Area.Area;
-  var smokebomb: tool.skill.OldSkill.OldSkill;
-  var smokebombInf: Dynamic;
-  var smokebombDest: tool.CPoint.CPoint;
-  var wasStunned: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var prevSprX: Float;
+    public var dash: tool.skill.OldSkill;
+    public var dashInf: Dynamic;
+    public var isDashing: Bool;
+    public var dashCount: Int;
+    public var dashArea: tool.Area;
+    public var smokebomb: tool.skill.OldSkill;
+    public var smokebombInf: Dynamic;
+    public var smokebombDest: tool.CPoint;
+    public var wasStunned: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): TimeKeeperBot {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.TimeKeeperBot {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function prepareSmokebomb() {}
+    public function prepareSmokebomb(): Void {
+    }
 
-  function getPFDestX(pf: level.Platform.Platform): Int {}
+    public function getPFDestX(arg0: level.Platform): Int {
+        throw "stub: getPFDestX not decompiled";
+    }
 
-  function onDashing() {}
+    public function onDashing(): Void {
+    }
 
-  function prepareDashAttk() {}
+    public function prepareDashAttk(): Void {
+    }
 
-  function endDash(forceEnd: Bool) {}
+    public function endDash(arg0: Bool): Void {
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onStep() {}
+    public function onStep(): Void {
+    }
 
-  function reveal() {}
+    public override function reveal(): Void {
+    }
 
-  function preRevealAnim(r: Float) {}
+    public override function preRevealAnim(arg0: Float): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function hide(revealDurationS: Float) {}
+    public override function hide(arg0: Float): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function canBeRevealedBy(h: en.Hero.Hero): Bool {}
+    public override function canBeRevealedBy(arg0: en.Hero): Bool {
+        throw "stub: canBeRevealedBy not decompiled";
+    }
 
-  function onDetectRevealer(h: en.Hero.Hero) {}
+    public override function onDetectRevealer(arg0: en.Hero): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

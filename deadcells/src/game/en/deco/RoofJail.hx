@@ -1,20 +1,30 @@
 package en.deco;
+
 class RoofJail extends en.deco.Pendulum {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  function __constructor__(lvl: pr.Level.Level, posX: Float, posY: Float) {}
+    public function new(arg0: pr.Level, arg1: Float, arg2: Float) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initTingle(dir: Int, fromHero: Bool) {}
+    public override function initTingle(arg0: Int, arg1: Bool): Void {
+    }
 
-  function initChain(offset: Dynamic) {}
+    public override function initChain(arg0: Ref): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

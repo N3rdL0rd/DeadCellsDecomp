@@ -1,16 +1,26 @@
 package tool.weap;
+
 class LightningWhip extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function getNextTarget(arg0: Array<Dynamic>, arg1: Float): Entity {
+        throw "stub: getNextTarget not decompiled";
+    }
 
-  function getNextTarget(prevTargets: hl.types.ArrayObj<Dynamic>, rangeCase: Float): Entity {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
-
-  function checkForQuadTreeElementsOnWay(startX: Float, startY: Float, endX: Float, endY: Float) {}
+    public function checkForQuadTreeElementsOnWay(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 }
-

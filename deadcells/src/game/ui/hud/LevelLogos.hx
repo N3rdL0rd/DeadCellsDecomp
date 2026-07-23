@@ -1,17 +1,24 @@
 package ui.hud;
+
 class LevelLogos {
-  var textureCoordinateByLevelKind: Dynamic;
-  var levelLogoTexture: h3d.mat.Texture.Texture;
-  static var TEXTURE_COLUMN_COUNT: Int;
+    public static var TEXTURE_COLUMN_COUNT: Int;
+    public var textureCoordinateByLevelKind: Dynamic;
+    public var levelLogoTexture: h3d.mat.Texture;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function getLevelLogo(levelId: String): h2d.Tile.Tile {}
+    public function getLevelLogo(arg0: String): h2d.Tile {
+        throw "stub: getLevelLogo not decompiled";
+    }
 
-  function preventAutoDispose() {}
+    public function preventAutoDispose(): Void {
+    }
 
-  function initLogoTexture() {}
+    public function initLogoTexture(): Void {
+    }
 
-  function getLevelBannerPixels(levelId: String): hxd.Pixels.Pixels {}
+    public function getLevelBannerPixels(arg0: String): hxd.Pixels {
+        throw "stub: getLevelBannerPixels not decompiled";
+    }
 }
-

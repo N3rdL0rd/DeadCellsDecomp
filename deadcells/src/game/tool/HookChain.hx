@@ -1,52 +1,69 @@
 package tool;
+
 class HookChain extends libs.Process {
-  var wrapper: h2d.Object.Object;
-  var owner: Entity;
-  var parts: hl.types.ArrayObj<Dynamic>;
-  var grappling: libs.heaps.slib.HSprite.HSprite;
-  var grapplingWid: Int;
-  var hookRadius: Float;
-  var visible: Bool;
-  var audible: Bool;
-  var maxChainLength: Float;
-  var ratio: Float;
-  var oscil: Float;
-  var tensionOverride: Dynamic;
-  var dir: Int;
-  var hooked: Entity;
-  var hookedSomeone: Bool;
-  var item: tool.InventItem.InventItem;
-  var atkData: tool.atk.AttackData.AttackData;
-  var targetGetter: Dynamic;
-  var enableOnionTrail: Bool;
-  var onions: hl.types.ArrayObj<Dynamic>;
+    public var wrapper: h2d.Object;
+    public var owner: Entity;
+    public var parts: Array<Dynamic>;
+    public var grappling: libs.heaps.slib.HSprite;
+    public var grapplingWid: Int;
+    public var hookRadius: Float;
+    public var visible: Bool;
+    public var audible: Bool;
+    public var maxChainLength: Float;
+    public var ratio: Float;
+    public var oscil: Float;
+    public var tensionOverride: Dynamic;
+    public var dir: Int;
+    public var hooked: Entity;
+    public var hookedSomeone: Bool;
+    public var item: tool.InventItem;
+    public var atkData: tool.atk.AttackData;
+    public var targetGetter: Dynamic;
+    public var enableOnionTrail: Bool;
+    public var onions: Array<Dynamic>;
 
-  function onBlockedBy(e: Entity) {}
+    public function new(arg0: Entity, arg1: String, arg2: String, arg3: Float, arg4: Dynamic) {
+        super();
+    }
 
-  function onHook(e: Entity) {}
+    public function colorize(arg0: Int): Void {
+    }
 
-  function onRetractStart() {}
+    public override function onDispose(): Void {
+    }
 
-  function onRetractComplete(hasHookedSomeone: Bool) {}
+    public function launch(arg0: tool.atk.AttackData, arg1: Dynamic): Void {
+    }
 
-  function onReachWall() {}
+    public function isExtending(): Bool {
+        throw "stub: isExtending not decompiled";
+    }
 
-  function onReachNothing() {}
+    public function isRetracting(): Bool {
+        throw "stub: isRetracting not decompiled";
+    }
 
-  function __constructor__(e: Entity, k: String, idProjectile: String, len: Float, targetGetter: Dynamic) {}
+    public override function postUpdate(): Void {
+    }
 
-  function colorize(c: Int) {}
+    public override function update(): Void {
+    }
 
-  function onDispose() {}
+    public function onBlockedBy(arg0: Entity): Void {
+    }
 
-  function launch(a: tool.atk.AttackData.AttackData, dir: Dynamic) {}
+    public function onHook(arg0: Entity): Void {
+    }
 
-  function isExtending(): Bool {}
+    public function onRetractComplete(arg0: Bool): Void {
+    }
 
-  function isRetracting(): Bool {}
+    public function onRetractStart(): Void {
+    }
 
-  function postUpdate() {}
+    public function onReachWall(): Void {
+    }
 
-  function update() {}
+    public function onReachNothing(): Void {
+    }
 }
-

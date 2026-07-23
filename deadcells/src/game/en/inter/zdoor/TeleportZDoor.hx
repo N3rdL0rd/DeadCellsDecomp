@@ -1,40 +1,53 @@
 package en.inter.zdoor;
+
 class TeleportZDoor extends en.inter.ZDoor {
-  var isExit: Bool;
-  var lightVisible: Bool;
-  var root: h2d.Mask.Mask;
-  var bg: libs.heaps.slib.HSprite.HSprite;
-  var ring: libs.heaps.slib.HSprite.HSprite;
-  var add: libs.heaps.slib.HSprite.HSprite;
-  var displace1: libs.heaps.slib.HSprite.HSprite;
-  var displace2: libs.heaps.slib.HSprite.HSprite;
-  var alphaMap: hxsl.Macros.Macros;
-  var alphaMapSU: Float;
-  var alphaMapSV: Float;
-  var alphaMapDU: Float;
-  var alphaMapDV: Float;
-  var floatingY: Float;
-  var varDX: Float;
-  var varDY: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var isExit: Bool;
+    public var lightVisible: Bool;
+    public var root: h2d.Mask;
+    public var bg: libs.heaps.slib.HSprite;
+    public var ring: libs.heaps.slib.HSprite;
+    public var add: libs.heaps.slib.HSprite;
+    public var displace1: libs.heaps.slib.HSprite;
+    public var displace2: libs.heaps.slib.HSprite;
+    public var alphaMap: h3d.shader.AlphaMap;
+    public var alphaMapSU: Float;
+    public var alphaMapSV: Float;
+    public var alphaMapDU: Float;
+    public var alphaMapDV: Float;
+    public var floatingY: Float;
+    public var varDX: Float;
+    public var varDY: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, destMap: level.LevelMap.LevelMap, linkId: Int, lockZDoor: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Ref) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function enter(h: en.Hero.Hero) {}
+    public override function enter(arg0: en.Hero): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

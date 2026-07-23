@@ -1,37 +1,55 @@
 package en.bu;
+
 class DookuExplosiveFireBall extends en.Bullet {
-  var color: Int;
-  var scaleM: Float;
-  var explosionRadius: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var color: Int;
+    public var scaleM: Float;
+    public var explosionRadius: Float;
 
-  function beforeHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Ref) {
+        super();
+    }
 
-  function onBlock(byEnt: Bool) {}
+    public function init(): Void {
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, delay: Float, c: Int, scaleMultiplier: Dynamic) {}
+    public override function initGfx(): Void {
+    }
 
-  function init() {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function initGfx() {}
+    public function explode(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function explode() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function onBlock(arg0: Bool): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function beforeHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 }
-

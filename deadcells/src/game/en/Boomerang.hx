@@ -1,60 +1,89 @@
 package en;
+
 class Boomerang extends Entity {
-  var ang: Float;
-  var comingBack: Bool;
-  var isPowerful: Bool;
-  var item: tool.InventItem.InventItem;
-  var inf: Dynamic;
-  var origin: tool.FPoint.FPoint;
-  var maxDistCase: Float;
-  var backHits: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var ang: Float;
+    public var comingBack: Bool;
+    public var isPowerful: Bool;
+    public var item: tool.InventItem;
+    public var inf: Dynamic;
+    public var origin: tool.FPoint;
+    public var maxDistCase: Float;
+    public var backHits: Int;
 
-  function onDispose() {}
+    public function new(arg0: Entity, arg1: tool.InventItem, arg2: Float) {
+        super();
+    }
 
-  function onObstacle() {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function onFixedUpdate() {}
+    public override function initGfx(): Void {
+    }
 
-  function onPostUpdate() {}
+    public function updateSkin(): Void {
+    }
 
-  function onTouchTarget(e: Entity): Bool {}
+    public override function dispose(): Void {
+    }
 
-  function __constructor__(from: Entity, i: tool.InventItem.InventItem, ang: Float) {}
+    public override function onStep(): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function initGfx() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function updateSkin() {}
+    public function retrieve(): Void {
+    }
 
-  function dispose() {}
+    public function comeBack(arg0: Bool): Void {
+    }
 
-  function onStep() {}
+    public override function get_targetSprPosY(): Float {
+        throw "stub: get_targetSprPosY not decompiled";
+    }
 
-  function onTouch(e: Entity) {}
+    public override function postUpdate(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function retrieve() {}
+    public override function onDie(): Void {
+    }
 
-  function comeBack(causedByObstacle: Bool) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function get_targetSprPosY(): Float {}
+    public override function unserializeInit(): Void {
+    }
 
-  function postUpdate() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function onDie() {}
+    public function onFixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public function onPostUpdate(): Void {
+    }
 
-  function unserializeInit() {}
+    public function onObstacle(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onTouchTarget(arg0: Entity): Bool {
+        throw "stub: onTouchTarget not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onDispose(): Void {
+    }
 }
-

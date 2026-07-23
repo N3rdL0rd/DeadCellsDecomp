@@ -1,70 +1,105 @@
 package en.mob;
+
 class U28_Steal extends en.Mob {
-  var jumpBack: tool.skill.OldSkill.OldSkill;
-  var jumpIn: tool.skill.OldSkill.OldSkill;
-  var runSkl: tool.skill.OldMobSkill.OldMobSkill;
-  var nextIsJumpBack: Bool;
-  var jumpInDir: Int;
-  var comboHit: Bool;
-  var jumpData: hxbit.Macros.Macros;
-  var teleJump: tool.skill.mobSkill.TeleJump.TeleJump;
-  var onGoldPile: Bool;
-  var goldPile: en.inter.PileOfGold.PileOfGold;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var jumpBack: tool.skill.OldSkill;
+    public var jumpIn: tool.skill.OldSkill;
+    public var runSkl: tool.skill.OldMobSkill;
+    public var nextIsJumpBack: Bool;
+    public var jumpInDir: Int;
+    public var comboHit: Bool;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var teleJump: tool.skill.mobSkill.TeleJump;
+    public var onGoldPile: Bool;
+    public var goldPile: en.inter.PileOfGold;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): U28_Steal {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.U28_Steal {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function getGoldPile() {}
+    public function getGoldPile(): Void {
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function stealMoneyToHero(hero: Entity, count: Int) {}
+    public function stealMoneyToHero(arg0: Entity, arg1: Int): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function setAttackTarget(target: Entity) {}
+    public override function setAttackTarget(arg0: Entity): Void {
+    }
 
-  function isFacing(e: Entity): Bool {}
+    public function isFacing(arg0: Entity): Bool {
+        throw "stub: isFacing not decompiled";
+    }
 
-  function setNemesisTarget(e: Entity) {}
+    public override function setNemesisTarget(arg0: Entity): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function cancelChain() {}
+    public function cancelChain(): Void {
+    }
 
-  function onDelayedVolteStart() {}
+    public override function onDelayedVolteStart(): Void {
+    }
 
-  function onBreach(a: tool.atk.AttackData.AttackData) {}
+    public override function onBreach(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

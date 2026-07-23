@@ -1,72 +1,108 @@
 package tool;
+
 class TargetHelper {
-  var owner: Entity;
-  var currents: hl.types.ArrayObj<Dynamic>;
+    public var owner: Entity;
+    public var currents: Array<Dynamic>;
 
-  function __constructor__(all: hl.types.ArrayObj<Dynamic>) {}
+    public function new(arg0: Array<Dynamic>) {
+    }
 
-  function init(e: Entity): TargetHelper {}
+    public function init(arg0: Entity): tool.TargetHelper {
+        throw "stub: init not decompiled";
+    }
 
-  function add(e: Entity) {}
+    public function add(arg0: Entity): Void {
+    }
 
-  function remove(e: Entity) {}
+    public function remove(arg0: Entity): Void {
+    }
 
-  function filterByArea(a: tool.Area.Area) {}
+    public function filterByArea(arg0: tool.Area): Void {
+    }
 
-  function filterByDistance(maxDistCase: Float, pow: Dynamic, origin: Entity) {}
+    public function filterByDistance(arg0: Float, arg1: Dynamic, arg2: Entity): Void {
+    }
 
-  function filterByGrenadeDistance(maxDistCase: Float, pow: Dynamic) {}
+    public function filterByGrenadeDistance(arg0: Float, arg1: Dynamic): Void {
+    }
 
-  function scoreDistance(maxDistCase: Float, multiplier: Dynamic) {}
+    public function scoreDistance(arg0: Float, arg1: Ref): Void {
+    }
 
-  function scoreOne(e: Entity, s: Float) {}
+    public function scoreOne(arg0: Entity, arg1: Float): Void {
+    }
 
-  function flyingMob(pow: Float) {}
+    public function flyingMob(arg0: Float): Void {
+    }
 
-  function importantMob(pow: Float) {}
+    public function importantMob(arg0: Float): Void {
+    }
 
-  function closestTo(e: Entity, maxDistCase: Float, pow: Dynamic) {}
+    public function closestTo(arg0: Entity, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function filterByClass(c: hl.Class) {}
+    public function filterByClass(arg0: hl.Class): Void {
+    }
 
-  function removeBreakables() {}
+    public function removeBreakables(): Void {
+    }
 
-  function is(c: hl.Class, pow: Dynamic) {}
+    public function is(arg0: hl.Class, arg1: Dynamic): Void {
+    }
 
-  function weaks(pow: Dynamic) {}
+    public function weaks(arg0: Dynamic): Void {
+    }
 
-  function wounded(pow: Dynamic) {}
+    public function wounded(arg0: Dynamic): Void {
+    }
 
-  function same(e: Entity, pow: Dynamic) {}
+    public function same(arg0: Entity, arg1: Dynamic): Void {
+    }
 
-  function canBeElite(pow: Dynamic) {}
+    public function canBeElite(arg0: Dynamic): Void {
+    }
 
-  function keepIf(f: Dynamic) {}
+    public function keepIf(arg0: Dynamic): Void {
+    }
 
-  function removeIf(f: Dynamic) {}
+    public function removeIf(arg0: Dynamic): Void {
+    }
 
-  function filterOutIf(f: Dynamic) {}
+    public function filterOutIf(arg0: Dynamic): Void {
+    }
 
-  function filterByDeltaCells(cells: haxe.ds.IntMap<Dynamic>) {}
+    public function filterByDeltaCells(arg0: haxe.ds.IntMap): Void {
+    }
 
-  function filterBySight(otherSource: Entity, ignoreOneWay: Dynamic, ignoreSpotType: Dynamic) {}
+    public function filterBySight(arg0: Entity, arg1: Ref, arg2: Dynamic): Void {
+    }
 
-  function filterInCollisions() {}
+    public function filterInCollisions(): Void {
+    }
 
-  function filterUntargetables() {}
+    public function filterUntargetables(): Void {
+    }
 
-  function filterGlobalShieldeds() {}
+    public function filterGlobalShieldeds(): Void {
+    }
 
-  function filterAng(ang: Float, idealMaxAngDist: Float, maxAngDist: Float, pow: Dynamic) {}
+    public function filterAng(arg0: Float, arg1: Float, arg2: Float, arg3: Dynamic): Void {
+    }
 
-  function filterOnlyInFront() {}
+    public function filterOnlyInFront(): Void {
+    }
 
-  function front(pow: Dynamic) {}
+    public function front(arg0: Dynamic): Void {
+    }
 
-  function breakables(pow: Float) {}
+    public function breakables(arg0: Float): Void {
+    }
 
-  function getBest(): Entity {}
+    public function getBest(): Entity {
+        throw "stub: getBest not decompiled";
+    }
 
-  function hasRemaining(): Bool {}
+    public function hasRemaining(): Bool {
+        throw "stub: hasRemaining not decompiled";
+    }
 }
-

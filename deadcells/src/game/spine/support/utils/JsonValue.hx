@@ -1,93 +1,171 @@
 package spine.support.utils;
+
 class JsonDynamic {
-  var data: Dynamic;
-  var <none>: Dynamic;
+    public var data: Dynamic;
+    public var : Dynamic;
 
-  function __constructor__(data: Dynamic) {}
+    public function new(arg0: Dynamic) {
+    }
 
-  function has(key: String): Bool {}
+    public function has(arg0: String): Bool {
+        throw "stub: has not decompiled";
+    }
 
-  function require(key: String): Dynamic {}
+    public function require(arg0: String): Dynamic {
+        throw "stub: require not decompiled";
+    }
 
-  function get(key: String): Dynamic {}
+    public function get(arg0: String): Dynamic {
+        throw "stub: get not decompiled";
+    }
 
-  function getChild(key: String): Dynamic {}
+    public function getChild(arg0: String): Dynamic {
+        throw "stub: getChild not decompiled";
+    }
 
-  function getString(key: String, defaultValue: String): String {}
+    public function getString(arg0: String, arg1: String): String {
+        throw "stub: getString not decompiled";
+    }
 
-  function getFloat(key: Dynamic, defaultValue: Dynamic): Float {}
+    public function getFloat(arg0: Dynamic, arg1: Ref): Float {
+        throw "stub: getFloat not decompiled";
+    }
 
-  function getInt(key: String, defaultValue: Dynamic): Int {}
+    public function getInt(arg0: String, arg1: Ref): Int {
+        throw "stub: getInt not decompiled";
+    }
 
-  function getBoolean(key: String, defaultValue: Dynamic): Bool {}
+    public function getBoolean(arg0: String, arg1: Ref): Bool {
+        throw "stub: getBoolean not decompiled";
+    }
 
-  function asString(): String {}
+    public function asString(): String {
+        throw "stub: asString not decompiled";
+    }
 
-  function asFloatArray(): hl.types.ArrayBytes<Float> {}
+    public function asFloatArray(): Array<Float> {
+        throw "stub: asFloatArray not decompiled";
+    }
 
-  function asShortArray(): hl.types.ArrayBytes<Int> {}
+    public function asShortArray(): Array<Int> {
+        throw "stub: asShortArray not decompiled";
+    }
 
-  function asFloat(): Float {}
+    public function asFloat(): Float {
+        throw "stub: asFloat not decompiled";
+    }
 
-  function asInt(): Int {}
+    public function asInt(): Int {
+        throw "stub: asInt not decompiled";
+    }
 
-  function isString(): Bool {}
+    public function isString(): Bool {
+        throw "stub: isString not decompiled";
+    }
 
-  function isArray(): Bool {}
+    public function isArray(): Bool {
+        throw "stub: isArray not decompiled";
+    }
 
-  function get_next(): Dynamic {}
+    public function get_next(): Dynamic {
+        throw "stub: get_next not decompiled";
+    }
 
-  function get_name(): String {}
+    public function get_name(): String {
+        throw "stub: get_name not decompiled";
+    }
 
-  function get_size(): Int {}
+    public function get_size(): Int {
+        throw "stub: get_size not decompiled";
+    }
 
-  function get_child(): Dynamic {}
+    public function get_child(): Dynamic {
+        throw "stub: get_child not decompiled";
+    }
 }
 
 class JsonChild {
-  var keys: hl.types.ArrayObj<Dynamic>;
-  var data: hl.types.ArrayDyn;
-  var index: Int;
-  var <none>: Dynamic;
+    public var keys: Array<Dynamic>;
+    public var data: Array<Dynamic>;
+    public var index: Int;
+    public var : Dynamic;
 
-  function __constructor__(data: hl.types.ArrayDyn, index: Int, keys: hl.types.ArrayObj<Dynamic>) {}
+    public function new(arg0: Array<Dynamic>, arg1: Int, arg2: Array<Dynamic>) {
+    }
 
-  function has(key: String): Bool {}
+    public function has(arg0: String): Bool {
+        throw "stub: has not decompiled";
+    }
 
-  function require(key: String): Dynamic {}
+    public function require(arg0: String): Dynamic {
+        throw "stub: require not decompiled";
+    }
 
-  function get(key: String): Dynamic {}
+    public function get(arg0: String): Dynamic {
+        throw "stub: get not decompiled";
+    }
 
-  function getChild(key: String): Dynamic {}
+    public function getChild(arg0: String): Dynamic {
+        throw "stub: getChild not decompiled";
+    }
 
-  function getString(key: String, defaultValue: String): String {}
+    public function getString(arg0: String, arg1: String): String {
+        throw "stub: getString not decompiled";
+    }
 
-  function getFloat(key: Dynamic, defaultValue: Dynamic): Float {}
+    public function getFloat(arg0: Dynamic, arg1: Ref): Float {
+        throw "stub: getFloat not decompiled";
+    }
 
-  function getInt(key: String, defaultValue: Dynamic): Int {}
+    public function getInt(arg0: String, arg1: Ref): Int {
+        throw "stub: getInt not decompiled";
+    }
 
-  function getBoolean(key: String, defaultValue: Dynamic): Bool {}
+    public function getBoolean(arg0: String, arg1: Ref): Bool {
+        throw "stub: getBoolean not decompiled";
+    }
 
-  function asString(): String {}
+    public function asString(): String {
+        throw "stub: asString not decompiled";
+    }
 
-  function asFloat(): Float {}
+    public function asFloat(): Float {
+        throw "stub: asFloat not decompiled";
+    }
 
-  function asInt(): Int {}
+    public function asInt(): Int {
+        throw "stub: asInt not decompiled";
+    }
 
-  function isString(): Bool {}
+    public function isString(): Bool {
+        throw "stub: isString not decompiled";
+    }
 
-  function isArray(): Bool {}
+    public function isArray(): Bool {
+        throw "stub: isArray not decompiled";
+    }
 
-  function get_next(): Dynamic {}
+    public function get_next(): Dynamic {
+        throw "stub: get_next not decompiled";
+    }
 
-  function get_name(): String {}
+    public function get_name(): String {
+        throw "stub: get_name not decompiled";
+    }
 
-  function get_size(): Int {}
+    public function get_size(): Int {
+        throw "stub: get_size not decompiled";
+    }
 
-  function get_child(): Dynamic {}
+    public function get_child(): Dynamic {
+        throw "stub: get_child not decompiled";
+    }
 
-  function asFloatArray(): hl.types.ArrayBytes<Float> {}
+    public function asFloatArray(): Array<Float> {
+        throw "stub: asFloatArray not decompiled";
+    }
 
-  function asShortArray(): hl.types.ArrayBytes<Int> {}
+    public function asShortArray(): Array<Int> {
+        throw "stub: asShortArray not decompiled";
+    }
 }
-

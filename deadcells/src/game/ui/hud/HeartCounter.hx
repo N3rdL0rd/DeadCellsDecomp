@@ -1,30 +1,40 @@
 package ui.hud;
+
 class HeartCounter extends h2d.Layers {
-  var bg: h2d.ScaleGrid.ScaleGrid;
-  var icon: h2d.Bitmap.Bitmap;
-  var cptTxt: ui.Text.Text;
-  var value: Int;
-  static var DP_ID: Int;
-  static var DP_BG: Int;
-  static var DP_ICON: Int;
-  static var DP_CPT: Int;
-  static var WIDTH: Int;
-  static var HEIGHT: Int;
+    public static var DP_ID: Int;
+    public static var DP_BG: Int;
+    public static var DP_ICON: Int;
+    public static var DP_CPT: Int;
+    public static var WIDTH: Int;
+    public static var HEIGHT: Int;
+    public var bg: h2d.ScaleGrid;
+    public var icon: h2d.Bitmap;
+    public var cptTxt: ui.Text;
+    public var value: Int;
 
-  function get_pixelScale(): Float {}
+    public function new(arg0: h2d.Object, arg1: Ref) {
+        super();
+    }
 
-  function __constructor__(p: h2d.Object.Object, ctrlBg: Dynamic) {}
+    public function setIcon(): Void {
+    }
 
-  function setIcon() {}
+    public function setCount(arg0: Int, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function setCount(v: Int, color: Dynamic, animated: Dynamic) {}
+    public function couterIncrementAnim(): Void {
+    }
 
-  function couterIncrementAnim() {}
+    public function onResize(): Void {
+    }
 
-  function onResize() {}
+    public function highlight(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function highlight(color: Dynamic, time: Dynamic) {}
+    public function getBoundsRec(arg0: h2d.Object, arg1: h2d.col.Bounds, arg2: Bool): Void {
+    }
 
-  function getBoundsRec(relativeTo: h2d.Object.Object, out: h2d.col.Bounds.Bounds, forSize: Bool) {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
-

@@ -1,44 +1,69 @@
 package ui.sel;
+
 class MobSelector extends ui.sel.GridSelector {
-  var groups: hl.types.ArrayBytes<Int>;
-  var mobs: hl.types.ArrayObj<Dynamic>;
-  var chosenMob: String;
-  var validateCb: Dynamic;
-  var rightFlowHei: Int;
-  var rightFlowWid: Int;
-  var nameText: ui.Text.Text;
-  var lockedSprite: libs.heaps.slib.HSprite.HSprite;
+    public var groups: Array<Int>;
+    public var mobs: Array<Dynamic>;
+    public var chosenMob: String;
+    public var validateCb: Dynamic;
+    public var rightFlowHei: Int;
+    public var rightFlowWid: Int;
+    public var nameText: ui.Text;
+    public var lockedSprite: libs.heaps.slib.HSprite;
 
-  function __constructor__(groups: hl.types.ArrayBytes<Int>, validateCb: Dynamic) {}
+    public function new(arg0: Array<Int>, arg1: Dynamic) {
+        super();
+    }
 
-  function get_entryWid(): Int {}
+    public override function get_entryWid(): Int {
+        throw "stub: get_entryWid not decompiled";
+    }
 
-  function get_entryHei(): Int {}
+    public override function get_entryHei(): Int {
+        throw "stub: get_entryHei not decompiled";
+    }
 
-  function get_wid(): Int {}
+    public override function get_wid(): Int {
+        throw "stub: get_wid not decompiled";
+    }
 
-  function initGrid() {}
+    public override function initGrid(): Void {
+    }
 
-  function mobIsFiltered(mob: Dynamic): Bool {}
+    public function mobIsFiltered(arg0: Dynamic): Bool {
+        throw "stub: mobIsFiltered not decompiled";
+    }
 
-  function initRightFlow() {}
+    public override function initRightFlow(): Void {
+    }
 
-  function isEntryLocked(i: Int): Bool {}
+    public override function isEntryLocked(arg0: Int): Bool {
+        throw "stub: isEntryLocked not decompiled";
+    }
 
-  function getIconBmp(i: Int, p: h2d.Object.Object): h2d.Object.Object {}
+    public override function getIconBmp(arg0: Int, arg1: h2d.Object): h2d.Object {
+        throw "stub: getIconBmp not decompiled";
+    }
 
-  function beforeUpdateSelection() {}
+    public override function beforeUpdateSelection(): Void {
+    }
 
-  function updateRightFlow() {}
+    public override function updateRightFlow(): Void {
+    }
 
-  function getTitleText(): String {}
+    public override function getTitleText(): String {
+        throw "stub: getTitleText not decompiled";
+    }
 
-  function mobFromEntry(entry: Dynamic): String {}
+    public function mobFromEntry(arg0: Dynamic): String {
+        throw "stub: mobFromEntry not decompiled";
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function updateTextsPosition(resize: Dynamic) {}
+    public function updateTextsPosition(arg0: Ref): Void {
+    }
 
-  function onValidate() {}
+    public override function onValidate(): Void {
+    }
 }
-

@@ -1,87 +1,133 @@
 package tool.atk;
+
 class AttackData {
-  var baseDmg: Dynamic;
-  var rawFinalDmg: Float;
-  var dmgScaledAdd: Float;
-  var dmgBonusMul: Float;
-  var finalDmg: Int;
-  var dmgMultiplier: Float;
-  var finalMissedDmg: Float;
-  var source: Entity;
-  var sourceWeapon: tool.Weapon.Weapon;
-  var sourceItem: tool.InventItem.InventItem;
-  var carrier: Entity;
-  var targetFreezeCast: Float;
-  var breachBonus: Float;
-  var dmgType: Dynamic;
-  var hitResult: Dynamic;
-  var critMul: Float;
-  var affixes: hl.types.ArrayObj<Dynamic>;
-  var lastHitTarget: Entity;
-  var useHeroScaling: Bool;
-  var volleyDmg: Int;
-  var inflictedDmg: Int;
-  var tags: hl.types.ArrayObj<Dynamic>;
-  var disableOneWayProtection: Bool;
-  var onHit: Dynamic;
-  var sourceTier: Int;
-  static var POOL: hl.types.ArrayObj<Dynamic>;
-  static var CURIDX: Int;
+    public static var POOL: Array<Dynamic>;
+    public static var CURIDX: Int;
+    public var baseDmg: Dynamic;
+    public var rawFinalDmg: Float;
+    public var dmgScaledAdd: Float;
+    public var dmgBonusMul: Float;
+    public var finalDmg: Int;
+    public var dmgMultiplier: Float;
+    public var finalMissedDmg: Float;
+    public var source: Entity;
+    public var sourceWeapon: tool.Weapon;
+    public var sourceItem: tool.InventItem;
+    public var carrier: Entity;
+    public var targetFreezeCast: Float;
+    public var breachBonus: Float;
+    public var dmgType: DamageType;
+    public var hitResult: HitResult;
+    public var critMul: Float;
+    public var affixes: Array<Dynamic>;
+    public var lastHitTarget: Entity;
+    public var useHeroScaling: Bool;
+    public var volleyDmg: Int;
+    public var inflictedDmg: Int;
+    public var tags: Array<Dynamic>;
+    public var disableOneWayProtection: Bool;
+    public var onHit: Dynamic;
+    public var sourceTier: Int;
 
-  static function _create(source: Entity, baseDmg: Dynamic, tier: Dynamic): AttackData {}
+    public function new() {
+    }
 
-  function __constructor__() {}
+    public static function _create(arg0: Entity, arg1: Dynamic, arg2: Dynamic): tool.atk.AttackData {
+        throw "stub: _create not decompiled";
+    }
 
-  static function initPool(n: Int) {}
+    public static function initPool(arg0: Int): Void {
+    }
 
-  function init(s: Entity, baseDmg: Dynamic): AttackData {}
+    public function init(arg0: Entity, arg1: Dynamic): tool.atk.AttackData {
+        throw "stub: init not decompiled";
+    }
 
-  function addTag(tag: Int) {}
+    public function addTag(arg0: Int): Void {
+    }
 
-  function addTags(tagList: hl.types.ArrayBytes<Int>) {}
+    public function addTags(arg0: Array<Int>): Void {
+    }
 
-  function removeTag(tag: Int) {}
+    public function removeTag(arg0: Int): Void {
+    }
 
-  function setTag(tag: Int, value: Bool) {}
+    public function setTag(arg0: Int, arg1: Bool): Void {
+    }
 
-  function hasTag(tag: Int): Bool {}
+    public function hasTag(arg0: Int): Bool {
+        throw "stub: hasTag not decompiled";
+    }
 
-  function hasAnyTag(tagList: hl.types.ArrayBytes<Int>): Bool {}
+    public function hasAnyTag(arg0: Array<Int>): Bool {
+        throw "stub: hasAnyTag not decompiled";
+    }
 
-  function overrideBaseDamage(v: Dynamic) {}
+    public function overrideBaseDamage(arg0: Dynamic): Void {
+    }
 
-  function hasNoBaseDamage(): Bool {}
+    public function hasNoBaseDamage(): Bool {
+        throw "stub: hasNoBaseDamage not decompiled";
+    }
 
-  function useItemAffixes(i: tool.InventItem.InventItem) {}
+    public function useItemAffixes(arg0: tool.InventItem): Void {
+    }
 
-  function addAffix(affx: String) {}
+    public function addAffix(arg0: String): Void {
+    }
 
-  function addAffixes(aff: hl.types.ArrayObj<Dynamic>) {}
+    public function addAffixes(arg0: Array<Dynamic>): Void {
+    }
 
-  function isSuccess(): Bool {}
+    public function isSuccess(): Bool {
+        throw "stub: isSuccess not decompiled";
+    }
 
-  function isBlocked(): Bool {}
+    public function isBlocked(): Bool {
+        throw "stub: isBlocked not decompiled";
+    }
 
-  function hasAffix(a: String): Bool {}
+    public function hasAffix(arg0: String): Bool {
+        throw "stub: hasAffix not decompiled";
+    }
 
-  function countAffix(a: String): Int {}
+    public function countAffix(arg0: String): Int {
+        throw "stub: countAffix not decompiled";
+    }
 
-  function dirSourceToTarget(): Int {}
+    public function dirSourceToTarget(): Int {
+        throw "stub: dirSourceToTarget not decompiled";
+    }
 
-  function getFromX(): Dynamic {}
+    public function getFromX(): Dynamic {
+        throw "stub: getFromX not decompiled";
+    }
 
-  function getFromY(): Dynamic {}
+    public function getFromY(): Dynamic {
+        throw "stub: getFromY not decompiled";
+    }
 
-  function getHitX(): Float {}
+    public function getHitX(): Float {
+        throw "stub: getHitX not decompiled";
+    }
 
-  function getHitY(): Float {}
+    public function getHitY(): Float {
+        throw "stub: getHitY not decompiled";
+    }
 
-  function getHitOppositeX(): Float {}
+    public function getHitOppositeX(): Float {
+        throw "stub: getHitOppositeX not decompiled";
+    }
 
-  function getHitOppositeY(): Float {}
+    public function getHitOppositeY(): Float {
+        throw "stub: getHitOppositeY not decompiled";
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
-

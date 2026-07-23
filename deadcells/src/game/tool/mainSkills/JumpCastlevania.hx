@@ -1,19 +1,28 @@
 package tool.mainSkills;
+
 class JumpCastlevania extends tool.mainSkills.Jump {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function passiveFixedUpdate() {}
+    public override function passiveFixedUpdate(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function normalJump() {}
+    public override function normalJump(): Void {
+    }
 
-  function onEndJump() {}
+    public function onEndJump(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

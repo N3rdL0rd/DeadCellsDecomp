@@ -1,20 +1,33 @@
 package spine.attachments;
+
 class AtlasAttachmentLoader {
-  var atlas: spine.support.graphics.TextureAtlas.TextureAtlas;
-  var <none>: Dynamic;
+    public var atlas: spine.support.graphics.TextureAtlas;
+    public var : Dynamic;
 
-  function __constructor__(atlas: spine.support.graphics.TextureAtlas.TextureAtlas) {}
+    public function new(arg0: spine.support.graphics.TextureAtlas) {
+    }
 
-  function newRegionAttachment(skin: spine.Skin.Skin, name: String, path: String): Dynamic {}
+    public function newRegionAttachment(arg0: spine.Skin, arg1: String, arg2: String): spine.attachments.RegionAttachment {
+        throw "stub: newRegionAttachment not decompiled";
+    }
 
-  function newMeshAttachment(skin: spine.Skin.Skin, name: String, path: String): spine.attachments.MeshAttachment.MeshAttachment {}
+    public function newMeshAttachment(arg0: spine.Skin, arg1: String, arg2: String): spine.attachments.MeshAttachment {
+        throw "stub: newMeshAttachment not decompiled";
+    }
 
-  function newBoundingBoxAttachment(skin: spine.Skin.Skin, name: String): Dynamic {}
+    public function newBoundingBoxAttachment(arg0: spine.Skin, arg1: String): spine.attachments.BoundingBoxAttachment {
+        throw "stub: newBoundingBoxAttachment not decompiled";
+    }
 
-  function newClippingAttachment(skin: spine.Skin.Skin, name: String): Dynamic {}
+    public function newClippingAttachment(arg0: spine.Skin, arg1: String): spine.attachments.ClippingAttachment {
+        throw "stub: newClippingAttachment not decompiled";
+    }
 
-  function newPathAttachment(skin: spine.Skin.Skin, name: String): Dynamic {}
+    public function newPathAttachment(arg0: spine.Skin, arg1: String): spine.attachments.PathAttachment {
+        throw "stub: newPathAttachment not decompiled";
+    }
 
-  function newPointAttachment(skin: spine.Skin.Skin, name: String): Dynamic {}
+    public function newPointAttachment(arg0: spine.Skin, arg1: String): spine.attachments.PointAttachment {
+        throw "stub: newPointAttachment not decompiled";
+    }
 }
-

@@ -1,104 +1,165 @@
 package level;
+
 class LoreManager {
-  var sprites: hl.types.ArrayObj<Dynamic>;
-  var emitters: hl.types.ArrayObj<Dynamic>;
-  var lights: hl.types.ArrayObj<Dynamic>;
-  var _dataCache: Dynamic;
-  var cd: tool.Cooldown.Cooldown;
-  var r: level.Room.Room;
-  var level: pr.Level.Level;
-  var allEvents: haxe.ds.StringMap;
-  var blinkers: hl.types.ArrayObj<Dynamic>;
-  var pulsing: hl.types.ArrayObj<Dynamic>;
-  var visible: Bool;
-  var lastCuveMaster: libs.heaps.slib.HSprite.HSprite;
-  var hero: en.Hero.Hero;
-  var gc: GameCinematic;
-  var oldDebug: Bool;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var sprites: Array<Dynamic>;
+    public var emitters: Array<Dynamic>;
+    public var lights: Array<Dynamic>;
+    public var _dataCache: Dynamic;
+    public var cd: tool.Cooldown;
+    public var r: level.Room;
+    public var level: pr.Level;
+    public var allEvents: haxe.ds.StringMap;
+    public var blinkers: Array<Dynamic>;
+    public var pulsing: Array<Dynamic>;
+    public var visible: Bool;
+    public var lastCuveMaster: libs.heaps.slib.HSprite;
+    public var hero: en.Hero;
+    public var gc: GameCinematic;
+    public var oldDebug: Bool;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(l: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+    }
 
-  function get_game(): pr.Game.Game {}
+    public function get_game(): pr.Game {
+        throw "stub: get_game not decompiled";
+    }
 
-  function get_ftime(): Float {}
+    public function get_ftime(): Float {
+        throw "stub: get_ftime not decompiled";
+    }
 
-  function get_lMap(): level.LevelMap.LevelMap {}
+    public function get_lMap(): level.LevelMap {
+        throw "stub: get_lMap not decompiled";
+    }
 
-  function get_viewport(): Viewport {}
+    public function get_viewport(): Viewport {
+        throw "stub: get_viewport not decompiled";
+    }
 
-  function get_fx(): Fx {}
+    public function get_fx(): Fx {
+        throw "stub: get_fx not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function isCliffCuve(sInf: Dynamic): Bool {}
+    public function isCliffCuve(arg0: Dynamic): Bool {
+        throw "stub: isCliffCuve not decompiled";
+    }
 
-  function isCliffCuveMaster(sInf: Dynamic): Bool {}
+    public function isCliffCuveMaster(arg0: Dynamic): Bool {
+        throw "stub: isCliffCuveMaster not decompiled";
+    }
 
-  function attachSprite(sInf: Dynamic): Bool {}
+    public function attachSprite(arg0: Dynamic): Bool {
+        throw "stub: attachSprite not decompiled";
+    }
 
-  function addLoreDecoSprite(spr: libs.heaps.slib.HSprite.HSprite) {}
+    public function addLoreDecoSprite(arg0: libs.heaps.slib.HSprite): Void {
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function get_data(): Dynamic {}
+    public function get_data(): Dynamic {
+        throw "stub: get_data not decompiled";
+    }
 
-  function rnd(min: Float, max: Float, sign: Dynamic): Float {}
+    public function rnd(arg0: Float, arg1: Float, arg2: Ref): Float {
+        throw "stub: rnd not decompiled";
+    }
 
-  function irnd(min: Int, max: Int, sign: Dynamic): Int {}
+    public function irnd(arg0: Int, arg1: Int, arg2: Ref): Int {
+        throw "stub: irnd not decompiled";
+    }
 
-  function onCdbReload() {}
+    public function onCdbReload(): Void {
+    }
 
-  function isCdbExaminableEntryActive(id: String, idx: Int): Bool {}
+    public function isCdbExaminableEntryActive(arg0: String, arg1: Int): Bool {
+        throw "stub: isCdbExaminableEntryActive not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function removeEventLine(eid: String, from: Dynamic) {}
+    public function removeEventLine(arg0: String, arg1: level.LoreEvent): Void {
+    }
 
-  function onCreateExaminable(custId: String, exam: en.inter.Examinable.Examinable): Bool {}
+    public function onCreateExaminable(arg0: String, arg1: en.inter.Examinable): Bool {
+        throw "stub: onCreateExaminable not decompiled";
+    }
 
-  function onExaminableActivation(eid: String, e: en.inter.Examinable.Examinable, by: en.Hero.Hero) {}
+    public function onExaminableActivation(arg0: String, arg1: en.inter.Examinable, arg2: en.Hero): Void {
+    }
 
-  function onCustomEvent(id: String, e: en.inter.Examinable.Examinable) {}
+    public function onCustomEvent(arg0: String, arg1: en.inter.Examinable): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onDropLoot(e: en.inter.Examinable.Examinable, by: Entity, examinableId: String) {}
+    public function onDropLoot(arg0: en.inter.Examinable, arg1: Entity, arg2: String): Void {
+    }
 
-  function onDropGold(e: en.inter.Examinable.Examinable, v: Int) {}
+    public function onDropGold(arg0: en.inter.Examinable, arg1: Int): Void {
+    }
 
-  function getMarkerPoint(id: String): tool.CPoint.CPoint {}
+    public function getMarkerPoint(arg0: String): tool.CPoint {
+        throw "stub: getMarkerPoint not decompiled";
+    }
 
-  function getExaminable(custId: String): en.inter.Examinable.Examinable {}
+    public function getExaminable(arg0: String): en.inter.Examinable {
+        throw "stub: getExaminable not decompiled";
+    }
 
-  function getSprite(id: String): libs.heaps.slib.HSprite.HSprite {}
+    public function getSprite(arg0: String): libs.heaps.slib.HSprite {
+        throw "stub: getSprite not decompiled";
+    }
 
-  function isOnScreen(): Bool {}
+    public function isOnScreen(): Bool {
+        throw "stub: isOnScreen not decompiled";
+    }
 
-  function preUpdate(dt: Float) {}
+    public function preUpdate(arg0: Float): Void {
+    }
 
-  function postUpdate(dt: Float) {}
+    public function postUpdate(arg0: Float): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function set_visible(v: Bool): Bool {}
+    public function set_visible(arg0: Bool): Bool {
+        throw "stub: set_visible not decompiled";
+    }
 
-  function onVisibleChanged() {}
+    public function onVisibleChanged(): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

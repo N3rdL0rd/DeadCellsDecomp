@@ -1,22 +1,29 @@
 package cine;
+
 class BeholderDeath extends GameCinematic {
-  var b: en.mob.boss.Beholder.Beholder;
-  var explode: Bool;
-  var ghostA: Bool;
-  var ghostB: Bool;
-  var ghostC: Bool;
-  var multGhost: Float;
+    public var b: en.mob.boss.Beholder;
+    public var explode: Bool;
+    public var ghostA: Bool;
+    public var ghostB: Bool;
+    public var ghostC: Bool;
+    public var multGhost: Float;
 
-  function __constructor__(b: en.mob.boss.Beholder.Beholder) {}
+    public function new(arg0: en.mob.boss.Beholder) {
+        super();
+    }
 
-  function eyeRolling(i: Int) {}
+    public function eyeRolling(arg0: Int): Void {
+    }
 
-  function bodyExplosion() {}
+    public function bodyExplosion(): Void {
+    }
 
-  function bodyPartExplosion() {}
+    public function bodyPartExplosion(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

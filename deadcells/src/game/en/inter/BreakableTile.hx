@@ -1,71 +1,102 @@
 package en.inter;
+
 class BreakableTile extends en.Interactive {
-  var cwid: Int;
-  var chei: Int;
-  var root: h2d.Object.Object;
-  var lightSegment: light.Visibility.Visibility;
-  var lastHitDir: Int;
-  var shake: Float;
-  var tileUp: libs.heaps.slib.HSprite.HSprite;
-  var tileDown: libs.heaps.slib.HSprite.HSprite;
-  var tileRight: libs.heaps.slib.HSprite.HSprite;
-  var tileLeft: libs.heaps.slib.HSprite.HSprite;
-  var shouldKillSurroundingBlocks: Bool;
-  var lastReceivedAtkSource: Entity;
-  var broken: Bool;
-  var horizontal: Bool;
-  var glowRatio: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var cwid: Int;
+    public var chei: Int;
+    public var root: h2d.Object;
+    public var lightSegment: light.Wall;
+    public var lastHitDir: Int;
+    public var shake: Float;
+    public var tileUp: libs.heaps.slib.HSprite;
+    public var tileDown: libs.heaps.slib.HSprite;
+    public var tileRight: libs.heaps.slib.HSprite;
+    public var tileLeft: libs.heaps.slib.HSprite;
+    public var shouldKillSurroundingBlocks: Bool;
+    public var lastReceivedAtkSource: Entity;
+    public var broken: Bool;
+    public var horizontal: Bool;
+    public var glowRatio: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, width: Int, height: Int, _horizontal: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic) {}
+    public function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function setPosPixel(x: Float, y: Float) {}
+    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
 
-  function isInQuadTree(): Bool {}
+    public function isInQuadTree(): Bool {
+        throw "stub: isInQuadTree not decompiled";
+    }
 
-  function isBreakableByHero(): Bool {}
+    public function isBreakableByHero(): Bool {
+        throw "stub: isBreakableByHero not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function updateEdgeVisual(side: String) {}
+    public function updateEdgeVisual(arg0: String): Void {
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDie() {}
+    public function onDie(): Void {
+    }
 
-  function setColSpotLogic(lvl: pr.Level.Level, _cx: Dynamic, _cy: Dynamic) {}
+    public function setColSpotLogic(arg0: pr.Level, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function spotLogic(lvl: pr.Level.Level, cx: Int, cy: Int) {}
+    public function spotLogic(arg0: pr.Level, arg1: Int, arg2: Int): Void {
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function removeSpotLogic(posX: Int, posY: Int) {}
+    public function removeSpotLogic(arg0: Int, arg1: Int): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function destroyBreakableAbove(_source: Entity) {}
+    public function destroyBreakableAbove(arg0: Entity): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

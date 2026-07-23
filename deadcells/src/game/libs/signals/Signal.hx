@@ -1,68 +1,101 @@
 package libs.signals;
-class BaseSignal {
-  var numListeners: Int;
-  var hasListeners: Bool;
-  var _fireOnAdd: Bool;
-  var mute: Bool;
-  var currentCallback: Dynamic;
-  var callbacks: hl.types.ArrayObj<Dynamic>;
-  var toTrigger: hl.types.ArrayObj<Dynamic>;
-  var requiresSort: Bool;
-  var defaultCallbackProps: Int;
-
-  function __constructor__(fireOnAdd: Dynamic) {}
-
-  function sortPriority() {}
-
-  function dispatchCallbacks() {}
-
-  function dispatchCallback(callback: Dynamic, callbackData: Dynamic) {}
-
-  function dispatchCallback1(callback: Dynamic, callbackData: Dynamic) {}
-
-  function dispatchCallback2(callback: Dynamic, callbackData: Dynamic) {}
-
-  function dispatchCallback3(callback: Dynamic, callbackData: Dynamic) {}
-
-  function dispatchCheck(callback: Dynamic, callbackData: Dynamic) {}
-
-  function dispatchCheck1(callback: Dynamic, callbackData: Dynamic) {}
-
-  function dispatchCheck2(callback: Dynamic, callbackData: Dynamic) {}
-
-  function dispatchCheck3(callback: Dynamic, callbackData: Dynamic) {}
-
-  function sortCallbacks(s1: Dynamic, s2: Dynamic): Int {}
-
-  function get_numListeners(): Int {}
-
-  function get_hasListeners(): Bool {}
-
-  function add(callback: Dynamic, fireOnce: Dynamic, priority: Dynamic, fireOnAdd: Dynamic): BaseSignal {}
-
-  function getNumParams(callback: Dynamic): Int {}
-
-  function priority(value: Int): BaseSignal {}
-
-  function repeat(value: Dynamic): BaseSignal {}
-
-  function fireOnAdd() {}
-
-  function remove(callback: Dynamic) {}
-}
 
 class Signal extends libs.signals.BaseSignal {
+    public function new(arg0: Dynamic) {
+        super();
+    }
 
-  function __constructor__(fireOnAdd: Dynamic) {}
+    public function dispatch(): Void {
+    }
 
-  function dispatch() {}
+    public override function dispatchCallback(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function dispatchCallback(callback: Dynamic, callbackData: Dynamic) {}
+    public override function dispatchCallback1(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function dispatchCallback1(callback: Dynamic, callbackData: Dynamic) {}
+    public override function dispatchCallback2(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function dispatchCallback2(callback: Dynamic, callbackData: Dynamic) {}
-
-  function dispatchCallback3(callback: Dynamic, callbackData: Dynamic) {}
+    public override function dispatchCallback3(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 }
 
+class BaseSignal {
+    public var numListeners: Int;
+    public var hasListeners: Bool;
+    public var _fireOnAdd: Bool;
+    public var mute: Bool;
+    public var currentCallback: Dynamic;
+    public var callbacks: Array<Dynamic>;
+    public var toTrigger: Array<Dynamic>;
+    public var requiresSort: Bool;
+    public var defaultCallbackProps: Int;
+
+    public function new(arg0: Dynamic) {
+    }
+
+    public function sortPriority(): Void {
+    }
+
+    public function dispatchCallbacks(): Void {
+    }
+
+    public function dispatchCallback(arg0: Dynamic, arg1: Dynamic): Void {
+    }
+
+    public function dispatchCallback1(arg0: Dynamic, arg1: Dynamic): Void {
+    }
+
+    public function dispatchCallback2(arg0: Dynamic, arg1: Dynamic): Void {
+    }
+
+    public function dispatchCallback3(arg0: Dynamic, arg1: Dynamic): Void {
+    }
+
+    public function dispatchCheck(arg0: Dynamic, arg1: Dynamic): Void {
+    }
+
+    public function dispatchCheck1(arg0: Dynamic, arg1: Dynamic): Void {
+    }
+
+    public function dispatchCheck2(arg0: Dynamic, arg1: Dynamic): Void {
+    }
+
+    public function dispatchCheck3(arg0: Dynamic, arg1: Dynamic): Void {
+    }
+
+    public function sortCallbacks(arg0: Dynamic, arg1: Dynamic): Int {
+        throw "stub: sortCallbacks not decompiled";
+    }
+
+    public function get_numListeners(): Int {
+        throw "stub: get_numListeners not decompiled";
+    }
+
+    public function get_hasListeners(): Bool {
+        throw "stub: get_hasListeners not decompiled";
+    }
+
+    public function add(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): libs.signals.BaseSignal {
+        throw "stub: add not decompiled";
+    }
+
+    public function getNumParams(arg0: Dynamic): Int {
+        throw "stub: getNumParams not decompiled";
+    }
+
+    public function priority(arg0: Int): libs.signals.BaseSignal {
+        throw "stub: priority not decompiled";
+    }
+
+    public function repeat(arg0: Ref): libs.signals.BaseSignal {
+        throw "stub: repeat not decompiled";
+    }
+
+    public function fireOnAdd(): Void {
+    }
+
+    public function remove(arg0: Dynamic): Void {
+    }
+}

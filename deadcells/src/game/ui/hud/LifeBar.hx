@@ -1,85 +1,113 @@
 package ui.hud;
-class LifeBar extends h2d.Object.Object {
-  var curState: ui.hud.LifeBar.LifeBar;
-  var oldState: ui.hud.LifeBar.LifeBar;
-  var stateFade: Float;
-  var freezed: Bool;
-  var buffFlow: h2d.Flow.Flow;
-  var lowLife: Bool;
-  var bg: h2d.ScaleGrid.ScaleGrid;
-  var border: h2d.ScaleGrid.ScaleGrid;
-  var sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbAdd: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var beLeft: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var beRight: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var beFull: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var beRecover: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var beBonus: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var beBonusRight: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var iconTacticLimit: libs.heaps.slib.HSprite.HSprite;
-  var iconSurvivalLimit: libs.heaps.slib.HSprite.HSprite;
-  var beHealZone: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var beHealGrad: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var fInfection: h2d.Flow.Flow;
-  var healTrail: Float;
-  var colorMode: Dynamic;
-  var label: ui.Text.Text;
-  var isInit: Bool;
-  var lastHealTime: Float;
 
-  function get_pixelScale(): Float {}
+class LifeBar extends h2d.Object {
+    public var curState: ui.hud.State;
+    public var oldState: ui.hud.State;
+    public var stateFade: Float;
+    public var freezed: Bool;
+    public var buffFlow: h2d.Flow;
+    public var lowLife: Bool;
+    public var bg: h2d.ScaleGrid;
+    public var border: h2d.ScaleGrid;
+    public var sb: libs.heaps.slib.HSpriteBatch;
+    public var sbAdd: libs.heaps.slib.HSpriteBatch;
+    public var beLeft: libs.heaps.slib.HSpriteBE;
+    public var beRight: libs.heaps.slib.HSpriteBE;
+    public var beFull: libs.heaps.slib.HSpriteBE;
+    public var beRecover: libs.heaps.slib.HSpriteBE;
+    public var beBonus: libs.heaps.slib.HSpriteBE;
+    public var beBonusRight: libs.heaps.slib.HSpriteBE;
+    public var iconTacticLimit: libs.heaps.slib.HSprite;
+    public var iconSurvivalLimit: libs.heaps.slib.HSprite;
+    public var beHealZone: libs.heaps.slib.HSpriteBE;
+    public var beHealGrad: libs.heaps.slib.HSpriteBE;
+    public var fInfection: h2d.Flow;
+    public var healTrail: Float;
+    public var colorMode: ui.hud.LifeBarColorMode;
+    public var label: ui.Text;
+    public var isInit: Bool;
+    public var lastHealTime: Float;
 
-  function __constructor__(colorMode: Dynamic, p: h2d.Object.Object) {}
+    public function new(arg0: ui.hud.LifeBarColorMode, arg1: h2d.Object) {
+        super();
+    }
 
-  function setColorMode(colorMode: Dynamic) {}
+    public function setColorMode(arg0: ui.hud.LifeBarColorMode): Void {
+    }
 
-  function getBoxName(): String {}
+    public function getBoxName(): String {
+        throw "stub: getBoxName not decompiled";
+    }
 
-  function getStartEndName(): String {}
+    public function getStartEndName(): String {
+        throw "stub: getStartEndName not decompiled";
+    }
 
-  function getFullName(): String {}
+    public function getFullName(): String {
+        throw "stub: getFullName not decompiled";
+    }
 
-  function showBuff(icons: hl.types.ArrayObj<Dynamic>) {}
+    public function showBuff(arg0: Array<Dynamic>): Void {
+    }
 
-  function hideBuff() {}
+    public function hideBuff(): Void {
+    }
 
-  function enableText() {}
+    public function enableText(): Void {
+    }
 
-  function init(life: Dynamic, max: Dynamic) {}
+    public function init(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function onHeal(oldLife: Float, newLife: Float) {}
+    public function onHeal(arg0: Float, arg1: Float): Void {
+    }
 
-  function onDamage(oldLife: Float, newLife: Float) {}
+    public function onDamage(arg0: Float, arg1: Float): Void {
+    }
 
-  function onDamageBonus(oldBonusLife: Float, newBonusLife: Float) {}
+    public function onDamageBonus(arg0: Float, arg1: Float): Void {
+    }
 
-  function setSize(width: Int, height: Int) {}
+    public function setSize(arg0: Int, arg1: Int): Void {
+    }
 
-  function setInfection(infectionValue: Float, max: Float, tierCount: Int, isAlwaysShown: Bool) {}
+    public function setInfection(arg0: Float, arg1: Float, arg2: Int, arg3: Bool): Void {
+    }
 
-  function updateSize() {}
+    public function updateSize(): Void {
+    }
 
-  function updateContent() {}
+    public function updateContent(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function freeze() {}
+    public function freeze(): Void {
+    }
 
-  function unfreeze(animated: Dynamic) {}
+    public function unfreeze(arg0: Dynamic): Void {
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public override function sync(arg0: h2d.RenderContext): Void {
+    }
+
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
 
 class State {
-  var maxLife: Float;
-  var life: Float;
-  var recover: Float;
-  var bonusLife: Float;
-  var outerWid: Int;
-  var outerHei: Int;
+    public var maxLife: Float;
+    public var life: Float;
+    public var recover: Float;
+    public var bonusLife: Float;
+    public var outerWid: Int;
+    public var outerHei: Int;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function load(o: State) {}
+    public function load(arg0: ui.hud.State): Void {
+    }
 }
-

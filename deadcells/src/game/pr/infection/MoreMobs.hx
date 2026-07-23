@@ -1,22 +1,33 @@
 package pr.infection;
-class MoreMobs extends pr.Infection.InfectionRule {
 
-  function __constructor__(infection: pr.Infection.Infection, ruleId: String) {}
+class MoreMobs extends pr.InfectionRule {
+    public function new(arg0: pr.Infection, arg1: String) {
+        super();
+    }
 
-  function checkData() {}
+    public override function checkData(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function onActivate() {}
+    public override function onActivate(): Void {
+    }
 
-  function onDeactivate() {}
+    public override function onDeactivate(): Void {
+    }
 
-  function onActiveUpdate() {}
+    public override function onActiveUpdate(): Void {
+    }
 
-  function findMobSpawningSpot(hero: en.Hero.Hero): tool.CPoint.CPoint {}
+    public function findMobSpawningSpot(arg0: en.Hero): tool.CPoint {
+        throw "stub: findMobSpawningSpot not decompiled";
+    }
 
-  function spawnMobAtPos(pos: tool.CPoint.CPoint) {}
+    public function spawnMobAtPos(arg0: tool.CPoint): Void {
+    }
 
-  function generateCDforMoreMobsRule(): Float {}
+    public function generateCDforMoreMobsRule(): Float {
+        throw "stub: generateCDforMoreMobsRule not decompiled";
+    }
 }
-

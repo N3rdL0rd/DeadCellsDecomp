@@ -43,6 +43,6 @@ This project is not licensed under any open-source license, as it is a decompila
 ## Credits
 
 - Sébastien Bénard's GameBase, which is used as a starting point for the layout of the decompilation.
-- Guillaume Anthouard (Gui-Yom)'s hlbc, which is used to decompile and stub the game.
+- Guillaume Anthouard (Gui-Yom)'s hlbc, an earlier tool used in this project.
 
 <!-- TODO: links to credits -->

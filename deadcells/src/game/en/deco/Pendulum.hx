@@ -1,62 +1,80 @@
 package en.deco;
+
 class Pendulum extends en.Deco {
-  var chains: hl.types.ArrayObj<Dynamic>;
-  var cont: h2d.Layers.Layers;
-  var sbChain: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var idChain: String;
-  var depth: Int;
-  var posX: Float;
-  var posY: Float;
-  var distToCeil: Int;
-  var dAng: Float;
-  var ang: Float;
-  var dChain: Float;
-  var frictAng: Float;
-  var frictWeight: Float;
-  var frictChain: Float;
-  var tingle: Float;
-  var offSetStopTingle: Float;
-  var dVItem: Float;
-  var dItem: Float;
-  var dGlow: Float;
-  var x: Float;
-  var y: Float;
-  var ceilX: Float;
-  var ceilY: Float;
-  var forcedCeilY: Dynamic;
-  var isTingling: Bool;
-  var weightMult: Float;
-  var offsetY: Int;
-  var heiTileChain: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var chains: Array<Dynamic>;
+    public var cont: h2d.Layers;
+    public var sbChain: libs.heaps.slib.HSpriteBatch;
+    public var idChain: String;
+    public var depth: Int;
+    public var posX: Float;
+    public var posY: Float;
+    public var distToCeil: Int;
+    public var dAng: Float;
+    public var ang: Float;
+    public var dChain: Float;
+    public var frictAng: Float;
+    public var frictWeight: Float;
+    public var frictChain: Float;
+    public var tingle: Float;
+    public var offSetStopTingle: Float;
+    public var dVItem: Float;
+    public var dItem: Float;
+    public var dGlow: Float;
+    public var x: Float;
+    public var y: Float;
+    public var ceilX: Float;
+    public var ceilY: Float;
+    public var forcedCeilY: Dynamic;
+    public var isTingling: Bool;
+    public var weightMult: Float;
+    public var offsetY: Int;
+    public var heiTileChain: Int;
 
-  function __constructor__(lvl: pr.Level.Level, idChain: String, posX: Float, posY: Float) {}
+    public function new(arg0: pr.Level, arg1: String, arg2: Float, arg3: Float) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function ySort() {}
+    public function ySort(): Void {
+    }
 
-  function setPosition(x: Float, y: Float) {}
+    public function setPosition(arg0: Float, arg1: Float): Void {
+    }
 
-  function initChain(offset: Dynamic) {}
+    public function initChain(arg0: Ref): Void {
+    }
 
-  function initTingle(dir: Int, fromEntity: Bool) {}
+    public function initTingle(arg0: Int, arg1: Bool): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

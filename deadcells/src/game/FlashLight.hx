@@ -1,24 +1,31 @@
-
 class FlashLight {
-  var light: light.PointLight.PointLight;
-  var active: Bool;
-  var maxIntensity: Float;
-  var life: Float;
-  var maxLife: Float;
-  var createTime: Float;
+    public var light: light.PointLight;
+    public var active: Bool;
+    public var maxIntensity: Float;
+    public var life: Float;
+    public var maxLife: Float;
+    public var createTime: Float;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  static function alloc(level: pr.Level.Level, n: Int) {}
+    public static function create(arg0: pr.Level, arg1: Float, arg2: Float, arg3: Int, arg4: Float, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic): FlashLight {
+        throw "stub: create not decompiled";
+    }
 
-  static function getOne(level: pr.Level.Level): FlashLight {}
+    public static function getOne(arg0: pr.Level): FlashLight {
+        throw "stub: getOne not decompiled";
+    }
 
-  static function create(lvl: pr.Level.Level, x: Float, y: Float, col: Int, radiusPx: Float, int: Dynamic, durationS: Dynamic, depth: Dynamic): FlashLight {}
+    public static function alloc(arg0: pr.Level, arg1: Int): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function disable() {}
+    public function disable(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

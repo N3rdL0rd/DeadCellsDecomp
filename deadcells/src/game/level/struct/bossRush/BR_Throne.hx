@@ -1,10 +1,14 @@
 package level.struct.bossRush;
+
 class BR_Throne extends level.struct.bossRush.BR_Struct {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
-
-  function addTeleports() {}
+    public function addTeleports(): Void {
+    }
 }
-

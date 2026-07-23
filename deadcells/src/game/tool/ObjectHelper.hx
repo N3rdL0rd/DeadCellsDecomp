@@ -1,0 +1,15 @@
+package tool;
+
+class ObjectHelper {
+    public static function getVisibleObjectsCount(arg0: Array<Dynamic>): Int {
+        throw "stub: getVisibleObjectsCount not decompiled";
+    }
+
+    public static function getChildren(arg0: Array<Dynamic>, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: getChildren not decompiled";
+    }
+
+    public static function getChildOfType(arg0: hl.Class, arg1: hxd.impl.ArrayIterator_h2d_Object): h2d.Object {
+        throw "stub: getChildOfType not decompiled";
+    }
+}

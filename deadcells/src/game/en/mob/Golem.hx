@@ -1,45 +1,67 @@
 package en.mob;
+
 class Golem extends en.Mob {
-  var tcx: Dynamic;
-  var punchArea: tool.Area.Area;
-  var isAngry: Bool;
-  var fxPunch: libs.heaps.slib.HSprite.HSprite;
-  var orgues: hl.types.ArrayObj<Dynamic>;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var tcx: Dynamic;
+    public var punchArea: tool.Area;
+    public var isAngry: Bool;
+    public var fxPunch: libs.heaps.slib.HSprite;
+    public var orgues: Array<Dynamic>;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Golem {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Golem {
+        throw "stub: create not decompiled";
+    }
 
-  function setAngry() {}
+    public function setAngry(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function addOrgue(tcx: Int, tcy: Int) {}
+    public function addOrgue(arg0: Int, arg1: Int): Void {
+    }
 
-  function setAttackTarget(t: Entity) {}
+    public override function setAttackTarget(arg0: Entity): Void {
+    }
 
-  function onStep() {}
+    public function onStep(): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

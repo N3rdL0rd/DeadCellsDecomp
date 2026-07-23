@@ -1,35 +1,56 @@
 package tool.mv;
+
 class MvFly extends tool.AutoMove {
-  var target: tool.CPoint.CPoint;
-  var linear: Bool;
-  var tx: Float;
-  var ty: Float;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var target: tool.CPoint;
+    public var linear: Bool;
+    public var tx: Float;
+    public var ty: Float;
 
-  function onTargetReached() {}
+    public function new(arg0: Entity) {
+        super();
+    }
 
-  function __constructor__(entity: Entity) {}
+    public override function goto(arg0: Int, arg1: Int): Bool {
+        throw "stub: goto not decompiled";
+    }
 
-  function goto(cx: Int, cy: Int): Bool {}
+    public override function gotoPixel(arg0: Float, arg1: Float, arg2: Ref): Bool {
+        throw "stub: gotoPixel not decompiled";
+    }
 
-  function gotoPixel(x: Float, y: Float, linearSpeed: Dynamic): Bool {}
+    public override function canGoto(arg0: Int, arg1: Int): Bool {
+        throw "stub: canGoto not decompiled";
+    }
 
-  function canGoto(cx: Int, cy: Int): Bool {}
+    public override function getNextPoint(): tool.CPoint {
+        throw "stub: getNextPoint not decompiled";
+    }
 
-  function getNextPoint(): tool.CPoint.CPoint {}
+    public override function hasTarget(): Bool {
+        throw "stub: hasTarget not decompiled";
+    }
 
-  function hasTarget(): Bool {}
+    public override function stop(): Void {
+    }
 
-  function stop() {}
+    public override function update(): Void {
+    }
 
-  function update() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onTargetReached(): Void {
+    }
 }
-

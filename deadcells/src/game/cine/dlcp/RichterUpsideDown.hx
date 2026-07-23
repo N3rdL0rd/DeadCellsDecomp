@@ -1,9 +1,12 @@
 package cine.dlcp;
+
 class RichterUpsideDown extends GameCinematic {
-  var hero: en.Hero.Hero;
+    public var hero: en.Hero;
 
-  function __constructor__(h: en.Hero.Hero, npc: en.inter.npc.RichterNpc.RichterNpc) {}
+    public function new(arg0: en.Hero, arg1: en.inter.npc.RichterNpc) {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

@@ -1,24 +1,35 @@
 package tool.weap.sh;
+
 class HoldShield extends tool.weap.BaseShield {
-  var shieldFrames: Float;
-  var parriedOnce: Bool;
+    public var shieldFrames: Float;
+    public var parriedOnce: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onShieldChargeStart() {}
+    public override function onShieldChargeStart(): Void {
+    }
 
-  function onOwnerAttackResultReceived(a: tool.atk.AttackData.AttackData) {}
+    public override function onOwnerAttackResultReceived(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onShieldBlock(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public override function onShieldBlock(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function dynOnFxFrame(cinf: Dynamic) {}
+    public function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function getRatioLoss(): Float {}
+    public function getRatioLoss(): Float {
+        throw "stub: getRatioLoss not decompiled";
+    }
 
-  function onShieldHolding(ratio: Float) {}
+    public override function onShieldHolding(arg0: Float): Void {
+    }
 
-  function addFrames(f: Float) {}
+    public function addFrames(arg0: Float): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 }
-

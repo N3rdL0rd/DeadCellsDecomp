@@ -1,60 +1,90 @@
 package en.inter.npc;
+
 class SewerCreature extends en.inter.Npc {
-  var isPresent: Bool;
-  var talkDone: Bool;
-  var willShow: Bool;
-  var wall: libs.heaps.slib.HSprite.HSprite;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var isPresent: Bool;
+    public var talkDone: Bool;
+    public var willShow: Bool;
+    public var wall: libs.heaps.slib.HSprite;
 
-  function __constructor__(lvl: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function leave() {}
+    public function leave(): Void {
+    }
 
-  function show(instant: Dynamic) {}
+    public function show(arg0: Ref): Void {
+    }
 
-  function doQuickSay() {}
+    public function doQuickSay(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function canGreet(h: en.Hero.Hero): Bool {}
+    public override function canGreet(arg0: en.Hero): Bool {
+        throw "stub: canGreet not decompiled";
+    }
 
-  function onGreet(h: en.Hero.Hero) {}
+    public override function onGreet(arg0: en.Hero): Void {
+    }
 
-  function angryRandomPhrase() {}
+    public function angryRandomPhrase(): Void {
+    }
 
-  function angryRandomEndPhrase() {}
+    public function angryRandomEndPhrase(): Void {
+    }
 
-  function onEndCinematic(gc: GameCinematic) {}
+    public function onEndCinematic(arg0: GameCinematic): Void {
+    }
 
-  function updateProgress() {}
+    public function updateProgress(): Void {
+    }
 
-  function onFocus() {}
+    public override function onFocus(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

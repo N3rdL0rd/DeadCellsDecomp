@@ -1,42 +1,62 @@
 package en.inter;
+
 class KingsHandBomb extends en.Interactive {
-  var inf: Dynamic;
-  var lastTimer: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var inf: Dynamic;
+    public var lastTimer: Int;
 
-  function onTrigger() {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic) {
+        super();
+    }
 
-  function onBombLand() {}
+    public function initGfx(): Void {
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, inf: Dynamic) {}
+    public override function dispose(): Void {
+    }
 
-  function initGfx() {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function dispose() {}
+    public function onDie(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onFocus(): Void {
+    }
 
-  function onDie() {}
+    public function onLand(arg0: Float): Void {
+    }
 
-  function onFocus() {}
+    public function onTouchGround(): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function onTouchGround() {}
+    public function postUpdate(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function unserializeInit(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserializeInit() {}
+    public function onTrigger(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBombLand(): Void {
+    }
 }
-

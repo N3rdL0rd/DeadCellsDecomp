@@ -1,186 +1,255 @@
 package en.mob.boss;
+
 class Beholder extends en.mob.Boss {
-  var bHidden: Bool;
-  var rseed: libs.Rand.Rand;
-  var radiusC: Float;
-  var radiusMega: Int;
-  var initialX: Float;
-  var initialY: Float;
-  var availableSquares: hl.types.ArrayObj<Dynamic>;
-  var defaultZoom: Float;
-  var contMandible: h2d.Layers.Layers;
-  var arMandible: hl.types.ArrayObj<Dynamic>;
-  var leftMandible1: libs.heaps.slib.HSprite.HSprite;
-  var leftMandible2: libs.heaps.slib.HSprite.HSprite;
-  var leftMandible3: libs.heaps.slib.HSprite.HSprite;
-  var rightMandible1: libs.heaps.slib.HSprite.HSprite;
-  var rightMandible2: libs.heaps.slib.HSprite.HSprite;
-  var rightMandible3: libs.heaps.slib.HSprite.HSprite;
-  var cont: h2d.Layers.Layers;
-  var shell: libs.heaps.slib.HSprite.HSprite;
-  var contEye: h2d.Object.Object;
-  var orbit: libs.heaps.slib.HSprite.HSprite;
-  var eye: libs.heaps.slib.HSprite.HSprite;
-  var eyelid: libs.heaps.slib.HSprite.HSprite;
-  var eyeReflect: libs.heaps.slib.HSprite.HSprite;
-  var mouth: libs.heaps.slib.HSprite.HSprite;
-  var canBreath: Bool;
-  var isDying: Bool;
-  var heiChain: Int;
-  var chainTop: hl.types.ArrayObj<Dynamic>;
-  var contChainTop: h2d.Object.Object;
-  var chainLeft: hl.types.ArrayObj<Dynamic>;
-  var contChainLeft: h2d.Object.Object;
-  var chainRight: hl.types.ArrayObj<Dynamic>;
-  var contChainRight: h2d.Object.Object;
-  var dxChainLR: Float;
-  var dxChainTop: Float;
-  var y_offsetChainLR: Int;
-  var anchorTop: en.mob.boss.Beholder.Beholder;
-  var anchorLeft: en.mob.boss.Beholder.Beholder;
-  var anchorRight: en.mob.boss.Beholder.Beholder;
-  var isZoomed: Dynamic;
-  var speedBreathing: Int;
-  var angDizzy: Float;
-  var speedDash: Dynamic;
-  var angDash: Float;
-  var tX: Float;
-  var tY: Float;
-  var onEndDash: Dynamic;
-  var dashAtk: tool.skill.OldSkill.OldSkill;
-  var shootSpikesAtk: tool.skill.OldSkill.OldSkill;
-  var megaShootSpikesAtk: tool.skill.OldSkill.OldSkill;
-  var shockAtk: tool.skill.OldSkill.OldSkill;
-  var tentaclesAtk: tool.skill.OldSkill.OldSkill;
-  var lastSkillUsed: tool.skill.OldSkill.OldSkill;
-  var shockArea: tool.Area.Area;
-  var numSpikesThrowed: Int;
-  var numShootSpikes: Int;
-  var curNumShootSpikes: Int;
-  var hasSpikesOut: Bool;
-  var isScreaming: Bool;
-  var isAttacking: Bool;
-  var nextIsMegaShoot: Bool;
-  var arDbg: hl.types.ArrayObj<Dynamic>;
-  var bossRushModifiers: Dynamic;
-  var <none>: Dynamic;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var bHidden: Bool;
+    public var rseed: libs.Rand;
+    public var radiusC: Float;
+    public var radiusMega: Int;
+    public var initialX: Float;
+    public var initialY: Float;
+    public var availableSquares: Array<Dynamic>;
+    public var defaultZoom: Float;
+    public var contMandible: h2d.Layers;
+    public var arMandible: Array<Dynamic>;
+    public var leftMandible1: libs.heaps.slib.HSprite;
+    public var leftMandible2: libs.heaps.slib.HSprite;
+    public var leftMandible3: libs.heaps.slib.HSprite;
+    public var rightMandible1: libs.heaps.slib.HSprite;
+    public var rightMandible2: libs.heaps.slib.HSprite;
+    public var rightMandible3: libs.heaps.slib.HSprite;
+    public var cont: h2d.Layers;
+    public var shell: libs.heaps.slib.HSprite;
+    public var contEye: h2d.Object;
+    public var orbit: libs.heaps.slib.HSprite;
+    public var eye: libs.heaps.slib.HSprite;
+    public var eyelid: libs.heaps.slib.HSprite;
+    public var eyeReflect: libs.heaps.slib.HSprite;
+    public var mouth: libs.heaps.slib.HSprite;
+    public var canBreath: Bool;
+    public var isDying: Bool;
+    public var heiChain: Int;
+    public var chainTop: Array<Dynamic>;
+    public var contChainTop: h2d.Object;
+    public var chainLeft: Array<Dynamic>;
+    public var contChainLeft: h2d.Object;
+    public var chainRight: Array<Dynamic>;
+    public var contChainRight: h2d.Object;
+    public var dxChainLR: Float;
+    public var dxChainTop: Float;
+    public var y_offsetChainLR: Int;
+    public var anchorTop: en.mob.boss._Beholder.Anchor;
+    public var anchorLeft: en.mob.boss._Beholder.Anchor;
+    public var anchorRight: en.mob.boss._Beholder.Anchor;
+    public var isZoomed: Dynamic;
+    public var speedBreathing: Int;
+    public var angDizzy: Float;
+    public var speedDash: Dynamic;
+    public var angDash: Float;
+    public var tX: Float;
+    public var tY: Float;
+    public var onEndDash: Dynamic;
+    public var dashAtk: tool.skill.OldSkill;
+    public var shootSpikesAtk: tool.skill.OldSkill;
+    public var megaShootSpikesAtk: tool.skill.OldSkill;
+    public var shockAtk: tool.skill.OldSkill;
+    public var tentaclesAtk: tool.skill.OldSkill;
+    public var lastSkillUsed: tool.skill.OldSkill;
+    public var shockArea: tool.Area;
+    public var numSpikesThrowed: Int;
+    public var numShootSpikes: Int;
+    public var curNumShootSpikes: Int;
+    public var hasSpikesOut: Bool;
+    public var isScreaming: Bool;
+    public var isAttacking: Bool;
+    public var nextIsMegaShoot: Bool;
+    public var arDbg: Array<Dynamic>;
+    public var bossRushModifiers: Dynamic;
+    public var : Dynamic;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Beholder {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.boss.Beholder {
+        throw "stub: create not decompiled";
+    }
 
-  function setPlatformsState(open: Bool) {}
+    public function setPlatformsState(arg0: Bool): Void {
+    }
 
-  function initSquares() {}
+    public function initSquares(): Void {
+    }
 
-  function getSquareRandom(distMin: Float): tool.CPoint.CPoint {}
+    public function getSquareRandom(arg0: Float): tool.CPoint {
+        throw "stub: getSquareRandom not decompiled";
+    }
 
-  function setReady() {}
+    public override function setReady(): Void {
+    }
 
-  function onScream() {}
+    public override function onScream(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function getMobSprites(): hl.types.ArrayObj<Dynamic> {}
+    public function getMobSprites(): Array<Dynamic> {
+        throw "stub: getMobSprites not decompiled";
+    }
 
-  function setSpriteParent(parent: h2d.Object.Object) {}
+    public function setSpriteParent(arg0: h2d.Object): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function canBeGrabbedByHomunculus(): Bool {}
+    public function canBeGrabbedByHomunculus(): Bool {
+        throw "stub: canBeGrabbedByHomunculus not decompiled";
+    }
 
-  function onStun() {}
+    public function onStun(): Void {
+    }
 
-  function set_sprAlpha(v: Float): Float {}
+    public function set_sprAlpha(arg0: Float): Float {
+        throw "stub: set_sprAlpha not decompiled";
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function spikesAreaTouched(): hl.types.ArrayObj<Dynamic> {}
+    public function spikesAreaTouched(): Array<Dynamic> {
+        throw "stub: spikesAreaTouched not decompiled";
+    }
 
-  function deleteAllSpikes() {}
+    public function deleteAllSpikes(): Void {
+    }
 
-  function shootSpikes() {}
+    public function shootSpikes(): Void {
+    }
 
-  function shootSpikesMega() {}
+    public function shootSpikesMega(): Void {
+    }
 
-  function dashTo(destX: Float, destY: Float, speed: Float, cb: Dynamic) {}
+    public function dashTo(arg0: Float, arg1: Float, arg2: Float, arg3: Dynamic): Void {
+    }
 
-  function endDash(aborted: Bool) {}
+    public function endDash(arg0: Bool): Void {
+    }
 
-  function setGlobalCD() {}
+    public function setGlobalCD(): Void {
+    }
 
-  function initMove() {}
+    public function initMove(): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function prepareMegaShoot() {}
+    public function prepareMegaShoot(): Void {
+    }
 
-  function canBeDetected(): Bool {}
+    public function canBeDetected(): Bool {
+        throw "stub: canBeDetected not decompiled";
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function getAdjustedWeightFactor(against: Entity): Float {}
+    public function getAdjustedWeightFactor(arg0: Entity): Float {
+        throw "stub: getAdjustedWeightFactor not decompiled";
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function toggleVisibility(show: Dynamic) {}
+    public function toggleVisibility(arg0: Ref): Void {
+    }
 
-  function onTtclDeath(ttcl: BeholderTtcl) {}
+    public function onTtclDeath(arg0: en.mob.boss.BeholderTtcl): Void {
+    }
 
-  function canLevelUp(): Bool {}
+    public override function canLevelUp(): Bool {
+        throw "stub: canLevelUp not decompiled";
+    }
 
-  function prepareLevelUp() {}
+    public override function prepareLevelUp(): Void {
+    }
 
-  function onBossLevelUp() {}
+    public override function onBossLevelUp(): Void {
+    }
 
-  function createTentacles(n: Int, hasSweep: Bool) {}
+    public function createTentacles(arg0: Int, arg1: Bool): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public function onLand(arg0: Float): Void {
+    }
 
-  function onStep() {}
+    public function onStep(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
 
-class _Beholder.Anchor {
-  var spr: libs.heaps.slib.HSprite.HSprite;
-  var b: en.mob.boss.Beholder.Beholder;
-  var pos: Dynamic;
-  var dx: Float;
-  var dy: Float;
+class Anchor {
+    public var spr: libs.heaps.slib.HSprite;
+    public var b: en.mob.boss.Beholder;
+    public var pos: Direction;
+    public var dx: Float;
+    public var dy: Float;
 
-  function __constructor__(b: en.mob.boss.Beholder.Beholder, pos: Dynamic) {}
+    public function new(arg0: en.mob.boss.Beholder, arg1: Direction) {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

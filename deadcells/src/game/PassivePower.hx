@@ -1,25 +1,38 @@
-
 class PassivePower extends Power {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  static function create(o: en.Hero.Hero, i: tool.InventItem.InventItem): PassivePower {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(owner: Entity, item: tool.InventItem.InventItem) {}
+    public static function create(arg0: en.Hero, arg1: tool.InventItem): PassivePower {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function shouldChangeLevelWithHero(): Bool {}
+    public override function shouldChangeLevelWithHero(): Bool {
+        throw "stub: shouldChangeLevelWithHero not decompiled";
+    }
 
-  function doActive() {}
+    public function doActive(): Void {
+    }
 
-  function kill(onActive: Bool) {}
+    public function kill(arg0: Bool): Void {
+    }
 
-  function onLevelChanged(lvl: pr.Level.Level) {}
+    public function onLevelChanged(arg0: pr.Level): Void {
+    }
 
-  function doPassive() {}
+    public function doPassive(): Void {
+    }
 
-  function onBeforeOwnerApplyAttackResult(a: tool.atk.AttackData.AttackData): Bool {}
+    public function onBeforeOwnerApplyAttackResult(arg0: tool.atk.AttackData): Bool {
+        throw "stub: onBeforeOwnerApplyAttackResult not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

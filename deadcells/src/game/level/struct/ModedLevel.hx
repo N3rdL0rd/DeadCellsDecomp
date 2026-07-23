@@ -1,19 +1,28 @@
 package level.struct;
+
 class ModedLevel extends level.LevelStruct {
-  static var nextLevel: String;
+    public static var nextLevel: String;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function buildTriggeredDoors(_combatRooms: hl.types.ArrayObj<Dynamic>) {}
+    public override function buildTriggeredDoors(arg0: Array<Dynamic>): Void {
+    }
 
-  function buildTimedDoors() {}
+    public override function buildTimedDoors(): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 }
-

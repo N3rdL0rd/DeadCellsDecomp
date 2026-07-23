@@ -1,56 +1,81 @@
 package en;
+
 class DookuManager extends Entity {
-  var hero: en.Hero.Hero;
-  var phase: Int;
-  var dookuMainTex: h3d.mat.Texture.Texture;
-  var dookuHeadTex: libs.heaps.slib.SpriteLib.SpriteLib;
-  var fakeDooku: en.FakeDooku.FakeDooku;
-  var dookuBatManager: en.DookuBatManager.DookuBatManager;
-  var dookuBeast: en.mob.boss.DookuBeast.DookuBeast;
-  var middleM: hxbit.Macros.Macros;
-  var roomMiddle: tool.CPoint.CPoint;
-  var noDamage: Bool;
-  var ambiantChannel: hxd.snd.Channel.Channel;
-  var fe: hxbit.Macros.Macros;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var hero: en.Hero;
+    public var phase: Int;
+    public var dookuMainTex: h3d.mat.Texture;
+    public var dookuHeadTex: libs.heaps.slib.SpriteLib;
+    public var fakeDooku: en.FakeDooku;
+    public var dookuBatManager: en.DookuBatManager;
+    public var dookuBeast: en.mob.boss.DookuBeast;
+    public var middleM: level.Marker;
+    public var roomMiddle: tool.CPoint;
+    public var noDamage: Bool;
+    public var ambiantChannel: hxd.snd.Channel;
+    public var fe: en.FocusEntity;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, hero: en.Hero.Hero) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function canBeHit(): Bool {}
+    public override function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function postCreate() {}
+    public override function postCreate(): Void {
+    }
 
-  function postDeserialize() {}
+    public override function postDeserialize(): Void {
+    }
 
-  function startBeastPhase(dooku: en.mob.boss.DookuBeast.DookuBeast, noParralax: Dynamic) {}
+    public function startBeastPhase(arg0: en.mob.boss.DookuBeast, arg1: Ref): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function prepareDookuBeast(intensity: Int) {}
+    public function prepareDookuBeast(arg0: Int): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

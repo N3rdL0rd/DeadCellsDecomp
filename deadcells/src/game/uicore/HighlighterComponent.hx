@@ -1,17 +1,24 @@
 package uicore;
-class HighlighterComponent extends h2d.Object.Object {
-  var enabled: Bool;
 
-  function __constructor__(parent: h2d.Object.Object) {}
+class HighlighterComponent extends h2d.Object {
+    public var enabled: Bool;
 
-  function enable() {}
+    public function new(arg0: h2d.Object) {
+        super();
+    }
 
-  function disable() {}
+    public function enable(): Void {
+    }
 
-  function update(ftime: Float) {}
+    public function disable(): Void {
+    }
 
-  function resize(pixelScale: Float) {}
+    public function update(arg0: Float): Void {
+    }
 
-  function doUpdate(ftime: Float) {}
+    public function resize(arg0: Float): Void {
+    }
+
+    public function doUpdate(arg0: Float): Void {
+    }
 }
-

@@ -1,91 +1,140 @@
 package tool.skill;
+
 class OldMobSkill extends tool.skill.OldSkill {
-  var infos: Dynamic;
-  var areas: hl.types.ArrayObj<Dynamic>;
-  var chargeArea: tool.Area.Area;
-  var manual: Bool;
-  var canTriggerThroughWall: Bool;
-  var ignoreGlobalCD: Bool;
-  var allowSameSkillNearby: Bool;
-  var allowInAir: Bool;
-  var canCancelOtherSkills: Bool;
-  var announced: Bool;
-  var hasAnnounceFx: Bool;
-  var interruptIfCannotUseAnymore: Bool;
-  var index: Int;
-  var applyOnTouchOtherMobsMethod: Bool;
-  var interruptOnNoTarget: Bool;
+    public var infos: Dynamic;
+    public var areas: Array<Dynamic>;
+    public var chargeArea: tool.Area;
+    public var manual: Bool;
+    public var canTriggerThroughWall: Bool;
+    public var ignoreGlobalCD: Bool;
+    public var allowSameSkillNearby: Bool;
+    public var allowInAir: Bool;
+    public var canCancelOtherSkills: Bool;
+    public var announced: Bool;
+    public var hasAnnounceFx: Bool;
+    public var interruptIfCannotUseAnymore: Bool;
+    public var index: Int;
+    public var applyOnTouchOtherMobsMethod: Bool;
+    public var interruptOnNoTarget: Bool;
 
-  function dynOnBeforePrepare() {}
+    public function new(arg0: String, arg1: en.Mob) {
+        super();
+    }
 
-  function dynOnTouchOtherMobs(e: Entity) {}
+    public function _canUse(): Bool {
+        throw "stub: _canUse not decompiled";
+    }
 
-  function getSameSkillLockDuration(chargeF: Float, cooldownF: Float): Float {}
+    public function _canUseOn(arg0: Entity): Bool {
+        throw "stub: _canUseOn not decompiled";
+    }
 
-  function canUseOn(e: Entity): Bool {}
+    public function initWithInfo(arg0: Dynamic): Void {
+    }
 
-  function dynOnAnnounce() {}
+    public override function useMobSkillInfos(arg0: Dynamic, arg1: Float): Void {
+    }
 
-  function dynNeedFacing(): Bool {}
+    public function addFrontCircle(arg0: Float, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function canUse(): Bool {}
+    public function addSurroundingCircle(arg0: Float, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function dynOnTouchEntity(e: Entity) {}
+    public function addFrontRect(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function dynOnChargingArea(area: tool.Area.Area, ratio: Float) {}
+    public function addAboveRect(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function __constructor__(id: String, from: en.Mob.Mob) {}
+    public function addBelowRect(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function _canUse(): Bool {}
+    public function removeAllAreas(): Void {
+    }
 
-  function _canUseOn(e: Entity): Bool {}
+    public function getArea(arg0: Int): tool.Area {
+        throw "stub: getArea not decompiled";
+    }
 
-  function initWithInfo(inf: Dynamic) {}
+    public function getTouchingAreaFor(arg0: Entity): tool.Area {
+        throw "stub: getTouchingAreaFor not decompiled";
+    }
 
-  function useMobSkillInfos(inf: Dynamic, speedMul: Float) {}
+    public override function prepare(arg0: Dynamic): Bool {
+        throw "stub: prepare not decompiled";
+    }
 
-  function addFrontCircle(radiusCase: Float, symetrical: Dynamic, distCase: Dynamic) {}
+    public function prepareOnOwnerTarget(arg0: Dynamic, arg1: Dynamic): Bool {
+        throw "stub: prepareOnOwnerTarget not decompiled";
+    }
 
-  function addSurroundingCircle(radiusCase: Float, rx: Dynamic, ry: Dynamic) {}
+    public override function resetCharge(): Void {
+    }
 
-  function addFrontRect(widCase: Float, heiCase: Float, distCase: Dynamic, heightDistCase: Dynamic, symetrical: Dynamic) {}
+    public function executeOnArea(arg0: tool.Area): Void {
+    }
 
-  function addAboveRect(widCase: Float, heiCase: Float, distCase: Dynamic, symetrical: Dynamic) {}
+    public override function execute(arg0: Dynamic): Void {
+    }
 
-  function addBelowRect(widCase: Float, heiCase: Float, distCaseX: Dynamic, distCaseY: Dynamic, symetrical: Dynamic) {}
+    public function announce(): Void {
+    }
 
-  function removeAllAreas() {}
+    public function onBeforePrepare(): Void {
+    }
 
-  function getArea(index: Int): tool.Area.Area {}
+    public function needFacing(): Bool {
+        throw "stub: needFacing not decompiled";
+    }
 
-  function getTouchingAreaFor(e: Entity): tool.Area.Area {}
+    public function onAnnounce(): Void {
+    }
 
-  function prepare(d: Dynamic): Bool {}
+    public function onChargingArea(arg0: tool.Area, arg1: Float): Void {
+    }
 
-  function prepareOnOwnerTarget(forceArea: Dynamic, data: Dynamic): Bool {}
+    public function onTouchEntity(arg0: Entity): Void {
+    }
 
-  function resetCharge() {}
+    public function onTouchOtherMobs(arg0: Entity): Void {
+    }
 
-  function executeOnArea(a: tool.Area.Area) {}
+    public override function update(): Void {
+    }
 
-  function execute(ratio: Dynamic) {}
+    public function hasSanctuaryProtection(arg0: Entity): Bool {
+        throw "stub: hasSanctuaryProtection not decompiled";
+    }
 
-  function announce() {}
+    public function dynOnTouchOtherMobs(arg0: Entity): Void {
+    }
 
-  function onBeforePrepare() {}
+    public function dynOnTouchEntity(arg0: Entity): Void {
+    }
 
-  function needFacing(): Bool {}
+    public function dynOnChargingArea(arg0: tool.Area, arg1: Float): Void {
+    }
 
-  function onAnnounce() {}
+    public function dynOnAnnounce(): Void {
+    }
 
-  function onChargingArea(area: tool.Area.Area, ratio: Float) {}
+    public function dynNeedFacing(): Bool {
+        throw "stub: dynNeedFacing not decompiled";
+    }
 
-  function onTouchEntity(e: Entity) {}
+    public function dynOnBeforePrepare(): Void {
+    }
 
-  function onTouchOtherMobs(e: Entity) {}
+    public function getSameSkillLockDuration(arg0: Float, arg1: Float): Float {
+        throw "stub: getSameSkillLockDuration not decompiled";
+    }
 
-  function update() {}
+    public function canUseOn(arg0: Entity): Bool {
+        throw "stub: canUseOn not decompiled";
+    }
 
-  function hasSanctuaryProtection(e: Entity): Bool {}
+    public function canUse(): Bool {
+        throw "stub: canUse not decompiled";
+    }
 }
-

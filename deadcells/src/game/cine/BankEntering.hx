@@ -1,8 +1,10 @@
 package cine;
+
 class BankEntering extends GameCinematic {
+    public function new(arg0: en.Hero, arg1: en.inter.BankEntrance, arg2: Bool) {
+        super();
+    }
 
-  function __constructor__(hero: en.Hero.Hero, chest: en.inter.BankEntrance.BankEntrance, isOpen: Bool) {}
-
-  function enterBank() {}
+    public function enterBank(): Void {
+    }
 }
-

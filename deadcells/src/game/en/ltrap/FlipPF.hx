@@ -1,41 +1,62 @@
 package en.ltrap;
+
 class FlipPF extends en.LevelTrap {
-  var xLeft: Int;
-  var xRight: Int;
-  var closed: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var xLeft: Int;
+    public var xRight: Int;
+    public var closed: Bool;
 
-  function __constructor__(level: pr.Level.Level, cx: Int, cy: Int, width: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+        super();
+    }
 
-  function get_width(): Int {}
+    public function get_width(): Int {
+        throw "stub: get_width not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onHeroInitDone(hero: en.Hero.Hero) {}
+    public function onHeroInitDone(arg0: en.Hero): Void {
+    }
 
-  function onHeroLand(height: Float) {}
+    public function onHeroLand(arg0: Float): Void {
+    }
 
-  function open() {}
+    public function open(): Void {
+    }
 
-  function close() {}
+    public function close(): Void {
+    }
 
-  function setCollisionState(closed: Bool) {}
+    public function setCollisionState(arg0: Bool): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

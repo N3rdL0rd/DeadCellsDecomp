@@ -1,105 +1,151 @@
 package en.ltrap;
+
 class Pulley extends en.LevelTrap {
-  var ang: Float;
-  var bRadius: Float;
-  var heightChainLeft: Float;
-  var heightChainRight: Float;
-  var maxLengthChain: Float;
-  var triggerPlate: en.inter.PulleyAttachPoint.PulleyAttachPoint;
-  var initialized: Bool;
-  var heroXOnRope: Float;
-  var chainRightStartPointY: Float;
-  var isTemplateFlipped: Bool;
-  var endHeroPull: Bool;
-  var triggeredFromHero: Bool;
-  var directionPlacement: Int;
-  var startWeightChainLenght: Float;
-  var triggered: Bool;
-  var hit: Bool;
-  var end: Bool;
-  var aAcceleration: Float;
-  var globalAlpha: Float;
-  var startingAng: Float;
-  var endingAng: Float;
-  var offsetGearLeftY: Int;
-  var offsetGearRightY: Int;
-  var ball: en.SuspendedWeight.SuspendedWeight;
-  var ballId: Int;
-  var gearLeft: libs.heaps.slib.HSprite.HSprite;
-  var gearRight: libs.heaps.slib.HSprite.HSprite;
-  var wood: libs.heaps.slib.HSprite.HSprite;
-  var chainLeft: PulleyChain;
-  var chainRight: PulleyChain;
-  var initChainLeftSegments: Bool;
-  var initChainRightSegments: Bool;
-  var hitArea: tool.Area.Area;
-  var cullingBounds: h2d.col.Bounds.Bounds;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var ang: Float;
+    public var bRadius: Float;
+    public var heightChainLeft: Float;
+    public var heightChainRight: Float;
+    public var maxLengthChain: Float;
+    public var triggerPlate: en.inter.PulleyAttachPoint;
+    public var initialized: Bool;
+    public var heroXOnRope: Float;
+    public var chainRightStartPointY: Float;
+    public var isTemplateFlipped: Bool;
+    public var endHeroPull: Bool;
+    public var triggeredFromHero: Bool;
+    public var directionPlacement: Int;
+    public var startWeightChainLenght: Float;
+    public var triggered: Bool;
+    public var hit: Bool;
+    public var end: Bool;
+    public var aAcceleration: Float;
+    public var globalAlpha: Float;
+    public var startingAng: Float;
+    public var endingAng: Float;
+    public var offsetGearLeftY: Int;
+    public var offsetGearRightY: Int;
+    public var ball: en.SuspendedWeight;
+    public var ballId: Int;
+    public var gearLeft: libs.heaps.slib.HSprite;
+    public var gearRight: libs.heaps.slib.HSprite;
+    public var wood: libs.heaps.slib.HSprite;
+    public var chainLeft: en.ltrap.PulleyChain;
+    public var chainRight: en.ltrap.PulleyChain;
+    public var initChainLeftSegments: Bool;
+    public var initChainRightSegments: Bool;
+    public var hitArea: tool.Area;
+    public var cullingBounds: h2d.col.Bounds;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, _isTemplateFlipped: Bool, dir: Int, heightCase: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Int, arg5: Dynamic) {
+        super();
+    }
 
-  function get_chainLeftEndPointX(): Float {}
+    public function get_chainLeftEndPointX(): Float {
+        throw "stub: get_chainLeftEndPointX not decompiled";
+    }
 
-  function get_chainLeftEndPointY(): Float {}
+    public function get_chainLeftEndPointY(): Float {
+        throw "stub: get_chainLeftEndPointY not decompiled";
+    }
 
-  function get_chainLeftStartPointX(): Float {}
+    public function get_chainLeftStartPointX(): Float {
+        throw "stub: get_chainLeftStartPointX not decompiled";
+    }
 
-  function get_chainLeftStartPointY(): Float {}
+    public function get_chainLeftStartPointY(): Float {
+        throw "stub: get_chainLeftStartPointY not decompiled";
+    }
 
-  function get_chainRightEndPointX(): Float {}
+    public function get_chainRightEndPointX(): Float {
+        throw "stub: get_chainRightEndPointX not decompiled";
+    }
 
-  function get_chainRightEndPointY(): Float {}
+    public function get_chainRightEndPointY(): Float {
+        throw "stub: get_chainRightEndPointY not decompiled";
+    }
 
-  function get_chainRightStartPointX(): Float {}
+    public function get_chainRightStartPointX(): Float {
+        throw "stub: get_chainRightStartPointX not decompiled";
+    }
 
-  function get_chainRightStartPointY(): Float {}
+    public function get_chainRightStartPointY(): Float {
+        throw "stub: get_chainRightStartPointY not decompiled";
+    }
 
-  function get_ballCenterX(): Float {}
+    public function get_ballCenterX(): Float {
+        throw "stub: get_ballCenterX not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function trigger(cx: Int, cy: Int, fromHero: Dynamic) {}
+    public function trigger(arg0: Int, arg1: Int, arg2: Ref): Void {
+    }
 
-  function trigger_execute(fromHero: Dynamic, cx: Int, cy: Int) {}
+    public function trigger_execute(arg0: Ref, arg1: Int, arg2: Int): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function _isOnScreen(): Bool {}
+    public function _isOnScreen(): Bool {
+        throw "stub: _isOnScreen not decompiled";
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function updateGlobalAlpha() {}
+    public function updateGlobalAlpha(): Void {
+    }
 
-  function updatePulleyForce() {}
+    public function updatePulleyForce(): Void {
+    }
 
-  function overrideSuspendedWeightSource(_source: Entity) {}
+    public function overrideSuspendedWeightSource(arg0: Entity): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class PulleyChain extends tool.Chain {
+    public function new() {
+        super();
+    }
 
-  function __constructor__() {}
-
-  function createSegment(_lastSegmentLength: Dynamic): tool.Chain.Chain {}
+    public override function createSegment(arg0: Dynamic): tool.ChainSegment {
+        throw "stub: createSegment not decompiled";
+    }
 }
-

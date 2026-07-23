@@ -1,30 +1,47 @@
 package en.inter.exit;
+
 class DookuCastleExit extends en.inter.Exit {
-  var tipOffX: Float;
-  var tipOffY: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var tipOffX: Float;
+    public var tipOffY: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, destLevel: String) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+        super();
+    }
 
-  function get_globalUiX(): Float {}
+    public function get_globalUiX(): Float {
+        throw "stub: get_globalUiX not decompiled";
+    }
 
-  function get_globalUiY(): Float {}
+    public function get_globalUiY(): Float {
+        throw "stub: get_globalUiY not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onApplyOptions() {}
+    public function onApplyOptions(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function startExitCinematic(hero: en.Hero.Hero) {}
+    public override function startExitCinematic(arg0: en.Hero): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

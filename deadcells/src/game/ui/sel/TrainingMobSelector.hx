@@ -1,8 +1,11 @@
 package ui.sel;
+
 class TrainingMobSelector extends ui.sel.MobSelector {
+    public function new(arg0: Array<Int>, arg1: Dynamic) {
+        super();
+    }
 
-  function __constructor__(groups: hl.types.ArrayBytes<Int>, validateCb: Dynamic) {}
-
-  function mobIsFiltered(mob: Dynamic): Bool {}
+    public override function mobIsFiltered(arg0: Dynamic): Bool {
+        throw "stub: mobIsFiltered not decompiled";
+    }
 }
-

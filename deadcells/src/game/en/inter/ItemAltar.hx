@@ -1,58 +1,86 @@
 package en.inter;
+
 class ItemAltar extends en.Interactive {
-  var item: tool.InventItem.InventItem;
-  var isEnabled: Bool;
-  var icon: ui.icon.Icon.Icon;
-  var linked: Bool;
-  var link: libs.heaps.slib.HSprite.HSprite;
-  var linkGlow: libs.heaps.slib.HSprite.HSprite;
-  var off: libs.heaps.slib.HSprite.HSprite;
-  var offsetAlpha: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var item: tool.InventItem;
+    public var isEnabled: Bool;
+    public var icon: ui.icon.Icon;
+    public var linked: Bool;
+    public var link: libs.heaps.slib.HSprite;
+    public var linkGlow: libs.heaps.slib.HSprite;
+    public var off: libs.heaps.slib.HSprite;
+    public var offsetAlpha: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function minimapTracking() {}
+    public function minimapTracking(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function setDepth(layer: Int) {}
+    public function setDepth(arg0: Int): Void {
+    }
 
-  function drawLink(a: ItemAltar, b: ItemAltar) {}
+    public function drawLink(arg0: en.inter.ItemAltar, arg1: en.inter.ItemAltar): Void {
+    }
 
-  function getHighestSellValue(): Int {}
+    public function getHighestSellValue(): Int {
+        throw "stub: getHighestSellValue not decompiled";
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function removeLargeTip(instant: Dynamic) {}
+    public function removeLargeTip(arg0: Ref): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function disable(isPicked: Bool) {}
+    public function disable(arg0: Bool): Void {
+    }
 
-  function preUpdate() {}
+    public function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

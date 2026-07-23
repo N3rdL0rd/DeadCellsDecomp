@@ -1,28 +1,43 @@
 package en.deco;
+
 class FireAreaEmitter extends en.Deco {
-  var width: Int;
-  var blue: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var width: Int;
+    public var blue: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, w: Int, blueFire: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Bool) {
+        super();
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function updateFire() {}
+    public function updateFire(): Void {
+    }
 
-  function doFireTick(posX: Float, posY: Float, i: Int) {}
+    public function doFireTick(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

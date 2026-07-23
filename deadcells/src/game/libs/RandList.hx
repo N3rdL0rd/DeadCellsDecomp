@@ -1,25 +1,39 @@
 package libs;
+
 class RandList {
-  var totalProba: Int;
-  var drawList: hl.types.ArrayObj<Dynamic>;
-  var defaultRandom: Dynamic;
+    public var totalProba: Int;
+    public var drawList: Array<Dynamic>;
+    public var defaultRandom: Dynamic;
 
-  function __constructor__(rndFunc: Dynamic, arr: hl.types.ArrayDyn) {}
+    public function new(arg0: Dynamic, arg1: Array<Dynamic>) {
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function setProba(v: Dynamic, p: Int) {}
+    public function setProba(arg0: Dynamic, arg1: Int): Void {
+    }
 
-  function add(elem: Dynamic, proba: Dynamic): RandList {}
+    public function add(arg0: Dynamic, arg1: Dynamic): libs.RandList {
+        throw "stub: add not decompiled";
+    }
 
-  function addArray(arr: hl.types.ArrayDyn, proba: Dynamic) {}
+    public function addArray(arg0: Array<Dynamic>, arg1: Dynamic): Void {
+    }
 
-  function contains(search: Dynamic): Bool {}
+    public function contains(arg0: Dynamic): Bool {
+        throw "stub: contains not decompiled";
+    }
 
-  function remove(search: Dynamic): RandList {}
+    public function remove(arg0: Dynamic): libs.RandList {
+        throw "stub: remove not decompiled";
+    }
 
-  function draw(rndFunc: Dynamic): Dynamic {}
+    public function draw(arg0: Dynamic): Dynamic {
+        throw "stub: draw not decompiled";
+    }
 
-  function filteredDraw(filter: Dynamic, rndFunc: Dynamic): Dynamic {}
+    public function filteredDraw(arg0: Dynamic, arg1: Dynamic): Dynamic {
+        throw "stub: filteredDraw not decompiled";
+    }
 }
-

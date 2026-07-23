@@ -1,61 +1,92 @@
 package en;
+
 class TombstoneEntity extends Entity {
-  var modelNum: Int;
-  var weaponItem: tool.InventItem.InventItem;
-  var groundSprite: libs.heaps.slib.HSprite.HSprite;
-  var killOnLand: Bool;
-  var etheral: Bool;
-  var doomedMob: en.Mob.Mob;
-  var wave: Int;
-  var targetMobs: hl.types.ArrayObj<Dynamic>;
-  var dmgRatio: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var modelNum: Int;
+    public var weaponItem: tool.InventItem;
+    public var groundSprite: libs.heaps.slib.HSprite;
+    public var killOnLand: Bool;
+    public var etheral: Bool;
+    public var doomedMob: en.Mob;
+    public var wave: Int;
+    public var targetMobs: Array<Dynamic>;
+    public var dmgRatio: Float;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, item: tool.InventItem.InventItem, owner: en.Hero.Hero, modelNum: Int, dir: Int, doomedMob: en.Mob.Mob, dmgRatio: Dynamic, wave: Dynamic, targetMobs: hl.types.ArrayObj<Dynamic>) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: en.Hero, arg5: Int, arg6: Int, arg7: en.Mob, arg8: Ref, arg9: Ref, arg10: Array<Dynamic>) {
+        super();
+    }
 
-  function get_itemInf(): Dynamic {}
+    public function get_itemInf(): Dynamic {
+        throw "stub: get_itemInf not decompiled";
+    }
 
-  function get_weaponInf(): Dynamic {}
+    public function get_weaponInf(): Dynamic {
+        throw "stub: get_weaponInf not decompiled";
+    }
 
-  function addTargetedMobs(array: hl.types.ArrayObj<Dynamic>) {}
+    public function addTargetedMobs(arg0: Array<Dynamic>): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setGlowColor(inner: Int, outer: Dynamic, power: Dynamic, sspr: libs.heaps.slib.HSprite.HSprite) {}
+    public override function setGlowColor(arg0: Int, arg1: Dynamic, arg2: Dynamic, arg3: libs.heaps.slib.HSprite): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function doWeaponGlas() {}
+    public function doWeaponGlas(): Void {
+    }
 
-  function glasDamage() {}
+    public function glasDamage(): Void {
+    }
 
-  function setPosFluid(x: Float, y: Float) {}
+    public function setPosFluid(arg0: Float, arg1: Float): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

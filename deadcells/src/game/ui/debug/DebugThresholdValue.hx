@@ -1,23 +1,28 @@
 package ui.debug;
+
 class DebugThresholdValueText {
-  var root: h2d.Flow.Flow;
-  var prefixText: h2d.Text.Text;
-  var suffixText: h2d.Text.Text;
-  var text: h2d.Text.Text;
-  var colorByThreshold: haxe.ds.IntMap<Dynamic>;
-  var value: Int;
-  var color: Int;
-  static var UINT_MAX_VALUE: Int;
-  static var DEFAULT_COLOR: Int;
+    public static var UINT_MAX_VALUE: Int;
+    public static var DEFAULT_COLOR: Int;
+    public var root: h2d.Flow;
+    public var prefixText: h2d.Text;
+    public var suffixText: h2d.Text;
+    public var text: h2d.Text;
+    public var colorByThreshold: haxe.ds.IntMap;
+    public var value: Int;
+    public var color: Int;
 
-  function __constructor__(font: h2d.Font.Font, colorByThreshold: haxe.ds.IntMap<Dynamic>, prefix: String, suffix: String, parent: h2d.Object.Object) {}
+    public function new(arg0: h2d.Font, arg1: haxe.ds.IntMap, arg2: String, arg3: String, arg4: h2d.Object) {
+    }
 
-  function updateValue(newValue: Int) {}
+    public function updateValue(arg0: Int): Void {
+    }
 
-  function updateColor() {}
+    public function updateColor(): Void {
+    }
 
-  function addUpperBoundValue() {}
+    public function addUpperBoundValue(): Void {
+    }
 
-  function updateText() {}
+    public function updateText(): Void {
+    }
 }
-

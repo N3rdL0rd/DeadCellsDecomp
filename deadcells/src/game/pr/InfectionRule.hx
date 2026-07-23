@@ -1,28 +1,40 @@
 package pr;
+
 class InfectionRule extends libs.Process {
-  var isActive: Bool;
-  var infection: pr.Infection.Infection;
-  var infos: Dynamic;
-  var ruleId: String;
+    public var isActive: Bool;
+    public var infection: pr.Infection;
+    public var infos: Dynamic;
+    public var ruleId: String;
 
-  function __constructor__(infection: pr.Infection.Infection, ruleId: String) {}
+    public function new(arg0: pr.Infection, arg1: String) {
+        super();
+    }
 
-  function get_game(): pr.Game.Game {}
+    public function get_game(): pr.Game {
+        throw "stub: get_game not decompiled";
+    }
 
-  function activate() {}
+    public function activate(): Void {
+    }
 
-  function deactivate() {}
+    public function deactivate(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function checkData() {}
+    public function checkData(): Void {
+    }
 
-  function onActivate() {}
+    public function onActivate(): Void {
+    }
 
-  function onDeactivate() {}
+    public function onDeactivate(): Void {
+    }
 
-  function onActiveUpdate() {}
+    public function onActiveUpdate(): Void {
+    }
 }
-

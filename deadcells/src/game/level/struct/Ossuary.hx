@@ -1,15 +1,24 @@
 package level.struct;
+
 class Ossuary extends level.LevelStruct {
-  var longCpt: Int;
+    public var longCpt: Int;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function createCross(id: String): level.RoomNode.RoomNode {}
+    public override function createCross(arg0: String): level.RoomNode {
+        throw "stub: createCross not decompiled";
+    }
 
-  function _createTeleport(ref: level.RoomNode.RoomNode, group: Dynamic): level.RoomNode.RoomNode {}
+    public override function _createTeleport(arg0: level.RoomNode, arg1: Dynamic): level.RoomNode {
+        throw "stub: _createTeleport not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 }
-

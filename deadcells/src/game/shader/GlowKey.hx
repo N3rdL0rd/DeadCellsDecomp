@@ -1,37 +1,53 @@
 package shader;
+
 class GlowKey extends hxsl.Shader {
-  var animated__: Bool;
-  var colorsCount__: Int;
-  var colorKeys__: hl.types.ArrayObj<Dynamic>;
-  var innerColors__: hl.types.ArrayObj<Dynamic>;
-  var outerColors__: hl.types.ArrayObj<Dynamic>;
-  var power__: hl.types.ArrayObj<Dynamic>;
-  var animationMap__: h3d.mat.Texture.Texture;
-  var animationParams__: hl.types.ArrayObj<Dynamic>;
-  var glowColorFactor__: Float;
-  static var DEFAULT_KEY: Int;
-  static var MAX_COUNT: Int;
-  static var SRC: String;
-  static var _SHADER: hxsl.SharedShader.SharedShader;
+    public static var DEFAULT_KEY: Int;
+    public static var MAX_COUNT: Int;
+    public static var SRC: String;
+    public static var _SHADER: hxsl.SharedShader;
+    public var animated__: Bool;
+    public var colorsCount__: Int;
+    public var colorKeys__: Array<Dynamic>;
+    public var innerColors__: Array<Dynamic>;
+    public var outerColors__: Array<Dynamic>;
+    public var power__: Array<Dynamic>;
+    public var animationMap__: h3d.mat.Texture;
+    public var animationParams__: Array<Dynamic>;
+    public var glowColorFactor__: Float;
 
-  function __constructor__(glowDatas: hl.types.ArrayObj<Dynamic>) {}
+    public function new(arg0: Array<Dynamic>) {
+        super();
+    }
 
-  function getGlowData(index: Int): Dynamic {}
+    public function getGlowData(arg0: Int): Dynamic {
+        throw "stub: getGlowData not decompiled";
+    }
 
-  function getGlowDatas(): hl.types.ArrayObj<Dynamic> {}
+    public function getGlowDatas(): Array<Dynamic> {
+        throw "stub: getGlowDatas not decompiled";
+    }
 
-  function setGlowData(index: Int, glowData: Dynamic) {}
+    public function setGlowData(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function setGlowDatas(glowDatas: hl.types.ArrayObj<Dynamic>) {}
+    public function setGlowDatas(arg0: Array<Dynamic>): Void {
+    }
 
-  function applyGlowData(i: Int, glowData: Dynamic) {}
+    public function applyGlowData(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function hasColorData(glowData: Dynamic): Bool {}
+    public function hasColorData(arg0: Dynamic): Bool {
+        throw "stub: hasColorData not decompiled";
+    }
 
-  function updateConstants(globals: hxsl.Globals.Globals) {}
+    public override function updateConstants(arg0: hxsl.Globals): Void {
+    }
 
-  function getParamValue(index: Int): Dynamic {}
+    public override function getParamValue(arg0: Int): Dynamic {
+        throw "stub: getParamValue not decompiled";
+    }
 
-  function getParamFloatValue(index: Int): Float {}
+    public override function getParamFloatValue(arg0: Int): Float {
+        throw "stub: getParamFloatValue not decompiled";
+    }
 }
-

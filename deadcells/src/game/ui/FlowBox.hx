@@ -1,30 +1,46 @@
 package ui;
+
 class FlowBox extends h2d.Flow {
-  var box: ui.UIBox.UIBox;
-  var blackBG: libs.heaps.slib.HSprite.HSprite;
-  var padH: Float;
-  var padV: Float;
-  var padTop: Dynamic;
-  var padBot: Dynamic;
-  var padLeft: Dynamic;
-  var padRight: Dynamic;
+    public var box: ui.UIBox;
+    public var blackBG: libs.heaps.slib.HSprite;
+    public var padH: Float;
+    public var padV: Float;
+    public var padTop: Dynamic;
+    public var padBot: Dynamic;
+    public var padLeft: Dynamic;
+    public var padRight: Dynamic;
 
-  static function createBoxValidationWithBiomeParam(p: h2d.Object.Object, padH: Dynamic, padV: Dynamic): FlowBox {}
+    public function new(arg0: h2d.Object) {
+        super();
+    }
 
-  function __constructor__(p: h2d.Object.Object) {}
+    public static function createBoxBlueAssist(arg0: h2d.Object, arg1: Int, arg2: Int, arg3: Int): ui.FlowBox {
+        throw "stub: createBoxBlueAssist not decompiled";
+    }
 
-  static function createBoxBlueAssist(p: h2d.Object.Object, padH: Int, padV: Int, bgColor: Int): FlowBox {}
+    public static function createBoxInfo(arg0: h2d.Object, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic): ui.FlowBox {
+        throw "stub: createBoxInfo not decompiled";
+    }
 
-  static function createBoxMain(p: h2d.Object.Object, padH: Int, padV: Int, bgColor: Dynamic): FlowBox {}
+    public static function createBoxMain(arg0: h2d.Object, arg1: Int, arg2: Int, arg3: Dynamic): ui.FlowBox {
+        throw "stub: createBoxMain not decompiled";
+    }
 
-  static function createBoxInfo(p: h2d.Object.Object, padH: Int, padV: Int, col: Dynamic, alpha: Dynamic): FlowBox {}
+    public static function createBoxValidation(arg0: h2d.Object, arg1: Ref, arg2: Ref, arg3: Ref, arg4: Dynamic): ui.FlowBox {
+        throw "stub: createBoxValidation not decompiled";
+    }
 
-  static function createBoxValidation(p: h2d.Object.Object, padH: Dynamic, padV: Dynamic, withBlackBG: Dynamic, logo: Dynamic): FlowBox {}
+    public static function createBoxValidationWithBiomeParam(arg0: h2d.Object, arg1: Ref, arg2: Ref): ui.FlowBox {
+        throw "stub: createBoxValidationWithBiomeParam not decompiled";
+    }
 
-  function get_pixelScale(): Float {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 
-  function removeChildren() {}
+    public override function removeChildren(): Void {
+    }
 
-  function reflow() {}
+    public override function reflow(): Void {
+    }
 }
-

@@ -1,50 +1,71 @@
 package level.disp;
+
 class Prison extends level.BiomeDisp {
-  var godRays: hl.types.ArrayObj<Dynamic>;
-  var bigHoleBgTex: h3d.mat.Texture.Texture;
-  var bigHoleFgTex: h3d.mat.Texture.Texture;
-  var smallHoleBgTex: hl.types.ArrayObj<Dynamic>;
-  var smallHoleFgTex: hl.types.ArrayObj<Dynamic>;
-  var biome: String;
-  var bigDoorTiles: hl.types.ArrayObj<Dynamic>;
-  var smallDoorTiles: hl.types.ArrayObj<Dynamic>;
+    public var godRays: Array<Dynamic>;
+    public var bigHoleBgTex: h3d.mat.Texture;
+    public var bigHoleFgTex: h3d.mat.Texture;
+    public var smallHoleBgTex: Array<Dynamic>;
+    public var smallHoleFgTex: Array<Dynamic>;
+    public var biome: String;
+    public var bigDoorTiles: Array<Dynamic>;
+    public var smallDoorTiles: Array<Dynamic>;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function createHoles(r: level.Room.Room, stamps: Bool, forceHoles: Dynamic, addBackground: Dynamic) {}
+    public override function createHoles(arg0: level.Room, arg1: Bool, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function createHoleGrid(r: level.Room.Room, rGrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public override function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: createHoleGrid not decompiled";
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addBigDoors(z: level.DecoTypes.DecoTypes) {}
+    public function addBigDoors(arg0: level.DecoZone): Void {
+    }
 
-  function addSmallDoors(z: level.DecoTypes.DecoTypes) {}
+    public function addSmallDoors(arg0: level.DecoZone): Void {
+    }
 
-  function addShelves(z: level.DecoTypes.DecoTypes) {}
+    public function addShelves(arg0: level.DecoZone): Void {
+    }
 
-  function addBanner(px: Float, py: Float, phei: Int) {}
+    public function addBanner(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function addSuspendedCage(px: Int, py: Int, phei: Int) {}
+    public function addSuspendedCage(arg0: Int, arg1: Int, arg2: Int): Void {
+    }
 
-  function addWindows(z: level.DecoTypes.DecoTypes) {}
+    public function addWindows(arg0: level.DecoZone): Void {
+    }
 
-  function addWallLight(r: level.Room.Room, px: Float, py: Float) {}
+    public function addWallLight(arg0: level.Room, arg1: Float, arg2: Float): Void {
+    }
 
-  function addMushroom(px: Int, py: Int) {}
+    public function addMushroom(arg0: Int, arg1: Int): Void {
+    }
 
-  function addHoleBackground(r: level.Room.Room, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public override function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 
-  function addSmallArch(z: level.DecoTypes.DecoTypes) {}
+    public function addSmallArch(arg0: level.DecoZone): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

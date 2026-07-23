@@ -1,24 +1,37 @@
 package pow;
+
 class GiantWhistle extends Power {
-  var target: Entity;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var target: Entity;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function fail() {}
+    public function fail(): Void {
+    }
 
-  function lockTarget(): en.Mob.Mob {}
+    public function lockTarget(): en.Mob {
+        throw "stub: lockTarget not decompiled";
+    }
 
-  function shoryuken(e: Entity) {}
+    public function shoryuken(arg0: Entity): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

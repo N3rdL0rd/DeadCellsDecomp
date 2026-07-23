@@ -1,17 +1,25 @@
 package libs.heaps.slib;
+
 class HSpriteBatch extends h2d.SpriteBatch {
-  var syncOnlyIfVisible: Bool;
+    public var syncOnlyIfVisible: Bool;
 
-  function __constructor__(t: h2d.Tile.Tile, parent: h2d.Object.Object) {}
+    public function new(arg0: h2d.Tile, arg1: h2d.Object) {
+        super();
+    }
 
-  function onAdd() {}
+    public function onAdd(): Void {
+    }
 
-  function onRemove() {}
+    public override function onRemove(): Void {
+    }
 
-  function add(e: h2d.SpriteBatch.SpriteBatch, before: Dynamic): h2d.SpriteBatch.SpriteBatch {}
+    public override function add(arg0: h2d.BatchElement, arg1: Ref): h2d.BatchElement {
+        throw "stub: add not decompiled";
+    }
 
-  function delete(e: h2d.SpriteBatch.SpriteBatch) {}
+    public override function delete(arg0: h2d.BatchElement): Void {
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public override function sync(arg0: h2d.RenderContext): Void {
+    }
 }
-

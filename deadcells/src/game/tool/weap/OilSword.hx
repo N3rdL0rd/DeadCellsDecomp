@@ -1,17 +1,25 @@
 package tool.weap;
+
 class OilSword extends tool.Weapon {
-  var wasHot: Bool;
+    public var wasHot: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function dynOnFxFrame(cinf: Dynamic) {}
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function setWeaponGlow() {}
+    public override function setWeaponGlow(): Void {
+    }
 }
-

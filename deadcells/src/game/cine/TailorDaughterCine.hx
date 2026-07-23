@@ -1,9 +1,12 @@
 package cine;
+
 class TailorDaughterCine extends GameCinematic {
-  var hero: en.Hero.Hero;
+    public var hero: en.Hero;
 
-  function __constructor__(h: en.Hero.Hero, daughter: en.inter.npc.TailorDaughter.TailorDaughter) {}
+    public function new(arg0: en.Hero, arg1: en.inter.npc.TailorDaughter) {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

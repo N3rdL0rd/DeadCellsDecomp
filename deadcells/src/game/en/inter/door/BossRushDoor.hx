@@ -1,62 +1,90 @@
 package en.inter.door;
+
 class BossRushDoor extends en.Interactive {
-  var glowSprite: libs.heaps.slib.HSprite.HSprite;
-  var gadd: libs.heaps.slib.HSprite.HSpriteBE;
-  var glowColor: Int;
-  var bossRushType: String;
-  var typeIdx: Int;
-  var locked: Bool;
-  var lockFactor: Float;
-  var fxLockFactor: Float;
-  var grid: libs.heaps.slib.HSprite.HSprite;
-  var isCustomBossRushUIOpen: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var glowSprite: libs.heaps.slib.HSprite;
+    public var gadd: libs.heaps.slib.HSpriteBE;
+    public var glowColor: Int;
+    public var bossRushType: String;
+    public var typeIdx: Int;
+    public var locked: Bool;
+    public var lockFactor: Float;
+    public var fxLockFactor: Float;
+    public var grid: libs.heaps.slib.HSprite;
+    public var isCustomBossRushUIOpen: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, type: String) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function isBrLocked(typeIdx: Int): Bool {}
+    public function isBrLocked(arg0: Int): Bool {
+        throw "stub: isBrLocked not decompiled";
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic) {}
+    public function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function setPosPixel(x: Float, y: Float) {}
+    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onApplyOptions() {}
+    public function onApplyOptions(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function launchClosedDoorCine(by: en.Hero.Hero) {}
+    public function launchClosedDoorCine(arg0: en.Hero): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function open(delayMs: Dynamic) {}
+    public function open(arg0: Ref): Void {
+    }
 
-  function close(delayMs: Dynamic) {}
+    public function close(arg0: Ref): Void {
+    }
 
-  function minimapTracking() {}
+    public function minimapTracking(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function onBossSelectorUIClose() {}
+    public function onBossSelectorUIClose(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

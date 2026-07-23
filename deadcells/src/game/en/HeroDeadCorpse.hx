@@ -1,41 +1,61 @@
 package en;
+
 class HeroDeadCorpse extends Entity {
-  var cine: GameCinematic;
-  var speed: Float;
-  var from: en.Hero.Hero;
-  var cells: Int;
-  var consumeFx: tool.Consume.Consume;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var cine: GameCinematic;
+    public var speed: Float;
+    public var from: en.Hero;
+    public var cells: Int;
+    public var consumeFx: tool.Consume;
 
-  function __constructor__(c: GameCinematic, from: en.Hero.Hero) {}
+    public function new(arg0: GameCinematic, arg1: en.Hero) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function canBeHit(): Bool {}
+    public override function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function startLethalFall() {}
+    public function startLethalFall(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function consume() {}
+    public function consume(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

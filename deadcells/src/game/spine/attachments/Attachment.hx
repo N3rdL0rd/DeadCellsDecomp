@@ -1,11 +1,16 @@
 package spine.attachments;
+
 class Attachment {
-  var name: String;
+    public var name: String;
 
-  function __constructor__(name: String) {}
+    public function new(arg0: String) {
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
-

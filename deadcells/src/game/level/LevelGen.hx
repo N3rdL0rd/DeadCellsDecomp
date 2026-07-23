@@ -1,35 +1,53 @@
 package level;
+
 class SeedErrorException {
-  var text: String;
-  var roomErrors: haxe.ds.StringMap;
-  var root: level.RoomNode.RoomNode;
+    public var text: String;
+    public var roomErrors: haxe.ds.StringMap;
+    public var root: level.RoomNode;
 
-  function __constructor__(text: String, root: level.RoomNode.RoomNode, roomErrors: haxe.ds.StringMap) {}
+    public function new(arg0: String, arg1: level.RoomNode, arg2: haxe.ds.StringMap) {
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
 
 class LevelGen {
-  var ltick: Dynamic;
-  var countTryWithDifferentSeed: Int;
-  static var GENMAP_TRY: Int;
+    public static var GENMAP_TRY: Int;
+    public var ltick: Dynamic;
+    public var countTryWithDifferentSeed: Int;
 
-  function __constructor__(loadingTick: Dynamic) {}
+    public function new(arg0: Dynamic) {
+    }
 
-  function generate(user: User, seed: Int, ldat: Dynamic, resetCount: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function generate(arg0: User, arg1: Int, arg2: Dynamic, arg3: Ref): Array<Dynamic> {
+        throw "stub: generate not decompiled";
+    }
 
-  function generateGraph(user: User, ldat: Dynamic, rng: libs.Rand.Rand): level.RoomNode.RoomNode {}
+    public function generateGraph(arg0: User, arg1: Dynamic, arg2: libs.Rand): level.RoomNode {
+        throw "stub: generateGraph not decompiled";
+    }
 
-  function generateMaps(ldat: Dynamic, root: level.RoomNode.RoomNode, rnd: libs.Rand.Rand): Dynamic {}
+    public function generateMaps(arg0: Dynamic, arg1: level.RoomNode, arg2: libs.Rand): Dynamic {
+        throw "stub: generateMaps not decompiled";
+    }
 
-  function generateMap(ldat: Dynamic, root: level.RoomNode.RoomNode, rnd: libs.Rand.Rand, res: Dynamic) {}
+    public function generateMap(arg0: Dynamic, arg1: level.RoomNode, arg2: libs.Rand, arg3: Dynamic): Void {
+    }
 
-  function buildData(user: User, infos: Dynamic, seed: Int, genDat: Dynamic, rnd: libs.Rand.Rand): hl.types.ArrayObj<Dynamic> {}
+    public function buildData(arg0: User, arg1: Dynamic, arg2: Int, arg3: Dynamic, arg4: libs.Rand): Array<Dynamic> {
+        throw "stub: buildData not decompiled";
+    }
 
-  function genMobs(u: User, maps: hl.types.ArrayObj<Dynamic>, extraMobs: hl.types.ArrayObj<Dynamic>, bonusTotalMobCount: Dynamic) {}
+    public function genMobs(arg0: User, arg1: Array<Dynamic>, arg2: Array<Dynamic>, arg3: Ref): Void {
+    }
 
-  function buildLevelMap(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand.Rand): level.LevelMap.LevelMap {}
+    public function buildLevelMap(arg0: User, arg1: Dynamic, arg2: Int, arg3: Dynamic, arg4: libs.Rand): level.LevelMap {
+        throw "stub: buildLevelMap not decompiled";
+    }
 }
-

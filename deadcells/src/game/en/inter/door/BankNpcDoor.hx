@@ -1,31 +1,45 @@
 package en.inter.door;
+
 class BankNpcDoor extends en.inter.Door {
-  var isMain: Bool;
-  var shine: Bool;
-  var banker: en.inter.npc.Banker.Banker;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var isMain: Bool;
+    public var shine: Bool;
+    public var banker: en.inter.npc.Banker;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, isMain: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function openAndUnlock(dir: Dynamic) {}
+    public function openAndUnlock(arg0: Ref): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

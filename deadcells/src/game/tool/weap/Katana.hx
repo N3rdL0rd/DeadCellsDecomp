@@ -1,47 +1,67 @@
 package tool.weap;
+
 class Katana extends tool.Weapon {
-  var currentStart: Int;
-  var currentEnd: Int;
-  var katanaChargeF: Int;
-  var atkTpDmgMul: Float;
-  var mobsToHit: hl.types.ArrayObj<Dynamic>;
-  var hitMobEveryF: Int;
-  var switcher: Int;
-  var nextIsChargeAtk: Bool;
-  var dashKillWithoutHitCount: Int;
+    public var currentStart: Int;
+    public var currentEnd: Int;
+    public var katanaChargeF: Int;
+    public var atkTpDmgMul: Float;
+    public var mobsToHit: Array<Dynamic>;
+    public var hitMobEveryF: Int;
+    public var switcher: Int;
+    public var nextIsChargeAtk: Bool;
+    public var dashKillWithoutHitCount: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function prepare(attackSpeed: Float) {}
+    public override function prepare(arg0: Float): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function doAreaEffect(area: tool.Area.Area) {}
+    public override function doAreaEffect(arg0: tool.Area): Void {
+    }
 
-  function areaCounterBullet(cBullet: en.Bullet.Bullet, speedMul: Dynamic) {}
+    public override function areaCounterBullet(arg0: en.Bullet, arg1: Ref): Void {
+    }
 
-  function tryTeleport() {}
+    public function tryTeleport(): Void {
+    }
 
-  function isWeaponButtonDown(): Bool {}
+    public function isWeaponButtonDown(): Bool {
+        throw "stub: isWeaponButtonDown not decompiled";
+    }
 
-  function interrupt() {}
+    public override function interrupt(): Void {
+    }
 
-  function dynamicChargeExecute() {}
+    public function dynamicChargeExecute(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function playHitFx(m: en.Mob.Mob) {}
+    public function playHitFx(arg0: en.Mob): Void {
+    }
 
-  function tryHitDash(m: en.Mob.Mob, slowMo: Dynamic) {}
+    public function tryHitDash(arg0: en.Mob, arg1: Ref): Void {
+    }
 
-  function addDashKillWithoutHit() {}
+    public function addDashKillWithoutHit(): Void {
+    }
 
-  function onOwnerAttackResultReceived(a: tool.atk.AttackData.AttackData) {}
+    public function onOwnerAttackResultReceived(arg0: tool.atk.AttackData): Void {
+    }
 
-  function cancelDashCharge() {}
+    public function cancelDashCharge(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 }
-

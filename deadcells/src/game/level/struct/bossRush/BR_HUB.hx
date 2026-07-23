@@ -1,22 +1,36 @@
 package level.struct.bossRush;
+
 class BR_HUB extends level.LevelStruct {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function applyDifficulty(): Void {
+    }
 
-  function applyDifficulty() {}
+    public override function addTeleports(): Void {
+    }
 
-  function addTeleports() {}
+    public override function finalize(): Void {
+    }
 
-  function finalize() {}
+    public function shouldHaveInterBoss(): Bool {
+        throw "stub: shouldHaveInterBoss not decompiled";
+    }
 
-  function shouldHaveInterBoss(): Bool {}
+    public function shouldHavePerkNpc(): Bool {
+        throw "stub: shouldHavePerkNpc not decompiled";
+    }
 
-  function shouldHavePerkNpc(): Bool {}
+    public function addBossDoorsAfter(arg0: level.RoomNode): level.RoomNode {
+        throw "stub: addBossDoorsAfter not decompiled";
+    }
 
-  function addBossDoorsAfter(node: level.RoomNode.RoomNode): level.RoomNode.RoomNode {}
-
-  function addTreasureAfter(node: level.RoomNode.RoomNode): level.RoomNode.RoomNode {}
+    public function addTreasureAfter(arg0: level.RoomNode): level.RoomNode {
+        throw "stub: addTreasureAfter not decompiled";
+    }
 }
-

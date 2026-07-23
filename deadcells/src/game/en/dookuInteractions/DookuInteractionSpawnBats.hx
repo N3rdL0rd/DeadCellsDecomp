@@ -1,12 +1,17 @@
 package en.dookuInteractions;
+
 class DookuInteractionSpawnBats extends en.dookuInteractions.DookuInteraction {
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+        super();
+    }
 
-  function __constructor__(parent: en.dookuInteractions.DookuInteractionsManager.DookuInteractionsManager) {}
+    public override function initTexts(): Void {
+    }
 
-  function initTexts() {}
+    public override function canTrigger(): Bool {
+        throw "stub: canTrigger not decompiled";
+    }
 
-  function canTrigger(): Bool {}
-
-  function dynOnExecute() {}
+    public override function dynOnExecute(): Void {
+    }
 }
-

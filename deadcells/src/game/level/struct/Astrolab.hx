@@ -1,20 +1,32 @@
 package level.struct;
+
 class Astrolab extends level.LevelStruct {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public function createAstrolabBranch(arg0: level.RoomNode): level.RoomNode {
+        throw "stub: createAstrolabBranch not decompiled";
+    }
 
-  function createAstrolabBranch(content: level.RoomNode.RoomNode): level.RoomNode.RoomNode {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public override function addTeleports(): Void {
+    }
 
-  function addTeleports() {}
+    public function isTower(arg0: level.RoomNode): Bool {
+        throw "stub: isTower not decompiled";
+    }
 
-  function isTower(r: level.RoomNode.RoomNode): Bool {}
+    public override function finalize(): Void {
+    }
 
-  function finalize() {}
-
-  function allowLoreRoomBefore(r: level.RoomNode.RoomNode): Bool {}
+    public override function allowLoreRoomBefore(arg0: level.RoomNode): Bool {
+        throw "stub: allowLoreRoomBefore not decompiled";
+    }
 }
-

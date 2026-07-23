@@ -1,10 +1,13 @@
 package cine;
+
 class MeetCollector extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var coll: en.inter.npc.Collector.Collector;
+    public var hero: en.Hero;
+    public var coll: en.inter.npc.Collector;
 
-  function __constructor__(hero: en.Hero.Hero, coll: en.inter.npc.Collector.Collector) {}
+    public function new(arg0: en.Hero, arg1: en.inter.npc.Collector) {
+        super();
+    }
 
-  function onComplete() {}
+    public function onComplete(): Void {
+    }
 }
-

@@ -1,18 +1,29 @@
 package tool.weap;
+
 class Shark extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public function getTargetAng(arg0: Float, arg1: Dynamic, arg2: Dynamic): Float {
+        throw "stub: getTargetAng not decompiled";
+    }
 
-  function getTargetAng(rcase: Float, maxAngDist: Dynamic, prioritizeFlyings: Dynamic): Float {}
-
-  function throwShark() {}
+    public function throwShark(): Void {
+    }
 }
-

@@ -1,38 +1,55 @@
 package en.bu;
+
 class MiniGrenade extends en.Bullet {
-  var r: Float;
-  var weaponItem: tool.InventItem.InventItem;
-  var maxBounces: Int;
-  var curBounces: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var r: Float;
+    public var weaponItem: tool.InventItem;
+    public var maxBounces: Int;
+    public var curBounces: Int;
 
-  function onExplode() {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: tool.InventItem, arg3: Dynamic, arg4: Dynamic) {
+        super();
+    }
 
-  function onBlock(byEnt: Bool) {}
+    public function init(): Void {
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, i: tool.InventItem.InventItem, throwStrength: Dynamic, angDelta: Dynamic) {}
+    public override function initGfx(): Void {
+    }
 
-  function init() {}
+    public override function blockOnCollision(): Void {
+    }
 
-  function initGfx() {}
+    public override function onReachSomething(): Void {
+    }
 
-  function blockOnCollision() {}
+    public override function dispose(): Void {
+    }
 
-  function onReachSomething() {}
+    public override function postUpdate(): Void {
+    }
 
-  function dispose() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function unserializeInit(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserializeInit() {}
+    public function onExplode(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

@@ -1,61 +1,98 @@
 package en.mob;
+
 class Rampager extends en.Mob {
-  var jumpData: hxbit.Macros.Macros;
-  var atkCount: Int;
-  var jumpBackSkl: tool.skill.OldMobSkill.OldMobSkill;
-  var rampageSkl: tool.skill.OldMobSkill.OldMobSkill;
-  var teleJump: tool.skill.mobSkill.TeleJump.TeleJump;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var atkCount: Int;
+    public var jumpBackSkl: tool.skill.OldMobSkill;
+    public var rampageSkl: tool.skill.OldMobSkill;
+    public var teleJump: tool.skill.mobSkill.TeleJump;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Rampager {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Rampager {
+        throw "stub: create not decompiled";
+    }
 
-  function getKind(): String {}
+    public function getKind(): String {
+        throw "stub: getKind not decompiled";
+    }
 
-  function getLib(): libs.heaps.slib.SpriteLib.SpriteLib {}
+    public function getLib(): libs.heaps.slib.SpriteLib {
+        throw "stub: getLib not decompiled";
+    }
 
-  function getNormalMap(): h3d.mat.Texture.Texture {}
+    public function getNormalMap(): h3d.mat.Texture {
+        throw "stub: getNormalMap not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function initAtk(id: String, chainWith: String, fxId: String): tool.skill.OldMobSkill.OldMobSkill {}
+    public function initAtk(arg0: String, arg1: String, arg2: String): tool.skill.OldMobSkill {
+        throw "stub: initAtk not decompiled";
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function onDelayedVolteStart() {}
+    public override function onDelayedVolteStart(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function shouldGoRampage(): Bool {}
+    public function shouldGoRampage(): Bool {
+        throw "stub: shouldGoRampage not decompiled";
+    }
 
-  function cancelChain() {}
+    public function cancelChain(): Void {
+    }
 
-  function onBreach(a: tool.atk.AttackData.AttackData) {}
+    public override function onBreach(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

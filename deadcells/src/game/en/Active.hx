@@ -1,49 +1,103 @@
 package en;
+
 class Active extends Entity {
-  var item: tool.InventItem.InventItem;
-  var deployPoint: tool.CPoint.CPoint;
-  var activeCells: haxe.ds.IntMap<Dynamic>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var item: tool.InventItem;
+    public var deployPoint: tool.CPoint;
+    public var activeCells: haxe.ds.IntMap;
 
-  static function create(from: en.Hero.Hero, g: en.Grenade.Grenade, ii: tool.InventItem.InventItem): Active {}
+    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
+    public static function create(arg0: en.Hero, arg1: en.Grenade, arg2: tool.InventItem): en.Active {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function triggerOnDestroyAffixes() {}
+    public function triggerOnDestroyAffixes(): Void {
+    }
 
-  function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic) {}
+    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function clearActiveCells() {}
+    public function clearActiveCells(): Void {
+    }
 
-  function addActiveCell(dx: Int, dy: Int) {}
+    public function addActiveCell(arg0: Int, arg1: Int): Void {
+    }
 
-  function deploy() {}
+    public function deploy(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onFatalFallDamage() {}
+    public override function onFatalFallDamage(): Void {
+    }
 
-  function initStats() {}
+    public function initStats(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
 
+class DeltaCell {
+    public static var __clid: Int;
+    public var e: Entity;
+    public var dx: Int;
+    public var dy: Int;
+    public var __uid: Int;
+    public var : Dynamic;
+
+    public function new(arg0: Int, arg1: Int, arg2: Entity) {
+    }
+
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public function unserializeInit(): Void {
+    }
+
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
+}

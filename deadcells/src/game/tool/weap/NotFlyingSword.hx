@@ -1,11 +1,16 @@
 package tool.weap;
+
 class NotFlyingSword extends tool.Weapon {
-  var swordPet: en.pet.FlyingSword.FlyingSword;
+    public var swordPet: en.pet.FlyingSword;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 }
-

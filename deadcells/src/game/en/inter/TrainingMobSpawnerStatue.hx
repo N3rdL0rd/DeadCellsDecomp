@@ -1,45 +1,66 @@
 package en.inter;
+
 class TrainingMobSpawnerStatue extends en.Interactive {
-  var trainingMobs: hl.types.ArrayObj<Dynamic>;
-  var selectedMob: String;
-  var spawnedMob: en.Mob.Mob;
-  var offsetY: Float;
-  var frontLight: tool.EntityLight.EntityLight;
-  var backLight: tool.EntityLight.EntityLight;
-  var hasSpawned: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var trainingMobs: Array<Dynamic>;
+    public var selectedMob: String;
+    public var spawnedMob: en.Mob;
+    public var offsetY: Float;
+    public var frontLight: tool.EntityLight;
+    public var backLight: tool.EntityLight;
+    public var hasSpawned: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function get_training(): tool.training.TrainingMode.TrainingMode {}
+    public function get_training(): tool.training.TrainingMode {
+        throw "stub: get_training not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function spawnUI() {}
+    public function spawnUI(): Void {
+    }
 
-  function onCloseUI(selectedMob: String) {}
+    public function onCloseUI(arg0: String): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function spawnMob() {}
+    public function spawnMob(): Void {
+    }
 
-  function onMobKilled() {}
+    public function onMobKilled(): Void {
+    }
 
-  function updateStatueVisual() {}
+    public function updateStatueVisual(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

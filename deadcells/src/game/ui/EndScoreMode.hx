@@ -1,40 +1,52 @@
 package ui;
+
 class EndScoreMode extends ui.Process {
-  var fb: ui.FlowBox.FlowBox;
-  var titleText: ui.Text.Text;
-  var subTitleText: ui.Text.Text;
-  var subTitleText2: ui.Text.Text;
-  var steps: hl.types.ArrayObj<Dynamic>;
-  var stepBonus: Dynamic;
-  var stepChrono: Dynamic;
-  var stepTotal: Dynamic;
-  var spaceLine: hl.types.ArrayObj<Dynamic>;
-  var sendText: ui.Text.Text;
-  var wid: Int;
-  var cm: libs.misc.Cinematic.Cinematic;
-  var totalScore: Int;
-  var scoreState: Int;
-  var controller: tool.Controller.Controller;
-  var saveScoreSuccess: Dynamic;
+    public var fb: ui.FlowBox;
+    public var titleText: ui.Text;
+    public var subTitleText: ui.Text;
+    public var subTitleText2: ui.Text;
+    public var steps: Array<Dynamic>;
+    public var stepBonus: Dynamic;
+    public var stepChrono: Dynamic;
+    public var stepTotal: Dynamic;
+    public var spaceLine: Array<Dynamic>;
+    public var sendText: ui.Text;
+    public var wid: Int;
+    public var cm: libs.misc.Cinematic;
+    public var totalScore: Int;
+    public var scoreState: Int;
+    public var controller: tool.ControllerAccess;
+    public var saveScoreSuccess: Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function setControlLabel(fail: Bool) {}
+    public function setControlLabel(arg0: Bool): Void {
+    }
 
-  function saveScore() {}
+    public function saveScore(): Void {
+    }
 
-  function growTotalScore(scoreAdded: Int) {}
+    public function growTotalScore(arg0: Int): Void {
+    }
 
-  function addStep(desc: String, v: String, textBig: Dynamic): Dynamic {}
+    public function addStep(arg0: String, arg1: String, arg2: Ref): Dynamic {
+        throw "stub: addStep not decompiled";
+    }
 
-  function addSpacerLine() {}
+    public function addSpacerLine(): Void {
+    }
 
-  function showRank(sr: Dynamic) {}
+    public function showRank(arg0: Dynamic): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

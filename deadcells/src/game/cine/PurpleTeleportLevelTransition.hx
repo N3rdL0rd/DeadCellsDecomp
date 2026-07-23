@@ -1,13 +1,19 @@
 package cine;
+
 class PurpleTeleportLevelTransition extends cine.LevelTransition {
-  var mask: h2d.Bitmap.Bitmap;
+    public var mask: h2d.Bitmap;
 
-  function __constructor__(mainId: String, map: level.LevelMap.LevelMap, linkId: Dynamic) {}
+    public function new(arg0: String, arg1: level.LevelMap, arg2: Dynamic) {
+        super();
+    }
 
-  static function gotoSub(map: level.LevelMap.LevelMap, linkId: Dynamic): PurpleTeleportLevelTransition {}
+    public static function gotoSub(arg0: level.LevelMap, arg1: Dynamic): cine.PurpleTeleportLevelTransition {
+        throw "stub: gotoSub not decompiled";
+    }
 
-  function loadNewLevel() {}
+    public override function loadNewLevel(): Void {
+    }
 
-  function afterTransitionCine() {}
+    public override function afterTransitionCine(): Void {
+    }
 }
-

@@ -1,114 +1,163 @@
 package en;
+
 class Homunculus extends Entity {
-  var forCinematic: Bool;
-  var attachedToHero: Bool;
-  var frameWalkSpd: Float;
-  var frameClimbSpeed: Float;
-  var moveCos: Float;
-  var accelFactor: Float;
-  var jumpExtra: Int;
-  var wallClimbing: Bool;
-  var rotation: Float;
-  var color: Int;
-  var hasMoveSounds: Bool;
-  var victim: en.Mob.Mob;
-  var grabbed: Entity;
-  var item: Entity;
-  var ignoredItem: Entity;
-  var focused: en.Interactive.Interactive;
-  var sourceSkill: tool.mainSkills.Homunculus.Homunculus;
-  var controller: tool.Controller.Controller;
-  var backParts: hl.types.ArrayObj<Dynamic>;
-  var parts: hl.types.ArrayObj<Dynamic>;
-  var eye: libs.heaps.slib.HSprite.HSprite;
-  var pool: libs.heaps.HParticle.HParticle;
-  var fxSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var ligamentSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var ligaments: hl.types.ArrayObj<Dynamic>;
-  var bodyScale: Float;
-  var holdNormalJumpLock: Float;
-  var isHoldJumpLock: Bool;
-  var moveSoundToggle: Bool;
-  var oldPos: tool.CPoint.CPoint;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var forCinematic: Bool;
+    public var attachedToHero: Bool;
+    public var frameWalkSpd: Float;
+    public var frameClimbSpeed: Float;
+    public var moveCos: Float;
+    public var accelFactor: Float;
+    public var jumpExtra: Int;
+    public var wallClimbing: Bool;
+    public var rotation: Float;
+    public var color: Int;
+    public var hasMoveSounds: Bool;
+    public var victim: en.Mob;
+    public var grabbed: Entity;
+    public var item: Entity;
+    public var ignoredItem: Entity;
+    public var focused: en.Interactive;
+    public var sourceSkill: tool.mainSkills.Homunculus;
+    public var controller: tool.ControllerAccess;
+    public var backParts: Array<Dynamic>;
+    public var parts: Array<Dynamic>;
+    public var eye: libs.heaps.slib.HSprite;
+    public var pool: libs.heaps.ParticlePool;
+    public var fxSb: libs.heaps.slib.HSpriteBatch;
+    public var ligamentSb: libs.heaps.slib.HSpriteBatch;
+    public var ligaments: Array<Dynamic>;
+    public var bodyScale: Float;
+    public var holdNormalJumpLock: Float;
+    public var isHoldJumpLock: Bool;
+    public var moveSoundToggle: Bool;
+    public var oldPos: tool.CPoint;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, forCinematic: Bool, attachedToHero: Bool, sourceSkill: tool.mainSkills.Homunculus.Homunculus) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Bool, arg5: tool.mainSkills.Homunculus) {
+        super();
+    }
 
-  static function cancelIfHere(cx: Int, cy: Int) {}
+    public static function cancelIfHere(arg0: Int, arg1: Int): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public override function initSpeechDeck(): Void {
+    }
 
-  function onRelocate() {}
+    public function onRelocate(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic) {}
+    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function setPosPixel(x: Float, y: Float) {}
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
 
-  function setDepth(layer: Int) {}
+    public override function setDepth(arg0: Int): Void {
+    }
 
-  function setSpriteParent(parent: h2d.Object.Object) {}
+    public override function setSpriteParent(arg0: h2d.Object): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function dash(dir: Int) {}
+    public function dash(arg0: Int): Void {
+    }
 
-  function comeBack() {}
+    public function comeBack(): Void {
+    }
 
-  function controlsToHero() {}
+    public function controlsToHero(): Void {
+    }
 
-  function controlsToMe() {}
+    public function controlsToMe(): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public override function onLand(arg0: Float): Void {
+    }
 
-  function startClimbing() {}
+    public function startClimbing(): Void {
+    }
 
-  function stopClimbing() {}
+    public function stopClimbing(): Void {
+    }
 
-  function releaseItem(autoPick: Bool) {}
+    public function releaseItem(arg0: Bool): Void {
+    }
 
-  function canCrawlThrought(x: Int, y: Int): Bool {}
+    public override function canCrawlThrought(arg0: Int, arg1: Int): Bool {
+        throw "stub: canCrawlThrought not decompiled";
+    }
 
-  function isUsingJumpInputs(): Bool {}
+    public function isUsingJumpInputs(): Bool {
+        throw "stub: isUsingJumpInputs not decompiled";
+    }
 
-  function isUsingAirJumpInputs(): Bool {}
+    public function isUsingAirJumpInputs(): Bool {
+        throw "stub: isUsingAirJumpInputs not decompiled";
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function clearFocus() {}
+    public function clearFocus(): Void {
+    }
 
-  function updateFocus() {}
+    public function updateFocus(): Void {
+    }
 
-  function detachFromHero(): en.UsableBody.UsableBody {}
+    public function detachFromHero(): en.UsableBody {
+        throw "stub: detachFromHero not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function tryToGrabItem(e: Entity): Bool {}
+    public function tryToGrabItem(arg0: Entity): Bool {
+        throw "stub: tryToGrabItem not decompiled";
+    }
 
-  function relocate(e: Entity) {}
+    public function relocate(arg0: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

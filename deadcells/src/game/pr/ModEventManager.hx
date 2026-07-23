@@ -1,17 +1,23 @@
 package pr;
+
 class ModEventManager extends libs.Process {
-  var onHeroEnteredExitRoom: tool.mod.Event.Event;
-  var onHeroDies: tool.mod.Event.Event;
-  var lastRoom: String;
-  static var instance: ModEventManager;
-  static var p_Instance: ModEventManager;
+    public static var instance: pr.ModEventManager;
+    public static var p_Instance: pr.ModEventManager;
+    public var onHeroEnteredExitRoom: tool.mod.Event;
+    public var onHeroDies: tool.mod.Event;
+    public var lastRoom: String;
 
-  static function get_instance(): ModEventManager {}
+    public function new() {
+        super();
+    }
 
-  function __constructor__() {}
+    public static function get_instance(): pr.ModEventManager {
+        throw "stub: get_instance not decompiled";
+    }
 
-  function heroDies() {}
+    public function heroDies(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

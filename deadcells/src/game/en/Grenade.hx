@@ -1,103 +1,155 @@
 package en;
+
 class Grenade extends Entity {
-  var triggerOnGround: Bool;
-  var triggerOnWall: Bool;
-  var triggerOnTouchOpponent: Bool;
-  var color: Dynamic;
-  var bounceX: Float;
-  var bounceY: Float;
-  var throwOnCreate: Bool;
-  var origin: tool.FPoint.FPoint;
-  var dmgMul: Float;
-  var useFakePhysics: Bool;
-  var baseSpd: Float;
-  var target: tool.FPoint.FPoint;
-  var curvePow: Float;
-  var offTailX: Int;
-  var offTailY: Int;
-  var isMinorGrenade: Bool;
-  var explodeSound: hxd.res.Sound.Sound;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var triggerOnGround: Bool;
+    public var triggerOnWall: Bool;
+    public var triggerOnTouchOpponent: Bool;
+    public var color: Dynamic;
+    public var bounceX: Float;
+    public var bounceY: Float;
+    public var throwOnCreate: Bool;
+    public var origin: tool.FPoint;
+    public var dmgMul: Float;
+    public var useFakePhysics: Bool;
+    public var baseSpd: Float;
+    public var target: tool.FPoint;
+    public var curvePow: Float;
+    public var offTailX: Int;
+    public var offTailY: Int;
+    public var isMinorGrenade: Bool;
+    public var explodeSound: hxd.res.Sound;
 
-  function onFixedUpdate() {}
+    public function new(arg0: Entity, arg1: Dynamic) {
+        super();
+    }
 
-  function onPostUpdate() {}
+    public override function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function onAboutToExplode() {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function onDispose() {}
+    public function getIntensityFromDist(arg0: Entity, arg1: Float): Float {
+        throw "stub: getIntensityFromDist not decompiled";
+    }
 
-  function onWallBounce() {}
+    public override function init(): Void {
+    }
 
-  function onTrigger() {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function canTrigger(): Bool {}
+    public override function initGfx(): Void {
+    }
 
-  function onGroundBounce() {}
+    public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function canTouch(e: Entity): Bool {}
+    public override function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
 
-  function __constructor__(from: Entity, timerS: Dynamic) {}
+    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function get_shootX(): Float {}
+    public function throwFree(arg0: Float, arg1: Float): Void {
+    }
 
-  function get_shootY(): Float {}
+    public function throwClassic(arg0: Bool): Void {
+    }
 
-  function getIntensityFromDist(target: Entity, maxRangeCase: Float): Float {}
+    public function throwUsingFakePhysics(arg0: Float, arg1: Float): Void {
+    }
 
-  function init() {}
+    public function traceFakePhysicsTrajectory(arg0: Int): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public function disableFakePhysics(): Void {
+    }
 
-  function initGfx() {}
+    public override function dispose(): Void {
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public function block(arg0: Entity): Void {
+    }
 
-  function setPosPixel(x: Float, y: Float) {}
+    public override function onTouchCeil(): Void {
+    }
 
-  function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic) {}
+    public override function onTouchGround(): Void {
+    }
 
-  function throwFree(dx: Float, dy: Float) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function throwClassic(far: Bool) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function throwUsingFakePhysics(cx: Float, cy: Float) {}
+    public override function postUpdate(): Void {
+    }
 
-  function traceFakePhysicsTrajectory(c: Int) {}
+    public function isAboutToExplode(): Bool {
+        throw "stub: isAboutToExplode not decompiled";
+    }
 
-  function disableFakePhysics() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function dispose() {}
+    public function counter(arg0: tool.InventItem, arg1: Int, arg2: Ref): Array<Dynamic> {
+        throw "stub: counter not decompiled";
+    }
 
-  function block(by: Entity) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function onTouchCeil() {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function onTouchGround() {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function unserializeInit(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function postUpdate() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function isAboutToExplode(): Bool {}
+    public function canTouch(arg0: Entity): Bool {
+        throw "stub: canTouch not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public function canTrigger(): Bool {
+        throw "stub: canTrigger not decompiled";
+    }
 
-  function counter(item: tool.InventItem.InventItem, tier: Int, playSound: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function onTrigger(): Void {
+    }
 
-  function getCLID(): Int {}
+    public function onAboutToExplode(): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onGroundBounce(): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function onWallBounce(): Void {
+    }
 
-  function unserializeInit() {}
+    public function onFixedUpdate(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onPostUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onDispose(): Void {
+    }
 }
-

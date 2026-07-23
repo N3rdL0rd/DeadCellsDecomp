@@ -1,57 +1,71 @@
 package ui;
+
 class CustomItemChooser extends ui.Process {
-  var blackBG: libs.heaps.slib.HSprite.HSprite;
-  var controller: tool.Controller.Controller;
-  var title: ui.Text.Text;
-  var wrapperItem: h2d.Object.Object;
-  var mask: h2d.Mask.Mask;
-  var inter: h2d.Interactive.Interactive;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
-  var items: hl.types.ArrayObj<Dynamic>;
-  var fbItems: ui.FlowBox.FlowBox;
-  var itemDesc: ui.NewItemDesc.NewItemDesc;
-  var flowHelp: h2d.Flow.Flow;
-  var equipmentFlow: h2d.Flow.Flow;
-  var lWeapon: ui.hud.Skill.Skill;
-  var rWeapon: ui.hud.Skill.Skill;
-  var lSkill: ui.hud.Skill.Skill;
-  var rSkill: ui.hud.Skill.Skill;
-  var wid: Int;
-  var hei: Int;
-  var cg: ui.CustomGame.CustomGame;
-  var arItemGroups: hl.types.ArrayBytes<Int>;
-  var curGroup: Int;
-  var curForgeLevel: Int;
-  var curX: Int;
-  var curY: Int;
-  var curSkillSelected: ui.hud.Skill.Skill;
-  var curSkillArrow: libs.heaps.slib.HSprite.HSprite;
-  var dualSkillArrow: libs.heaps.slib.HSprite.HSprite;
-  var selectionSG: h2d.ScaleGrid.ScaleGrid;
+    public var blackBG: libs.heaps.slib.HSprite;
+    public var controller: tool.ControllerAccess;
+    public var title: ui.Text;
+    public var wrapperItem: h2d.Object;
+    public var mask: h2d.Mask;
+    public var inter: h2d.Interactive;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
+    public var items: Array<Dynamic>;
+    public var fbItems: ui.FlowBox;
+    public var itemDesc: ui.NewItemDesc;
+    public var flowHelp: h2d.Flow;
+    public var equipmentFlow: h2d.Flow;
+    public var lWeapon: ui.hud.Skill;
+    public var rWeapon: ui.hud.Skill;
+    public var lSkill: ui.hud.Skill;
+    public var rSkill: ui.hud.Skill;
+    public var wid: Int;
+    public var hei: Int;
+    public var cg: ui.CustomGame;
+    public var arItemGroups: Array<Int>;
+    public var curGroup: Int;
+    public var curForgeLevel: Int;
+    public var curX: Int;
+    public var curY: Int;
+    public var curSkillSelected: ui.hud.Skill;
+    public var curSkillArrow: libs.heaps.slib.HSprite;
+    public var dualSkillArrow: libs.heaps.slib.HSprite;
+    public var selectionSG: h2d.ScaleGrid;
 
-  function __constructor__(cg: ui.CustomGame.CustomGame) {}
+    public function new(arg0: ui.CustomGame) {
+        super();
+    }
 
-  function showGroup() {}
+    public function showGroup(): Void {
+    }
 
-  function getItemAt(cx: Int, cy: Int): Dynamic {}
+    public function getItemAt(arg0: Int, arg1: Int): Dynamic {
+        throw "stub: getItemAt not decompiled";
+    }
 
-  function selectItem(dx: Int, dy: Int) {}
+    public function selectItem(arg0: Int, arg1: Int): Void {
+    }
 
-  function updateSelection() {}
+    public function updateSelection(): Void {
+    }
 
-  function updateScrollingBox() {}
+    public function updateScrollingBox(): Void {
+    }
 
-  function selectSkill() {}
+    public function selectSkill(): Void {
+    }
 
-  function onReset() {}
+    public function onReset(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

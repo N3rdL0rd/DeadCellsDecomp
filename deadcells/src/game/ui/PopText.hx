@@ -1,18 +1,23 @@
 package ui;
+
 class PopText extends ui.Process {
-  var text: ui.Text.Text;
-  var level: pr.Level.Level;
-  var tracked: Entity;
-  var isTracked: Bool;
-  var startIGX: Float;
-  var startIGY: Float;
+    public var text: ui.Text;
+    public var level: pr.Level;
+    public var tracked: Entity;
+    public var isTracked: Bool;
+    public var startIGX: Float;
+    public var startIGY: Float;
 
-  function __constructor__(e: Entity, str: String, col: Int, textIdx: Int, isTracked: Bool) {}
+    public function new(arg0: Entity, arg1: String, arg2: Int, arg3: Int, arg4: Bool) {
+        super();
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

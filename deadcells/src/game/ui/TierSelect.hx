@@ -1,81 +1,110 @@
 package ui;
-class TierSelect extends ui.Process {
-  var controller: tool.Controller.Controller;
-  var sourceEnt: Entity;
-  var hero: en.Hero.Hero;
-  var fb: ui.FlowBox.FlowBox;
-  var title: ui.Text.Text;
-  var line: libs.heaps.slib.HSprite.HSprite;
-  var selection: h2d.ScaleGrid.ScaleGrid;
-  var selectionAlphaOverride: Dynamic;
-  var selectionBlinkTime: Float;
-  var fTier: h2d.Flow.Flow;
-  var tiers: hl.types.ArrayObj<Dynamic>;
-  var curTierId: Int;
-  var ii: tool.InventItem.InventItem;
-  var closing: Bool;
-  var hasPerkAffected: Bool;
-  var tiersWid: Int;
-  var tiersHei: Int;
-
-  function __constructor__(hero: en.Hero.Hero, sourceEnt: Entity, i: tool.InventItem.InventItem) {}
-
-  function get_tiersWid(): Int {}
-
-  function get_tiersHei(): Int {}
-
-  function firstOnResize() {}
-
-  function addTier(wid: Int, hei: Int, ii: tool.InventItem.InventItem, mainTier: String) {}
-
-  function select(id: Int, instant: Dynamic) {}
-
-  function updateCursor() {}
-
-  function validate() {}
-
-  function onDispose() {}
-
-  function onResize() {}
-
-  function update() {}
-
-  function checkForFastCancel() {}
-
-  function postUpdate() {}
-}
 
 class TierInfo {
-  var hero: en.Hero.Hero;
-  var wrapper: h2d.Layers.Layers;
-  var box: ui.UIBox.UIBox;
-  var fName: h2d.Flow.Flow;
-  var wid: Int;
-  var hei: Int;
-  var ii: tool.InventItem.InventItem;
-  var tier: String;
-  var inter: h2d.Interactive.Interactive;
-  var brutIncrease: Int;
-  var tactIncrease: Int;
-  var survIncrease: Int;
-  var scroll: libs.heaps.slib.HSprite.HSprite;
-  var mainInfo: ui.Text.Text;
-  var descInfo: ui.Text.Text;
+    public var hero: en.Hero;
+    public var wrapper: h2d.Layers;
+    public var box: ui.UIBox;
+    public var fName: h2d.Flow;
+    public var wid: Int;
+    public var hei: Int;
+    public var ii: tool.InventItem;
+    public var tier: String;
+    public var inter: h2d.Interactive;
+    public var brutIncrease: Int;
+    public var tactIncrease: Int;
+    public var survIncrease: Int;
+    public var scroll: libs.heaps.slib.HSprite;
+    public var mainInfo: ui.Text;
+    public var descInfo: ui.Text;
 
-  function __constructor__(parent: h2d.Flow.Flow, hero: en.Hero.Hero, wid: Int, hei: Int, ii: tool.InventItem.InventItem, mainTier: String) {}
+    public function new(arg0: h2d.Flow, arg1: en.Hero, arg2: Int, arg3: Int, arg4: tool.InventItem, arg5: String) {
+    }
 
-  function get_brutTier(): Int {}
+    public function get_brutTier(): Int {
+        throw "stub: get_brutTier not decompiled";
+    }
 
-  function get_tactTier(): Int {}
+    public function get_tactTier(): Int {
+        throw "stub: get_tactTier not decompiled";
+    }
 
-  function get_survTier(): Int {}
+    public function get_survTier(): Int {
+        throw "stub: get_survTier not decompiled";
+    }
 
-  function get_pixelScale(): Float {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 
-  function getBaseLife(): Int {}
+    public function getBaseLife(): Int {
+        throw "stub: getBaseLife not decompiled";
+    }
 
-  function updateTexts() {}
+    public function updateTexts(): Void {
+    }
 
-  function setSelected(tw: libs.misc.Tweenie.Tweenie, selected: Bool, instant: Dynamic) {}
+    public function setSelected(arg0: libs.misc.Tweenie, arg1: Bool, arg2: Ref): Void {
+    }
 }
 
+class TierSelect extends ui.Process {
+    public var controller: tool.ControllerAccess;
+    public var sourceEnt: Entity;
+    public var hero: en.Hero;
+    public var fb: ui.FlowBox;
+    public var title: ui.Text;
+    public var line: libs.heaps.slib.HSprite;
+    public var selection: h2d.ScaleGrid;
+    public var selectionAlphaOverride: Dynamic;
+    public var selectionBlinkTime: Float;
+    public var fTier: h2d.Flow;
+    public var tiers: Array<Dynamic>;
+    public var curTierId: Int;
+    public var ii: tool.InventItem;
+    public var closing: Bool;
+    public var hasPerkAffected: Bool;
+    public var tiersWid: Int;
+    public var tiersHei: Int;
+
+    public function new(arg0: en.Hero, arg1: Entity, arg2: tool.InventItem) {
+        super();
+    }
+
+    public function get_tiersWid(): Int {
+        throw "stub: get_tiersWid not decompiled";
+    }
+
+    public function get_tiersHei(): Int {
+        throw "stub: get_tiersHei not decompiled";
+    }
+
+    public function firstOnResize(): Void {
+    }
+
+    public function addTier(arg0: Int, arg1: Int, arg2: tool.InventItem, arg3: String): Void {
+    }
+
+    public function select(arg0: Int, arg1: Ref): Void {
+    }
+
+    public function updateCursor(): Void {
+    }
+
+    public function validate(): Void {
+    }
+
+    public override function onDispose(): Void {
+    }
+
+    public override function onResize(): Void {
+    }
+
+    public function update(): Void {
+    }
+
+    public function checkForFastCancel(): Void {
+    }
+
+    public function postUpdate(): Void {
+    }
+}

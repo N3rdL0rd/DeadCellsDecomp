@@ -1,49 +1,78 @@
 package en.inter.exit;
+
 class FisherBarqueExit extends en.inter.Exit {
-  var greetDistance: Int;
-  var isMoving: Bool;
-  var baseY: Float;
-  var yBounce: Float;
-  var sbWaterFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var greetDistance: Int;
+    public var isMoving: Bool;
+    public var baseY: Float;
+    public var yBounce: Float;
+    public var sbWaterFx: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, destLevel: String) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+        super();
+    }
 
-  function get_frontX(): Float {}
+    public function get_frontX(): Float {
+        throw "stub: get_frontX not decompiled";
+    }
 
-  function get_frontY(): Float {}
+    public function get_frontY(): Float {
+        throw "stub: get_frontY not decompiled";
+    }
 
-  function get_backX(): Float {}
+    public function get_backX(): Float {
+        throw "stub: get_backX not decompiled";
+    }
 
-  function get_backY(): Float {}
+    public function get_backY(): Float {
+        throw "stub: get_backY not decompiled";
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function startExitCinematic(hero: en.Hero.Hero) {}
+    public override function startExitCinematic(arg0: en.Hero): Void {
+    }
 
-  function trulyStartExitCinematic(hero: en.Hero.Hero) {}
+    public function trulyStartExitCinematic(arg0: en.Hero): Void {
+    }
 
-  function onGreet(h: en.Hero.Hero) {}
+    public function onGreet(arg0: en.Hero): Void {
+    }
 
-  function canGreet(h: en.Hero.Hero): Bool {}
+    public function canGreet(arg0: en.Hero): Bool {
+        throw "stub: canGreet not decompiled";
+    }
 
-  function getDestName(): String {}
+    public override function getDestName(): String {
+        throw "stub: getDestName not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

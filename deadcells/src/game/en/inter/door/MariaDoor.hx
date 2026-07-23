@@ -1,16 +1,24 @@
 package en.inter.door;
+
 class MariaDoor extends en.inter.door.LockedDoor {
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, key: String, customId: String) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: String) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function openWithAKick(by: en.Hero.Hero) {}
+    public function openWithAKick(arg0: en.Hero): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

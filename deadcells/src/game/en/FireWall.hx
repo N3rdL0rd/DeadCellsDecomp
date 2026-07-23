@@ -1,46 +1,68 @@
 package en;
+
 class FireWall extends Entity {
-  var mob: en.Mob.Mob;
-  var area: tool.Area.Area;
-  var speed: Float;
-  var curHei: Float;
-  var skillName: String;
-  var skillInfos: Dynamic;
-  var destroyOnTouch: Bool;
-  var destroyOnBlock: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var mob: en.Mob;
+    public var area: tool.Area;
+    public var speed: Float;
+    public var curHei: Float;
+    public var skillName: String;
+    public var skillInfos: Dynamic;
+    public var destroyOnTouch: Bool;
+    public var destroyOnBlock: Bool;
 
-  function onFixedUpdate() {}
+    public function new(arg0: en.Mob, arg1: String, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: Ref) {
+        super();
+    }
 
-  function playFx() {}
+    public override function init(): Void {
+    }
 
-  function createTouchAttack(): tool.atk.AttackData.AttackData {}
+    public override function initGfx(): Void {
+    }
 
-  function getSfxLoop(): hxd.res.Sound.Sound {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function __constructor__(mob: en.Mob.Mob, skillName: String, cx: Int, cy: Int, height: Int, radius: Float, speed: Dynamic) {}
+    public function checkTouchOpponents(): Void {
+    }
 
-  function init() {}
+    public override function postUpdate(): Void {
+    }
 
-  function initGfx() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function checkTouchOpponents() {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function playFx(): Void {
+    }
 
-  function unserializeInit() {}
+    public function createTouchAttack(): tool.atk.AttackData {
+        throw "stub: createTouchAttack not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onFixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function getSfxLoop(): hxd.res.Sound {
+        throw "stub: getSfxLoop not decompiled";
+    }
 }
-

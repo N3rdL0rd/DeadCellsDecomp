@@ -1,29 +1,48 @@
 package libs.tilemap;
+
 class Parser {
-  var grid: hl.types.ArrayBytes<Int>;
-  var wid: Int;
-  var hei: Int;
-  static var START_MATRIX: hl.types.ArrayObj<Dynamic>;
-  static var STEP_MATRIX: hl.types.ArrayObj<Dynamic>;
+    public static var START_MATRIX: Array<Dynamic>;
+    public static var STEP_MATRIX: Array<Dynamic>;
+    public var grid: Array<Int>;
+    public var wid: Int;
+    public var hei: Int;
 
-  function __constructor__(grid: hl.types.ArrayBytes<Int>, wid: Int, hei: Int) {}
+    public function new(arg0: Array<Int>, arg1: Int, arg2: Int) {
+    }
 
-  static function createStepMatrix(dir: Int): hl.types.ArrayBytes<Int> {}
+    public static function createStepMatrix(arg0: Int): Array<Int> {
+        throw "stub: createStepMatrix not decompiled";
+    }
 
-  function getCollisionPolygons(s: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function getCollisionPolygons(arg0: libs.tilemap.Selector): Array<Dynamic> {
+        throw "stub: getCollisionPolygons not decompiled";
+    }
 
-  function getPiercedPolygons(s: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function getPiercedPolygons(arg0: libs.tilemap.Selector): Array<Dynamic> {
+        throw "stub: getPiercedPolygons not decompiled";
+    }
 
-  function getCoveringRectangles(s: Dynamic, mode: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function getCoveringRectangles(arg0: libs.tilemap.Selector, arg1: libs.tilemap.SplitMode): Array<Dynamic> {
+        throw "stub: getCoveringRectangles not decompiled";
+    }
 
-  function getTransitionSegments(nrm: Int, sA: Dynamic, sB: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function getTransitionSegments(arg0: Int, arg1: libs.tilemap.Selector, arg2: libs.tilemap.Selector): Array<Dynamic> {
+        throw "stub: getTransitionSegments not decompiled";
+    }
 
-  function getCorners(innerSel: Dynamic, outerSel: Dynamic, expanded: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function getCorners(arg0: libs.tilemap.Selector, arg1: libs.tilemap.Selector, arg2: Ref): Array<Dynamic> {
+        throw "stub: getCorners not decompiled";
+    }
 
-  function scanTransition(x: Int, y: Int, dir: Int, sA: Dynamic, sB: Dynamic): Int {}
+    public function scanTransition(arg0: Int, arg1: Int, arg2: Int, arg3: libs.tilemap.Selector, arg4: libs.tilemap.Selector): Int {
+        throw "stub: scanTransition not decompiled";
+    }
 
-  function scanRectangle(from: libs.tilemap.Segment.Segment, dir: Int, innerSel: Dynamic, sideSel: Dynamic): Dynamic {}
+    public function scanRectangle(arg0: libs.tilemap.Segment, arg1: Int, arg2: libs.tilemap.Selector, arg3: libs.tilemap.Selector): libs.tilemap.Rectangle {
+        throw "stub: scanRectangle not decompiled";
+    }
 
-  function scanRectangles(from: libs.tilemap.Segment.Segment, dir: Int, innerSel: Dynamic, sideSel: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function scanRectangles(arg0: libs.tilemap.Segment, arg1: Int, arg2: libs.tilemap.Selector, arg3: libs.tilemap.Selector): Array<Dynamic> {
+        throw "stub: scanRectangles not decompiled";
+    }
 }
-

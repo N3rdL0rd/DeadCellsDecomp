@@ -1,21 +1,30 @@
 package pr.infection;
-class MobBecomesElite extends pr.Infection.InfectionRule {
-  var currentMobTransformed: en.Mob.Mob;
-  var infectionRange: Float;
-  var infectionDelay: Float;
 
-  function __constructor__(infection: pr.Infection.Infection, ruleId: String) {}
+class MobBecomesElite extends pr.InfectionRule {
+    public var currentMobTransformed: en.Mob;
+    public var infectionRange: Float;
+    public var infectionDelay: Float;
 
-  function checkData() {}
+    public function new(arg0: pr.Infection, arg1: String) {
+        super();
+    }
 
-  function onActivate() {}
+    public override function checkData(): Void {
+    }
 
-  function onDeactivate() {}
+    public override function onActivate(): Void {
+    }
 
-  function onActiveUpdate() {}
+    public override function onDeactivate(): Void {
+    }
 
-  function onCompleteSpawnElite() {}
+    public override function onActiveUpdate(): Void {
+    }
 
-  function generateCDforMobBecomesEliteRule(): Float {}
+    public function onCompleteSpawnElite(): Void {
+    }
+
+    public function generateCDforMobBecomesEliteRule(): Float {
+        throw "stub: generateCDforMobBecomesEliteRule not decompiled";
+    }
 }
-

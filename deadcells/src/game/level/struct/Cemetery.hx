@@ -1,16 +1,23 @@
 package level.struct;
+
 class Cemetery extends level.LevelStruct {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public function addCryptContent(arg0: level.RoomNode, arg1: Int, arg2: level.RoomNode, arg3: level.ZDoorContentClue): Void {
+    }
 
-  function addCryptContent(entrance: level.RoomNode.RoomNode, combatRooms: Int, content: level.RoomNode.RoomNode, clue: Dynamic) {}
+    public override function finalize(): Void {
+    }
 
-  function finalize() {}
-
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 }
-

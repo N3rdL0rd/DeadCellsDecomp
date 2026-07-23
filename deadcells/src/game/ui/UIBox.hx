@@ -1,60 +1,93 @@
 package ui;
+
 class UIBox extends h2d.Layers {
-  var wid: Int;
-  var hei: Int;
-  var padH: Int;
-  var padV: Int;
-  var borderW: Int;
-  var borderH: Int;
-  var sg: h2d.ScaleGrid.ScaleGrid;
-  var secondarySg: h2d.ScaleGrid.ScaleGrid;
-  var colorBG: Int;
-  var bg: h2d.Graphics.Graphics;
-  var bgDuo: h2d.Graphics.Graphics;
-  var logoDC: libs.heaps.slib.HSprite.HSprite;
-  var maskLogo: h2d.Mask.Mask;
-  var isAdjusted: Bool;
+    public var wid: Int;
+    public var hei: Int;
+    public var padH: Int;
+    public var padV: Int;
+    public var borderW: Int;
+    public var borderH: Int;
+    public var sg: h2d.ScaleGrid;
+    public var secondarySg: h2d.ScaleGrid;
+    public var colorBG: Int;
+    public var bg: h2d.Graphics;
+    public var bgDuo: h2d.Graphics;
+    public var logoDC: libs.heaps.slib.HSprite;
+    public var maskLogo: h2d.Mask;
+    public var isAdjusted: Bool;
 
-  function get_pixelScale(): Float {}
+    public function new(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function drawBoxMain(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, col: Dynamic, adjust: Dynamic): UIBox {}
+    public static function drawBoxBlueAssist(arg0: Float, arg1: Float, arg2: Ref, arg3: Ref, arg4: Int): ui.UIBox {
+        throw "stub: drawBoxBlueAssist not decompiled";
+    }
 
-  static function drawBoxValidation(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, logo: Dynamic, adjust: Dynamic): UIBox {}
+    public static function drawBoxThink(arg0: Float, arg1: Float, arg2: Ref, arg3: Ref, arg4: Int): ui.UIBox {
+        throw "stub: drawBoxThink not decompiled";
+    }
 
-  static function drawBoxInfo(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, col: Dynamic, alpha: Dynamic, adjust: Dynamic): UIBox {}
+    public static function drawBoxCollector(arg0: Float, arg1: Float, arg2: Ref, arg3: Ref, arg4: Int): ui.UIBox {
+        throw "stub: drawBoxCollector not decompiled";
+    }
 
-  static function drawBoxHud(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, adjust: Dynamic): UIBox {}
+    public static function drawBoxDialog(arg0: Float, arg1: Float, arg2: Ref, arg3: Ref, arg4: Int): ui.UIBox {
+        throw "stub: drawBoxDialog not decompiled";
+    }
 
-  static function drawBoxBlueAssist(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, colBG: Int): UIBox {}
+    public static function drawBoxInfo(arg0: Float, arg1: Float, arg2: Ref, arg3: Ref, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic): ui.UIBox {
+        throw "stub: drawBoxInfo not decompiled";
+    }
 
-  static function drawBoxOutline(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, col: Dynamic, adjust: Dynamic): UIBox {}
+    public static function drawBoxValidation(arg0: Float, arg1: Float, arg2: Ref, arg3: Ref, arg4: Dynamic, arg5: Dynamic): ui.UIBox {
+        throw "stub: drawBoxValidation not decompiled";
+    }
 
-  static function drawBoxLegendaryOutline(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, adjust: Dynamic): UIBox {}
+    public static function drawBoxOutline(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic): ui.UIBox {
+        throw "stub: drawBoxOutline not decompiled";
+    }
 
-  function __constructor__(idTile: String, wid: Float, hei: Float, padH: Int, padV: Int) {}
+    public static function drawBoxLegendaryOutline(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic): ui.UIBox {
+        throw "stub: drawBoxLegendaryOutline not decompiled";
+    }
 
-  static function drawBoxCollector(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, colBG: Int): UIBox {}
+    public static function drawBoxHud(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic): ui.UIBox {
+        throw "stub: drawBoxHud not decompiled";
+    }
 
-  static function drawBoxDialog(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, colBG: Int): UIBox {}
+    public static function drawBoxMain(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic): ui.UIBox {
+        throw "stub: drawBoxMain not decompiled";
+    }
 
-  static function drawBoxThink(wid: Float, hei: Float, padH: Dynamic, padV: Dynamic, colBG: Int): UIBox {}
+    public function addSecondaryBox(arg0: String): Void {
+    }
 
-  function addSecondaryBox(idTile: String) {}
+    public function adjust(): Void {
+    }
 
-  function adjust() {}
+    public function colorizeSG(arg0: Int): Void {
+    }
 
-  function colorizeSG(col: Int) {}
+    public function setBG(arg0: Int, arg1: Ref): Void {
+    }
 
-  function setBG(colBG: Int, alpha: Dynamic) {}
+    public function setBgAlpha(arg0: Ref): Void {
+    }
 
-  function setBgAlpha(alpha: Dynamic) {}
+    public function setMainDuoBG(): Void {
+    }
 
-  function setMainDuoBG() {}
+    public function addLogoDC(): Void {
+    }
 
-  function addLogoDC() {}
+    public function onResize(arg0: Float, arg1: Float): Void {
+    }
 
-  function onResize(newWid: Float, newHei: Float) {}
+    public function destroy(): Void {
+    }
 
-  function destroy() {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
-

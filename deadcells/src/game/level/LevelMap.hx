@@ -1,132 +1,228 @@
 package level;
+
 class LevelMap {
-  var fastSpots: hl.types.ArrayObj<Dynamic>;
-  var collisions: hl.types.ArrayBytes<Int>;
-  var groundYr: hl.types.ArrayBytes<Float>;
-  var rooms: hl.types.ArrayObj<Dynamic>;
-  var wid: Int;
-  var hei: Int;
-  var id: String;
-  var viewportRect: Dynamic;
-  var dynamicViewportRect: Dynamic;
-  var infos: Dynamic;
-  var mobDmgTier: Int;
-  var mobLifeTier: Int;
-  var lootLevel: Int;
-  var biome: Dynamic;
-  var forcedBiome: String;
-  var seed: Int;
-  var decoGrid: hl.types.ArrayBytes<Int>;
-  var spots: Dynamic;
-  var platforms: hl.types.ArrayObj<Dynamic>;
-  var bounds: h2d.col.Bounds.Bounds;
-  var parser: libs.tilemap.Parser.Parser;
-  var platformGrid: hl.types.ArrayObj<Dynamic>;
-  var cellToRoom: hl.types.ArrayBytes<Int>;
-  var initDone: Bool;
-  var blurredCols: hl.types.ArrayBytes<Float>;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var fastSpots: Array<Dynamic>;
+    public var collisions: Array<Int>;
+    public var groundYr: Array<Float>;
+    public var rooms: Array<Dynamic>;
+    public var wid: Int;
+    public var hei: Int;
+    public var id: String;
+    public var viewportRect: Dynamic;
+    public var dynamicViewportRect: Dynamic;
+    public var infos: Dynamic;
+    public var mobDmgTier: Int;
+    public var mobLifeTier: Int;
+    public var lootLevel: Int;
+    public var biome: Dynamic;
+    public var forcedBiome: String;
+    public var seed: Int;
+    public var decoGrid: Array<Int>;
+    public var spots: Dynamic;
+    public var platforms: Array<Dynamic>;
+    public var bounds: h2d.col.Bounds;
+    public var parser: libs.tilemap.Parser;
+    public var platformGrid: Array<Dynamic>;
+    public var cellToRoom: Array<Int>;
+    public var initDone: Bool;
+    public var blurredCols: Array<Float>;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(user: User, ldat: Dynamic, wid: Int, hei: Int) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: Int, arg3: Int) {
+    }
 
-  function set_infos(ldat: Dynamic): Dynamic {}
+    public function set_infos(arg0: Dynamic): Dynamic {
+        throw "stub: set_infos not decompiled";
+    }
 
-  function setCell(cx: Int, cy: Int, type: Dynamic) {}
+    public function setCell(arg0: Int, arg1: Int, arg2: level.ColType): Void {
+    }
 
-  function getGroundYr(cx: Int, cy: Int, xr: Dynamic, yr: Dynamic): Float {}
+    public function getGroundYr(arg0: Int, arg1: Int, arg2: Ref, arg3: Ref): Float {
+        throw "stub: getGroundYr not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function topWallTopDist(x: Int, y: Int, dir: Int): Int {}
+    public function topWallTopDist(arg0: Int, arg1: Int, arg2: Int): Int {
+        throw "stub: topWallTopDist not decompiled";
+    }
 
-  function initSpots(forced: Dynamic) {}
+    public function initSpots(arg0: Ref): Void {
+    }
 
-  function addCollisionOneWayUnderWall() {}
+    public function addCollisionOneWayUnderWall(): Void {
+    }
 
-  function addCollisionsAboveDoors() {}
+    public function addCollisionsAboveDoors(): Void {
+    }
 
-  function computeCollisionMarkers() {}
+    public function computeCollisionMarkers(): Void {
+    }
 
-  function initDecoFlags() {}
+    public function initDecoFlags(): Void {
+    }
 
-  function parseAllPlatforms() {}
+    public function parseAllPlatforms(): Void {
+    }
 
-  function updateGroundYrs() {}
+    public function updateGroundYrs(): Void {
+    }
 
-  function parsePlatformAt(doorX: Int, doorY: Int): Bool {}
+    public function parsePlatformAt(arg0: Int, arg1: Int): Bool {
+        throw "stub: parsePlatformAt not decompiled";
+    }
 
-  function hasMobStatue(): Bool {}
+    public function hasMobStatue(): Bool {
+        throw "stub: hasMobStatue not decompiled";
+    }
 
-  function hasZoneDecoFlag(f: Dynamic, cx: Int, cy: Int, width: Int, height: Int, onEveryTile: Dynamic): Bool {}
+    public function hasZoneDecoFlag(arg0: level.DecoFlag, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Ref): Bool {
+        throw "stub: hasZoneDecoFlag not decompiled";
+    }
 
-  function hasZoneAnyDecoFlag(f: Int, cx: Int, cy: Int, width: Int, height: Int): Bool {}
+    public function hasZoneAnyDecoFlag(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Bool {
+        throw "stub: hasZoneAnyDecoFlag not decompiled";
+    }
 
-  function removeSpot(k: Int, cx: Int, cy: Int) {}
+    public function removeSpot(arg0: Int, arg1: Int, arg2: Int): Void {
+    }
 
-  function checkCollRect(cx: Int, cy: Int, wid: Int, hei: Int, wantedColl: Bool): Bool {}
+    public function checkCollRect(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Bool): Bool {
+        throw "stub: checkCollRect not decompiled";
+    }
 
-  function getRoomAt(cx: Int, cy: Int): level.Room.Room {}
+    public function getRoomAt(arg0: Int, arg1: Int): level.Room {
+        throw "stub: getRoomAt not decompiled";
+    }
 
-  function getRoomById(id: Int): level.Room.Room {}
+    public function getRoomById(arg0: Int): level.Room {
+        throw "stub: getRoomById not decompiled";
+    }
 
-  function addSpot(k: Int, cx: Float, cy: Float) {}
+    public function addSpot(arg0: Int, arg1: Float, arg2: Float): Void {
+    }
 
-  function getSpots(k: Int): hl.types.ArrayObj<Dynamic> {}
+    public function getSpots(arg0: Int): Array<Dynamic> {
+        throw "stub: getSpots not decompiled";
+    }
 
-  function getGroundY(cx: Int, cy: Int): Int {}
+    public function getGroundY(arg0: Int, arg1: Int): Int {
+        throw "stub: getGroundY not decompiled";
+    }
 
-  function getCeilY(cx: Int, cy: Int, ignoreOneWay: Dynamic, ignoreFakeCeil: Dynamic): Int {}
+    public function getCeilY(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Int {
+        throw "stub: getCeilY not decompiled";
+    }
 
-  function toCeilY(cx: Int, cy: Int, ignoreOneWay: Dynamic): Int {}
+    public function toCeilY(arg0: Int, arg1: Int, arg2: Dynamic): Int {
+        throw "stub: toCeilY not decompiled";
+    }
 
-  function getLeftWall(cx: Int, cy: Int, ignoreOneWay: Dynamic): Int {}
+    public function getLeftWall(arg0: Int, arg1: Int, arg2: Dynamic): Int {
+        throw "stub: getLeftWall not decompiled";
+    }
 
-  function getRightWall(cx: Int, cy: Int, ignoreOneWay: Dynamic): Int {}
+    public function getRightWall(arg0: Int, arg1: Int, arg2: Dynamic): Int {
+        throw "stub: getRightWall not decompiled";
+    }
 
-  function getWaterSurfaceY(cx: Int, cy: Int): Float {}
+    public function getWaterSurfaceY(arg0: Int, arg1: Int): Float {
+        throw "stub: getWaterSurfaceY not decompiled";
+    }
 
-  function hasMarker(mk: String, cx: Int, cy: Int): Bool {}
+    public function hasMarker(arg0: String, arg1: Int, arg2: Int): Bool {
+        throw "stub: hasMarker not decompiled";
+    }
 
-  function isRoomRevealedAt(cx: Int, cy: Int): Bool {}
+    public function isRoomRevealedAt(arg0: Int, arg1: Int): Bool {
+        throw "stub: isRoomRevealedAt not decompiled";
+    }
 
-  function revealRoomAt(cx: Int, cy: Int): Bool {}
+    public function revealRoomAt(arg0: Int, arg1: Int): Bool {
+        throw "stub: revealRoomAt not decompiled";
+    }
 
-  function getRoomPlatforms(rid: Int, exclusives: Bool): hl.types.ArrayObj<Dynamic> {}
+    public function getRoomPlatforms(arg0: Int, arg1: Bool): Array<Dynamic> {
+        throw "stub: getRoomPlatforms not decompiled";
+    }
 
-  function countRoomPlatforms(rid: Int, exclusives: Bool): Int {}
+    public function countRoomPlatforms(arg0: Int, arg1: Bool): Int {
+        throw "stub: countRoomPlatforms not decompiled";
+    }
 
-  function initPlatformOccupation() {}
+    public function initPlatformOccupation(): Void {
+    }
 
-  function addPlatformOccupation(cx: Int, cy: Int, dist: Dynamic) {}
+    public function addPlatformOccupation(arg0: Int, arg1: Int, arg2: Dynamic): Void {
+    }
 
-  function parsePlatform(cx: Int, cy: Int): level.Platform.Platform {}
+    public function parsePlatform(arg0: Int, arg1: Int): level.Platform {
+        throw "stub: parsePlatform not decompiled";
+    }
 
-  function buildBlurredCols() {}
+    public function buildBlurredCols(): Void {
+    }
 
-  function listWalls(minHeight: Int, visibleCheck: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function listWalls(arg0: Int, arg1: Ref): Array<Dynamic> {
+        throw "stub: listWalls not decompiled";
+    }
 
-  function listDecoPlatforms(minWidth: Int, req: Dynamic, excl: Dynamic, split: Dynamic, invalidate: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function listDecoPlatforms(arg0: Int, arg1: Ref, arg2: Ref, arg3: Ref, arg4: Ref): Array<Dynamic> {
+        throw "stub: listDecoPlatforms not decompiled";
+    }
 
-  function listWallTransitions(innerSel: Dynamic, outerSel: Dynamic, borderSel: Dynamic, upInnerSel: Dynamic, upOuterSel: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function listWallTransitions(arg0: libs.tilemap.Selector, arg1: libs.tilemap.Selector, arg2: libs.tilemap.Selector, arg3: libs.tilemap.Selector, arg4: libs.tilemap.Selector): Array<Dynamic> {
+        throw "stub: listWallTransitions not decompiled";
+    }
 
-  function maxHist(stack: Dynamic, row: hl.types.ArrayBytes<Int>, rect: h2d.col.Bounds.Bounds): Int {}
+    public function maxHist(arg0: level.CustomStack, arg1: Array<Int>, arg2: h2d.col.Bounds): Int {
+        throw "stub: maxHist not decompiled";
+    }
 
-  function findBiggestRect(req: Int, excl: Int, tmpStack: Dynamic, tmpRow: hl.types.ArrayBytes<Int>, maxRect: h2d.col.Bounds.Bounds): Int {}
+    public function findBiggestRect(arg0: Int, arg1: Int, arg2: level.CustomStack, arg3: Array<Int>, arg4: h2d.col.Bounds): Int {
+        throw "stub: findBiggestRect not decompiled";
+    }
 
-  function listDecoZones(req: Int, minArea: Int, excl: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function listDecoZones(arg0: Int, arg1: Int, arg2: Ref): Array<Dynamic> {
+        throw "stub: listDecoZones not decompiled";
+    }
 
-  function getCollisionPolygons(): hl.types.ArrayObj<Dynamic> {}
+    public function getCollisionPolygons(): Array<Dynamic> {
+        throw "stub: getCollisionPolygons not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
+class CollisionData_Impl_ {
+    public static function fromColType(arg0: level.ColType): Int {
+        throw "stub: fromColType not decompiled";
+    }
+}
+
+class CustomStack {
+    public var v: Array<Int>;
+    public var length: Int;
+
+    public function new() {
+    }
+}

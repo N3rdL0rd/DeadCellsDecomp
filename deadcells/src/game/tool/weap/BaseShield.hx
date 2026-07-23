@@ -1,52 +1,77 @@
 package tool.weap;
+
 class BaseShield extends tool.Weapon {
-  var holdAnimId: String;
-  var parryAnimId: String;
-  var canBeHeld: Bool;
-  var parriedSomething: Bool;
-  var startTimeF: Float;
-  var totalParryDurationS: Float;
+    public var holdAnimId: String;
+    public var parryAnimId: String;
+    public var canBeHeld: Bool;
+    public var parriedSomething: Bool;
+    public var startTimeF: Float;
+    public var totalParryDurationS: Float;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  static function createCounterBullet(owner: en.Hero.Hero, item: tool.InventItem.InventItem, sourceAtk: tool.atk.AttackData.AttackData, cBullet: en.Bullet.Bullet): en.Bullet.Bullet {}
+    public static function createCounterBullet(arg0: en.Hero, arg1: tool.InventItem, arg2: tool.atk.AttackData, arg3: en.Bullet): en.Bullet {
+        throw "stub: createCounterBullet not decompiled";
+    }
 
-  function initSkill(idx: Int, chainInf: Dynamic, s: tool.Weapon.Weapon) {}
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function tryToCancel(byWeapon: Bool): Bool {}
+    public override function tryToCancel(arg0: Bool): Bool {
+        throw "stub: tryToCancel not decompiled";
+    }
 
-  function onShieldChargeStart() {}
+    public function onShieldChargeStart(): Void {
+    }
 
-  function onShieldReleased() {}
+    public function onShieldReleased(): Void {
+    }
 
-  function startParry() {}
+    public function startParry(): Void {
+    }
 
-  function onShieldStartParry() {}
+    public function onShieldStartParry(): Void {
+    }
 
-  function onShieldEndParry() {}
+    public function onShieldEndParry(): Void {
+    }
 
-  function onShieldBlock(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public function onShieldBlock(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function onShieldCounterSuccessful(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public function onShieldCounterSuccessful(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function onShieldHolding(ratio: Float) {}
+    public function onShieldHolding(arg0: Float): Void {
+    }
 
-  function beforeCounterAttackHit(sourceAtk: tool.atk.AttackData.AttackData, counter: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public function beforeCounterAttackHit(arg0: tool.atk.AttackData, arg1: tool.atk.AttackData, arg2: Bool): Void {
+    }
 
-  function shieldCounterAttack(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public function shieldCounterAttack(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function counterGrenade(source: en.Grenade.Grenade) {}
+    public function counterGrenade(arg0: en.Grenade): Void {
+    }
 
-  function counterBullet(sourceAtk: tool.atk.AttackData.AttackData, cBullet: en.Bullet.Bullet, fullParry: Bool): en.Bullet.Bullet {}
+    public function counterBullet(arg0: tool.atk.AttackData, arg1: en.Bullet, arg2: Bool): en.Bullet {
+        throw "stub: counterBullet not decompiled";
+    }
 
-  function parryInArea(area: tool.Area.Area, fullParry: Bool) {}
+    public function parryInArea(arg0: tool.Area, arg1: Bool): Void {
+    }
 
-  function onOwnerAttackResultReceived(a: tool.atk.AttackData.AttackData) {}
+    public function onOwnerAttackResultReceived(arg0: tool.atk.AttackData): Void {
+    }
 
-  function triggerParryFeedbacks() {}
+    public function triggerParryFeedbacks(): Void {
+    }
 
-  function applyStunAndBumpFromParry(a: tool.atk.AttackData.AttackData) {}
+    public function applyStunAndBumpFromParry(arg0: tool.atk.AttackData): Void {
+    }
 }
-

@@ -1,74 +1,104 @@
 package ui;
+
 class PerkSelect extends ui.Process {
-  var controller: tool.Controller.Controller;
-  var source: Entity;
-  var perkAllowBypass: Dynamic;
-  var hero: en.Hero.Hero;
-  var fbMain: ui.FlowBox.FlowBox;
-  var title: ui.Text.Text;
-  var reset: ui.Text.Text;
-  var line: libs.heaps.slib.HSprite.HSprite;
-  var gt: libs.heaps.slib.HSprite.HSprite;
-  var gb: libs.heaps.slib.HSprite.HSprite;
-  var perkMask: h2d.Mask.Mask;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
-  var perkInter: h2d.Interactive.Interactive;
-  var perkFlow: h2d.Flow.Flow;
-  var selection: h2d.ScaleGrid.ScaleGrid;
-  var fCount: h2d.Flow.Flow;
-  var count: ui.hud.Count.Count;
-  var perks: hl.types.ArrayObj<Dynamic>;
-  var curPerkId: Int;
-  var brutFirstPerk: Dynamic;
-  var tactFirstPerk: Dynamic;
-  var survFirstPerk: Dynamic;
-  var neutFirstPerk: Dynamic;
-  var cpBaseX: Float;
-  var onClose: Dynamic;
+    public var controller: tool.ControllerAccess;
+    public var source: Entity;
+    public var perkAllowBypass: Dynamic;
+    public var hero: en.Hero;
+    public var fbMain: ui.FlowBox;
+    public var title: ui.Text;
+    public var reset: ui.Text;
+    public var line: libs.heaps.slib.HSprite;
+    public var gt: libs.heaps.slib.HSprite;
+    public var gb: libs.heaps.slib.HSprite;
+    public var perkMask: h2d.Mask;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
+    public var perkInter: h2d.Interactive;
+    public var perkFlow: h2d.Flow;
+    public var selection: h2d.ScaleGrid;
+    public var fCount: h2d.Flow;
+    public var count: ui.hud.Count;
+    public var perks: Array<Dynamic>;
+    public var curPerkId: Int;
+    public var brutFirstPerk: Dynamic;
+    public var tactFirstPerk: Dynamic;
+    public var survFirstPerk: Dynamic;
+    public var neutFirstPerk: Dynamic;
+    public var cpBaseX: Float;
+    public var onClose: Dynamic;
 
-  function __constructor__(hero: en.Hero.Hero, source: Entity) {}
+    public function new(arg0: en.Hero, arg1: Entity) {
+        super();
+    }
 
-  function addPerk(ii: tool.InventItem.InventItem): Dynamic {}
+    public function addPerk(arg0: tool.InventItem): Dynamic {
+        throw "stub: addPerk not decompiled";
+    }
 
-  function isRemainingPerksCanBeRerolled(): Bool {}
+    public function isRemainingPerksCanBeRerolled(): Bool {
+        throw "stub: isRemainingPerksCanBeRerolled not decompiled";
+    }
 
-  function refreshResetLabel() {}
+    public function refreshResetLabel(): Void {
+    }
 
-  function select(id: Int, instant: Dynamic, scroll: Dynamic) {}
+    public function select(arg0: Int, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 
-  function onReset() {}
+    public function onReset(): Void {
+    }
 
-  function resetPerks() {}
+    public function resetPerks(): Void {
+    }
 
-  function onChoose() {}
+    public function onChoose(): Void {
+    }
 
-  function blur(sigma: Dynamic, gain: Dynamic) {}
+    public override function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function unblur() {}
+    public override function unblur(): Void {
+    }
 
-  function goToPrevCategory() {}
+    public function goToPrevCategory(): Void {
+    }
 
-  function goToNextCategory() {}
+    public function goToNextCategory(): Void {
+    }
 
-  function isVisible(k: String): Bool {}
+    public function isVisible(arg0: String): Bool {
+        throw "stub: isVisible not decompiled";
+    }
 
-  function getMaxPerksHere(): Int {}
+    public function getMaxPerksHere(): Int {
+        throw "stub: getMaxPerksHere not decompiled";
+    }
 
-  function alreadyKnown(k: String): Bool {}
+    public function alreadyKnown(arg0: String): Bool {
+        throw "stub: alreadyKnown not decompiled";
+    }
 
-  function requirementsOk(k: String): Bool {}
+    public function requirementsOk(arg0: String): Bool {
+        throw "stub: requirementsOk not decompiled";
+    }
 
-  function getResetCost(): Int {}
+    public function getResetCost(): Int {
+        throw "stub: getResetCost not decompiled";
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

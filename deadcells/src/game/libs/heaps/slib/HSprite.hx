@@ -1,47 +1,65 @@
 package libs.heaps.slib;
+
 class HSprite extends h2d.Drawable {
-  var _animManager: libs.heaps.slib.AnimManager.AnimManager;
-  var lib: libs.heaps.slib.SpriteLib.SpriteLib;
-  var groupName: String;
-  var group: Dynamic;
-  var frame: Int;
-  var frameData: Dynamic;
-  var pivot: libs.heaps.slib.SpritePivot.SpritePivot;
-  var destroyed: Bool;
-  var onAnimManAlloc: Dynamic;
-  var onFrameChange: Dynamic;
-  var onPageChange: Dynamic;
-  var rawTile: h2d.Tile.Tile;
-  var lastPage: Int;
-  var syncOnlyIfVisible: Bool;
-  var <none>: Dynamic;
+    public var _animManager: libs.heaps.slib.AnimManager;
+    public var lib: libs.heaps.slib.SpriteLib;
+    public var groupName: String;
+    public var group: libs.heaps.slib.LibGroup;
+    public var frame: Int;
+    public var frameData: libs.heaps.slib.FrameData;
+    public var pivot: libs.heaps.slib.SpritePivot;
+    public var destroyed: Bool;
+    public var onAnimManAlloc: Dynamic;
+    public var onFrameChange: Dynamic;
+    public var onPageChange: Dynamic;
+    public var rawTile: h2d.Tile;
+    public var lastPage: Int;
+    public var syncOnlyIfVisible: Bool;
+    public var : Dynamic;
 
-  function __constructor__(l: libs.heaps.slib.SpriteLib.SpriteLib, g: String, f: Dynamic, parent: h2d.Object.Object) {}
+    public function new(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref, arg3: h2d.Object) {
+        super();
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function get_anim(): libs.heaps.slib.AnimManager.AnimManager {}
+    public function get_anim(): libs.heaps.slib.AnimManager {
+        throw "stub: get_anim not decompiled";
+    }
 
-  function setEmptyTexture() {}
+    public function setEmptyTexture(): Void {
+    }
 
-  function set(l: libs.heaps.slib.SpriteLib.SpriteLib, g: String, frame: Dynamic, stopAllAnims: Dynamic) {}
+    public function set(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function setFrame(f: Int) {}
+    public function setFrame(arg0: Int): Void {
+    }
 
-  function fitToBox(w: Float, h: Dynamic, useFrameDataRealSize: Dynamic) {}
+    public function fitToBox(arg0: Float, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function totalFrames(): Int {}
+    public function totalFrames(): Int {
+        throw "stub: totalFrames not decompiled";
+    }
 
-  function addOrUpdateNormalMapTexture(normalMapTexture: h3d.mat.Texture.Texture) {}
+    public function addOrUpdateNormalMapTexture(arg0: h3d.mat.Texture): Void {
+    }
 
-  function onAdd() {}
+    public function onAdd(): Void {
+    }
 
-  function onRemove() {}
+    public function onRemove(): Void {
+    }
 
-  function getBoundsRec(relativeTo: h2d.Object.Object, out: h2d.col.Bounds.Bounds, forSize: Bool) {}
+    public function getBoundsRec(arg0: h2d.Object, arg1: h2d.col.Bounds, arg2: Bool): Void {
+    }
 
-  function draw(ctx: h2d.RenderContext.RenderContext) {}
+    public function draw(arg0: h2d.RenderContext): Void {
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public function sync(arg0: h2d.RenderContext): Void {
+    }
 }
-

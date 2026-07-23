@@ -1,17 +1,26 @@
 package tiled;
+
 class TmxBaseObject {
-  var id: Int;
-  var name: String;
-  var properties: haxe.ds.StringMap;
+    public var id: Int;
+    public var name: String;
+    public var properties: haxe.ds.StringMap;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function getString(key: String): String {}
+    public function getString(arg0: String): String {
+        throw "stub: getString not decompiled";
+    }
 
-  function getBool(key: String, fallback: Dynamic): Bool {}
+    public function getBool(arg0: String, arg1: Ref): Bool {
+        throw "stub: getBool not decompiled";
+    }
 
-  function getInt(key: String, fallback: Dynamic): Int {}
+    public function getInt(arg0: String, arg1: Ref): Int {
+        throw "stub: getInt not decompiled";
+    }
 
-  function getFloat(key: String, fallback: Dynamic): Float {}
+    public function getFloat(arg0: String, arg1: Ref): Float {
+        throw "stub: getFloat not decompiled";
+    }
 }
-

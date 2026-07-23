@@ -1,16 +1,22 @@
 package light;
-class DeferredSprite extends h2d.Object.Object {
-  var next: DeferredSprite;
-  var lightedLayers: light.LightedLayers.LightedLayers;
-  var groups: Int;
-  var culled: Bool;
 
-  function __constructor__(p: h2d.Object.Object) {}
+class DeferredSprite extends h2d.Object {
+    public var next: light.DeferredSprite;
+    public var lightedLayers: light.LightedLayers;
+    public var groups: Int;
+    public var culled: Bool;
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public function new(arg0: h2d.Object) {
+        super();
+    }
 
-  function cull(ctx: h2d.RenderContext.RenderContext): Bool {}
+    public override function sync(arg0: h2d.RenderContext): Void {
+    }
 
-  function drawRec(ctx: h2d.RenderContext.RenderContext) {}
+    public function cull(arg0: h2d.RenderContext): Bool {
+        throw "stub: cull not decompiled";
+    }
+
+    public override function drawRec(arg0: h2d.RenderContext): Void {
+    }
 }
-

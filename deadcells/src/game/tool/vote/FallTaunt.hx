@@ -1,20 +1,30 @@
 package tool.vote;
+
 class FallTaunt extends tool.TwitchVote {
-  var words: haxe.ds.StringMap;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var words: haxe.ds.StringMap;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function onDelayedVoteInit() {}
+    public override function onDelayedVoteInit(): Void {
+    }
 
-  function onVote(m: tool.TwitchMessage.TwitchMessage, v: Dynamic, alias: String) {}
+    public override function onVote(arg0: tool.TwitchMessage, arg1: Dynamic, arg2: String): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

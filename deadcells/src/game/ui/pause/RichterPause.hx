@@ -1,44 +1,53 @@
 package ui.pause;
+
 class RichterPause extends ui.Pause {
-  var bg: ui.BG.BG;
-  var title: ui.Text.Text;
-  var botMenu: h2d.Flow.Flow;
-  var tierBar: ui.hud.TierBar.TierBar;
-  var heartCounter: ui.hud.HeartCounter.HeartCounter;
-  var selection: libs.heaps.slib.HSprite.HSprite;
-  var options: hl.types.ArrayObj<Dynamic>;
-  var curOptionId: Int;
-  var iiWeapon: tool.InventItem.InventItem;
-  var iiSkill: tool.InventItem.InventItem;
-  var weapon: ui.NewItemDesc.NewItemDesc;
-  var skill: ui.NewItemDesc.NewItemDesc;
-  var lastDy: Float;
-  var btnBack: ui.Text.Text;
-  var btnInfos: ui.Text.Text;
-  var btnOptions: ui.Text.Text;
-  var btnRetry: ui.Text.Text;
-  var btnAssist: ui.Text.Text;
-  var btnQuit: ui.Text.Text;
-  var tw1: libs.misc.Tweenie.Tweenie;
-  var tw2: libs.misc.Tweenie.Tweenie;
-  var controller: tool.Controller.Controller;
-  var showHUDonClose: Bool;
-  var shouldClose: Bool;
+    public var bg: ui.BG;
+    public var title: ui.Text;
+    public var botMenu: h2d.Flow;
+    public var tierBar: ui.hud.TierBar;
+    public var heartCounter: ui.hud.HeartCounter;
+    public var selection: libs.heaps.slib.HSprite;
+    public var options: Array<Dynamic>;
+    public var curOptionId: Int;
+    public var iiWeapon: tool.InventItem;
+    public var iiSkill: tool.InventItem;
+    public var weapon: ui.NewItemDesc;
+    public var skill: ui.NewItemDesc;
+    public var lastDy: Float;
+    public var btnBack: ui.Text;
+    public var btnInfos: ui.Text;
+    public var btnOptions: ui.Text;
+    public var btnRetry: ui.Text;
+    public var btnAssist: ui.Text;
+    public var btnQuit: ui.Text;
+    public var tw1: libs.misc.Tween;
+    public var tw2: libs.misc.Tween;
+    public var controller: tool.ControllerAccess;
+    public var showHUDonClose: Bool;
+    public var shouldClose: Bool;
 
-  function uponClosing() {}
+    public function new() {
+        super();
+    }
 
-  function __constructor__() {}
+    public override function onLeavingOptionsMenu(): Void {
+    }
 
-  function onLeavingOptionsMenu() {}
+    public function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function blur(sigma: Dynamic, gain: Dynamic) {}
+    public function onResize(): Void {
+    }
 
-  function onResize() {}
+    public function onDispose(): Void {
+    }
 
-  function onDispose() {}
+    public function update(): Void {
+    }
 
-  function update() {}
+    public function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function uponClosing(): Void {
+    }
 }
-

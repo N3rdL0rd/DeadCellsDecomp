@@ -1,30 +1,40 @@
 package libs.misc;
+
 class Cinematic {
-  var turbo: Bool;
-  var onAllComplete: Dynamic;
-  var queues: hl.types.ArrayObj<Dynamic>;
-  var curQueue: hl.types.ArrayObj<Dynamic>;
-  var persistSignals: haxe.ds.StringMap;
-  var fps: Int;
+    public var turbo: Bool;
+    public var onAllComplete: Dynamic;
+    public var queues: Array<Dynamic>;
+    public var curQueue: Array<Dynamic>;
+    public var persistSignals: haxe.ds.StringMap;
+    public var fps: Int;
 
-  function __constructor__(fps: Int) {}
+    public function new(arg0: Int) {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function signal(s: String) {}
+    public function signal(arg0: String): Void {
+    }
 
-  function persistantSignal(s: String) {}
+    public function persistantSignal(arg0: String): Void {
+    }
 
-  function __addParallel(cb: Dynamic, t: Int, signal: String) {}
+    public function __addParallel(arg0: Dynamic, arg1: Int, arg2: String): Void {
+    }
 
-  function __add(cb: Dynamic, t: Int, signal: String) {}
+    public function __add(arg0: Dynamic, arg1: Int, arg2: String): Void {
+    }
 
-  function __beginNewQueue() {}
+    public function __beginNewQueue(): Void {
+    }
 
-  function runEvent(e: Dynamic) {}
+    public function runEvent(arg0: Dynamic): Void {
+    }
 
-  function skip() {}
+    public function skip(): Void {
+    }
 
-  function update(dt: Float) {}
+    public function update(arg0: Float): Void {
+    }
 }
-

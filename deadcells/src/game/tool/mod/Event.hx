@@ -1,12 +1,24 @@
 package tool.mod;
-class Event {
-  var callbacks: hl.types.ArrayObj<Dynamic>;
-  static var uniqueID: Int;
 
-  function __constructor__() {}
+class EventObject {
+    public var id: Int;
+    public var callback: Dynamic;
 
-  function register(_callback: Dynamic): Int {}
-
-  function invoke(_parameter: Dynamic) {}
+    public function new(arg0: Dynamic, arg1: Int) {
+    }
 }
 
+class Event {
+    public static var uniqueID: Int;
+    public var callbacks: Array<Dynamic>;
+
+    public function new() {
+    }
+
+    public function register(arg0: Dynamic): Int {
+        throw "stub: register not decompiled";
+    }
+
+    public function invoke(arg0: Dynamic): Void {
+    }
+}

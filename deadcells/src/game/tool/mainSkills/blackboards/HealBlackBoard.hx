@@ -1,18 +1,28 @@
 package tool.mainSkills.blackboards;
+
 class HealBlackBoard extends tool.mainSkills.blackboards.MainSkillBlackBoard {
-  var healings: Int;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var healings: Int;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function get_maxHealings(): Int {}
+    public function get_maxHealings(): Int {
+        throw "stub: get_maxHealings not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

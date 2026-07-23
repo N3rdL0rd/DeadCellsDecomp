@@ -1,74 +1,103 @@
 package en.inter.elevator;
+
 class MultiFloorElevator extends en.inter.Elevator {
-  var currentFloor: Int;
-  var focused: Bool;
-  var focusDown: Bool;
-  var focusUp: Bool;
-  var downButtonArea: tool.Area.Area;
-  var upButtonArea: tool.Area.Area;
-  var elevatorDoors: hl.types.ArrayObj<Dynamic>;
-  var doorsInitDone: Bool;
-  var sfxElevatorCall: hxd.res.Sound.Sound;
-  var sfxElevatorArrival: hl.types.ArrayObj<Dynamic>;
-  var musicSet: Bool;
-  var lastMusicPos: Float;
-  var oldTime: Float;
-  var frontElevatorLayer: Int;
-  var gramophoneLayer: Int;
-  var buttonsLayer: Int;
-  var frontElevator: libs.heaps.slib.HSprite.HSprite;
-  var gramophone: libs.heaps.slib.HSprite.HSprite;
-  var activeButtonGlow: libs.heaps.slib.HSprite.HSprite;
-  var elevatorButtons: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var currentFloor: Int;
+    public var focused: Bool;
+    public var focusDown: Bool;
+    public var focusUp: Bool;
+    public var downButtonArea: tool.Area;
+    public var upButtonArea: tool.Area;
+    public var elevatorDoors: Array<Dynamic>;
+    public var doorsInitDone: Bool;
+    public var sfxElevatorCall: hxd.res.Sound;
+    public var sfxElevatorArrival: Array<Dynamic>;
+    public var musicSet: Bool;
+    public var lastMusicPos: Float;
+    public var oldTime: Float;
+    public var frontElevatorLayer: Int;
+    public var gramophoneLayer: Int;
+    public var buttonsLayer: Int;
+    public var frontElevator: libs.heaps.slib.HSprite;
+    public var gramophone: libs.heaps.slib.HSprite;
+    public var activeButtonGlow: libs.heaps.slib.HSprite;
+    public var elevatorButtons: Array<Dynamic>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, w: Int, h: Int, initAtTop: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function postCreate() {}
+    public function postCreate(): Void {
+    }
 
-  function postDeserialize() {}
+    public function postDeserialize(): Void {
+    }
 
-  function renderPlatform() {}
+    public override function renderPlatform(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onBlur() {}
+    public function onBlur(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function callFromLevel(triggerCy: Int) {}
+    public function callFromLevel(arg0: Int): Void {
+    }
 
-  function onDistantTrigger(trigger: en.Interactive.Interactive, by: Entity) {}
+    public function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
+    }
 
-  function onArrival(aDir: Int) {}
+    public override function onArrival(arg0: Int): Void {
+    }
 
-  function hoverButtons(left: Dynamic, right: Dynamic) {}
+    public function hoverButtons(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function isInElevator(e: Entity): Bool {}
+    public function isInElevator(arg0: Entity): Bool {
+        throw "stub: isInElevator not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function updateElevatorSprite() {}
+    public function updateElevatorSprite(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function initDoors() {}
+    public function initDoors(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

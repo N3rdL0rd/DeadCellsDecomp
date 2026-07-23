@@ -1,13 +1,19 @@
 package en.dookuInteractions;
+
 class DookuInteractionSpawnGhostEnemies extends en.dookuInteractions.DookuInteraction {
-  var possibleMobs: hl.types.ArrayObj<Dynamic>;
+    public var possibleMobs: Array<Dynamic>;
 
-  function __constructor__(parent: en.dookuInteractions.DookuInteractionsManager.DookuInteractionsManager) {}
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+        super();
+    }
 
-  function initTexts() {}
+    public override function initTexts(): Void {
+    }
 
-  function canTrigger(): Bool {}
+    public override function canTrigger(): Bool {
+        throw "stub: canTrigger not decompiled";
+    }
 
-  function dynOnExecute() {}
+    public override function dynOnExecute(): Void {
+    }
 }
-

@@ -1,92 +1,149 @@
 package ui;
+
 class WorldMap {
-  var curLevel: pr.Level.Level;
-  var container: h2d.Layers.Layers;
-  var curSelect: Dynamic;
-  var baseSelect: Dynamic;
-  var lineContainer: h2d.Object.Object;
-  var specialFrameContainer: h2d.Object.Object;
-  var currentPathContainer: h2d.Object.Object;
-  var dlcLock: h2d.Object.Object;
-  var dlcLockIcon: libs.heaps.slib.HSprite.HSprite;
-  var levels: hl.types.ArrayObj<Dynamic>;
-  var levelObjects: hl.types.ArrayObj<Dynamic>;
-  var specialLevelObjects: hl.types.ArrayObj<Dynamic>;
-  var scale: Float;
-  var totalSize: Dynamic;
-  static var _columnGap: Int;
-  static var _baseX: Int;
-  static var _rowGap: Int;
-  static var _colOffsetY: Int;
-  static var _bezierOffset: Int;
-  static var _bezierSteps: Int;
+    public static var _columnGap: Int;
+    public static var _baseX: Int;
+    public static var _rowGap: Int;
+    public static var _colOffsetY: Int;
+    public static var _bezierOffset: Int;
+    public static var _bezierSteps: Int;
+    public var curLevel: pr.Level;
+    public var container: h2d.Layers;
+    public var curSelect: Dynamic;
+    public var baseSelect: Dynamic;
+    public var lineContainer: h2d.Object;
+    public var specialFrameContainer: h2d.Object;
+    public var currentPathContainer: h2d.Object;
+    public var dlcLock: h2d.Object;
+    public var dlcLockIcon: libs.heaps.slib.HSprite;
+    public var levels: Array<Dynamic>;
+    public var levelObjects: Array<Dynamic>;
+    public var specialLevelObjects: Array<Dynamic>;
+    public var scale: Float;
+    public var totalSize: Dynamic;
 
-  static function canLevelBeDisplayed(level: Dynamic): Bool {}
+    public function new(arg0: pr.Level) {
+    }
 
-  function __constructor__(curLevel: pr.Level.Level) {}
+    public static function canLevelBeDisplayed(arg0: Dynamic): Bool {
+        throw "stub: canLevelBeDisplayed not decompiled";
+    }
 
-  function get_levelLinks(): hl.types.ArrayObj<Dynamic> {}
+    public function get_levelLinks(): Array<Dynamic> {
+        throw "stub: get_levelLinks not decompiled";
+    }
 
-  function getCurrentPath(): hl.types.ArrayObj<Dynamic> {}
+    public function getCurrentPath(): Array<Dynamic> {
+        throw "stub: getCurrentPath not decompiled";
+    }
 
-  function get_bannerWidth(): Int {}
+    public function get_bannerWidth(): Int {
+        throw "stub: get_bannerWidth not decompiled";
+    }
 
-  function get_bannerHeight(): Int {}
+    public function get_bannerHeight(): Int {
+        throw "stub: get_bannerHeight not decompiled";
+    }
 
-  function get_columnGap(): Int {}
+    public function get_columnGap(): Int {
+        throw "stub: get_columnGap not decompiled";
+    }
 
-  function get_baseX(): Int {}
+    public function get_baseX(): Int {
+        throw "stub: get_baseX not decompiled";
+    }
 
-  function get_rowGap(): Int {}
+    public function get_rowGap(): Int {
+        throw "stub: get_rowGap not decompiled";
+    }
 
-  function get_colOffsetY(): Int {}
+    public function get_colOffsetY(): Int {
+        throw "stub: get_colOffsetY not decompiled";
+    }
 
-  function get_bezierOffset(): Int {}
+    public function get_bezierOffset(): Int {
+        throw "stub: get_bezierOffset not decompiled";
+    }
 
-  function get_bezierSteps(): Int {}
+    public function get_bezierSteps(): Int {
+        throw "stub: get_bezierSteps not decompiled";
+    }
 
-  function getSelectionDLCIfLocked(): Dynamic {}
+    public function getSelectionDLCIfLocked(): tool.DLCId {
+        throw "stub: getSelectionDLCIfLocked not decompiled";
+    }
 
-  function changeSelection(dir: Dynamic) {}
+    public function changeSelection(arg0: Direction): Void {
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 
-  function getObjectVpX(object: h2d.Object.Object, curVpX: Float, containerWidth: Int): Int {}
+    public function getObjectVpX(arg0: h2d.Object, arg1: Float, arg2: Int): Int {
+        throw "stub: getObjectVpX not decompiled";
+    }
 
-  function getObjectVpY(object: h2d.Object.Object, curVpY: Float, containerHeight: Int): Int {}
+    public function getObjectVpY(arg0: h2d.Object, arg1: Float, arg2: Int): Int {
+        throw "stub: getObjectVpY not decompiled";
+    }
 
-  function isLevelVisible(id: String): Bool {}
+    public function isLevelVisible(arg0: String): Bool {
+        throw "stub: isLevelVisible not decompiled";
+    }
 
-  function drawLevel(level: ui.LevelCard.LevelCard, x: Int, y: Int, visible: Bool): h2d.Object.Object {}
+    public function drawLevel(arg0: ui.LevelCard, arg1: Int, arg2: Int, arg3: Bool): h2d.Object {
+        throw "stub: drawLevel not decompiled";
+    }
 
-  function addChildIcon(levelCard: h2d.Object.Object, tile: h2d.Tile.Tile) {}
+    public function addChildIcon(arg0: h2d.Object, arg1: h2d.Tile): Void {
+    }
 
-  function drawLine(x1: Float, y1: Float, x2: Float, y2: Float, container: h2d.Object.Object, color: Int, alpha: Float) {}
+    public function drawLine(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: h2d.Object, arg5: Int, arg6: Float): Void {
+    }
 
-  function drawConnection(from: h2d.Object.Object, to: h2d.Object.Object, container: h2d.Object.Object, color: Int, alpha: Float) {}
+    public function drawConnection(arg0: h2d.Object, arg1: h2d.Object, arg2: h2d.Object, arg3: Int, arg4: Float): Void {
+    }
 
-  function bezier(t: Float, a: Float, b: Float, c: Float): Float {}
+    public function bezier(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Float {
+        throw "stub: bezier not decompiled";
+    }
 
-  function drawBezier(x1: Float, y1: Float, x2: Float, y2: Float, x3: Float, y3: Float, container: h2d.Object.Object, color: Int, alpha: Float) {}
+    public function drawBezier(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: h2d.Object, arg7: Int, arg8: Float): Void {
+    }
 
-  function drawBankCard(size: Dynamic): Dynamic {}
+    public function drawBankCard(arg0: Dynamic): Dynamic {
+        throw "stub: drawBankCard not decompiled";
+    }
 
-  function drawBankConnections(curLevelName: String) {}
+    public function drawBankConnections(arg0: String): Void {
+    }
 
-  function getSelectedLevelObject(): h2d.Object.Object {}
+    public function getSelectedLevelObject(): h2d.Object {
+        throw "stub: getSelectedLevelObject not decompiled";
+    }
 
-  function linkExists(link: Dynamic): Bool {}
+    public function linkExists(arg0: Dynamic): Bool {
+        throw "stub: linkExists not decompiled";
+    }
 
-  function drawConnections() {}
+    public function drawConnections(): Void {
+    }
 
-  function drawSpecialConnections(curLevelName: String) {}
+    public function drawSpecialConnections(arg0: String): Void {
+    }
 
-  function drawCurrentPath() {}
+    public function drawCurrentPath(): Void {
+    }
 
-  function drawLevelCards(): Dynamic {}
+    public function drawLevelCards(): Dynamic {
+        throw "stub: drawLevelCards not decompiled";
+    }
 
-  function drawSpecialCards(size: Dynamic): Dynamic {}
+    public function drawSpecialCards(arg0: Dynamic): Dynamic {
+        throw "stub: drawSpecialCards not decompiled";
+    }
 
-  function draw(container: h2d.Layers.Layers, innerWidth: Int, force: Dynamic): Dynamic {}
+    public function draw(arg0: h2d.Layers, arg1: Int, arg2: Ref): Dynamic {
+        throw "stub: draw not decompiled";
+    }
 }
-

@@ -1,25 +1,38 @@
 package tool.atk.atkTargets;
+
 class MobAttackTarget extends tool.atk.AttackTargetImpl {
-  var extraTargetAffixes: haxe.ds.IntMap<Dynamic>;
+    public var extraTargetAffixes: haxe.ds.IntMap;
 
-  function __constructor__(parent: en.Mob.Mob) {}
+    public function new(arg0: en.Mob) {
+        super();
+    }
 
-  function updateAffixes(atk: tool.atk.AttackData.AttackData) {}
+    public override function updateAffixes(arg0: tool.atk.AttackData): Void {
+    }
 
-  function computeBonusMul(atk: tool.atk.AttackData.AttackData): Float {}
+    public override function computeBonusMul(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeBonusMul not decompiled";
+    }
 
-  function computeBonusAdd(atk: tool.atk.AttackData.AttackData): Float {}
+    public override function computeBonusAdd(arg0: tool.atk.AttackData): Float {
+        throw "stub: computeBonusAdd not decompiled";
+    }
 
-  function preHitResultUpdate(atk: tool.atk.AttackData.AttackData) {}
+    public override function preHitResultUpdate(arg0: tool.atk.AttackData): Void {
+    }
 
-  function postHitResultUpdate(atk: tool.atk.AttackData.AttackData) {}
+    public override function postHitResultUpdate(arg0: tool.atk.AttackData): Void {
+    }
 
-  function extraDamageEffects(atk: tool.atk.AttackData.AttackData) {}
+    public function extraDamageEffects(arg0: tool.atk.AttackData): Void {
+    }
 
-  function applyNetworkingPerk(atk: tool.atk.AttackData.AttackData) {}
+    public function applyNetworkingPerk(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function addTargetAffixes(affect: Int, aff: hl.types.ArrayObj<Dynamic>) {}
+    public function addTargetAffixes(arg0: Int, arg1: Array<Dynamic>): Void {
+    }
 }
-

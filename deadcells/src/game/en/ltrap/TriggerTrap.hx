@@ -1,61 +1,87 @@
 package en.ltrap;
+
 class TriggerTrap extends en.LevelTrap {
-  var ang: Float;
-  var bRadius: Float;
-  var isTemplateFlipped: Bool;
-  var triggered: Bool;
-  var hit: Bool;
-  var end: Bool;
-  var aVelocity: Float;
-  var aAcceleration: Float;
-  var damping: Float;
-  var globalAlpha: Float;
-  var startingAng: Float;
-  var endingAng: Float;
-  var directionPlacement: Int;
-  var ball: libs.heaps.slib.HSprite.HSprite;
-  var chains: hl.types.ArrayObj<Dynamic>;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var ang: Float;
+    public var bRadius: Float;
+    public var isTemplateFlipped: Bool;
+    public var triggered: Bool;
+    public var hit: Bool;
+    public var end: Bool;
+    public var aVelocity: Float;
+    public var aAcceleration: Float;
+    public var damping: Float;
+    public var globalAlpha: Float;
+    public var startingAng: Float;
+    public var endingAng: Float;
+    public var directionPlacement: Int;
+    public var ball: libs.heaps.slib.HSprite;
+    public var chains: Array<Dynamic>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, isTemplateFlipped: Bool, dir: Int, radiusCase: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Int, arg5: Dynamic) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function isFromRightSide(): Bool {}
+    public function isFromRightSide(): Bool {
+        throw "stub: isFromRightSide not decompiled";
+    }
 
-  function trigger() {}
+    public function trigger(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function isBallInCollision(): Bool {}
+    public function isBallInCollision(): Bool {
+        throw "stub: isBallInCollision not decompiled";
+    }
 
-  function hitFx() {}
+    public function hitFx(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function updateGlobalAlpha() {}
+    public function updateGlobalAlpha(): Void {
+    }
 
-  function updatePendulumState() {}
+    public function updatePendulumState(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

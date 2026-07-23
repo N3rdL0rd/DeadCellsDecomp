@@ -1,14 +1,22 @@
 package tool.weap;
+
 class FireBall extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
-
-  function explode(cycle: Int, x: Float, y: Float, victim: Entity, overrideRadius: Dynamic) {}
+    public function explode(arg0: Int, arg1: Float, arg2: Float, arg3: Entity, arg4: Dynamic): Void {
+    }
 }
-

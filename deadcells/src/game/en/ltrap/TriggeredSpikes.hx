@@ -1,25 +1,39 @@
 package en.ltrap;
+
 class TriggeredSpikes extends en.ltrap.Spikes {
-  var triggerId: String;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var triggerId: String;
 
-  function __constructor__(l: pr.Level.Level, x: Int, y: Int, ang: Float, spikeDirection: Int, natural: Dynamic, inGround: Dynamic, variant: String) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Int, arg5: Dynamic, arg6: Dynamic, arg7: String) {
+        super();
+    }
 
-  function goIn(instant: Bool) {}
+    public override function goIn(arg0: Bool): Void {
+    }
 
-  function goOut(instant: Bool, ignoreOnOut: Dynamic) {}
+    public override function goOut(arg0: Bool, arg1: Ref): Void {
+    }
 
-  function toggle(instant: Bool, ignoreOnOut: Dynamic): Bool {}
+    public function toggle(arg0: Bool, arg1: Ref): Bool {
+        throw "stub: toggle not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

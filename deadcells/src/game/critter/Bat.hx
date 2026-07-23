@@ -1,25 +1,32 @@
 package critter;
+
 class Bat extends Critter {
-  var spd: Float;
-  var fleeing: Bool;
-  var ang: Float;
-  var tang: Float;
-  var accel: Float;
-  var delayF: Float;
-  var foe: Entity;
-  var sndSpace: hxd.snd.effect.Spatialization.Spatialization;
-  static var flySounds: hl.types.ArrayObj<Dynamic>;
+    public static var flySounds: Array<Dynamic>;
+    public var spd: Float;
+    public var fleeing: Bool;
+    public var ang: Float;
+    public var tang: Float;
+    public var accel: Float;
+    public var delayF: Float;
+    public var foe: Entity;
+    public var sndSpace: hxd.snd.effect.Spatialization;
 
-  function __constructor__(c: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function onLeaveScreen() {}
+    public override function onLeaveScreen(): Void {
+    }
 
-  function reset() {}
+    public override function reset(): Void {
+    }
 
-  function flee(e: Entity) {}
+    public function flee(arg0: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 }
-

@@ -1,8 +1,10 @@
 package level.gen.mapbuilder;
+
 class ClockTowerMapBuilder extends level.gen.MapBuilder {
+    public function new(arg0: User, arg1: Dynamic, arg2: Int, arg3: Dynamic, arg4: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand.Rand) {}
-
-  function removeCollisionOutOfRooms(dat: level.LevelMap.LevelMap, drooms: hl.types.ArrayObj<Dynamic>, inRoomCells: hl.types.ArrayObj<Dynamic>, hasError: Bool) {}
+    public override function removeCollisionOutOfRooms(arg0: level.LevelMap, arg1: Array<Dynamic>, arg2: Array<Dynamic>, arg3: Bool): Void {
+    }
 }
-

@@ -1,73 +1,107 @@
 package en.bu;
+
 class DookuBatBullet extends en.Bullet {
-  var theta: Float;
-  var splatters: Bool;
-  var amplitude: Float;
-  var waveFrequency: Float;
-  var cleanDx: Float;
-  var cleanDy: Float;
-  var sprite: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var baseAng: Float;
-  var alphaTween: libs.misc.Tweenie.Tweenie;
-  var parentBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var activated: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var theta: Float;
+    public var splatters: Bool;
+    public var amplitude: Float;
+    public var waveFrequency: Float;
+    public var cleanDx: Float;
+    public var cleanDy: Float;
+    public var sprite: libs.heaps.slib.HSpriteBE;
+    public var baseAng: Float;
+    public var alphaTween: libs.misc.Tween;
+    public var parentBatch: libs.heaps.slib.HSpriteBatch;
+    public var activated: Bool;
 
-  function onBlock(byEntity: Bool) {}
+    public function new(arg0: libs.heaps.slib.HSpriteBatch, arg1: en.DookuBatManager) {
+        super();
+    }
 
-  function __constructor__(batch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, manager: en.DookuBatManager.DookuBatManager) {}
+    public function init(): Void {
+    }
 
-  function init() {}
+    public function initOnPool(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Ref, arg6: Ref, arg7: Ref): Void {
+    }
 
-  function initOnPool(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, dir: Int, amp: Dynamic, frequency: Dynamic, splatters: Dynamic) {}
+    public function deactivate(): Void {
+    }
 
-  function deactivate() {}
+    public override function initBulletSprite(): Void {
+    }
 
-  function initBulletSprite() {}
+    public override function _isOnScreen(): Bool {
+        throw "stub: _isOnScreen not decompiled";
+    }
 
-  function _isOnScreen(): Bool {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function destroy(): Void {
+    }
 
-  function destroy() {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function block(arg0: Bool): Void {
+    }
 
-  function block(byEntity: Bool) {}
+    public override function setSpriteTransform(): Void {
+    }
 
-  function setSpriteTransform() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function reachMaxDist(): Void {
+    }
 
-  function reachMaxDist() {}
+    public override function blockOnCollision(): Void {
+    }
 
-  function blockOnCollision() {}
+    public override function onPierce(): Void {
+    }
 
-  function onPierce() {}
+    public override function getTailColor(): Int {
+        throw "stub: getTailColor not decompiled";
+    }
 
-  function getTailColor(): Int {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

@@ -1,31 +1,44 @@
 package ui;
-class ControlIcon extends h2d.Object.Object {
-  var id: Dynamic;
-  var act: Dynamic;
-  var xr: Float;
-  var yr: Float;
-  var width: Float;
-  var height: Float;
-  static var ALL: hl.types.ArrayObj<Dynamic>;
 
-  function onSync() {}
+class ControlIcon extends h2d.Object {
+    public static var ALL: Array<Dynamic>;
+    public var id: tool.MainKey;
+    public var act: Dynamic;
+    public var xr: Float;
+    public var yr: Float;
+    public var width: Float;
+    public var height: Float;
 
-  function get_pixelScale(): Float {}
+    public function new(arg0: Ref, arg1: Ref, arg2: h2d.Object) {
+        super();
+    }
 
-  function __constructor__(xr: Dynamic, yr: Dynamic, p: h2d.Object.Object) {}
+    public static function syncAll(): Void {
+    }
 
-  static function syncAll() {}
+    public static function action(arg0: Int, arg1: Dynamic, arg2: Dynamic, arg3: h2d.Object): ui.ControlIcon {
+        throw "stub: action not decompiled";
+    }
 
-  static function action(act: Int, xr: Dynamic, yr: Dynamic, p: h2d.Object.Object): ControlIcon {}
+    public override function onAdd(): Void {
+    }
 
-  function onAdd() {}
+    public override function onRemove(): Void {
+    }
 
-  function onRemove() {}
+    public function setAction(arg0: Int): Void {
+    }
 
-  function setAction(act: Int) {}
+    public function onResize(): Void {
+    }
 
-  function onResize() {}
+    public function setKey(arg0: tool.MainKey): Void {
+    }
 
-  function setKey(id: Dynamic) {}
+    public function onSync(): Void {
+    }
+
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
-

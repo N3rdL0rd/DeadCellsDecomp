@@ -1,24 +1,36 @@
 package level.struct;
+
 class Tumulus extends level.LevelStruct {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public function createBuildingBefore(arg0: level.RoomNode, arg1: Int, arg2: Bool): Void {
+    }
 
-  function createBuildingBefore(tr: level.RoomNode.RoomNode, counter: Int, withZDoor: Bool) {}
+    public function createLargeBuildingBefore(arg0: level.RoomNode, arg1: Int, arg2: Bool): Void {
+    }
 
-  function createLargeBuildingBefore(tr: level.RoomNode.RoomNode, counter: Int, withZDoor: Bool) {}
+    public function replaceByRunicZDoor(arg0: level.RoomNode, arg1: level.RoomNode, arg2: Int, arg3: level.ZDoorContentClue, arg4: Dynamic, arg5: Dynamic): level.RoomNode {
+        throw "stub: replaceByRunicZDoor not decompiled";
+    }
 
-  function replaceByRunicZDoor(roomToFill: level.RoomNode.RoomNode, content: level.RoomNode.RoomNode, neededRunes: Int, clue: Dynamic, combatRooms: Dynamic, combatGroup: Dynamic): level.RoomNode.RoomNode {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public override function addTeleports(): Void {
+    }
 
-  function addTeleports() {}
+    public override function buildZChallengeDoors(): Void {
+    }
 
-  function buildZChallengeDoors() {}
+    public override function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function addLoreRoom(lore: Dynamic, overrideStructMode: Dynamic) {}
-
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 }
-

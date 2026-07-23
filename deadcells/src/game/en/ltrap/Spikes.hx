@@ -1,53 +1,80 @@
 package en.ltrap;
+
 class Spikes extends en.LevelTrap {
-  var blood: Bool;
-  var ang: Float;
-  var inGround: Bool;
-  var onOut: Dynamic;
-  var natural: Bool;
-  var variant: String;
-  var spikeDirection: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var blood: Bool;
+    public var ang: Float;
+    public var inGround: Bool;
+    public var onOut: Dynamic;
+    public var natural: Bool;
+    public var variant: String;
+    public var spikeDirection: Int;
 
-  function __constructor__(l: pr.Level.Level, x: Int, y: Int, ang: Float, spikeDirection: Int, natural: Dynamic, inGround: Dynamic, variant: String) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Int, arg5: Dynamic, arg6: Dynamic, arg7: String) {
+        super();
+    }
 
-  function get_normalSprite(): String {}
+    public function get_normalSprite(): String {
+        throw "stub: get_normalSprite not decompiled";
+    }
 
-  function get_bloodySprite(): String {}
+    public function get_bloodySprite(): String {
+        throw "stub: get_bloodySprite not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function goIn(instant: Bool) {}
+    public function goIn(arg0: Bool): Void {
+    }
 
-  function goOut(instant: Bool, ignoreOnOut: Dynamic) {}
+    public function goOut(arg0: Bool, arg1: Ref): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function checkAngleCollision(e: Entity): Bool {}
+    public function checkAngleCollision(arg0: Entity): Bool {
+        throw "stub: checkAngleCollision not decompiled";
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function onHitHero() {}
+    public function onHitHero(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

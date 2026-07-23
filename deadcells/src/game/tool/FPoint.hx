@@ -1,29 +1,43 @@
 package tool;
+
 class FPoint {
-  var x: Float;
-  var y: Float;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var x: Float;
+    public var y: Float;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(x: Float, y: Float) {}
+    public function new(arg0: Float, arg1: Float) {
+    }
 
-  function normalize() {}
+    public function normalize(): Void {
+    }
 
-  function magnitude(): Float {}
+    public function magnitude(): Float {
+        throw "stub: magnitude not decompiled";
+    }
 
-  function scale(value: Float) {}
+    public function scale(arg0: Float): Void {
+    }
 
-  function dot(other: FPoint): Float {}
+    public function dot(arg0: tool.FPoint): Float {
+        throw "stub: dot not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

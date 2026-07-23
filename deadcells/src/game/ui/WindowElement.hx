@@ -1,23 +1,31 @@
 package ui;
+
 class WindowElement {
-  var win: ui.Window.Window;
-  var root: h2d.Object.Object;
-  var contentWrapper: h2d.Flow.Flow;
-  var bgWrapper: h2d.Object.Object;
-  var isInteractive: Bool;
+    public var win: ui.Window;
+    public var root: h2d.Object;
+    public var contentWrapper: h2d.Flow;
+    public var bgWrapper: h2d.Object;
+    public var isInteractive: Bool;
 
-  function __constructor__(w: ui.Window.Window) {}
+    public function new(arg0: ui.Window) {
+    }
 
-  function get_pixelScale(): Float {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onBlur() {}
+    public function onBlur(): Void {
+    }
 
-  function onActivate() {}
+    public function onActivate(): Void {
+    }
 
-  function beforeReflow() {}
+    public function beforeReflow(): Void {
+    }
 
-  function reflow() {}
+    public function reflow(): Void {
+    }
 }
-

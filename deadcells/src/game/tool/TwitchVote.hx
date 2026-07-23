@@ -1,136 +1,199 @@
 package tool;
+
 class TwitchVote {
-  var uniqID: Int;
-  var dt: Float;
-  var destroyed: Bool;
-  var tw: libs.misc.Tweenie.Tweenie;
-  var cd: tool.Cooldown.Cooldown;
-  var desc: String;
-  var votes: hl.types.ArrayObj<Dynamic>;
-  var userVotes: haxe.ds.StringMap;
-  var userDisplayNames: haxe.ds.StringMap;
-  var firstVoter: String;
-  var visible: Bool;
-  var wasSuspended: Bool;
-  var oneVotePerUser: Bool;
-  var keepOnNextLevel: Bool;
-  var longVoteLabels: Bool;
-  var onlyChoiceCmd: Bool;
-  var showPct: Bool;
-  var blinkOnVote: Bool;
-  var locksTwitchDoor: Bool;
-  var window: ui.FlowBox.FlowBox;
-  var descFlow: h2d.Flow.Flow;
-  var voteFlow: h2d.Flow.Flow;
-  var timeFlow: h2d.Flow.Flow;
-  var blinkFx: h2d.Bitmap.Bitmap;
-  var descText: ui.Text.Text;
-  var timeText: ui.Text.Text;
-  var voteTexts: hl.types.ArrayObj<Dynamic>;
-  var isClosing: Bool;
-  var lastDebug: Bool;
-  var oldTime: Float;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var uniqIDGlobal: Int;
-  static var __clid: Int;
+    public static var uniqIDGlobal: Int;
+    public static var __clid: Int;
+    public var uniqID: Int;
+    public var dt: Float;
+    public var destroyed: Bool;
+    public var tw: libs.misc.Tweenie;
+    public var cd: tool.Cooldown;
+    public var desc: String;
+    public var votes: Array<Dynamic>;
+    public var userVotes: haxe.ds.StringMap;
+    public var userDisplayNames: haxe.ds.StringMap;
+    public var firstVoter: String;
+    public var visible: Bool;
+    public var wasSuspended: Bool;
+    public var oneVotePerUser: Bool;
+    public var keepOnNextLevel: Bool;
+    public var longVoteLabels: Bool;
+    public var onlyChoiceCmd: Bool;
+    public var showPct: Bool;
+    public var blinkOnVote: Bool;
+    public var locksTwitchDoor: Bool;
+    public var window: ui.FlowBox;
+    public var descFlow: h2d.Flow;
+    public var voteFlow: h2d.Flow;
+    public var timeFlow: h2d.Flow;
+    public var blinkFx: h2d.Bitmap;
+    public var descText: ui.Text;
+    public var timeText: ui.Text;
+    public var voteTexts: Array<Dynamic>;
+    public var isClosing: Bool;
+    public var lastDebug: Bool;
+    public var oldTime: Float;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function get_pixelScale(): Float {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 
-  function set_oneVotePerUser(v: Bool): Bool {}
+    public function set_oneVotePerUser(arg0: Bool): Bool {
+        throw "stub: set_oneVotePerUser not decompiled";
+    }
 
-  function set_keepDisplayNames(v: Bool): Bool {}
+    public function set_keepDisplayNames(arg0: Bool): Bool {
+        throw "stub: set_keepDisplayNames not decompiled";
+    }
 
-  function send(msg: String) {}
+    public function send(arg0: String): Void {
+    }
 
-  function sendChoices() {}
+    public function sendChoices(): Void {
+    }
 
-  function makeJsonObject(): Dynamic {}
+    public function makeJsonObject(): Dynamic {
+        throw "stub: makeJsonObject not decompiled";
+    }
 
-  function addVoteOption(cmdId: String, label: String, value: Dynamic) {}
+    public function addVoteOption(arg0: String, arg1: String, arg2: Dynamic): Void {
+    }
 
-  function addAlias(alias: String, of: String) {}
+    public function addAlias(arg0: String, arg1: String): Void {
+    }
 
-  function setForcedInitS(t: Float) {}
+    public function setForcedInitS(arg0: Float): Void {
+    }
 
-  function setExpireS(t: Float) {}
+    public function setExpireS(arg0: Float): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function setDesc(str: String) {}
+    public function setDesc(arg0: String): Void {
+    }
 
-  function renderDesc() {}
+    public function renderDesc(): Void {
+    }
 
-  function renderVotes() {}
+    public function renderVotes(): Void {
+    }
 
-  function isSuspended(): Bool {}
+    public function isSuspended(): Bool {
+        throw "stub: isSuspended not decompiled";
+    }
 
-  function renderTime() {}
+    public function renderTime(): Void {
+    }
 
-  function acceptsVote(m: tool.TwitchMessage.TwitchMessage): Bool {}
+    public function acceptsVote(arg0: tool.TwitchMessage): Bool {
+        throw "stub: acceptsVote not decompiled";
+    }
 
-  function markUser(u: String) {}
+    public function markUser(arg0: String): Void {
+    }
 
-  function isValidVote(m: tool.TwitchMessage.TwitchMessage): Bool {}
+    public function isValidVote(arg0: tool.TwitchMessage): Bool {
+        throw "stub: isValidVote not decompiled";
+    }
 
-  function onTwitchMessage(m: tool.TwitchMessage.TwitchMessage) {}
+    public function onTwitchMessage(arg0: tool.TwitchMessage): Void {
+    }
 
-  function getVoteObject(id: String): Dynamic {}
+    public function getVoteObject(arg0: String): Dynamic {
+        throw "stub: getVoteObject not decompiled";
+    }
 
-  function getVoteCount(id: String): Int {}
+    public function getVoteCount(arg0: String): Int {
+        throw "stub: getVoteCount not decompiled";
+    }
 
-  function getVotePct(id: String): Float {}
+    public function getVotePct(arg0: String): Float {
+        throw "stub: getVotePct not decompiled";
+    }
 
-  function onDelayedVoteInit() {}
+    public function onDelayedVoteInit(): Void {
+    }
 
-  function onSuspend() {}
+    public function onSuspend(): Void {
+    }
 
-  function onResume() {}
+    public function onResume(): Void {
+    }
 
-  function onResize() {}
+    public function onResize(): Void {
+    }
 
-  function onFirstVote(m: tool.TwitchMessage.TwitchMessage, v: Dynamic) {}
+    public function onFirstVote(arg0: tool.TwitchMessage, arg1: Dynamic): Void {
+    }
 
-  function onVote(m: tool.TwitchMessage.TwitchMessage, v: Dynamic, alias: String) {}
+    public function onVote(arg0: tool.TwitchMessage, arg1: Dynamic, arg2: String): Void {
+    }
 
-  function expire() {}
+    public function expire(): Void {
+    }
 
-  function onExpire() {}
+    public function onExpire(): Void {
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function close() {}
+    public function close(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function preUpdate(dt: Float) {}
+    public function preUpdate(arg0: Float): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getBests(): hl.types.ArrayObj<Dynamic> {}
+    public function getBests(): Array<Dynamic> {
+        throw "stub: getBests not decompiled";
+    }
 
-  function getOneBest(rndFunc: Dynamic): Dynamic {}
+    public function getOneBest(arg0: Dynamic): Dynamic {
+        throw "stub: getOneBest not decompiled";
+    }
 
-  function suspendedUpdate() {}
+    public function suspendedUpdate(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

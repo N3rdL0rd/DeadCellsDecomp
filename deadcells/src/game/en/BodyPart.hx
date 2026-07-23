@@ -1,52 +1,75 @@
 package en;
+
 class BodyPart extends Entity {
-  var dr: Float;
-  var bounces: Int;
-  var maxBounces: Int;
-  var col: Int;
-  var bloodCol: Int;
-  var isFront: Bool;
-  var customBodyPart: String;
-  var customBloodBodyPart: String;
-  var haveBlood: Bool;
-  var be: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var blood: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  static var cadaverExp: String;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var cadaverExp: String;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var dr: Float;
+    public var bounces: Int;
+    public var maxBounces: Int;
+    public var col: Int;
+    public var bloodCol: Int;
+    public var isFront: Bool;
+    public var customBodyPart: String;
+    public var customBloodBodyPart: String;
+    public var haveBlood: Bool;
+    public var be: libs.heaps.slib.HSpriteBE;
+    public var blood: libs.heaps.slib.HSpriteBE;
 
-  function __constructor__(lvl: pr.Level.Level, xf: Float, yf: Float, affixes: hl.types.ArrayObj<Dynamic>, col: Int, bloodCol: Dynamic, front: Dynamic, haveBlood: Dynamic, customBodyPart: String, customBloodBodyPart: String) {}
+    public function new(arg0: pr.Level, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Int, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: String, arg9: String) {
+        super();
+    }
 
-  static function fromEntity(from: Entity, colors: hl.types.ArrayBytes<Int>, scale: Float, movePower: Dynamic, front: Dynamic, num: Dynamic, haveBlood: Dynamic, customBodyPart: String, customBloodBodyPart: String): hl.types.ArrayObj<Dynamic> {}
+    public static function fromEntity(arg0: Entity, arg1: Array<Int>, arg2: Float, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: String, arg8: String): Array<Dynamic> {
+        throw "stub: fromEntity not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

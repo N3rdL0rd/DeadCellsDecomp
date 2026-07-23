@@ -1,15 +1,22 @@
 package pow;
+
 class FaceFlask extends Power {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function startPrepare() {}
+    public function startPrepare(): Void {
+    }
 
-  function playFlaskEffect() {}
+    public function playFlaskEffect(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

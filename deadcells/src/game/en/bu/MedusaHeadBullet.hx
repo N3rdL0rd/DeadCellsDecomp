@@ -1,67 +1,93 @@
 package en.bu;
+
 class MedusaHeadBullet extends en.Bullet {
-  var weapon: tool.Weapon.Weapon;
-  var weaponMedusaHead: tool.weap.MedusaHead.MedusaHead;
-  var atkAoe: tool.atk.AttackData.AttackData;
-  var owner: Entity;
-  var itemInf: Dynamic;
-  var aoeSkillInf: Dynamic;
-  var hasReachedMaxDist: Bool;
-  var fakeOriginX: Float;
-  var fakeOriginY: Float;
-  var storedCoveredDist: Float;
-  var baseDx: Float;
-  var isMoving: Bool;
-  var DEATH_FX_DURATION: Float;
-  var DEATH_FX_DURATION_BEFORE_INVISIBLE: Float;
-  var DEATH_FX_DISAPPEAR_TWEEN_DURATION: Float;
-  var DEATH_FX_COLOR_1: Int;
-  var DEATH_FX_COLOR_2: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var weapon: tool.Weapon;
+    public var weaponMedusaHead: tool.weap.MedusaHead;
+    public var atkAoe: tool.atk.AttackData;
+    public var owner: Entity;
+    public var itemInf: Dynamic;
+    public var aoeSkillInf: Dynamic;
+    public var hasReachedMaxDist: Bool;
+    public var fakeOriginX: Float;
+    public var fakeOriginY: Float;
+    public var storedCoveredDist: Float;
+    public var baseDx: Float;
+    public var isMoving: Bool;
+    public var DEATH_FX_DURATION: Float;
+    public var DEATH_FX_DURATION_BEFORE_INVISIBLE: Float;
+    public var DEATH_FX_DISAPPEAR_TWEEN_DURATION: Float;
+    public var DEATH_FX_COLOR_1: Int;
+    public var DEATH_FX_COLOR_2: Int;
 
-  function __constructor__(weapon: tool.Weapon.Weapon, atkRoll: tool.atk.AttackData.AttackData, atkAoe: tool.atk.AttackData.AttackData) {}
+    public function new(arg0: tool.Weapon, arg1: tool.atk.AttackData, arg2: tool.atk.AttackData) {
+        super();
+    }
 
-  function initOrigin(x: Float, y: Float) {}
+    public override function initOrigin(arg0: Float, arg1: Float): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setSpriteTransform() {}
+    public override function setSpriteTransform(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCoveredDistSqr(): Float {}
+    public override function getCoveredDistSqr(): Float {
+        throw "stub: getCoveredDistSqr not decompiled";
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public function onTouchWall(arg0: Int): Void {
+    }
 
-  function onHitWall() {}
+    public override function onHitWall(): Void {
+    }
 
-  function reachMaxDist() {}
+    public override function reachMaxDist(): Void {
+    }
 
-  function forceTrigger() {}
+    public function forceTrigger(): Void {
+    }
 
-  function trigger() {}
+    public function trigger(): Void {
+    }
 
-  function startVanish() {}
+    public function startVanish(): Void {
+    }
 
-  function tweenDisappear() {}
+    public function tweenDisappear(): Void {
+    }
 
-  function tryToResetWeapon() {}
+    public function tryToResetWeapon(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

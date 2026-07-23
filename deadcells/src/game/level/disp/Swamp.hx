@@ -1,80 +1,124 @@
 package level.disp;
+
 class Swamp extends level.BiomeDisp {
-  var sbWaterFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbPollenFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbDisplaceFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var waterZones: hl.types.ArrayObj<Dynamic>;
-  var parallaxVFillName: String;
-  var reflectedShaders: hl.types.ArrayObj<Dynamic>;
-  var lowerWaterLevel: Float;
-  var toUpdate: hl.types.ArrayObj<Dynamic>;
-  var insectPoints: hl.types.ArrayObj<Dynamic>;
-  var flyingInsects: hl.types.ArrayObj<Dynamic>;
-  var meatFlies: hl.types.ArrayObj<Dynamic>;
-  var glowShader: shader.GlowKey.GlowKey;
-  var waters: hl.types.ArrayObj<Dynamic>;
-  var waterX: Float;
-  var waterY: Float;
-  var waterSurfaceY: Float;
-  var waterHeight: Float;
-  var swampSeq: Int;
+    public var sbWaterFx: libs.heaps.slib.HSpriteBatch;
+    public var sbPollenFx: libs.heaps.slib.HSpriteBatch;
+    public var sbDisplaceFx: libs.heaps.slib.HSpriteBatch;
+    public var waterZones: Array<Dynamic>;
+    public var parallaxVFillName: String;
+    public var reflectedShaders: Array<Dynamic>;
+    public var lowerWaterLevel: Float;
+    public var toUpdate: Array<Dynamic>;
+    public var insectPoints: Array<Dynamic>;
+    public var flyingInsects: Array<Dynamic>;
+    public var meatFlies: Array<Dynamic>;
+    public var glowShader: shader.GlowKey;
+    public var waters: Array<Dynamic>;
+    public var waterX: Float;
+    public var waterY: Float;
+    public var waterSurfaceY: Float;
+    public var waterHeight: Float;
+    public var swampSeq: Int;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function getTreeBase(r: level.Room.Room): level.Room.Room {}
+    public function getTreeBase(arg0: level.Room): level.Room {
+        throw "stub: getTreeBase not decompiled";
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function addFountain(cx: Int, cy: Int) {}
+    public function addFountain(arg0: Int, arg1: Int): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function renderFloorStamps() {}
+    public override function renderFloorStamps(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function parallaxHFill(p: ParallaxGroup, tiles: hl.types.ArrayObj<Dynamic>, inf: Dynamic, rng: Dynamic, onAdd: Dynamic, y: Dynamic, randomAdditionalTile: h2d.Tile.Tile) {}
+    public function parallaxHFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Ref, arg6: h2d.Tile): Void {
+    }
 
-  function getParallaxOnAddCallback(p: ParallaxGroup, tiles: hl.types.ArrayObj<Dynamic>, inf: Dynamic): Dynamic {}
+    public function getParallaxOnAddCallback(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic): Dynamic {
+        throw "stub: getParallaxOnAddCallback not decompiled";
+    }
 
-  function initCloudShader() {}
+    public function initCloudShader(): Void {
+    }
 
-  function onAddParallax(inf: Dynamic, p: Parallax, pg: ParallaxGroup) {}
+    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    }
 
-  function getStampWallThreshold(): Float {}
+    public override function getStampWallThreshold(): Float {
+        throw "stub: getStampWallThreshold not decompiled";
+    }
 
-  function onAddWallJunk(junk: Dynamic, x: Float, y: Float, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public override function onAddWallJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
+    }
 
-  function isValidForPlants(cx: Int, cy: Int): Bool {}
+    public override function isValidForPlants(arg0: Int, arg1: Int): Bool {
+        throw "stub: isValidForPlants not decompiled";
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 
-  function addWater() {}
+    public function addWater(): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function addWallDeco(dir: Int) {}
+    public function addWallDeco(arg0: Int): Void {
+    }
 
-  function renderForeground() {}
+    public function renderForeground(): Void {
+    }
 
-  function initZones() {}
+    public function initZones(): Void {
+    }
 
-  function addSuspendedCage(px: Int, py: Int, phei: Int) {}
+    public function addSuspendedCage(arg0: Int, arg1: Int, arg2: Int): Void {
+    }
 
-  function addTreeHole(z: level.DecoTypes.DecoTypes) {}
+    public function addTreeHole(arg0: level.DecoZone): Void {
+    }
 
-  function createInsects(type: Dynamic, count: Int) {}
+    public function createInsects(arg0: level.disp.InsectType, arg1: Int): Void {
+    }
 
-  function resetInsect(insect: Dynamic) {}
+    public function resetInsect(arg0: Dynamic): Void {
+    }
 }
 
+class Zone {
+    public var left: Int;
+    public var right: Int;
+    public var waterLevel: Int;
+    public var depth: Int;
+
+    public function new(arg0: Int, arg1: Int, arg2: Int, arg3: Int) {
+    }
+}

@@ -1,55 +1,85 @@
 package en.inter.npc;
+
 class SlayTheSpireNeow extends en.inter.Npc {
-  var activated: Bool;
-  var dropped: Bool;
-  var mouth: libs.heaps.slib.HSprite.HSprite;
-  var back: libs.heaps.slib.HSprite.HSprite;
-  var noses: hl.types.ArrayObj<Dynamic>;
-  var eyes: hl.types.ArrayObj<Dynamic>;
-  var speechSfx: libs.RandDeck.RandDeck;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var activated: Bool;
+    public var dropped: Bool;
+    public var mouth: libs.heaps.slib.HSprite;
+    public var back: libs.heaps.slib.HSprite;
+    public var noses: Array<Dynamic>;
+    public var eyes: Array<Dynamic>;
+    public var speechSfx: libs.RandDeck;
 
-  function __constructor__(lvl: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function get_interactX(): Float {}
+    public function get_interactX(): Float {
+        throw "stub: get_interactX not decompiled";
+    }
 
-  function get_interactY(): Float {}
+    public function get_interactY(): Float {
+        throw "stub: get_interactY not decompiled";
+    }
 
-  function get_globalUiX(): Float {}
+    public function get_globalUiX(): Float {
+        throw "stub: get_globalUiX not decompiled";
+    }
 
-  function get_globalUiY(): Float {}
+    public function get_globalUiY(): Float {
+        throw "stub: get_globalUiY not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function blinkEye() {}
+    public function blinkEye(): Void {
+    }
 
-  function breath() {}
+    public function breath(): Void {
+    }
 
-  function checkCanGreet() {}
+    public override function checkCanGreet(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onGreet(h: en.Hero.Hero) {}
+    public override function onGreet(arg0: en.Hero): Void {
+    }
 
-  function onActivate(hero: en.Hero.Hero, longPress: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function talk() {}
+    public function talk(): Void {
+    }
 
-  function dropItem() {}
+    public function dropItem(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

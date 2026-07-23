@@ -1,93 +1,142 @@
 package level;
+
 class Room {
-  var id: Int;
-  var rType: String;
-  var rGroup: Int;
-  var rTemplate: String;
-  var revealed: Bool;
-  var x: Int;
-  var y: Int;
-  var wid: Int;
-  var hei: Int;
-  var map: level.LevelMap.LevelMap;
-  var markers: hl.types.ArrayObj<Dynamic>;
-  var tplName: String;
-  var name: String;
-  var parent: Room;
-  var children: hl.types.ArrayObj<Dynamic>;
-  var links: hl.types.ArrayObj<Dynamic>;
-  var flags: Dynamic;
-  var spawnDistance: Int;
-  var metaGates: hl.types.ArrayObj<Dynamic>;
-  var exitLevel: String;
-  var exitName: String;
-  var exitColor: Dynamic;
-  var isZChild: Bool;
-  var zLinks: hl.types.ArrayObj<Dynamic>;
-  var npcs: hl.types.ArrayObj<Dynamic>;
-  var mobs: hl.types.ArrayObj<Dynamic>;
-  var loots: hl.types.ArrayObj<Dynamic>;
-  var secretLevels: hl.types.ArrayObj<Dynamic>;
-  var merchant: hxbit.Macros.Macros;
-  var genData: Dynamic;
-  var platforms: hl.types.ArrayObj<Dynamic>;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var sanctuaryTypes: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
+    public static var sanctuaryTypes: Array<Dynamic>;
+    public static var __clid: Int;
+    public var id: Int;
+    public var rType: String;
+    public var rGroup: Int;
+    public var rTemplate: String;
+    public var revealed: Bool;
+    public var x: Int;
+    public var y: Int;
+    public var wid: Int;
+    public var hei: Int;
+    public var map: level.LevelMap;
+    public var markers: Array<Dynamic>;
+    public var tplName: String;
+    public var name: String;
+    public var parent: level.Room;
+    public var children: Array<Dynamic>;
+    public var links: Array<Dynamic>;
+    public var flags: hxbit.EnumFlagsData;
+    public var spawnDistance: Int;
+    public var metaGates: Array<Dynamic>;
+    public var exitLevel: String;
+    public var exitName: String;
+    public var exitColor: Dynamic;
+    public var isZChild: Bool;
+    public var zLinks: Array<Dynamic>;
+    public var npcs: Array<Dynamic>;
+    public var mobs: Array<Dynamic>;
+    public var loots: Array<Dynamic>;
+    public var secretLevels: Array<Dynamic>;
+    public var merchant: level.MerchantData;
+    public var genData: Dynamic;
+    public var platforms: Array<Dynamic>;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(map: level.LevelMap.LevelMap, id: Int, templateId: String, type: String, group: Int) {}
+    public function new(arg0: level.LevelMap, arg1: Int, arg2: String, arg3: String, arg4: Int) {
+    }
 
-  function getShortTplName(): String {}
+    public function getShortTplName(): String {
+        throw "stub: getShortTplName not decompiled";
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function getMarkersOfType(type: String): hl.types.ArrayObj<Dynamic> {}
+    public function getMarkersOfType(arg0: String): Array<Dynamic> {
+        throw "stub: getMarkersOfType not decompiled";
+    }
 
-  function getMarker(type: String, customId: String, required: Dynamic): hxbit.Macros.Macros {}
+    public function getMarker(arg0: String, arg1: String, arg2: Ref): level.Marker {
+        throw "stub: getMarker not decompiled";
+    }
 
-  function getMarkerRect(type: String, customId: String, required: Dynamic): hxbit.Macros.Macros {}
+    public function getMarkerRect(arg0: String, arg1: String, arg2: Ref): tool.CRect {
+        throw "stub: getMarkerRect not decompiled";
+    }
 
-  function getMarkerRects(type: String, customId: String): hl.types.ArrayObj<Dynamic> {}
+    public function getMarkerRects(arg0: String, arg1: String): Array<Dynamic> {
+        throw "stub: getMarkerRects not decompiled";
+    }
 
-  function getMarkerCenterByType(type: String, customId: String): tool.CPoint.CPoint {}
+    public function getMarkerCenterByType(arg0: String, arg1: String): tool.CPoint {
+        throw "stub: getMarkerCenterByType not decompiled";
+    }
 
-  function getMarkerCenter(m: hxbit.Macros.Macros): tool.CPoint.CPoint {}
+    public function getMarkerCenter(arg0: level.Marker): tool.CPoint {
+        throw "stub: getMarkerCenter not decompiled";
+    }
 
-  function getMarkerOfTypeAt(type: String, cx: Int, cy: Int): hxbit.Macros.Macros {}
+    public function getMarkerOfTypeAt(arg0: String, arg1: Int, arg2: Int): level.Marker {
+        throw "stub: getMarkerOfTypeAt not decompiled";
+    }
 
-  function hasMarkerAt(type: String, cx: Int, cy: Int): Bool {}
+    public function hasMarkerAt(arg0: String, arg1: Int, arg2: Int): Bool {
+        throw "stub: hasMarkerAt not decompiled";
+    }
 
-  function hasMarker(type: String, customId: String): Bool {}
+    public function hasMarker(arg0: String, arg1: String): Bool {
+        throw "stub: hasMarker not decompiled";
+    }
 
-  function isConnected(r: Room): Bool {}
+    public function isConnected(arg0: level.Room): Bool {
+        throw "stub: isConnected not decompiled";
+    }
 
-  function getEnter(): RoomLink {}
+    public function getEnter(): level.RoomLink {
+        throw "stub: getEnter not decompiled";
+    }
 
-  function calcDistanceCond(cond: Dynamic): Int {}
+    public function calcDistanceCond(arg0: Dynamic): Int {
+        throw "stub: calcDistanceCond not decompiled";
+    }
 
-  function hasParents(type: String, includeSelf: Bool): Bool {}
+    public function hasParents(arg0: String, arg1: Bool): Bool {
+        throw "stub: hasParents not decompiled";
+    }
 
-  function isInZBranch(): Bool {}
+    public function isInZBranch(): Bool {
+        throw "stub: isInZBranch not decompiled";
+    }
 
-  function getZParent(): Room {}
+    public function getZParent(): level.Room {
+        throw "stub: getZParent not decompiled";
+    }
 
-  function countParents(type: String): Int {}
+    public function countParents(arg0: String): Int {
+        throw "stub: countParents not decompiled";
+    }
 
-  function isSanctuary(): Bool {}
+    public function isSanctuary(): Bool {
+        throw "stub: isSanctuary not decompiled";
+    }
 
-  function addPlatform(pf: level.Platform.Platform) {}
+    public function addPlatform(arg0: level.Platform): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
-

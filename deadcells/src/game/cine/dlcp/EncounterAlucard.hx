@@ -1,11 +1,15 @@
 package cine.dlcp;
+
 class EncounterAlucard extends GameCinematic {
-  var hero: en.Hero.Hero;
+    public var hero: en.Hero;
 
-  function __constructor__(h: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function createElevatorPointer(elevator: en.inter.elevator.PurpleElevator.PurpleElevator) {}
+    public function createElevatorPointer(arg0: en.inter.elevator.PurpleElevator): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

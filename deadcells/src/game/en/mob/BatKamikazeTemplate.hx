@@ -1,39 +1,63 @@
 package en.mob;
+
 class BatKamikazeTemplate extends en.mob.Bat {
-  var offAng: Float;
-  var offAngDir: Int;
-  var offDist: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var offAng: Float;
+    public var offAngDir: Int;
+    public var offDist: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, kind: String, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+        super();
+    }
 
-  static function explode(source: Entity, inf: Dynamic) {}
+    public static function explode(arg0: Entity, arg1: Dynamic): Void {
+    }
 
-  function get_tx(): Float {}
+    public function get_tx(): Float {
+        throw "stub: get_tx not decompiled";
+    }
 
-  function get_ty(): Float {}
+    public function get_ty(): Float {
+        throw "stub: get_ty not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function canWakeUp(): Bool {}
+    public override function canWakeUp(): Bool {
+        throw "stub: canWakeUp not decompiled";
+    }
 
-  function wakeUp() {}
+    public override function wakeUp(): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

@@ -1,166 +1,232 @@
 package en.mob.boss;
+
 class TimeKeeper extends en.mob.Boss {
-  var resistRoot: Float;
-  var resistStun: Float;
-  var shortRangeMax: Int;
-  var midRangeMin: Int;
-  var midRangeMax: Int;
-  var longRangeMin: Int;
-  var rangeHook: Int;
-  var dangerRange: Int;
-  var checkIsDanger: Int;
-  var hook: tool.HookChainTimeKeeper.HookChainTimeKeeper;
-  var onions: hl.types.ArrayObj<Dynamic>;
-  var radiusSwords: hl.types.ArrayObj<Dynamic>;
-  var timeBeforeDanger: Float;
-  var isInDanger: Bool;
-  var fxHook: libs.heaps.slib.HSprite.HSprite;
-  var battleVoices: libs.RandDeck.RandDeck;
-  var isBeaten: Bool;
-  var bossRushModifiers: Dynamic;
-  var frontArea: tool.Area.Area;
-  var frontAttk: tool.skill.OldSkill.OldSkill;
-  var nFrontAttk: Int;
-  var curFrontAttk: Dynamic;
-  var hookAttack: tool.skill.OldSkill.OldSkill;
-  var bigFrontAttk: tool.skill.OldSkill.OldSkill;
-  var smokeBombAttk: tool.skill.OldSkill.OldSkill;
-  var symFrontArea: tool.Area.Area;
-  var needLevelUp: Bool;
-  var levelUpRadiusArea: tool.Area.Area;
-  var levelUpRadiusAttk: tool.skill.OldSkill.OldSkill;
-  var isDashing: Bool;
-  var dashHitArea: tool.Area.Area;
-  var dashAttk: tool.skill.OldSkill.OldSkill;
-  var nDashAttk: Int;
-  var curDashAttk: Int;
-  var shurikenShootAttk: tool.skill.OldSkill.OldSkill;
-  var nShurikenAttk: Int;
-  var curShurikenAttk: Int;
-  var prevName: String;
-  var px: Float;
-  var py: Float;
-  var shuLaunch: libs.heaps.slib.HSprite.HSprite;
-  var prevSprX: Float;
-  var <none>: Dynamic;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var resistRoot: Float;
+    public var resistStun: Float;
+    public var shortRangeMax: Int;
+    public var midRangeMin: Int;
+    public var midRangeMax: Int;
+    public var longRangeMin: Int;
+    public var rangeHook: Int;
+    public var dangerRange: Int;
+    public var checkIsDanger: Int;
+    public var hook: tool.HookChainTimeKeeper;
+    public var onions: Array<Dynamic>;
+    public var radiusSwords: Array<Dynamic>;
+    public var timeBeforeDanger: Float;
+    public var isInDanger: Bool;
+    public var fxHook: libs.heaps.slib.HSprite;
+    public var battleVoices: libs.RandDeck;
+    public var isBeaten: Bool;
+    public var bossRushModifiers: Dynamic;
+    public var frontArea: tool.Area;
+    public var frontAttk: tool.skill.OldSkill;
+    public var nFrontAttk: Int;
+    public var curFrontAttk: Dynamic;
+    public var hookAttack: tool.skill.OldSkill;
+    public var bigFrontAttk: tool.skill.OldSkill;
+    public var smokeBombAttk: tool.skill.OldSkill;
+    public var symFrontArea: tool.Area;
+    public var needLevelUp: Bool;
+    public var levelUpRadiusArea: tool.Area;
+    public var levelUpRadiusAttk: tool.skill.OldSkill;
+    public var isDashing: Bool;
+    public var dashHitArea: tool.Area;
+    public var dashAttk: tool.skill.OldSkill;
+    public var nDashAttk: Int;
+    public var curDashAttk: Int;
+    public var shurikenShootAttk: tool.skill.OldSkill;
+    public var nShurikenAttk: Int;
+    public var curShurikenAttk: Int;
+    public var prevName: String;
+    public var px: Float;
+    public var py: Float;
+    public var shuLaunch: libs.heaps.slib.HSprite;
+    public var prevSprX: Float;
+    public var : Dynamic;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): TimeKeeper {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.boss.TimeKeeper {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function setReady() {}
+    public override function setReady(): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function updateShurikenLaunch(forced: Dynamic) {}
+    public function updateShurikenLaunch(arg0: Ref): Void {
+    }
 
-  function circleShurikenAreVisible(): Bool {}
+    public function circleShurikenAreVisible(): Bool {
+        throw "stub: circleShurikenAreVisible not decompiled";
+    }
 
-  function shootCircleShuriken() {}
+    public function shootCircleShuriken(): Void {
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function shootXHook(): Float {}
+    public function shootXHook(): Float {
+        throw "stub: shootXHook not decompiled";
+    }
 
-  function shootYHook(): Float {}
+    public function shootYHook(): Float {
+        throw "stub: shootYHook not decompiled";
+    }
 
-  function prepareFrontAttk() {}
+    public function prepareFrontAttk(): Void {
+    }
 
-  function endFrontAttk() {}
+    public function endFrontAttk(): Void {
+    }
 
-  function prepareDashAttk() {}
+    public function prepareDashAttk(): Void {
+    }
 
-  function endDash(forceEnd: Bool) {}
+    public function endDash(arg0: Bool): Void {
+    }
 
-  function prepareShurikenAttk() {}
+    public function prepareShurikenAttk(): Void {
+    }
 
-  function doLevelUp() {}
+    public function doLevelUp(): Void {
+    }
 
-  function endLevelUp() {}
+    public function endLevelUp(): Void {
+    }
 
-  function startDanger(timeMult: Dynamic) {}
+    public function startDanger(arg0: Ref): Void {
+    }
 
-  function setOutOfDanger() {}
+    public function setOutOfDanger(): Void {
+    }
 
-  function onStep() {}
+    public function onStep(): Void {
+    }
 
-  function onDashing() {}
+    public function onDashing(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function prepareLevelUp() {}
+    public override function prepareLevelUp(): Void {
+    }
 
-  function canLevelUp(): Bool {}
+    public override function canLevelUp(): Bool {
+        throw "stub: canLevelUp not decompiled";
+    }
 
-  function onBossLevelUp() {}
+    public override function onBossLevelUp(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function adaptCDDuration(duration: Float): Float {}
+    public function adaptCDDuration(arg0: Float): Float {
+        throw "stub: adaptCDDuration not decompiled";
+    }
 
-  function adaptLockDuration(duration: Float): Float {}
+    public function adaptLockDuration(arg0: Float): Float {
+        throw "stub: adaptLockDuration not decompiled";
+    }
 
-  function getVolteDelay(): Float {}
+    public function getVolteDelay(): Float {
+        throw "stub: getVolteDelay not decompiled";
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
 
-class _TimeKeeper.RadiusSword {
-  var isHidden: Bool;
-  var spr: libs.heaps.slib.HSprite.HSprite;
-  var be: en.mob.boss.TimeKeeper.TimeKeeper;
-  var level: pr.Level.Level;
-  var baseRadius: Float;
-  var radius: Float;
-  var ang: Float;
-  var idx: Int;
-  var max: Int;
-  var ots: hl.types.ArrayObj<Dynamic>;
-  var defaultSpeedAng: Float;
-  var speedAng: Float;
+class RadiusSword {
+    public var isHidden: Bool;
+    public var spr: libs.heaps.slib.HSprite;
+    public var be: en.mob.boss.TimeKeeper;
+    public var level: pr.Level;
+    public var baseRadius: Float;
+    public var radius: Float;
+    public var ang: Float;
+    public var idx: Int;
+    public var max: Int;
+    public var ots: Array<Dynamic>;
+    public var defaultSpeedAng: Float;
+    public var speedAng: Float;
 
-  function __constructor__(be: en.mob.boss.TimeKeeper.TimeKeeper, idx: Int, max: Int) {}
+    public function new(arg0: en.mob.boss.TimeKeeper, arg1: Int, arg2: Int) {
+    }
 
-  function show(baseRadius: Float) {}
+    public function show(arg0: Float): Void {
+    }
 
-  function hide() {}
+    public function hide(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function postUpdate(dt: Float) {}
+    public function postUpdate(arg0: Float): Void {
+    }
 }
-

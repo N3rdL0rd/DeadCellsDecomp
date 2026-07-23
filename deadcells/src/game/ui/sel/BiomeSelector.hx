@@ -1,53 +1,87 @@
 package ui.sel;
+
 class BiomeSelector extends ui.sel.GridSelector {
-  var groups: hl.types.ArrayBytes<Int>;
-  var levels: hl.types.ArrayObj<Dynamic>;
-  var validateCb: Dynamic;
-  var rightFlowHei: Int;
-  var rightFlowWid: Int;
-  var nameText: ui.Text.Text;
-  var preSelectedBiome: String;
+    public var groups: Array<Int>;
+    public var levels: Array<Dynamic>;
+    public var validateCb: Dynamic;
+    public var rightFlowHei: Int;
+    public var rightFlowWid: Int;
+    public var nameText: ui.Text;
+    public var preSelectedBiome: String;
 
-  function __constructor__(groups: hl.types.ArrayBytes<Int>, validateCb: Dynamic, preSelectedBiome: String) {}
+    public function new(arg0: Array<Int>, arg1: Dynamic, arg2: String) {
+        super();
+    }
 
-  function get_curBiome(): Dynamic {}
+    public function get_curBiome(): Dynamic {
+        throw "stub: get_curBiome not decompiled";
+    }
 
-  function get_entryWid(): Int {}
+    public override function get_entryWid(): Int {
+        throw "stub: get_entryWid not decompiled";
+    }
 
-  function get_entryHei(): Int {}
+    public override function get_entryHei(): Int {
+        throw "stub: get_entryHei not decompiled";
+    }
 
-  function get_wid(): Int {}
+    public override function get_wid(): Int {
+        throw "stub: get_wid not decompiled";
+    }
 
-  function initGrid() {}
+    public override function initGrid(): Void {
+    }
 
-  function levelIsFiltered(level: Dynamic): Bool {}
+    public function levelIsFiltered(arg0: Dynamic): Bool {
+        throw "stub: levelIsFiltered not decompiled";
+    }
 
-  function initRightFlow() {}
+    public override function initRightFlow(): Void {
+    }
 
-  function isEntryLocked(i: Int): Bool {}
+    public override function isEntryLocked(arg0: Int): Bool {
+        throw "stub: isEntryLocked not decompiled";
+    }
 
-  function getIconBmp(i: Int, p: h2d.Object.Object): h2d.Object.Object {}
+    public override function getIconBmp(arg0: Int, arg1: h2d.Object): h2d.Object {
+        throw "stub: getIconBmp not decompiled";
+    }
 
-  function getLockSprite(p: h2d.Object.Object, i: Dynamic): h2d.Object.Object {}
+    public override function getLockSprite(arg0: h2d.Object, arg1: Dynamic): h2d.Object {
+        throw "stub: getLockSprite not decompiled";
+    }
 
-  function updateRightFlow() {}
+    public override function updateRightFlow(): Void {
+    }
 
-  function get_globalRightFlow(): h2d.col.Point.Point {}
+    public function get_globalRightFlow(): h2d.col.Point {
+        throw "stub: get_globalRightFlow not decompiled";
+    }
 
-  function get_globalRightFlowCenterX(): Float {}
+    public function get_globalRightFlowCenterX(): Float {
+        throw "stub: get_globalRightFlowCenterX not decompiled";
+    }
 
-  function get_globalRightFlowCenterY(): Float {}
+    public function get_globalRightFlowCenterY(): Float {
+        throw "stub: get_globalRightFlowCenterY not decompiled";
+    }
 
-  function resizeText(t: ui.Text.Text) {}
+    public function resizeText(arg0: ui.Text): Void {
+    }
 
-  function centerText(t: ui.Text.Text, yOffset: Float) {}
+    public function centerText(arg0: ui.Text, arg1: Float): Void {
+    }
 
-  function updateTextsPosition(resize: Dynamic) {}
+    public function updateTextsPosition(arg0: Ref): Void {
+    }
 
-  function getTitleText(): String {}
+    public override function getTitleText(): String {
+        throw "stub: getTitleText not decompiled";
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onValidate() {}
+    public override function onValidate(): Void {
+    }
 }
-

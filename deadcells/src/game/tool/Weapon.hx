@@ -1,167 +1,272 @@
 package tool;
+
 class Weapon {
-  var owner: en.Hero.Hero;
-  var item: tool.InventItem.InventItem;
-  var itemInf: Dynamic;
-  var wInfos: Dynamic;
-  var lastFx: libs.heaps.slib.HSprite.HSprite;
-  var cd: tool.Cooldown.Cooldown;
-  var skills: hl.types.ArrayObj<Dynamic>;
-  var affixesDone: Bool;
-  var _cycle: Int;
-  var anticipateNext: Bool;
-  var areas: hl.types.ArrayObj<Dynamic>;
-  var _attackSpeed: Float;
-  var destroyed: Bool;
-  var disableSounds: Bool;
-  var customSoundManagement: Bool;
-  var needButtonRelease: Bool;
-  var requireRelease: Bool;
-  var critFeedback: Bool;
-  static var WEAPON_GLOW_KEY: Int;
+    public static var WEAPON_GLOW_KEY: Int;
+    public var owner: en.Hero;
+    public var item: tool.InventItem;
+    public var itemInf: Dynamic;
+    public var wInfos: Dynamic;
+    public var lastFx: libs.heaps.slib.HSprite;
+    public var cd: tool.Cooldown;
+    public var skills: Array<Dynamic>;
+    public var affixesDone: Bool;
+    public var _cycle: Int;
+    public var anticipateNext: Bool;
+    public var areas: Array<Dynamic>;
+    public var _attackSpeed: Float;
+    public var destroyed: Bool;
+    public var disableSounds: Bool;
+    public var customSoundManagement: Bool;
+    public var needButtonRelease: Bool;
+    public var requireRelease: Bool;
+    public var critFeedback: Bool;
+
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+    }
+
+    public static function create(arg0: en.Hero, arg1: tool.InventItem): tool.Weapon {
+        throw "stub: create not decompiled";
+    }
+
+    public function get_curSkill(): tool.WeaponSkill {
+        throw "stub: get_curSkill not decompiled";
+    }
+
+    public function get_curSkillInf(): Dynamic {
+        throw "stub: get_curSkillInf not decompiled";
+    }
+
+    public function get_cycle(): Int {
+        throw "stub: get_cycle not decompiled";
+    }
+
+    public function set_cycle(arg0: Int): Int {
+        throw "stub: set_cycle not decompiled";
+    }
+
+    public function get_attackSpeed(): Float {
+        throw "stub: get_attackSpeed not decompiled";
+    }
+
+    public function set_attackSpeed(arg0: Float): Float {
+        throw "stub: set_attackSpeed not decompiled";
+    }
+
+    public function get_hudSkill(): ui.hud.Skill {
+        throw "stub: get_hudSkill not decompiled";
+    }
+
+    public function killEntities(): Void {
+    }
+
+    public function onLevelChanged(arg0: pr.Level): Void {
+    }
+
+    public function isBow(): Bool {
+        throw "stub: isBow not decompiled";
+    }
+
+    public function asBow(): tool.weap.BaseBow {
+        throw "stub: asBow not decompiled";
+    }
+
+    public function isShield(): Bool {
+        throw "stub: isShield not decompiled";
+    }
 
-  function __constructor__(owner: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function asShield(): tool.weap.BaseShield {
+        throw "stub: asShield not decompiled";
+    }
 
-  static function create(o: en.Hero.Hero, i: tool.InventItem.InventItem): Weapon {}
+    public function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    }
 
-  function get_curSkill(): WeaponSkill {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_curSkillInf(): Dynamic {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_cycle(): Int {}
+    public function onOwnerTurned(): Void {
+    }
 
-  function set_cycle(v: Int): Int {}
+    public function getBowTargetAng(arg0: Float, arg1: Dynamic, arg2: Dynamic): Float {
+        throw "stub: getBowTargetAng not decompiled";
+    }
 
-  function get_attackSpeed(): Float {}
+    public function consumeAmmo(): Bool {
+        throw "stub: consumeAmmo not decompiled";
+    }
 
-  function set_attackSpeed(v: Float): Float {}
+    public function updateAmmoHud(): Void {
+    }
 
-  function get_hudSkill(): ui.hud.Skill.Skill {}
+    public function setCritFeedback(arg0: Dynamic): Void {
+    }
 
-  function killEntities() {}
+    public function stopCritFeedback(): Void {
+    }
 
-  function onLevelChanged(lvl: pr.Level.Level) {}
+    public function checkGroundHit(arg0: Int): Bool {
+        throw "stub: checkGroundHit not decompiled";
+    }
 
-  function isBow(): Bool {}
+    public function _executeImpl(arg0: Float): Void {
+    }
 
-  function asBow(): tool.weap.BaseBow.BaseBow {}
+    public function incrementCycle(): Void {
+    }
 
-  function isShield(): Bool {}
+    public function isLastCycle(): Bool {
+        throw "stub: isLastCycle not decompiled";
+    }
 
-  function asShield(): tool.weap.BaseShield.BaseShield {}
+    public function isCharging(): Bool {
+        throw "stub: isCharging not decompiled";
+    }
 
-  function initSkill(idx: Int, chainInf: Dynamic, s: WeaponSkill) {}
+    public function isReady(): Bool {
+        throw "stub: isReady not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public function allowTurnDuringCharge(): Bool {
+        throw "stub: allowTurnDuringCharge not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function canComboNextSkillEarly(): Bool {
+        throw "stub: canComboNextSkillEarly not decompiled";
+    }
 
-  function onOwnerTurned() {}
+    public function canStartChargeEarly(): Bool {
+        throw "stub: canStartChargeEarly not decompiled";
+    }
 
-  function getBowTargetAng(rcase: Float, maxAngDist: Dynamic, prioritizeFlyings: Dynamic): Float {}
+    public function interrupt(): Void {
+    }
 
-  function consumeAmmo(): Bool {}
+    public function dynOnInterrupt(arg0: tool.WeaponSkill, arg1: Float): Void {
+    }
 
-  function updateAmmoHud() {}
+    public function autoAim(): Bool {
+        throw "stub: autoAim not decompiled";
+    }
 
-  function setCritFeedback(t: Dynamic) {}
+    public function autoAimSpecialModeAuto(arg0: Dynamic): Int {
+        throw "stub: autoAimSpecialModeAuto not decompiled";
+    }
 
-  function stopCritFeedback() {}
+    public function canHit(arg0: Entity, arg1: tool.Area): Bool {
+        throw "stub: canHit not decompiled";
+    }
 
-  function checkGroundHit(dx: Int): Bool {}
+    public function onOutOfAmmoTry(): Void {
+    }
 
-  function _executeImpl(ratio: Float) {}
+    public function airControlOwner(): Void {
+    }
 
-  function incrementCycle() {}
+    public function onAnticipate(): Void {
+    }
 
-  function isLastCycle(): Bool {}
+    public function onBeforeCurSkillPrepare(): Void {
+    }
 
-  function isCharging(): Bool {}
+    public function prepare(arg0: Float): Void {
+    }
 
-  function isReady(): Bool {}
+    public function setWeaponGlow(): Void {
+    }
 
-  function allowTurnDuringCharge(): Bool {}
+    public function isPlayingAttackAnim(): Bool {
+        throw "stub: isPlayingAttackAnim not decompiled";
+    }
 
-  function canComboNextSkillEarly(): Bool {}
+    public function tryToUse(): Bool {
+        throw "stub: tryToUse not decompiled";
+    }
 
-  function canStartChargeEarly(): Bool {}
+    public function tryToCancel(arg0: Bool): Bool {
+        throw "stub: tryToCancel not decompiled";
+    }
 
-  function interrupt() {}
+    public function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function dynOnInterrupt(s: WeaponSkill, r: Float) {}
+    public function customPlaySfx(arg0: String, arg1: hxd.res.Sound, arg2: Dynamic, arg3: Dynamic, arg4: Ref, arg5: Dynamic, arg6: Dynamic): Void {
+    }
 
-  function autoAim(): Bool {}
+    public function playHitSfx(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function autoAimSpecialModeAuto(doorsOnly: Dynamic): Int {}
+    public function playChargeSfx(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function canHit(e: Entity, area: tool.Area.Area): Bool {}
+    public function playReleaseSfx(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function onOutOfAmmoTry() {}
+    public function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function airControlOwner() {}
+    public function areaCounterBullet(arg0: en.Bullet, arg1: Ref): Void {
+    }
 
-  function onAnticipate() {}
+    public function executeAffixes(): Void {
+    }
 
-  function onBeforeCurSkillPrepare() {}
+    public function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function prepare(attackSpeed: Float) {}
+    public function executeFromBackpack(): Bool {
+        throw "stub: executeFromBackpack not decompiled";
+    }
 
-  function setWeaponGlow() {}
+    public function doAreaEffect(arg0: tool.Area): Void {
+    }
 
-  function isPlayingAttackAnim(): Bool {}
+    public function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function tryToUse(): Bool {}
+    public function dispose(): Void {
+    }
 
-  function tryToCancel(byWeapon: Bool): Bool {}
+    public function canCancel(): Bool {
+        throw "stub: canCancel not decompiled";
+    }
 
-  function dynOnAttackAnim(s: WeaponSkill, cinf: Dynamic) {}
+    public function cancelChain(): Void {
+    }
 
-  function customPlaySfx(sfxType: String, sound: hxd.res.Sound.Sound, volume: Dynamic, holdCond: Dynamic, loop: Dynamic, fadeOutTime: Dynamic, pitch: Dynamic) {}
+    public function postUpdate(): Void {
+    }
 
-  function playHitSfx(volume: Dynamic, holdCond: Dynamic, loop: Dynamic, fadeOutTime: Dynamic, pitch: Dynamic) {}
+    public function fixedUpdate(): Void {
+    }
 
-  function playChargeSfx(volume: Dynamic, holdCond: Dynamic, loop: Dynamic, fadeOutTime: Dynamic, pitch: Dynamic) {}
+    public function setCycleLossCD(): Void {
+    }
 
-  function playReleaseSfx(volume: Dynamic, holdCond: Dynamic, loop: Dynamic, fadeOutTime: Dynamic, pitch: Dynamic) {}
+    public function hasCycleLossCD(): Bool {
+        throw "stub: hasCycleLossCD not decompiled";
+    }
 
-  function dynOnFxFrame(s: WeaponSkill, cinf: Dynamic) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function areaCounterBullet(cBullet: en.Bullet.Bullet, speedMul: Dynamic) {}
-
-  function executeAffixes() {}
-
-  function onExecute(): Bool {}
-
-  function executeFromBackpack(): Bool {}
-
-  function doAreaEffect(area: tool.Area.Area) {}
-
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
-
-  function dispose() {}
-
-  function canCancel(): Bool {}
-
-  function cancelChain() {}
-
-  function postUpdate() {}
-
-  function fixedUpdate() {}
-
-  function setCycleLossCD() {}
-
-  function hasCycleLossCD(): Bool {}
-
-  function onCooldownEnd(k: String, subIndex: Int) {}
-
-  function onOwnerCooldownEnd(k: String, idx: Int) {}
+    public function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 }
 
 class WeaponSkill extends tool.skill.OldSkill {
-  var weapon: tool.Weapon.Weapon;
+    public var weapon: tool.Weapon;
 
-  function __constructor__(weapon: tool.Weapon.Weapon, id: String, ownerHero: en.Hero.Hero, cb: Dynamic) {}
+    public function new(arg0: tool.Weapon, arg1: String, arg2: en.Hero, arg3: Dynamic) {
+        super();
+    }
 
-  function getCastSpeed(): Float {}
+    public override function getCastSpeed(): Float {
+        throw "stub: getCastSpeed not decompiled";
+    }
 }
-

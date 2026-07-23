@@ -1,21 +1,32 @@
 package tool.weap.dual;
+
 class SharedComboWeapon extends tool.Weapon {
-  var share: Bool;
-  static var sharedCycle: Int;
-  static var sharedCombo: hl.types.ArrayObj<Dynamic>;
+    public static var sharedCycle: Int;
+    public static var sharedCombo: Array<Dynamic>;
+    public var share: Bool;
 
-  function __constructor__(owner: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_cycle(): Int {}
+    public override function get_cycle(): Int {
+        throw "stub: get_cycle not decompiled";
+    }
 
-  function set_cycle(v: Int): Int {}
+    public override function set_cycle(arg0: Int): Int {
+        throw "stub: set_cycle not decompiled";
+    }
 
-  function cancelChain() {}
+    public override function cancelChain(): Void {
+    }
 
-  function incrementCycle() {}
+    public override function incrementCycle(): Void {
+    }
 
-  function setCycleLossCD() {}
+    public override function setCycleLossCD(): Void {
+    }
 
-  function hasCycleLossCD(): Bool {}
+    public override function hasCycleLossCD(): Bool {
+        throw "stub: hasCycleLossCD not decompiled";
+    }
 }
-

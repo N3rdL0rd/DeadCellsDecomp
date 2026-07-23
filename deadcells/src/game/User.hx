@@ -1,137 +1,262 @@
-
 class User {
-  var flags: Dynamic;
-  var userId: Int;
-  var deathMoney: Int;
-  var deathCells: Int;
-  var bossRuneActivated: Int;
-  var tutorial: tool.Tutorial.Tutorial;
-  var counters: haxe.ds.StringMap;
-  var story: tool.StoryManager.StoryManager;
-  var itemMeta: tool.ItemMetaManager.ItemMetaManager;
-  var userStats: UserStats;
-  var activeMods: hl.types.ArrayObj<Dynamic>;
-  var heroSkin: String;
-  var localAchievements: hl.types.ArrayObj<Dynamic>;
-  var game: pr.Game.Game;
-  var mainGame: pr.Game.Game;
-  var mainGameData: tool.GameData.GameData;
-  var meta: hl.types.ArrayObj<Dynamic>;
-  var metaItems: hl.types.ArrayObj<Dynamic>;
-  var npcs: haxe.ds.EnumValueMap;
-  var achievements: hl.types.ArrayObj<Dynamic>;
-  var deathItem: String;
-  var heroHeadSkin: String;
-  var userSignals: Dynamic;
-  var consecutiveCompletedRuns: Int;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var flags: hxbit.EnumFlagsData;
+    public var userId: Int;
+    public var deathMoney: Int;
+    public var deathCells: Int;
+    public var bossRuneActivated: Int;
+    public var tutorial: tool.Tutorial;
+    public var counters: haxe.ds.StringMap;
+    public var story: tool.StoryManager;
+    public var itemMeta: tool.ItemMetaManager;
+    public var userStats: UserStats;
+    public var activeMods: Array<Dynamic>;
+    public var heroSkin: String;
+    public var localAchievements: Array<Dynamic>;
+    public var game: pr.Game;
+    public var mainGame: pr.Game;
+    public var mainGameData: tool.GameData;
+    public var meta: Array<Dynamic>;
+    public var metaItems: Array<Dynamic>;
+    public var npcs: haxe.ds.EnumValueMap;
+    public var achievements: Array<Dynamic>;
+    public var deathItem: String;
+    public var heroHeadSkin: String;
+    public var userSignals: tool.signals.UserSignals;
+    public var consecutiveCompletedRuns: Int;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function getHeroSkinInfos(): Dynamic {}
+    public function getHeroSkinInfos(): Dynamic {
+        throw "stub: getHeroSkinInfos not decompiled";
+    }
 
-  function getHeroHeadSkinInfos(): Dynamic {}
+    public function getHeroHeadSkinInfos(): Dynamic {
+        throw "stub: getHeroHeadSkinInfos not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function pickDeathMoney(): Int {}
+    public function pickDeathMoney(): Int {
+        throw "stub: pickDeathMoney not decompiled";
+    }
 
-  function pickDeathCells(): Int {}
+    public function pickDeathCells(): Int {
+        throw "stub: pickDeathCells not decompiled";
+    }
 
-  function pickDeathItem(): String {}
+    public function pickDeathItem(): String {
+        throw "stub: pickDeathItem not decompiled";
+    }
 
-  function getDailyRewards(): hl.types.ArrayObj<Dynamic> {}
+    public function getDailyRewards(): Array<Dynamic> {
+        throw "stub: getDailyRewards not decompiled";
+    }
 
-  function getNextStepDailyReward(): Dynamic {}
+    public function getNextStepDailyReward(): Dynamic {
+        throw "stub: getNextStepDailyReward not decompiled";
+    }
 
-  function howManyDaysBeforeDailyRun(): Dynamic {}
+    public function howManyDaysBeforeDailyRun(): Dynamic {
+        throw "stub: howManyDaysBeforeDailyRun not decompiled";
+    }
 
-  function canPlayCustomGame(): Bool {}
+    public function canPlayCustomGame(): Bool {
+        throw "stub: canPlayCustomGame not decompiled";
+    }
 
-  function br_enableOne() {}
+    public function br_enableOne(): Void {
+    }
 
-  function br_disableOne() {}
+    public function br_disableOne(): Void {
+    }
 
-  function br_setActivated(v: Int) {}
+    public function br_setActivated(arg0: Int): Void {
+    }
 
-  function br_hasAny(): Bool {}
+    public function br_hasAny(): Bool {
+        throw "stub: br_hasAny not decompiled";
+    }
 
-  function br_hasAnyActivated(): Bool {}
+    public function br_hasAnyActivated(): Bool {
+        throw "stub: br_hasAnyActivated not decompiled";
+    }
 
-  function br_numGot(): Int {}
+    public function br_numGot(): Int {
+        throw "stub: br_numGot not decompiled";
+    }
 
-  function br_numActivated(): Int {}
+    public function br_numActivated(): Int {
+        throw "stub: br_numActivated not decompiled";
+    }
 
-  function br_getDifficulty(): Int {}
+    public function br_getDifficulty(): Int {
+        throw "stub: br_getDifficulty not decompiled";
+    }
 
-  function br_getDifficultyData(): Dynamic {}
+    public function br_getDifficultyData(): Dynamic {
+        throw "stub: br_getDifficultyData not decompiled";
+    }
 
-  function br_getGoldRatio(): Float {}
+    public function br_getGoldRatio(): Float {
+        throw "stub: br_getGoldRatio not decompiled";
+    }
 
-  function br_getBossExtraLife(): Float {}
+    public function br_getBossExtraLife(): Float {
+        throw "stub: br_getBossExtraLife not decompiled";
+    }
 
-  function br_getEliteExtraLife(): Float {}
+    public function br_getEliteExtraLife(): Float {
+        throw "stub: br_getEliteExtraLife not decompiled";
+    }
 
-  function br_getMaxUpLevelForStartItems(): Int {}
+    public function br_getMaxUpLevelForStartItems(): Int {
+        throw "stub: br_getMaxUpLevelForStartItems not decompiled";
+    }
 
-  function br_getExtraElites(): Int {}
+    public function br_getExtraElites(): Int {
+        throw "stub: br_getExtraElites not decompiled";
+    }
 
-  function br_exitsLocked(): Bool {}
+    public function br_exitsLocked(): Bool {
+        throw "stub: br_exitsLocked not decompiled";
+    }
 
-  function br_getForgeCappedRatio(upLevel: Int): Float {}
+    public function br_getForgeCappedRatio(arg0: Int): Float {
+        throw "stub: br_getForgeCappedRatio not decompiled";
+    }
 
-  function br_hasInfection(): Bool {}
+    public function br_hasInfection(): Bool {
+        throw "stub: br_hasInfection not decompiled";
+    }
 
-  function br_getExtraMobDensity(): Float {}
+    public function br_getExtraMobDensity(): Float {
+        throw "stub: br_getExtraMobDensity not decompiled";
+    }
 
-  function br_getExtraLootLevel(): Int {}
+    public function br_getExtraLootLevel(): Int {
+        throw "stub: br_getExtraLootLevel not decompiled";
+    }
 
-  function br_getCellMultiplier(): Int {}
+    public function br_getCellMultiplier(): Int {
+        throw "stub: br_getCellMultiplier not decompiled";
+    }
 
-  function br_getMaxLevelsWithCursedMobs(): Int {}
+    public function br_getMaxLevelsWithCursedMobs(): Int {
+        throw "stub: br_getMaxLevelsWithCursedMobs not decompiled";
+    }
 
-  function br_hasAggressiveMobs(): Bool {}
+    public function br_hasAggressiveMobs(): Bool {
+        throw "stub: br_hasAggressiveMobs not decompiled";
+    }
 
-  function br_healFountainLockLevel(): Int {}
+    public function br_healFountainLockLevel(): Int {
+        throw "stub: br_healFountainLockLevel not decompiled";
+    }
 
-  function br_hasDifficultyBonus(): Bool {}
+    public function br_hasDifficultyBonus(): Bool {
+        throw "stub: br_hasDifficultyBonus not decompiled";
+    }
 
-  function br_minAmuletLevel(): Dynamic {}
+    public function br_minAmuletLevel(): Dynamic {
+        throw "stub: br_minAmuletLevel not decompiled";
+    }
 
-  function getPokebombBlueprintFor(k: String, invBlueprints: hl.types.ArrayObj<Dynamic>): String {}
+    public function getPokebombBlueprintFor(arg0: String, arg1: Array<Dynamic>): String {
+        throw "stub: getPokebombBlueprintFor not decompiled";
+    }
 
-  function listLootableMonstersOnDifficulty(diff: Int, invBlueprints: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function listLootableMonstersOnDifficulty(arg0: Int, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: listLootableMonstersOnDifficulty not decompiled";
+    }
 
-  function countUnlockedSkin(): Int {}
+    public function countUnlockedSkin(): Int {
+        throw "stub: countUnlockedSkin not decompiled";
+    }
 
-  function newGame(seed: Int, lvl: Dynamic, isTwitch: Bool, isCustom: Bool, mode: Dynamic) {}
+    public function newGame(arg0: Int, arg1: Dynamic, arg2: Bool, arg3: Bool, arg4: LaunchMode): Void {
+    }
 
-  function endMainGame() {}
+    public function endMainGame(): Void {
+    }
 
-  function prepareSave(): Bool {}
+    public function prepareSave(): Bool {
+        throw "stub: prepareSave not decompiled";
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function hasMainGame(): Bool {}
+    public function hasMainGame(): Bool {
+        throw "stub: hasMainGame not decompiled";
+    }
 
-  function activateMainGame() {}
+    public function activateMainGame(): Void {
+    }
 
-  function global_incNpcProgress(npcId: Dynamic) {}
+    public function global_incNpcProgress(arg0: NpcId): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
 
+class MetaProgress {
+    public static var __clid: Int;
+    public var itemId: String;
+    public var investedCells: Int;
+    public var isNew: Bool;
+    public var unlocked: Bool;
+    public var upgradeLevel: Dynamic;
+    public var n: Int;
+    public var done: Bool;
+    public var metaLevel: Int;
+    public var __uid: Int;
+    public var : Dynamic;
+
+    public function new(arg0: String) {
+    }
+
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public function unserializeInit(): Void {
+    }
+
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
+}

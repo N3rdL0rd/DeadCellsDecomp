@@ -1,180 +1,287 @@
 package level;
+
 class LootGen {
-  var user: User;
-  var maps: hl.types.ArrayObj<Dynamic>;
-  var rooms: hl.types.ArrayObj<Dynamic>;
-  var platforms: hl.types.ArrayObj<Dynamic>;
-  var lInfos: Dynamic;
-  var baseSeed: Int;
-  var rseed: libs.Rand.Rand;
-  var tierDistrib: tool.TierDistribution.TierDistribution;
-  var hero: en.Hero.Hero;
-  var itemGen: level.ItemGen.ItemGen;
-  var hasExplorationBonusIncentive: Bool;
-  var brutalityPool: tool.ItemPool.ItemPool;
-  var finessePool: tool.ItemPool.ItemPool;
-  var survivalPool: tool.ItemPool.ItemPool;
-  var activePool: tool.ItemPool.ItemPool;
-  var activeGroups: hl.types.ArrayBytes<Int>;
-  var weaponPool: tool.ItemPool.ItemPool;
-  var weaponGroups: hl.types.ArrayBytes<Int>;
-  var talismanPool: tool.ItemPool.ItemPool;
-  var allGems: libs.Rand.RandList;
-  var allCells: hl.types.ArrayObj<Dynamic>;
-  var regLoots: hl.types.ArrayObj<Dynamic>;
-  var occupiedCells: haxe.ds.ObjectMap;
-  var occupiedRooms: haxe.ds.ObjectMap;
-  var hiddenBlockSpots: hl.types.ArrayObj<Dynamic>;
-  var lootLevel: Int;
-  var mobTier: Int;
-  var shops: hl.types.ArrayObj<Dynamic>;
-  var mobs: hl.types.ArrayObj<Dynamic>;
-  var armory: Bool;
-  var lFlags: Int;
-  var isBank: Bool;
-  var isBankTransition: Bool;
-  var legendItems: libs.Rand.RandList;
-  static var LAST_LOG: hl.types.ArrayObj<Dynamic>;
-  static var trueFoodKinds: hl.types.ArrayObj<Dynamic>;
+    public static var LAST_LOG: Array<Dynamic>;
+    public static var trueFoodKinds: Array<Dynamic>;
+    public var user: User;
+    public var maps: Array<Dynamic>;
+    public var rooms: Array<Dynamic>;
+    public var platforms: Array<Dynamic>;
+    public var lInfos: Dynamic;
+    public var baseSeed: Int;
+    public var rseed: libs.Rand;
+    public var tierDistrib: tool.TierDistribution;
+    public var hero: en.Hero;
+    public var itemGen: level.ItemGen;
+    public var hasExplorationBonusIncentive: Bool;
+    public var brutalityPool: tool.ItemPool;
+    public var finessePool: tool.ItemPool;
+    public var survivalPool: tool.ItemPool;
+    public var activePool: tool.ItemPool;
+    public var activeGroups: Array<Int>;
+    public var weaponPool: tool.ItemPool;
+    public var weaponGroups: Array<Int>;
+    public var talismanPool: tool.ItemPool;
+    public var allGems: libs.RandList;
+    public var allCells: Array<Dynamic>;
+    public var regLoots: Array<Dynamic>;
+    public var occupiedCells: haxe.ds.ObjectMap;
+    public var occupiedRooms: haxe.ds.ObjectMap;
+    public var hiddenBlockSpots: Array<Dynamic>;
+    public var lootLevel: Int;
+    public var mobTier: Int;
+    public var shops: Array<Dynamic>;
+    public var mobs: Array<Dynamic>;
+    public var armory: Bool;
+    public var lFlags: Int;
+    public var isBank: Bool;
+    public var isBankTransition: Bool;
+    public var legendItems: libs.RandList;
+
+    public function new(arg0: User, arg1: Array<Dynamic>, arg2: Int, arg3: tool.TierDistribution, arg4: en.Hero, arg5: Ref, arg6: Ref) {
+    }
+
+    public static function getLargeHealingKind(): String {
+        throw "stub: getLargeHealingKind not decompiled";
+    }
+
+    public static function isDualWeapon(arg0: Dynamic): Bool {
+        throw "stub: isDualWeapon not decompiled";
+    }
+
+    public static function getSmallHealingKind(): String {
+        throw "stub: getSmallHealingKind not decompiled";
+    }
+
+    public function getLevelInfos(): Dynamic {
+        throw "stub: getLevelInfos not decompiled";
+    }
+
+    public function isUnique(arg0: tool.InventItem): Bool {
+        throw "stub: isUnique not decompiled";
+    }
+
+    public function dropInScore(arg0: Dynamic): Bool {
+        throw "stub: dropInScore not decompiled";
+    }
+
+    public function prepareLootGenForBank(): Void {
+    }
+
+    public function initItemPool(arg0: Dynamic, arg1: Ref): tool.ItemPool {
+        throw "stub: initItemPool not decompiled";
+    }
+
+    public function initPools(): Void {
+    }
+
+    public function canPlaceHiddenWallBlock(arg0: level.Platform, arg1: Int): Bool {
+        throw "stub: canPlaceHiddenWallBlock not decompiled";
+    }
+
+    public function initHiddenBlocks(): Void {
+    }
+
+    public function initDoubleUps(): Array<Dynamic> {
+        throw "stub: initDoubleUps not decompiled";
+    }
+
+    public function initUps(): Array<Dynamic> {
+        throw "stub: initUps not decompiled";
+    }
+
+    public function generateEliteLoot(arg0: Array<Dynamic>): Void {
+    }
+
+    public function generateBossLoot(arg0: Dynamic): Void {
+    }
+
+    public function generateLootOnMobs(): Void {
+    }
+
+    public function addBlueprintOnBoss(arg0: Array<Dynamic>): Void {
+    }
+
+    public function addBlueprintOnMobs(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function __constructor__(user: User, maps: hl.types.ArrayObj<Dynamic>, seed: Int, tierDistrib: tool.TierDistribution.TierDistribution, hero: en.Hero.Hero, _hasExplorationBonusIncentive: Dynamic, forceNoGenerate: Dynamic) {}
+    public function pushBlueprintInLists(arg0: Dynamic, arg1: String): Void {
+    }
 
-  static function isDualWeapon(item: Dynamic): Bool {}
+    public function addLevelDesignedLootOnMobs(): Void {
+    }
 
-  static function getLargeHealingKind(): String {}
+    public function generate(): Void {
+    }
 
-  static function getSmallHealingKind(): String {}
+    public function fillRoomLootsWithCursedChestContent(arg0: level.Room): Void {
+    }
 
-  function getLevelInfos(): Dynamic {}
+    public function fillSpecificLoreRoomTemplateWithLoots(arg0: level.Room): Void {
+    }
 
-  function isUnique(i: tool.InventItem.InventItem): Bool {}
+    public function fillMandatoryLootsInLoreRooms(arg0: level.Room): Void {
+    }
 
-  function dropInScore(e: Dynamic): Bool {}
+    public function fillRoomLootsWithTreasureChestContent(arg0: level.Room, arg1: Array<Dynamic>): Void {
+    }
 
-  function prepareLootGenForBank() {}
+    public function upgradeAndRerollItem(arg0: tool.InventItem, arg1: Int, arg2: Ref): Void {
+    }
 
-  function initItemPool(cond: Dynamic, checkCustom: Dynamic): tool.ItemPool.ItemPool {}
+    public function initMoneyDoor(arg0: level.Room, arg1: tool.InventItem, arg2: Float, arg3: Int, arg4: Dynamic): Float {
+        throw "stub: initMoneyDoor not decompiled";
+    }
 
-  function initPools() {}
+    public function getFirstFreeItemDataIn(arg0: level.Room): tool.InventItem {
+        throw "stub: getFirstFreeItemDataIn not decompiled";
+    }
 
-  function canPlaceHiddenWallBlock(pf: level.Platform.Platform, dir: Int): Bool {}
+    public function pickHealing(arg0: Int, arg1: Int, arg2: Bool): tool.InventItem {
+        throw "stub: pickHealing not decompiled";
+    }
 
-  function initHiddenBlocks() {}
+    public function isTrapRoom(arg0: level.LevelMap, arg1: Int, arg2: Int): Bool {
+        throw "stub: isTrapRoom not decompiled";
+    }
 
-  function initDoubleUps(): hl.types.ArrayObj<Dynamic> {}
+    public function getNewRandItemInGroup(arg0: tool.InventItem, arg1: String): tool.InventItem {
+        throw "stub: getNewRandItemInGroup not decompiled";
+    }
 
-  function initUps(): hl.types.ArrayObj<Dynamic> {}
+    public function updateGlassNinjaItem(arg0: tool.InventItem, arg1: String): tool.InventItem {
+        throw "stub: updateGlassNinjaItem not decompiled";
+    }
 
-  function generateEliteLoot(elites: hl.types.ArrayObj<Dynamic>) {}
+    public function customStartEquipment(arg0: String, arg1: Int, arg2: tool.InventItem): tool.InventItem {
+        throw "stub: customStartEquipment not decompiled";
+    }
 
-  function generateBossLoot(boss: Dynamic) {}
+    public function addGoldChestIn(arg0: level.Room, arg1: Int): Bool {
+        throw "stub: addGoldChestIn not decompiled";
+    }
 
-  function generateLootOnMobs() {}
+    public function addItemInHiddenBlockInRoom(arg0: tool.InventItem, arg1: level.Room): Bool {
+        throw "stub: addItemInHiddenBlockInRoom not decompiled";
+    }
 
-  function addBlueprintOnBoss(bosses: hl.types.ArrayObj<Dynamic>) {}
+    public function addItemInHiddenBlock(arg0: tool.InventItem, arg1: Array<Dynamic>): level.Room {
+        throw "stub: addItemInHiddenBlock not decompiled";
+    }
 
-  function addBlueprintOnMobs(mobByKind: Dynamic, canDrop: Dynamic) {}
+    public function addItemInHiddenBlockAt(arg0: level.LevelMap, arg1: tool.InventItem, arg2: Int, arg3: Int): Void {
+    }
 
-  function pushBlueprintInLists(mobEntry: Dynamic, blueprintKind: String) {}
+    public function addBlueprintAt(arg0: level.LevelMap, arg1: Int, arg2: Int, arg3: String, arg4: Bool, arg5: Bool): Void {
+    }
 
-  function addLevelDesignedLootOnMobs() {}
+    public function hasItemAt(arg0: level.Room, arg1: Int, arg2: Int): Bool {
+        throw "stub: hasItemAt not decompiled";
+    }
 
-  function generate() {}
+    public function addFreeItemAt(arg0: level.Room, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: Dynamic): Void {
+    }
 
-  function fillRoomLootsWithCursedChestContent(room: level.Room.Room) {}
+    public function addFreeItemIn(arg0: level.Room, arg1: tool.InventItem): Bool {
+        throw "stub: addFreeItemIn not decompiled";
+    }
 
-  function fillSpecificLoreRoomTemplateWithLoots(room: level.Room.Room) {}
+    public function pickLootPointIn(arg0: level.Room): tool.CPoint {
+        throw "stub: pickLootPointIn not decompiled";
+    }
 
-  function fillMandatoryLootsInLoreRooms(room: level.Room.Room) {}
+    public function _registerCells(arg0: Dynamic, arg1: String): Void {
+    }
 
-  function fillRoomLootsWithTreasureChestContent(room: level.Room.Room, bonusItems: hl.types.ArrayObj<Dynamic>) {}
+    public function finalizeLegendaryItem(arg0: tool.InventItem, arg1: Dynamic, arg2: Ref, arg3: level.Room, arg4: Array<Dynamic>): tool.InventItem {
+        throw "stub: finalizeLegendaryItem not decompiled";
+    }
 
-  function upgradeAndRerollItem(i: tool.InventItem.InventItem, upLevel: Int, upgradePaired: Dynamic) {}
+    public function finalizeItem(arg0: tool.InventItem, arg1: Dynamic, arg2: Ref, arg3: level.Room, arg4: Array<Dynamic>): tool.InventItem {
+        throw "stub: finalizeItem not decompiled";
+    }
 
-  function initMoneyDoor(r: level.Room.Room, i: tool.InventItem.InventItem, gold: Float, curse: Int, compensate: Dynamic): Float {}
+    public function pickAny(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): tool.InventItem {
+        throw "stub: pickAny not decompiled";
+    }
 
-  function getFirstFreeItemDataIn(r: level.Room.Room): tool.InventItem.InventItem {}
+    public function createGemPack(arg0: Int, arg1: Int): Dynamic {
+        throw "stub: createGemPack not decompiled";
+    }
 
-  function pickHealing(chanceSmall: Int, chanceLarge: Int, canBeInfected: Bool): tool.InventItem.InventItem {}
+    public function _pickGemForPack(arg0: Int): tool.InventItem {
+        throw "stub: _pickGemForPack not decompiled";
+    }
 
-  function isTrapRoom(map: level.LevelMap.LevelMap, cx: Int, cy: Int): Bool {}
+    public function randomSpread(arg0: Int, arg1: Int, arg2: libs.Rand): Array<Int> {
+        throw "stub: randomSpread not decompiled";
+    }
 
-  function getNewRandItemInGroup(prevIi: tool.InventItem.InventItem, mainTier: String): tool.InventItem.InventItem {}
+    public function initAllGems(): Void {
+    }
 
-  function updateGlassNinjaItem(prevIi: tool.InventItem.InventItem, mainTier: String): tool.InventItem.InventItem {}
+    public function addGemToMob(arg0: Dynamic, arg1: String): tool.InventItem {
+        throw "stub: addGemToMob not decompiled";
+    }
 
-  function customStartEquipment(id: String, upLevel: Int, dualWeaponBase: tool.InventItem.InventItem): tool.InventItem.InventItem {}
+    public function specificGemOnMobs(): Int {
+        throw "stub: specificGemOnMobs not decompiled";
+    }
 
-  function addGoldChestIn(r: level.Room.Room, gold: Int): Bool {}
+    public function randomGemOnMobs(): Int {
+        throw "stub: randomGemOnMobs not decompiled";
+    }
 
-  function addItemInHiddenBlockInRoom(i: tool.InventItem.InventItem, r: level.Room.Room): Bool {}
+    public function rareCursedGemOnMobs(): Void {
+    }
 
-  function addItemInHiddenBlock(i: tool.InventItem.InventItem, filteredSpots: hl.types.ArrayObj<Dynamic>): level.Room.Room {}
+    public function addLegendaryGems(): Void {
+    }
 
-  function addItemInHiddenBlockAt(map: level.LevelMap.LevelMap, i: tool.InventItem.InventItem, cx: Int, cy: Int) {}
+    public function generateMoneyDoor(): Float {
+        throw "stub: generateMoneyDoor not decompiled";
+    }
 
-  function addBlueprintAt(map: level.LevelMap.LevelMap, cx: Int, cy: Int, k: String, freeItemAsAlt: Bool, noAlt: Bool) {}
+    public function getMinimumGoldAmount(): Int {
+        throw "stub: getMinimumGoldAmount not decompiled";
+    }
 
-  function hasItemAt(r: level.Room.Room, ccx: Int, ccy: Int): Bool {}
+    public function getLDPlacedGemsValue(): Int {
+        throw "stub: getLDPlacedGemsValue not decompiled";
+    }
 
-  function addFreeItemAt(r: level.Room.Room, cx: Int, cy: Int, i: tool.InventItem.InventItem, onAltar: Dynamic) {}
+    public function generateHiddenGems(arg0: String): Void {
+    }
 
-  function addFreeItemIn(r: level.Room.Room, i: tool.InventItem.InventItem): Bool {}
+    public function initBossLevelGold(): Void {
+    }
 
-  function pickLootPointIn(r: level.Room.Room): tool.CPoint.CPoint {}
+    public function initGold(arg0: Array<Dynamic>): Void {
+    }
 
-  function _registerCells(n: Dynamic, source: String) {}
+    public function initLegendayPool(): Void {
+    }
 
-  function finalizeLegendaryItem(i: tool.InventItem.InventItem, iLevelBonus: Dynamic, overrideBaseLevel: Dynamic, r: level.Room.Room, tags: hl.types.ArrayObj<Dynamic>): tool.InventItem.InventItem {}
+    public function createLegendaryItem(arg0: Dynamic): tool.InventItem {
+        throw "stub: createLegendaryItem not decompiled";
+    }
 
-  function finalizeItem(i: tool.InventItem.InventItem, iLevelBonus: Dynamic, overrideBaseLevel: Dynamic, r: level.Room.Room, tags: hl.types.ArrayObj<Dynamic>): tool.InventItem.InventItem {}
+    public function generateLegendaries(): Void {
+    }
 
-  function pickAny(weaponWeight: Int, activeWeight: Int, armorWeight: Int, noFilterFunc: Dynamic): tool.InventItem.InventItem {}
+    public function _addToShop(arg0: Array<Dynamic>, arg1: tool.InventItem, arg2: String, arg3: Dynamic): Void {
+    }
 
-  function createGemPack(maxValue: Int, maxSlots: Int): Dynamic {}
+    public function makeGearShop(arg0: tool.ItemPool, arg1: Bool, arg2: Int, arg3: Array<Dynamic>, arg4: Array<Int>): Void {
+    }
 
-  function _pickGemForPack(maxValue: Int): tool.InventItem.InventItem {}
+    public function getRandomItemFromGroups(arg0: tool.ItemPool, arg1: Array<Int>, arg2: Int, arg3: Array<Dynamic>, arg4: String): tool.InventItem {
+        throw "stub: getRandomItemFromGroups not decompiled";
+    }
 
-  function randomSpread(total: Int, nbStacks: Int, rseed: libs.Rand.Rand): hl.types.ArrayBytes<Int> {}
+    public function makeKitchenShop(arg0: Array<Dynamic>): Void {
+    }
 
-  function initAllGems() {}
-
-  function addGemToMob(mob: Dynamic, kind: String): tool.InventItem.InventItem {}
-
-  function specificGemOnMobs(): Int {}
-
-  function randomGemOnMobs(): Int {}
-
-  function rareCursedGemOnMobs() {}
-
-  function addLegendaryGems() {}
-
-  function generateMoneyDoor(): Float {}
-
-  function getMinimumGoldAmount(): Int {}
-
-  function getLDPlacedGemsValue(): Int {}
-
-  function generateHiddenGems(gemType: String) {}
-
-  function initBossLevelGold() {}
-
-  function initGold(lootRooms: hl.types.ArrayObj<Dynamic>) {}
-
-  function initLegendayPool() {}
-
-  function createLegendaryItem(levelBonus: Dynamic): tool.InventItem.InventItem {}
-
-  function generateLegendaries() {}
-
-  function _addToShop(shopItems: hl.types.ArrayObj<Dynamic>, item: tool.InventItem.InventItem, cat: String, oldCat: Dynamic) {}
-
-  function makeGearShop(pool: tool.ItemPool.ItemPool, hasCats: Bool, rerolls: Int, shopItems: hl.types.ArrayObj<Dynamic>, itemGroups: hl.types.ArrayBytes<Int>) {}
-
-  function getRandomItemFromGroups(pool: tool.ItemPool.ItemPool, groups: hl.types.ArrayBytes<Int>, maxItemsCount: Int, drawnItems: hl.types.ArrayObj<Dynamic>, tier: String): tool.InventItem.InventItem {}
-
-  function makeKitchenShop(shopItems: hl.types.ArrayObj<Dynamic>) {}
-
-  function finalizeShop(type: Dynamic, mItems: hl.types.ArrayObj<Dynamic>, room: level.Room.Room, isMimic: Dynamic) {}
+    public function finalizeShop(arg0: level.MerchantType, arg1: Array<Dynamic>, arg2: level.Room, arg3: Ref): Void {
+    }
 }
-

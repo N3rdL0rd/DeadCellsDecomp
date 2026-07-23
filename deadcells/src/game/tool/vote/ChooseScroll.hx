@@ -1,18 +1,26 @@
 package tool.vote;
+
 class ChooseScroll extends tool.TwitchVote {
-  var brut: Bool;
-  var tact: Bool;
-  var surv: Bool;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var brut: Bool;
+    public var tact: Bool;
+    public var surv: Bool;
 
-  function __constructor__(brut: Bool, tact: Bool, surv: Bool) {}
+    public function new(arg0: Bool, arg1: Bool, arg2: Bool) {
+        super();
+    }
 
-  function onDelayedVoteInit() {}
+    public override function onDelayedVoteInit(): Void {
+    }
 
-  function isSuspended(): Bool {}
+    public override function isSuspended(): Bool {
+        throw "stub: isSuspended not decompiled";
+    }
 
-  function onExpire() {}
+    public override function onExpire(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

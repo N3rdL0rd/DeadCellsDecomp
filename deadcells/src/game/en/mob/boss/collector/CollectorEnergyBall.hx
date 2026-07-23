@@ -1,33 +1,49 @@
 package en.mob.boss.collector;
+
 class CollectorEnergyBall extends Entity {
-  var coll: en.mob.boss.Collector.Collector;
-  var inf: Dynamic;
-  var inWall: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var coll: en.mob.boss.Collector;
+    public var inf: Dynamic;
+    public var inWall: Bool;
 
-  function __constructor__(coll: en.mob.boss.Collector.Collector, cx: Int, cy: Int) {}
+    public function new(arg0: en.mob.boss.Collector, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function launchTo(e: Entity) {}
+    public function launchTo(arg0: Entity): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function kill() {}
+    public override function kill(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

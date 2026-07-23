@@ -1,94 +1,146 @@
 package en.mob;
+
 class Pitcher extends en.Mob {
-  var ang: Float;
-  var dis: Float;
-  var tHardy: en.mob.ThrowableMushroom.ThrowableMushroom;
-  var throwRockAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var throwHardyAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var grabHardyAtk: tool.skill.OldMobSkill.OldMobSkill;
-  var lastThrownDir: Int;
-  var px: Float;
-  var py: Float;
-  var hardyShield: libs.heaps.slib.HSprite.HSprite;
-  var rockSprite: libs.heaps.slib.HSprite.HSprite;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var ang: Float;
+    public var dis: Float;
+    public var tHardy: en.mob.ThrowableMushroom;
+    public var throwRockAtk: tool.skill.OldMobSkill;
+    public var throwHardyAtk: tool.skill.OldMobSkill;
+    public var grabHardyAtk: tool.skill.OldMobSkill;
+    public var lastThrownDir: Int;
+    public var px: Float;
+    public var py: Float;
+    public var hardyShield: libs.heaps.slib.HSprite;
+    public var rockSprite: libs.heaps.slib.HSprite;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Pitcher {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Pitcher {
+        throw "stub: create not decompiled";
+    }
 
-  function get_handTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_handTracks(): Array<Int> {
+        throw "stub: get_handTracks not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function getSpikedSatyrNearby(pt: tool.CPoint.CPoint): en.mob.SpikedSatyr.SpikedSatyr {}
+    public function getSpikedSatyrNearby(arg0: tool.CPoint): en.mob.SpikedSatyr {
+        throw "stub: getSpikedSatyrNearby not decompiled";
+    }
 
-  function chooseThrowingSpot(): tool.CPoint.CPoint {}
+    public function chooseThrowingSpot(): tool.CPoint {
+        throw "stub: chooseThrowingSpot not decompiled";
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function updateHardyLaunch(forced: Dynamic) {}
+    public function updateHardyLaunch(arg0: Ref): Void {
+    }
 
-  function updateRockLaunch(forced: Dynamic) {}
+    public function updateRockLaunch(arg0: Ref): Void {
+    }
 
-  function updateHandSprite(handSprite: libs.heaps.slib.HSprite.HSprite) {}
+    public function updateHandSprite(arg0: libs.heaps.slib.HSprite): Void {
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class NunchuckPitcher extends en.mob.Pitcher {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): NunchuckPitcher {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.NunchuckPitcher {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function spriteUpdate() {}
+    public function spriteUpdate(): Void {
+    }
 
-  function forceReveal() {}
+    public function forceReveal(): Void {
+    }
 
-  function reveal() {}
+    public function reveal(): Void {
+    }
 
-  function canBeRevealedBy(h: en.Hero.Hero): Bool {}
+    public function canBeRevealedBy(arg0: en.Hero): Bool {
+        throw "stub: canBeRevealedBy not decompiled";
+    }
 
-  function hide(revealDurationS: Float) {}
+    public function hide(arg0: Float): Void {
+    }
 
-  function onCineEnd() {}
+    public function onCineEnd(): Void {
+    }
 
-  function dropLoot() {}
+    public function dropLoot(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

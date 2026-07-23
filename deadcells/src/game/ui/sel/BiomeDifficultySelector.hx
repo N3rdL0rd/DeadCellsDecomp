@@ -1,20 +1,28 @@
 package ui.sel;
+
 class BiomeDifficultySelector extends ui.sel.BiomeSelector {
-  var depthText: ui.Text.Text;
-  var difficultyText: ui.Text.Text;
-  var recommendedScrollsText: ui.Text.Text;
-  var gearLevelText: ui.Text.Text;
+    public var depthText: ui.Text;
+    public var difficultyText: ui.Text;
+    public var recommendedScrollsText: ui.Text;
+    public var gearLevelText: ui.Text;
 
-  function __constructor__(groups: hl.types.ArrayBytes<Int>, validateCb: Dynamic, preSelectedBiome: String) {}
+    public function new(arg0: Array<Int>, arg1: Dynamic, arg2: String) {
+        super();
+    }
 
-  function initGrid() {}
+    public override function initGrid(): Void {
+    }
 
-  function initRightFlow() {}
+    public override function initRightFlow(): Void {
+    }
 
-  function updateRightFlow() {}
+    public override function updateRightFlow(): Void {
+    }
 
-  function updateTextsPosition(resize: Dynamic) {}
+    public override function updateTextsPosition(arg0: Ref): Void {
+    }
 
-  function getTitleText(): String {}
+    public override function getTitleText(): String {
+        throw "stub: getTitleText not decompiled";
+    }
 }
-

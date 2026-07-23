@@ -1,103 +1,152 @@
 package en.inter;
+
 class Door extends en.Interactive {
-  var face: libs.heaps.slib.HSprite.HSprite;
-  var side: libs.heaps.slib.HSprite.HSprite;
-  var closedSideId: String;
-  var openSideId: String;
-  var hinge: libs.heaps.slib.HSprite.HSprite;
-  var occlusion: libs.heaps.slib.HSprite.HSprite;
-  var sideWid: Int;
-  var darkColorsApplied: Bool;
-  var gradient: libs.heaps.slib.HSprite.HSprite;
-  var fxOpenFactor: Float;
-  var openFactor: Float;
-  var _breakable: Bool;
-  var broken: Bool;
-  var lastHitDir: Int;
-  var locked: Bool;
-  var autoClose: Bool;
-  var _closed: Bool;
-  var lightSegment: light.Visibility.Visibility;
-  var openSfx: hxd.res.Sound.Sound;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var face: libs.heaps.slib.HSprite;
+    public var side: libs.heaps.slib.HSprite;
+    public var closedSideId: String;
+    public var openSideId: String;
+    public var hinge: libs.heaps.slib.HSprite;
+    public var occlusion: libs.heaps.slib.HSprite;
+    public var sideWid: Int;
+    public var darkColorsApplied: Bool;
+    public var gradient: libs.heaps.slib.HSprite;
+    public var fxOpenFactor: Float;
+    public var openFactor: Float;
+    public var _breakable: Bool;
+    public var broken: Bool;
+    public var lastHitDir: Int;
+    public var locked: Bool;
+    public var autoClose: Bool;
+    public var _closed: Bool;
+    public var lightSegment: light.Wall;
+    public var openSfx: hxd.res.Sound;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function applyPermanentlyOpen() {}
+    public function applyPermanentlyOpen(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function set_closed(b: Bool): Bool {}
+    public function set_closed(arg0: Bool): Bool {
+        throw "stub: set_closed not decompiled";
+    }
 
-  function set_breakable(b: Bool): Bool {}
+    public function set_breakable(arg0: Bool): Bool {
+        throw "stub: set_breakable not decompiled";
+    }
 
-  function colorize(c: Int, ratio: Dynamic) {}
+    public function colorize(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function uncolorize() {}
+    public function uncolorize(): Void {
+    }
 
-  function updateDoorSkin() {}
+    public function updateDoorSkin(): Void {
+    }
 
-  function getLevelAtlas(tileId: String): libs.heaps.slib.SpriteLib.SpriteLib {}
+    public function getLevelAtlas(arg0: String): libs.heaps.slib.SpriteLib {
+        throw "stub: getLevelAtlas not decompiled";
+    }
 
-  function initDoorSkin(faceId: String, sideId: String, hingeId: String, gradientId: String, sideWid: Dynamic, lib: libs.heaps.slib.SpriteLib.SpriteLib) {}
+    public function initDoorSkin(arg0: String, arg1: String, arg2: String, arg3: String, arg4: Dynamic, arg5: libs.heaps.slib.SpriteLib): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function open(openDir: Int, durationMs: Dynamic, finalRatio: Dynamic) {}
+    public function open(arg0: Int, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function close(delayMs: Dynamic) {}
+    public function close(arg0: Ref): Void {
+    }
 
-  function bumpOutOfTheDoor(all: hl.types.ArrayObj<Dynamic>) {}
+    public function bumpOutOfTheDoor(arg0: Array<Dynamic>): Void {
+    }
 
-  function openWithAKick(by: en.Hero.Hero) {}
+    public function openWithAKick(arg0: en.Hero): Void {
+    }
 
-  function openFast(dir: Int, finalFactor: Dynamic) {}
+    public function openFast(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function closeFast(cb: Dynamic) {}
+    public function closeFast(arg0: Dynamic): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function doorExplosionFx() {}
+    public function doorExplosionFx(): Void {
+    }
 
-  function onDie() {}
+    public function onDie(): Void {
+    }
 
-  function updateLightBlocking() {}
+    public function updateLightBlocking(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function tryToUnlock(by: en.Hero.Hero): Bool {}
+    public function tryToUnlock(arg0: en.Hero): Bool {
+        throw "stub: tryToUnlock not decompiled";
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function applyCollisions() {}
+    public function applyCollisions(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

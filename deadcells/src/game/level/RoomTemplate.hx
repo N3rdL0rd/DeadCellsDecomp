@@ -1,62 +1,99 @@
 package level;
-class RoomTemplate {
-  var dat: Dynamic;
-  var name: String;
-  var wid: Int;
-  var hei: Int;
-  var cols: hl.types.ArrayObj<Dynamic>;
-  var links: hl.types.ArrayObj<Dynamic>;
-  var markers: hl.types.ArrayObj<Dynamic>;
-  var rndBlocks: hl.types.ArrayObj<Dynamic>;
-  var mobs: hl.types.ArrayObj<Dynamic>;
-  var flip: Bool;
-  var rects: hl.types.ArrayObj<Dynamic>;
-  var possibleExits: Int;
-  static var ALL: hl.types.ArrayObj<Dynamic>;
-  static var MAX_COL_CELL_ID: Int;
 
-  static function getMap(all: hl.types.ArrayObj<Dynamic>): Dynamic {}
+class RndBlock {
+    public var type: level.RndBlockType;
+    public var cells: Array<Dynamic>;
 
-  static function getCellType(v: Int): Dynamic {}
-
-  static function getTemplate(dat: Dynamic, flip: Dynamic, flipLink: Dynamic): RoomTemplate {}
-
-  static function parseAll(ltick: Dynamic): hl.types.ArrayObj<Dynamic> {}
-
-  function __constructor__(dat: Dynamic, flip: Dynamic, flipLink: Dynamic) {}
-
-  function addHLinks(ti: Int, dir: Int, grid: hl.types.ArrayBytes<Int>, tmpGrid: hl.types.ArrayObj<Dynamic>) {}
-
-  function addVLinks(ti: Int, dir: Int, grid: hl.types.ArrayBytes<Int>, tmpGrid: hl.types.ArrayObj<Dynamic>) {}
-
-  function addRndBlocks(ti: Int, type: Dynamic, grid: hl.types.ArrayBytes<Int>, tmpGrid: hl.types.ArrayObj<Dynamic>) {}
-
-  function getGroups(ti: Int, grid: hl.types.ArrayBytes<Int>, tmpGrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
-
-  function hasLinks(nentries: Int, nexits: Int): Bool {}
-
-  function getExitLinkCombos(nexits: Int, filter: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
-
-  function getVariant(rnd: libs.Rand.Rand): hl.types.ArrayObj<Dynamic> {}
-
-  function hasLinkAt(cx: Int, cy: Int): Bool {}
-
-  function hasZDoors(links: hl.types.ArrayObj<Dynamic>): Bool {}
+    public function new() {
+    }
 }
 
 class RoomTemplateLink {
-  var doorX: Int;
-  var doorY: Int;
-  var size: Int;
-  var vert: Bool;
-  var type: Dynamic;
-  var dir: Dynamic;
-  var cells: hl.types.ArrayObj<Dynamic>;
+    public var doorX: Int;
+    public var doorY: Int;
+    public var size: Int;
+    public var vert: Bool;
+    public var type: level.RoomLinkType;
+    public var dir: level.LinkDirection;
+    public var cells: Array<Dynamic>;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
 
+class RoomTemplate {
+    public static var ALL: Array<Dynamic>;
+    public static var MAX_COL_CELL_ID: Int;
+    public var dat: Dynamic;
+    public var name: String;
+    public var wid: Int;
+    public var hei: Int;
+    public var cols: Array<Dynamic>;
+    public var links: Array<Dynamic>;
+    public var markers: Array<Dynamic>;
+    public var rndBlocks: Array<Dynamic>;
+    public var mobs: Array<Dynamic>;
+    public var flip: Bool;
+    public var rects: Array<Dynamic>;
+    public var possibleExits: Int;
+
+    public function new(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic) {
+    }
+
+    public static function getCellType(arg0: Int): level.ColType {
+        throw "stub: getCellType not decompiled";
+    }
+
+    public static function getTemplate(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic): level.RoomTemplate {
+        throw "stub: getTemplate not decompiled";
+    }
+
+    public static function getMap(arg0: Array<Dynamic>): Dynamic {
+        throw "stub: getMap not decompiled";
+    }
+
+    public static function parseAll(arg0: Dynamic): Array<Dynamic> {
+        throw "stub: parseAll not decompiled";
+    }
+
+    public function addHLinks(arg0: Int, arg1: Int, arg2: Array<Int>, arg3: Array<Dynamic>): Void {
+    }
+
+    public function addVLinks(arg0: Int, arg1: Int, arg2: Array<Int>, arg3: Array<Dynamic>): Void {
+    }
+
+    public function addRndBlocks(arg0: Int, arg1: level.RndBlockType, arg2: Array<Int>, arg3: Array<Dynamic>): Void {
+    }
+
+    public function getGroups(arg0: Int, arg1: Array<Int>, arg2: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: getGroups not decompiled";
+    }
+
+    public function hasLinks(arg0: Int, arg1: Int): Bool {
+        throw "stub: hasLinks not decompiled";
+    }
+
+    public function getExitLinkCombos(arg0: Int, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: getExitLinkCombos not decompiled";
+    }
+
+    public function getVariant(arg0: libs.Rand): Array<Dynamic> {
+        throw "stub: getVariant not decompiled";
+    }
+
+    public function hasLinkAt(arg0: Int, arg1: Int): Bool {
+        throw "stub: hasLinkAt not decompiled";
+    }
+
+    public function hasZDoors(arg0: Array<Dynamic>): Bool {
+        throw "stub: hasZDoors not decompiled";
+    }
+}

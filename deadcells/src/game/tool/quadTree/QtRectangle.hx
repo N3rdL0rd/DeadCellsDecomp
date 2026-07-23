@@ -1,14 +1,19 @@
 package tool.quadTree;
+
 class QtRectangle {
-  var x: Int;
-  var y: Int;
-  var w: Int;
-  var h: Int;
+    public var x: Int;
+    public var y: Int;
+    public var w: Int;
+    public var h: Int;
 
-  function __constructor__(x: Int, y: Int, w: Int, h: Int) {}
+    public function new(arg0: Int, arg1: Int, arg2: Int, arg3: Int) {
+    }
 
-  function contains(point: Dynamic): Bool {}
+    public function contains(arg0: tool.quadTree.QtPoint): Bool {
+        throw "stub: contains not decompiled";
+    }
 
-  function intersects(range: QtRectangle): Bool {}
+    public function intersects(arg0: tool.quadTree.QtRectangle): Bool {
+        throw "stub: intersects not decompiled";
+    }
 }
-

@@ -1,15 +1,20 @@
-# Misc
---cmd haxelib --always git castle https://github.com/deepnight/castle.git
---cmd haxelib --always git hscript https://github.com/HaxeFoundation/hscript.git
+# Motion Twin forks - these are the actual libraries Dead Cells was built
+# against (see docs/oss_match_report.md). Prefer these over generic upstream.
+--cmd haxelib --always git heaps https://github.com/motion-twin/heaps.git dc_v10
+--cmd haxelib --always git castle https://github.com/motion-twin/castle.git
+--cmd haxelib --always git hscript https://github.com/motion-twin/hscript.git
+--cmd haxelib --always git hxbit https://github.com/motion-twin/hxbit.git
+--cmd haxelib --always git format https://github.com/motion-twin/format.git
+--cmd haxelib --always git hlsteam https://github.com/motion-twin/hlsteam.git
+--cmd haxelib --always git hlchroma https://github.com/motion-twin/hlchroma.git
 
 # Aseprite
 --cmd haxelib --always install ase
 --cmd haxelib --always git heaps-aseprite https://github.com/deepnight/heaps-aseprite.git
 
-# Heaps
+# Heaps platform backends (generic upstream, no motion-twin fork found)
 --cmd haxelib --always git hlsdl https://github.com/HaxeFoundation/hashlink.git master libs/sdl
 --cmd haxelib --always git hldx https://github.com/HaxeFoundation/hashlink.git master libs/directx
---cmd haxelib --always git heaps https://github.com/deepnight/heaps.git
 
 # Deepnight
 --cmd haxelib --always install redistHelper

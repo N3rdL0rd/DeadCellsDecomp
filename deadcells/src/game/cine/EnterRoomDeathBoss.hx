@@ -1,8 +1,10 @@
 package cine;
+
 class EnterRoomDeathBoss extends GameCinematic {
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function __constructor__(hero: en.Hero.Hero) {}
-
-  function triggerEliteScoring() {}
+    public function triggerEliteScoring(): Void {
+    }
 }
-

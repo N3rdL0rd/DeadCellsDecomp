@@ -1,55 +1,82 @@
 package en.inter;
+
 class VineLadder extends en.Interactive {
-  var used: Bool;
-  var parts: hl.types.ArrayObj<Dynamic>;
-  var ladderHei: Int;
-  var distort: Float;
-  var color: Int;
-  var goingUp: Bool;
-  var triggerSpot: tool.CPoint.CPoint;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var used: Bool;
+    public var parts: Array<Dynamic>;
+    public var ladderHei: Int;
+    public var distort: Float;
+    public var color: Int;
+    public var goingUp: Bool;
+    public var triggerSpot: tool.CPoint;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, goUp: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function _isOutOfGame(): Bool {}
+    public function _isOutOfGame(): Bool {
+        throw "stub: _isOutOfGame not decompiled";
+    }
 
-  function minimapTracking() {}
+    public function minimapTracking(): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function activate() {}
+    public function activate(): Void {
+    }
 
-  function buildLadder() {}
+    public function buildLadder(): Void {
+    }
 
-  function renderLadder() {}
+    public function renderLadder(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

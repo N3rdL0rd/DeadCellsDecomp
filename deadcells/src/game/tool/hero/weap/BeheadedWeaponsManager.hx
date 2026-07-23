@@ -1,55 +1,81 @@
 package tool.hero.weap;
+
 class BeheadedWeaponsManager extends tool.hero.HeroWeaponsManager {
-  var heldChargeBackpackWeapon: tool.Weapon.Weapon;
-  var backpackRollParryArea: tool.Area.Area;
-  var backpackRollAttackArea: tool.Area.Area;
-  var bulletsFired: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var heldChargeBackpackWeapon: tool.Weapon;
+    public var backpackRollParryArea: tool.Area;
+    public var backpackRollAttackArea: tool.Area;
+    public var bulletsFired: Array<Dynamic>;
 
-  function __constructor__(h: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initWeapons() {}
+    public function initWeapons(): Void {
+    }
 
-  function getWeaponDamageMultiplier(weapon: tool.Weapon.Weapon): Float {}
+    public override function getWeaponDamageMultiplier(arg0: tool.Weapon): Float {
+        throw "stub: getWeaponDamageMultiplier not decompiled";
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function onEquippedItemsUpdated(duringHeroInit: Dynamic) {}
+    public override function onEquippedItemsUpdated(arg0: Ref): Void {
+    }
 
-  function onDropAndUpdateItem(item: tool.InventItem.InventItem) {}
+    public override function onDropAndUpdateItem(arg0: tool.InventItem): Void {
+    }
 
-  function onMobDeath(mob: en.Mob.Mob) {}
+    public override function onMobDeath(arg0: en.Mob): Void {
+    }
 
-  function onWeaponExecute(weapon: tool.Weapon.Weapon) {}
+    public override function onWeaponExecute(arg0: tool.Weapon): Void {
+    }
 
-  function startBackpackEffects(duration: Float) {}
+    public override function startBackpackEffects(arg0: Float): Void {
+    }
 
-  function updateBackpackEffects() {}
+    public function updateBackpackEffects(): Void {
+    }
 
-  function fireBackpackWeapon() {}
+    public function fireBackpackWeapon(): Void {
+    }
 
-  function backpackDoAreaEffect(area: tool.Area.Area) {}
+    public function backpackDoAreaEffect(arg0: tool.Area): Void {
+    }
 
-  function backpackParryInArea(area: tool.Area.Area, fullParry: Bool) {}
+    public function backpackParryInArea(arg0: tool.Area, arg1: Bool): Void {
+    }
 
-  function applyBackpackMeleeEffect() {}
+    public function applyBackpackMeleeEffect(): Void {
+    }
 
-  function backpackHit(e: Entity) {}
+    public function backpackHit(arg0: Entity): Void {
+    }
 
-  function onOwnerCooldownEnd(k: String, subIndex: Int) {}
+    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onWeaponUse(w: tool.Weapon.Weapon, slot: Int) {}
+    public override function onWeaponUse(arg0: tool.Weapon, arg1: Int): Void {
+    }
 
-  function updateTutorials() {}
+    public override function updateTutorials(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

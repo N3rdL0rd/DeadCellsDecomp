@@ -1,60 +1,93 @@
 package en.mob.boss.giant;
+
 class Eye extends en.Mob {
-  var giant: en.mob.boss.Giant.Giant;
-  var poppedOut: Bool;
-  var stableTime: Float;
-  var poppingIn: Bool;
-  var right: Bool;
-  var levelUpSteps: hl.types.ArrayObj<Dynamic>;
-  var nerve: libs.heaps.slib.HSprite.HSprite;
-  var dropAmmoOnNextUpdate: Bool;
-  var vx: Dynamic;
-  var vy: Dynamic;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var giant: en.mob.boss.Giant;
+    public var poppedOut: Bool;
+    public var stableTime: Float;
+    public var poppingIn: Bool;
+    public var right: Bool;
+    public var levelUpSteps: Array<Dynamic>;
+    public var nerve: libs.heaps.slib.HSprite;
+    public var dropAmmoOnNextUpdate: Bool;
+    public var vx: tool.Ref;
+    public var vy: tool.Ref;
 
-  static function create(giant: en.mob.boss.Giant.Giant, damageTier: Int, lifeTier: Int): Eye {}
+    public function new(arg0: en.mob.boss.Giant, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function __constructor__(giant: en.mob.boss.Giant.Giant, damageTier: Int, lifeTier: Int) {}
+    public static function create(arg0: en.mob.boss.Giant, arg1: Int, arg2: Int): en.mob.boss.giant.Eye {
+        throw "stub: create not decompiled";
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function updateScale() {}
+    public function updateScale(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function getMobSprites(): hl.types.ArrayObj<Dynamic> {}
+    public override function getMobSprites(): Array<Dynamic> {
+        throw "stub: getMobSprites not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function canReceiveAttack(a: tool.atk.AttackData.AttackData): Bool {}
+    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+        throw "stub: canReceiveAttack not decompiled";
+    }
 
-  function canBeHitBy(a: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function onLeaveMap() {}
+    public function onLeaveMap(): Void {
+    }
 
-  function popOut(right: Bool) {}
+    public function popOut(arg0: Bool): Void {
+    }
 
-  function popIn() {}
+    public function popIn(): Void {
+    }
 
-  function canBeGrabbedByHomunculus(): Bool {}
+    public override function canBeGrabbedByHomunculus(): Bool {
+        throw "stub: canBeGrabbedByHomunculus not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function smoothMove(px: Float, py: Float, time: Float): Bool {}
+    public function smoothMove(arg0: Float, arg1: Float, arg2: Float): Bool {
+        throw "stub: smoothMove not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

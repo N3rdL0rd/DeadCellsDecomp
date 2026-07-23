@@ -1,33 +1,40 @@
 package ui;
+
 class ReplaceSingleItem extends ui.Process {
-  var controller: tool.Controller.Controller;
-  var wrapper: h2d.Layers.Layers;
-  var fb: ui.FlowBox.FlowBox;
-  var selection: h2d.ScaleGrid.ScaleGrid;
-  var source: Entity;
-  var item: tool.InventItem.InventItem;
-  var oldItem: tool.InventItem.InventItem;
-  var endCb: Dynamic;
-  var isBackpack: Bool;
-  var niDesc: ui.NewItemDesc.NewItemDesc;
-  var oiDesc: ui.NewItemDesc.NewItemDesc;
-  var backPackSprite: h2d.Bitmap.Bitmap;
-  var line: libs.heaps.slib.HSprite.HSprite;
-  var redCross: libs.heaps.slib.HSprite.HSprite;
-  var arrowLeft: libs.heaps.slib.HSprite.HSprite;
-  var showUIonDispose: Bool;
-  static var tArrow: Float;
+    public static var tArrow: Float;
+    public var controller: tool.ControllerAccess;
+    public var wrapper: h2d.Layers;
+    public var fb: ui.FlowBox;
+    public var selection: h2d.ScaleGrid;
+    public var source: Entity;
+    public var item: tool.InventItem;
+    public var oldItem: tool.InventItem;
+    public var endCb: Dynamic;
+    public var isBackpack: Bool;
+    public var niDesc: ui.NewItemDesc;
+    public var oiDesc: ui.NewItemDesc;
+    public var backPackSprite: h2d.Bitmap;
+    public var line: libs.heaps.slib.HSprite;
+    public var redCross: libs.heaps.slib.HSprite;
+    public var arrowLeft: libs.heaps.slib.HSprite;
+    public var showUIonDispose: Bool;
 
-  function __constructor__(source: Entity, newItem: tool.InventItem.InventItem, oldItem: tool.InventItem.InventItem, cb: Dynamic, isBackpack: Dynamic) {}
+    public function new(arg0: Entity, arg1: tool.InventItem, arg2: tool.InventItem, arg3: Dynamic, arg4: Ref) {
+        super();
+    }
 
-  function showArrow() {}
+    public function showArrow(): Void {
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

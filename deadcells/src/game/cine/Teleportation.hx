@@ -1,14 +1,20 @@
 package cine;
+
 class Teleportation extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var to: Entity;
+    public var hero: en.Hero;
+    public var to: Entity;
 
-  function __constructor__(hero: en.Hero.Hero, from: en.inter.Teleport.Teleport, to: Entity) {}
+    public function new(arg0: en.Hero, arg1: en.inter.Teleport, arg2: Entity) {
+        super();
+    }
 
-  function move() {}
+    public function move(): Void {
+    }
 
-  function end() {}
+    public function end(): Void {
+    }
 
-  function onExit(): Bool {}
+    public override function onExit(): Bool {
+        throw "stub: onExit not decompiled";
+    }
 }
-

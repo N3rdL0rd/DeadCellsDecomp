@@ -1,23 +1,35 @@
 package tool.vote;
+
 class ChooseTalismanAffix extends tool.TwitchVote {
-  var affixes: hl.types.ArrayObj<Dynamic>;
-  var type: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var affixes: Array<Dynamic>;
+    public var type: tool.vote.VoteAffixType;
 
-  function __constructor__(type: Dynamic) {}
+    public function new(arg0: tool.vote.VoteAffixType) {
+        super();
+    }
 
-  function isSuspended(): Bool {}
+    public override function isSuspended(): Bool {
+        throw "stub: isSuspended not decompiled";
+    }
 
-  function onDelayedVoteInit() {}
+    public override function onDelayedVoteInit(): Void {
+    }
 
-  function onExpire() {}
+    public override function onExpire(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

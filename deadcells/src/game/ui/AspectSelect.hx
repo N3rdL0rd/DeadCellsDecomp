@@ -1,50 +1,65 @@
 package ui;
+
 class AspectSelect extends ui.Process {
-  var controller: tool.Controller.Controller;
-  var source: Entity;
-  var hero: en.Hero.Hero;
-  var fbMain: ui.FlowBox.FlowBox;
-  var title: ui.Text.Text;
-  var warning: ui.Text.Text;
-  var line: libs.heaps.slib.HSprite.HSprite;
-  var gt: libs.heaps.slib.HSprite.HSprite;
-  var gb: libs.heaps.slib.HSprite.HSprite;
-  var aspectMask: h2d.Mask.Mask;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
-  var aspectInter: h2d.Interactive.Interactive;
-  var aspectFlow: h2d.Flow.Flow;
-  var selection: h2d.ScaleGrid.ScaleGrid;
-  var aspects: hl.types.ArrayObj<Dynamic>;
-  var curAspectId: Int;
-  var selectedAspectId: Int;
-  var cpBaseX: Float;
-  var onClose: Dynamic;
+    public var controller: tool.ControllerAccess;
+    public var source: Entity;
+    public var hero: en.Hero;
+    public var fbMain: ui.FlowBox;
+    public var title: ui.Text;
+    public var warning: ui.Text;
+    public var line: libs.heaps.slib.HSprite;
+    public var gt: libs.heaps.slib.HSprite;
+    public var gb: libs.heaps.slib.HSprite;
+    public var aspectMask: h2d.Mask;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
+    public var aspectInter: h2d.Interactive;
+    public var aspectFlow: h2d.Flow;
+    public var selection: h2d.ScaleGrid;
+    public var aspects: Array<Dynamic>;
+    public var curAspectId: Int;
+    public var selectedAspectId: Int;
+    public var cpBaseX: Float;
+    public var onClose: Dynamic;
 
-  function __constructor__(hero: en.Hero.Hero, source: Entity, selectedAspectId: Int) {}
+    public function new(arg0: en.Hero, arg1: Entity, arg2: Int) {
+        super();
+    }
 
-  function addaspect(ii: tool.InventItem.InventItem) {}
+    public function addaspect(arg0: tool.InventItem): Void {
+    }
 
-  function select(id: Int, instant: Dynamic, scroll: Dynamic) {}
+    public function select(arg0: Int, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 
-  function resetAspects() {}
+    public function resetAspects(): Void {
+    }
 
-  function onChoose() {}
+    public function onChoose(): Void {
+    }
 
-  function blur(sigma: Dynamic, gain: Dynamic) {}
+    public override function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function unblur() {}
+    public override function unblur(): Void {
+    }
 
-  function isEquipped(k: String): Bool {}
+    public function isEquipped(arg0: String): Bool {
+        throw "stub: isEquipped not decompiled";
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

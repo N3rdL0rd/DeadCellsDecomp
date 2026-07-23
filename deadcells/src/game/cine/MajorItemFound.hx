@@ -1,12 +1,16 @@
 package cine;
+
 class MajorItemFound extends GameCinematic {
-  var icon: ui.icon.Icon.Icon;
-  var iconYr: Float;
+    public var icon: ui.icon.Icon;
+    public var iconYr: Float;
 
-  function __constructor__(hero: en.Hero.Hero, e: Entity, item: tool.InventItem.InventItem, iconX: Float, iconY: Float, onComplete: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: Entity, arg2: tool.InventItem, arg3: Float, arg4: Float, arg5: Dynamic) {
+        super();
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

@@ -1,38 +1,57 @@
 package en.inter;
+
 class Lustre extends en.Interactive {
-  var hasBeenActivated: Bool;
-  var sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var lights: hl.types.ArrayObj<Dynamic>;
-  var explodeSound: hxd.res.Sound.Sound;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var hasBeenActivated: Bool;
+    public var sb: libs.heaps.slib.HSpriteBatch;
+    public var lights: Array<Dynamic>;
+    public var explodeSound: hxd.res.Sound;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function addTorch(px: Float, py: Float, back: h2d.Tile.Tile) {}
+    public function addTorch(arg0: Float, arg1: Float, arg2: h2d.Tile): Void {
+    }
 
-  function onTouchGround() {}
+    public function onTouchGround(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

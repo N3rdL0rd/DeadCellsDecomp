@@ -1,17 +1,24 @@
 package tool.skill.mobSkill;
+
 class Melee extends tool.skill.OldMobSkill {
-  var fxAnim: String;
+    public var fxAnim: String;
 
-  function dynOnAttackAnim() {}
+    public function new(arg0: String, arg1: en.Mob) {
+        super();
+    }
 
-  function dynOnChargeComplete() {}
+    public override function initWithInfo(arg0: Dynamic): Void {
+    }
 
-  function dynOnChargeStart() {}
+    public override function onTouchEntity(arg0: Entity): Void {
+    }
 
-  function __constructor__(id: String, from: en.Mob.Mob) {}
+    public function dynOnChargeComplete(): Void {
+    }
 
-  function initWithInfo(inf: Dynamic) {}
+    public function dynOnAttackAnim(): Void {
+    }
 
-  function onTouchEntity(e: Entity) {}
+    public function dynOnChargeStart(): Void {
+    }
 }
-

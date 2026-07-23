@@ -1,186 +1,280 @@
 package level;
+
 class LevelDisp extends libs.Process {
-  var lmap: level.LevelMap.LevelMap;
-  var level: pr.Level.Level;
-  var parallaxInfo: hl.types.ArrayObj<Dynamic>;
-  var debug: h2d.Graphics.Graphics;
-  var decoZones: hl.types.ArrayObj<Dynamic>;
-  var smokeColor: h3d.Vector.Vector;
-  var cloudColor: h3d.Vector.Vector;
-  var rng: libs.Rand.Rand;
-  var lights: hl.types.ArrayObj<Dynamic>;
-  var animatedLights: hl.types.ArrayObj<Dynamic>;
-  var customDecos: hl.types.ArrayObj<Dynamic>;
-  var groupBackWalls: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupBackWallProps: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupBackWallProps2: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupBackProps: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupMainProps: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupGameplayProps: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupBgFilterProps: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupMainPropsTop: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupFrontWalls: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupFrontWallProps: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var sbAddProps: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbLevelPropsFront: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var tgSmoke: h2d.TileGroup.TileGroup;
-  var parallaxes: hl.types.ArrayObj<Dynamic>;
-  var useStonePlatform: Bool;
-  var smokeShader: hxsl.Macros.Macros;
-  var camFog: h2d.Graphics.Graphics;
-  var camFogShader: hxsl.Macros.Macros;
-  var biomeFxColor: Int;
-  var parallaxGlowShaders: hl.types.ArrayObj<Dynamic>;
-  var cloudShader: hxsl.Macros.Macros;
-  var customFxRunSmoke: Dynamic;
-  var customFxLandSmoke: Dynamic;
-  var cullingBounds: h2d.col.Bounds.Bounds;
-  var rendered: Bool;
-  var layerConfs: haxe.ds.ObjectMap;
-  var lightConfs: haxe.ds.ObjectMap;
-  var scatterConfs: haxe.ds.ObjectMap;
-  var oneWayLightWallOffset: Float;
+    public var lmap: level.LevelMap;
+    public var level: pr.Level;
+    public var parallaxInfo: Array<Dynamic>;
+    public var debug: h2d.Graphics;
+    public var decoZones: Array<Dynamic>;
+    public var smokeColor: h3d.Vector;
+    public var cloudColor: h3d.Vector;
+    public var rng: libs.Rand;
+    public var lights: Array<Dynamic>;
+    public var animatedLights: Array<Dynamic>;
+    public var customDecos: Array<Dynamic>;
+    public var groupBackWalls: libs.heaps.StaticGeometryGroup;
+    public var groupBackWallProps: libs.heaps.StaticGeometryGroup;
+    public var groupBackWallProps2: libs.heaps.StaticGeometryGroup;
+    public var groupBackProps: libs.heaps.StaticGeometryGroup;
+    public var groupMainProps: libs.heaps.StaticGeometryGroup;
+    public var groupGameplayProps: libs.heaps.StaticGeometryGroup;
+    public var groupBgFilterProps: libs.heaps.StaticGeometryGroup;
+    public var groupMainPropsTop: libs.heaps.StaticGeometryGroup;
+    public var groupFrontWalls: libs.heaps.StaticGeometryGroup;
+    public var groupFrontWallProps: libs.heaps.StaticGeometryGroup;
+    public var sbAddProps: libs.heaps.slib.HSpriteBatch;
+    public var sbLevelPropsFront: libs.heaps.slib.HSpriteBatch;
+    public var tgSmoke: h2d.TileGroup;
+    public var parallaxes: Array<Dynamic>;
+    public var useStonePlatform: Bool;
+    public var smokeShader: shader.Foggy;
+    public var camFog: h2d.Graphics;
+    public var camFogShader: shader.CamFog;
+    public var biomeFxColor: Int;
+    public var parallaxGlowShaders: Array<Dynamic>;
+    public var cloudShader: shader.Foggy;
+    public var customFxRunSmoke: Dynamic;
+    public var customFxLandSmoke: Dynamic;
+    public var cullingBounds: h2d.col.Bounds;
+    public var rendered: Bool;
+    public var layerConfs: haxe.ds.ObjectMap;
+    public var lightConfs: haxe.ds.ObjectMap;
+    public var scatterConfs: haxe.ds.ObjectMap;
+    public var oneWayLightWallOffset: Float;
+
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: Array<Dynamic>) {
+        super();
+    }
+
+    public function loadRenderConf(arg0: Dynamic): Void {
+    }
+
+    public function loadCamFog(arg0: Dynamic): Void {
+    }
+
+    public function initGroups(): Void {
+    }
+
+    public function addLevelAssetsGlow(arg0: Array<Dynamic>): Void {
+    }
+
+    public function clear(): Void {
+    }
+
+    public function render(): Void {
+    }
+
+    public function renderParallaxes(): Void {
+    }
+
+    public function getDepthFromInfos(arg0: Dynamic): Int {
+        throw "stub: getDepthFromInfos not decompiled";
+    }
+
+    public function getParallaxBounds(arg0: Dynamic): h2d.col.Bounds {
+        throw "stub: getParallaxBounds not decompiled";
+    }
+
+    public function getParallaxScrollMaxY(arg0: Dynamic): Dynamic {
+        throw "stub: getParallaxScrollMaxY not decompiled";
+    }
+
+    public function createBoundedParallax(arg0: Int, arg1: h2d.col.Bounds, arg2: Dynamic, arg3: Dynamic): Parallax {
+        throw "stub: createBoundedParallax not decompiled";
+    }
+
+    public function createBoundedParallaxGroup(arg0: h2d.Tile, arg1: Int, arg2: h2d.col.Bounds, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic): ParallaxGroup {
+        throw "stub: createBoundedParallaxGroup not decompiled";
+    }
+
+    public function generateParallax(arg0: Dynamic): Parallax {
+        throw "stub: generateParallax not decompiled";
+    }
+
+    public function generateParallaxGroup(arg0: Dynamic): ParallaxGroup {
+        throw "stub: generateParallaxGroup not decompiled";
+    }
+
+    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    }
+
+    public function parallaxHFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Ref, arg6: h2d.Tile): Void {
+    }
+
+    public function parallaxVFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap, parallaxInfo: hl.types.ArrayObj<Dynamic>) {}
+    public function getParallaxOnAddCallback(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic): Dynamic {
+        throw "stub: getParallaxOnAddCallback not decompiled";
+    }
 
-  function loadRenderConf(forceBiome: Dynamic) {}
+    public function initCloudShader(): Void {
+    }
 
-  function loadCamFog(dat: Dynamic) {}
+    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    }
 
-  function initGroups() {}
+    public function addJunk(arg0: level.DecoZone): Void {
+    }
 
-  function addLevelAssetsGlow(glowColorData: hl.types.ArrayObj<Dynamic>) {}
+    public function initDecoEntities(): Void {
+    }
 
-  function clear() {}
+    public function addFrontProps(): Void {
+    }
 
-  function render() {}
+    public function decorateLevel(): Void {
+    }
 
-  function renderParallaxes() {}
+    public function renderBackWalls(): Void {
+    }
 
-  function getDepthFromInfos(inf: Dynamic): Int {}
+    public function renderFloorStamps(): Void {
+    }
 
-  function getParallaxBounds(inf: Dynamic): h2d.col.Bounds.Bounds {}
+    public function renderRoofs(): Void {
+    }
 
-  function getParallaxScrollMaxY(inf: Dynamic): Dynamic {}
+    public function renderFrontCorners(): Void {
+    }
 
-  function createBoundedParallax(layer: Int, limitBounds: h2d.col.Bounds.Bounds, scrollX: Dynamic, scrollY: Dynamic): Parallax {}
+    public function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 
-  function createBoundedParallaxGroup(t: h2d.Tile.Tile, layer: Int, limitBounds: h2d.col.Bounds.Bounds, scrollMaxY: Dynamic, scrollX: Dynamic, scrollY: Dynamic, levelX: Dynamic, levelY: Dynamic): ParallaxGroup {}
+    public function renderFrontWalls(): Void {
+    }
 
-  function generateParallax(inf: Dynamic): Parallax {}
+    public function renderSlopes(): Void {
+    }
 
-  function generateParallaxGroup(inf: Dynamic): ParallaxGroup {}
+    public function renderFrontVegetation(): Void {
+    }
 
-  function renderParallax(infos: Dynamic, parallaxName: String) {}
+    public function renderStructures(): Void {
+    }
 
-  function parallaxHFill(p: ParallaxGroup, tiles: hl.types.ArrayObj<Dynamic>, inf: Dynamic, rng: Dynamic, onAdd: Dynamic, y: Dynamic, randomAdditionalTile: h2d.Tile.Tile) {}
+    public function renderFakeBlackWalls(): Void {
+    }
 
-  function parallaxVFill(p: ParallaxGroup, tiles: hl.types.ArrayObj<Dynamic>, inf: Dynamic, rng: Dynamic, onAdd: Dynamic) {}
+    public function renderGroundSmoke(): Void {
+    }
 
-  function getParallaxOnAddCallback(p: ParallaxGroup, tiles: hl.types.ArrayObj<Dynamic>, inf: Dynamic): Dynamic {}
+    public function renderWaterPools(): Void {
+    }
 
-  function initCloudShader() {}
+    public function addCliffLights(): Void {
+    }
 
-  function onAddParallax(inf: Dynamic, p: Parallax, pg: ParallaxGroup) {}
+    public function renderWallTransitions(): Void {
+    }
 
-  function addJunk(z: level.DecoTypes.DecoTypes) {}
+    public function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function initDecoEntities() {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addFrontProps() {}
+    public override function postUpdate(): Void {
+    }
 
-  function decorateLevel() {}
+    public function updateLoreDecos(): Void {
+    }
 
-  function renderBackWalls() {}
+    public override function onDispose(): Void {
+    }
 
-  function renderFloorStamps() {}
+    public function addTile(arg0: libs.heaps.StaticGeometryGroup, arg1: String, arg2: Int, arg3: Int, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Dynamic, arg11: libs.heaps.slib.TileFlipMode, arg12: String, arg13: Dynamic): h2d.Tile {
+        throw "stub: addTile not decompiled";
+    }
 
-  function renderRoofs() {}
+    public function addTileAtFrame(arg0: libs.heaps.StaticGeometryGroup, arg1: String, arg2: Int, arg3: Int, arg4: Int, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Dynamic, arg11: Dynamic, arg12: libs.heaps.slib.TileFlipMode, arg13: String, arg14: Dynamic): h2d.Tile {
+        throw "stub: addTileAtFrame not decompiled";
+    }
 
-  function renderFrontCorners() {}
+    public function addRotatedTileAtFrame(arg0: libs.heaps.StaticGeometryGroup, arg1: String, arg2: Int, arg3: Int, arg4: Int, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Dynamic, arg11: libs.heaps.slib.TileFlipMode, arg12: Dynamic, arg13: Dynamic): h2d.Tile {
+        throw "stub: addRotatedTileAtFrame not decompiled";
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public function addRandomPixelTile(arg0: libs.heaps.StaticGeometryGroup, arg1: String, arg2: Float, arg3: Float, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: libs.heaps.slib.TileFlipMode, arg10: String, arg11: Dynamic, arg12: Dynamic): h2d.Tile {
+        throw "stub: addRandomPixelTile not decompiled";
+    }
 
-  function renderFrontWalls() {}
+    public function addPixelTile(arg0: libs.heaps.StaticGeometryGroup, arg1: h2d.Tile, arg2: Float, arg3: Float, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: String, arg9: Dynamic): h2d.Tile {
+        throw "stub: addPixelTile not decompiled";
+    }
 
-  function renderSlopes() {}
+    public function addPixelRotatedTile(arg0: libs.heaps.StaticGeometryGroup, arg1: h2d.Tile, arg2: Float, arg3: Float, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Float, arg8: Dynamic): h2d.Tile {
+        throw "stub: addPixelRotatedTile not decompiled";
+    }
 
-  function renderFrontVegetation() {}
+    public function hfill(arg0: libs.heaps.StaticGeometryGroup, arg1: libs.RandDeck, arg2: Int, arg3: Int, arg4: Int, arg5: Ref): Void {
+    }
 
-  function renderStructures() {}
+    public function addFX(arg0: String, arg1: Int, arg2: Int, arg3: Float, arg4: Float): libs.heaps.slib.HSpriteBE {
+        throw "stub: addFX not decompiled";
+    }
 
-  function renderFakeBlackWalls() {}
+    public function addLight(arg0: Float, arg1: Float, arg2: Int, arg3: Float, arg4: Float, arg5: Dynamic, arg6: Dynamic): light.PointLight {
+        throw "stub: addLight not decompiled";
+    }
 
-  function renderGroundSmoke() {}
+    public function addDecoLight(arg0: Float, arg1: Float, arg2: String, arg3: Ref): light.PointLight {
+        throw "stub: addDecoLight not decompiled";
+    }
 
-  function renderWaterPools() {}
+    public function disableDecoratorAt(arg0: Int, arg1: Int, arg2: Ref, arg3: Ref, arg4: Ref): Void {
+    }
 
-  function addCliffLights() {}
+    public function createParallaxBatch(arg0: h2d.Tile, arg1: Int): ParallaxBatch {
+        throw "stub: createParallaxBatch not decompiled";
+    }
 
-  function renderWallTransitions() {}
+    public function createParallaxGroup(arg0: h2d.Tile, arg1: Int, arg2: Dynamic, arg3: Dynamic): ParallaxGroup {
+        throw "stub: createParallaxGroup not decompiled";
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public function createParallax(arg0: Int, arg1: Dynamic, arg2: Dynamic): Parallax {
+        throw "stub: createParallax not decompiled";
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function removeShaderIfExists(arg0: h2d.Drawable, arg1: hl.Class): Void {
+    }
 
-  function postUpdate() {}
+    public function getLayerConf(arg0: String): Dynamic {
+        throw "stub: getLayerConf not decompiled";
+    }
 
-  function updateLoreDecos() {}
+    public function applyLayerConf(arg0: h2d.Drawable, arg1: String, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function onDispose() {}
+    public function applyLightConf(arg0: light.PointLight, arg1: String, arg2: Ref): Void {
+    }
 
-  function addTile(group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, spriteName: String, casePosX: Int, casePosY: Int, caseRatioX: Dynamic, caseRatioY: Dynamic, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, onBounds: Dynamic, flipMode: Dynamic, offset: String, overBgFilter: Dynamic): h2d.Tile.Tile {}
+    public function applyScatterConf(arg0: light.Scatterer, arg1: String): Void {
+    }
 
-  function addTileAtFrame(group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, spriteName: String, casePosX: Int, casePosY: Int, frame: Int, caseRatioX: Dynamic, caseRatioY: Dynamic, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, onBounds: Dynamic, flipMode: Dynamic, offset: String, overBgFilter: Dynamic): h2d.Tile.Tile {}
+    public function reloadRenderConf(): Void {
+    }
 
-  function addRotatedTileAtFrame(group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, spriteName: String, casePosX: Int, casePosY: Int, frame: Int, caseRatioX: Dynamic, caseRatioY: Dynamic, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, flipMode: Dynamic, rotationAngle: Dynamic, overBgFilter: Dynamic): h2d.Tile.Tile {}
+    public function createLightWalls(): Void {
+    }
 
-  function addRandomPixelTile(group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, spriteName: String, pixelPosX: Float, pixelPosY: Float, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, onBounds: Dynamic, flipMode: Dynamic, offset: String, rotationAngle: Dynamic, overBgFilter: Dynamic): h2d.Tile.Tile {}
+    public function applyGroupLayerConf(arg0: libs.heaps.StaticGeometryGroup, arg1: String): Void {
+    }
 
-  function addPixelTile(group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, t: h2d.Tile.Tile, pixelPosX: Float, pixelPosY: Float, setFlags: Dynamic, abortFlags: Dynamic, requiredFlags: Dynamic, onBounds: Dynamic, offset: String, overBgFilter: Dynamic): h2d.Tile.Tile {}
+    public function addGroupToScroller(arg0: libs.heaps.StaticGeometryGroup, arg1: Int): Void {
+    }
 
-  function addPixelRotatedTile(group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, t: h2d.Tile.Tile, pixelPosX: Float, pixelPosY: Float, setFlags: Dynamic, abortFlags: Dynamic, requiredFlags: Dynamic, rotationAngle: Float, overBgFilter: Dynamic): h2d.Tile.Tile {}
+    public function moveGroupInScroller(arg0: libs.heaps.StaticGeometryGroup, arg1: level.ScrollerMovementDirection): Void {
+    }
 
-  function hfill(group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, deck: libs.Rand.RandDeck, cx: Int, cy: Int, cwid: Int, density: Dynamic) {}
+    public function parseDecoZones(): Array<Dynamic> {
+        throw "stub: parseDecoZones not decompiled";
+    }
 
-  function addFX(k: String, cx: Int, cy: Int, xr: Float, yr: Float): libs.heaps.slib.HSpriteBE.HSpriteBE {}
+    public function spawnPirates(): Void {
+    }
 
-  function addLight(x: Float, y: Float, col: Int, radiusCase: Float, intensity: Float, decayStart: Dynamic, animated: Dynamic): light.PointLight.PointLight {}
-
-  function addDecoLight(x: Float, y: Float, kind: String, radius: Dynamic): light.PointLight.PointLight {}
-
-  function disableDecoratorAt(cx: Int, cy: Int, wid: Dynamic, hei: Dynamic, noStamp: Dynamic) {}
-
-  function createParallaxBatch(t: h2d.Tile.Tile, layer: Int): ParallaxBatch {}
-
-  function createParallaxGroup(t: h2d.Tile.Tile, layer: Int, scrollX: Dynamic, scrollY: Dynamic): ParallaxGroup {}
-
-  function createParallax(layer: Int, scrollX: Dynamic, scrollY: Dynamic): Parallax {}
-
-  function removeShaderIfExists(obj: h2d.Drawable.Drawable, stype: hl.Class) {}
-
-  function getLayerConf(layer: String): Dynamic {}
-
-  function applyLayerConf(obj: h2d.Drawable.Drawable, layer: String, allowAlpha: Dynamic, ratio: Dynamic) {}
-
-  function applyLightConf(l: light.PointLight.PointLight, kind: String, radius: Dynamic) {}
-
-  function applyScatterConf(s: Dynamic, kind: String) {}
-
-  function reloadRenderConf() {}
-
-  function createLightWalls() {}
-
-  function applyGroupLayerConf(group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, layerKind: String) {}
-
-  function addGroupToScroller(group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, layerId: Int) {}
-
-  function moveGroupInScroller(group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, movement: Dynamic) {}
-
-  function parseDecoZones(): hl.types.ArrayObj<Dynamic> {}
-
-  function spawnPirates() {}
-
-  function onApplyOptions() {}
+    public function onApplyOptions(): Void {
+    }
 }
-

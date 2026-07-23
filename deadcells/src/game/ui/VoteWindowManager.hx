@@ -1,14 +1,19 @@
 package ui;
+
 class VoteWindowManager extends ui.Process {
+    public function new(arg0: libs.Process) {
+        super();
+    }
 
-  function __constructor__(p: libs.Process.Process) {}
+    public function pause(): Void {
+    }
 
-  function pause() {}
+    public function resume(): Void {
+    }
 
-  function resume() {}
+    public function onVoteChange(): Void {
+    }
 
-  function onVoteChange() {}
-
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 }
-

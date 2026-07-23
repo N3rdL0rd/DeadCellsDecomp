@@ -1,18 +1,27 @@
 package tool.weap;
+
 class Anathema extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(owner: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function updateAmmoHud(): Void {
+    }
 
-  function updateAmmoHud() {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function dynOnFxFrame(s: tool.Weapon.Weapon, cinf: Dynamic) {}
-
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 }
-

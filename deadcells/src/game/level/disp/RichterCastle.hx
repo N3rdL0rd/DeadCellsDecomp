@@ -1,18 +1,25 @@
 package level.disp;
+
 class RichterCastle extends level.disp.DookuCastle {
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public override function onDispose(): Void {
+    }
 
-  function onDispose() {}
+    public function addTorch(arg0: Float, arg1: Float, arg2: h2d.Tile, arg3: Ref): Void {
+    }
 
-  function addTorch(px: Float, py: Float, back: h2d.Tile.Tile, checkWallUsed: Dynamic) {}
+    public function addVaniaTorch(arg0: Float, arg1: Float, arg2: String): Void {
+    }
 
-  function addVaniaTorch(px: Float, py: Float, customId: String) {}
+    public function renderCustomDeco(arg0: level.Room): Void {
+    }
 
-  function renderCustomDeco(r: level.Room.Room) {}
+    public override function addSmallWindows(arg0: level.DecoZone): Void {
+    }
 
-  function addSmallWindows(z: level.DecoTypes.DecoTypes) {}
-
-  function placeWindow(cx: Int, cy: Int, hei: Int, wid: Int, nameBot: String, botHei: Int, nameMid: String, midHei: Int, nameTop: String, topHei: Int, abortFlags: Dynamic) {}
+    public override function placeWindow(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: String, arg5: Int, arg6: String, arg7: Int, arg8: String, arg9: Int, arg10: Dynamic): Void {
+    }
 }
-

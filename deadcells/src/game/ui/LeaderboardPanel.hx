@@ -1,55 +1,74 @@
 package ui;
+
 class LeaderboardPanel extends ui.Process {
-  var ts: pr.TitleScreen.TitleScreen;
-  var mainFlow: ui.FlowBox.FlowBox;
-  var daysFlow: h2d.Flow.Flow;
-  var altTile: h2d.Tile.Tile;
-  var controller: tool.Controller.Controller;
-  var rewindDays: Int;
-  var visible: Bool;
-  var scrollerCont: ui.UIBox.UIBox;
-  var scrollerHnd: libs.heaps.slib.HSprite.HSprite;
-  var scrollPos: Float;
-  var scrollTgt: Float;
-  var dateCont: h2d.Object.Object;
-  var entryWid: Int;
-  var entryMask: h2d.Mask.Mask;
-  var entryFlow: h2d.Flow.Flow;
-  var entryLines: hl.types.ArrayObj<Dynamic>;
-  var loading: Bool;
-  var loadingFadePos: Float;
-  var loadingFadeTgt: Float;
-  var data: Dynamic;
-  var loadingLabel: ui.Text.Text;
-  var isLocked: Bool;
-  var afterDispose: Dynamic;
+    public var ts: pr.TitleScreen;
+    public var mainFlow: ui.FlowBox;
+    public var daysFlow: h2d.Flow;
+    public var altTile: h2d.Tile;
+    public var controller: tool.ControllerAccess;
+    public var rewindDays: Int;
+    public var visible: Bool;
+    public var scrollerCont: ui.UIBox;
+    public var scrollerHnd: libs.heaps.slib.HSprite;
+    public var scrollPos: Float;
+    public var scrollTgt: Float;
+    public var dateCont: h2d.Object;
+    public var entryWid: Int;
+    public var entryMask: h2d.Mask;
+    public var entryFlow: h2d.Flow;
+    public var entryLines: Array<Dynamic>;
+    public var loading: Bool;
+    public var loadingFadePos: Float;
+    public var loadingFadeTgt: Float;
+    public var data: Dynamic;
+    public var loadingLabel: ui.Text;
+    public var isLocked: Bool;
+    public var afterDispose: Dynamic;
 
-  function __constructor__(p: pr.TitleScreen.TitleScreen) {}
+    public function new(arg0: pr.TitleScreen) {
+        super();
+    }
 
-  function set_visible(v: Bool): Bool {}
+    public function set_visible(arg0: Bool): Bool {
+        throw "stub: set_visible not decompiled";
+    }
 
-  function addSpacer(p: h2d.Flow.Flow, wid: Int) {}
+    public function addSpacer(arg0: h2d.Flow, arg1: Int): Void {
+    }
 
-  function addLine(wid: Int, alt: Bool): h2d.Flow.Flow {}
+    public function addLine(arg0: Int, arg1: Bool): h2d.Flow {
+        throw "stub: addLine not decompiled";
+    }
 
-  function addEntry(rank: Int, name: String, score: Int, icon: String, wid: Int, alt: Bool, color: Dynamic): h2d.Flow.Flow {}
+    public function addEntry(arg0: Int, arg1: String, arg2: Int, arg3: String, arg4: Int, arg5: Bool, arg6: Dynamic): h2d.Flow {
+        throw "stub: addEntry not decompiled";
+    }
 
-  function renderData() {}
+    public function renderData(): Void {
+    }
 
-  function stateIcon(state: Int): String {}
+    public function stateIcon(arg0: Int): String {
+        throw "stub: stateIcon not decompiled";
+    }
 
-  function beginLoading(instant: Dynamic) {}
+    public function beginLoading(arg0: Ref): Void {
+    }
 
-  function endLoading(res: Dynamic) {}
+    public function endLoading(arg0: tool.Result): Void {
+    }
 
-  function refreshData(instant: Dynamic) {}
+    public function refreshData(arg0: Ref): Void {
+    }
 
-  function focusMine() {}
+    public function focusMine(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

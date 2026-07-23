@@ -1,12 +1,15 @@
 package tool.skill;
-class SkillAnim extends tool.skill.Skill.SkillEvent {
-  var name: String;
-  var speed: Float;
-  var duration: Dynamic;
-  var loop: Bool;
 
-  function __constructor__(skill: tool.skill.Skill.Skill, name: String, speed: Dynamic, duration: Dynamic, loop: Dynamic) {}
+class SkillAnim extends tool.skill.SkillEvent {
+    public var name: String;
+    public var speed: Float;
+    public var duration: Dynamic;
+    public var loop: Bool;
 
-  function trigger(overrideDir: Dynamic) {}
+    public function new(arg0: tool.skill.Skill, arg1: String, arg2: Ref, arg3: Dynamic, arg4: Ref) {
+        super();
+    }
+
+    public override function trigger(arg0: Dynamic): Void {
+    }
 }
-

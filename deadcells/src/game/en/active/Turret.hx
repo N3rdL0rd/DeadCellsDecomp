@@ -1,40 +1,63 @@
 package en.active;
+
 class Turret extends en.Active {
-  var shootCdS: Float;
-  var areaLights: hl.types.ArrayObj<Dynamic>;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var shootCdS: Float;
+    public var areaLights: Array<Dynamic>;
 
-  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+        super();
+    }
 
-  static function create(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem): Turret {}
+    public static function create(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem): en.active.Turret {
+        throw "stub: create not decompiled";
+    }
 
-  function initStats() {}
+    public override function initStats(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function canBeGrabbedByHomunculus(): Bool {}
+    public function canBeGrabbedByHomunculus(): Bool {
+        throw "stub: canBeGrabbedByHomunculus not decompiled";
+    }
 
-  function getAttackTarget(): Entity {}
+    public function getAttackTarget(): Entity {
+        throw "stub: getAttackTarget not decompiled";
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function shoot(e: Entity) {}
+    public function shoot(arg0: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

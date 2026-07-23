@@ -1,48 +1,67 @@
 package ui;
+
 class Text extends h2d.HtmlText {
-  var big: Bool;
-  var charset: String;
-  var maxWidthWanted: Float;
-  var isMedieval: Bool;
-  var customScale: Float;
-  var imageVerticalAlign: Dynamic;
-  var customFont: Dynamic;
-  var rawText: String;
-  var highResFont: Bool;
-  var background: libs.heaps.slib.HSprite.HSprite;
-  var canHaveBackground: Bool;
-  static var COLORS: haxe.ds.StringMap;
-  static var REG_TAG: EReg;
-  static var REG_IMG: EReg;
-  static var HTML: EReg;
-  static var LF: String;
+    public static var COLORS: haxe.ds.StringMap;
+    public static var REG_TAG: EReg;
+    public static var REG_IMG: EReg;
+    public static var HTML: EReg;
+    public static var LF: String;
+    public var big: Bool;
+    public var charset: String;
+    public var maxWidthWanted: Float;
+    public var isMedieval: Bool;
+    public var customScale: Float;
+    public var imageVerticalAlign: ui.ImageVerticalAlign;
+    public var customFont: Dynamic;
+    public var rawText: String;
+    public var highResFont: Bool;
+    public var background: libs.heaps.slib.HSprite;
+    public var canHaveBackground: Bool;
 
-  function get_pixelScale(): Float {}
+    public function new(arg0: h2d.Object, arg1: Dynamic, arg2: Dynamic, arg3: Ref, arg4: ui.ImageVerticalAlign, arg5: Dynamic) {
+        super();
+    }
 
-  static function onCdbReload() {}
+    public static function getTierColor(arg0: String): Int {
+        throw "stub: getTierColor not decompiled";
+    }
 
-  static function getTierColor(tier: String): Int {}
+    public static function applyTierColors(): Void {
+    }
 
-  function __constructor__(p: h2d.Object.Object, big: Dynamic, isMedieval: Dynamic, customScale: Dynamic, imageVerticalAlign: Dynamic, customFont: Dynamic) {}
+    public static function onCdbReload(): Void {
+    }
 
-  static function applyTierColors() {}
+    public function initBackground(): Void {
+    }
 
-  function initBackground() {}
+    public function autoCharset(arg0: String): Void {
+    }
 
-  function autoCharset(altText: String) {}
+    public function setLangCharset(arg0: String): Void {
+    }
 
-  function setLangCharset(altCharset: String) {}
+    public function getColorFrom(arg0: String): String {
+        throw "stub: getColorFrom not decompiled";
+    }
 
-  function getColorFrom(id: String): String {}
+    public function set_text(arg0: String): String {
+        throw "stub: set_text not decompiled";
+    }
 
-  function set_text(t: String): String {}
+    public override function initGlyphs(arg0: String, arg1: Ref, arg2: Ref, arg3: Array<Int>): Void {
+    }
 
-  function initGlyphs(text: String, rebuild: Dynamic, handleAlign: Dynamic, lines: hl.types.ArrayBytes<Int>) {}
+    public function onResize(): Void {
+    }
 
-  function onResize() {}
+    public function refresh(): Void {
+    }
 
-  function refresh() {}
+    public override function draw(arg0: h2d.RenderContext): Void {
+    }
 
-  function draw(ctx: h2d.RenderContext.RenderContext) {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
-

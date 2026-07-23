@@ -1,47 +1,72 @@
 package en.mob;
-class Defender extends en.Mob.Mob {
-  var shieldInfos: Dynamic;
-  var runInfos: Dynamic;
-  var protege: en.Mob.Mob;
-  var lastTCx: Int;
-  var shieldingSomeone: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+class Defender extends en.Mob {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var shieldInfos: Dynamic;
+    public var runInfos: Dynamic;
+    public var protege: en.Mob;
+    public var lastTCx: Int;
+    public var shieldingSomeone: Bool;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Defender {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Defender {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function initGfx() {}
+    public override function init(): Void {
+    }
 
-  function dispose() {}
+    public override function initGfx(): Void {
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function dispose(): Void {
+    }
 
-  function initSkills() {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function initSkills(): Void {
+    }
 
-  function aiLocked(): Bool {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function aiLocked(): Bool {
+        throw "stub: aiLocked not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,22 +1,34 @@
 package tool.weap;
+
 class Whip extends tool.Weapon {
-  var r: Float;
-  var perfectArea: tool.Area.Area;
+    public var r: Float;
+    public var perfectArea: tool.Area;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hasBelmontSkin(): Bool {}
+    public function hasBelmontSkin(): Bool {
+        throw "stub: hasBelmontSkin not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function dynOnFxFrame(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function canHitWith(e: Entity, area: tool.Area.Area): Bool {}
+    public function canHitWith(arg0: Entity, arg1: tool.Area): Bool {
+        throw "stub: canHitWith not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 }
-

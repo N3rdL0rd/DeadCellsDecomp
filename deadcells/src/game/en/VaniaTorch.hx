@@ -1,22 +1,31 @@
 package en;
+
 class VaniaTorch extends Entity {
-  var fxEmitter: libs.heaps.HParticle.HParticle;
-  var lightSpr: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var light: light.PointLight.PointLight;
-  var customLoot: String;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var fxEmitter: libs.heaps.Emitter;
+    public var lightSpr: libs.heaps.slib.HSpriteBE;
+    public var light: light.PointLight;
+    public var customLoot: String;
 
-  function __constructor__(lvl: pr.Level.Level, px: Int, py: Int, customId: String) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function disposeGfx() {}
+    public override function disposeGfx(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

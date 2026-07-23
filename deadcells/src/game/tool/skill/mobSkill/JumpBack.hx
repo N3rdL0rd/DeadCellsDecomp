@@ -1,10 +1,13 @@
 package tool.skill.mobSkill;
+
 class JumpBack extends tool.skill.OldMobSkill {
+    public function new(arg0: String, arg1: en.Mob) {
+        super();
+    }
 
-  function dynOnExecute(ratio: Float) {}
+    public override function initWithInfo(arg0: Dynamic): Void {
+    }
 
-  function __constructor__(id: String, from: en.Mob.Mob) {}
-
-  function initWithInfo(inf: Dynamic) {}
+    public function dynOnExecute(arg0: Float): Void {
+    }
 }
-

@@ -1,10 +1,13 @@
 package cine;
+
 class EnterTimeKeeperRoomFirst extends GameCinematic {
-  var boss: en.mob.boss.TimeKeeper.TimeKeeper;
-  var hero: en.Hero.Hero;
+    public var boss: en.mob.boss.TimeKeeper;
+    public var hero: en.Hero;
 
-  function __constructor__(_hero: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

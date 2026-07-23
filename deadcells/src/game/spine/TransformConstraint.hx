@@ -1,17 +1,19 @@
 package spine;
+
 class TransformConstraint {
-  var data: TransformConstraintData;
-  var bones: hl.types.ArrayObj<Dynamic>;
-  var target: spine.Bone.Bone;
-  var rotateMix: Float;
-  var translateMix: Float;
-  var scaleMix: Float;
-  var shearMix: Float;
-  var temp: Dynamic;
-  var <none>: Dynamic;
+    public var data: spine.TransformConstraintData;
+    public var bones: Array<Dynamic>;
+    public var target: spine.Bone;
+    public var rotateMix: Float;
+    public var translateMix: Float;
+    public var scaleMix: Float;
+    public var shearMix: Float;
+    public var temp: spine.support.math.Vector2;
+    public var : Dynamic;
 
-  function __constructor__(data: TransformConstraintData, skeleton: spine.Skeleton.Skeleton) {}
+    public function new(arg0: spine.TransformConstraintData, arg1: spine.Skeleton) {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

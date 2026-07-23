@@ -1,159 +1,247 @@
 package tool.hero;
+
 class HeroActiveSkillsManager extends tool.HeroManager {
-  var activeSkills: hl.types.ArrayObj<Dynamic>;
-  var savedCooldowns: haxe.ds.IntMap<Dynamic>;
-  var passivePowers: hl.types.ArrayObj<Dynamic>;
-  var __atkRunningPowers: hl.types.ArrayObj<Dynamic>;
-  var __internalRunningPowers: hl.types.ArrayObj<Dynamic>;
-  var skillControlLocks: haxe.ds.IntMap<Dynamic>;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var activeSkills: Array<Dynamic>;
+    public var savedCooldowns: haxe.ds.IntMap;
+    public var passivePowers: Array<Dynamic>;
+    public var __atkRunningPowers: Array<Dynamic>;
+    public var __internalRunningPowers: Array<Dynamic>;
+    public var skillControlLocks: haxe.ds.IntMap;
 
-  function __constructor__(h: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function addSkillLock(str: String, id: Dynamic) {}
+    public function addSkillLock(arg0: String, arg1: Ref): Void {
+    }
 
-  function removeSkillLock(str: String, id: Dynamic) {}
+    public function removeSkillLock(arg0: String, arg1: Ref): Void {
+    }
 
-  function applyHudLockFade() {}
+    public function applyHudLockFade(): Void {
+    }
 
-  function onOwnerCooldownEnd(k: String, subIndex: Int) {}
+    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function updateSkills() {}
+    public function updateSkills(): Void {
+    }
 
-  function hasChargingSkill(): Bool {}
+    public function hasChargingSkill(): Bool {
+        throw "stub: hasChargingSkill not decompiled";
+    }
 
-  function getOldSkill(item: tool.InventItem.InventItem): tool.skill.OldSkill.OldSkill {}
+    public function getOldSkill(arg0: tool.InventItem): tool.skill.OldSkill {
+        throw "stub: getOldSkill not decompiled";
+    }
 
-  function getActiveSkill(item: tool.InventItem.InventItem): tool.hero.HeroActiveSkillsManager.HeroActiveSkillsManager {}
+    public function getActiveSkill(arg0: tool.InventItem): tool.hero.HeroActiveSkill {
+        throw "stub: getActiveSkill not decompiled";
+    }
 
-  function interrupt() {}
+    public function interrupt(): Void {
+    }
 
-  function reduceAllActiveCooldowns(sec: Float) {}
+    public function reduceAllActiveCooldowns(arg0: Float): Void {
+    }
 
-  function prepareSave(): Bool {}
+    public function prepareSave(): Bool {
+        throw "stub: prepareSave not decompiled";
+    }
 
-  function interruptPowers(pc: hl.Class) {}
+    public function interruptPowers(arg0: hl.Class): Void {
+    }
 
-  function hasAnySpeedBuff(): Bool {}
+    public function hasAnySpeedBuff(): Bool {
+        throw "stub: hasAnySpeedBuff not decompiled";
+    }
 
-  function speedBuffTimeLeftS(): Float {}
+    public function speedBuffTimeLeftS(): Float {
+        throw "stub: speedBuffTimeLeftS not decompiled";
+    }
 
-  function getRunSpeedMul(): Float {}
+    public function getRunSpeedMul(): Float {
+        throw "stub: getRunSpeedMul not decompiled";
+    }
 
-  function getDodgeSpeedMul(): Float {}
+    public function getDodgeSpeedMul(): Float {
+        throw "stub: getDodgeSpeedMul not decompiled";
+    }
 
-  function getClimbSpeedMul(): Float {}
+    public function getClimbSpeedMul(): Float {
+        throw "stub: getClimbSpeedMul not decompiled";
+    }
 
-  function killEntities() {}
+    public function killEntities(): Void {
+    }
 
-  function saveItemCooldowns() {}
+    public function saveItemCooldowns(): Void {
+    }
 
-  function _saveItemCooldown(i: tool.InventItem.InventItem, s: tool.skill.OldSkill.OldSkill) {}
+    public function _saveItemCooldown(arg0: tool.InventItem, arg1: tool.skill.OldSkill): Void {
+    }
 
-  function restoreItemCooldowns() {}
+    public function restoreItemCooldowns(): Void {
+    }
 
-  function clearSavedItemCooldowns() {}
+    public function clearSavedItemCooldowns(): Void {
+    }
 
-  function onEquippedItemsUpdated(duringHeroInit: Bool, duringItemTransform: Bool) {}
+    public function onEquippedItemsUpdated(arg0: Bool, arg1: Bool): Void {
+    }
 
-  function onItemTransformDone(oldItem: tool.InventItem.InventItem, newItem: tool.InventItem.InventItem) {}
+    public function onItemTransformDone(arg0: tool.InventItem, arg1: tool.InventItem): Void {
+    }
 
-  function onLevelChanged() {}
+    public function onLevelChanged(): Void {
+    }
 
-  function hudGetSkillPower(idx: Int): ui.hud.Skill.Skill {}
+    public function hudGetSkillPower(arg0: Int): ui.hud.Skill {
+        throw "stub: hudGetSkillPower not decompiled";
+    }
 
-  function resetCooldownForItem(item: tool.InventItem.InventItem) {}
+    public function resetCooldownForItem(arg0: tool.InventItem): Void {
+    }
 
-  function startCooldownForItem(item: tool.InventItem.InventItem, overrideTime: Dynamic) {}
+    public function startCooldownForItem(arg0: tool.InventItem, arg1: Dynamic): Void {
+    }
 
-  function reduceCooldownForItem(item: tool.InventItem.InventItem, sec: Float) {}
+    public function reduceCooldownForItem(arg0: tool.InventItem, arg1: Float): Void {
+    }
 
-  function resetPetItems() {}
+    public function resetPetItems(): Void {
+    }
 
-  function onTryApplyAttackResult(a: tool.atk.AttackData.AttackData): Bool {}
+    public function onTryApplyAttackResult(arg0: tool.atk.AttackData): Bool {
+        throw "stub: onTryApplyAttackResult not decompiled";
+    }
 
-  function onActiveSkill(id: Int, ratio: Float) {}
+    public function onActiveSkill(arg0: Int, arg1: Float): Void {
+    }
 
-  function onSkillSuccess(i: tool.InventItem.InventItem, id: Int) {}
+    public function onSkillSuccess(arg0: tool.InventItem, arg1: Int): Void {
+    }
 
-  function useSkillItem(id: Int, i: tool.InventItem.InventItem) {}
+    public function useSkillItem(arg0: Int, arg1: tool.InventItem): Void {
+    }
 
-  function canUseActiveSkill(id: Int): Bool {}
+    public function canUseActiveSkill(arg0: Int): Bool {
+        throw "stub: canUseActiveSkill not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class HeroActiveSkill {
-  var posId: Int;
-  var entities: hl.types.ArrayObj<Dynamic>;
-  var timers: Dynamic;
-  var key: Int;
-  var skill: tool.skill.OldSkill.OldSkill;
-  var uiSnd: hxd.res.Sound.Sound;
-  var maxUses: Int;
-  var cdPerUseF: Float;
-  var oldCdF: Float;
-  var hasMultipleUses: Bool;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var posId: Int;
+    public var entities: Array<Dynamic>;
+    public var timers: Dynamic;
+    public var key: Int;
+    public var skill: tool.skill.OldSkill;
+    public var uiSnd: hxd.res.Sound;
+    public var maxUses: Int;
+    public var cdPerUseF: Float;
+    public var oldCdF: Float;
+    public var hasMultipleUses: Bool;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(p: Int) {}
+    public function new(arg0: Int) {
+    }
 
-  function get_usesLeft(): Int {}
+    public function get_usesLeft(): Int {
+        throw "stub: get_usesLeft not decompiled";
+    }
 
-  function getNextUseCooldownF(): Float {}
+    public function getNextUseCooldownF(): Float {
+        throw "stub: getNextUseCooldownF not decompiled";
+    }
 
-  function getNextUseCooldownRatio(): Float {}
+    public function getNextUseCooldownRatio(): Float {
+        throw "stub: getNextUseCooldownRatio not decompiled";
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function prepareSave(): Bool {}
+    public function prepareSave(): Bool {
+        throw "stub: prepareSave not decompiled";
+    }
 
-  function init(s: tool.skill.OldSkill.OldSkill) {}
+    public function init(arg0: tool.skill.OldSkill): Void {
+    }
 
-  function restoreTimers() {}
+    public function restoreTimers(): Void {
+    }
 
-  function registerEntity(e: en.Active.Active, unshift: Dynamic) {}
+    public function registerEntity(arg0: en.Active, arg1: Ref): Void {
+    }
 
-  function gcEntities() {}
+    public function gcEntities(): Void {
+    }
 
-  function killEntities(threshold: Dynamic) {}
+    public function killEntities(arg0: Ref): Void {
+    }
 
-  function countEntities(): Int {}
+    public function countEntities(): Int {
+        throw "stub: countEntities not decompiled";
+    }
 
-  function useActiveItem(ii: tool.InventItem.InventItem) {}
+    public function useActiveItem(arg0: tool.InventItem): Void {
+    }
 
-  function initCdPerUse() {}
+    public function initCdPerUse(): Void {
+    }
 
-  function startCooldown(overrideS: Dynamic) {}
+    public function startCooldown(arg0: Dynamic): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

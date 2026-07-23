@@ -1,58 +1,79 @@
 package level.disp;
-class Gear {
-  var stepDelay: Float;
-  var stepAngle: Float;
-  var stepTime: Float;
-  var hbe: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var curTime: Float;
-  var curStart: Float;
-  var curEnd: Float;
-  var cooldown: Float;
-  var isWaiting: Bool;
-
-  function __constructor__(hbe: libs.heaps.slib.HSpriteBE.HSpriteBE, delay: Float) {}
-
-  function update(dt: Float) {}
-
-  function updateCooldown(dt: Float): Float {}
-
-  function updateRotation(dt: Float): Float {}
-}
 
 class ClockTower extends level.BiomeDisp {
-  var biome: String;
-  var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var gears: hl.types.ArrayObj<Dynamic>;
-  var sprites: hl.types.ArrayObj<Dynamic>;
-  var fogs: hl.types.ArrayObj<Dynamic>;
-  var glowShader: shader.GlowKey.GlowKey;
+    public var biome: String;
+    public var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch;
+    public var gears: Array<Dynamic>;
+    public var sprites: Array<Dynamic>;
+    public var fogs: Array<Dynamic>;
+    public var glowShader: shader.GlowKey;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addSmallDoors(z: level.DecoTypes.DecoTypes) {}
+    public function addSmallDoors(arg0: level.DecoZone): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function reloadRenderConf() {}
+    public function reloadRenderConf(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 }
 
+class Gear {
+    public var stepDelay: Float;
+    public var stepAngle: Float;
+    public var stepTime: Float;
+    public var hbe: libs.heaps.slib.HSpriteBE;
+    public var curTime: Float;
+    public var curStart: Float;
+    public var curEnd: Float;
+    public var cooldown: Float;
+    public var isWaiting: Bool;
+
+    public function new(arg0: libs.heaps.slib.HSpriteBE, arg1: Float) {
+    }
+
+    public function update(arg0: Float): Void {
+    }
+
+    public function updateCooldown(arg0: Float): Float {
+        throw "stub: updateCooldown not decompiled";
+    }
+
+    public function updateRotation(arg0: Float): Float {
+        throw "stub: updateRotation not decompiled";
+    }
+}

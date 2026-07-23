@@ -1,29 +1,38 @@
 package ui;
+
 class ModalPopUp extends ui.Process {
-  var bgColor: Int;
-  var closing: Bool;
-  var controller: tool.Controller.Controller;
-  var fb: ui.FlowBox.FlowBox;
-  var texts: hl.types.ArrayObj<Dynamic>;
-  var icons: hl.types.ArrayObj<Dynamic>;
-  var flowControl: h2d.Flow.Flow;
-  var controlIcon: ui.ControlLabel.ControlLabel;
-  static var ME: ModalPopUp;
+    public static var ME: ui.ModalPopUp;
+    public var bgColor: Int;
+    public var closing: Bool;
+    public var controller: tool.ControllerAccess;
+    public var fb: ui.FlowBox;
+    public var texts: Array<Dynamic>;
+    public var icons: Array<Dynamic>;
+    public var flowControl: h2d.Flow;
+    public var controlIcon: ui.ControlLabel;
 
-  function onClose() {}
+    public function new(arg0: Ref, arg1: Dynamic) {
+        super();
+    }
 
-  function __constructor__(pause: Dynamic, bgCol: Dynamic) {}
+    public function text(arg0: String, arg1: Dynamic, arg2: Ref): Void {
+    }
 
-  function text(str: String, col: Dynamic, big: Dynamic) {}
+    public function icon(arg0: h2d.Tile): Void {
+    }
 
-  function icon(t: h2d.Tile.Tile) {}
+    public override function onDispose(): Void {
+    }
 
-  function onDispose() {}
+    public function close(): Void {
+    }
 
-  function close() {}
+    public override function onResize(): Void {
+    }
 
-  function onResize() {}
+    public function update(): Void {
+    }
 
-  function update() {}
+    public function onClose(): Void {
+    }
 }
-

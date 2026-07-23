@@ -1,19 +1,29 @@
 package en.bu;
+
 class CardAmmo extends en.loot.Ammo {
-  var fromWeapon: tool.weap.ThrowingCards.ThrowingCards;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var fromWeapon: tool.weap.ThrowingCards;
 
-  function doCustomUpdate() {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.weap.ThrowingCards) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, w: tool.weap.ThrowingCards.ThrowingCards): CardAmmo {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: tool.weap.ThrowingCards): en.bu.CardAmmo {
+        throw "stub: create not decompiled";
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, i: tool.InventItem.InventItem, w: tool.weap.ThrowingCards.ThrowingCards) {}
+    public function init(): Void {
+    }
 
-  function init() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function doCustomUpdate(): Void {
+    }
 }
-

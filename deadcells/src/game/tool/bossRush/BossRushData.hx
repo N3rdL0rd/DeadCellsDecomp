@@ -1,55 +1,77 @@
 package tool.bossRush;
+
 class BossRushData {
-  var unlockedGameMode: hl.types.ArrayObj<Dynamic>;
-  var newGameMode: Dynamic;
-  var unlockCustomMode: Bool;
-  var basement: Int;
-  var cap: Int;
-  var pant: Int;
-  var skirt: Int;
-  var skull: Int;
-  var top: Int;
-  var weapon: Int;
-  var material: Int;
-  var basementUnlock: hl.types.ArrayObj<Dynamic>;
-  var capUnlock: hl.types.ArrayObj<Dynamic>;
-  var pantUnlock: hl.types.ArrayObj<Dynamic>;
-  var skirtUnlock: hl.types.ArrayObj<Dynamic>;
-  var skullUnlock: hl.types.ArrayObj<Dynamic>;
-  var topUnlock: hl.types.ArrayObj<Dynamic>;
-  var weaponUnlock: hl.types.ArrayObj<Dynamic>;
-  var materialUnlock: hl.types.ArrayObj<Dynamic>;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var CUSTOM_BR_IDX: Int;
-  static var __clid: Int;
+    public static var CUSTOM_BR_IDX: Int;
+    public static var __clid: Int;
+    public var unlockedGameMode: Array<Dynamic>;
+    public var newGameMode: Dynamic;
+    public var unlockCustomMode: Bool;
+    public var basement: Int;
+    public var cap: Int;
+    public var pant: Int;
+    public var skirt: Int;
+    public var skull: Int;
+    public var top: Int;
+    public var weapon: Int;
+    public var material: Int;
+    public var basementUnlock: Array<Dynamic>;
+    public var capUnlock: Array<Dynamic>;
+    public var pantUnlock: Array<Dynamic>;
+    public var skirtUnlock: Array<Dynamic>;
+    public var skullUnlock: Array<Dynamic>;
+    public var topUnlock: Array<Dynamic>;
+    public var weaponUnlock: Array<Dynamic>;
+    public var materialUnlock: Array<Dynamic>;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function unlockGameMode(idx: Dynamic) {}
+    public function unlockGameMode(arg0: Ref): Void {
+    }
 
-  function isAvailable(idx: Int): Bool {}
+    public function isAvailable(arg0: Int): Bool {
+        throw "stub: isAvailable not decompiled";
+    }
 
-  function hasUnlockPart(kind: String, step: Int): Bool {}
+    public function hasUnlockPart(arg0: String, arg1: Int): Bool {
+        throw "stub: hasUnlockPart not decompiled";
+    }
 
-  function getMaterial(): String {}
+    public function getMaterial(): String {
+        throw "stub: getMaterial not decompiled";
+    }
 
-  function getPantSpriteName(): String {}
+    public function getPantSpriteName(): String {
+        throw "stub: getPantSpriteName not decompiled";
+    }
 
-  function getTopSpriteName(): String {}
+    public function getTopSpriteName(): String {
+        throw "stub: getTopSpriteName not decompiled";
+    }
 
-  function hasSeenEnoughBoss(isShort: Bool): Bool {}
+    public function hasSeenEnoughBoss(arg0: Bool): Bool {
+        throw "stub: hasSeenEnoughBoss not decompiled";
+    }
 
-  function giveMissingBlueprints(hero: en.Hero.Hero, itemMeta: tool.ItemMetaManager.ItemMetaManager) {}
+    public function giveMissingBlueprints(arg0: en.Hero, arg1: tool.ItemMetaManager): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

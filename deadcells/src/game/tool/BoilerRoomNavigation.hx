@@ -1,27 +1,41 @@
 package tool;
+
 class BoilerRoomNavigation extends libs.Process {
-  var level: pr.Level.Level;
-  var nodeCache: haxe.ds.IntMap<Dynamic>;
-  var levelWidth: Int;
-  var pathRequestQueue: hl.types.ArrayObj<Dynamic>;
-  static var instance: BoilerRoomNavigation;
+    public static var instance: tool.BoilerRoomNavigation;
+    public var level: pr.Level;
+    public var nodeCache: haxe.ds.IntMap;
+    public var levelWidth: Int;
+    public var pathRequestQueue: Array<Dynamic>;
 
-  function __constructor__(_level: pr.Level.Level) {}
+    public function new(arg0: pr.Level) {
+        super();
+    }
 
-  function setLevel(_level: pr.Level.Level) {}
+    public function setLevel(arg0: pr.Level): Void {
+    }
 
-  function pushOrUpdatePathRequest(requester: en.mob.BoilerRoom.BoilerRoom, target: tool.CPoint.CPoint) {}
+    public function pushOrUpdatePathRequest(arg0: en.mob.BoilerRoom, arg1: tool.CPoint): Void {
+    }
 
-  function cancelPathRequest(requester: en.mob.BoilerRoom.BoilerRoom) {}
+    public function cancelPathRequest(arg0: en.mob.BoilerRoom): Void {
+    }
 
-  function generatePath(targetCX: Int, targetCY: Int, startCX: Int, startCY: Int): hl.types.ArrayObj<Dynamic> {}
+    public function generatePath(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Array<Dynamic> {
+        throw "stub: generatePath not decompiled";
+    }
 
-  function isCollision(x: Int, y: Int): Bool {}
+    public function isCollision(arg0: Int, arg1: Int): Bool {
+        throw "stub: isCollision not decompiled";
+    }
 
-  function posToKey(x: Int, y: Int): Int {}
+    public function posToKey(arg0: Int, arg1: Int): Int {
+        throw "stub: posToKey not decompiled";
+    }
 
-  function getNodeFromPosition(x: Int, y: Int): Dynamic {}
+    public function getNodeFromPosition(arg0: Int, arg1: Int): Dynamic {
+        throw "stub: getNodeFromPosition not decompiled";
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

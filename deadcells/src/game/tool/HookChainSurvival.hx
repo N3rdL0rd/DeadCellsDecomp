@@ -1,62 +1,80 @@
 package tool;
+
 class HookChainSurvival extends libs.Process {
-  var wrapper: h2d.Object.Object;
-  var owner: en.mob.AmazonSurvival.AmazonSurvival;
-  var parts: hl.types.ArrayObj<Dynamic>;
-  var grappling: libs.heaps.slib.HSprite.HSprite;
-  var grapplingWid: Int;
-  var hookRadius: Float;
-  var visible: Bool;
-  var audible: Bool;
-  var maxChainLength: Float;
-  var ratio: Float;
-  var oscil: Float;
-  var tensionOverride: Dynamic;
-  var dx: Float;
-  var dy: Float;
-  var wx: Float;
-  var wy: Float;
-  var lastWx: Float;
-  var lastWy: Float;
-  var ang: Float;
-  var isBack: Bool;
-  var dir: Int;
-  var item: tool.InventItem.InventItem;
-  var atkData: tool.atk.AttackData.AttackData;
-  var targetGetter: Dynamic;
-  var atkType: Dynamic;
-  var hand: String;
-  var checkCollDist: Float;
-  var enableOnionTrail: Bool;
-  var onions: hl.types.ArrayObj<Dynamic>;
-  var lastCheck: tool.FPoint.FPoint;
+    public var wrapper: h2d.Object;
+    public var owner: en.mob.AmazonSurvival;
+    public var parts: Array<Dynamic>;
+    public var grappling: libs.heaps.slib.HSprite;
+    public var grapplingWid: Int;
+    public var hookRadius: Float;
+    public var visible: Bool;
+    public var audible: Bool;
+    public var maxChainLength: Float;
+    public var ratio: Float;
+    public var oscil: Float;
+    public var tensionOverride: Dynamic;
+    public var dx: Float;
+    public var dy: Float;
+    public var wx: Float;
+    public var wy: Float;
+    public var lastWx: Float;
+    public var lastWy: Float;
+    public var ang: Float;
+    public var isBack: Bool;
+    public var dir: Int;
+    public var item: tool.InventItem;
+    public var atkData: tool.atk.AttackData;
+    public var targetGetter: Dynamic;
+    public var atkType: en.mob.BallAtkType;
+    public var hand: String;
+    public var checkCollDist: Float;
+    public var enableOnionTrail: Bool;
+    public var onions: Array<Dynamic>;
+    public var lastCheck: tool.FPoint;
 
-  function onReachNothing() {}
+    public function new(arg0: en.mob.AmazonSurvival, arg1: String, arg2: String, arg3: Float, arg4: Dynamic, arg5: String) {
+        super();
+    }
 
-  function onRetractStart() {}
+    public override function onDispose(): Void {
+    }
 
-  function onRetractComplete() {}
+    public function retract(): Void {
+    }
 
-  function __constructor__(e: en.mob.AmazonSurvival.AmazonSurvival, k: String, idProjectile: String, len: Float, targetGetter: Dynamic, _hand: String) {}
+    public function launch(arg0: tool.atk.AttackData, arg1: Ref, arg2: en.mob.BallAtkType): Void {
+    }
 
-  function onDispose() {}
+    public function isExtending(): Bool {
+        throw "stub: isExtending not decompiled";
+    }
 
-  function retract() {}
+    public function isRetracting(): Bool {
+        throw "stub: isRetracting not decompiled";
+    }
 
-  function launch(a: tool.atk.AttackData.AttackData, ang: Dynamic, _atkType: Dynamic) {}
+    public override function postUpdate(): Void {
+    }
 
-  function isExtending(): Bool {}
+    public function collisionCheck(arg0: Float, arg1: Float): Void {
+    }
 
-  function isRetracting(): Bool {}
+    public override function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function set_visible(arg0: Bool): Bool {
+        throw "stub: set_visible not decompiled";
+    }
 
-  function collisionCheck(x: Float, y: Float) {}
+    public function onVisibleChanged(): Void {
+    }
 
-  function update() {}
+    public function onRetractComplete(): Void {
+    }
 
-  function set_visible(v: Bool): Bool {}
+    public function onRetractStart(): Void {
+    }
 
-  function onVisibleChanged() {}
+    public function onReachNothing(): Void {
+    }
 }
-

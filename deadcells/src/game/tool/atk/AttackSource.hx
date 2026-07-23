@@ -1,26 +1,40 @@
 package tool.atk;
+
 class AttackSourceImpl {
-  var parent: Entity;
-  var <none>: Dynamic;
+    public var parent: Entity;
+    public var : Dynamic;
 
-  function __constructor__(parent: Entity) {}
+    public function new(arg0: Entity) {
+    }
 
-  function onHitInit(atk: tool.atk.AttackData.AttackData) {}
+    public function onHitInit(arg0: tool.atk.AttackData): Void {
+    }
 
-  function preAttack(atk: tool.atk.AttackData.AttackData) {}
+    public function preAttack(arg0: tool.atk.AttackData): Void {
+    }
 
-  function updateAffixes(atk: tool.atk.AttackData.AttackData) {}
+    public function updateAffixes(arg0: tool.atk.AttackData): Void {
+    }
 
-  function computeBonusMul(atk: tool.atk.AttackData.AttackData, target: Entity): Float {}
+    public function computeBonusMul(arg0: tool.atk.AttackData, arg1: Entity): Float {
+        throw "stub: computeBonusMul not decompiled";
+    }
 
-  function computeExtraBonusMul(atk: tool.atk.AttackData.AttackData, target: Entity): Float {}
+    public function computeExtraBonusMul(arg0: tool.atk.AttackData, arg1: Entity): Float {
+        throw "stub: computeExtraBonusMul not decompiled";
+    }
 
-  function computeBonusAdd(atk: tool.atk.AttackData.AttackData, target: Entity): Float {}
+    public function computeBonusAdd(arg0: tool.atk.AttackData, arg1: Entity): Float {
+        throw "stub: computeBonusAdd not decompiled";
+    }
 
-  function computeReduceMul(atk: tool.atk.AttackData.AttackData, target: Entity): Float {}
+    public function computeReduceMul(arg0: tool.atk.AttackData, arg1: Entity): Float {
+        throw "stub: computeReduceMul not decompiled";
+    }
 
-  function postHitResultUpdate(atk: tool.atk.AttackData.AttackData, target: Entity) {}
+    public function postHitResultUpdate(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function onHit(atk: tool.atk.AttackData.AttackData, target: Entity) {}
+    public function onHit(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 }
-

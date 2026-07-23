@@ -1,130 +1,191 @@
 package en.pet;
+
 class FlyingSword extends en.Pet {
-  var fxColor: Int;
-  var onFront: Bool;
-  var move: tool.mv.MvFly.MvFly;
-  var offsetX: Float;
-  var offsetY: Float;
-  var backOrForth: Bool;
-  var weaponInfos: Dynamic;
-  var currentPetToKill: Entity;
-  var attackList: hl.types.ArrayObj<Dynamic>;
-  var currentAttackId: Int;
-  var nextAttackId: Int;
-  var compositeAreas: hl.types.ArrayObj<Dynamic>;
-  var replacedWeaponItem: tool.InventItem.InventItem;
-  var replacedWeapon: tool.Weapon.Weapon;
-  var weaponItem: tool.InventItem.InventItem;
-  var appearDeck: hl.types.ArrayObj<Dynamic>;
-  var killedPetDeck: hl.types.ArrayObj<Dynamic>;
-  var smallTalkDeck: hl.types.ArrayObj<Dynamic>;
-  var impatientDeck: hl.types.ArrayObj<Dynamic>;
-  var disappearDeck: hl.types.ArrayObj<Dynamic>;
-  var grabDeck: hl.types.ArrayObj<Dynamic>;
-  var releaseDeck: hl.types.ArrayObj<Dynamic>;
-  var attackUnmarkedDeck: hl.types.ArrayObj<Dynamic>;
-  var attackConsumeDeck: hl.types.ArrayObj<Dynamic>;
-  var attackFullMarkedDeck: hl.types.ArrayObj<Dynamic>;
-  var parentHitMarkedDeck: hl.types.ArrayObj<Dynamic>;
-  var parentHitNoMarkedDeck: hl.types.ArrayObj<Dynamic>;
-  var parentHitFullMarkDeck: hl.types.ArrayObj<Dynamic>;
-  var petCount: Int;
-  var savedDepopCd: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var fxColor: Int;
+    public var onFront: Bool;
+    public var move: tool.mv.MvFly;
+    public var offsetX: Float;
+    public var offsetY: Float;
+    public var backOrForth: Bool;
+    public var weaponInfos: Dynamic;
+    public var currentPetToKill: Entity;
+    public var attackList: Array<Dynamic>;
+    public var currentAttackId: Int;
+    public var nextAttackId: Int;
+    public var compositeAreas: Array<Dynamic>;
+    public var replacedWeaponItem: tool.InventItem;
+    public var replacedWeapon: tool.Weapon;
+    public var weaponItem: tool.InventItem;
+    public var appearDeck: Array<Dynamic>;
+    public var killedPetDeck: Array<Dynamic>;
+    public var smallTalkDeck: Array<Dynamic>;
+    public var impatientDeck: Array<Dynamic>;
+    public var disappearDeck: Array<Dynamic>;
+    public var grabDeck: Array<Dynamic>;
+    public var releaseDeck: Array<Dynamic>;
+    public var attackUnmarkedDeck: Array<Dynamic>;
+    public var attackConsumeDeck: Array<Dynamic>;
+    public var attackFullMarkedDeck: Array<Dynamic>;
+    public var parentHitMarkedDeck: Array<Dynamic>;
+    public var parentHitNoMarkedDeck: Array<Dynamic>;
+    public var parentHitFullMarkDeck: Array<Dynamic>;
+    public var petCount: Int;
+    public var savedDepopCd: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, p: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: tool.InventItem) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function initSayDeck() {}
+    public function initSayDeck(): Void {
+    }
 
-  function initAreas() {}
+    public function initAreas(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initSkill(info: Dynamic, indexStrike: Int) {}
+    public function initSkill(arg0: Dynamic, arg1: Int): Void {
+    }
 
-  function getRelevantTierFor(i: tool.InventItem.InventItem): Int {}
+    public function getRelevantTierFor(arg0: tool.InventItem): Int {
+        throw "stub: getRelevantTierFor not decompiled";
+    }
 
-  function hitCurrentTarget(chargeCD: Float, areas: hl.types.ArrayObj<Dynamic>) {}
+    public function hitCurrentTarget(arg0: Float, arg1: Array<Dynamic>): Void {
+    }
 
-  function get_globalUiX(): Float {}
+    public function get_globalUiX(): Float {
+        throw "stub: get_globalUiX not decompiled";
+    }
 
-  function get_globalUiY(): Float {}
+    public function get_globalUiY(): Float {
+        throw "stub: get_globalUiY not decompiled";
+    }
 
-  function onMoveTargetReached() {}
+    public function onMoveTargetReached(): Void {
+    }
 
-  function unsetDepopTimer() {}
+    public function unsetDepopTimer(): Void {
+    }
 
-  function setDepopTimer(time: Float) {}
+    public function setDepopTimer(arg0: Float): Void {
+    }
 
-  function getRemainingTime(): Float {}
+    public function getRemainingTime(): Float {
+        throw "stub: getRemainingTime not decompiled";
+    }
 
-  function isImpatient(): Bool {}
+    public function isImpatient(): Bool {
+        throw "stub: isImpatient not decompiled";
+    }
 
-  function parentHitTarget(crit: Bool, fullMark: Bool) {}
+    public function parentHitTarget(arg0: Bool, arg1: Bool): Void {
+    }
 
-  function swordSay(textDeck: hl.types.ArrayObj<Dynamic>, textColor: Dynamic, bgColor: Dynamic, forced: Dynamic) {}
+    public function swordSay(arg0: Array<Dynamic>, arg1: Ref, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function onTargetLost() {}
+    public override function onTargetLost(): Void {
+    }
 
-  function resetAttackQueue() {}
+    public function resetAttackQueue(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function initTarget() {}
+    public override function initTarget(): Void {
+    }
 
-  function aiLocked(): Bool {}
+    public override function aiLocked(): Bool {
+        throw "stub: aiLocked not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function updateAttack() {}
+    public function updateAttack(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function depop() {}
+    public override function depop(): Void {
+    }
 
-  function buff(buffItem: tool.InventItem.InventItem) {}
+    public override function buff(arg0: tool.InventItem): Void {
+    }
 
-  function onBuff(buffItem: tool.InventItem.InventItem) {}
+    public override function onBuff(arg0: tool.InventItem): Void {
+    }
 
-  function getStoredWeaponItem(): tool.InventItem.InventItem {}
+    public function getStoredWeaponItem(): tool.InventItem {
+        throw "stub: getStoredWeaponItem not decompiled";
+    }
 
-  function overrideEquipedWeapon(withFeedbacks: Bool) {}
+    public function overrideEquipedWeapon(arg0: Bool): Void {
+    }
 
-  function initReplacedWeapon() {}
+    public function initReplacedWeapon(): Void {
+    }
 
-  function onDebuff(buffItem: tool.InventItem.InventItem) {}
+    public override function onDebuff(arg0: tool.InventItem): Void {
+    }
 
-  function removeOverrideWeapon(withFeedback: Bool) {}
+    public function removeOverrideWeapon(arg0: Bool): Void {
+    }
 
-  function chooseWeaponToReplace(): tool.Weapon.Weapon {}
+    public function chooseWeaponToReplace(): tool.Weapon {
+        throw "stub: chooseWeaponToReplace not decompiled";
+    }
 
-  function generateWeaponItem(): tool.InventItem.InventItem {}
+    public function generateWeaponItem(): tool.InventItem {
+        throw "stub: generateWeaponItem not decompiled";
+    }
 
-  function equipWeapon() {}
+    public function equipWeapon(): Void {
+    }
 
-  function onBeginLongPress() {}
+    public function onBeginLongPress(): Void {
+    }
 
-  function noPetReaction() {}
+    public override function noPetReaction(): Void {
+    }
 
-  function petReaction() {}
+    public override function petReaction(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

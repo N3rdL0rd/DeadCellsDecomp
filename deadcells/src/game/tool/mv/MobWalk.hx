@@ -1,23 +1,36 @@
 package tool.mv;
+
 class MobWalk extends tool.mv.MvWalk {
-  var mob: en.Mob.Mob;
-  var reverseWalk: Bool;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var mob: en.Mob;
+    public var reverseWalk: Bool;
 
-  function __constructor__(mob: en.Mob.Mob) {}
+    public function new(arg0: en.Mob) {
+        super();
+    }
 
-  function getJumpSpeed(): Float {}
+    public override function getJumpSpeed(): Float {
+        throw "stub: getJumpSpeed not decompiled";
+    }
 
-  function getWalkSpeed(): Float {}
+    public override function getWalkSpeed(): Float {
+        throw "stub: getWalkSpeed not decompiled";
+    }
 
-  function canWalk(): Bool {}
+    public override function canWalk(): Bool {
+        throw "stub: canWalk not decompiled";
+    }
 
-  function onStep() {}
+    public override function onStep(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

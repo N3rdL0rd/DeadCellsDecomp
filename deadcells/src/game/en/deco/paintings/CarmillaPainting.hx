@@ -1,49 +1,67 @@
 package en.deco.paintings;
+
 class CarmillaEye {
-  var spr: libs.heaps.slib.HSprite.HSprite;
-  var posX: Float;
-  var posY: Float;
-  var refX: Float;
-  var targetSprPosX: Float;
-  var targetSprPosY: Float;
-  var lastSprPosX: Float;
-  var lastSprPosY: Float;
+    public var spr: libs.heaps.slib.HSprite;
+    public var posX: Float;
+    public var posY: Float;
+    public var refX: Float;
+    public var targetSprPosX: Float;
+    public var targetSprPosY: Float;
+    public var lastSprPosX: Float;
+    public var lastSprPosY: Float;
 
-  function __constructor__(level: pr.Level.Level) {}
+    public function new(arg0: pr.Level) {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function track(h: en.Hero.Hero, r: Float) {}
+    public function track(arg0: en.Hero, arg1: Float): Void {
+    }
 
-  function updateLastSprPos() {}
+    public function updateLastSprPos(): Void {
+    }
 
-  function setPos(refX: Float, posX: Float, posY: Float) {}
+    public function setPos(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 }
 
 class CarmillaPainting extends en.deco.paintings.LoopPainting {
-  var eyeLeft: en.deco.paintings.CarmillaPainting.CarmillaPainting;
-  var eyeRight: en.deco.paintings.CarmillaPainting.CarmillaPainting;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var eyeLeft: en.deco.paintings.CarmillaEye;
+    public var eyeRight: en.deco.paintings.CarmillaEye;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, _speed: Float) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic) {}
+    public function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function setPosPixel(x: Float, y: Float) {}
+    public function setPosPixel(arg0: Float, arg1: Float): Void {
+    }
 
-  function setEyesPos() {}
+    public function setEyesPos(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

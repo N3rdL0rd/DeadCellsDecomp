@@ -1,31 +1,44 @@
 package tool.mod;
+
 class CDBManager {
-  var originalPak: hxd.fmt.pak.FileSystem.FileSystem;
-  var linesIgnored: hl.types.ArrayObj<Dynamic>;
-  static var instance: CDBManager;
+    public static var instance: tool.mod.CDBManager;
+    public var originalPak: hxd.fmt.pak.FileSystem;
+    public var linesIgnored: Array<Dynamic>;
 
-  function __constructor__(_originalPak: hxd.fmt.pak.FileSystem.FileSystem) {}
+    public function new(arg0: hxd.fmt.pak.FileSystem) {
+    }
 
-  function getAlteredCDB(): String {}
+    public function getAlteredCDB(): String {
+        throw "stub: getAlteredCDB not decompiled";
+    }
 
-  function parseOverloadedCDB(_onOverwrite: Dynamic, _onAdd: Dynamic, _filesContent: haxe.ds.StringMap) {}
+    public function parseOverloadedCDB(arg0: Dynamic, arg1: Dynamic, arg2: haxe.ds.StringMap): Void {
+    }
 
-  function expand(_cdbJson: String, _filesContent: haxe.ds.StringMap, _fileTree: haxe.ds.StringMap) {}
+    public function expand(arg0: String, arg1: haxe.ds.StringMap, arg2: haxe.ds.StringMap): Void {
+    }
 
-  function collapse(_filesContent: haxe.ds.StringMap, _fileTree: haxe.ds.StringMap): String {}
+    public function collapse(arg0: haxe.ds.StringMap, arg1: haxe.ds.StringMap): String {
+        throw "stub: collapse not decompiled";
+    }
 
-  function stringReplace(_reference: String, _oldString: String, _newString: String): String {}
+    public function stringReplace(arg0: String, arg1: String, arg2: String): String {
+        throw "stub: stringReplace not decompiled";
+    }
 
-  function digitCount(_value: Int): Int {}
+    public function digitCount(arg0: Int): Int {
+        throw "stub: digitCount not decompiled";
+    }
 }
 
 class CDBSeparator {
-  var id: Int;
-  var name: String;
-  var lineIndex: Int;
+    public var id: Int;
+    public var name: String;
+    public var lineIndex: Int;
 
-  function __constructor__(_id: Int, _name: String, _lineIndex: Int) {}
+    public function new(arg0: Int, arg1: String, arg2: Int) {
+    }
 
-  function pushLine() {}
+    public function pushLine(): Void {
+    }
 }
-

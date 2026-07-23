@@ -1,65 +1,103 @@
 package en.inter;
+
 class TrainingWeaponSpawner extends en.Interactive {
-  var isActivated: Bool;
-  var spawnHeight: Int;
-  var tier: String;
-  var color: Int;
-  var spawnedItems: hl.types.ArrayObj<Dynamic>;
-  var maxItemSpawned: Int;
-  var baseSeed: Int;
-  var rseed: libs.Rand.Rand;
-  static var lootGen: level.LootGen.LootGen;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var lootGen: level.LootGen;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var isActivated: Bool;
+    public var spawnHeight: Int;
+    public var tier: String;
+    public var color: Int;
+    public var spawnedItems: Array<Dynamic>;
+    public var maxItemSpawned: Int;
+    public var baseSeed: Int;
+    public var rseed: libs.Rand;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, seed: Int, tier: String, spawnHei: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: String, arg5: Ref) {
+        super();
+    }
 
-  function get_training(): tool.training.TrainingMode.TrainingMode {}
+    public function get_training(): tool.training.TrainingMode {
+        throw "stub: get_training not decompiled";
+    }
 
-  function get_weaponLevel(): Int {}
+    public function get_weaponLevel(): Int {
+        throw "stub: get_weaponLevel not decompiled";
+    }
 
-  function set_weaponLevel(v: Int): Int {}
+    public function set_weaponLevel(arg0: Int): Int {
+        throw "stub: set_weaponLevel not decompiled";
+    }
 
-  function get_weaponQuality(): Int {}
+    public function get_weaponQuality(): Int {
+        throw "stub: get_weaponQuality not decompiled";
+    }
 
-  function set_weaponQuality(v: Int): Int {}
+    public function set_weaponQuality(arg0: Int): Int {
+        throw "stub: set_weaponQuality not decompiled";
+    }
 
-  function get_weaponColorless(): Bool {}
+    public function get_weaponColorless(): Bool {
+        throw "stub: get_weaponColorless not decompiled";
+    }
 
-  function set_weaponColorless(v: Bool): Bool {}
+    public function set_weaponColorless(arg0: Bool): Bool {
+        throw "stub: set_weaponColorless not decompiled";
+    }
 
-  function get_weaponLegendary(): Bool {}
+    public function get_weaponLegendary(): Bool {
+        throw "stub: get_weaponLegendary not decompiled";
+    }
 
-  function set_weaponLegendary(v: Bool): Bool {}
+    public function set_weaponLegendary(arg0: Bool): Bool {
+        throw "stub: set_weaponLegendary not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function disable() {}
+    public function disable(): Void {
+    }
 
-  function enable() {}
+    public function enable(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function flush() {}
+    public function flush(): Void {
+    }
 
-  function spawnItem(item: String) {}
+    public function spawnItem(arg0: String): Void {
+    }
 
-  function onSpawnItem() {}
+    public function onSpawnItem(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

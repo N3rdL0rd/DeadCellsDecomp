@@ -1,36 +1,55 @@
 package en.loot;
+
 class Gem extends en.Loot {
-  var value: Int;
-  var fromCombo: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var value: Int;
+    public var fromCombo: Bool;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, val: Int, combo: Dynamic): Gem {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Ref) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, val: Int, combo: Dynamic) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Ref): en.loot.Gem {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onDropAsLoot() {}
+    public function onDropAsLoot(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function pickUp(h: en.Hero.Hero) {}
+    public override function pickUp(arg0: en.Hero): Void {
+    }
 
-  function pickUpByEntity(e: Entity) {}
+    public override function pickUpByEntity(arg0: Entity): Void {
+    }
 
-  function pickUpFeedBack(isHero: Dynamic) {}
+    public override function pickUpFeedBack(arg0: Ref): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

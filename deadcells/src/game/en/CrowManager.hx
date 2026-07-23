@@ -1,45 +1,69 @@
 package en;
+
 class CrowManager extends Entity {
-  var hero: en.Hero.Hero;
-  var crowMaxNb: Int;
-  var currentCrowNb: Int;
-  var lastKnownHeroRoom: level.Room.Room;
-  var nearbyPlatforms: hl.types.ArrayObj<Dynamic>;
-  static var xSpawnPadding: Int;
-  static var ySpawnPadding: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var xSpawnPadding: Int;
+    public static var ySpawnPadding: Int;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var hero: en.Hero;
+    public var crowMaxNb: Int;
+    public var currentCrowNb: Int;
+    public var lastKnownHeroRoom: level.Room;
+    public var nearbyPlatforms: Array<Dynamic>;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, hero: en.Hero.Hero) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function updateCurrentRoom() {}
+    public function updateCurrentRoom(): Void {
+    }
 
-  function tryToSpawnFlyingCrow() {}
+    public function tryToSpawnFlyingCrow(): Void {
+    }
 
-  function decrementCrow() {}
+    public function decrementCrow(): Void {
+    }
 
-  function shouldSpawnNewCrow(): Bool {}
+    public function shouldSpawnNewCrow(): Bool {
+        throw "stub: shouldSpawnNewCrow not decompiled";
+    }
 
-  function collideRoomPlatforms(cy: Int): Bool {}
+    public function collideRoomPlatforms(arg0: Int): Bool {
+        throw "stub: collideRoomPlatforms not decompiled";
+    }
 
-  function collideHeroPos(cy: Int): Bool {}
+    public function collideHeroPos(arg0: Int): Bool {
+        throw "stub: collideHeroPos not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

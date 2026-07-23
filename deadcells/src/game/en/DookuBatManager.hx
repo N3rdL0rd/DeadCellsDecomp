@@ -1,47 +1,73 @@
 package en;
+
 class DookuBatManager extends Entity {
-  var hero: en.Hero.Hero;
-  var batBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var POOL: hl.types.ArrayObj<Dynamic>;
-  var CURIDX: Int;
-  var SIZE: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var hero: en.Hero;
+    public var batBatch: libs.heaps.slib.HSpriteBatch;
+    public var POOL: Array<Dynamic>;
+    public var CURIDX: Int;
+    public var SIZE: Int;
 
-  function __constructor__(lvl: pr.Level.Level) {}
+    public function new(arg0: pr.Level) {
+        super();
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function canBeHit(): Bool {}
+    public override function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function initBatPool() {}
+    public function initBatPool(): Void {
+    }
 
-  function createBat(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, dir: Int, amp: Dynamic, frequency: Dynamic, splatters: Dynamic): en.bu.DookuBatBullet.DookuBatBullet {}
+    public function createBat(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Ref, arg6: Ref, arg7: Ref): en.bu.DookuBatBullet {
+        throw "stub: createBat not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function destroy() {}
+    public override function destroy(): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

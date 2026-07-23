@@ -1,25 +1,32 @@
 package tool;
+
 class TwitchMessage {
-  var channel: String;
-  var user: String;
-  var userWithAt: String;
-  var rawMsg: String;
-  var tags: haxe.ds.StringMap;
-  var isWhisper: Bool;
-  var color: Int;
-  var timeStamp: Float;
-  var cmdId: String;
-  var cmdParams: hl.types.ArrayObj<Dynamic>;
-  var bits: Int;
-  var displayName: String;
-  static var separators: hl.types.ArrayBytes<Int>;
+    public static var separators: Array<Int>;
+    public var channel: String;
+    public var user: String;
+    public var userWithAt: String;
+    public var rawMsg: String;
+    public var tags: haxe.ds.StringMap;
+    public var isWhisper: Bool;
+    public var color: Int;
+    public var timeStamp: Float;
+    public var cmdId: String;
+    public var cmdParams: Array<Dynamic>;
+    public var bits: Int;
+    public var displayName: String;
 
-  function __constructor__(channel: String, user: String, msg: String, tags: haxe.ds.StringMap, isWhisper: Bool) {}
+    public function new(arg0: String, arg1: String, arg2: String, arg3: haxe.ds.StringMap, arg4: Bool) {
+    }
 
-  function firstWordIs(w: String): Bool {}
+    public function firstWordIs(arg0: String): Bool {
+        throw "stub: firstWordIs not decompiled";
+    }
 
-  function getFirstWord(): String {}
+    public function getFirstWord(): String {
+        throw "stub: getFirstWord not decompiled";
+    }
 
-  function rawWithoutFirstWord(): String {}
+    public function rawWithoutFirstWord(): String {
+        throw "stub: rawWithoutFirstWord not decompiled";
+    }
 }
-

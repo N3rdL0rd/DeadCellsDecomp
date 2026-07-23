@@ -1,22 +1,28 @@
 package cine.coll;
+
 class EndCollectorPostSmash extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var deadHero: libs.heaps.slib.HSprite.HSprite;
-  var hom: en.Homunculus.Homunculus;
-  var endMask: h2d.Graphics.Graphics;
-  var blackBg: libs.heaps.slib.HSprite.HSprite;
-  var rayOfLight: libs.heaps.slib.HSprite.HSprite;
-  var consumeFx: tool.Consume.Consume;
-  var dissolutionLevel: Int;
+    public var hero: en.Hero;
+    public var deadHero: libs.heaps.slib.HSprite;
+    public var hom: en.Homunculus;
+    public var endMask: h2d.Graphics;
+    public var blackBg: libs.heaps.slib.HSprite;
+    public var rayOfLight: libs.heaps.slib.HSprite;
+    public var consumeFx: tool.Consume;
+    public var dissolutionLevel: Int;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

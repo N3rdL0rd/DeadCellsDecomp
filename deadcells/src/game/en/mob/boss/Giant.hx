@@ -1,191 +1,262 @@
 package en.mob.boss;
+
 class Giant extends en.mob.Boss {
-  var leftHand: en.mob.boss.giant.Hand.Hand;
-  var rightHand: en.mob.boss.giant.Hand.Hand;
-  var hands: hl.types.ArrayObj<Dynamic>;
-  var eye: en.mob.boss.giant.Eye.Eye;
-  var lastGroundedHand: en.mob.boss.giant.Hand.Hand;
-  var leftEyeTargetX: Float;
-  var rightEyeTargetX: Float;
-  var leftSuperCharges: Int;
-  var rightSuperCharges: Int;
-  var impulseDir: Int;
-  var weakenedX: Float;
-  var weakenedTime: Float;
-  var lastHeroSide: Bool;
-  var stableHeroTime: Float;
-  var stableHeroSide: Bool;
-  var moveTargetX: Float;
-  var moveTargetY: Float;
-  var moveTargetTime: Float;
-  var moveTargetReached: Bool;
-  var moveTargetReachedSignal: String;
-  var forcedNextAttack: Dynamic;
-  var bossRushModifiers: Dynamic;
-  var body: h2d.Layers.Layers;
-  var jaws: libs.heaps.slib.HSprite.HSprite;
-  var torso: libs.heaps.slib.HSprite.HSprite;
-  var leftShoulder: libs.heaps.slib.HSprite.HSprite;
-  var leftShoulderGlow: libs.heaps.slib.HSprite.HSprite;
-  var rightShoulder: libs.heaps.slib.HSprite.HSprite;
-  var rightShoulderGlow: libs.heaps.slib.HSprite.HSprite;
-  var leftShoulderBack: libs.heaps.slib.HSprite.HSprite;
-  var rightShoulderBack: libs.heaps.slib.HSprite.HSprite;
-  var leftShoulderSlots: libs.heaps.slib.HSprite.HSprite;
-  var rightShoulderSlots: libs.heaps.slib.HSprite.HSprite;
-  var leftShoulderFx: libs.heaps.slib.HSprite.HSprite;
-  var rightShoulderFx: libs.heaps.slib.HSprite.HSprite;
-  var ruby: libs.heaps.slib.HSprite.HSprite;
-  var rubyGlow: libs.heaps.slib.HSprite.HSprite;
-  var moveSpeed: Float;
-  var time: Float;
-  var curHeadOffsetX: Float;
-  var curHeadOffsetY: Float;
-  var headOffsetTargetX: Float;
-  var headOffsetTargetY: Float;
-  var jawsOffsetX: Float;
-  var jawsOffsetY: Float;
-  var laughRate: Float;
-  var leftShoulderSlotPoints: hl.types.ArrayObj<Dynamic>;
-  var rightShoulderSlotPoints: hl.types.ArrayObj<Dynamic>;
-  var sbFxNormal: h2d.SpriteBatch.SpriteBatch;
-  var sbFxAdd: h2d.SpriteBatch.SpriteBatch;
-  var particlePool: libs.heaps.HParticle.HParticle;
-  var glowMaskShader: hxsl.Macros.Macros;
-  var subSpritesAcquired: Bool;
-  var screamFx: Bool;
-  var torsoPoint: h2d.col.Point.Point;
-  var leftShoulderPoint: h2d.col.Point.Point;
-  var rightShoulderPoint: h2d.col.Point.Point;
-  var leftEyePoint: h2d.col.Point.Point;
-  var rightEyePoint: h2d.col.Point.Point;
-  var combatZoneCXMin: Int;
-  var combatZoneCXMid: Int;
-  var combatZoneCXMax: Int;
-  var combatZoneCYMin: Int;
-  var combatZoneCYMax: Int;
-  var combatZoneCWid: Int;
-  var vx: Dynamic;
-  var vy: Dynamic;
-  var vr: Dynamic;
-  var lvx: Dynamic;
-  var rvx: Dynamic;
-  var portalAng: Float;
-  var <none>: Dynamic;
-  static var BREATHE_SPEED: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var BREATHE_SPEED: Float;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var leftHand: en.mob.boss.giant.Hand;
+    public var rightHand: en.mob.boss.giant.Hand;
+    public var hands: Array<Dynamic>;
+    public var eye: en.mob.boss.giant.Eye;
+    public var lastGroundedHand: en.mob.boss.giant.Hand;
+    public var leftEyeTargetX: Float;
+    public var rightEyeTargetX: Float;
+    public var leftSuperCharges: Int;
+    public var rightSuperCharges: Int;
+    public var impulseDir: Int;
+    public var weakenedX: Float;
+    public var weakenedTime: Float;
+    public var lastHeroSide: Bool;
+    public var stableHeroTime: Float;
+    public var stableHeroSide: Bool;
+    public var moveTargetX: Float;
+    public var moveTargetY: Float;
+    public var moveTargetTime: Float;
+    public var moveTargetReached: Bool;
+    public var moveTargetReachedSignal: String;
+    public var forcedNextAttack: en.mob.boss.giant.GHAction;
+    public var bossRushModifiers: Dynamic;
+    public var body: h2d.Layers;
+    public var jaws: libs.heaps.slib.HSprite;
+    public var torso: libs.heaps.slib.HSprite;
+    public var leftShoulder: libs.heaps.slib.HSprite;
+    public var leftShoulderGlow: libs.heaps.slib.HSprite;
+    public var rightShoulder: libs.heaps.slib.HSprite;
+    public var rightShoulderGlow: libs.heaps.slib.HSprite;
+    public var leftShoulderBack: libs.heaps.slib.HSprite;
+    public var rightShoulderBack: libs.heaps.slib.HSprite;
+    public var leftShoulderSlots: libs.heaps.slib.HSprite;
+    public var rightShoulderSlots: libs.heaps.slib.HSprite;
+    public var leftShoulderFx: libs.heaps.slib.HSprite;
+    public var rightShoulderFx: libs.heaps.slib.HSprite;
+    public var ruby: libs.heaps.slib.HSprite;
+    public var rubyGlow: libs.heaps.slib.HSprite;
+    public var moveSpeed: Float;
+    public var time: Float;
+    public var curHeadOffsetX: Float;
+    public var curHeadOffsetY: Float;
+    public var headOffsetTargetX: Float;
+    public var headOffsetTargetY: Float;
+    public var jawsOffsetX: Float;
+    public var jawsOffsetY: Float;
+    public var laughRate: Float;
+    public var leftShoulderSlotPoints: Array<Dynamic>;
+    public var rightShoulderSlotPoints: Array<Dynamic>;
+    public var sbFxNormal: h2d.SpriteBatch;
+    public var sbFxAdd: h2d.SpriteBatch;
+    public var particlePool: libs.heaps.ParticlePool;
+    public var glowMaskShader: h3d.shader.AlphaMap;
+    public var subSpritesAcquired: Bool;
+    public var screamFx: Bool;
+    public var torsoPoint: h2d.col.Point;
+    public var leftShoulderPoint: h2d.col.Point;
+    public var rightShoulderPoint: h2d.col.Point;
+    public var leftEyePoint: h2d.col.Point;
+    public var rightEyePoint: h2d.col.Point;
+    public var combatZoneCXMin: Int;
+    public var combatZoneCXMid: Int;
+    public var combatZoneCXMax: Int;
+    public var combatZoneCYMin: Int;
+    public var combatZoneCYMax: Int;
+    public var combatZoneCWid: Int;
+    public var vx: tool.Ref;
+    public var vy: tool.Ref;
+    public var vr: tool.Ref;
+    public var lvx: tool.Ref;
+    public var rvx: tool.Ref;
+    public var portalAng: Float;
+    public var : Dynamic;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Giant {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.boss.Giant {
+        throw "stub: create not decompiled";
+    }
 
-  function get_idleX(): Int {}
+    public function get_idleX(): Int {
+        throw "stub: get_idleX not decompiled";
+    }
 
-  function get_idleY(): Int {}
+    public function get_idleY(): Int {
+        throw "stub: get_idleY not decompiled";
+    }
 
-  function isOneHandGrounded(): Bool {}
+    public function isOneHandGrounded(): Bool {
+        throw "stub: isOneHandGrounded not decompiled";
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function canBeGrabbedByHomunculus(): Bool {}
+    public function canBeGrabbedByHomunculus(): Bool {
+        throw "stub: canBeGrabbedByHomunculus not decompiled";
+    }
 
-  function moveTo(targetX: Float, targetY: Float, time: Float, signal: String, onlyHead: Dynamic) {}
+    public function moveTo(arg0: Float, arg1: Float, arg2: Float, arg3: String, arg4: Ref): Void {
+    }
 
-  function moveToStep() {}
+    public function moveToStep(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function setReady() {}
+    public override function setReady(): Void {
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function isLasering(): Bool {}
+    public function isLasering(): Bool {
+        throw "stub: isLasering not decompiled";
+    }
 
-  function onBossLevelUp() {}
+    public override function onBossLevelUp(): Void {
+    }
 
-  function cacheCombatZone(id: String) {}
+    public function cacheCombatZone(arg0: String): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function getMobSprites(): hl.types.ArrayObj<Dynamic> {}
+    public function getMobSprites(): Array<Dynamic> {
+        throw "stub: getMobSprites not decompiled";
+    }
 
-  function setGlowAlpha(v: Float, right: Bool, dir: Int) {}
+    public function setGlowAlpha(arg0: Float, arg1: Bool, arg2: Int): Void {
+    }
 
-  function interruptAllSkills() {}
+    public function interruptAllSkills(): Void {
+    }
 
-  function applyLaser(fromX: Float, fromY: Float, toX: Float, dir: Int) {}
+    public function applyLaser(arg0: Float, arg1: Float, arg2: Float, arg3: Int): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function createStalactite(x: Float, y: Float) {}
+    public function createStalactite(arg0: Float, arg1: Float): Void {
+    }
 
-  function createStalactiteWave() {}
+    public function createStalactiteWave(): Void {
+    }
 
-  function canReceiveAttack(a: tool.atk.AttackData.AttackData): Bool {}
+    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+        throw "stub: canReceiveAttack not decompiled";
+    }
 
-  function onLeaveMap() {}
+    public function onLeaveMap(): Void {
+    }
 
-  function onHandGrounded(hand: en.mob.boss.giant.Hand.Hand) {}
+    public function onHandGrounded(arg0: en.mob.boss.giant.Hand): Void {
+    }
 
-  function onHandRecover(hand: en.mob.boss.giant.Hand.Hand) {}
+    public function onHandRecover(arg0: en.mob.boss.giant.Hand): Void {
+    }
 
-  function handSecondActionDeck(): Bool {}
+    public function handSecondActionDeck(): Bool {
+        throw "stub: handSecondActionDeck not decompiled";
+    }
 
-  function hasLaserVise(): Bool {}
+    public function hasLaserVise(): Bool {
+        throw "stub: hasLaserVise not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onMoveTargetReached(signal: String) {}
+    public function onMoveTargetReached(arg0: String): Void {
+    }
 
-  function onScream() {}
+    public override function onScream(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function preUpdate() {}
+    public function preUpdate(): Void {
+    }
 
-  function laserVise() {}
+    public function laserVise(): Void {
+    }
 
-  function fxBulletPortal(x: Float, y: Float, radius: Float, dir: Int, c: Int) {}
+    public function fxBulletPortal(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function fxEyeSmoke(x: Float, y: Float, c: Int) {}
+    public function fxEyeSmoke(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function subColorBlink(s: libs.heaps.slib.HSprite.HSprite, c: Int, pow: Dynamic, t: Dynamic) {}
+    public function subColorBlink(arg0: libs.heaps.slib.HSprite, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function setHeadOffset(tx: Float, ty: Float, fromX: Dynamic, fromY: Dynamic) {}
+    public function setHeadOffset(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function fxChargeBulletGrid(uid: Int, x: Float, y: Float, radius: Float, ratio: Float, c: Int) {}
+    public function fxChargeBulletGrid(arg0: Int, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int): Void {
+    }
 
-  function updateSlotsGfx(right: Bool, level: Int) {}
+    public function updateSlotsGfx(arg0: Bool, arg1: Int): Void {
+    }
 
-  function fxSlot(pt: h2d.col.Point.Point, spr: libs.heaps.slib.HSprite.HSprite, nparts: Int, glowAlpha: Float) {}
+    public function fxSlot(arg0: h2d.col.Point, arg1: libs.heaps.slib.HSprite, arg2: Int, arg3: Float): Void {
+    }
 
-  function updateSuperCharges(right: Bool, newCharges: Int, withFx: Dynamic) {}
+    public function updateSuperCharges(arg0: Bool, arg1: Int, arg2: Ref): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function setLeftFloorState(walkable: Bool) {}
+    public function setLeftFloorState(arg0: Bool): Void {
+    }
 
-  function setRightFloorState(walkable: Bool) {}
+    public function setRightFloorState(arg0: Bool): Void {
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

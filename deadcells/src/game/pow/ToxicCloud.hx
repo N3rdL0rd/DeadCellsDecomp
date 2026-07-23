@@ -1,11 +1,16 @@
 package pow;
+
 class ToxicCloud extends Power {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  function __constructor__(owner: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

@@ -1,47 +1,72 @@
 package en.bu;
+
 class Shark extends en.Bullet {
-  var hasPierced: Bool;
-  var sharknadoed: Bool;
-  var forceRetrieveAmmo: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var hasPierced: Bool;
+    public var sharknadoed: Bool;
+    public var forceRetrieveAmmo: Bool;
 
-  function onBulletHit(e: Entity, a: tool.atk.AttackData.AttackData) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float) {
+        super();
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float) {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function stickAmmoOnVictims(): Bool {
+        throw "stub: stickAmmoOnVictims not decompiled";
+    }
 
-  function stickAmmoOnVictims(): Bool {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public override function hasAmmoToRetrieve(): Bool {
+        throw "stub: hasAmmoToRetrieve not decompiled";
+    }
 
-  function hasAmmoToRetrieve(): Bool {}
+    public override function attachFakeBulletBounce(): Void {
+    }
 
-  function attachFakeBulletBounce() {}
+    public override function createAmmoDrop(): en.loot.Ammo {
+        throw "stub: createAmmoDrop not decompiled";
+    }
 
-  function createAmmoDrop(): en.loot.Ammo.Ammo {}
+    public override function initAmmo(arg0: en.loot.Ammo): Void {
+    }
 
-  function initAmmo(a: en.loot.Ammo.Ammo) {}
+    public override function dispose(): Void {
+    }
 
-  function dispose() {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function spriteUpdate(): Void {
+    }
 
-  function spriteUpdate() {}
+    public function onEnterWater(): Void {
+    }
 
-  function onEnterWater() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 }
-

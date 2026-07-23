@@ -1,102 +1,145 @@
 package en;
+
 class CrossEntity extends Entity {
-  var weapon: tool.weap.Cross.Cross;
-  var item: tool.InventItem.InventItem;
-  var infos: Dynamic;
-  var isReturning: Bool;
-  var targetX: Float;
-  var counter: Int;
-  var registerBeginCounter: Int;
-  var stayBeginCounter: Int;
-  var returnBeginCounter: Int;
-  var attackData: tool.atk.AttackData.AttackData;
-  var initDir: Int;
-  var active: Bool;
-  var registering: Bool;
-  var registeredPos: hl.types.ArrayBytes<Float>;
-  var fakeCrosses: hl.types.ArrayObj<Dynamic>;
-  static var NB_ONION: Int;
-  static var DELAY_COUNTER: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var NB_ONION: Int;
+    public static var DELAY_COUNTER: Int;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var weapon: tool.weap.Cross;
+    public var item: tool.InventItem;
+    public var infos: Dynamic;
+    public var isReturning: Bool;
+    public var targetX: Float;
+    public var counter: Int;
+    public var registerBeginCounter: Int;
+    public var stayBeginCounter: Int;
+    public var returnBeginCounter: Int;
+    public var attackData: tool.atk.AttackData;
+    public var initDir: Int;
+    public var active: Bool;
+    public var registering: Bool;
+    public var registeredPos: Array<Float>;
+    public var fakeCrosses: Array<Dynamic>;
 
-  function __constructor__(from: Entity, w: tool.weap.Cross.Cross, item: tool.InventItem.InventItem, shootX: Float, shootY: Float, shootDir: Int) {}
+    public function new(arg0: Entity, arg1: tool.weap.Cross, arg2: tool.InventItem, arg3: Float, arg4: Float, arg5: Int) {
+        super();
+    }
 
-  function get_currentRegisterLength(): Int {}
+    public function get_currentRegisterLength(): Int {
+        throw "stub: get_currentRegisterLength not decompiled";
+    }
 
-  function initFakeCross(i: Int) {}
+    public function initFakeCross(arg0: Int): Void {
+    }
 
-  function get_targetSprPosY(): Float {}
+    public override function get_targetSprPosY(): Float {
+        throw "stub: get_targetSprPosY not decompiled";
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function inAccelerationRegion(): Bool {}
+    public function inAccelerationRegion(): Bool {
+        throw "stub: inAccelerationRegion not decompiled";
+    }
 
-  function accelerate() {}
+    public function accelerate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function beginRegistering() {}
+    public function beginRegistering(): Void {
+    }
 
-  function beginStay() {}
+    public function beginStay(): Void {
+    }
 
-  function beginReturn() {}
+    public function beginReturn(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function retrieve() {}
+    public function retrieve(): Void {
+    }
 
-  function onTouchOpponent(opponent: Entity) {}
+    public function onTouchOpponent(arg0: Entity): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
 
 class CrossFake extends libs.heaps.slib.HSprite {
-  var parentCross: en.CrossEntity.CrossEntity;
-  var dx: Float;
-  var dr: Float;
-  var counter: Int;
-  var oldX: Float;
-  var nextX: Float;
-  var killPos: Float;
-  var isReturning: Bool;
-  var baseAlpha: Float;
-  var active: Bool;
+    public var parentCross: en.CrossEntity;
+    public var dx: Float;
+    public var dr: Float;
+    public var counter: Int;
+    public var oldX: Float;
+    public var nextX: Float;
+    public var killPos: Float;
+    public var isReturning: Bool;
+    public var baseAlpha: Float;
+    public var active: Bool;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function init(parentCross: en.CrossEntity.CrossEntity, posX: Float, posY: Float, dx: Float, dr: Float, alpha: Float) {}
+    public function init(arg0: en.CrossEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float): Void {
+    }
 
-  function isActive(): Bool {}
+    public function isActive(): Bool {
+        throw "stub: isActive not decompiled";
+    }
 
-  function activate(angle: Float) {}
+    public function activate(arg0: Float): Void {
+    }
 
-  function fadeOut(killPos: Float) {}
+    public function fadeOut(arg0: Float): Void {
+    }
 
-  function free() {}
+    public function free(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate(tmod: Float) {}
+    public function postUpdate(arg0: Float): Void {
+    }
 }
-

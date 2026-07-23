@@ -1,48 +1,68 @@
 package en.mob.boss.mamaTick;
+
 class TickArm {
-  var rx: Float;
-  var ry: Float;
-  var mama: en.mob.boss.MamaTick.MamaTick;
-  var anim: spine.SpineAnimation.SpineAnimation;
-  var glowShader: shader.GlowKey.GlowKey;
-  var __uid: Int;
-  var <none>: Dynamic;
-  var <none>: Dynamic;
-  static var _atks: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
+    public static var _atks: Array<Dynamic>;
+    public static var __clid: Int;
+    public var rx: Float;
+    public var ry: Float;
+    public var mama: en.mob.boss.MamaTick;
+    public var anim: spine.SpineAnimation;
+    public var glowShader: shader.GlowKey;
+    public var __uid: Int;
+    public var : Dynamic;
+    public var : Dynamic;
 
-  function __constructor__(mama: en.mob.boss.MamaTick.MamaTick, rx: Float, ry: Float, isBack: Dynamic) {}
+    public function new(arg0: en.mob.boss.MamaTick, arg1: Float, arg2: Float, arg3: Ref) {
+    }
 
-  function setGlowColors(inner: Int, outer: Int) {}
+    public function setGlowColors(arg0: Int, arg1: Int): Void {
+    }
 
-  function announce() {}
+    public function announce(): Void {
+    }
 
-  function stopAnnounce() {}
+    public function stopAnnounce(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function isPlayingAny(names: hl.types.ArrayObj<Dynamic>): Bool {}
+    public function isPlayingAny(arg0: Array<Dynamic>): Bool {
+        throw "stub: isPlayingAny not decompiled";
+    }
 
-  function start(entry: spine.AnimationState.AnimationState) {}
+    public function start(arg0: spine.TrackEntry): Void {
+    }
 
-  function interrupt(entry: spine.AnimationState.AnimationState) {}
+    public function interrupt(arg0: spine.TrackEntry): Void {
+    }
 
-  function end(entry: spine.AnimationState.AnimationState) {}
+    public function end(arg0: spine.TrackEntry): Void {
+    }
 
-  function dispose(entry: spine.AnimationState.AnimationState) {}
+    public function dispose(arg0: spine.TrackEntry): Void {
+    }
 
-  function event(entry: spine.AnimationState.AnimationState, event: Dynamic) {}
+    public function event(arg0: spine.TrackEntry, arg1: spine.Event): Void {
+    }
 
-  function complete(entry: spine.AnimationState.AnimationState) {}
+    public function complete(arg0: spine.TrackEntry): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

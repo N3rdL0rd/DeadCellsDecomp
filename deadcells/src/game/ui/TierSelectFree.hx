@@ -1,77 +1,114 @@
 package ui;
+
 class TierSelectFree extends ui.TierSelect {
-  var chosenBrut: Int;
-  var chosenTact: Int;
-  var chosenSurv: Int;
-  var maxTotalScrolls: Dynamic;
-  var minTotalScrolls: Dynamic;
-  var curTotalScrolls: Int;
-  var recommendedTotalScrolls: Dynamic;
-  var maxScrollsForOne: Int;
-  var arrowUp: libs.heaps.slib.HSprite.HSprite;
-  var arrowUpOn: libs.heaps.slib.HSprite.HSprite;
-  var arrowDown: libs.heaps.slib.HSprite.HSprite;
-  var arrowDownOn: libs.heaps.slib.HSprite.HSprite;
-  var fInfo: h2d.Flow.Flow;
-  var infoHei: Int;
-  var infoTotalText: ui.Text.Text;
-  var infoRecommendedText: ui.Text.Text;
+    public var chosenBrut: Int;
+    public var chosenTact: Int;
+    public var chosenSurv: Int;
+    public var maxTotalScrolls: Dynamic;
+    public var minTotalScrolls: Dynamic;
+    public var curTotalScrolls: Int;
+    public var recommendedTotalScrolls: Dynamic;
+    public var maxScrollsForOne: Int;
+    public var arrowUp: libs.heaps.slib.HSprite;
+    public var arrowUpOn: libs.heaps.slib.HSprite;
+    public var arrowDown: libs.heaps.slib.HSprite;
+    public var arrowDownOn: libs.heaps.slib.HSprite;
+    public var fInfo: h2d.Flow;
+    public var infoHei: Int;
+    public var infoTotalText: ui.Text;
+    public var infoRecommendedText: ui.Text;
 
-  function __constructor__(hero: en.Hero.Hero, sourceEnt: Entity, maxScrollsForOne: Dynamic, recommendedTotalScrolls: Dynamic, minTotalScrolls: Dynamic, maxTotalScrolls: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: Entity, arg2: Ref, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic) {
+        super();
+    }
 
-  function get_tiersHei(): Int {}
+    public override function get_tiersHei(): Int {
+        throw "stub: get_tiersHei not decompiled";
+    }
 
-  function get_infoHei(): Int {}
+    public function get_infoHei(): Int {
+        throw "stub: get_infoHei not decompiled";
+    }
 
-  function firstOnResize() {}
+    public override function firstOnResize(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function updateTexts() {}
+    public function updateTexts(): Void {
+    }
 
-  function addTier(wid: Int, hei: Int, ii: tool.InventItem.InventItem, mainTier: String) {}
+    public override function addTier(arg0: Int, arg1: Int, arg2: tool.InventItem, arg3: String): Void {
+    }
 
-  function select(id: Int, instant: Dynamic) {}
+    public override function select(arg0: Int, arg1: Ref): Void {
+    }
 
-  function scrollIncreaseFeedback(delta: Int) {}
+    public function scrollIncreaseFeedback(arg0: Int): Void {
+    }
 
-  function updateArrowsVisuals() {}
+    public function updateArrowsVisuals(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function checkForFastCancel() {}
+    public override function checkForFastCancel(): Void {
+    }
 
-  function getChosenTier(tier: String): Int {}
+    public function getChosenTier(arg0: String): Int {
+        throw "stub: getChosenTier not decompiled";
+    }
 
-  function increaseChosenTier(delta: Int, tier: String) {}
+    public function increaseChosenTier(arg0: Int, arg1: String): Void {
+    }
 
-  function canIncreaseChosenTier(delta: Int, tier: String): Bool {}
+    public function canIncreaseChosenTier(arg0: Int, arg1: String): Bool {
+        throw "stub: canIncreaseChosenTier not decompiled";
+    }
 
-  function validate() {}
+    public override function validate(): Void {
+    }
 
-  function cancel() {}
+    public function cancel(): Void {
+    }
 
-  function equipTier(itemKind: String, count: Int) {}
+    public function equipTier(arg0: String, arg1: Int): Void {
+    }
 }
 
 class TierInfoFree extends ui.TierInfo {
-  var tierSelectFree: ui.TierSelectFree.TierSelectFree;
-  var statCountText: ui.Text.Text;
+    public var tierSelectFree: ui.TierSelectFree;
+    public var statCountText: ui.Text;
 
-  function __constructor__(parent: h2d.Flow.Flow, hero: en.Hero.Hero, wid: Int, hei: Int, ii: tool.InventItem.InventItem, mainTier: String, tierSelectFree: ui.TierSelectFree.TierSelectFree) {}
+    public function new(arg0: h2d.Flow, arg1: en.Hero, arg2: Int, arg3: Int, arg4: tool.InventItem, arg5: String, arg6: ui.TierSelectFree) {
+        super();
+    }
 
-  function get_brutTier(): Int {}
+    public override function get_brutTier(): Int {
+        throw "stub: get_brutTier not decompiled";
+    }
 
-  function get_tactTier(): Int {}
+    public override function get_tactTier(): Int {
+        throw "stub: get_tactTier not decompiled";
+    }
 
-  function get_survTier(): Int {}
+    public override function get_survTier(): Int {
+        throw "stub: get_survTier not decompiled";
+    }
 
-  function get_curTier(): Int {}
+    public function get_curTier(): Int {
+        throw "stub: get_curTier not decompiled";
+    }
 
-  function updateTexts() {}
+    public override function updateTexts(): Void {
+    }
 
-  function getBaseLife(): Int {}
+    public override function getBaseLife(): Int {
+        throw "stub: getBaseLife not decompiled";
+    }
 
-  function setSelected(tw: libs.misc.Tweenie.Tweenie, selected: Bool, instant: Dynamic) {}
+    public override function setSelected(arg0: libs.misc.Tweenie, arg1: Bool, arg2: Ref): Void {
+    }
 }
-

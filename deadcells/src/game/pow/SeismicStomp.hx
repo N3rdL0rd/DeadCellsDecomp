@@ -1,44 +1,63 @@
 package pow;
+
 class SeismicStomp extends Power {
-  var offsetCx: Int;
-  var stompStart: Float;
-  var stompRight: Float;
-  var stompLeft: Float;
-  var stompY: Int;
-  var startY: Float;
-  var fxRc: Int;
-  var fxC: Int;
-  var fxBigRockTile: Dynamic;
-  var fxSmallRockTile: Dynamic;
-  var diveSkill: tool.mainSkills.DiveAttack.DiveAttack;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var offsetCx: Int;
+    public var stompStart: Float;
+    public var stompRight: Float;
+    public var stompLeft: Float;
+    public var stompY: Int;
+    public var startY: Float;
+    public var fxRc: Int;
+    public var fxC: Int;
+    public var fxBigRockTile: tool.FxTile;
+    public var fxSmallRockTile: tool.FxTile;
+    public var diveSkill: tool.mainSkills.DiveAttack;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem, isDown: Bool, noJump: Dynamic, offsetCx: Dynamic, fxRc: Dynamic, fxC: Dynamic, fxBigRockTile: Dynamic, fxSmallRockTile: Dynamic) {}
+    public function new(arg0: Entity, arg1: tool.InventItem, arg2: Bool, arg3: Ref, arg4: Ref, arg5: Dynamic, arg6: Dynamic, arg7: tool.FxTile, arg8: tool.FxTile) {
+        super();
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function onOwnerDiveAttackLand() {}
+    public function onOwnerDiveAttackLand(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function checkIfCanDestroyCollision(caseX: Int, caseY: Int): Bool {}
+    public function checkIfCanDestroyCollision(arg0: Int, arg1: Int): Bool {
+        throw "stub: checkIfCanDestroyCollision not decompiled";
+    }
 
-  function stompHit(inf: Dynamic, scx: Float, scy: Int, dir: Int) {}
+    public function stompHit(arg0: Dynamic, arg1: Float, arg2: Int, arg3: Int): Void {
+    }
 
-  function getDiveAttackData(): Dynamic {}
+    public function getDiveAttackData(): Dynamic {
+        throw "stub: getDiveAttackData not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

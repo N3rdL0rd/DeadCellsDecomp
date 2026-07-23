@@ -1,25 +1,36 @@
 package tool.weap.sh;
+
 class ThunderShield extends tool.weap.BaseShield {
-  var hitArea: tool.Area.Area;
-  var hitIdx: Int;
-  var isHoldingAndLightning: Bool;
+    public var hitArea: tool.Area;
+    public var hitIdx: Int;
+    public var isHoldingAndLightning: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onShieldChargeStart() {}
+    public override function onShieldChargeStart(): Void {
+    }
 
-  function onShieldBlock(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public override function onShieldBlock(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function damageNearby(discharge: Dynamic) {}
+    public function damageNearby(arg0: Ref): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function isBuffed(): Bool {}
+    public function isBuffed(): Bool {
+        throw "stub: isBuffed not decompiled";
+    }
 
-  function onShieldHolding(ratio: Float) {}
+    public override function onShieldHolding(arg0: Float): Void {
+    }
 
-  function onShieldReleased() {}
+    public override function onShieldReleased(): Void {
+    }
 }
-

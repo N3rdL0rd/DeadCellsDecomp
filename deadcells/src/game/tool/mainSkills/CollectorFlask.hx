@@ -1,27 +1,42 @@
 package tool.mainSkills;
+
 class CollectorFlask extends tool.mainSkills.Heal {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function passiveFixedUpdate() {}
+    public function passiveFixedUpdate(): Void {
+    }
 
-  function onStart() {}
+    public override function onStart(): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function onCancel() {}
+    public function onCancel(): Void {
+    }
 
-  function prepare(): Bool {}
+    public function prepare(): Bool {
+        throw "stub: prepare not decompiled";
+    }
 
-  function onFountainRefill() {}
+    public override function onFountainRefill(): Void {
+    }
 
-  function onPickItem(from: Entity, i: tool.InventItem.InventItem) {}
+    public override function onPickItem(arg0: Entity, arg1: tool.InventItem): Void {
+    }
 
-  function getHealingSpeedMul(): Float {}
+    public override function getHealingSpeedMul(): Float {
+        throw "stub: getHealingSpeedMul not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

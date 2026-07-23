@@ -1,31 +1,39 @@
-
 class Splatter {
-  var gridId: Int;
-  var level: pr.Level.Level;
-  var cd: libs.Cooldown.Cooldown;
-  var spr: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var quickKill: Bool;
-  var dsX: Float;
-  var dsY: Float;
-  var dy: Float;
-  static var GRID: haxe.ds.IntMap<Dynamic>;
+    public static var GRID: haxe.ds.IntMap;
+    public var gridId: Int;
+    public var level: pr.Level;
+    public var cd: libs.Cooldown;
+    public var spr: libs.heaps.slib.HSpriteBE;
+    public var quickKill: Bool;
+    public var dsX: Float;
+    public var dsY: Float;
+    public var dy: Float;
 
-  static function singleHeavy(e: Entity) {}
+    public function new(arg0: pr.Level, arg1: String, arg2: Float, arg3: Float, arg4: Dynamic) {
+    }
 
-  function __constructor__(lvl: pr.Level.Level, k: String, x: Float, y: Float, col: Dynamic) {}
+    public static function singleHeavy(arg0: Entity): Void {
+    }
 
-  static function directionalThin(lvl: pr.Level.Level, x: Float, y: Float, ang: Float, dist: Float) {}
+    public static function singleLight(arg0: Entity): Void {
+    }
 
-  static function explosion(e: Entity) {}
+    public static function explosion(arg0: Entity): Void {
+    }
 
-  static function singleLight(e: Entity) {}
+    public static function directionalThin(arg0: pr.Level, arg1: Float, arg2: Float, arg3: Float, arg4: Float): Void {
+    }
 
-  static function directionalLarge(lvl: pr.Level.Level, x: Float, y: Float, ang: Float, dist: Float) {}
+    public static function directionalLarge(arg0: pr.Level, arg1: Float, arg2: Float, arg3: Float, arg4: Float): Void {
+    }
 
-  static function create(lvl: pr.Level.Level, k: String, x: Float, y: Float, col: Dynamic): Splatter {}
+    public static function create(arg0: pr.Level, arg1: String, arg2: Float, arg3: Float, arg4: Dynamic): Splatter {
+        throw "stub: create not decompiled";
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 }
-

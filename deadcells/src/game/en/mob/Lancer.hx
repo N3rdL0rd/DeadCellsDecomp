@@ -1,44 +1,67 @@
 package en.mob;
+
 class Lancer extends en.Mob {
-  var areaHor: tool.Area.Area;
-  var areaVertUp: tool.Area.Area;
-  var areaVertBot: tool.Area.Area;
-  var rangeVert: Float;
-  var bumpCCHor: Float;
-  var atkFx: libs.heaps.HParticle.HParticle;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var areaHor: tool.Area;
+    public var areaVertUp: tool.Area;
+    public var areaVertBot: tool.Area;
+    public var rangeVert: Float;
+    public var bumpCCHor: Float;
+    public var atkFx: libs.heaps.HParticle;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Lancer {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Lancer {
+        throw "stub: create not decompiled";
+    }
 
-  function getKind(): String {}
+    public function getKind(): String {
+        throw "stub: getKind not decompiled";
+    }
 
-  function getLib(): libs.heaps.slib.SpriteLib.SpriteLib {}
+    public function getLib(): libs.heaps.slib.SpriteLib {
+        throw "stub: getLib not decompiled";
+    }
 
-  function getNormalMap(): h3d.mat.Texture.Texture {}
+    public function getNormalMap(): h3d.mat.Texture {
+        throw "stub: getNormalMap not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

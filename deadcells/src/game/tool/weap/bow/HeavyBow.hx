@@ -1,20 +1,30 @@
 package tool.weap.bow;
+
 class HeavyBow extends tool.weap.BaseBow {
-  var touchGroundSfx: hxd.res.Sound.Sound;
-  var bulletSprite: libs.heaps.slib.HSprite.HSprite;
+    public var touchGroundSfx: hxd.res.Sound;
+    public var bulletSprite: libs.heaps.slib.HSprite;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onBowCharging(r: Float) {}
+    public override function onBowCharging(arg0: Float): Void {
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 
-  function doWallShake(target: Entity, bullet: en.Bullet.Bullet) {}
+    public function doWallShake(arg0: Entity, arg1: en.Bullet): Void {
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 }
-

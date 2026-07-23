@@ -1,68 +1,93 @@
 package spine;
+
 class AnimationState {
-  var data: AnimationStateData;
-  var tracks: hl.types.ArrayObj<Dynamic>;
-  var events: hl.types.ArrayObj<Dynamic>;
-  var listeners: hl.types.ArrayObj<Dynamic>;
-  var queue: Dynamic;
-  var propertyIDs: haxe.ds.IntMap<Dynamic>;
-  var mixingTo: hl.types.ArrayObj<Dynamic>;
-  var animationsChanged: Bool;
-  var timeScale: Float;
-  var trackEntryPool: spine.support.utils.Pool.Pool;
+    public var data: spine.AnimationStateData;
+    public var tracks: Array<Dynamic>;
+    public var events: Array<Dynamic>;
+    public var listeners: Array<Dynamic>;
+    public var queue: spine.EventQueue;
+    public var propertyIDs: haxe.ds.IntMap;
+    public var mixingTo: Array<Dynamic>;
+    public var animationsChanged: Bool;
+    public var timeScale: Float;
+    public var trackEntryPool: spine.support.utils.Pool;
 
-  function __constructor__(data: AnimationStateData) {}
+    public function new(arg0: spine.AnimationStateData) {
+    }
 
-  function updateMixingFrom(to: spine.AnimationState.AnimationState, delta: Float): Bool {}
+    public function updateMixingFrom(arg0: spine.TrackEntry, arg1: Float): Bool {
+        throw "stub: updateMixingFrom not decompiled";
+    }
 
-  function apply(skeleton: spine.Skeleton.Skeleton): Bool {}
+    public function apply(arg0: spine.Skeleton): Bool {
+        throw "stub: apply not decompiled";
+    }
 
-  function applyMixingFrom(to: spine.AnimationState.AnimationState, skeleton: spine.Skeleton.Skeleton, currentPose: Int): Float {}
+    public function applyMixingFrom(arg0: spine.TrackEntry, arg1: spine.Skeleton, arg2: Int): Float {
+        throw "stub: applyMixingFrom not decompiled";
+    }
 }
 
 class TrackEntry {
-  var animation: spine.Animation.Animation;
-  var next: TrackEntry;
-  var mixingFrom: TrackEntry;
-  var listener: Dynamic;
-  var trackIndex: Int;
-  var loop: Bool;
-  var eventThreshold: Float;
-  var attachmentThreshold: Float;
-  var drawOrderThreshold: Float;
-  var animationStart: Float;
-  var animationEnd: Float;
-  var animationLast: Float;
-  var nextAnimationLast: Float;
-  var delay: Float;
-  var trackTime: Float;
-  var trackLast: Float;
-  var nextTrackLast: Float;
-  var trackEnd: Float;
-  var timeScale: Float;
-  var alpha: Float;
-  var mixTime: Float;
-  var mixDuration: Float;
-  var interruptAlpha: Float;
-  var totalAlpha: Float;
-  var timelineData: hl.types.ArrayBytes<Int>;
-  var timelineDipMix: hl.types.ArrayObj<Dynamic>;
-  var timelinesRotation: hl.types.ArrayBytes<Float>;
-  var <none>: Dynamic;
+    public var animation: spine.Animation;
+    public var next: spine.TrackEntry;
+    public var mixingFrom: spine.TrackEntry;
+    public var listener: Dynamic;
+    public var trackIndex: Int;
+    public var loop: Bool;
+    public var eventThreshold: Float;
+    public var attachmentThreshold: Float;
+    public var drawOrderThreshold: Float;
+    public var animationStart: Float;
+    public var animationEnd: Float;
+    public var animationLast: Float;
+    public var nextAnimationLast: Float;
+    public var delay: Float;
+    public var trackTime: Float;
+    public var trackLast: Float;
+    public var nextTrackLast: Float;
+    public var trackEnd: Float;
+    public var timeScale: Float;
+    public var alpha: Float;
+    public var mixTime: Float;
+    public var mixDuration: Float;
+    public var interruptAlpha: Float;
+    public var totalAlpha: Float;
+    public var timelineData: Array<Int>;
+    public var timelineDipMix: Array<Dynamic>;
+    public var timelinesRotation: Array<Float>;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 
-  function setTimelineData(to: TrackEntry, mixingToArray: hl.types.ArrayObj<Dynamic>, propertyIDs: haxe.ds.IntMap<Dynamic>): TrackEntry {}
+    public function setTimelineData(arg0: spine.TrackEntry, arg1: Array<Dynamic>, arg2: haxe.ds.IntMap): spine.TrackEntry {
+        throw "stub: setTimelineData not decompiled";
+    }
 
-  function hasTimeline(id: Int): Bool {}
+    public function hasTimeline(arg0: Int): Bool {
+        throw "stub: hasTimeline not decompiled";
+    }
 }
 
-class _AnimationState.TrackEntryPool extends spine.support.utils.Pool {
+class EventQueue {
+    public var AnimationState_this: spine.AnimationState;
+    public var objects: Array<Dynamic>;
+    public var drainDisabled: Bool;
 
-  function __constructor__(initialCapacity: Dynamic, max: Dynamic) {}
-
-  function newObject(): Dynamic {}
+    public function new() {
+    }
 }
 
+class TrackEntryPool extends spine.support.utils.Pool {
+    public function new(arg0: Ref, arg1: Ref) {
+        super();
+    }
+
+    public override function newObject(): Dynamic {
+        throw "stub: newObject not decompiled";
+    }
+}

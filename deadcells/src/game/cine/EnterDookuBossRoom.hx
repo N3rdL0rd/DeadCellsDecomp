@@ -1,128 +1,181 @@
 package cine;
-class EnterDookuBRCineBase extends GameCinematic {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function canSkip(): Bool {}
-
-  function onEnd() {}
-}
 
 class EnterDookuBossRoom {
-  var boss: en.mob.Boss.Boss;
-  var fakeDooku: en.FakeDooku.FakeDooku;
-  var h: en.Hero.Hero;
-  var nameBossTxt: ui.Text.Text;
-  var middleM: hxbit.Macros.Macros;
+    public var boss: en.mob.Boss;
+    public var fakeDooku: en.FakeDooku;
+    public var h: en.Hero;
+    public var nameBossTxt: ui.Text;
+    public var middleM: level.Marker;
 
-  function __constructor__(hero: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+    }
 
-  function killCine(cine: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-}
-
-class EDBR_BossRush extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function canSkip(): Bool {}
-}
-
-class EDBR_Dooku extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function onEnd() {}
-
-  function canSkip(): Bool {}
-}
-
-class EDBR_Adele extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function onEnd() {}
-
-  function canSkip(): Bool {}
-}
-
-class EDBR_Richter extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function onEnd() {}
-
-  function canSkip(): Bool {}
-}
-
-class EDBR_Simon extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function onEnd() {}
-
-  function canSkip(): Bool {}
-}
-
-class EDBR_Trevor extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function onEnd() {}
-
-  function canSkip(): Bool {}
-}
-
-class EDBR_HauntedArmor extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function onEnd() {}
-
-  function canSkip(): Bool {}
-}
-
-class EDBR_Sypha extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function onEnd() {}
-
-  function canSkip(): Bool {}
-}
-
-class EDBR_Maria extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function onEnd() {}
-
-  function canSkip(): Bool {}
-}
-
-class EDBR_Hector extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function onEnd() {}
-
-  function canSkip(): Bool {}
-}
-
-class EDBR_Alucard extends cine.EnterDookuBRCineBase {
-
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
-
-  function onEnd() {}
-
-  function canSkip(): Bool {}
+    public function killCine(arg0: cine.EnterDookuBRCineBase): Void {
+    }
 }
 
 class EDBR_Any extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
 
-  function __constructor__(parent: cine.EnterDookuBossRoom.EnterDookuBossRoom) {}
+    public override function onEnd(): Void {
+    }
 
-  function onEnd() {}
-
-  function canSkip(): Bool {}
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
 }
 
+class EDBR_BossRush extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EDBR_Richter extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function onEnd(): Void {
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EDBR_Simon extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function onEnd(): Void {
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EDBR_Trevor extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function onEnd(): Void {
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EDBR_Dooku extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function onEnd(): Void {
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EDBR_Adele extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function onEnd(): Void {
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EDBR_HauntedArmor extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function onEnd(): Void {
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EDBR_Hector extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function onEnd(): Void {
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EDBR_Alucard extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function onEnd(): Void {
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EDBR_Sypha extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function onEnd(): Void {
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EDBR_Maria extends cine.EnterDookuBRCineBase {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public override function onEnd(): Void {
+    }
+
+    public override function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+}
+
+class EnterDookuBRCineBase extends GameCinematic {
+    public function new(arg0: cine.EnterDookuBossRoom) {
+        super();
+    }
+
+    public function canSkip(): Bool {
+        throw "stub: canSkip not decompiled";
+    }
+
+    public function onEnd(): Void {
+    }
+}

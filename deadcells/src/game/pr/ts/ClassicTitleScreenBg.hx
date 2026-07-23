@@ -1,36 +1,50 @@
 package pr.ts;
+
 class ClassicTitleScreenBg extends pr.TitleScreenBgBase {
-  var boat: libs.heaps.slib.HSprite.HSprite;
-  var reflection: libs.heaps.slib.HSprite.HSprite;
-  var leaves: hl.types.ArrayObj<Dynamic>;
-  var birds: hl.types.ArrayObj<Dynamic>;
-  var grass: hl.types.ArrayObj<Dynamic>;
-  var crowWrapper: h2d.Object.Object;
+    public var boat: libs.heaps.slib.HSprite;
+    public var reflection: libs.heaps.slib.HSprite;
+    public var leaves: Array<Dynamic>;
+    public var birds: Array<Dynamic>;
+    public var grass: Array<Dynamic>;
+    public var crowWrapper: h2d.Object;
 
-  function __constructor__(wrapper: h2d.Object.Object, titleLib: libs.heaps.slib.SpriteLib.SpriteLib) {}
+    public function new(arg0: h2d.Object, arg1: libs.heaps.slib.SpriteLib) {
+        super();
+    }
 
-  function initTitleScreen() {}
+    public override function initTitleScreen(): Void {
+    }
 
-  function updateTitleScreen() {}
+    public override function updateTitleScreen(): Void {
+    }
 
-  function blur(sigma: Dynamic, gain: Dynamic) {}
+    public override function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function unblur() {}
+    public override function unblur(): Void {
+    }
 
-  function addCrow(col: Int, x: Float, y: Float, dir: Int, vy: Float, z: Float, progressive: Bool) {}
+    public function addCrow(arg0: Int, arg1: Float, arg2: Float, arg3: Int, arg4: Float, arg5: Float, arg6: Bool): Void {
+    }
 
-  function oceanFx() {}
+    public function oceanFx(): Void {
+    }
 
-  function leavesFx() {}
+    public function leavesFx(): Void {
+    }
 
-  function fogFx() {}
+    public function fogFx(): Void {
+    }
 
-  function godLights() {}
+    public function godLights(): Void {
+    }
 
-  function dustFx() {}
+    public function dustFx(): Void {
+    }
 
-  function dustParticlesFX(bigDustColor: Int, bigDustAlpha: Float, smallDustColor: Int, smallDustAlpha: Float) {}
+    public function dustParticlesFX(arg0: Int, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 
-  function addFx() {}
+    public override function addFx(): Void {
+    }
 }
-

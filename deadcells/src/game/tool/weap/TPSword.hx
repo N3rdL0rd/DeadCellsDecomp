@@ -1,39 +1,63 @@
 package tool.weap;
+
 class TPSword extends tool.Weapon {
-  var tpArea: tool.Area.Area;
-  var tpAreaUp: tool.Area.Area;
-  var isCrit: Bool;
+    public var tpArea: tool.Area;
+    public var tpAreaUp: tool.Area;
+    public var isCrit: Bool;
 
-  function __constructor__(owner: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_hasShield(): Bool {}
+    public function get_hasShield(): Bool {
+        throw "stub: get_hasShield not decompiled";
+    }
 
-  function get_shouldDoSpecialAtk(): Bool {}
+    public function get_shouldDoSpecialAtk(): Bool {
+        throw "stub: get_shouldDoSpecialAtk not decompiled";
+    }
 
-  function isLastCycle(): Bool {}
+    public override function isLastCycle(): Bool {
+        throw "stub: isLastCycle not decompiled";
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function dynOnFxFrame(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function allowTurnDuringCharge(): Bool {}
+    public override function allowTurnDuringCharge(): Bool {
+        throw "stub: allowTurnDuringCharge not decompiled";
+    }
 
-  function dynOnInterrupt(s: tool.Weapon.Weapon, r: Float) {}
+    public override function dynOnInterrupt(arg0: tool.WeaponSkill, arg1: Float): Void {
+    }
 
-  function prepareTeleport() {}
+    public function prepareTeleport(): Void {
+    }
 
-  function onBeforeCurSkillPrepare() {}
+    public override function onBeforeCurSkillPrepare(): Void {
+    }
 
-  function autoAim(): Bool {}
+    public override function autoAim(): Bool {
+        throw "stub: autoAim not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function tpOnion(destX: Float, destY: Float) {}
+    public function tpOnion(arg0: Float, arg1: Float): Void {
+    }
 
-  function teleportTo(e: Entity): Bool {}
+    public function teleportTo(arg0: Entity): Bool {
+        throw "stub: teleportTo not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function cancelChain() {}
+    public override function cancelChain(): Void {
+    }
 }
-

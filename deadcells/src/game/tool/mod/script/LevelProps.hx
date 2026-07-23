@@ -1,23 +1,25 @@
 package tool.mod.script;
+
 class LevelProps {
-  var timedDoor: Float;
-  var perfectKillsDoor: Float;
-  var timedBlueprint: String;
-  var timedGoldMul: Float;
-  var timedScrolls: Int;
-  var brutalityTier: Int;
-  var survivalTier: Int;
-  var wind: Float;
-  var musicIntro: String;
-  var musicLoop: String;
-  var doorColor: Int;
-  var zDoorColor: Int;
-  var chromaColor: Int;
-  var loadingColor: Int;
-  var loadingDescColor: Int;
+    public var timedDoor: Float;
+    public var perfectKillsDoor: Float;
+    public var timedBlueprint: String;
+    public var timedGoldMul: Float;
+    public var timedScrolls: Int;
+    public var brutalityTier: Int;
+    public var survivalTier: Int;
+    public var wind: Float;
+    public var musicIntro: String;
+    public var musicLoop: String;
+    public var doorColor: Int;
+    public var zDoorColor: Int;
+    public var chromaColor: Int;
+    public var loadingColor: Int;
+    public var loadingDescColor: Int;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function p_CopyPropsFrom(_props: Dynamic) {}
+    public function p_CopyPropsFrom(arg0: Dynamic): Void {
+    }
 }
-

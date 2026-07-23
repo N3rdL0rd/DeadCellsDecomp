@@ -1,12 +1,17 @@
 package level.struct;
+
 class DebugRTC extends level.LevelStruct {
-  static var forcedBiome: String;
-  static var forcedRoom: String;
+    public static var forcedBiome: String;
+    public static var forcedRoom: String;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 }
-

@@ -1,16 +1,22 @@
 package cine;
+
 class StaphyRoomCine extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var lilStaphy: en.mob.S_LilStaphy.S_LilStaphy;
+    public var hero: en.Hero;
+    public var lilStaphy: en.mob.S_LilStaphy;
 
-  function __constructor__(h: en.Hero.Hero, manager: en.StaphyRoomManager.StaphyRoomManager) {}
+    public function new(arg0: en.Hero, arg1: en.StaphyRoomManager) {
+        super();
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function dropKey(cx: Int, cy: Int) {}
+    public function dropKey(arg0: Int, arg1: Int): Void {
+    }
 
-  function dropLilStaphy(cx: Int, cy: Int) {}
+    public function dropLilStaphy(arg0: Int, arg1: Int): Void {
+    }
 }
-

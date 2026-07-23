@@ -1,134 +1,195 @@
 package en.mob;
+
 class AmazonBase extends en.Mob {
-  var tpAwayFromHeroBool: Bool;
-  var manager: en.AmazonManager.AmazonManager;
-  var teleportTo: tool.CPoint.CPoint;
-  var spinning: Bool;
-  var dashPhase: Bool;
-  var currentBossRoom: level.Room.Room;
-  var playingDelayTpAction: Bool;
-  var sisters: hl.types.ArrayObj<Dynamic>;
-  var didTriggerDoor: Bool;
-  var inFirstBossFight: Bool;
-  var inSecondBossFight: Bool;
-  var inThirdBossFight: Bool;
-  var didIntroduce: Bool;
-  var nextIsTPBool: Bool;
-  var endBossFightBool: Bool;
-  var onWall: Bool;
-  var hasFight: Bool;
-  var waitTimeDesync: Float;
-  var teleJump: tool.skill.mobSkill.TeleJump.TeleJump;
-  var currentSkill: Int;
-  var invicibleOutsideBossRoom: Bool;
-  var hasDotsResistance: Bool;
-  var fatalFallsMarker: hl.types.ArrayObj<Dynamic>;
-  var chaseFleeingLife: Float;
-  var chaseLifeCap: Float;
-  var fledChase: Bool;
-  var playingPotionAnim: Bool;
-  var playingDeathAnim: Bool;
-  var bossRushModifiers: Dynamic;
-  var <none>: Dynamic;
-  static var FLASK_GLOW_KEY: Int;
-  static var FFOOFF_GLOW_KEY: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var FLASK_GLOW_KEY: Int;
+    public static var FFOOFF_GLOW_KEY: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var tpAwayFromHeroBool: Bool;
+    public var manager: en.AmazonManager;
+    public var teleportTo: tool.CPoint;
+    public var spinning: Bool;
+    public var dashPhase: Bool;
+    public var currentBossRoom: level.Room;
+    public var playingDelayTpAction: Bool;
+    public var sisters: Array<Dynamic>;
+    public var didTriggerDoor: Bool;
+    public var inFirstBossFight: Bool;
+    public var inSecondBossFight: Bool;
+    public var inThirdBossFight: Bool;
+    public var didIntroduce: Bool;
+    public var nextIsTPBool: Bool;
+    public var endBossFightBool: Bool;
+    public var onWall: Bool;
+    public var hasFight: Bool;
+    public var waitTimeDesync: Float;
+    public var teleJump: tool.skill.mobSkill.TeleJump;
+    public var currentSkill: Int;
+    public var invicibleOutsideBossRoom: Bool;
+    public var hasDotsResistance: Bool;
+    public var fatalFallsMarker: Array<Dynamic>;
+    public var chaseFleeingLife: Float;
+    public var chaseLifeCap: Float;
+    public var fledChase: Bool;
+    public var playingPotionAnim: Bool;
+    public var playingDeathAnim: Bool;
+    public var bossRushModifiers: Dynamic;
+    public var : Dynamic;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, k: String, dmgTier: Int, lifeTier: Int, revealImmediatly: Bool): AmazonBase {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Bool) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, k: String, dmgTier: Int, lifeTier: Int, revealImmediatly: Bool) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Bool): en.mob.AmazonBase {
+        throw "stub: create not decompiled";
+    }
 
-  function get_inBossFight(): Bool {}
+    public function get_inBossFight(): Bool {
+        throw "stub: get_inBossFight not decompiled";
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function checkSisters(checkIfNull: Dynamic) {}
+    public function checkSisters(arg0: Ref): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function setAmazonGlow() {}
+    public function setAmazonGlow(): Void {
+    }
 
-  function registerToManager() {}
+    public function registerToManager(): Void {
+    }
 
-  function tpInsideBossRoom(delay: Dynamic) {}
+    public function tpInsideBossRoom(arg0: Ref): Void {
+    }
 
-  function getNextIsTpWaitTime(): Float {}
+    public function getNextIsTpWaitTime(): Float {
+        throw "stub: getNextIsTpWaitTime not decompiled";
+    }
 
-  function nextIsTp() {}
+    public function nextIsTp(): Void {
+    }
 
-  function inBossRoom(): Bool {}
+    public function inBossRoom(): Bool {
+        throw "stub: inBossRoom not decompiled";
+    }
 
-  function insideRoom(): Bool {}
+    public function insideRoom(): Bool {
+        throw "stub: insideRoom not decompiled";
+    }
 
-  function pickASpotToTP(far: Dynamic, close: Dynamic) {}
+    public function pickASpotToTP(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function addAfterImage(x: Float, y: Float, dir: Float) {}
+    public function addAfterImage(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function findTPSpotBehindHero(closeCombatServant: Dynamic): Bool {}
+    public function findTPSpotBehindHero(arg0: Ref): Bool {
+        throw "stub: findTPSpotBehindHero not decompiled";
+    }
 
-  function teleportCloseToHero(onPos: Dynamic) {}
+    public function teleportCloseToHero(arg0: Ref): Void {
+    }
 
-  function drinkPotion(desyncTime: Dynamic) {}
+    public function drinkPotion(arg0: Ref): Void {
+    }
 
-  function delayedDrinkPotion() {}
+    public function delayedDrinkPotion(): Void {
+    }
 
-  function isFallInSecondFight(): Bool {}
+    public function isFallInSecondFight(): Bool {
+        throw "stub: isFallInSecondFight not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function endBossFight(delay: Float) {}
+    public function endBossFight(arg0: Float): Void {
+    }
 
-  function tpResistance(state: Bool) {}
+    public function tpResistance(arg0: Bool): Void {
+    }
 
-  function setDotsResistance(state: Bool) {}
+    public function setDotsResistance(arg0: Bool): Void {
+    }
 
-  function onBreach(a: tool.atk.AttackData.AttackData) {}
+    public override function onBreach(arg0: tool.atk.AttackData): Void {
+    }
 
-  function sendToGround() {}
+    public function sendToGround(): Void {
+    }
 
-  function startDeathAnim() {}
+    public function startDeathAnim(): Void {
+    }
 
-  function startPotionAnim() {}
+    public function startPotionAnim(): Void {
+    }
 
-  function endPotionAnim() {}
+    public function endPotionAnim(): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function canDropServantSkin(): Bool {}
+    public function canDropServantSkin(): Bool {
+        throw "stub: canDropServantSkin not decompiled";
+    }
 
-  function tpAwayFromHero(delay: Dynamic, forced: Dynamic, _endBossFight: Dynamic) {}
+    public function tpAwayFromHero(arg0: Ref, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function checkForFleeDuringChase() {}
+    public function checkForFleeDuringChase(): Void {
+    }
 
-  function fleeDuringChase() {}
+    public function fleeDuringChase(): Void {
+    }
 
-  function resetFledDuringChase() {}
+    public function resetFledDuringChase(): Void {
+    }
 
-  function capChaseLife() {}
+    public function capChaseLife(): Void {
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function checkForBossRushEnrage() {}
+    public function checkForBossRushEnrage(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,17 +1,20 @@
 package tool;
+
 class HomunculusLigament {
-  var initTime: Float;
-  var parts: hl.types.ArrayObj<Dynamic>;
-  var offX: Float;
-  var offY: Float;
-  var curveDist: Float;
-  var oscilSpd: Float;
-  var visible: Bool;
+    public var initTime: Float;
+    public var parts: Array<Dynamic>;
+    public var offX: Float;
+    public var offY: Float;
+    public var curveDist: Float;
+    public var oscilSpd: Float;
+    public var visible: Bool;
 
-  function __constructor__(sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch, n: Int, alpha: Float, color: Dynamic) {}
+    public function new(arg0: libs.heaps.slib.HSpriteBatch, arg1: Int, arg2: Float, arg3: Dynamic) {
+    }
 
-  function render(fx: Float, fy: Float, tx: Float, ty: Float, tension: Float) {}
+    public function render(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 }
-

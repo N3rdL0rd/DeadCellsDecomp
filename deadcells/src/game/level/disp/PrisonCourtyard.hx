@@ -1,28 +1,39 @@
 package level.disp;
+
 class PrisonCourtyard extends level.BiomeDisp {
-  var biome: String;
-  var cloudGroups: hl.types.ArrayObj<Dynamic>;
-  var smallDoorTiles: hl.types.ArrayObj<Dynamic>;
-  var horizonY: Int;
+    public var biome: String;
+    public var cloudGroups: Array<Dynamic>;
+    public var smallDoorTiles: Array<Dynamic>;
+    public var horizonY: Int;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addBarrelLantern(z: level.DecoTypes.DecoTypes) {}
+    public function addBarrelLantern(arg0: level.DecoZone): Void {
+    }
 
-  function addSmallDoors(z: level.DecoTypes.DecoTypes) {}
+    public function addSmallDoors(arg0: level.DecoZone): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function addParrallaxAlcove(z: level.DecoTypes.DecoTypes, withParallax: Bool) {}
+    public function addParrallaxAlcove(arg0: level.DecoZone, arg1: Bool): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function reloadRenderConf() {}
+    public function reloadRenderConf(): Void {
+    }
 }
-

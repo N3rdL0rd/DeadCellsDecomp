@@ -1,66 +1,94 @@
 package level.disp;
+
 class Distillery extends level.BiomeDisp {
-  var glowShader: shader.GlowKey.GlowKey;
-  var bgGlowShader: shader.GlowKey.GlowKey;
-  var pshhtMachines: hl.types.ArrayObj<Dynamic>;
-  var sbDisplaceFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbEmberFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbLampFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var groupArchesAdd: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupMiddleAdd: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupFrontAdd: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var godRays: hl.types.ArrayObj<Dynamic>;
-  var archInfo: hl.types.ArrayObj<Dynamic>;
-  var zones: hl.types.ArrayObj<Dynamic>;
-  var archSetFlags: Int;
-  var archAbortFlags: Int;
-  var incrFront: Float;
-  var incrMiddle: Float;
+    public var glowShader: shader.GlowKey;
+    public var bgGlowShader: shader.GlowKey;
+    public var pshhtMachines: Array<Dynamic>;
+    public var sbDisplaceFx: libs.heaps.slib.HSpriteBatch;
+    public var sbEmberFx: libs.heaps.slib.HSpriteBatch;
+    public var sbLampFx: libs.heaps.slib.HSpriteBatch;
+    public var groupArchesAdd: libs.heaps.StaticGeometryGroup;
+    public var groupMiddleAdd: libs.heaps.StaticGeometryGroup;
+    public var groupFrontAdd: libs.heaps.StaticGeometryGroup;
+    public var godRays: Array<Dynamic>;
+    public var archInfo: Array<Dynamic>;
+    public var zones: Array<Dynamic>;
+    public var archSetFlags: Int;
+    public var archAbortFlags: Int;
+    public var incrFront: Float;
+    public var incrMiddle: Float;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function getStampWallThreshold(): Float {}
+    public override function getStampWallThreshold(): Float {
+        throw "stub: getStampWallThreshold not decompiled";
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function addFloorWallJunks() {}
+    public function addFloorWallJunks(): Void {
+    }
 
-  function getRandomFittingTile(width: Int, height: Int, tiles: hl.types.ArrayObj<Dynamic>): h2d.Tile.Tile {}
+    public function getRandomFittingTile(arg0: Int, arg1: Int, arg2: Array<Dynamic>): h2d.Tile {
+        throw "stub: getRandomFittingTile not decompiled";
+    }
 
-  function parsePlatform(cx: Int, cy: Int, width: Int, minWidth: Int, minHeight: Int) {}
+    public function parsePlatform(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function selectArch(w: Int, h: Int): Dynamic {}
+    public function selectArch(arg0: Int, arg1: Int): Dynamic {
+        throw "stub: selectArch not decompiled";
+    }
 
-  function drawArches(cx: Int, cy: Int, width: Int, height: Int) {}
+    public function drawArches(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function canStampOn(df: Int): Bool {}
+    public override function canStampOn(arg0: Int): Bool {
+        throw "stub: canStampOn not decompiled";
+    }
 
-  function renderBackWalls() {}
+    public override function renderBackWalls(): Void {
+    }
 
-  function addLamp(px: Float, py: Float, flamesOnly: Dynamic) {}
+    public function addLamp(arg0: Float, arg1: Float, arg2: Ref): Void {
+    }
 
-  function archParallaxCallback(xmin: Int, xmax: Int, ymin: Int, ymax: Int, pxmin: Float, pxmax: Float, pymin: Float, pymax: Float) {}
+    public function archParallaxCallback(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Float): Void {
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 
-  function addFXLight(group: String, frame: Int, x: Float, y: Float, pivotX: Float, pivotY: Float, front: Dynamic) {}
+    public function addFXLight(arg0: String, arg1: Int, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Ref): Void {
+    }
 
-  function onAddFloorJunk(junk: Dynamic, x: Float, y: Float, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public override function onAddFloorJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
+    }
 
-  function onAddWallJunk(junk: Dynamic, x: Float, y: Float, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public override function onAddWallJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function addSuspendedBottle(px: Int, py: Int, phei: Int, broken: Dynamic) {}
+    public function addSuspendedBottle(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Void {
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function addGodRays(xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public function addGodRays(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

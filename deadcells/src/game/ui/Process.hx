@@ -1,23 +1,34 @@
 package ui;
-class Process extends libs.Process.Process {
-  var blurFilter: h2d.filter.Blur.Blur;
-  var fControlLabel: h2d.Flow.Flow;
-  static var ALL: hl.types.ArrayObj<Dynamic>;
 
-  function get_pixelScale(): Float {}
+class Process extends libs.Process {
+    public static var ALL: Array<Dynamic>;
+    public var blurFilter: h2d.filter.Blur;
+    public var fControlLabel: h2d.Flow;
 
-  function __constructor__(parent: libs.Process.Process) {}
+    public function new(arg0: libs.Process) {
+        super();
+    }
 
-  function pixel(n: Float): Int {}
+    public function pixel(arg0: Float): Int {
+        throw "stub: pixel not decompiled";
+    }
 
-  function unblur() {}
+    public function unblur(): Void {
+    }
 
-  function blur(radius: Dynamic, gain: Dynamic) {}
+    public function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function createControlLabel(btns: hl.types.ArrayObj<Dynamic>) {}
+    public function createControlLabel(arg0: Array<Dynamic>): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
+
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
-

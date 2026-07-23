@@ -1,40 +1,59 @@
 package spine;
+
 class SkeletonData {
-  var name: String;
-  var bones: hl.types.ArrayObj<Dynamic>;
-  var slots: hl.types.ArrayObj<Dynamic>;
-  var skins: hl.types.ArrayObj<Dynamic>;
-  var defaultSkin: spine.Skin.Skin;
-  var events: hl.types.ArrayObj<Dynamic>;
-  var animations: hl.types.ArrayObj<Dynamic>;
-  var ikConstraints: hl.types.ArrayObj<Dynamic>;
-  var transformConstraints: hl.types.ArrayObj<Dynamic>;
-  var pathConstraints: hl.types.ArrayObj<Dynamic>;
-  var width: Float;
-  var height: Float;
-  var version: String;
-  var hash: String;
-  var fps: Float;
-  var imagesPath: String;
+    public var name: String;
+    public var bones: Array<Dynamic>;
+    public var slots: Array<Dynamic>;
+    public var skins: Array<Dynamic>;
+    public var defaultSkin: spine.Skin;
+    public var events: Array<Dynamic>;
+    public var animations: Array<Dynamic>;
+    public var ikConstraints: Array<Dynamic>;
+    public var transformConstraints: Array<Dynamic>;
+    public var pathConstraints: Array<Dynamic>;
+    public var width: Float;
+    public var height: Float;
+    public var version: String;
+    public var hash: String;
+    public var fps: Float;
+    public var imagesPath: String;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function findBone(boneName: String): Dynamic {}
+    public function findBone(arg0: String): spine.BoneData {
+        throw "stub: findBone not decompiled";
+    }
 
-  function findSlot(slotName: String): Dynamic {}
+    public function findSlot(arg0: String): spine.SlotData {
+        throw "stub: findSlot not decompiled";
+    }
 
-  function getDefaultSkin(): spine.Skin.Skin {}
+    public function getDefaultSkin(): spine.Skin {
+        throw "stub: getDefaultSkin not decompiled";
+    }
 
-  function findSkin(skinName: String): spine.Skin.Skin {}
+    public function findSkin(arg0: String): spine.Skin {
+        throw "stub: findSkin not decompiled";
+    }
 
-  function findEvent(eventDataName: String): Dynamic {}
+    public function findEvent(arg0: String): spine.EventData {
+        throw "stub: findEvent not decompiled";
+    }
 
-  function findAnimation(animationName: String): spine.Animation.Animation {}
+    public function findAnimation(arg0: String): spine.Animation {
+        throw "stub: findAnimation not decompiled";
+    }
 
-  function findIkConstraint(constraintName: String): Dynamic {}
+    public function findIkConstraint(arg0: String): spine.IkConstraintData {
+        throw "stub: findIkConstraint not decompiled";
+    }
 
-  function findTransformConstraint(constraintName: String): Dynamic {}
+    public function findTransformConstraint(arg0: String): spine.TransformConstraintData {
+        throw "stub: findTransformConstraint not decompiled";
+    }
 
-  function findPathConstraint(constraintName: String): Dynamic {}
+    public function findPathConstraint(arg0: String): spine.PathConstraintData {
+        throw "stub: findPathConstraint not decompiled";
+    }
 }
-

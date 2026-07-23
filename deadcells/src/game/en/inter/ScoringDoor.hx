@@ -1,44 +1,61 @@
 package en.inter;
+
 class ScoringDoor extends en.Interactive {
-  var glowDoor: libs.heaps.slib.HSprite.HSprite;
-  var leftTriangle: libs.heaps.slib.HSprite.HSprite;
-  var rightTriangle: libs.heaps.slib.HSprite.HSprite;
-  var bg: libs.heaps.slib.HSprite.HSprite;
-  var leftDoor: libs.heaps.slib.HSprite.HSprite;
-  var rightDoor: libs.heaps.slib.HSprite.HSprite;
-  var circleClock: libs.heaps.slib.HSprite.HSprite;
-  var minutesClock: libs.heaps.slib.HSprite.HSprite;
-  var hourClock: libs.heaps.slib.HSprite.HSprite;
-  var offsetDoorGlowAlpha: Float;
-  var speedClock: Int;
-  var isOpening: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var glowDoor: libs.heaps.slib.HSprite;
+    public var leftTriangle: libs.heaps.slib.HSprite;
+    public var rightTriangle: libs.heaps.slib.HSprite;
+    public var bg: libs.heaps.slib.HSprite;
+    public var leftDoor: libs.heaps.slib.HSprite;
+    public var rightDoor: libs.heaps.slib.HSprite;
+    public var circleClock: libs.heaps.slib.HSprite;
+    public var minutesClock: libs.heaps.slib.HSprite;
+    public var hourClock: libs.heaps.slib.HSprite;
+    public var offsetDoorGlowAlpha: Float;
+    public var speedClock: Int;
+    public var isOpening: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function drawDoor() {}
+    public function drawDoor(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

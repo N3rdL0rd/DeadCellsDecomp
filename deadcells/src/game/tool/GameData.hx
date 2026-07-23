@@ -1,80 +1,95 @@
 package tool;
+
 class GameData {
-  var gameSeed: Int;
-  var mainLevel: String;
-  var uniq: Int;
-  var curRunId: Int;
-  var itemPermaId: Int;
-  var tierDistribution: tool.TierDistribution.TierDistribution;
-  var stopGameTime: Bool;
-  var gameTimeS: Float;
-  var gameTimePerLevel: hl.types.ArrayObj<Dynamic>;
-  var money: Int;
-  var heroInfection: Float;
-  var infectionTier: Int;
-  var legendaryMobBonus: Float;
-  var legendaryAltarBonus: Float;
-  var trapHitCount: Int;
-  var killCount: Int;
-  var maxKillCount: Int;
-  var corruptedHealingKillCount: Int;
-  var twitchNewVoteSystem: Bool;
-  var twitchBans: haxe.ds.StringMap;
-  var twitchBossUser: String;
-  var twitchBossDisplayName: String;
-  var twitchChicken: Bool;
-  var twitchLevelsMods: Bool;
-  var twitchCommunityScroll: Bool;
-  var twitchChest: Bool;
-  var twitchTalismanAffix: Bool;
-  var twitchBoss: Bool;
-  var _twitchMode: Bool;
-  var isCustom: Bool;
-  var cgData: Achievements.Achievements;
-  var inventory: tool.Inventory.Inventory;
-  var blueprints: hl.types.ArrayObj<Dynamic>;
-  var cells: Int;
-  var healings: Int;
-  var life: Int;
-  var maxLife: Int;
-  var tacticTier: Int;
-  var brutalityTier: Int;
-  var survivalTier: Int;
-  var curseCounter: Int;
-  var debt: Int;
-  var hasBankAppeared: Bool;
-  var bankEntranceLevel: String;
-  var bankReplacedLevel: String;
-  var continueCount: Int;
-  var perkResetCount: Int;
-  var gameFlags: haxe.ds.StringMap;
-  var currentIncentivizedLevel: String;
-  var currentCursedLevel: String;
-  var sUser: User;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var gameSeed: Int;
+    public var mainLevel: String;
+    public var uniq: Int;
+    public var curRunId: Int;
+    public var itemPermaId: Int;
+    public var tierDistribution: tool.TierDistribution;
+    public var stopGameTime: Bool;
+    public var gameTimeS: Float;
+    public var gameTimePerLevel: Array<Dynamic>;
+    public var money: Int;
+    public var heroInfection: Float;
+    public var infectionTier: Int;
+    public var legendaryMobBonus: Float;
+    public var legendaryAltarBonus: Float;
+    public var trapHitCount: Int;
+    public var killCount: Int;
+    public var maxKillCount: Int;
+    public var corruptedHealingKillCount: Int;
+    public var twitchNewVoteSystem: Bool;
+    public var twitchBans: haxe.ds.StringMap;
+    public var twitchBossUser: String;
+    public var twitchBossDisplayName: String;
+    public var twitchChicken: Bool;
+    public var twitchLevelsMods: Bool;
+    public var twitchCommunityScroll: Bool;
+    public var twitchChest: Bool;
+    public var twitchTalismanAffix: Bool;
+    public var twitchBoss: Bool;
+    public var _twitchMode: Bool;
+    public var isCustom: Bool;
+    public var cgData: CustomGameData;
+    public var inventory: tool.Inventory;
+    public var blueprints: Array<Dynamic>;
+    public var cells: Int;
+    public var healings: Int;
+    public var life: Int;
+    public var maxLife: Int;
+    public var tacticTier: Int;
+    public var brutalityTier: Int;
+    public var survivalTier: Int;
+    public var curseCounter: Int;
+    public var debt: Int;
+    public var hasBankAppeared: Bool;
+    public var bankEntranceLevel: String;
+    public var bankReplacedLevel: String;
+    public var continueCount: Int;
+    public var perkResetCount: Int;
+    public var gameFlags: haxe.ds.StringMap;
+    public var currentIncentivizedLevel: String;
+    public var currentCursedLevel: String;
+    public var sUser: User;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(user: User, seed: Int, lvl: Dynamic, isTwitch: Bool, isCustom: Bool) {}
+    public function new(arg0: User, arg1: Int, arg2: Dynamic, arg3: Bool, arg4: Bool) {
+    }
 
-  function getNextItemPermanentId(): Int {}
+    public function getNextItemPermanentId(): Int {
+        throw "stub: getNextItemPermanentId not decompiled";
+    }
 
-  function saveLevelGameTime(id: String) {}
+    public function saveLevelGameTime(arg0: String): Void {
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function sync(game: pr.Game.Game, lvl: String) {}
+    public function sync(arg0: pr.Game, arg1: String): Void {
+    }
 
-  function isLevelIncentivized(id: String): Bool {}
+    public function isLevelIncentivized(arg0: String): Bool {
+        throw "stub: isLevelIncentivized not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,26 +1,38 @@
 package en;
+
 class PerfectDodgeCollision extends Entity {
-  var hero: en.Hero.Hero;
-  var sourceSkill: tool.mainSkills.Dodge.Dodge;
-  var attackData: tool.atk.AttackData.AttackData;
-  var canceled: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var hero: en.Hero;
+    public var sourceSkill: tool.mainSkills.Dodge;
+    public var attackData: tool.atk.AttackData;
+    public var canceled: Bool;
 
-  function __constructor__(sourceSkill: tool.mainSkills.Dodge.Dodge, lvl: pr.Level.Level, x: Int, y: Int, hero: en.Hero.Hero, duration: Float) {}
+    public function new(arg0: tool.mainSkills.Dodge, arg1: pr.Level, arg2: Int, arg3: Int, arg4: en.Hero, arg5: Float) {
+        super();
+    }
 
-  function applyAttackResult(attackData: tool.atk.AttackData.AttackData) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

@@ -1,18 +1,28 @@
 package level.gen.mapbuilder;
+
 class TumulusMapBuilder extends level.gen.MapBuilder {
+    public function new(arg0: User, arg1: Dynamic, arg2: Int, arg3: Dynamic, arg4: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand.Rand) {}
+    public function isSubLevel(arg0: level.LevelMap): Bool {
+        throw "stub: isSubLevel not decompiled";
+    }
 
-  function isSubLevel(levelMap: level.LevelMap.LevelMap): Bool {}
+    public override function afterLevelMapInitProcess(arg0: level.LevelMap): level.LevelMap {
+        throw "stub: afterLevelMapInitProcess not decompiled";
+    }
 
-  function afterLevelMapInitProcess(levelMap: level.LevelMap.LevelMap): level.LevelMap.LevelMap {}
+    public function addBgWallSpots(arg0: level.LevelMap): Void {
+    }
 
-  function addBgWallSpots(levelMap: level.LevelMap.LevelMap) {}
+    public function addFatalFallUnder(arg0: level.Room, arg1: level.LevelMap): Void {
+    }
 
-  function addFatalFallUnder(room: level.Room.Room, levelMap: level.LevelMap.LevelMap) {}
+    public override function fillRoomData(arg0: level.RoomNode, arg1: level.Room, arg2: level.LevelMap, arg3: Array<Dynamic>, arg4: Array<Dynamic>): Void {
+    }
 
-  function fillRoomData(rn: level.Room.RoomNode, rd: level.Room.Room, dat: level.LevelMap.LevelMap, inRoomCells: hl.types.ArrayObj<Dynamic>, drooms: hl.types.ArrayObj<Dynamic>) {}
-
-  function buildMap(): level.LevelMap.LevelMap {}
+    public override function buildMap(): level.LevelMap {
+        throw "stub: buildMap not decompiled";
+    }
 }
-

@@ -1,17 +1,23 @@
 package libs;
+
 class RandMap {
-  var data: hl.types.ArrayBytes<Float>;
-  var freqs: hl.types.ArrayBytes<Float>;
-  var weights: hl.types.ArrayBytes<Float>;
-  var noises: hl.types.ArrayObj<Dynamic>;
-  var rnd: Dynamic;
+    public var data: Array<Float>;
+    public var freqs: Array<Float>;
+    public var weights: Array<Float>;
+    public var noises: Array<Dynamic>;
+    public var rnd: Dynamic;
 
-  function __constructor__(size: Int, freqs: hl.types.ArrayBytes<Float>, weights: hl.types.ArrayBytes<Float>, rnd: Dynamic) {}
+    public function new(arg0: Int, arg1: Array<Float>, arg2: Array<Float>, arg3: Dynamic) {
+    }
 
-  function shuffle() {}
+    public function shuffle(): Void {
+    }
 
-  function getDensityThreshold(density: Float): Float {}
+    public function getDensityThreshold(arg0: Float): Float {
+        throw "stub: getDensityThreshold not decompiled";
+    }
 
-  function sortIndices(a: Int, b: Int): Int {}
+    public function sortIndices(arg0: Int, arg1: Int): Int {
+        throw "stub: sortIndices not decompiled";
+    }
 }
-

@@ -1,11 +1,14 @@
 package spine;
+
 class HeapsSkeletonFileHandle {
-  var path: String;
-  var data: String;
-  var <none>: Dynamic;
+    public var path: String;
+    public var data: String;
+    public var : Dynamic;
 
-  function __constructor__(path: String, res: hxd.res.Resource.Resource) {}
+    public function new(arg0: String, arg1: hxd.res.Resource) {
+    }
 
-  function getContent(): String {}
+    public function getContent(): String {
+        throw "stub: getContent not decompiled";
+    }
 }
-

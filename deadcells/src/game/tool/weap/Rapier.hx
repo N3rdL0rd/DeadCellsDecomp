@@ -1,17 +1,25 @@
 package tool.weap;
+
 class Rapier extends tool.Weapon {
-  var canCrit: Bool;
+    public var canCrit: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function onOwnerAttackResultDealt(a: tool.atk.AttackData.AttackData, target: Entity) {}
+    public function onOwnerAttackResultDealt(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 }
-

@@ -1,47 +1,73 @@
 package ui;
+
 class SaveChoice extends ui.Process {
-  var ts: pr.TitleScreen.TitleScreen;
-  var controller: tool.Controller.Controller;
-  var fb: ui.FlowBox.FlowBox;
-  var title: ui.Text.Text;
-  var line: libs.heaps.slib.HSprite.HSprite;
-  var selection: h2d.ScaleGrid.ScaleGrid;
-  var saveMask: h2d.Mask.Mask;
-  var inter: h2d.Interactive.Interactive;
-  var fSave: h2d.Flow.Flow;
-  var saves: hl.types.ArrayObj<Dynamic>;
-  var curSaveId: Int;
-  var isCopying: Bool;
-  var copyFromSlot: Int;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
+    public var ts: pr.TitleScreen;
+    public var controller: tool.ControllerAccess;
+    public var fb: ui.FlowBox;
+    public var title: ui.Text;
+    public var line: libs.heaps.slib.HSprite;
+    public var selection: h2d.ScaleGrid;
+    public var saveMask: h2d.Mask;
+    public var inter: h2d.Interactive;
+    public var fSave: h2d.Flow;
+    public var saves: Array<Dynamic>;
+    public var curSaveId: Int;
+    public var isCopying: Bool;
+    public var copyFromSlot: Int;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
 
-  function __constructor__(ts: pr.TitleScreen.TitleScreen) {}
+    public function new(arg0: pr.TitleScreen) {
+        super();
+    }
 
-  function select(id: Int, instant: Dynamic) {}
+    public function select(arg0: Int, arg1: Ref): Void {
+    }
 
-  function hasScroll(): Bool {}
+    public function hasScroll(): Bool {
+        throw "stub: hasScroll not decompiled";
+    }
 
-  function moveSelection() {}
+    public function moveSelection(): Void {
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 
-  function onDelete() {}
+    public function onDelete(): Void {
+    }
 
-  function onCopy() {}
+    public function onCopy(): Void {
+    }
 
-  function onCancel() {}
+    public function onCancel(): Void {
+    }
 
-  function blur(sigma: Dynamic, gain: Dynamic) {}
+    public override function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function unblur() {}
+    public override function unblur(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
 
+class SaveWindow extends h2d.Layers {
+    public var si: Dynamic;
+    public var wid: Int;
+    public var hei: Int;
+
+    public function new(arg0: ui.SaveChoice, arg1: Int, arg2: Int, arg3: Dynamic) {
+        super();
+    }
+}

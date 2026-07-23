@@ -1,43 +1,60 @@
 package level.disp;
+
 class StiltVillage extends level.BiomeDisp {
-  var waterBounds: h2d.col.Bounds.Bounds;
-  var floorBounds: h2d.col.Bounds.Bounds;
-  var horizonY: Float;
-  var reflectY: Float;
-  var frontY: Float;
-  var boats: hl.types.ArrayObj<Dynamic>;
-  var sbWaterFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var cloudGroups: hl.types.ArrayObj<Dynamic>;
-  var glowShader: shader.GlowKey.GlowKey;
+    public var waterBounds: h2d.col.Bounds;
+    public var floorBounds: h2d.col.Bounds;
+    public var horizonY: Float;
+    public var reflectY: Float;
+    public var frontY: Float;
+    public var boats: Array<Dynamic>;
+    public var sbWaterFx: libs.heaps.slib.HSpriteBatch;
+    public var cloudGroups: Array<Dynamic>;
+    public var glowShader: shader.GlowKey;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function addWater() {}
+    public function addWater(): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function isTransparent(cx: Int, cy: Int, wid: Int, hei: Int, dir: Dynamic): Bool {}
+    public function isTransparent(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Dynamic): Bool {
+        throw "stub: isTransparent not decompiled";
+    }
 
-  function decorateSides() {}
+    public function decorateSides(): Void {
+    }
 
-  function decorateInvisibleCollRoofs() {}
+    public function decorateInvisibleCollRoofs(): Void {
+    }
 
-  function renderFloorStamps() {}
+    public override function renderFloorStamps(): Void {
+    }
 
-  function addCliffLights() {}
+    public override function addCliffLights(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function renderForeground() {}
+    public function renderForeground(): Void {
+    }
 
-  function reloadRenderConf() {}
+    public function reloadRenderConf(): Void {
+    }
 }
-

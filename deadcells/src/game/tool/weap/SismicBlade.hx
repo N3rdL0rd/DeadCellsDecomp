@@ -1,17 +1,23 @@
 package tool.weap;
+
 class SismicBlade extends tool.Weapon {
-  var pt: tool.CPoint.CPoint;
-  var countPerTick: Int;
-  var dir: Int;
-  var remain: Int;
-  var dmg: Dynamic;
+    public var pt: tool.CPoint;
+    public var countPerTick: Int;
+    public var dir: Int;
+    public var remain: Int;
+    public var dmg: Dynamic;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 }
-

@@ -1,27 +1,39 @@
 package en;
+
 class AlucardCoffin extends Entity {
-  var glow: libs.heaps.slib.HSprite.HSprite;
-  var glow_wireframe: libs.heaps.slib.HSprite.HSprite;
-  var shatterCount: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var glow: libs.heaps.slib.HSprite;
+    public var glow_wireframe: libs.heaps.slib.HSprite;
+    public var shatterCount: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function startDisappearing() {}
+    public function startDisappearing(): Void {
+    }
 
-  function flash() {}
+    public function flash(): Void {
+    }
 
-  function disappear() {}
+    public function disappear(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

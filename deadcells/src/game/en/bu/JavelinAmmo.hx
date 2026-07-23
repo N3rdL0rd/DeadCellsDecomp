@@ -1,45 +1,64 @@
 package en.bu;
+
 class JavelinAmmo extends Entity {
-  var dr: Float;
-  var ang: Float;
-  var shakeRotSpd: Float;
-  var baseAng: Float;
-  var snapOff: Dynamic;
-  var stuckInWall: Bool;
-  var fromMob: en.mob.JavelinSnake.JavelinSnake;
-  var glowInnerColor: Int;
-  var glowOuterColor: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var dr: Float;
+    public var ang: Float;
+    public var shakeRotSpd: Float;
+    public var baseAng: Float;
+    public var snapOff: Dynamic;
+    public var stuckInWall: Bool;
+    public var fromMob: en.mob.JavelinSnake;
+    public var glowInnerColor: Int;
+    public var glowOuterColor: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, from: Entity, innerColor: Int, outerColor: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: Int, arg5: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function stickInWall(b: en.Bullet.Bullet) {}
+    public function stickInWall(arg0: en.Bullet): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

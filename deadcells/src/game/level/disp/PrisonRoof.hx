@@ -1,49 +1,72 @@
 package level.disp;
+
 class PrisonRoof extends level.BiomeDisp {
-  var horizonY: hl.types.ArrayBytes<Int>;
-  var horizonMean: Float;
-  var perlin: hxd.Perlin.Perlin;
-  var sbFlags: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var cloudGroups: hl.types.ArrayObj<Dynamic>;
+    public var horizonY: Array<Int>;
+    public var horizonMean: Float;
+    public var perlin: hxd.Perlin;
+    public var sbFlags: libs.heaps.slib.HSpriteBatch;
+    public var cloudGroups: Array<Dynamic>;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addSuspendedCage(px: Int, py: Int, phei: Int) {}
+    public function addSuspendedCage(arg0: Int, arg1: Int, arg2: Int): Void {
+    }
 
-  function isCorrupt(): Bool {}
+    public function isCorrupt(): Bool {
+        throw "stub: isCorrupt not decompiled";
+    }
 
-  function addAlcove(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcove(arg0: level.DecoZone): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function addTowers(p: ParallaxGroup, capTiles: hl.types.ArrayObj<Dynamic>, botTiles: hl.types.ArrayObj<Dynamic>, density: Float) {}
+    public function addTowers(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Array<Dynamic>, arg3: Float): Void {
+    }
 
-  function isTransparent(cx: Int, cy: Int, wid: Int, hei: Int, dir: Dynamic): Bool {}
+    public function isTransparent(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Dynamic): Bool {
+        throw "stub: isTransparent not decompiled";
+    }
 
-  function decorateSides() {}
+    public function decorateSides(): Void {
+    }
 
-  function decorateInvisibleCollRoofs() {}
+    public function decorateInvisibleCollRoofs(): Void {
+    }
 
-  function addCrenels() {}
+    public function addCrenels(): Void {
+    }
 
-  function addFences() {}
+    public function addFences(): Void {
+    }
 
-  function addArch(cx: Int, cy: Int, w: Int, h: Int) {}
+    public function addArch(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function renderFloorStamps() {}
+    public override function renderFloorStamps(): Void {
+    }
 
-  function reloadRenderConf() {}
+    public function reloadRenderConf(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

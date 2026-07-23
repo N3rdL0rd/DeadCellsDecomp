@@ -1,25 +1,37 @@
 package tool.weap.bow;
+
 class ExplosiveCrossBow extends tool.weap.BaseBow {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public override function onBowCharging(arg0: Float): Void {
+    }
 
-  function onBowCharging(r: Float) {}
+    public function explode(arg0: en.Bullet, arg1: Entity): Void {
+    }
 
-  function explode(b: en.Bullet.Bullet, te: Entity) {}
-
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 }
 
 class ExplosiveCrossBowOffHand extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
-
-  function explode(cx: Int, cy: Int) {}
+    public function explode(arg0: Int, arg1: Int): Void {
+    }
 }
-

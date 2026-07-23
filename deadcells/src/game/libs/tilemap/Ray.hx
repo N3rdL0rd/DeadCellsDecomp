@@ -1,15 +1,20 @@
 package libs.tilemap;
+
 class Ray {
-  var x: Int;
-  var y: Int;
-  var dir: Int;
-  var dx: Int;
-  var dy: Int;
+    public var x: Int;
+    public var y: Int;
+    public var dir: Int;
+    public var dx: Int;
+    public var dy: Int;
 
-  function __constructor__(x: Dynamic, y: Dynamic, dir: Dynamic) {}
+    public function new(arg0: Ref, arg1: Ref, arg2: Ref) {
+    }
 
-  function intersects(s: libs.tilemap.Segment.Segment, inter: RayIntersection): RayIntersection {}
+    public function intersects(arg0: libs.tilemap.Segment, arg1: libs.tilemap.RayIntersection): libs.tilemap.RayIntersection {
+        throw "stub: intersects not decompiled";
+    }
 
-  function rayCast(segments: hl.types.ArrayObj<Dynamic>): RayIntersection {}
+    public function rayCast(arg0: Array<Dynamic>): libs.tilemap.RayIntersection {
+        throw "stub: rayCast not decompiled";
+    }
 }
-

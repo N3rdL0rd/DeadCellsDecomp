@@ -1,22 +1,31 @@
 package en.bu;
+
 class ThrowingSpearBullet extends en.Bullet {
-  var glowColIn: Int;
-  var glowColOut: Int;
-  var ownerHero: en.Hero.Hero;
-  var touchedEnnemy: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var glowColIn: Int;
+    public var glowColOut: Int;
+    public var ownerHero: en.Hero;
+    public var touchedEnnemy: Bool;
 
-  function __constructor__(from: en.Hero.Hero, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, _glowColIn: Int, _glowColOut: Int) {}
+    public function new(arg0: en.Hero, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Int) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initAmmo(a: en.loot.Ammo.Ammo) {}
+    public override function initAmmo(arg0: en.loot.Ammo): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

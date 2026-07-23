@@ -1,67 +1,107 @@
 package en.hero;
+
 class Richter extends en.Hero {
-  var wasRunning: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var wasRunning: Bool;
 
-  static function create(game: pr.Game.Game): Richter {}
+    public function new(arg0: pr.Game) {
+        super();
+    }
 
-  function __constructor__(game: pr.Game.Game) {}
+    public static function create(arg0: pr.Game): en.hero.Richter {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function getRunAnimId(): String {}
+    public function getRunAnimId(): String {
+        throw "stub: getRunAnimId not decompiled";
+    }
 
-  function getSkinInfo(): Dynamic {}
+    public override function getSkinInfo(): Dynamic {
+        throw "stub: getSkinInfo not decompiled";
+    }
 
-  function initAnims() {}
+    public override function initAnims(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public override function initSpeechDeck(): Void {
+    }
 
-  function onLevelChanged(oldLevel: pr.Level.Level) {}
+    public override function onLevelChanged(arg0: pr.Level): Void {
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function createRichterOnionSkin(alpha: Dynamic, sec: Dynamic) {}
+    public function createRichterOnionSkin(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function airControl() {}
+    public override function airControl(): Void {
+    }
 
-  function cliffGrab() {}
+    public override function cliffGrab(): Void {
+    }
 
-  function canWallGrab(): Bool {}
+    public override function canWallGrab(): Bool {
+        throw "stub: canWallGrab not decompiled";
+    }
 
-  function landStun(sec: Float, stun: Bool) {}
+    public override function landStun(arg0: Float, arg1: Bool): Void {
+    }
 
-  function canJumpThroughUp(): Bool {}
+    public override function canJumpThroughUp(): Bool {
+        throw "stub: canJumpThroughUp not decompiled";
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public function onTouchWall(arg0: Int): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function onPickupLoot(loot: en.Loot.Loot) {}
+    public override function onPickupLoot(arg0: en.Loot): Void {
+    }
 
-  function isExplorersInstinctActive(): Bool {}
+    public override function isExplorersInstinctActive(): Bool {
+        throw "stub: isExplorersInstinctActive not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function startDeathCine() {}
+    public override function startDeathCine(): Void {
+    }
 
-  function prepareSave(): Bool {}
+    public override function prepareSave(): Bool {
+        throw "stub: prepareSave not decompiled";
+    }
 
-  function hudSetHearts(value: Int, max: Int, animated: Dynamic) {}
+    public function hudSetHearts(arg0: Int, arg1: Int, arg2: Ref): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

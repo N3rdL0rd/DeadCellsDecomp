@@ -1,39 +1,61 @@
 package en.inter.npc;
+
 class CollectorPanelNpc extends en.inter.Npc {
-  var itemPops: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var itemPops: Int;
 
-  function __constructor__(lvl: pr.Level.Level, id: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: NpcId) {
+        super();
+    }
 
-  function setDoor(wantOpen: Bool) {}
+    public function setDoor(arg0: Bool): Void {
+    }
 
-  function onFocus() {}
+    public override function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function onGreet(h: en.Hero.Hero) {}
+    public override function onGreet(arg0: en.Hero): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getIdleAnimForPanel(listMask: h2d.Mask.Mask): libs.heaps.slib.HSprite.HSprite {}
+    public function getIdleAnimForPanel(arg0: h2d.Mask): libs.heaps.slib.HSprite {
+        throw "stub: getIdleAnimForPanel not decompiled";
+    }
 
-  function getPanelPixelOffset(): Int {}
+    public function getPanelPixelOffset(): Int {
+        throw "stub: getPanelPixelOffset not decompiled";
+    }
 
-  function openPanel() {}
+    public function openPanel(): Void {
+    }
 
-  function onPanelClose() {}
+    public function onPanelClose(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

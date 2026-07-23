@@ -1,55 +1,83 @@
 package en.pet;
+
 class Owl extends en.Pet {
-  var color: Int;
-  var tx: Float;
-  var ty: Float;
-  var shoot: tool.skill.OldSkill.OldSkill;
-  var onFront: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var color: Int;
+    public var tx: Float;
+    public var ty: Float;
+    public var shoot: tool.skill.OldSkill;
+    public var onFront: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, p: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity, arg4: tool.InventItem) {
+        super();
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function playIdleAnim() {}
+    public override function playIdleAnim(): Void {
+    }
 
-  function interruptSkills() {}
+    public override function interruptSkills(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function depop() {}
+    public override function depop(): Void {
+    }
 
-  function onBuff(buffItem: tool.InventItem.InventItem) {}
+    public override function onBuff(arg0: tool.InventItem): Void {
+    }
 
-  function onDebuff(buffItem: tool.InventItem.InventItem) {}
+    public override function onDebuff(arg0: tool.InventItem): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onHeroTeleport() {}
+    public override function onHeroTeleport(): Void {
+    }
 
-  function initTarget() {}
+    public override function initTarget(): Void {
+    }
 
-  function onParentAttackResultReceived(a: tool.atk.AttackData.AttackData) {}
+    public override function onParentAttackResultReceived(arg0: tool.atk.AttackData): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onBeginLongPress() {}
+    public function onBeginLongPress(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,33 +1,51 @@
 package en.active;
+
 class EtheralDoorSocle extends en.Active {
-  var door: en.inter.door.EtheralDoor.EtheralDoor;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var door: en.inter.door.EtheralDoor;
 
-  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem, door: en.inter.door.EtheralDoor.EtheralDoor) {}
+    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: en.inter.door.EtheralDoor) {
+        super();
+    }
 
-  static function create(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem, door: en.inter.door.EtheralDoor.EtheralDoor): EtheralDoorSocle {}
+    public static function create(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem, arg4: en.inter.door.EtheralDoor): en.active.EtheralDoorSocle {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

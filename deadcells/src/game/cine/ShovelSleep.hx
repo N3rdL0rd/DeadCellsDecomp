@@ -1,8 +1,10 @@
 package cine;
+
 class ShovelSleep extends GameCinematic {
+    public function new(arg0: en.Hero, arg1: en.inter.ShovelCampFire) {
+        super();
+    }
 
-  function __constructor__(hero: en.Hero.Hero, campFire: en.inter.ShovelCampFire.ShovelCampFire) {}
-
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

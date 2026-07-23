@@ -1,44 +1,61 @@
 package level.disp;
+
 class AncientTemple extends level.BiomeDisp {
-  var biome: String;
-  var glowShader: shader.GlowKey.GlowKey;
-  var bgGlowShader: shader.GlowKey.GlowKey;
-  var sprGc: hl.types.ArrayObj<Dynamic>;
-  var groundFoliageDeck: libs.RandDeck.RandDeck;
-  var altColors: Bool;
-  var lightFxs: hl.types.ArrayObj<Dynamic>;
-  var torchLights: hl.types.ArrayObj<Dynamic>;
-  var fxBgBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var godRays: hl.types.ArrayObj<Dynamic>;
+    public var biome: String;
+    public var glowShader: shader.GlowKey;
+    public var bgGlowShader: shader.GlowKey;
+    public var sprGc: Array<Dynamic>;
+    public var groundFoliageDeck: libs.RandDeck;
+    public var altColors: Bool;
+    public var lightFxs: Array<Dynamic>;
+    public var torchLights: Array<Dynamic>;
+    public var fxBgBatch: libs.heaps.slib.HSpriteBatch;
+    public var godRays: Array<Dynamic>;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function addLightHole(px: Float, py: Float) {}
+    public function addLightHole(arg0: Float, arg1: Float): Void {
+    }
 
-  function createHoleGrid(r: level.Room.Room, rGrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public override function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: createHoleGrid not decompiled";
+    }
 
-  function addHoleBackground(r: level.Room.Room, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public override function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function switchColors(isAltColors: Bool) {}
+    public function switchColors(arg0: Bool): Void {
+    }
 
-  function setAltColor(v: Bool) {}
+    public function setAltColor(arg0: Bool): Void {
+    }
 }
-

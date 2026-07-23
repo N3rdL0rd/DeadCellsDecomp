@@ -1,16 +1,25 @@
 package en.gr;
+
 class EnemyGrenadeWorm extends en.Grenade {
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
 
-  function __constructor__(from: Entity, timerS: Dynamic) {}
+    public function new(arg0: Entity, arg1: Dynamic) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function counter(item: tool.InventItem.InventItem, tier: Int, playSound: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public override function counter(arg0: tool.InventItem, arg1: Int, arg2: Ref): Array<Dynamic> {
+        throw "stub: counter not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

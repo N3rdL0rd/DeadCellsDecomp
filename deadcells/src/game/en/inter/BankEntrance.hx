@@ -1,53 +1,77 @@
 package en.inter;
+
 class BankEntrance extends en.Interactive {
-  var isOpen: Bool;
-  var isFocused: Bool;
-  var rseed: libs.Rand.Rand;
-  var rockFront: libs.heaps.slib.HSprite.HSprite;
-  var rockBack: libs.heaps.slib.HSprite.HSprite;
-  var chestOpenTop: libs.heaps.slib.HSprite.HSprite;
-  var rune: libs.heaps.slib.HSprite.HSprite;
-  var runeGlow: libs.heaps.slib.HSprite.HSprite;
-  var godRays: libs.heaps.slib.HSprite.HSpriteBE;
-  var glowT: Float;
-  var isLock: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var isOpen: Bool;
+    public var isFocused: Bool;
+    public var rseed: libs.Rand;
+    public var rockFront: libs.heaps.slib.HSprite;
+    public var rockBack: libs.heaps.slib.HSprite;
+    public var chestOpenTop: libs.heaps.slib.HSprite;
+    public var rune: libs.heaps.slib.HSprite;
+    public var runeGlow: libs.heaps.slib.HSprite;
+    public var godRays: libs.heaps.slib.HSpriteBE;
+    public var glowT: Float;
+    public var isLock: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function canBeHit(): Bool {}
+    public function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function minimapTracking() {}
+    public function minimapTracking(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function open(hero: en.Hero.Hero) {}
+    public function open(arg0: en.Hero): Void {
+    }
 
-  function setDepth(layer: Int) {}
+    public function setDepth(arg0: Int): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

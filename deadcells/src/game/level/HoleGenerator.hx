@@ -1,14 +1,18 @@
 package level;
+
 class HoleGenerator {
-  var capacity: Int;
-  var size: Int;
-  var stride: Int;
-  var grid: hl.types.ArrayObj<Dynamic>;
+    public var capacity: Int;
+    public var size: Int;
+    public var stride: Int;
+    public var grid: Array<Dynamic>;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function build(wid: Int, hei: Int, density: Float, nholes: Int, seed: Int, maskGrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function build(arg0: Int, arg1: Int, arg2: Float, arg3: Int, arg4: Int, arg5: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: build not decompiled";
+    }
 
-  function initGrid(wid: Int, hei: Int) {}
+    public function initGrid(arg0: Int, arg1: Int): Void {
+    }
 }
-

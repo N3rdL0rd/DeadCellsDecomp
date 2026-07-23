@@ -1,14 +1,21 @@
 package tool.weap;
+
 class DualDaggers extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function set_cycle(arg0: Int): Int {
+        throw "stub: set_cycle not decompiled";
+    }
 
-  function set_cycle(v: Int): Int {}
+    public override function incrementCycle(): Void {
+    }
 
-  function incrementCycle() {}
-
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 }
-

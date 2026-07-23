@@ -1,40 +1,56 @@
 package en.deco;
+
 class BossRushTierHotel extends Entity {
-  var activated: Bool;
-  var brutalitySprite: libs.heaps.slib.HSprite.HSprite;
-  var tacticSprite: libs.heaps.slib.HSprite.HSprite;
-  var survivalSprite: libs.heaps.slib.HSprite.HSprite;
-  var brutalityGlow: hxsl.Macros.Macros;
-  var tacticGlow: hxsl.Macros.Macros;
-  var survivalGlow: hxsl.Macros.Macros;
-  var brutalityButton: en.inter.button.BossRushTierButton.BossRushTierButton;
-  var tacticButton: en.inter.button.BossRushTierButton.BossRushTierButton;
-  var survivalButton: en.inter.button.BossRushTierButton.BossRushTierButton;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var activated: Bool;
+    public var brutalitySprite: libs.heaps.slib.HSprite;
+    public var tacticSprite: libs.heaps.slib.HSprite;
+    public var survivalSprite: libs.heaps.slib.HSprite;
+    public var brutalityGlow: shader.GradientHiLo;
+    public var tacticGlow: shader.GradientHiLo;
+    public var survivalGlow: shader.GradientHiLo;
+    public var brutalityButton: en.inter.button.BossRushTierButton;
+    public var tacticButton: en.inter.button.BossRushTierButton;
+    public var survivalButton: en.inter.button.BossRushTierButton;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function applyShaderColors() {}
+    public function applyShaderColors(): Void {
+    }
 
-  function onApplyOptions() {}
+    public override function onApplyOptions(): Void {
+    }
 
-  function setActivated(tier: String, onInit: Dynamic) {}
+    public function setActivated(arg0: String, arg1: Ref): Void {
+    }
 
-  function destroyFx(offsetX: Float) {}
+    public function destroyFx(arg0: Float): Void {
+    }
 
-  function activationFx(tier: String) {}
+    public function activationFx(arg0: String): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

@@ -1,23 +1,25 @@
 package spine;
+
 class PathConstraint {
-  var data: PathConstraintData;
-  var bones: hl.types.ArrayObj<Dynamic>;
-  var target: Dynamic;
-  var position: Float;
-  var spacing: Float;
-  var rotateMix: Float;
-  var translateMix: Float;
-  var spaces: hl.types.ArrayBytes<Float>;
-  var positions: hl.types.ArrayBytes<Float>;
-  var world: hl.types.ArrayBytes<Float>;
-  var curves: hl.types.ArrayBytes<Float>;
-  var lengths: hl.types.ArrayBytes<Float>;
-  var segments: hl.types.ArrayBytes<Float>;
-  var <none>: Dynamic;
-  static var epsilon: Float;
+    public static var epsilon: Float;
+    public var data: spine.PathConstraintData;
+    public var bones: Array<Dynamic>;
+    public var target: spine.Slot;
+    public var position: Float;
+    public var spacing: Float;
+    public var rotateMix: Float;
+    public var translateMix: Float;
+    public var spaces: Array<Float>;
+    public var positions: Array<Float>;
+    public var world: Array<Float>;
+    public var curves: Array<Float>;
+    public var lengths: Array<Float>;
+    public var segments: Array<Float>;
+    public var : Dynamic;
 
-  function __constructor__(data: PathConstraintData, skeleton: spine.Skeleton.Skeleton) {}
+    public function new(arg0: spine.PathConstraintData, arg1: spine.Skeleton) {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

@@ -1,102 +1,162 @@
 package en.pet;
+
 class PetMob extends en.Mob {
-  var item: tool.InventItem.InventItem;
-  var _baseInfCache: Dynamic;
-  var _buffedInfCache: Dynamic;
-  var followDistance: Int;
-  var teleJump: tool.skill.mobSkill.TeleJump.TeleJump;
-  var teleJumpInf: Dynamic;
-  var jumpData: tool.skill.mobSkill.TeleJump.TeleJumpData;
-  var canBePet: Bool;
-  var maxDuplicates: Int;
-  var tailUpdate: Dynamic;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var item: tool.InventItem;
+    public var _baseInfCache: Dynamic;
+    public var _buffedInfCache: Dynamic;
+    public var followDistance: Int;
+    public var teleJump: tool.skill.mobSkill.TeleJump;
+    public var teleJumpInf: Dynamic;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var canBePet: Bool;
+    public var maxDuplicates: Int;
+    public var tailUpdate: Dynamic;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, kind: String, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, maxDuplicates: Dynamic): PetMob {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Entity, arg7: tool.InventItem, arg8: Ref) {
+        super();
+    }
 
-  static function findAll(e: Entity, i: tool.InventItem.InventItem): hl.types.ArrayObj<Dynamic> {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Entity, arg7: tool.InventItem, arg8: Ref): en.pet.PetMob {
+        throw "stub: create not decompiled";
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, kind: String, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, maxDuplicates: Dynamic) {}
+    public static function tryToBuff(arg0: Entity, arg1: tool.InventItem): Dynamic {
+        throw "stub: tryToBuff not decompiled";
+    }
 
-  static function tryToBuff(e: Entity, i: tool.InventItem.InventItem): Dynamic {}
+    public static function findAll(arg0: Entity, arg1: tool.InventItem): Array<Dynamic> {
+        throw "stub: findAll not decompiled";
+    }
 
-  static function find(e: Entity, i: tool.InventItem.InventItem): PetMob {}
+    public static function find(arg0: Entity, arg1: tool.InventItem): en.pet.PetMob {
+        throw "stub: find not decompiled";
+    }
 
-  function getDepopSound(): hxd.res.Sound.Sound {}
+    public function getDepopSound(): hxd.res.Sound {
+        throw "stub: getDepopSound not decompiled";
+    }
 
-  function getUseSound(): hxd.res.Sound.Sound {}
+    public function getUseSound(): hxd.res.Sound {
+        throw "stub: getUseSound not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function getJumpingSpot(): Dynamic {}
+    public function getJumpingSpot(): Dynamic {
+        throw "stub: getJumpingSpot not decompiled";
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function moveSpeedDistMul(): Float {}
+    public function moveSpeedDistMul(): Float {
+        throw "stub: moveSpeedDistMul not decompiled";
+    }
 
-  function depop() {}
+    public function depop(): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function restoreItem() {}
+    public function restoreItem(): Void {
+    }
 
-  function canBuff(): Bool {}
+    public function canBuff(): Bool {
+        throw "stub: canBuff not decompiled";
+    }
 
-  function buff() {}
+    public function buff(): Void {
+    }
 
-  function onBuff() {}
+    public function onBuff(): Void {
+    }
 
-  function onDebuff() {}
+    public function onDebuff(): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onHeroTeleport() {}
+    public function onHeroTeleport(): Void {
+    }
 
-  function playIdleAnim() {}
+    public function playIdleAnim(): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function shouldFollowParent(): Bool {}
+    public function shouldFollowParent(): Bool {
+        throw "stub: shouldFollowParent not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onTeleJumpEnd() {}
+    public function onTeleJumpEnd(): Void {
+    }
 
-  function tpTo(target: Entity) {}
+    public function tpTo(arg0: Entity): Void {
+    }
 
-  function outOfGameUpdate() {}
+    public function outOfGameUpdate(): Void {
+    }
 
-  function onLeaveMap() {}
+    public function onLeaveMap(): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onFatalFallDamage() {}
+    public override function onFatalFallDamage(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function noPetReaction() {}
+    public function noPetReaction(): Void {
+    }
 
-  function petReaction() {}
+    public function petReaction(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

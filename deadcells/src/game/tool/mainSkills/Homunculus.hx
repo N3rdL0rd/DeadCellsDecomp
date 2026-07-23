@@ -1,29 +1,45 @@
 package tool.mainSkills;
+
 class Homunculus extends tool.HeroMainSkill {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function destroy() {}
+    public override function destroy(): Void {
+    }
 
-  function passiveFixedUpdate() {}
+    public override function passiveFixedUpdate(): Void {
+    }
 
-  function prepare(): Bool {}
+    public override function prepare(): Bool {
+        throw "stub: prepare not decompiled";
+    }
 
-  function onStart() {}
+    public override function onStart(): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function onReady() {}
+    public override function onReady(): Void {
+    }
 
-  function isUsingInputs(): Bool {}
+    public override function isUsingInputs(): Bool {
+        throw "stub: isUsingInputs not decompiled";
+    }
 
-  function onOwnerDamaged(attack: tool.atk.AttackData.AttackData) {}
+    public function onOwnerDamaged(arg0: tool.atk.AttackData): Void {
+    }
 
-  function startCooldown() {}
+    public function startCooldown(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

@@ -1,39 +1,77 @@
 package libs.tilemap;
+
 class Segment {
-  var a: Dynamic;
-  var b: Dynamic;
-  var normal: Int;
+    public var a: libs.tilemap.Vertex;
+    public var b: libs.tilemap.Vertex;
+    public var normal: Int;
 
-  function xMinSort(s1: Segment): Int {}
+    public function new(arg0: libs.tilemap.Vertex, arg1: libs.tilemap.Vertex) {
+    }
 
-  static function getIntersectionGroups(segments: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public static function getRectangle(arg0: haxe.ds.ObjectMap, arg1: libs.tilemap._Segment.Neighbors): libs.tilemap.Rectangle {
+        throw "stub: getRectangle not decompiled";
+    }
 
-  static function getRectangle(neighbors: haxe.ds.ObjectMap, start: Dynamic): Dynamic {}
+    public static function toRectangles(arg0: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: toRectangles not decompiled";
+    }
 
-  static function getMaximumIndependentSet(segments: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public static function getMaximumIndependentSet(arg0: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: getMaximumIndependentSet not decompiled";
+    }
 
-  function __constructor__(a: Dynamic, b: Dynamic) {}
+    public static function getIntersectionGroups(arg0: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: getIntersectionGroups not decompiled";
+    }
 
-  function yMinSort(s1: Segment): Int {}
+    public static function hvSplit(arg0: Array<Dynamic>, arg1: Array<Dynamic>, arg2: Array<Dynamic>): Void {
+    }
 
-  static function hvSplit(segments: hl.types.ArrayObj<Dynamic>, hSegs: hl.types.ArrayObj<Dynamic>, vSegs: hl.types.ArrayObj<Dynamic>) {}
+    public static function yMinSort(arg0: libs.tilemap.Segment, arg1: libs.tilemap.Segment): Int {
+        throw "stub: yMinSort not decompiled";
+    }
 
-  static function toRectangles(segments: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public static function xMinSort(arg0: libs.tilemap.Segment, arg1: libs.tilemap.Segment): Int {
+        throw "stub: xMinSort not decompiled";
+    }
 
-  function swapVertices() {}
+    public function swapVertices(): Void {
+    }
 
-  function intersects(s: Segment): Bool {}
+    public function intersects(arg0: libs.tilemap.Segment): Bool {
+        throw "stub: intersects not decompiled";
+    }
 }
 
-class _Segment.IntersectionGroup {
-  var hSegs: hl.types.ArrayObj<Dynamic>;
-  var vSegs: hl.types.ArrayObj<Dynamic>;
-  var intersections: hl.types.ArrayObj<Dynamic>;
-  var hSegToIndex: haxe.ds.ObjectMap;
-  var vSegToIndex: haxe.ds.ObjectMap;
+class Intersection {
+    public var h: Int;
+    public var v: Int;
 
-  function __constructor__() {}
-
-  function addIntersection(a: libs.tilemap.Segment.Segment, b: libs.tilemap.Segment.Segment) {}
+    public function new(arg0: Int, arg1: Int) {
+    }
 }
 
+class IntersectionGroup {
+    public var hSegs: Array<Dynamic>;
+    public var vSegs: Array<Dynamic>;
+    public var intersections: Array<Dynamic>;
+    public var hSegToIndex: haxe.ds.ObjectMap;
+    public var vSegToIndex: haxe.ds.ObjectMap;
+
+    public function new() {
+    }
+
+    public function addIntersection(arg0: libs.tilemap.Segment, arg1: libs.tilemap.Segment): Void {
+    }
+}
+
+class Neighbors {
+    public var vert: libs.tilemap.Vertex;
+    public var up: libs.tilemap._Segment.Neighbors;
+    public var right: libs.tilemap._Segment.Neighbors;
+    public var down: libs.tilemap._Segment.Neighbors;
+    public var left: libs.tilemap._Segment.Neighbors;
+
+    public function new(arg0: libs.tilemap.Vertex) {
+    }
+}

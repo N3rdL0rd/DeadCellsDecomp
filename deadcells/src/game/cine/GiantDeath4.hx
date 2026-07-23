@@ -1,24 +1,31 @@
 package cine;
+
 class GiantDeath4 extends GameCinematic {
-  var boss: en.mob.boss.Giant.Giant;
-  var hero: en.Hero.Hero;
-  var heroLanded: Bool;
-  var bossCell: en.loot.BossCell.BossCell;
-  var bossCellReleased: Bool;
-  var bossHeadFx: libs.heaps.slib.HSprite.HSprite;
-  var bossJawsFx: libs.heaps.slib.HSprite.HSprite;
-  var bossGlobalFx: libs.heaps.slib.HSprite.HSprite;
+    public var boss: en.mob.boss.Giant;
+    public var hero: en.Hero;
+    public var heroLanded: Bool;
+    public var bossCell: en.loot.BossCell;
+    public var bossCellReleased: Bool;
+    public var bossHeadFx: libs.heaps.slib.HSprite;
+    public var bossJawsFx: libs.heaps.slib.HSprite;
+    public var bossGlobalFx: libs.heaps.slib.HSprite;
 
-  function __constructor__(hero: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function trackHeroLanding() {}
+    public function trackHeroLanding(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function releaseBossCell() {}
+    public function releaseBossCell(): Void {
+    }
 }
-

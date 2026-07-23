@@ -1,32 +1,51 @@
 package tool.mod.script;
+
 class ScriptInterpreter extends hscript.Interp {
-  var active: Bool;
-  var entryPoint: String;
-  var parser: hscript.Parser.Parser;
-  var contents: haxe.ds.StringMap;
+    public var active: Bool;
+    public var entryPoint: String;
+    public var parser: hscript.Parser;
+    public var contents: haxe.ds.StringMap;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function loadScripts(_path: String) {}
+    public function loadScripts(arg0: String): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function resetVariables() {}
+    public override function resetVariables(): Void {
+    }
 
-  function execute(_expr: Dynamic): Dynamic {}
+    public override function execute(arg0: hscript.Expr): Dynamic {
+        throw "stub: execute not decompiled";
+    }
 
-  function exposeTypesAndDynamics() {}
+    public function exposeTypesAndFunctions(): Void {
+    }
 
-  function dumpVariables() {}
+    public function dumpVariables(): Void {
+    }
 
-  function executeScriptImpl(_variablesValues: hl.types.ArrayDyn): Bool {}
+    public function executeScriptImpl(arg0: Array<Dynamic>): Bool {
+        throw "stub: executeScriptImpl not decompiled";
+    }
 
-  function cnew(_className: String, _args: hl.types.ArrayDyn): Dynamic {}
+    public override function cnew(arg0: String, arg1: Array<Dynamic>): Dynamic {
+        throw "stub: cnew not decompiled";
+    }
 
-  function set(_object: Dynamic, _memberName: String, _value: Dynamic): Dynamic {}
+    public override function set(arg0: Dynamic, arg1: String, arg2: Dynamic): Dynamic {
+        throw "stub: set not decompiled";
+    }
 
-  function get(_object: Dynamic, _memberName: String): Dynamic {}
+    public override function get(arg0: Dynamic, arg1: String): Dynamic {
+        throw "stub: get not decompiled";
+    }
 
-  function fcall(o: Dynamic, f: String, args: hl.types.ArrayDyn): Dynamic {}
+    public override function fcall(arg0: Dynamic, arg1: String, arg2: Array<Dynamic>): Dynamic {
+        throw "stub: fcall not decompiled";
+    }
 }
-

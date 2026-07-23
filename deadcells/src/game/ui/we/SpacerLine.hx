@@ -1,10 +1,13 @@
 package ui.we;
-class SpacerLine extends ui.Window.WindowElement {
-  var line: libs.heaps.slib.HSprite.HSprite;
-  var uHei: Float;
 
-  function __constructor__(win: ui.Window.Window, lineColor: Int, uHei: Dynamic) {}
+class SpacerLine extends ui.WindowElement {
+    public var line: libs.heaps.slib.HSprite;
+    public var uHei: Float;
 
-  function beforeReflow() {}
+    public function new(arg0: ui.Window, arg1: Int, arg2: Dynamic) {
+        super();
+    }
+
+    public override function beforeReflow(): Void {
+    }
 }
-

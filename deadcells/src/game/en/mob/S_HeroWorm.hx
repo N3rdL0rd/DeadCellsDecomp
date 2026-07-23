@@ -1,55 +1,84 @@
 package en.mob;
+
 class S_HeroWorm extends en.Mob {
-  var tcx: Int;
-  var tcy: Int;
-  var ratSpeed: Float;
-  var distort: Float;
-  var sourceItem: tool.InventItem.InventItem;
-  var maxParentDist: Float;
-  var teleport: tool.skill.OldSkill.OldSkill;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var tcx: Int;
+    public var tcy: Int;
+    public var ratSpeed: Float;
+    public var distort: Float;
+    public var sourceItem: tool.InventItem;
+    public var maxParentDist: Float;
+    public var teleport: tool.skill.OldSkill;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): S_HeroWorm {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.S_HeroWorm {
+        throw "stub: create not decompiled";
+    }
 
-  function setDurationS(t: Float) {}
+    public function setDurationS(arg0: Float): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function onHorizontalStep() {}
+    public override function onHorizontalStep(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function addThreat(source: Entity, v: Float, max: Dynamic) {}
+    public override function addThreat(arg0: Entity, arg1: Float, arg2: Ref): Void {
+    }
 
-  function teleportTo(x: Int, y: Int): Bool {}
+    public function teleportTo(arg0: Int, arg1: Int): Bool {
+        throw "stub: teleportTo not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public override function onLand(arg0: Float): Void {
+    }
 
-  function depop() {}
+    public function depop(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getDamageReduction(a: tool.atk.AttackData.AttackData): Float {}
+    public function getDamageReduction(arg0: tool.atk.AttackData): Float {
+        throw "stub: getDamageReduction not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

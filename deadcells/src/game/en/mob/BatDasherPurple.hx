@@ -1,20 +1,33 @@
 package en.mob;
+
 class BatDasherPurple extends en.mob.BatDasher {
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): BatDasherPurple {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.BatDasherPurple {
+        throw "stub: create not decompiled";
+    }
 
-  function getAnimName(): String {}
+    public override function getAnimName(): String {
+        throw "stub: getAnimName not decompiled";
+    }
 
-  function getKind(): String {}
+    public override function getKind(): String {
+        throw "stub: getKind not decompiled";
+    }
 
-  function playTriggerSound() {}
+    public function playTriggerSound(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

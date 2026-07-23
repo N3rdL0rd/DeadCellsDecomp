@@ -1,68 +1,98 @@
 package tool;
+
 class Team {
-  var members: hl.types.ArrayObj<Dynamic>;
-  var _targetHelper: tool.TargetHelper.TargetHelper;
-  var targetHelper: tool.TargetHelper.TargetHelper;
-  var opposingTeams: hl.types.ArrayObj<Dynamic>;
-  var opponentsIterator: TeamIterator;
-  var opponentMobsIterator: TeamMobIterator;
-  var asMobs: hl.types.ArrayObj<Dynamic>;
-  var teamSignals: Dynamic;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var members: Array<Dynamic>;
+    public var _targetHelper: tool.TargetHelper;
+    public var targetHelper: tool.TargetHelper;
+    public var opposingTeams: Array<Dynamic>;
+    public var opponentsIterator: tool.TeamIterator;
+    public var opponentMobsIterator: tool.TeamMobIterator;
+    public var asMobs: Array<Dynamic>;
+    public var teamSignals: tool.signals.TeamSignals;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function get_targetHelper(): tool.TargetHelper.TargetHelper {}
+    public function get_targetHelper(): tool.TargetHelper {
+        throw "stub: get_targetHelper not decompiled";
+    }
 
-  function onReload(lvl: pr.Level.Level) {}
+    public function onReload(arg0: pr.Level): Void {
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function addMember(e: Entity) {}
+    public function addMember(arg0: Entity): Void {
+    }
 
-  function removeMember(e: Entity) {}
+    public function removeMember(arg0: Entity): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class TeamIterator {
-  var team: tool.Team.Team;
-  var teamIdx: Int;
-  var memberIdx: Int;
-  var opposingTeamMembers: hl.types.ArrayObj<Dynamic>;
+    public var team: tool.Team;
+    public var teamIdx: Int;
+    public var memberIdx: Int;
+    public var opposingTeamMembers: Array<Dynamic>;
 
-  function __constructor__(t: tool.Team.Team) {}
+    public function new(arg0: tool.Team) {
+    }
 
-  function reset(t: tool.Team.Team): TeamIterator {}
+    public function reset(arg0: tool.Team): tool.TeamIterator {
+        throw "stub: reset not decompiled";
+    }
 
-  function hasNext(): Bool {}
+    public function hasNext(): Bool {
+        throw "stub: hasNext not decompiled";
+    }
 
-  function next(): Entity {}
+    public function next(): Entity {
+        throw "stub: next not decompiled";
+    }
 
-  function toArray(): hl.types.ArrayObj<Dynamic> {}
+    public function toArray(): Array<Dynamic> {
+        throw "stub: toArray not decompiled";
+    }
 }
 
 class TeamMobIterator {
-  var team: tool.Team.Team;
-  var teamIdx: Int;
-  var memberIdx: Int;
+    public var team: tool.Team;
+    public var teamIdx: Int;
+    public var memberIdx: Int;
 
-  function __constructor__(t: tool.Team.Team) {}
+    public function new(arg0: tool.Team) {
+    }
 
-  function reset(t: tool.Team.Team): TeamMobIterator {}
+    public function reset(arg0: tool.Team): tool.TeamMobIterator {
+        throw "stub: reset not decompiled";
+    }
 
-  function hasNext(): Bool {}
+    public function hasNext(): Bool {
+        throw "stub: hasNext not decompiled";
+    }
 
-  function next(): en.Mob.Mob {}
+    public function next(): en.Mob {
+        throw "stub: next not decompiled";
+    }
 }
-

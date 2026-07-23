@@ -1,78 +1,112 @@
 package libs;
+
 class Process {
-  var rendering: Bool;
-  var uniqId: Int;
-  var ftime: Float;
-  var paused: Bool;
-  var destroyed: Bool;
-  var speedMod: Float;
-  var parent: Process;
-  var tmod: Float;
-  var name: String;
-  var children: hl.types.ArrayObj<Dynamic>;
-  var delayer: libs.Delayer.Delayer;
-  var cd: libs.Cooldown.Cooldown;
-  var tw: libs.misc.Tweenie.Tweenie;
-  var root: h2d.Layers.Layers;
-  static var CUSTOM_STAGE_WIDTH: Int;
-  static var CUSTOM_STAGE_HEIGHT: Int;
-  static var UNIQ_ID: Int;
-  static var ROOTS: hl.types.ArrayObj<Dynamic>;
+    public static var CUSTOM_STAGE_WIDTH: Int;
+    public static var CUSTOM_STAGE_HEIGHT: Int;
+    public static var UNIQ_ID: Int;
+    public static var ROOTS: Array<Dynamic>;
+    public var rendering: Bool;
+    public var uniqId: Int;
+    public var ftime: Float;
+    public var paused: Bool;
+    public var destroyed: Bool;
+    public var speedMod: Float;
+    public var parent: libs.Process;
+    public var tmod: Float;
+    public var name: String;
+    public var children: Array<Dynamic>;
+    public var delayer: libs.Delayer;
+    public var cd: libs.Cooldown;
+    public var tw: libs.misc.Tweenie;
+    public var root: h2d.Layers;
 
-  function onDisposeCb() {}
+    public function new(arg0: libs.Process) {
+    }
 
-  function onUpdateCb() {}
+    public static function _dispose(arg0: libs.Process): Void {
+    }
 
-  function _update(p: Float, tmod: Dynamic) {}
+    public static function _checkDestroyeds(arg0: Array<Dynamic>): Void {
+    }
 
-  static function resizeAll() {}
+    public static function _postUpdate(arg0: libs.Process): Void {
+    }
 
-  function _dispose(p: Process) {}
+    public static function _update(arg0: libs.Process, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  static function _checkDestroyeds(plist: hl.types.ArrayObj<Dynamic>) {}
+    public static function _resize(arg0: libs.Process): Void {
+    }
 
-  function __constructor__(parent: Process) {}
+    public static function resizeAll(): Void {
+    }
 
-  static function updateAll(tmod: Float, rendering: Dynamic) {}
+    public static function updateAll(arg0: Float, arg1: Dynamic): Void {
+    }
 
-  function _postUpdate(p: Process) {}
+    public function init(): Void {
+    }
 
-  function _resize(p: Process) {}
+    public function createRoot(arg0: h2d.Object): Void {
+    }
 
-  function init() {}
+    public function createRootInLayers(arg0: h2d.Layers, arg1: Int): Void {
+    }
 
-  function createRoot(ctx: h2d.Object.Object) {}
+    public function update(): Void {
+    }
 
-  function createRootInLayers(ctx: h2d.Layers.Layers, plan: Int) {}
+    public function postUpdate(): Void {
+    }
 
-  function update() {}
+    public function onResize(): Void {
+    }
 
-  function postUpdate() {}
+    public function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function onDispose() {}
+    public function secToFrames(arg0: Float): Float {
+        throw "stub: secToFrames not decompiled";
+    }
 
-  function toString(): String {}
+    public function framesToSec(arg0: Float): Float {
+        throw "stub: framesToSec not decompiled";
+    }
 
-  function secToFrames(v: Float): Float {}
+    public function getDefaultFrameRate(): Float {
+        throw "stub: getDefaultFrameRate not decompiled";
+    }
 
-  function framesToSec(v: Float): Float {}
+    public function pause(): Void {
+    }
 
-  function getDefaultFrameRate(): Float {}
+    public function resume(): Void {
+    }
 
-  function pause() {}
+    public function destroy(): Void {
+    }
 
-  function resume() {}
+    public function addChild(arg0: libs.Process): Void {
+    }
 
-  function destroy() {}
+    public function createChildProcess(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic): libs.Process {
+        throw "stub: createChildProcess not decompiled";
+    }
 
-  function addChild(p: Process) {}
+    public function disposeImmediately(): Void {
+    }
 
-  function createChildProcess(onUpdate: Dynamic, onDispose: Dynamic, runUpdateImmediatly: Dynamic): Process {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 
-  function disposeImmediately() {}
+    public function onDisposeCb(): Void {
+    }
 
-  function __string(): hl.Bytes {}
+    public function onUpdateCb(): Void {
+    }
 }
-

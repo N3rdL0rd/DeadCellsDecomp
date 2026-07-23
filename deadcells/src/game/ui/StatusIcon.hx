@@ -1,24 +1,37 @@
 package ui;
+
 class StatusIcon {
-  var icon: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var blinkCpt: Float;
-  var alpha: Float;
-  var visible: Bool;
+    public var icon: libs.heaps.slib.HSpriteBE;
+    public var blinkCpt: Float;
+    public var alpha: Float;
+    public var visible: Bool;
 
-  function needToBlink(): Bool {}
+    public function new(arg0: libs.heaps.slib.HSpriteBE) {
+    }
 
-  function __constructor__(i: libs.heaps.slib.HSpriteBE.HSpriteBE) {}
+    public function get_game(): pr.Game {
+        throw "stub: get_game not decompiled";
+    }
 
-  function get_game(): pr.Game.Game {}
+    public function dispose(): Void {
+    }
 
-  function dispose() {}
+    public function set_x(arg0: Float): Float {
+        throw "stub: set_x not decompiled";
+    }
 
-  function set_x(v: Float): Float {}
+    public function set_y(arg0: Float): Float {
+        throw "stub: set_y not decompiled";
+    }
 
-  function set_y(v: Float): Float {}
+    public function set_visible(arg0: Bool): Bool {
+        throw "stub: set_visible not decompiled";
+    }
 
-  function set_visible(v: Bool): Bool {}
+    public function update(arg0: Float): Void {
+    }
 
-  function update(dt: Float) {}
+    public function needToBlink(): Bool {
+        throw "stub: needToBlink not decompiled";
+    }
 }
-

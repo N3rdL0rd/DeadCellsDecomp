@@ -1,18 +1,26 @@
 package tool.weap;
+
 class RevengeSword extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function dispose(): Void {
+    }
 
-  function dispose() {}
+    public function onOwnerDamaged(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onOwnerDamaged(a: tool.atk.AttackData.AttackData) {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onOwnerCooldownEnd(k: String, idx: Int) {}
-
-  function setWeaponGlow() {}
+    public override function setWeaponGlow(): Void {
+    }
 }
-

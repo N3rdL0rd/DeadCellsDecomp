@@ -1,176 +1,271 @@
 package en.mob.boss;
+
 class Dooku extends en.mob.Boss {
-  var manager: en.DookuManager.DookuManager;
-  var started: Bool;
-  var tcx: Int;
-  var tcy: Int;
-  var roomMiddle: tool.CPoint.CPoint;
-  var lockedDir: Int;
-  var shootGrid: hl.types.ArrayObj<Dynamic>;
-  var shootGridWid: Int;
-  var shootGridHei: Int;
-  var shootGridPatterns: libs.RandDeck.RandDeck;
-  var startWithOffset: Bool;
-  var battleZoneWid: Int;
-  var battleZoneLeftX: Dynamic;
-  var battleZoneGroundY: Dynamic;
-  var magmaBall: hl.types.ArrayObj<Dynamic>;
-  var magmaBallWid: Int;
-  var magmaBallHei: Int;
-  var magmaBallPatterns: libs.RandDeck.RandDeck;
-  var grabbedHero: en.Hero.Hero;
-  var grabAtkFx: libs.heaps.HParticle.HParticle;
-  var shootAngInf: Dynamic;
-  var curAction: Dynamic;
-  var nextAnticipatedAttack: Dynamic;
-  var forcedNextAttack: Dynamic;
-  var phaseActions: hl.types.ArrayObj<Dynamic>;
-  var lastAction: Dynamic;
-  var speedMultiplier: Float;
-  var levelUptauntsBourvil: hl.types.ArrayObj<Dynamic>;
-  var levelUptauntsDooku: hl.types.ArrayObj<Dynamic>;
-  var levelUptaunts: hl.types.ArrayObj<Dynamic>;
-  var inCombatTauntsBourvil: hl.types.ArrayObj<Dynamic>;
-  var inCombatTauntsDooku: hl.types.ArrayObj<Dynamic>;
-  var inCombatTaunts: hl.types.ArrayObj<Dynamic>;
-  var hitByCatTaunts: hl.types.ArrayObj<Dynamic>;
-  var playerUseBatVolleyTaunts: hl.types.ArrayObj<Dynamic>;
-  var hitVampireKillerAsBourvilTaunts: hl.types.ArrayObj<Dynamic>;
-  var hitVampireKillerAsAnyTaunts: hl.types.ArrayObj<Dynamic>;
-  var deathTauntsBourvil: hl.types.ArrayObj<Dynamic>;
-  var deathTauntsAlucard: hl.types.ArrayObj<Dynamic>;
-  var scarf: tool.ScarfSegment.ScarfSegment;
-  var sbDookuFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbDookuFxAdd: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var atkFx: libs.heaps.HParticle.HParticle;
-  var grabFxAlpha: libs.misc.Tweenie.Tweenie;
-  var bossRushModifiers: Dynamic;
-  var <none>: Dynamic;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var manager: en.DookuManager;
+    public var started: Bool;
+    public var tcx: Int;
+    public var tcy: Int;
+    public var roomMiddle: tool.CPoint;
+    public var lockedDir: Int;
+    public var shootGrid: Array<Dynamic>;
+    public var shootGridWid: Int;
+    public var shootGridHei: Int;
+    public var shootGridPatterns: libs.RandDeck;
+    public var startWithOffset: Bool;
+    public var battleZoneWid: Int;
+    public var battleZoneLeftX: Dynamic;
+    public var battleZoneGroundY: Dynamic;
+    public var magmaBall: Array<Dynamic>;
+    public var magmaBallWid: Int;
+    public var magmaBallHei: Int;
+    public var magmaBallPatterns: libs.RandDeck;
+    public var grabbedHero: en.Hero;
+    public var grabAtkFx: libs.heaps.HParticle;
+    public var shootAngInf: Dynamic;
+    public var curAction: en.mob.boss.DookuAction;
+    public var nextAnticipatedAttack: en.mob.boss.DookuAction;
+    public var forcedNextAttack: en.mob.boss.DookuAction;
+    public var phaseActions: Array<Dynamic>;
+    public var lastAction: en.mob.boss.DookuAction;
+    public var speedMultiplier: Float;
+    public var levelUptauntsBourvil: Array<Dynamic>;
+    public var levelUptauntsDooku: Array<Dynamic>;
+    public var levelUptaunts: Array<Dynamic>;
+    public var inCombatTauntsBourvil: Array<Dynamic>;
+    public var inCombatTauntsDooku: Array<Dynamic>;
+    public var inCombatTaunts: Array<Dynamic>;
+    public var hitByCatTaunts: Array<Dynamic>;
+    public var playerUseBatVolleyTaunts: Array<Dynamic>;
+    public var hitVampireKillerAsBourvilTaunts: Array<Dynamic>;
+    public var hitVampireKillerAsAnyTaunts: Array<Dynamic>;
+    public var deathTauntsBourvil: Array<Dynamic>;
+    public var deathTauntsAlucard: Array<Dynamic>;
+    public var scarf: tool.ScarfManager;
+    public var sbDookuFx: libs.heaps.slib.HSpriteBatch;
+    public var sbDookuFxAdd: libs.heaps.slib.HSpriteBatch;
+    public var atkFx: libs.heaps.HParticle;
+    public var grabFxAlpha: libs.misc.Tween;
+    public var bossRushModifiers: Dynamic;
+    public var : Dynamic;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Dooku {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.boss.Dooku {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function initScarf() {}
+    public function initScarf(): Void {
+    }
 
-  function setReady() {}
+    public override function setReady(): Void {
+    }
 
-  function onBossLevelUp() {}
+    public override function onBossLevelUp(): Void {
+    }
 
-  function postDeserialize() {}
+    public function postDeserialize(): Void {
+    }
 
-  function getDamageReduction(ad: tool.atk.AttackData.AttackData): Float {}
+    public function getDamageReduction(arg0: tool.atk.AttackData): Float {
+        throw "stub: getDamageReduction not decompiled";
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function get_headX(): Float {}
+    public function get_headX(): Float {
+        throw "stub: get_headX not decompiled";
+    }
 
-  function get_headY(): Float {}
+    public function get_headY(): Float {
+        throw "stub: get_headY not decompiled";
+    }
 
-  function get_handTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_handTracks(): Array<Int> {
+        throw "stub: get_handTracks not decompiled";
+    }
 
-  function get_handX(): Float {}
+    public function get_handX(): Float {
+        throw "stub: get_handX not decompiled";
+    }
 
-  function get_handY(): Float {}
+    public function get_handY(): Float {
+        throw "stub: get_handY not decompiled";
+    }
 
-  function levelUptaunt() {}
+    public function levelUptaunt(): Void {
+    }
 
-  function sayCombatTaunt() {}
+    public function sayCombatTaunt(): Void {
+    }
 
-  function deathTaunt() {}
+    public function deathTaunt(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onHeroUseSkill(item: String) {}
+    public function onHeroUseSkill(arg0: String): Void {
+    }
 
-  function sayTaunt(str: String, minWaitTime: Dynamic, maxWaitTime: Dynamic) {}
+    public function sayTaunt(arg0: String, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function adaptLockDuration(duration: Float): Float {}
+    public function adaptLockDuration(arg0: Float): Float {
+        throw "stub: adaptLockDuration not decompiled";
+    }
 
-  function addBossRushProjectileAttackTags(atk: tool.atk.AttackData.AttackData) {}
+    public function addBossRushProjectileAttackTags(arg0: tool.atk.AttackData): Void {
+    }
 
-  function resetPatterns() {}
+    public function resetPatterns(): Void {
+    }
 
-  function initPatterns(name: String, count: Int, deck: libs.RandDeck.RandDeck) {}
+    public function initPatterns(arg0: String, arg1: Int, arg2: libs.RandDeck): Void {
+    }
 
-  function initCCAttack(ccAtk: String, comboAttack: String, animAtk: hl.types.ArrayObj<Dynamic>, fxAtk: hl.types.ArrayObj<Dynamic>, dirToHero: Dynamic): tool.skill.OldMobSkill.OldMobSkill {}
+    public function initCCAttack(arg0: String, arg1: String, arg2: Array<Dynamic>, arg3: Array<Dynamic>, arg4: Ref): tool.skill.OldMobSkill {
+        throw "stub: initCCAttack not decompiled";
+    }
 
-  function interruptSkills() {}
+    public function interruptSkills(): Void {
+    }
 
-  function teleportTo(x: Int, y: Int, force: Dynamic): Bool {}
+    public function teleportTo(arg0: Int, arg1: Int, arg2: Ref): Bool {
+        throw "stub: teleportTo not decompiled";
+    }
 
-  function shadowStepTo(x: Int, y: Int): Bool {}
+    public function shadowStepTo(arg0: Int, arg1: Int): Bool {
+        throw "stub: shadowStepTo not decompiled";
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function startATpAction(s: tool.skill.OldMobSkill.OldMobSkill): Bool {}
+    public function startATpAction(arg0: tool.skill.OldMobSkill): Bool {
+        throw "stub: startATpAction not decompiled";
+    }
 
-  function resetAndWait(waitTime: Dynamic, ignoreCancelVel: Dynamic) {}
+    public function resetAndWait(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function resetAction() {}
+    public function resetAction(): Void {
+    }
 
-  function isLastATpAction(): Bool {}
+    public function isLastATpAction(): Bool {
+        throw "stub: isLastATpAction not decompiled";
+    }
 
-  function pickNewTeleportAction(): Dynamic {}
+    public function pickNewTeleportAction(): en.mob.boss.DookuAction {
+        throw "stub: pickNewTeleportAction not decompiled";
+    }
 
-  function actionNeedATp(action: Dynamic): Bool {}
+    public function actionNeedATp(arg0: en.mob.boss.DookuAction): Bool {
+        throw "stub: actionNeedATp not decompiled";
+    }
 
-  function pickNextAction() {}
+    public function pickNextAction(): Void {
+    }
 
-  function setAction(newAction: Dynamic) {}
+    public function setAction(arg0: en.mob.boss.DookuAction): Void {
+    }
 
-  function startAction(action: Dynamic): Bool {}
+    public function startAction(arg0: en.mob.boss.DookuAction): Bool {
+        throw "stub: startAction not decompiled";
+    }
 
-  function pickBestTeleportPoint(teleportDistance: Dynamic, avoidDirToBorder: Dynamic, addRandom: Dynamic): Dynamic {}
+    public function pickBestTeleportPoint(arg0: en.mob.boss.TeleportDistance, arg1: Ref, arg2: Ref): Dynamic {
+        throw "stub: pickBestTeleportPoint not decompiled";
+    }
 
-  function canLevelUp(): Bool {}
+    public override function canLevelUp(): Bool {
+        throw "stub: canLevelUp not decompiled";
+    }
 
-  function bossLevelUp() {}
+    public override function bossLevelUp(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function onHorizontalStep() {}
+    public function onHorizontalStep(): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getShadowStepColor(): Int {}
+    public function getShadowStepColor(): Int {
+        throw "stub: getShadowStepColor not decompiled";
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
 
+class Pattern {
+    public var grid: Array<Dynamic>;
+    public var wid: Int;
+    public var hei: Int;
+
+    public function new(arg0: Array<Dynamic>, arg1: Int, arg2: Int) {
+    }
+}

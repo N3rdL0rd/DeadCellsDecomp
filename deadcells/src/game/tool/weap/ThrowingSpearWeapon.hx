@@ -1,14 +1,21 @@
 package tool.weap;
+
 class ThrowingSpearWeapon extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function onOutOfAmmoTry(): Void {
+    }
 
-  function onOutOfAmmoTry() {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
-
-  function resetAmmo() {}
+    public function resetAmmo(): Void {
+    }
 }
-

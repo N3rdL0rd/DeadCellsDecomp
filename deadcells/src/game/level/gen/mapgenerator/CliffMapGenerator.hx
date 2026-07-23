@@ -1,8 +1,10 @@
 package level.gen.mapgenerator;
+
 class CliffMapGenerator extends level.gen.MapGenerator {
+    public function new(arg0: Dynamic, arg1: level.RoomNode, arg2: libs.Rand, arg3: Dynamic, arg4: Dynamic) {
+        super();
+    }
 
-  function __constructor__(ldat: Dynamic, root: level.RoomNode.RoomNode, rnd: libs.Rand.Rand, res: Dynamic, loadingTick: Dynamic) {}
-
-  function setTemplatesScore(validTemplates: hl.types.ArrayObj<Dynamic>, context: Dynamic) {}
+    public override function setTemplatesScore(arg0: Array<Dynamic>, arg1: Dynamic): Void {
+    }
 }
-

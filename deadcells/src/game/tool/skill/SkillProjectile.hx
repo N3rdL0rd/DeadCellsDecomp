@@ -1,33 +1,44 @@
 package tool.skill;
-class SkillProjectile extends tool.skill.Skill.SkillEvent {
-  var type: Dynamic;
-  var sprite: String;
-  var range: Float;
-  var ang: Float;
-  var speed: Float;
-  var offsetX: Float;
-  var offsetY: Float;
-  var tailType: Dynamic;
-  var tailColor: Dynamic;
-  var tailLineAlpha: Float;
-  var tailLineThickness: Dynamic;
-  var pierce: Int;
-  var ignoreWalls: Bool;
 
-  function spawnCustomBullet(skillData: tool.atk.AttackData.AttackData, ang: Float): en.Bullet.Bullet {}
+class SkillProjectile extends tool.skill.SkillEvent {
+    public var type: Dynamic;
+    public var sprite: String;
+    public var range: Float;
+    public var ang: Float;
+    public var speed: Float;
+    public var offsetX: Float;
+    public var offsetY: Float;
+    public var tailType: Dynamic;
+    public var tailColor: Dynamic;
+    public var tailLineAlpha: Float;
+    public var tailLineThickness: Dynamic;
+    public var pierce: Int;
+    public var ignoreWalls: Bool;
 
-  function customTail() {}
+    public function new(arg0: Dynamic, arg1: String, arg2: tool.skill.Skill, arg3: Float, arg4: String, arg5: Dynamic, arg6: Dynamic) {
+        super();
+    }
 
-  function __constructor__(type: Dynamic, sprite: String, skill: tool.skill.Skill.Skill, delay: Float, customId: String, trigger: Dynamic, minMaxRatio: Dynamic) {}
+    public function setMovementParams(arg0: Float, arg1: Float, arg2: Float, arg3: Dynamic): Void {
+    }
 
-  function setMovementParams(range: Float, ang: Float, speed: Float, offset: Dynamic) {}
+    public function setTailParams(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function setTailParams(tailType: Dynamic, tailColor: Dynamic, tailLineAlpha: Dynamic, tailLineThickness: Dynamic) {}
+    public function setCollisionParams(arg0: Int, arg1: Ref): Void {
+    }
 
-  function setCollisionParams(pierce: Int, ignoreWalls: Dynamic) {}
+    public override function trigger(arg0: Dynamic): Void {
+    }
 
-  function trigger(overrideDir: Dynamic) {}
+    public function spawnDefaultBullet(arg0: tool.atk.AttackData, arg1: Float): en.Bullet {
+        throw "stub: spawnDefaultBullet not decompiled";
+    }
 
-  function spawnDefaultBullet(skillData: tool.atk.AttackData.AttackData, ang: Float): en.Bullet.Bullet {}
+    public function customTail(): Void {
+    }
+
+    public function spawnCustomBullet(arg0: tool.atk.AttackData, arg1: Float): en.Bullet {
+        throw "stub: spawnCustomBullet not decompiled";
+    }
 }
-

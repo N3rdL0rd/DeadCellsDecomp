@@ -1,20 +1,30 @@
 package en.gr;
+
 class EnemyGrenadeHardy extends en.Grenade {
-  var tHardy: en.mob.ThrowableMushroom.ThrowableMushroom;
-  var skillInf: Dynamic;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var tHardy: en.mob.ThrowableMushroom;
+    public var skillInf: Dynamic;
 
-  function __constructor__(source: Entity, hardy: en.mob.ThrowableMushroom.ThrowableMushroom, target: Entity, skillInf: Dynamic) {}
+    public function new(arg0: Entity, arg1: en.mob.ThrowableMushroom, arg2: Entity, arg3: Dynamic) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function counter(item: tool.InventItem.InventItem, tier: Int, playSound: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public override function counter(arg0: tool.InventItem, arg1: Int, arg2: Ref): Array<Dynamic> {
+        throw "stub: counter not decompiled";
+    }
 
-  function throwUsingFakePhysics(cx: Float, cy: Float) {}
+    public override function throwUsingFakePhysics(arg0: Float, arg1: Float): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

@@ -1,26 +1,31 @@
 package ui;
+
 class RewardPopup extends ui.Process {
-  var item: Dynamic;
-  var blackBG: libs.heaps.slib.HSprite.HSprite;
-  var wrapper: h2d.Object.Object;
-  var box: ui.UIBox.UIBox;
-  var title: ui.Text.Text;
-  var skinText: ui.Text.Text;
-  var fItem: h2d.Flow.Flow;
-  var clYes: ui.ControlLabel.ControlLabel;
-  var topLine: libs.heaps.slib.HSprite.HSprite;
-  var botLine: libs.heaps.slib.HSprite.HSprite;
-  var fxSb: h2d.SpriteBatch.SpriteBatch;
-  var fxPool: libs.heaps.HParticle.HParticle;
-  var controller: tool.Controller.Controller;
-  var onValidate: Dynamic;
+    public var item: Dynamic;
+    public var blackBG: libs.heaps.slib.HSprite;
+    public var wrapper: h2d.Object;
+    public var box: ui.UIBox;
+    public var title: ui.Text;
+    public var skinText: ui.Text;
+    public var fItem: h2d.Flow;
+    public var clYes: ui.ControlLabel;
+    public var topLine: libs.heaps.slib.HSprite;
+    public var botLine: libs.heaps.slib.HSprite;
+    public var fxSb: h2d.SpriteBatch;
+    public var fxPool: libs.heaps.ParticlePool;
+    public var controller: tool.ControllerAccess;
+    public var onValidate: Dynamic;
 
-  function __constructor__(item: Dynamic, onValidate: Dynamic, isMetaItem: Dynamic) {}
+    public function new(arg0: Dynamic, arg1: Dynamic, arg2: Ref) {
+        super();
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

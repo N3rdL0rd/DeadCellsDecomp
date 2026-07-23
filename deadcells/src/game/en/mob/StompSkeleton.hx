@@ -1,61 +1,86 @@
 package en.mob;
+
 class StompSkeleton extends en.Mob {
-  var moveTargetX: Float;
-  var moveTargetY: Float;
-  var moveTargetTime: Float;
-  var moveTargetReached: Bool;
-  var vx: Dynamic;
-  var vy: Dynamic;
-  var consecutiveStompCount: Int;
-  var stompGroundY: Int;
-  var stompGroundXMin: Int;
-  var stompGroundXMax: Int;
-  var stompGroundXStart: Int;
-  var hellStompInf: Dynamic;
-  var hellStomp: tool.skill.OldMobSkill.OldMobSkill;
-  static var N_CONSECUTIVE_STOMPS: Int;
-  static var STOMP_LEN: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var N_CONSECUTIVE_STOMPS: Int;
+    public static var STOMP_LEN: Float;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var moveTargetX: Float;
+    public var moveTargetY: Float;
+    public var moveTargetTime: Float;
+    public var moveTargetReached: Bool;
+    public var vx: tool.Ref;
+    public var vy: tool.Ref;
+    public var consecutiveStompCount: Int;
+    public var stompGroundY: Int;
+    public var stompGroundXMin: Int;
+    public var stompGroundXMax: Int;
+    public var stompGroundXStart: Int;
+    public var hellStompInf: Dynamic;
+    public var hellStomp: tool.skill.OldMobSkill;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): StompSkeleton {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.StompSkeleton {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function onTouchCeil() {}
+    public function onTouchCeil(): Void {
+    }
 
-  function stopHellStomp() {}
+    public function stopHellStomp(): Void {
+    }
 
-  function shockWaveHit(x: Float, y: Float, power: Dynamic) {}
+    public function shockWaveHit(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function moveTo(targetX: Float, targetY: Float, time: Float) {}
+    public function moveTo(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function moveToStep() {}
+    public function moveToStep(): Void {
+    }
 
-  function stopMove() {}
+    public function stopMove(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

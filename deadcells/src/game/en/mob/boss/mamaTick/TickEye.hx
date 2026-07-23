@@ -1,24 +1,28 @@
 package en.mob.boss.mamaTick;
+
 class TickEye {
-  var x: Float;
-  var y: Float;
-  var tick: en.mob.boss.MamaTick.MamaTick;
-  var eyeSize: Int;
-  var irisSize: Int;
-  var sprBack: h2d.SpriteBatch.SpriteBatch;
-  var sprIris: h2d.SpriteBatch.SpriteBatch;
-  var maxIrisOffset: Float;
-  var irisMargin: Int;
-  var target: Entity;
-  var crazyFactor: Float;
-  var maxDist: Float;
-  var backColors: h3d.Vector.Vector;
-  var irisColors: h3d.Vector.Vector;
+    public var x: Float;
+    public var y: Float;
+    public var tick: en.mob.boss.MamaTick;
+    public var eyeSize: Int;
+    public var irisSize: Int;
+    public var sprBack: h2d.BatchElement;
+    public var sprIris: h2d.BatchElement;
+    public var maxIrisOffset: Float;
+    public var irisMargin: Int;
+    public var target: Entity;
+    public var crazyFactor: Float;
+    public var maxDist: Float;
+    public var backColors: h3d.Vector;
+    public var irisColors: h3d.Vector;
 
-  function __constructor__(tick: en.mob.boss.MamaTick.MamaTick, spriteBatch: h2d.SpriteBatch.SpriteBatch, slib: libs.heaps.slib.SpriteLib.SpriteLib, eyeSize: Int, irisSize: Int, x: Float, y: Float) {}
+    public function new(arg0: en.mob.boss.MamaTick, arg1: h2d.SpriteBatch, arg2: libs.heaps.slib.SpriteLib, arg3: Int, arg4: Int, arg5: Float, arg6: Float) {
+    }
 
-  function getCrazyOffset(): Float {}
+    public function getCrazyOffset(): Float {
+        throw "stub: getCrazyOffset not decompiled";
+    }
 
-  function postUpdate(topX: Float, topY: Float) {}
+    public function postUpdate(arg0: Float, arg1: Float): Void {
+    }
 }
-

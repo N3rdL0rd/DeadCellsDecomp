@@ -1,27 +1,40 @@
 package en.inter.npc;
-class Collector extends CollectorPanelNpc {
-  var isFocused: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, r: level.Room.Room) {}
+class Collector extends en.inter.npc.CollectorPanelNpc {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var isFocused: Bool;
 
-  function initSpeechDeck() {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function postUpdate() {}
+    public function initGfx(): Void {
+    }
 
-  function onGreet(h: en.Hero.Hero) {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function onGreet(arg0: en.Hero): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserializeInit(): Void {
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,45 +1,65 @@
 package en.mob;
+
 class Spawner extends en.Mob {
-  var minPfWid: Int;
-  var range: Int;
-  var dr: Float;
-  var dh: tool.DecisionHelper.DecisionHelper;
-  var bar: libs.heaps.slib.HSprite.HSprite;
-  var barBottom: libs.heaps.slib.HSprite.HSprite;
-  var barTop: libs.heaps.slib.HSprite.HSprite;
-  var meat: libs.heaps.slib.HSprite.HSprite;
-  var pipe: libs.heaps.slib.HSprite.HSprite;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var minPfWid: Int;
+    public var range: Int;
+    public var dr: Float;
+    public var dh: tool.DecisionHelper;
+    public var bar: libs.heaps.slib.HSprite;
+    public var barBottom: libs.heaps.slib.HSprite;
+    public var barTop: libs.heaps.slib.HSprite;
+    public var meat: libs.heaps.slib.HSprite;
+    public var pipe: libs.heaps.slib.HSprite;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Spawner {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Spawner {
+        throw "stub: create not decompiled";
+    }
 
-  function canHaveRepellingWith(e: Entity): Bool {}
+    public override function canHaveRepellingWith(arg0: Entity): Bool {
+        throw "stub: canHaveRepellingWith not decompiled";
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function onPlatformParse() {}
+    public function onPlatformParse(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

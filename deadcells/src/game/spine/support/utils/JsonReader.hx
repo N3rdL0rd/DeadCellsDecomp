@@ -1,8 +1,10 @@
 package spine.support.utils;
+
 class JsonReader {
+    public function new() {
+    }
 
-  function __constructor__() {}
-
-  function parse(file: Dynamic): Dynamic {}
+    public function parse(arg0: Dynamic): Dynamic {
+        throw "stub: parse not decompiled";
+    }
 }
-

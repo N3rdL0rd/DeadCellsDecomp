@@ -1,31 +1,39 @@
 package level.disp;
+
 class WaterFall extends libs.Process {
-  var water: h2d.Bitmap.Bitmap;
-  var speedWater: Float;
-  var speedDisp: Float;
-  var cx: Int;
-  var lDisp: level.LevelDisp.LevelDisp;
-  var x: Float;
-  var ymin: Float;
-  var ymax: Float;
-  var wid: Float;
-  var color: Int;
-  var visible: Bool;
-  var speedPara: Float;
-  var displaceSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var addSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var cullingBounds: h2d.col.Bounds.Bounds;
+    public var water: h2d.Bitmap;
+    public var speedWater: Float;
+    public var speedDisp: Float;
+    public var cx: Int;
+    public var lDisp: level.LevelDisp;
+    public var x: Float;
+    public var ymin: Float;
+    public var ymax: Float;
+    public var wid: Float;
+    public var color: Int;
+    public var visible: Bool;
+    public var speedPara: Float;
+    public var displaceSb: libs.heaps.slib.HSpriteBatch;
+    public var addSb: libs.heaps.slib.HSpriteBatch;
+    public var cullingBounds: h2d.col.Bounds;
 
-  function __constructor__(lDisp: level.LevelDisp.LevelDisp, cx: Int, ymin: Int, ymax: Int, waterTileLayer: Int, _displaceSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch, _addSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch, hasSound: Dynamic, alpha: Dynamic, _scaleX: Dynamic) {}
+    public function new(arg0: level.LevelDisp, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: libs.heaps.slib.HSpriteBatch, arg6: libs.heaps.slib.HSpriteBatch, arg7: Ref, arg8: Ref, arg9: Ref) {
+        super();
+    }
 
-  function setColor(value: Int) {}
+    public function setColor(arg0: Int): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function set_visible(value: Bool): Bool {}
+    public function set_visible(arg0: Bool): Bool {
+        throw "stub: set_visible not decompiled";
+    }
 
-  function onVisibleChanged() {}
+    public function onVisibleChanged(): Void {
+    }
 }
-

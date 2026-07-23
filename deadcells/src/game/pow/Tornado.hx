@@ -1,36 +1,51 @@
 package pow;
+
 class Tornado extends Power {
-  var dir: Int;
-  var dx: Float;
-  var curX: Float;
-  var curY: Float;
-  var onGround: Bool;
-  var speed: Float;
-  var tickRate: Float;
-  var sharknado: Bool;
-  var area: tool.Area.Area;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var dir: Int;
+    public var dx: Float;
+    public var curX: Float;
+    public var curY: Float;
+    public var onGround: Bool;
+    public var speed: Float;
+    public var tickRate: Float;
+    public var sharknado: Bool;
+    public var area: tool.Area;
 
-  function __constructor__(e: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function updateSoundPosition(c: hxd.snd.Channel.Channel) {}
+    public function updateSoundPosition(arg0: hxd.snd.Channel): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function spawnShark(sharkW: tool.Weapon.Weapon): en.bu.Shark.Shark {}
+    public function spawnShark(arg0: tool.Weapon): en.bu.Shark {
+        throw "stub: spawnShark not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

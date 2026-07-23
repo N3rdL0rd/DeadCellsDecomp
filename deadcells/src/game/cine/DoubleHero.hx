@@ -1,23 +1,29 @@
 package cine;
+
 class DoubleHero extends GameCinematic {
-  var previousSkin: String;
-  var hero: en.Hero.Hero;
-  var king: en.KingSkin.KingSkin;
-  var blackMask: h2d.Graphics.Graphics;
-  var logo: libs.heaps.slib.HSprite.HSprite;
-  var whiteFlash: h2d.Graphics.Graphics;
-  var fxSbAdd: h2d.SpriteBatch.SpriteBatch;
-  var fxSbNormal: h2d.SpriteBatch.SpriteBatch;
-  var fxPool: libs.heaps.HParticle.HParticle;
+    public var previousSkin: String;
+    public var hero: en.Hero;
+    public var king: en.KingSkin;
+    public var blackMask: h2d.Graphics;
+    public var logo: libs.heaps.slib.HSprite;
+    public var whiteFlash: h2d.Graphics;
+    public var fxSbAdd: h2d.SpriteBatch;
+    public var fxSbNormal: h2d.SpriteBatch;
+    public var fxPool: libs.heaps.ParticlePool;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function showLogo() {}
+    public function showLogo(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

@@ -1,21 +1,31 @@
 package achievements;
+
 class SteamAchievementManager {
-  var isApiAvailable: Bool;
-  var idByAchievement: haxe.ds.EnumValueMap;
-  var <none>: Dynamic;
+    public var isApiAvailable: Bool;
+    public var idByAchievement: haxe.ds.EnumValueMap;
+    public var : Dynamic;
 
-  static function onAchievementStored(id: String) {}
+    public function new() {
+    }
 
-  function __constructor__() {}
+    public static function onAchievementStored(arg0: String): Void {
+    }
 
-  function shouldDisplayInGameNotification(): Bool {}
+    public function shouldDisplayInGameNotification(): Bool {
+        throw "stub: shouldDisplayInGameNotification not decompiled";
+    }
 
-  function init(achievementsMapping: haxe.ds.EnumValueMap) {}
+    public function init(arg0: haxe.ds.EnumValueMap): Void {
+    }
 
-  function getConfigResourceName(): String {}
+    public function getConfigResourceName(): String {
+        throw "stub: getConfigResourceName not decompiled";
+    }
 
-  function isUnlocked(achievement: Dynamic): Bool {}
+    public function isUnlocked(arg0: achievements.EAchievement): Bool {
+        throw "stub: isUnlocked not decompiled";
+    }
 
-  function unlock(achievement: Dynamic) {}
+    public function unlock(arg0: achievements.EAchievement): Void {
+    }
 }
-

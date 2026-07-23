@@ -1,16 +1,23 @@
 package level.struct;
+
 class Cavern extends level.LevelStruct {
-  var branches: hl.types.ArrayObj<Dynamic>;
-  var endNode: level.RoomNode.RoomNode;
+    public var branches: Array<Dynamic>;
+    public var endNode: level.RoomNode;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 }
-

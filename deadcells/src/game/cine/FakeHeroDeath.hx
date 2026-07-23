@@ -1,50 +1,66 @@
 package cine;
+
 class FakeHeroDeath extends GameCinematic {
-  var container: Dynamic;
-  var hero: en.Hero.Hero;
-  var corpse: en.Hero.HeroDeadCorpse;
-  var mask: h2d.Bitmap.Bitmap;
-  var queen: en.mob.boss.Queen.Queen;
-  var gameOverScreen: ui.GameOver.GameOver;
-  var inf: Dynamic;
-  var hom: en.Homunculus.Homunculus;
-  var pool: libs.heaps.HParticle.HParticle;
-  var fxSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var heroDeathChannel: hxd.snd.Channel.Channel;
-  var baseColor: Int;
-  var furyColor: Int;
-  var lostBody: Bool;
-  var moveTimeS: Float;
-  var recoveringHero: Bool;
-  var recoverX: Float;
-  var recoverY: Float;
+    public var container: light.TopFx;
+    public var hero: en.Hero;
+    public var corpse: en.HeroDeadCorpse;
+    public var mask: h2d.Bitmap;
+    public var queen: en.mob.boss.Queen;
+    public var gameOverScreen: ui.GameOver;
+    public var inf: Dynamic;
+    public var hom: en.Homunculus;
+    public var pool: libs.heaps.ParticlePool;
+    public var fxSb: libs.heaps.slib.HSpriteBatch;
+    public var heroDeathChannel: hxd.snd.Channel;
+    public var baseColor: Int;
+    public var furyColor: Int;
+    public var lostBody: Bool;
+    public var moveTimeS: Float;
+    public var recoveringHero: Bool;
+    public var recoverX: Float;
+    public var recoverY: Float;
 
-  function __constructor__(e: en.Hero.Hero, q: en.mob.boss.Queen.Queen, lostBody: Bool, skillInf: Dynamic, heroDeathChannel: hxd.snd.Channel.Channel) {}
+    public function new(arg0: en.Hero, arg1: en.mob.boss.Queen, arg2: Bool, arg3: Dynamic, arg4: hxd.snd.Channel) {
+        super();
+    }
 
-  function pauseMusic() {}
+    public function pauseMusic(): Void {
+    }
 
-  function restartMusic() {}
+    public function restartMusic(): Void {
+    }
 
-  function hitQueenFor(dmg: Int) {}
+    public function hitQueenFor(arg0: Int): Void {
+    }
 
-  function prepareForThrow() {}
+    public function prepareForThrow(): Void {
+    }
 
-  function headCharge(r: Float) {}
+    public function headCharge(arg0: Float): Void {
+    }
 
-  function holdHeroFx(r: Float) {}
+    public function holdHeroFx(arg0: Float): Void {
+    }
 
-  function recalHeroToQueen() {}
+    public function recalHeroToQueen(): Void {
+    }
 
-  function homunculusExit() {}
+    public function homunculusExit(): Void {
+    }
 
-  function _fxHomunculusExit(p: libs.heaps.HParticle.HParticle) {}
+    public function _fxHomunculusExit(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function fxHomunculusExit(x: Float, y: Float, groundY: Float, dir: Int, c: Int) {}
+    public function fxHomunculusExit(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function gameOverTitle(): ui.GameOver.GameOver {}
+    public function gameOverTitle(): ui.GameOver {
+        throw "stub: gameOverTitle not decompiled";
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

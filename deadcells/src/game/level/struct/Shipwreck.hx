@@ -1,18 +1,28 @@
 package level.struct;
+
 class Shipwreck extends level.LevelStruct {
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function createCross(arg0: String): level.RoomNode {
+        throw "stub: createCross not decompiled";
+    }
 
-  function createCross(id: String): level.RoomNode.RoomNode {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public override function addTeleports(): Void {
+    }
 
-  function addTeleports() {}
+    public override function canGenerateThisLoreRoom(arg0: Dynamic): Bool {
+        throw "stub: canGenerateThisLoreRoom not decompiled";
+    }
 
-  function canGenerateThisLoreRoom(lore: Dynamic): Bool {}
-
-  function buildEssentialLoreRooms() {}
+    public override function buildEssentialLoreRooms(): Void {
+    }
 }
-

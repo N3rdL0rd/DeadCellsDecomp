@@ -1,64 +1,106 @@
 package tool.weap;
+
 class WreckingBall extends tool.Weapon {
-  var chain: tool.Chain.Chain;
-  var touchGroundSfx: hxd.res.Sound.Sound;
-  var animationTracks: haxe.ds.StringMap;
-  var enemiesKilledInOneSwing: Int;
-  var chainedEntity: Entity;
-  var onWorldAmmo: en.bu.WreckingBallHeroAmmo.WreckingBallHeroAmmo;
+    public var chain: tool.Chain;
+    public var touchGroundSfx: hxd.res.Sound;
+    public var animationTracks: haxe.ds.StringMap;
+    public var enemiesKilledInOneSwing: Int;
+    public var chainedEntity: Entity;
+    public var onWorldAmmo: en.bu.WreckingBallHeroAmmo;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function initSkill(idx: Int, chainInf: Dynamic, s: tool.Weapon.Weapon) {}
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    }
 
-  function registerAmmo(ammo: en.bu.WreckingBallHeroAmmo.WreckingBallHeroAmmo) {}
+    public function registerAmmo(arg0: en.bu.WreckingBallHeroAmmo): Void {
+    }
 
-  function cancelChain() {}
+    public override function cancelChain(): Void {
+    }
 
-  function getChainStartX(): Float {}
+    public function getChainStartX(): Float {
+        throw "stub: getChainStartX not decompiled";
+    }
 
-  function getChainStartY(): Float {}
+    public function getChainStartY(): Float {
+        throw "stub: getChainStartY not decompiled";
+    }
 
-  function getChainEndX(): Dynamic {}
+    public function getChainEndX(): Dynamic {
+        throw "stub: getChainEndX not decompiled";
+    }
 
-  function getChainEndY(): Dynamic {}
+    public function getChainEndY(): Dynamic {
+        throw "stub: getChainEndY not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function set_cycle(v: Int): Int {}
+    public override function set_cycle(arg0: Int): Int {
+        throw "stub: set_cycle not decompiled";
+    }
 
-  function incrementCycle() {}
+    public override function incrementCycle(): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function canComboNextSkillEarly(): Bool {}
+    public override function canComboNextSkillEarly(): Bool {
+        throw "stub: canComboNextSkillEarly not decompiled";
+    }
 
-  function doGroundShake(cinf: Dynamic) {}
+    public function doGroundShake(arg0: Dynamic): Void {
+    }
 
-  function ownerIsInWreckingBallAnim(): Bool {}
+    public function ownerIsInWreckingBallAnim(): Bool {
+        throw "stub: ownerIsInWreckingBallAnim not decompiled";
+    }
 
-  function onLevelChanged(lvl: pr.Level.Level) {}
+    public override function onLevelChanged(arg0: pr.Level): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function get_handTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_handTracks(): Array<Int> {
+        throw "stub: get_handTracks not decompiled";
+    }
 
-  function get_handX(): Dynamic {}
+    public function get_handX(): Dynamic {
+        throw "stub: get_handX not decompiled";
+    }
 
-  function get_handY(): Dynamic {}
+    public function get_handY(): Dynamic {
+        throw "stub: get_handY not decompiled";
+    }
 
-  function get_ballTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_ballTracks(): Array<Int> {
+        throw "stub: get_ballTracks not decompiled";
+    }
 
-  function get_ballX(): Dynamic {}
+    public function get_ballX(): Dynamic {
+        throw "stub: get_ballX not decompiled";
+    }
 
-  function get_ballY(): Dynamic {}
+    public function get_ballY(): Dynamic {
+        throw "stub: get_ballY not decompiled";
+    }
 
-  function countSwingKills(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public function countSwingKills(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 }
-

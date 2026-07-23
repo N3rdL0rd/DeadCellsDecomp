@@ -1,20 +1,30 @@
 package tool.weap;
+
 class HeavyAxe extends tool.Weapon {
-  var shouldCrit: Bool;
-  var touchGroundSfx: hxd.res.Sound.Sound;
+    public var shouldCrit: Bool;
+    public var touchGroundSfx: hxd.res.Sound;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function set_cycle(v: Int): Int {}
+    public override function set_cycle(arg0: Int): Int {
+        throw "stub: set_cycle not decompiled";
+    }
 
-  function incrementCycle() {}
+    public override function incrementCycle(): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function doGroundShake(cinf: Dynamic) {}
+    public function doGroundShake(arg0: Dynamic): Void {
+    }
 }
-

@@ -1,77 +1,92 @@
 package ui.pause;
+
 class DefaultPause extends ui.Pause {
-  var bg: ui.BG.BG;
-  var title: ui.Text.Text;
-  var botMenu: h2d.Flow.Flow;
-  var tierBar: ui.hud.TierBar.TierBar;
-  var selection: libs.heaps.slib.HSprite.HSprite;
-  var options: hl.types.ArrayObj<Dynamic>;
-  var curOptionId: Int;
-  var flowMiddleWea: h2d.Flow.Flow;
-  var arrowTopWea: libs.heaps.slib.HSprite.HSprite;
-  var arrowBotWea: libs.heaps.slib.HSprite.HSprite;
-  var ciSwapWea: ui.ControlIcon.ControlIcon;
-  var flowMiddleSki: h2d.Flow.Flow;
-  var arrowTopSki: libs.heaps.slib.HSprite.HSprite;
-  var arrowBotSki: libs.heaps.slib.HSprite.HSprite;
-  var ciSwapSki: ui.ControlIcon.ControlIcon;
-  var iiWLeft: tool.InventItem.InventItem;
-  var iiWRight: tool.InventItem.InventItem;
-  var iiSLeft: tool.InventItem.InventItem;
-  var iiSRight: tool.InventItem.InventItem;
-  var weaLeft: ui.NewItemDesc.NewItemDesc;
-  var weaRight: ui.NewItemDesc.NewItemDesc;
-  var skillLeft: ui.NewItemDesc.NewItemDesc;
-  var skillRight: ui.NewItemDesc.NewItemDesc;
-  var flowPerks: h2d.Flow.Flow;
-  var fbPerks: ui.UIBox.UIBox;
-  var perkPage: Int;
-  var lastDy: Float;
-  var movedLastFrame: Bool;
-  var perks: hl.types.ArrayObj<Dynamic>;
-  var btnBack: ui.Text.Text;
-  var btnInfos: ui.Text.Text;
-  var btnOptions: ui.Text.Text;
-  var btnRetry: ui.Text.Text;
-  var btnAssist: ui.Text.Text;
-  var btnQuit: ui.Text.Text;
-  var amulet: ui.NewItemDesc.NewItemDesc;
-  var backpackFlow: h2d.Flow.Flow;
-  var backpackTextFlow: h2d.Flow.Flow;
-  var backpackBox: ui.UIBox.UIBox;
-  var skillBackpack: ui.hud.Skill.Skill;
-  var backpackName: ui.Text.Text;
-  var hasBackpack: Bool;
-  var labelBackpackSwap: ui.ControlLabel.ControlLabel;
-  var tw1: libs.misc.Tweenie.Tweenie;
-  var tw2: libs.misc.Tweenie.Tweenie;
-  var controller: tool.Controller.Controller;
-  var locked: Bool;
-  var showHUDonClose: Bool;
-  var shouldClose: Bool;
+    public var bg: ui.BG;
+    public var title: ui.Text;
+    public var botMenu: h2d.Flow;
+    public var tierBar: ui.hud.TierBar;
+    public var selection: libs.heaps.slib.HSprite;
+    public var options: Array<Dynamic>;
+    public var curOptionId: Int;
+    public var flowMiddleWea: h2d.Flow;
+    public var arrowTopWea: libs.heaps.slib.HSprite;
+    public var arrowBotWea: libs.heaps.slib.HSprite;
+    public var ciSwapWea: ui.ControlIcon;
+    public var flowMiddleSki: h2d.Flow;
+    public var arrowTopSki: libs.heaps.slib.HSprite;
+    public var arrowBotSki: libs.heaps.slib.HSprite;
+    public var ciSwapSki: ui.ControlIcon;
+    public var iiWLeft: tool.InventItem;
+    public var iiWRight: tool.InventItem;
+    public var iiSLeft: tool.InventItem;
+    public var iiSRight: tool.InventItem;
+    public var weaLeft: ui.NewItemDesc;
+    public var weaRight: ui.NewItemDesc;
+    public var skillLeft: ui.NewItemDesc;
+    public var skillRight: ui.NewItemDesc;
+    public var flowPerks: h2d.Flow;
+    public var fbPerks: ui.UIBox;
+    public var perkPage: Int;
+    public var lastDy: Float;
+    public var movedLastFrame: Bool;
+    public var perks: Array<Dynamic>;
+    public var btnBack: ui.Text;
+    public var btnInfos: ui.Text;
+    public var btnOptions: ui.Text;
+    public var btnRetry: ui.Text;
+    public var btnAssist: ui.Text;
+    public var btnQuit: ui.Text;
+    public var amulet: ui.NewItemDesc;
+    public var backpackFlow: h2d.Flow;
+    public var backpackTextFlow: h2d.Flow;
+    public var backpackBox: ui.UIBox;
+    public var skillBackpack: ui.hud.Skill;
+    public var backpackName: ui.Text;
+    public var hasBackpack: Bool;
+    public var labelBackpackSwap: ui.ControlLabel;
+    public var tw1: libs.misc.Tween;
+    public var tw2: libs.misc.Tween;
+    public var controller: tool.ControllerAccess;
+    public var locked: Bool;
+    public var showHUDonClose: Bool;
+    public var shouldClose: Bool;
 
-  function uponClosing() {}
+    public function new() {
+        super();
+    }
 
-  function __constructor__() {}
+    public function reflowPerks(): Void {
+    }
 
-  function reflowPerks() {}
+    public function getPerkPagesCount(): Int {
+        throw "stub: getPerkPagesCount not decompiled";
+    }
 
-  function getPerkPagesCount(): Int {}
+    public function getMaxPerksPerPage(): Int {
+        throw "stub: getMaxPerksPerPage not decompiled";
+    }
 
-  function getMaxPerksPerPage(): Int {}
+    public override function onLeavingOptionsMenu(): Void {
+    }
 
-  function onLeavingOptionsMenu() {}
+    public function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function blur(sigma: Dynamic, gain: Dynamic) {}
+    public function onResize(): Void {
+    }
 
-  function onResize() {}
+    public function onDispose(): Void {
+    }
 
-  function onDispose() {}
+    public function startSwapBackpack(): Void {
+    }
 
-  function startSwapBackpack() {}
+    public function update(): Void {
+    }
 
-  function update() {}
+    public function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function uponClosing(): Void {
+    }
 }
-

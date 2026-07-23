@@ -1,29 +1,54 @@
 package tool.weap;
+
 class AdeleScythe extends tool.Weapon {
-  var delayer: libs.Delayer.Delayer;
+    public var delayer: libs.Delayer;
 
-  static function isExclude(mob: en.Mob.Mob): Bool {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  static function createGhost(mob: en.Mob.Mob, item: tool.InventItem.InventItem) {}
+    public static function isExclude(arg0: en.Mob): Bool {
+        throw "stub: isExclude not decompiled";
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public static function createGhost(arg0: en.Mob, arg1: tool.InventItem): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onOwnerAttackDealt(atk: tool.atk.AttackData.AttackData, target: Entity) {}
+    public function onOwnerAttackDealt(arg0: tool.atk.AttackData, arg1: Entity): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function checkAreahit(e: Entity, previousCycle: Int) {}
+    public function checkAreahit(arg0: Entity, arg1: Int): Void {
+    }
 
-  function onBossPreventDeath(boss: en.mob.Boss.Boss, a: tool.atk.AttackData.AttackData) {}
+    public function onBossPreventDeath(arg0: en.mob.Boss, arg1: tool.atk.AttackData): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function dynOnFxFrame(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 }
 
+class SprData {
+    public var lib: libs.heaps.slib.SpriteLib;
+    public var mob: en.Mob;
+    public var pivotY: Float;
+    public var stateAnims: Array<Dynamic>;
+
+    public function new() {
+    }
+}

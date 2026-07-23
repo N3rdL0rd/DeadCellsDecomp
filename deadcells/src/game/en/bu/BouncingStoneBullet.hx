@@ -1,64 +1,92 @@
 package en.bu;
+
 class BouncingStoneBullet extends en.Bullet {
-  var pickupWidth: Float;
-  var colCount: Int;
-  var mainColor: Int;
-  var itemInf: Dynamic;
-  var baseInventItem: tool.InventItem.InventItem;
-  var goToTarget: Bool;
-  var ceilingHitCy: Int;
-  var splitCount: Int;
-  var maxSplit: Int;
-  var baseAtk: tool.atk.AttackData.AttackData;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var pickupWidth: Float;
+    public var colCount: Int;
+    public var mainColor: Int;
+    public var itemInf: Dynamic;
+    public var baseInventItem: tool.InventItem;
+    public var goToTarget: Bool;
+    public var ceilingHitCy: Int;
+    public var splitCount: Int;
+    public var maxSplit: Int;
+    public var baseAtk: tool.atk.AttackData;
 
-  function __constructor__(baseInventItem: tool.InventItem.InventItem, from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, dir: Int) {}
+    public function new(arg0: tool.InventItem, arg1: Entity, arg2: tool.atk.AttackData, arg3: Float, arg4: Float, arg5: Int) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function split(isTop: Bool) {}
+    public function split(arg0: Bool): Void {
+    }
 
-  function onHitWall() {}
+    public override function onHitWall(): Void {
+    }
 
-  function blockOnCollision() {}
+    public override function blockOnCollision(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public function onTouchWall(arg0: Int): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function onTouchCeil() {}
+    public function onTouchCeil(): Void {
+    }
 
-  function delayedTouchCeil() {}
+    public function delayedTouchCeil(): Void {
+    }
 
-  function playCollisionAnim(newCx: Int, newCy: Int, newDir: Int): libs.heaps.HParticle.HParticle {}
+    public function playCollisionAnim(arg0: Int, arg1: Int, arg2: Int): libs.heaps.HParticle {
+        throw "stub: playCollisionAnim not decompiled";
+    }
 
-  function onCollision() {}
+    public function onCollision(): Void {
+    }
 
-  function accelerate(power: Dynamic) {}
+    public function accelerate(arg0: Ref): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function checkTouchParent() {}
+    public function checkTouchParent(): Void {
+    }
 
-  function heroTouch() {}
+    public function heroTouch(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

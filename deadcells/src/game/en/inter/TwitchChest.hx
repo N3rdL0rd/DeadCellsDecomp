@@ -1,63 +1,94 @@
 package en.inter;
+
 class TwitchChest extends en.Interactive {
-  var isOpen: Bool;
-  var items: hl.types.ArrayObj<Dynamic>;
-  var rockFront: libs.heaps.slib.HSprite.HSprite;
-  var rockBack: libs.heaps.slib.HSprite.HSprite;
-  var rune: libs.heaps.slib.HSprite.HSprite;
-  var runeGlow: libs.heaps.slib.HSprite.HSprite;
-  var godRays: libs.heaps.slib.HSprite.HSpriteBE;
-  var glowT: Float;
-  static var DMG_PER_VOTE: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var DMG_PER_VOTE: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var isOpen: Bool;
+    public var items: Array<Dynamic>;
+    public var rockFront: libs.heaps.slib.HSprite;
+    public var rockBack: libs.heaps.slib.HSprite;
+    public var rune: libs.heaps.slib.HSprite;
+    public var runeGlow: libs.heaps.slib.HSprite;
+    public var godRays: libs.heaps.slib.HSpriteBE;
+    public var glowT: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function addContent(i: tool.InventItem.InventItem) {}
+    public function addContent(arg0: tool.InventItem): Void {
+    }
 
-  function popDamage(a: tool.atk.AttackData.AttackData) {}
+    public function popDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function minimapTracking() {}
+    public function minimapTracking(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function open() {}
+    public function open(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDie() {}
+    public function onDie(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function voteHit(m: tool.TwitchMessage.TwitchMessage): Bool {}
+    public function voteHit(arg0: tool.TwitchMessage): Bool {
+        throw "stub: voteHit not decompiled";
+    }
 
-  function hitNearbyMobs(dmg: Float) {}
+    public function hitNearbyMobs(arg0: Float): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

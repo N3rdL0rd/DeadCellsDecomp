@@ -1,40 +1,62 @@
 package en;
+
 class NecromancySpot extends Entity {
-  var mobKind: String;
-  var activator: en.mob.Necromant.Necromant;
-  var flameBobSpeed: Float;
-  var bobDist: Float;
-  var smallSoul: en.SmallSoul.SmallSoul;
-  var <none>: Dynamic;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var mobKind: String;
+    public var activator: en.mob.Necromant;
+    public var flameBobSpeed: Float;
+    public var bobDist: Float;
+    public var smallSoul: en.SmallSoul;
+    public var : Dynamic;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, kind: String) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+        super();
+    }
 
-  function get_activated(): Bool {}
+    public function get_activated(): Bool {
+        throw "stub: get_activated not decompiled";
+    }
 
-  function canStartNecromancy(): Bool {}
+    public function canStartNecromancy(): Bool {
+        throw "stub: canStartNecromancy not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function activateByNecromant(necromancerSource: en.mob.Necromant.Necromant): Entity {}
+    public function activateByNecromant(arg0: en.mob.Necromant): Entity {
+        throw "stub: activateByNecromant not decompiled";
+    }
 
-  function get_headY(): Float {}
+    public override function get_headY(): Float {
+        throw "stub: get_headY not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

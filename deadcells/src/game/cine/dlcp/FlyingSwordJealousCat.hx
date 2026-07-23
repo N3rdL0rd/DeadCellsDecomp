@@ -1,18 +1,25 @@
 package cine.dlcp;
+
 class FlyingSwordJealousCat extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var cat: en.mob.S_Cat.S_Cat;
+    public var hero: en.Hero;
+    public var cat: en.mob.S_Cat;
 
-  function __constructor__(h: en.Hero.Hero, sword: en.pet.FlyingSword.FlyingSword, cat: en.mob.S_Cat.S_Cat) {}
+    public function new(arg0: en.Hero, arg1: en.pet.FlyingSword, arg2: en.mob.S_Cat) {
+        super();
+    }
 
-  function catTp() {}
+    public function catTp(): Void {
+    }
 
-  function catCharge() {}
+    public function catCharge(): Void {
+    }
 
-  function catAttack() {}
+    public function catAttack(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

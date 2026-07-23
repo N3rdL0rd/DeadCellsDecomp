@@ -1,12 +1,15 @@
 package spine;
+
 class HeapsTextureLoader {
-  var _tile: h2d.Tile.Tile;
-  var <none>: Dynamic;
+    public var _tile: h2d.Tile;
+    public var : Dynamic;
 
-  function __constructor__(path: String, tile: h2d.Tile.Tile) {}
+    public function new(arg0: String, arg1: h2d.Tile) {
+    }
 
-  function loadPage(page: Dynamic, path: String) {}
+    public function loadPage(arg0: spine.support.graphics.AtlasPage, arg1: String): Void {
+    }
 
-  function loadRegion(region: Dynamic) {}
+    public function loadRegion(arg0: spine.support.graphics.AtlasRegion): Void {
+    }
 }
-

@@ -1,26 +1,41 @@
 package en.inter.button;
+
 class BossRushTierButton extends en.inter.button.Button {
-  var tier: String;
-  var tierHotel: en.deco.BossRushTierHotel.BossRushTierHotel;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var tier: String;
+    public var tierHotel: en.deco.BossRushTierHotel;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, tierInit: String, hotel: en.deco.BossRushTierHotel.BossRushTierHotel) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: en.deco.BossRushTierHotel) {
+        super();
+    }
 
-  function getSpriteLib(): libs.heaps.slib.SpriteLib.SpriteLib {}
+    public override function getSpriteLib(): libs.heaps.slib.SpriteLib {
+        throw "stub: getSpriteLib not decompiled";
+    }
 
-  function getLightTipStr(): String {}
+    public override function getLightTipStr(): String {
+        throw "stub: getLightTipStr not decompiled";
+    }
 
-  function getActivatedGlowColor(): Int {}
+    public function getActivatedGlowColor(): Int {
+        throw "stub: getActivatedGlowColor not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onApplyOptions() {}
+    public function onApplyOptions(): Void {
+    }
 
-  function onActivationSuccess(by: en.Hero.Hero) {}
+    public override function onActivationSuccess(arg0: en.Hero): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

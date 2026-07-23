@@ -1,32 +1,48 @@
 package en.ltrap;
+
 class Shooter extends en.LevelTrap {
-  var shootAng: Float;
-  var sk: tool.skill.OldSkill.OldSkill;
-  var coolDown: Float;
-  var cPointCheck: tool.CPoint.CPoint;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var shootAng: Float;
+    public var sk: tool.skill.OldSkill;
+    public var coolDown: Float;
+    public var cPointCheck: tool.CPoint;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, shootAng: Float, coolDown: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Dynamic) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function trigger() {}
+    public function trigger(): Void {
+    }
 
-  function _isOnScreen(): Bool {}
+    public function _isOnScreen(): Bool {
+        throw "stub: _isOnScreen not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

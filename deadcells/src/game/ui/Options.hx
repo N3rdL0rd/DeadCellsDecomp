@@ -1,97 +1,147 @@
 package ui;
-class Options extends OptionsBase {
-  var creditsFlow: h2d.Flow.Flow;
-  var dbg: hl.types.ArrayObj<Dynamic>;
-  var streamStatus: Dynamic;
-  var autoRefreshStreamStatus: Bool;
-  var activatedMods: hl.types.ArrayObj<Dynamic>;
-  static var firstInitDone: Bool;
-  static var ME: Options;
 
-  static function onItemInstalled(_item: steam.ugc.Item.Item) {}
+class Options extends ui.OptionsBase {
+    public static var firstInitDone: Bool;
+    public static var ME: ui.Options;
+    public var creditsFlow: h2d.Flow;
+    public var dbg: Array<Dynamic>;
+    public var streamStatus: tool.Result;
+    public var autoRefreshStreamStatus: Bool;
+    public var activatedMods: Array<Dynamic>;
 
-  function __constructor__(pauseUI: ui.Pause.Pause, defaultSection: Dynamic, editCustomBindings: Dynamic) {}
+    public function new(arg0: ui.Pause, arg1: ui.OptionsSection, arg2: Dynamic) {
+        super();
+    }
 
-  static function onItemDownloaded(_item: steam.ugc.Item.Item) {}
+    public static function onItemInstalled(arg0: steam.ugc.Item): Void {
+    }
 
-  function isOnAModSection(): Bool {}
+    public static function onItemDownloaded(arg0: steam.ugc.Item): Void {
+    }
 
-  function initControlLabel() {}
+    public function isOnAModSection(): Bool {
+        throw "stub: isOnAModSection not decompiled";
+    }
 
-  function clean() {}
+    public override function initControlLabel(): Void {
+    }
 
-  function buildCurSection() {}
+    public override function clean(): Void {
+    }
 
-  function getPadTxt(): String {}
+    public override function buildCurSection(): Void {
+    }
 
-  function showMain() {}
+    public function getPadTxt(): String {
+        throw "stub: getPadTxt not decompiled";
+    }
 
-  function addCommonControlOptions() {}
+    public function showMain(): Void {
+    }
 
-  function showGamepad() {}
+    public function addCommonControlOptions(): Void {
+    }
 
-  function showGamepadRebind() {}
+    public function showGamepad(): Void {
+    }
 
-  function showKeyboard() {}
+    public function showGamepadRebind(): Void {
+    }
 
-  function showKeyboardRebind() {}
+    public function showKeyboard(): Void {
+    }
 
-  function showGP() {}
+    public function showKeyboardRebind(): Void {
+    }
 
-  function showVideo() {}
+    public function showGP(): Void {
+    }
 
-  function backpackAlphaChanged(value: Float): Float {}
+    public function showVideo(): Void {
+    }
 
-  function toggleBackpackNextToWeapon(): Bool {}
+    public function backpackAlphaChanged(arg0: Float): Float {
+        throw "stub: backpackAlphaChanged not decompiled";
+    }
 
-  function hudAlphaChanged(value: Float): Float {}
+    public function toggleBackpackNextToWeapon(): Bool {
+        throw "stub: toggleBackpackNextToWeapon not decompiled";
+    }
 
-  function hudSizeChanged(value: Float): Float {}
+    public function hudAlphaChanged(arg0: Float): Float {
+        throw "stub: hudAlphaChanged not decompiled";
+    }
 
-  function showAccessibility() {}
+    public function hudSizeChanged(arg0: Float): Float {
+        throw "stub: hudSizeChanged not decompiled";
+    }
 
-  function toggleOutlineFor(entities: hl.types.ArrayObj<Dynamic>, toggle: Bool, team: tool.Team.Team) {}
+    public function showAccessibility(): Void {
+    }
 
-  function setOutlineColorFor(entities: hl.types.ArrayObj<Dynamic>, color: Int, team: tool.Team.Team) {}
+    public function toggleOutlineFor(arg0: Array<Dynamic>, arg1: Bool, arg2: tool.Team): Void {
+    }
 
-  function particleLimiterChanged(value: Float) {}
+    public function setOutlineColorFor(arg0: Array<Dynamic>, arg1: Int, arg2: tool.Team): Void {
+    }
 
-  function showSound() {}
+    public function particleLimiterChanged(arg0: Float): Void {
+    }
 
-  function showMusic() {}
+    public function showSound(): Void {
+    }
 
-  function showSfxVolumes() {}
+    public function showMusic(): Void {
+    }
 
-  function showSfxAdvanced() {}
+    public function showSfxVolumes(): Void {
+    }
 
-  function showLang() {}
+    public function showSfxAdvanced(): Void {
+    }
 
-  function showFood() {}
+    public function showLang(): Void {
+    }
 
-  function showMods() {}
+    public function showFood(): Void {
+    }
 
-  function showCredits() {}
+    public function showMods(): Void {
+    }
 
-  function addForbiddenAlertText(text: String, color: Dynamic) {}
+    public function showCredits(): Void {
+    }
 
-  function setSpeedrunMode(value: Bool) {}
+    public function addForbiddenAlertText(arg0: String, arg1: Ref): Void {
+    }
 
-  function showStream() {}
+    public function setSpeedrunMode(arg0: Bool): Void {
+    }
 
-  function refreshTwitchVote(c: hl.Class) {}
+    public function showStream(): Void {
+    }
 
-  function refreshStreamStatus() {}
+    public function refreshTwitchVote(arg0: hl.Class): Void {
+    }
 
-  function onStreamStatus(r: Dynamic) {}
+    public function refreshStreamStatus(): Void {
+    }
 
-  function onCloseFromMods(isCustomModeOn: Bool) {}
+    public function onStreamStatus(arg0: tool.Result): Void {
+    }
 
-  function onResize() {}
+    public function onCloseFromMods(arg0: Bool): Void {
+    }
 
-  function onDispose() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public override function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function update(): Void {
+    }
+
+    public function postUpdate(): Void {
+    }
 }
-

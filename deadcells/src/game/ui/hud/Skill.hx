@@ -1,139 +1,190 @@
 package ui.hud;
+
 class Skill extends h2d.Layers {
-  var mainBg: ui.UIBox.UIBox;
-  var iconBgShader: hxsl.Macros.Macros;
-  var iconBg: libs.heaps.slib.HSprite.HSprite;
-  var iconFg: libs.heaps.slib.HSprite.HSprite;
-  var buffFlow: h2d.Flow.Flow;
-  var btn: ui.ControlIcon.ControlIcon;
-  var customIcon: h2d.Bitmap.Bitmap;
-  var customBg: h2d.Bitmap.Bitmap;
-  var icon: h2d.Bitmap.Bitmap;
-  var upIcon: h2d.Bitmap.Bitmap;
-  var tierIcon1: h2d.Bitmap.Bitmap;
-  var tierIcon2: h2d.Bitmap.Bitmap;
-  var showTierIcon: Bool;
-  var cdOvl: h2d.Bitmap.Bitmap;
-  var cdTxt: ui.Text.Text;
-  var ammoBarMode: Bool;
-  var ammoIcons: hl.types.ArrayObj<Dynamic>;
-  var partialAmmoIcon: h2d.Bitmap.Bitmap;
-  var maxAmmoText: ui.Text.Text;
-  var maxAmmoBox: libs.heaps.slib.HSprite.HSprite;
-  var cptFlow: h2d.Flow.Flow;
-  var cptTxt: ui.Text.Text;
-  var cptVal: Dynamic;
-  var cptMax: Dynamic;
-  var lvlBg: libs.heaps.slib.HSprite.HSprite;
-  var lvlTxt: ui.Text.Text;
-  var boxHL: ui.UIBox.UIBox;
-  var gbHL: libs.heaps.slib.HSprite.HSprite;
-  var heartsFlow: h2d.Flow.Flow;
-  var heartsIconFlow: h2d.Flow.Flow;
-  var heartsTxt: ui.Text.Text;
-  var heartsIcon: libs.heaps.slib.HSprite.HSprite;
-  var disableAmmo: Bool;
-  var allowPartialAmmo: Bool;
-  var poweredFeedback: Bool;
-  var ii: tool.InventItem.InventItem;
-  var availableTiers: hl.types.ArrayObj<Dynamic>;
-  var activeTiers: hl.types.ArrayObj<Dynamic>;
-  var tmpPoint: h2d.col.Point.Point;
-  var onSkillReady: Dynamic;
-  static var DP_ID: Int;
-  static var DP_BG: Int;
-  static var DP_ICON: Int;
-  static var DP_CD: Int;
-  static var DP_AMMO: Int;
-  static var DP_HL: Int;
-  static var DP_BTN: Int;
-  static var ICON_SIZE: Int;
-  static var ICONBG_SIZE: Int;
+    public static var DP_ID: Int;
+    public static var DP_BG: Int;
+    public static var DP_ICON: Int;
+    public static var DP_CD: Int;
+    public static var DP_AMMO: Int;
+    public static var DP_HL: Int;
+    public static var DP_BTN: Int;
+    public static var ICON_SIZE: Int;
+    public static var ICONBG_SIZE: Int;
+    public var mainBg: ui.UIBox;
+    public var iconBgShader: shader.RGBReplace;
+    public var iconBg: libs.heaps.slib.HSprite;
+    public var iconFg: libs.heaps.slib.HSprite;
+    public var buffFlow: h2d.Flow;
+    public var btn: ui.ControlIcon;
+    public var customIcon: h2d.Bitmap;
+    public var customBg: h2d.Bitmap;
+    public var icon: h2d.Bitmap;
+    public var upIcon: h2d.Bitmap;
+    public var tierIcon1: h2d.Bitmap;
+    public var tierIcon2: h2d.Bitmap;
+    public var showTierIcon: Bool;
+    public var cdOvl: h2d.Bitmap;
+    public var cdTxt: ui.Text;
+    public var ammoBarMode: Bool;
+    public var ammoIcons: Array<Dynamic>;
+    public var partialAmmoIcon: h2d.Bitmap;
+    public var maxAmmoText: ui.Text;
+    public var maxAmmoBox: libs.heaps.slib.HSprite;
+    public var cptFlow: h2d.Flow;
+    public var cptTxt: ui.Text;
+    public var cptVal: Dynamic;
+    public var cptMax: Dynamic;
+    public var lvlBg: libs.heaps.slib.HSprite;
+    public var lvlTxt: ui.Text;
+    public var boxHL: ui.UIBox;
+    public var gbHL: libs.heaps.slib.HSprite;
+    public var heartsFlow: h2d.Flow;
+    public var heartsIconFlow: h2d.Flow;
+    public var heartsTxt: ui.Text;
+    public var heartsIcon: libs.heaps.slib.HSprite;
+    public var disableAmmo: Bool;
+    public var allowPartialAmmo: Bool;
+    public var poweredFeedback: Bool;
+    public var ii: tool.InventItem;
+    public var availableTiers: Array<Dynamic>;
+    public var activeTiers: Array<Dynamic>;
+    public var tmpPoint: h2d.col.Point;
+    public var onSkillReady: Dynamic;
 
-  function get_pixelScale(): Float {}
+    public function new(arg0: Dynamic, arg1: h2d.Object, arg2: Ref, arg3: Ref) {
+        super();
+    }
 
-  function getAmmo(): Float {}
+    public function setCustomIcon(arg0: h2d.Tile): Void {
+    }
 
-  function getMaxAmmo(): Int {}
+    public function setButton(arg0: Dynamic): Void {
+    }
 
-  function hasAmmo(): Bool {}
+    public function setFade(arg0: Bool): Void {
+    }
 
-  function __constructor__(act: Dynamic, p: h2d.Object.Object, ctrlBg: Dynamic, _showTierIcon: Dynamic) {}
+    public function getAmmoRatio(): Float {
+        throw "stub: getAmmoRatio not decompiled";
+    }
 
-  function setCustomIcon(tile: h2d.Tile.Tile) {}
+    public function updateAmmo(): Void {
+    }
 
-  function setButton(act: Dynamic) {}
+    public function setVerboseAmmo(arg0: tool.InventItem): Void {
+    }
 
-  function setFade(fade: Bool) {}
+    public function getItem(): tool.InventItem {
+        throw "stub: getItem not decompiled";
+    }
 
-  function getAmmoRatio(): Float {}
+    public function compareActiveTier(arg0: Array<Dynamic>): Bool {
+        throw "stub: compareActiveTier not decompiled";
+    }
 
-  function updateAmmo() {}
+    public function setBgColors(arg0: tool.InventItem, arg1: Ref): Void {
+    }
 
-  function setVerboseAmmo(i: tool.InventItem.InventItem) {}
+    public function setIconBgColors(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function getItem(): tool.InventItem.InventItem {}
+    public function setTierIcon(arg0: tool.InventItem): Void {
+    }
 
-  function compareActiveTier(tActiveTiers: hl.types.ArrayObj<Dynamic>): Bool {}
+    public function removeTierIcon(): Void {
+    }
 
-  function setBgColors(i: tool.InventItem.InventItem, isInit: Dynamic) {}
+    public function useItem(arg0: tool.InventItem): Void {
+    }
 
-  function setIconBgColors(c1: Dynamic, c2: Dynamic) {}
+    public function showCanBeEquippedHighlight(): Void {
+    }
 
-  function setTierIcon(item: tool.InventItem.InventItem) {}
+    public function hideCanBeEquippedHighlight(): Void {
+    }
 
-  function removeTierIcon() {}
+    public function setUpgradeLevel(arg0: Int): Void {
+    }
 
-  function useItem(i: tool.InventItem.InventItem) {}
+    public function setIcon(arg0: h2d.Tile): Void {
+    }
 
-  function showCanBeEquippedHighlight() {}
+    public function setItemIcon(arg0: String): Void {
+    }
 
-  function hideCanBeEquippedHighlight() {}
+    public function setBmpIcon(arg0: h2d.Bitmap): Void {
+    }
 
-  function setUpgradeLevel(l: Int) {}
+    public function hideIcon(): Void {
+    }
 
-  function setIcon(t: h2d.Tile.Tile) {}
+    public function showIcon(): Void {
+    }
 
-  function setItemIcon(itemKind: String) {}
+    public function setCount(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function setBmpIcon(bmp: h2d.Bitmap.Bitmap) {}
+    public function disableCount(): Void {
+    }
 
-  function hideIcon() {}
+    public function setHeartsCost(arg0: Int): Void {
+    }
 
-  function showIcon() {}
+    public function disableHearts(): Void {
+    }
 
-  function setCount(i: Int, max: Dynamic) {}
+    public function highlight(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function disableCount() {}
+    public function popCdr(arg0: Float): Void {
+    }
 
-  function setHeartsCost(cost: Int) {}
+    public function showBuff(arg0: Array<Dynamic>): Void {
+    }
 
-  function disableHearts() {}
+    public function hideBuff(): Void {
+    }
 
-  function highlight(color: Dynamic, time: Dynamic) {}
+    public function setCooldown(arg0: Float, arg1: Float): Void {
+    }
 
-  function popCdr(sec: Float) {}
+    public function cancelCooldown(): Void {
+    }
 
-  function showBuff(icons: hl.types.ArrayObj<Dynamic>) {}
+    public function playMirroredFx(arg0: String): Void {
+    }
 
-  function hideBuff() {}
+    public function onCooldownReady(): Void {
+    }
 
-  function setCooldown(t: Float, r: Float) {}
+    public function setPoweredFeedback(): Void {
+    }
 
-  function cancelCooldown() {}
+    public function stopPoweredFeedback(): Void {
+    }
 
-  function playMirroredFx(fxName: String) {}
+    public function onResize(): Void {
+    }
 
-  function onCooldownReady() {}
+    public function getBoundsRec(arg0: h2d.Object, arg1: h2d.col.Bounds, arg2: Bool): Void {
+    }
 
-  function setPoweredFeedback() {}
+    public function sync(arg0: h2d.RenderContext): Void {
+    }
 
-  function stopPoweredFeedback() {}
+    public function getAmmo(): Float {
+        throw "stub: getAmmo not decompiled";
+    }
 
-  function onResize() {}
+    public function getMaxAmmo(): Int {
+        throw "stub: getMaxAmmo not decompiled";
+    }
 
-  function getBoundsRec(relativeTo: h2d.Object.Object, out: h2d.col.Bounds.Bounds, forSize: Bool) {}
+    public function hasAmmo(): Bool {
+        throw "stub: hasAmmo not decompiled";
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
-

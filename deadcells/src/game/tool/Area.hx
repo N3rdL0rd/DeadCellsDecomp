@@ -1,16 +1,19 @@
 package tool;
+
 class Area {
-  var relativeTo: Entity;
-  var x: Float;
-  var y: Float;
-  var widPx: Float;
-  var heiPx: Float;
-  var isCircle: Bool;
+    public var relativeTo: Entity;
+    public var x: Float;
+    public var y: Float;
+    public var widPx: Float;
+    public var heiPx: Float;
+    public var isCircle: Bool;
 
-  function __constructor__(widOrRadiusPx: Float, hpx: Dynamic) {}
+    public function new(arg0: Float, arg1: Dynamic) {
+    }
 
-  function setAbsolutePos(x: Float, y: Float) {}
+    public function setAbsolutePos(arg0: Float, arg1: Float): Void {
+    }
 
-  function setRelativePos(e: Entity, x: Float, y: Float) {}
+    public function setRelativePos(arg0: Entity, arg1: Float, arg2: Float): Void {
+    }
 }
-

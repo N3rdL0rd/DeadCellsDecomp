@@ -1,29 +1,39 @@
 package level.disp;
+
 class Crypt extends level.BiomeDisp {
-  var skullWallDecks: hl.types.ArrayObj<Dynamic>;
-  var skullWallDecksL: hl.types.ArrayObj<Dynamic>;
-  var skullWallDecksR: hl.types.ArrayObj<Dynamic>;
-  var skullCeilingDecks: hl.types.ArrayObj<Dynamic>;
-  var skullCeilingDecksL: hl.types.ArrayObj<Dynamic>;
-  var skullCeilingDecksR: hl.types.ArrayObj<Dynamic>;
-  var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
+    public var skullWallDecks: Array<Dynamic>;
+    public var skullWallDecksL: Array<Dynamic>;
+    public var skullWallDecksR: Array<Dynamic>;
+    public var skullCeilingDecks: Array<Dynamic>;
+    public var skullCeilingDecksL: Array<Dynamic>;
+    public var skullCeilingDecksR: Array<Dynamic>;
+    public var sbAlcovesTorches: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function addVault(z: level.DecoTypes.DecoTypes) {}
+    public function addVault(arg0: level.DecoZone): Void {
+    }
 
-  function addBone(z: level.DecoTypes.DecoTypes) {}
+    public function addBone(arg0: level.DecoZone): Void {
+    }
 
-  function addColumn(px: Int, py: Int, height: Int) {}
+    public function addColumn(arg0: Int, arg1: Int, arg2: Int): Void {
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

@@ -1,34 +1,51 @@
 package en.deco;
+
 class TriggerTorch extends en.Deco {
-  var activated: Bool;
-  var haveBack: Bool;
-  var audioChannel: hxd.snd.Channel.Channel;
-  var bd: level.BiomeDisp.BiomeDisp;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var activated: Bool;
+    public var haveBack: Bool;
+    public var audioChannel: hxd.snd.Channel;
+    public var bd: level.BiomeDisp;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, haveBack: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function activateTorch() {}
+    public function activateTorch(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

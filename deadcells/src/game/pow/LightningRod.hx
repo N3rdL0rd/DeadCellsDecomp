@@ -1,35 +1,52 @@
 package pow;
+
 class LightningRod extends Power {
-  var rod: en.Rod.Rod;
-  var prevPow: LightningRod;
-  var nextPow: LightningRod;
-  var first: Bool;
-  var cdPerUseF: Dynamic;
-  var cdProgressF: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var rod: en.Rod;
+    public var prevPow: pow.LightningRod;
+    public var nextPow: pow.LightningRod;
+    public var first: Bool;
+    public var cdPerUseF: Dynamic;
+    public var cdProgressF: Dynamic;
 
-  function __constructor__(owner: Entity, item: tool.InventItem.InventItem, cdPerUseF: Dynamic, cdProgressF: Dynamic) {}
+    public function new(arg0: Entity, arg1: tool.InventItem, arg2: Dynamic, arg3: Dynamic) {
+        super();
+    }
 
-  function onReload() {}
+    public override function onReload(): Void {
+    }
 
-  function isBetween(e: Entity, prevPoint: tool.FPoint.FPoint): Bool {}
+    public function isBetween(arg0: Entity, arg1: tool.FPoint): Bool {
+        throw "stub: isBetween not decompiled";
+    }
 
-  function getAreaBetween(firstRod: en.Rod.Rod, secondRod: en.Rod.Rod): tool.Area.Area {}
+    public function getAreaBetween(arg0: en.Rod, arg1: en.Rod): tool.Area {
+        throw "stub: getAreaBetween not decompiled";
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function triggerNextRod() {}
+    public function triggerNextRod(): Void {
+    }
 
-  function prematureTrigger() {}
+    public function prematureTrigger(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

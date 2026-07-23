@@ -1,16 +1,23 @@
 package tool.weap;
+
 class SnakeFang extends tool.Weapon {
-  var tpArea: tool.Area.Area;
-  var tpSfx: hxd.res.Sound.Sound;
+    public var tpArea: tool.Area;
+    public var tpSfx: hxd.res.Sound;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function teleportTo(e: Entity) {}
+    public function teleportTo(arg0: Entity): Void {
+    }
 }
-

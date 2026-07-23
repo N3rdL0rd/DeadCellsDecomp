@@ -1,39 +1,54 @@
 package ui;
+
 class AssistMode extends ui.OptionsBase {
-  var tutoBox: ui.FlowBox.FlowBox;
-  var tutoText: ui.Text.Text;
-  var botFlow: h2d.Flow.Flow;
-  var curTutoPage: Int;
-  var maxTutoPage: Int;
-  var fromOption: Bool;
-  static var ME: AssistMode;
+    public static var ME: ui.AssistMode;
+    public var tutoBox: ui.FlowBox;
+    public var tutoText: ui.Text;
+    public var botFlow: h2d.Flow;
+    public var curTutoPage: Int;
+    public var maxTutoPage: Int;
+    public var fromOption: Bool;
 
-  function __constructor__(pauseUI: ui.Pause.Pause, fromOption: Dynamic) {}
+    public function new(arg0: ui.Pause, arg1: Ref) {
+        super();
+    }
 
-  function initControlLabel() {}
+    public override function initControlLabel(): Void {
+    }
 
-  function buildCurSection() {}
+    public override function buildCurSection(): Void {
+    }
 
-  function showMain() {}
+    public function showMain(): Void {
+    }
 
-  function showTuto() {}
+    public function showTuto(): Void {
+    }
 
-  function setTutoPage() {}
+    public function setTutoPage(): Void {
+    }
 
-  function enableAssistMode() {}
+    public function enableAssistMode(): Void {
+    }
 
-  function resetAssistMode() {}
+    public function resetAssistMode(): Void {
+    }
 
-  function disableAssistMode() {}
+    public function disableAssistMode(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function onQuit() {}
+    public override function onQuit(): Void {
+    }
 
-  function applyChanges() {}
+    public function applyChanges(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 }
-

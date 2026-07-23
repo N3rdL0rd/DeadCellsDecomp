@@ -1,18 +1,29 @@
 package level.disp;
+
 class CastleVegan extends level.disp.Castle {
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome: String) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function getFloorJunkNames(): String {
+        throw "stub: getFloorJunkNames not decompiled";
+    }
 
-  function getFloorJunkNames(): String {}
+    public override function getWallJunkNames(): String {
+        throw "stub: getWallJunkNames not decompiled";
+    }
 
-  function getWallJunkNames(): String {}
+    public override function getSpecificJunkName(): String {
+        throw "stub: getSpecificJunkName not decompiled";
+    }
 
-  function getSpecificJunkName(): String {}
+    public override function getSpecificJunkGlowName(): String {
+        throw "stub: getSpecificJunkGlowName not decompiled";
+    }
 
-  function getSpecificJunkGlowName(): String {}
-
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 }
-

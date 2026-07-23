@@ -1,14 +1,22 @@
 package en.inter;
+
 class RandomCCSpawner extends en.inter.RandomWeaponSpawner {
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, tier: String, seed: Int, delayF: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+        super();
+    }
 
-  function getPossibleWeapons(): Dynamic {}
+    public override function getPossibleWeapons(): Dynamic {
+        throw "stub: getPossibleWeapons not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

@@ -1,20 +1,30 @@
 package en.bu;
+
 class BeholderSpike extends en.Bullet {
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
 
-  function onBlock(byEnt: Bool) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float) {
+        super();
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float) {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public override function onStep(): Void {
+    }
 
-  function onStep() {}
+    public override function onHitWall(): Void {
+    }
 
-  function onHitWall() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

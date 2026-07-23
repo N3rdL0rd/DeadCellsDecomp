@@ -1,61 +1,92 @@
 package en.mob;
+
 class Tick extends en.Mob {
-  var nextShot: Float;
-  var shotRatio: Float;
-  var sprYOffset: Float;
-  var bossDoors: hl.types.ArrayObj<Dynamic>;
-  var sbFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var nextShot: Float;
+    public var shotRatio: Float;
+    public var sprYOffset: Float;
+    public var bossDoors: Array<Dynamic>;
+    public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Tick {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Tick {
+        throw "stub: create not decompiled";
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function fillBossDoor() {}
+    public function fillBossDoor(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function eliteAnger(enableBump: Dynamic) {}
+    public override function eliteAnger(arg0: Ref): Void {
+    }
 
-  function initSlash(id: String, fxId: String, followUp: Dynamic, canTurn: Dynamic) {}
+    public function initSlash(arg0: String, arg1: String, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public override function onLand(arg0: Float): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function shoot(power: Dynamic, speed: Float, ang: Float) {}
+    public function shoot(arg0: Dynamic, arg1: Float, arg2: Float): Void {
+    }
 
-  function onTouchGround() {}
+    public function onTouchGround(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function reveal() {}
+    public override function reveal(): Void {
+    }
 
-  function onDetectRevealer(h: en.Hero.Hero) {}
+    public override function onDetectRevealer(arg0: en.Hero): Void {
+    }
 
-  function canBeRevealedBy(h: en.Hero.Hero): Bool {}
+    public override function canBeRevealedBy(arg0: en.Hero): Bool {
+        throw "stub: canBeRevealedBy not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

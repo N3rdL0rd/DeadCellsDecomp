@@ -1,87 +1,134 @@
 package en.mob;
+
 class S_Cat extends en.pet.PetMob {
-  var attached: Bool;
-  var maxDistFromParent: Float;
-  var furySkill: tool.skill.OldSkill.OldSkill;
-  var furySkillInf: Dynamic;
-  var furySkillArea: tool.Area.Area;
-  var randomClawSkill: tool.skill.OldSkill.OldSkill;
-  var randomClawSkillFollowUp: tool.skill.OldSkill.OldSkill;
-  var randomClawSkillArea: tool.Area.Area;
-  var randomClawSkillAreaDetect: tool.Area.Area;
-  var randomClawSkillB: tool.skill.OldSkill.OldSkill;
-  var randomClawSkillBArea: tool.Area.Area;
-  var statusMultiplier: Float;
-  static var heroHasCatAttached: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var heroHasCatAttached: Bool;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var attached: Bool;
+    public var maxDistFromParent: Float;
+    public var furySkill: tool.skill.OldSkill;
+    public var furySkillInf: Dynamic;
+    public var furySkillArea: tool.Area;
+    public var randomClawSkill: tool.skill.OldSkill;
+    public var randomClawSkillFollowUp: tool.skill.OldSkill;
+    public var randomClawSkillArea: tool.Area;
+    public var randomClawSkillAreaDetect: tool.Area;
+    public var randomClawSkillB: tool.skill.OldSkill;
+    public var randomClawSkillBArea: tool.Area;
+    public var statusMultiplier: Float;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem): S_Cat {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem): en.mob.S_Cat {
+        throw "stub: create not decompiled";
+    }
 
-  function aiLocked(): Bool {}
+    public function aiLocked(): Bool {
+        throw "stub: aiLocked not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function mariaCineEnd() {}
+    public function mariaCineEnd(): Void {
+    }
 
-  function getDepopSound(): hxd.res.Sound.Sound {}
+    public override function getDepopSound(): hxd.res.Sound {
+        throw "stub: getDepopSound not decompiled";
+    }
 
-  function getUseSound(): hxd.res.Sound.Sound {}
+    public override function getUseSound(): hxd.res.Sound {
+        throw "stub: getUseSound not decompiled";
+    }
 
-  function canHit(e: Entity, area: tool.Area.Area): Bool {}
+    public function canHit(arg0: Entity, arg1: tool.Area): Bool {
+        throw "stub: canHit not decompiled";
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function onBuff() {}
+    public override function onBuff(): Void {
+    }
 
-  function onDebuff() {}
+    public override function onDebuff(): Void {
+    }
 
-  function canAttach(): Bool {}
+    public function canAttach(): Bool {
+        throw "stub: canAttach not decompiled";
+    }
 
-  function attach() {}
+    public function attach(): Void {
+    }
 
-  function detach() {}
+    public function detach(): Void {
+    }
 
-  function trackParent() {}
+    public function trackParent(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function behaviour_platformPatrol() {}
+    public function behaviour_platformPatrol(): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function clawFuryUpdate() {}
+    public function clawFuryUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function canApplyRepelling(): Bool {}
+    public override function canApplyRepelling(): Bool {
+        throw "stub: canApplyRepelling not decompiled";
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function noPetReaction() {}
+    public override function noPetReaction(): Void {
+    }
 
-  function petReaction() {}
+    public override function petReaction(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

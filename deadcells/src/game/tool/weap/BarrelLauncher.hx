@@ -1,18 +1,27 @@
 package tool.weap;
+
 class BarrelLauncher extends tool.weap.BaseBow {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function initAnimIds(): Void {
+    }
 
-  function initAnimIds() {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public function spawnBarrel(arg0: Ref): Void {
+    }
 
-  function spawnBarrel(lessBright: Dynamic) {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootY(): Float {}
-
-  function playShootAnim() {}
+    public override function playShootAnim(): Void {
+    }
 }
-

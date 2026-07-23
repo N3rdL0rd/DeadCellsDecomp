@@ -1,31 +1,45 @@
 package uicore;
+
 class InteractiveComponent {
-  var parent: uicore.UIElement.UIElement;
-  var interactive: h2d.Interactive.Interactive;
-  var actionSignals: Dynamic;
+    public var parent: uicore.UIElement;
+    public var interactive: h2d.Interactive;
+    public var actionSignals: uicore.signals.ActionSignals;
 
-  function __constructor__(parent: uicore.UIElement.UIElement) {}
+    public function new(arg0: uicore.UIElement) {
+    }
 
-  function initMouseInteractive() {}
+    public function initMouseInteractive(): Void {
+    }
 
-  function resize() {}
+    public function resize(): Void {
+    }
 
-  function resizeMouseInteractive() {}
+    public function resizeMouseInteractive(): Void {
+    }
 
-  function getActionSignal(action: Int): libs.signals.Signal1.Signal1 {}
+    public function getActionSignal(arg0: Int): libs.signals.Signal1 {
+        throw "stub: getActionSignal not decompiled";
+    }
 
-  function registerCallback(action: Int, cb: Dynamic) {}
+    public function registerCallback(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function handleAction(action: Int, actionStatus: Dynamic) {}
+    public function handleAction(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function selectFromMouse(event: Dynamic, click: Bool): Bool {}
+    public function selectFromMouse(arg0: hxd.Event, arg1: Bool): Bool {
+        throw "stub: selectFromMouse not decompiled";
+    }
 
-  function over(event: Dynamic) {}
+    public function over(arg0: hxd.Event): Void {
+    }
 
-  function click(event: Dynamic) {}
+    public function click(arg0: hxd.Event): Void {
+    }
 
-  function push(event: Dynamic) {}
+    public function push(arg0: hxd.Event): Void {
+    }
 
-  function wheel(event: Dynamic) {}
+    public function wheel(arg0: hxd.Event): Void {
+    }
 }
-

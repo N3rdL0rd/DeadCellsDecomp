@@ -1,45 +1,66 @@
 package level.disp;
+
 class Cavern extends level.BiomeDisp {
-  var biome: String;
-  var groundFoliageDeck: libs.RandDeck.RandDeck;
-  var rockDeck: libs.RandDeck.RandDeck;
-  var rockCeilingDeck: libs.RandDeck.RandDeck;
-  var glowShader: shader.GlowKey.GlowKey;
-  var scrollerBgs: hl.types.ArrayObj<Dynamic>;
-  var scrollerFgs: hl.types.ArrayObj<Dynamic>;
+    public var biome: String;
+    public var groundFoliageDeck: libs.RandDeck;
+    public var rockDeck: libs.RandDeck;
+    public var rockCeilingDeck: libs.RandDeck;
+    public var glowShader: shader.GlowKey;
+    public var scrollerBgs: Array<Dynamic>;
+    public var scrollerFgs: Array<Dynamic>;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap, biome: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String) {
+        super();
+    }
 
-  function canStampOn(df: Int): Bool {}
+    public override function canStampOn(arg0: Int): Bool {
+        throw "stub: canStampOn not decompiled";
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function addParallaxAlcove(z: level.DecoTypes.DecoTypes) {}
+    public function addParallaxAlcove(arg0: level.DecoZone): Void {
+    }
 
-  function addColumn(px: Int, py: Int, height: Int, pivotX: Dynamic) {}
+    public function addColumn(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Void {
+    }
 
-  function addMushroom(px: Int, py: Int, inverted: Dynamic) {}
+    public function addMushroom(arg0: Int, arg1: Int, arg2: Ref): Void {
+    }
 
-  function addBarrelLantern(px: Int, py: Int) {}
+    public function addBarrelLantern(arg0: Int, arg1: Int): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function checkMinLightDist(px: Float, py: Float, d: Float): Bool {}
+    public function checkMinLightDist(arg0: Float, arg1: Float, arg2: Float): Bool {
+        throw "stub: checkMinLightDist not decompiled";
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function renderStructures() {}
+    public override function renderStructures(): Void {
+    }
 
-  function getStampWallThreshold(): Float {}
+    public override function getStampWallThreshold(): Float {
+        throw "stub: getStampWallThreshold not decompiled";
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function renderGiantBackground() {}
+    public function renderGiantBackground(): Void {
+    }
 }
-

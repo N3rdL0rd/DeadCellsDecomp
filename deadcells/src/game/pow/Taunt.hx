@@ -1,23 +1,32 @@
 package pow;
+
 class Taunt extends Power {
-  static var VOLTEDIVIDER: Float;
-  static var SPEEDMULTIPLIER: Float;
-  static var TPCHARGE: Float;
-  static var CASTSPEEDMULT: Float;
-  static var COOLDOWNSPEEDMULT: Float;
-  static var DMGMULT: Float;
-  static var __clid: Int;
+    public static var VOLTEDIVIDER: Float;
+    public static var SPEEDMULTIPLIER: Float;
+    public static var TPCHARGE: Float;
+    public static var CASTSPEEDMULT: Float;
+    public static var COOLDOWNSPEEDMULT: Float;
+    public static var DMGMULT: Float;
+    public static var __clid: Int;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function startPrepare() {}
+    public function startPrepare(): Void {
+    }
 
-  function playEffect() {}
+    public function playEffect(): Void {
+    }
 
-  function getAllTauntedEnnemies(): hl.types.ArrayObj<Dynamic> {}
+    public function getAllTauntedEnnemies(): Array<Dynamic> {
+        throw "stub: getAllTauntedEnnemies not decompiled";
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

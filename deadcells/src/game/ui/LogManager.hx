@@ -1,39 +1,55 @@
 package ui;
+
 class LogManager extends ui.Process {
-  var content: hl.types.ArrayObj<Dynamic>;
-  var taunts: hl.types.ArrayObj<Dynamic>;
-  var achievements: hl.types.ArrayObj<Dynamic>;
-  var tauntWrapper: h2d.Object.Object;
-  var cm: libs.misc.Cinematic.Cinematic;
+    public var content: Array<Dynamic>;
+    public var taunts: Array<Dynamic>;
+    public var achievements: Array<Dynamic>;
+    public var tauntWrapper: h2d.Object;
+    public var cm: libs.misc.Cinematic;
 
-  function __constructor__(p: libs.Process.Process) {}
+    public function new(arg0: libs.Process) {
+        super();
+    }
 
-  function text(str: String, c: Dynamic, icon: h2d.Tile.Tile, durationMul: Dynamic) {}
+    public function text(arg0: String, arg1: Dynamic, arg2: h2d.Tile, arg3: Dynamic): Void {
+    }
 
-  function textBmp(str: String, c: Dynamic, bmp: h2d.Bitmap.Bitmap, durationMul: Dynamic) {}
+    public function textBmp(arg0: String, arg1: Dynamic, arg2: h2d.Bitmap, arg3: Dynamic): Void {
+    }
 
-  function titleWithIconList(title: String, iconList: hl.types.ArrayObj<Dynamic>, c: Dynamic, icon: h2d.Tile.Tile) {}
+    public function titleWithIconList(arg0: String, arg1: Array<Dynamic>, arg2: Dynamic, arg3: h2d.Tile): Void {
+    }
 
-  function twitchTaunt(user: String, str: String, c: Int) {}
+    public function twitchTaunt(arg0: String, arg1: String, arg2: Int): Void {
+    }
 
-  function twitch(str: String, title: String, c: Dynamic, icon: h2d.Tile.Tile) {}
+    public function twitch(arg0: String, arg1: String, arg2: Dynamic, arg3: h2d.Tile): Void {
+    }
 
-  function elite(name: String) {}
+    public function elite(arg0: String): Void {
+    }
 
-  function textWithTitle(title: String, str: String, c: Dynamic, icon: h2d.Tile.Tile) {}
+    public function textWithTitle(arg0: String, arg1: String, arg2: Dynamic, arg3: h2d.Tile): Void {
+    }
 
-  function displayAchievements(title: String, desc: String, icon: h2d.Tile.Tile) {}
+    public function displayAchievements(arg0: String, arg1: String, arg2: h2d.Tile): Void {
+    }
 
-  function head(headKind: String) {}
+    public function head(arg0: String): Void {
+    }
 
-  function blueprint(k: String, baseRarity: String, isRevealed: Bool, isScoring: Bool) {}
+    public function blueprint(arg0: String, arg1: String, arg2: Bool, arg3: Bool): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function clearAll() {}
+    public function clearAll(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

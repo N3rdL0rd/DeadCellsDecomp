@@ -1,13 +1,19 @@
 package tool.weap;
+
 class Spear extends tool.Weapon {
-  var n: Int;
+    public var n: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function doAreaEffect(area: tool.Area.Area) {}
+    public override function doAreaEffect(arg0: tool.Area): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 }
-

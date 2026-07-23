@@ -1,66 +1,111 @@
 package tool.mv;
+
 class MvWalk extends tool.AutoMove {
-  var path: tool.Path.Path;
-  var pathFinderWeights: haxe.ds.EnumValueMap;
-  var canFall: Bool;
-  var curJump: Dynamic;
-  var t: tool.CPoint.CPoint;
-  var next: tool.CPoint.CPoint;
-  static var tmpPath: tool.Path.Path;
-  static var __clid: Int;
+    public static var tmpPath: tool.Path;
+    public static var __clid: Int;
+    public var path: tool.Path;
+    public var pathFinderWeights: haxe.ds.EnumValueMap;
+    public var canFall: Bool;
+    public var curJump: Dynamic;
+    public var t: tool.CPoint;
+    public var next: tool.CPoint;
 
-  function onEndJump() {}
+    public function new(arg0: Entity) {
+        super();
+    }
 
-  function __constructor__(entity: Entity) {}
+    public override function init(): Void {
+    }
 
-  function init() {}
+    public function set_canFall(arg0: Bool): Bool {
+        throw "stub: set_canFall not decompiled";
+    }
 
-  function set_canFall(b: Bool): Bool {}
+    public function set_canLeavePlatform(arg0: Bool): Bool {
+        throw "stub: set_canLeavePlatform not decompiled";
+    }
 
-  function set_canLeavePlatform(b: Bool): Bool {}
+    public override function getNextPoint(): tool.CPoint {
+        throw "stub: getNextPoint not decompiled";
+    }
 
-  function getNextPoint(): tool.CPoint.CPoint {}
+    public function basicCanGoto(arg0: Int, arg1: Int): Bool {
+        throw "stub: basicCanGoto not decompiled";
+    }
 
-  function basicCanGoto(cx: Int, cy: Int): Bool {}
+    public override function gotoPixel(arg0: Float, arg1: Float, arg2: Ref): Bool {
+        throw "stub: gotoPixel not decompiled";
+    }
 
-  function gotoPixel(x: Float, y: Float, linearSpeed: Dynamic): Bool {}
+    public function hJump(arg0: Float, arg1: Float, arg2: Float, arg3: Bool): Bool {
+        throw "stub: hJump not decompiled";
+    }
 
-  function hJump(dcx: Float, cHei: Float, spd: Float, canJumpOverGap: Bool): Bool {}
+    public function hJumpWithoutChecks(arg0: Int, arg1: Float, arg2: Float): Bool {
+        throw "stub: hJumpWithoutChecks not decompiled";
+    }
 
-  function hJumpWithoutChecks(dcx: Int, cHei: Float, spd: Float): Bool {}
+    public function hJumpTo(arg0: Float, arg1: Float, arg2: Float): Bool {
+        throw "stub: hJumpTo not decompiled";
+    }
 
-  function hJumpTo(targetX: Float, cHei: Float, spd: Float): Bool {}
+    public function getGapJumpDist(arg0: Float): Int {
+        throw "stub: getGapJumpDist not decompiled";
+    }
 
-  function getGapJumpDist(maxDistCase: Float): Int {}
+    public override function goto(arg0: Int, arg1: Int): Bool {
+        throw "stub: goto not decompiled";
+    }
 
-  function goto(tx: Int, ty: Int): Bool {}
+    public override function canGoto(arg0: Int, arg1: Int): Bool {
+        throw "stub: canGoto not decompiled";
+    }
 
-  function canGoto(tx: Int, ty: Int): Bool {}
+    public override function stop(): Void {
+    }
 
-  function stop() {}
+    public function cancelJump(): Void {
+    }
 
-  function cancelJump() {}
+    public override function hasTarget(): Bool {
+        throw "stub: hasTarget not decompiled";
+    }
 
-  function hasTarget(): Bool {}
+    public function getJumpSpeed(): Float {
+        throw "stub: getJumpSpeed not decompiled";
+    }
 
-  function getJumpSpeed(): Float {}
+    public function getWalkSpeed(): Float {
+        throw "stub: getWalkSpeed not decompiled";
+    }
 
-  function getWalkSpeed(): Float {}
+    public function canWalk(): Bool {
+        throw "stub: canWalk not decompiled";
+    }
 
-  function canWalk(): Bool {}
+    public function onStep(): Void {
+    }
 
-  function onStep() {}
+    public override function update(): Void {
+    }
 
-  function update() {}
+    public function updateWalk(): Void {
+    }
 
-  function updateWalk() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onEndJump(): Void {
+    }
 }
-

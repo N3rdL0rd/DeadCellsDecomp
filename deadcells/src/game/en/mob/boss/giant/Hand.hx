@@ -1,70 +1,112 @@
 package en.mob.boss.giant;
-class Hand extends HandBase {
-  var superCharges: Int;
-  var consecutiveStompCount: Int;
-  static var actionDeck1: libs.RandDeck.RandDeck;
-  static var actionDeck2: libs.RandDeck.RandDeck;
-  static var lastAction: Dynamic;
-  static var N_CONSECUTIVE_STOMPS: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
 
-  function __constructor__(giant: en.mob.boss.Giant.Giant, right: Bool, damageTier: Int, lifeTier: Int) {}
+class Hand extends en.mob.boss.giant.HandBase {
+    public static var actionDeck1: libs.RandDeck;
+    public static var actionDeck2: libs.RandDeck;
+    public static var lastAction: en.mob.boss.giant.GHAction;
+    public static var N_CONSECUTIVE_STOMPS: Int;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var superCharges: Int;
+    public var consecutiveStompCount: Int;
 
-  static function create(giant: en.mob.boss.Giant.Giant, right: Bool, damageTier: Int, lifeTier: Int): Hand {}
+    public function new(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int) {
+        super();
+    }
 
-  function get_idleX(): Float {}
+    public static function create(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int): en.mob.boss.giant.Hand {
+        throw "stub: create not decompiled";
+    }
 
-  function get_idleY(): Float {}
+    public override function get_idleX(): Float {
+        throw "stub: get_idleX not decompiled";
+    }
 
-  function init() {}
+    public override function get_idleY(): Float {
+        throw "stub: get_idleY not decompiled";
+    }
 
-  function getSuperCharges(): Int {}
+    public override function init(): Void {
+    }
 
-  function increaseSuperCharge(): Int {}
+    public function getSuperCharges(): Int {
+        throw "stub: getSuperCharges not decompiled";
+    }
 
-  function canChoose(): Bool {}
+    public function increaseSuperCharge(): Int {
+        throw "stub: increaseSuperCharge not decompiled";
+    }
 
-  function canChooseAction(newAction: Dynamic): Bool {}
+    public override function canChoose(): Bool {
+        throw "stub: canChoose not decompiled";
+    }
 
-  function onRecover() {}
+    public override function canChooseAction(arg0: en.mob.boss.giant.GHAction): Bool {
+        throw "stub: canChooseAction not decompiled";
+    }
 
-  function chooseAction(): Dynamic {}
+    public override function onRecover(): Void {
+    }
 
-  function onHandLand() {}
+    public override function chooseAction(): en.mob.boss.giant.GHAction {
+        throw "stub: chooseAction not decompiled";
+    }
 
-  function updateGrounded() {}
+    public function onHandLand(): Void {
+    }
 
-  function updateDoubleStomp() {}
+    public override function updateGrounded(): Void {
+    }
 
-  function updateStompHell() {}
+    public override function updateDoubleStomp(): Void {
+    }
 
-  function doIdle() {}
+    public override function updateStompHell(): Void {
+    }
 
-  function setCollisions(v: Bool) {}
+    public override function doIdle(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public function setCollisions(arg0: Bool): Void {
+    }
 
-  function doSuperCharge(inf: Dynamic, atk: tool.skill.OldMobSkill.OldMobSkill) {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function doBulletHell(inf: Dynamic, atk: tool.skill.OldMobSkill.OldMobSkill) {}
+    public override function doSuperCharge(arg0: Dynamic, arg1: tool.skill.OldMobSkill): Void {
+    }
 
-  function doStompHell(inf: Dynamic, atk: tool.skill.OldMobSkill.OldMobSkill) {}
+    public override function doBulletHell(arg0: Dynamic, arg1: tool.skill.OldMobSkill): Void {
+    }
 
-  function startAction(action: Dynamic) {}
+    public override function doStompHell(arg0: Dynamic, arg1: tool.skill.OldMobSkill): Void {
+    }
 
-  function onStompTrackReach() {}
+    public override function startAction(arg0: en.mob.boss.giant.GHAction): Void {
+    }
 
-  function interruptSkills() {}
+    public override function onStompTrackReach(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function interruptSkills(): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

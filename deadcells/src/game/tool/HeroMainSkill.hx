@@ -1,115 +1,185 @@
 package tool;
+
 class HeroMainSkill {
-  var hero: en.Hero.Hero;
-  var skillInfos: Dynamic;
-  var hold: Bool;
-  var cd: tool.Cooldown.Cooldown;
-  var duration: Float;
-  var cooldown: Float;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var hero: en.Hero;
+    public var skillInfos: Dynamic;
+    public var hold: Bool;
+    public var cd: tool.Cooldown;
+    public var duration: Float;
+    public var cooldown: Float;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  static function create(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic): HeroMainSkill {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+    }
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public static function create(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic): tool.HeroMainSkill {
+        throw "stub: create not decompiled";
+    }
 
-  function secToFrames(v: Float): Float {}
+    public function secToFrames(arg0: Float): Float {
+        throw "stub: secToFrames not decompiled";
+    }
 
-  function isEnabled(): Bool {}
+    public function isEnabled(): Bool {
+        throw "stub: isEnabled not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function preUpdate() {}
+    public function preUpdate(): Void {
+    }
 
-  function activePreUpdate() {}
+    public function activePreUpdate(): Void {
+    }
 
-  function passivePreUpdate() {}
+    public function passivePreUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function activeFixedUpdate() {}
+    public function activeFixedUpdate(): Void {
+    }
 
-  function passiveFixedUpdate() {}
+    public function passiveFixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function activePostUpdate() {}
+    public function activePostUpdate(): Void {
+    }
 
-  function passivePostUpdate() {}
+    public function passivePostUpdate(): Void {
+    }
 
-  function prepare(): Bool {}
+    public function prepare(): Bool {
+        throw "stub: prepare not decompiled";
+    }
 
-  function tryInterruptBy(heroSkill: HeroMainSkill): Bool {}
+    public function tryInterruptBy(arg0: tool.HeroMainSkill): Bool {
+        throw "stub: tryInterruptBy not decompiled";
+    }
 
-  function cancel() {}
+    public function cancel(): Void {
+    }
 
-  function start() {}
+    public function start(): Void {
+    }
 
-  function end() {}
+    public function end(): Void {
+    }
 
-  function onStart() {}
+    public function onStart(): Void {
+    }
 
-  function onEnd() {}
+    public function onEnd(): Void {
+    }
 
-  function onCancel() {}
+    public function onCancel(): Void {
+    }
 
-  function onCancelOtherSkill(heroSkill: HeroMainSkill) {}
+    public function onCancelOtherSkill(arg0: tool.HeroMainSkill): Void {
+    }
 
-  function onReady() {}
+    public function onReady(): Void {
+    }
 
-  function isUsingInputs(): Bool {}
+    public function isUsingInputs(): Bool {
+        throw "stub: isUsingInputs not decompiled";
+    }
 
-  function canUse(): Bool {}
+    public function canUse(): Bool {
+        throw "stub: canUse not decompiled";
+    }
 
-  function isActive(): Bool {}
+    public function isActive(): Bool {
+        throw "stub: isActive not decompiled";
+    }
 
-  function canBeInterruptedBy(heroSkill: HeroMainSkill): Bool {}
+    public function canBeInterruptedBy(arg0: tool.HeroMainSkill): Bool {
+        throw "stub: canBeInterruptedBy not decompiled";
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function onOwnerCooldownEnd(k: String, subIndex: Int) {}
+    public function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function onEquippedItemsUpdated(duringHeroInit: Dynamic) {}
+    public function onEquippedItemsUpdated(arg0: Ref): Void {
+    }
 
-  function onPickItem(from: Entity, i: tool.InventItem.InventItem) {}
+    public function onPickItem(arg0: Entity, arg1: tool.InventItem): Void {
+    }
 
-  function onUnlockItem(kind: String) {}
+    public function onUnlockItem(arg0: String): Void {
+    }
 
-  function onMobDeath(mob: en.Mob.Mob) {}
+    public function onMobDeath(arg0: en.Mob): Void {
+    }
 
-  function onUse(inter: en.Interactive.Interactive) {}
+    public function onUse(arg0: en.Interactive): Void {
+    }
 
-  function shouldHaveSmallHitbox(): Bool {}
+    public function shouldHaveSmallHitbox(): Bool {
+        throw "stub: shouldHaveSmallHitbox not decompiled";
+    }
 
-  function canWallGrab(): Bool {}
+    public function canWallGrab(): Bool {
+        throw "stub: canWallGrab not decompiled";
+    }
 
-  function canJumpThroughUp(): Bool {}
+    public function canJumpThroughUp(): Bool {
+        throw "stub: canJumpThroughUp not decompiled";
+    }
 
-  function canPreventStuckInWall(cx: Int, cy: Int): Bool {}
+    public function canPreventStuckInWall(arg0: Int, arg1: Int): Bool {
+        throw "stub: canPreventStuckInWall not decompiled";
+    }
 
-  function canBreakDoors(): Bool {}
+    public function canBreakDoors(): Bool {
+        throw "stub: canBreakDoors not decompiled";
+    }
 
-  function canBreakTiles(): Bool {}
+    public function canBreakTiles(): Bool {
+        throw "stub: canBreakTiles not decompiled";
+    }
 
-  function canUseInteractive(inter: en.Interactive.Interactive): Bool {}
+    public function canUseInteractive(arg0: en.Interactive): Bool {
+        throw "stub: canUseInteractive not decompiled";
+    }
 
-  function isItemUseful(item: tool.InventItem.InventItem): Bool {}
+    public function isItemUseful(arg0: tool.InventItem): Bool {
+        throw "stub: isItemUseful not decompiled";
+    }
 
-  function onOwnerDeath() {}
+    public function onOwnerDeath(): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

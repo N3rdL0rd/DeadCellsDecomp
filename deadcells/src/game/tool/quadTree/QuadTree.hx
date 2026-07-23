@@ -1,37 +1,52 @@
 package tool.quadTree;
+
 class QuadTree {
-  var boundary: tool.quadTree.QtRectangle.QtRectangle;
-  var capacity: Int;
-  var nbEntities: Int;
-  var colorQuad: Int;
-  var minimumSquareSize: Int;
-  var points: hl.types.ArrayObj<Dynamic>;
-  var entities: hl.types.ArrayObj<Dynamic>;
-  var northEast: QuadTree;
-  var northWest: QuadTree;
-  var southEast: QuadTree;
-  var southWest: QuadTree;
-  var divided: Bool;
-  var debugGraphic: h2d.Graphics.Graphics;
+    public var boundary: tool.quadTree.QtRectangle;
+    public var capacity: Int;
+    public var nbEntities: Int;
+    public var colorQuad: Int;
+    public var minimumSquareSize: Int;
+    public var points: Array<Dynamic>;
+    public var entities: Array<Dynamic>;
+    public var northEast: tool.quadTree.QuadTree;
+    public var northWest: tool.quadTree.QuadTree;
+    public var southEast: tool.quadTree.QuadTree;
+    public var southWest: tool.quadTree.QuadTree;
+    public var divided: Bool;
+    public var debugGraphic: h2d.Graphics;
 
-  function __constructor__(boundary: tool.quadTree.QtRectangle.QtRectangle, capacity: Int, minimumSquareSize: Int, _debugGraphic: h2d.Graphics.Graphics) {}
+    public function new(arg0: tool.quadTree.QtRectangle, arg1: Int, arg2: Int, arg3: h2d.Graphics) {
+    }
 
-  function initBoundaries(boundary: tool.quadTree.QtRectangle.QtRectangle, capacity: Int, minimumSquareSize: Int, _debugGraphic: h2d.Graphics.Graphics) {}
+    public function initBoundaries(arg0: tool.quadTree.QtRectangle, arg1: Int, arg2: Int, arg3: h2d.Graphics): Void {
+    }
 
-  function subdivide() {}
+    public function subdivide(): Void {
+    }
 
-  function countEntities(): Int {}
+    public function countEntities(): Int {
+        throw "stub: countEntities not decompiled";
+    }
 
-  function remove(cx: Int, cy: Int, entity: Entity): Bool {}
+    public function remove(arg0: Int, arg1: Int, arg2: Entity): Bool {
+        throw "stub: remove not decompiled";
+    }
 
-  function doRemove(entity: Entity) {}
+    public function doRemove(arg0: Entity): Void {
+    }
 
-  function updateArea() {}
+    public function updateArea(): Void {
+    }
 
-  function insert(cx: Int, cy: Int, entity: Entity): Bool {}
+    public function insert(arg0: Int, arg1: Int, arg2: Entity): Bool {
+        throw "stub: insert not decompiled";
+    }
 
-  function tryInsert(cx: Int, cy: Int, entity: Entity): Bool {}
+    public function tryInsert(arg0: Int, arg1: Int, arg2: Entity): Bool {
+        throw "stub: tryInsert not decompiled";
+    }
 
-  function query(range: tool.quadTree.QtRectangle.QtRectangle, found: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function query(arg0: tool.quadTree.QtRectangle, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: query not decompiled";
+    }
 }
-

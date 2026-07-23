@@ -1,24 +1,37 @@
 package tool.vote;
+
 class OpenChest extends tool.TwitchVote {
-  var chest: en.inter.TwitchChest.TwitchChest;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var chest: en.inter.TwitchChest;
 
-  function __constructor__(e: en.inter.TwitchChest.TwitchChest) {}
+    public function new(arg0: en.inter.TwitchChest) {
+        super();
+    }
 
-  function onDelayedVoteInit() {}
+    public override function onDelayedVoteInit(): Void {
+    }
 
-  function onVote(m: tool.TwitchMessage.TwitchMessage, v: Dynamic, alias: String) {}
+    public override function onVote(arg0: tool.TwitchMessage, arg1: Dynamic, arg2: String): Void {
+    }
 
-  function isSuspended(): Bool {}
+    public override function isSuspended(): Bool {
+        throw "stub: isSuspended not decompiled";
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

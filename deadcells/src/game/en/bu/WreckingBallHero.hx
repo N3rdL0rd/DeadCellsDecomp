@@ -1,41 +1,63 @@
 package en.bu;
+
 class WreckingBallHero extends en.Bullet {
-  var fromWeapon: tool.weap.WreckingBall.WreckingBall;
-  var isGoingBackToHero: Bool;
-  var glowInnerColor: Int;
-  var glowOuterColor: Int;
-  var enemiesKilled: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var fromWeapon: tool.weap.WreckingBall;
+    public var isGoingBackToHero: Bool;
+    public var glowInnerColor: Int;
+    public var glowOuterColor: Int;
+    public var enemiesKilled: Int;
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, fromWeapon: tool.weap.WreckingBall.WreckingBall, scale: Float, _isGoingBackToHero: Bool, innerColor: Int, outerColor: Int) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: tool.weap.WreckingBall, arg3: Float, arg4: Bool, arg5: Int, arg6: Int) {
+        super();
+    }
 
-  function setGoingBackToHero(_isGoingBackToHero: Bool) {}
+    public function setGoingBackToHero(arg0: Bool): Void {
+    }
 
-  function shootAtAngle(shootX: Float, shootY: Float, ang: Float, spd: Float) {}
+    public function shootAtAngle(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function setPosFluid(x: Float, y: Float) {}
+    public function setPosFluid(arg0: Float, arg1: Float): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function hasAmmoToRetrieve(): Bool {}
+    public override function hasAmmoToRetrieve(): Bool {
+        throw "stub: hasAmmoToRetrieve not decompiled";
+    }
 
-  function createAmmoDrop(): en.loot.Ammo.Ammo {}
+    public override function createAmmoDrop(): en.loot.Ammo {
+        throw "stub: createAmmoDrop not decompiled";
+    }
 
-  function onHitWall() {}
+    public override function onHitWall(): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function doGroundShake() {}
+    public function doGroundShake(): Void {
+    }
 
-  function createFakeBulletSprite(): libs.heaps.slib.HSprite.HSprite {}
+    public override function createFakeBulletSprite(): libs.heaps.slib.HSprite {
+        throw "stub: createFakeBulletSprite not decompiled";
+    }
 
-  function attachFakeBulletBounce() {}
+    public override function attachFakeBulletBounce(): Void {
+    }
 
-  function _isOnScreen(): Bool {}
+    public override function _isOnScreen(): Bool {
+        throw "stub: _isOnScreen not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

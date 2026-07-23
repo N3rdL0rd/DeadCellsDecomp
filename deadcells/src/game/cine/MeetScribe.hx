@@ -1,9 +1,12 @@
 package cine;
+
 class MeetScribe extends GameCinematic {
-  var scr: en.inter.npc.Scribe.Scribe;
+    public var scr: en.inter.npc.Scribe;
 
-  function __constructor__(scr: en.inter.npc.Scribe.Scribe) {}
+    public function new(arg0: en.inter.npc.Scribe) {
+        super();
+    }
 
-  function onComplete() {}
+    public function onComplete(): Void {
+    }
 }
-

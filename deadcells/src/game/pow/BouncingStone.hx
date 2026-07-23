@@ -1,15 +1,23 @@
 package pow;
+
 class BouncingStone extends Power {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_hudSkill(): ui.hud.Skill.Skill {}
+    public function get_hudSkill(): ui.hud.Skill {
+        throw "stub: get_hudSkill not decompiled";
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function throwStone() {}
+    public function throwStone(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

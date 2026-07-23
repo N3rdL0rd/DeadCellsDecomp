@@ -1,38 +1,56 @@
 package en.mob;
+
 class FatZombie extends en.Mob {
-  var atkFrames: hl.types.ArrayBytes<Int>;
-  var jumping: Bool;
-  var jumpX: Float;
-  var jumpY: Float;
-  var tweens: hl.types.ArrayObj<Dynamic>;
-  var roll: tool.skill.OldMobSkill.OldMobSkill;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var atkFrames: Array<Int>;
+    public var jumping: Bool;
+    public var jumpX: Float;
+    public var jumpY: Float;
+    public var tweens: Array<Dynamic>;
+    public var roll: tool.skill.OldMobSkill;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): FatZombie {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.FatZombie {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function beforeTryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float) {}
+    public override function beforeTryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Void {
+    }
 
-  function destroy() {}
+    public override function destroy(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,53 +1,88 @@
 package en.active;
+
 class HorizontalTurret extends en.active.Turret {
-  var rangeCase: Int;
-  var bow0: libs.heaps.slib.HSprite.HSprite;
-  var bow1: libs.heaps.slib.HSprite.HSprite;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var rangeCase: Int;
+    public var bow0: libs.heaps.slib.HSprite;
+    public var bow1: libs.heaps.slib.HSprite;
 
-  static function create(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem): HorizontalTurret {}
+    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
+    public static function create(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem): en.active.HorizontalTurret {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function initStats() {}
+    public override function initStats(): Void {
+    }
 
-  function get_leftBow(): Bool {}
+    public function get_leftBow(): Bool {
+        throw "stub: get_leftBow not decompiled";
+    }
 
-  function set_leftBow(v: Bool): Bool {}
+    public function set_leftBow(arg0: Bool): Bool {
+        throw "stub: set_leftBow not decompiled";
+    }
 
-  function get_rightBow(): Bool {}
+    public function get_rightBow(): Bool {
+        throw "stub: get_rightBow not decompiled";
+    }
 
-  function set_rightBow(v: Bool): Bool {}
+    public function set_rightBow(arg0: Bool): Bool {
+        throw "stub: set_rightBow not decompiled";
+    }
 
-  function getAttackTarget(): Entity {}
+    public override function getAttackTarget(): Entity {
+        throw "stub: getAttackTarget not decompiled";
+    }
 
-  function pickTurretTarget(avoid: Entity): Entity {}
+    public function pickTurretTarget(arg0: Entity): Entity {
+        throw "stub: pickTurretTarget not decompiled";
+    }
 
-  function shoot(e: Entity) {}
+    public override function shoot(arg0: Entity): Void {
+    }
 
-  function subShoot(e: Entity, offY: Float) {}
+    public function subShoot(arg0: Entity, arg1: Float): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

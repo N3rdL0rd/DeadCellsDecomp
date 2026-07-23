@@ -1,58 +1,89 @@
 package tool;
+
 class SpeedrunData {
-  var bestAnchoredTimePerLevel: hl.types.ArrayObj<Dynamic>;
-  var bestTimePerLevel: hl.types.ArrayObj<Dynamic>;
-  var runTimePerLevel: hl.types.ArrayObj<Dynamic>;
-  var anchoredRunLevelDelta: hl.types.ArrayObj<Dynamic>;
-  var runLevelDelta: hl.types.ArrayObj<Dynamic>;
-  var bestRunTime: hl.types.ArrayObj<Dynamic>;
-  var previousLevelTime: Float;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var bestAnchoredTimePerLevel: Array<Dynamic>;
+    public var bestTimePerLevel: Array<Dynamic>;
+    public var runTimePerLevel: Array<Dynamic>;
+    public var anchoredRunLevelDelta: Array<Dynamic>;
+    public var runLevelDelta: Array<Dynamic>;
+    public var bestRunTime: Array<Dynamic>;
+    public var previousLevelTime: Float;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function newGame(newSubModeGame: Dynamic) {}
+    public function newGame(arg0: Ref): Void {
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 
-  function saveBestRunTime() {}
+    public function saveBestRunTime(): Void {
+    }
 
-  function onLevelSaveGameTime(id: String) {}
+    public function onLevelSaveGameTime(arg0: String): Void {
+    }
 
-  function saveBestTimePerLevel(id: String) {}
+    public function saveBestTimePerLevel(arg0: String): Void {
+    }
 
-  function saveTimePerLevel(id: String) {}
+    public function saveTimePerLevel(arg0: String): Void {
+    }
 
-  function saveAnchoredLevelGameTime(id: String) {}
+    public function saveAnchoredLevelGameTime(arg0: String): Void {
+    }
 
-  function saveAnchoredDelta(id: String, delta: Float) {}
+    public function saveAnchoredDelta(arg0: String, arg1: Float): Void {
+    }
 
-  function saveLevelDelta(id: String, delta: Float) {}
+    public function saveLevelDelta(arg0: String, arg1: Float): Void {
+    }
 
-  function getLevelBestTime(id: String): Dynamic {}
+    public function getLevelBestTime(arg0: String): Dynamic {
+        throw "stub: getLevelBestTime not decompiled";
+    }
 
-  function getAnchoredLevelBestTime(id: String): Dynamic {}
+    public function getAnchoredLevelBestTime(arg0: String): Dynamic {
+        throw "stub: getAnchoredLevelBestTime not decompiled";
+    }
 
-  function getAnchoredLevelDelta(id: String): Dynamic {}
+    public function getAnchoredLevelDelta(arg0: String): Dynamic {
+        throw "stub: getAnchoredLevelDelta not decompiled";
+    }
 
-  function getLevelDelta(id: String): Dynamic {}
+    public function getLevelDelta(arg0: String): Dynamic {
+        throw "stub: getLevelDelta not decompiled";
+    }
 
-  function getBestRunTime(bc: Int): Dynamic {}
+    public function getBestRunTime(arg0: Int): Dynamic {
+        throw "stub: getBestRunTime not decompiled";
+    }
 
-  function getRunSumOfBest(): Float {}
+    public function getRunSumOfBest(): Float {
+        throw "stub: getRunSumOfBest not decompiled";
+    }
 
-  function getLevelTime(id: String): Dynamic {}
+    public function getLevelTime(arg0: String): Dynamic {
+        throw "stub: getLevelTime not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

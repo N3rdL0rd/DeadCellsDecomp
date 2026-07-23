@@ -1,30 +1,47 @@
 package level.struct;
+
 class PrisonStart extends level.LevelStruct {
-  var ldTool: Bool;
-  var friendLoreRoomGenerated: Bool;
+    public var ldTool: Bool;
+    public var friendLoreRoomGenerated: Bool;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildPrisonHUBZDoor() {}
+    public function buildPrisonHUBZDoor(): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function buildTriggeredDoors(cRooms: hl.types.ArrayObj<Dynamic>) {}
+    public override function buildTriggeredDoors(arg0: Array<Dynamic>): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 
-  function allowLoreRoomBefore(r: level.RoomNode.RoomNode): Bool {}
+    public override function allowLoreRoomBefore(arg0: level.RoomNode): Bool {
+        throw "stub: allowLoreRoomBefore not decompiled";
+    }
 
-  function removeEliteRoomBefore(rn: level.RoomNode.RoomNode): Bool {}
+    public override function removeEliteRoomBefore(arg0: level.RoomNode): Bool {
+        throw "stub: removeEliteRoomBefore not decompiled";
+    }
 
-  function canGenerateThisLoreRoom(lore: Dynamic): Bool {}
+    public override function canGenerateThisLoreRoom(arg0: Dynamic): Bool {
+        throw "stub: canGenerateThisLoreRoom not decompiled";
+    }
 
-  function buildLoreRooms() {}
+    public override function buildLoreRooms(): Void {
+    }
 
-  function buildEssentialLoreRooms() {}
+    public override function buildEssentialLoreRooms(): Void {
+    }
 }
-

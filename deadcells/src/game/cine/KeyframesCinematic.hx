@@ -1,32 +1,41 @@
 package cine;
+
 class KeyframesCinematic extends GameCinematic {
-  var kfs: hl.types.ArrayObj<Dynamic>;
-  var cur: Int;
-  var repeatId: Int;
-  var shake: Float;
-  var zoom: Float;
-  var zoomWrapper: h2d.Object.Object;
-  var zoomPt: Dynamic;
-  var bg: h2d.Graphics.Graphics;
-  var mask: h2d.Graphics.Graphics;
-  var fxSbAdd: h2d.SpriteBatch.SpriteBatch;
-  var fxSbNormal: h2d.SpriteBatch.SpriteBatch;
-  var fxPool: libs.heaps.HParticle.HParticle;
+    public var kfs: Array<Dynamic>;
+    public var cur: Int;
+    public var repeatId: Int;
+    public var shake: Float;
+    public var zoom: Float;
+    public var zoomWrapper: h2d.Object;
+    public var zoomPt: Dynamic;
+    public var bg: h2d.Graphics;
+    public var mask: h2d.Graphics;
+    public var fxSbAdd: h2d.SpriteBatch;
+    public var fxSbNormal: h2d.SpriteBatch;
+    public var fxPool: libs.heaps.ParticlePool;
 
-  function __constructor__(path: String, seq: hl.types.ArrayObj<Dynamic>) {}
+    public function new(arg0: String, arg1: Array<Dynamic>) {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function next() {}
+    public function next(): Void {
+    }
 
-  function onEnd() {}
+    public function onEnd(): Void {
+    }
 
-  function setZoom(z: Float) {}
+    public function setZoom(arg0: Float): Void {
+    }
 
-  function zoomTo(z: Float, sec: Float, tween: Dynamic) {}
+    public function zoomTo(arg0: Float, arg1: Float, arg2: libs.misc.TType): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

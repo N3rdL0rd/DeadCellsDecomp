@@ -1,77 +1,122 @@
 package en.mob;
+
 class AnchorGuy extends en.Mob {
-  var anchorTargetCX: Int;
-  var anchorTargetCY: Int;
-  var hasAnchorTarget: Bool;
-  var chain: tool.Chain.Chain;
-  var tenseChainLength: Float;
-  var runFactor: Float;
-  var anchorBullet: en.bu.Anchor.Anchor;
-  var anchorAmmo: en.bu.Anchor.AnchorAmmo;
-  var jumpData: hxbit.Macros.Macros;
-  var teleJump: tool.skill.mobSkill.TeleJump.TeleJump;
-  var oneWayToDestroyCandidates: hl.types.ArrayObj<Dynamic>;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var anchorTargetCX: Int;
+    public var anchorTargetCY: Int;
+    public var hasAnchorTarget: Bool;
+    public var chain: tool.Chain;
+    public var tenseChainLength: Float;
+    public var runFactor: Float;
+    public var anchorBullet: en.bu.Anchor;
+    public var anchorAmmo: en.bu.AnchorAmmo;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var teleJump: tool.skill.mobSkill.TeleJump;
+    public var oneWayToDestroyCandidates: Array<Dynamic>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): AnchorGuy {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.AnchorGuy {
+        throw "stub: create not decompiled";
+    }
 
-  function get_anchorPointX(): Float {}
+    public function get_anchorPointX(): Float {
+        throw "stub: get_anchorPointX not decompiled";
+    }
 
-  function get_anchorPointY(): Float {}
+    public function get_anchorPointY(): Float {
+        throw "stub: get_anchorPointY not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function isStun(): Bool {}
+    public function isStun(): Bool {
+        throw "stub: isStun not decompiled";
+    }
 
-  function isFalling(): Bool {}
+    public function isFalling(): Bool {
+        throw "stub: isFalling not decompiled";
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function getAnchorPosition(): Dynamic {}
+    public function getAnchorPosition(): Dynamic {
+        throw "stub: getAnchorPosition not decompiled";
+    }
 
-  function isAnchorMode(): Bool {}
+    public function isAnchorMode(): Bool {
+        throw "stub: isAnchorMode not decompiled";
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function canRunToAnchorAmmo(): Bool {}
+    public function canRunToAnchorAmmo(): Bool {
+        throw "stub: canRunToAnchorAmmo not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onLeaveMap() {}
+    public function onLeaveMap(): Void {
+    }
 
-  function outOfGameUpdate() {}
+    public function outOfGameUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

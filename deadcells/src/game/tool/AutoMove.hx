@@ -1,37 +1,58 @@
 package tool;
+
 class AutoMove {
-  var speed: Float;
-  var parent: Entity;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var speed: Float;
+    public var parent: Entity;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  function __constructor__(entity: Entity) {}
+    public function new(arg0: Entity) {
+    }
 
-  function goto(cx: Int, cy: Int): Bool {}
+    public function goto(arg0: Int, arg1: Int): Bool {
+        throw "stub: goto not decompiled";
+    }
 
-  function gotoPixel(x: Float, y: Float, linearSpeed: Dynamic): Bool {}
+    public function gotoPixel(arg0: Float, arg1: Float, arg2: Ref): Bool {
+        throw "stub: gotoPixel not decompiled";
+    }
 
-  function stop() {}
+    public function stop(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function canGoto(cx: Int, cy: Int): Bool {}
+    public function canGoto(arg0: Int, arg1: Int): Bool {
+        throw "stub: canGoto not decompiled";
+    }
 
-  function hasTarget(): Bool {}
+    public function hasTarget(): Bool {
+        throw "stub: hasTarget not decompiled";
+    }
 
-  function getNextPoint(): tool.CPoint.CPoint {}
+    public function getNextPoint(): tool.CPoint {
+        throw "stub: getNextPoint not decompiled";
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

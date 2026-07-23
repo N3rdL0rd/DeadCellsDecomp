@@ -1,9 +1,12 @@
 package tool.weap.bow;
+
 class MagicBow extends tool.weap.BaseBow {
-  var hitEntityIds: hl.types.ArrayBytes<Int>;
+    public var hitEntityIds: Array<Int>;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 }
-

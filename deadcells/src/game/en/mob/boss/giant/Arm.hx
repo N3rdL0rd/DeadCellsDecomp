@@ -1,36 +1,44 @@
 package en.mob.boss.giant;
+
 class Arm {
-  var upper: libs.heaps.slib.HSprite.HSprite;
-  var lower: libs.heaps.slib.HSprite.HSprite;
-  var bracelet: libs.heaps.slib.HSprite.HSprite;
-  var angleLeft: Float;
-  var angleMid: Float;
-  var angleRight: Float;
-  var giant: en.mob.boss.Giant.Giant;
-  var hand: en.mob.boss.giant.HandBase.HandBase;
-  var time: Float;
-  var upperGlow: libs.heaps.slib.HSprite.HSprite;
-  var lowerGlow: libs.heaps.slib.HSprite.HSprite;
-  var braceletGlow: libs.heaps.slib.HSprite.HSprite;
-  var upperMaskShader: hxsl.Macros.Macros;
-  var lowerMaskShader: hxsl.Macros.Macros;
-  var braceletMaskShader: hxsl.Macros.Macros;
-  var glowShader: shader.GlowKey.GlowKey;
-  var impulseDir: Int;
-  static var UPPER_LEN: Int;
+    public static var UPPER_LEN: Int;
+    public var upper: libs.heaps.slib.HSprite;
+    public var lower: libs.heaps.slib.HSprite;
+    public var bracelet: libs.heaps.slib.HSprite;
+    public var angleLeft: Float;
+    public var angleMid: Float;
+    public var angleRight: Float;
+    public var giant: en.mob.boss.Giant;
+    public var hand: en.mob.boss.giant.HandBase;
+    public var time: Float;
+    public var upperGlow: libs.heaps.slib.HSprite;
+    public var lowerGlow: libs.heaps.slib.HSprite;
+    public var braceletGlow: libs.heaps.slib.HSprite;
+    public var upperMaskShader: h3d.shader.AlphaMap;
+    public var lowerMaskShader: h3d.shader.AlphaMap;
+    public var braceletMaskShader: h3d.shader.AlphaMap;
+    public var glowShader: shader.GlowKey;
+    public var impulseDir: Int;
 
-  function __constructor__(giant: en.mob.boss.Giant.Giant, hand: en.mob.boss.giant.HandBase.HandBase) {}
+    public function new(arg0: en.mob.boss.Giant, arg1: en.mob.boss.giant.HandBase) {
+    }
 
-  function setVisibility(v: Bool): Bool {}
+    public function setVisibility(arg0: Bool): Bool {
+        throw "stub: setVisibility not decompiled";
+    }
 
-  function show() {}
+    public function show(): Void {
+    }
 
-  function hide() {}
+    public function hide(): Void {
+    }
 
-  function setGlowAlpha(v: Float, dir: Int) {}
+    public function setGlowAlpha(arg0: Float, arg1: Int): Void {
+    }
 
-  function postUpdate(dt: Float) {}
+    public function postUpdate(arg0: Float): Void {
+    }
 
-  function addToBody(body: h2d.Layers.Layers, isBehind: Dynamic) {}
+    public function addToBody(arg0: h2d.Layers, arg1: Ref): Void {
+    }
 }
-

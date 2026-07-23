@@ -1,28 +1,42 @@
 package tool.weap;
+
 class AlucardShield extends tool.weap.BaseShield {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    }
 
-  function initSkill(idx: Int, chainInf: Dynamic, s: tool.Weapon.Weapon) {}
+    public function parryForS(arg0: Float): Void {
+    }
 
-  function parryForS(durationS: Float) {}
+    public function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function dynOnFxFrame(cinf: Dynamic) {}
+    public function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public function isLastCycle(): Bool {
+        throw "stub: isLastCycle not decompiled";
+    }
 
-  function isLastCycle(): Bool {}
+    public override function onShieldEndParry(): Void {
+    }
 
-  function onShieldEndParry() {}
+    public override function onShieldBlock(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function onShieldBlock(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public override function counterGrenade(arg0: en.Grenade): Void {
+    }
 
-  function counterGrenade(source: en.Grenade.Grenade) {}
+    public function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
-
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

@@ -1,8 +1,10 @@
 package ui;
+
 class Pause extends ui.Process {
+    public function new() {
+        super();
+    }
 
-  function __constructor__() {}
-
-  function onLeavingOptionsMenu() {}
+    public function onLeavingOptionsMenu(): Void {
+    }
 }
-

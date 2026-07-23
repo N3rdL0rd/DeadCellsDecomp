@@ -1,52 +1,77 @@
 package en.inter;
+
 class ZDoor extends en.Interactive {
-  var destMap: level.LevelMap.LevelMap;
-  var linkId: Int;
-  var arrow: libs.heaps.slib.HSprite.HSprite;
-  var clueIcon: libs.heaps.slib.HSprite.HSprite;
-  var defLight: tool.EntityLight.EntityLight;
-  var backLayer: Int;
-  var lockZDoor: Bool;
-  var visited: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var destMap: level.LevelMap;
+    public var linkId: Int;
+    public var arrow: libs.heaps.slib.HSprite;
+    public var clueIcon: libs.heaps.slib.HSprite;
+    public var defLight: tool.EntityLight;
+    public var backLayer: Int;
+    public var lockZDoor: Bool;
+    public var visited: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, destMap: level.LevelMap.LevelMap, linkId: Int, lockZDoor: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Ref) {
+        super();
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function minimapTracking() {}
+    public function minimapTracking(): Void {
+    }
 
-  function getClueIconId(forMap: Bool): String {}
+    public function getClueIconId(arg0: Bool): String {
+        throw "stub: getClueIconId not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onApplyOptions() {}
+    public function onApplyOptions(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function enter(h: en.Hero.Hero) {}
+    public function enter(arg0: en.Hero): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

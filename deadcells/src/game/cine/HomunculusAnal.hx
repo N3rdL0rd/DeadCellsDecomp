@@ -1,25 +1,32 @@
 package cine;
+
 class HomunculusAnal extends GameCinematic {
-  var hom: en.Homunculus.Homunculus;
-  var body: en.UsableBody.UsableBody;
-  var hero: en.Hero.Hero;
-  var baseColor: Int;
-  var furyColor: Int;
-  var hasSpawn: Bool;
-  var itemDrop: Bool;
-  var skin: String;
-  var pipePos: tool.FPoint.FPoint;
+    public var hom: en.Homunculus;
+    public var body: en.UsableBody;
+    public var hero: en.Hero;
+    public var baseColor: Int;
+    public var furyColor: Int;
+    public var hasSpawn: Bool;
+    public var itemDrop: Bool;
+    public var skin: String;
+    public var pipePos: tool.FPoint;
 
-  function __constructor__(hom: en.Homunculus.Homunculus, b: en.UsableBody.UsableBody, fromExistingBody: Bool, skin: String) {}
+    public function new(arg0: en.Homunculus, arg1: en.UsableBody, arg2: Bool, arg3: String) {
+        super();
+    }
 
-  function activateSwitchBossRune() {}
+    public function activateSwitchBossRune(): Void {
+    }
 
-  function spawnHero() {}
+    public function spawnHero(): Void {
+    }
 
-  function headCharge(r: Float) {}
+    public function headCharge(arg0: Float): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

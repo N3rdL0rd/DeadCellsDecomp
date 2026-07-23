@@ -1,41 +1,56 @@
 package tool.skill;
-class SkillFx extends tool.skill.Skill.SkillEvent {
-  var id: String;
-  var allocMode: Dynamic;
-  var innerColor: Dynamic;
-  var outerColor: Dynamic;
-  var offsetX: Float;
-  var offsetY: Float;
-  var scaleX: Float;
-  var scaleY: Float;
-  var speed: Float;
-  var alpha: Float;
-  var loopDur: Float;
-  var loopWhileTrigger: Bool;
-  var loopCond: Dynamic;
-  var particle: libs.heaps.HParticle.HParticle;
-  var dir: Int;
 
-  function playFx() {}
+class SkillFx extends tool.skill.SkillEvent {
+    public var id: String;
+    public var allocMode: Dynamic;
+    public var innerColor: Dynamic;
+    public var outerColor: Dynamic;
+    public var offsetX: Float;
+    public var offsetY: Float;
+    public var scaleX: Float;
+    public var scaleY: Float;
+    public var speed: Float;
+    public var alpha: Float;
+    public var loopDur: Float;
+    public var loopWhileTrigger: Bool;
+    public var loopCond: Dynamic;
+    public var particle: libs.heaps.HParticle;
+    public var dir: Int;
 
-  function __constructor__(id: String, skill: tool.skill.Skill.Skill, startFrame: Int, customId: String, trigger: Dynamic, minMaxRatio: Dynamic) {}
+    public function new(arg0: String, arg1: tool.skill.Skill, arg2: Int, arg3: String, arg4: Dynamic, arg5: Dynamic) {
+        super();
+    }
 
-  function get_x(): Float {}
+    public function get_x(): Float {
+        throw "stub: get_x not decompiled";
+    }
 
-  function get_y(): Float {}
+    public function get_y(): Float {
+        throw "stub: get_y not decompiled";
+    }
 
-  function setVisual(allocMode: Dynamic, innerColor: Dynamic, outerColor: Dynamic, alpha: Dynamic) {}
+    public function setVisual(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic, arg3: Ref): Void {
+    }
 
-  function setTransform(offset: Dynamic, scale: Dynamic) {}
+    public function setTransform(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function setPlayParameters(speed: Dynamic, loopDur: Dynamic, loopWhileTrigger: Dynamic) {}
+    public function setPlayParameters(arg0: Ref, arg1: Ref, arg2: Ref): Void {
+    }
 
-  function tryTrigger(overrideDir: Dynamic, ratio: Dynamic): Bool {}
+    public override function tryTrigger(arg0: Dynamic, arg1: Dynamic): Bool {
+        throw "stub: tryTrigger not decompiled";
+    }
 
-  function trigger(overrideDir: Dynamic) {}
+    public override function trigger(arg0: Dynamic): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
+
+    public function playFx(): Void {
+    }
 }
-

@@ -1,26 +1,39 @@
 package pow;
+
 class Heal extends Power {
-  var remain: Int;
-  var hps: Float;
-  var tick: Float;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var remain: Int;
+    public var hps: Float;
+    public var tick: Float;
 
-  function onFinish() {}
+    public function new(arg0: Entity, arg1: Int, arg2: Dynamic, arg3: Dynamic) {
+        super();
+    }
 
-  function __constructor__(owner: Entity, totalHeal: Int, durationS: Dynamic, tick: Dynamic) {}
+    public override function shouldChangeLevelWithHero(): Bool {
+        throw "stub: shouldChangeLevelWithHero not decompiled";
+    }
 
-  function shouldChangeLevelWithHero(): Bool {}
+    public override function onEnd(): Void {
+    }
 
-  function onEnd() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onFinish(): Void {
+    }
 }
-

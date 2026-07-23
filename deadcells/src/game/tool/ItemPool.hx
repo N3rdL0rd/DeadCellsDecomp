@@ -1,21 +1,33 @@
 package tool;
+
 class ItemPool {
-  var cursor: Int;
-  var all: hl.types.ArrayObj<Dynamic>;
-  var rseed: libs.Rand.Rand;
+    public var cursor: Int;
+    public var all: Array<Dynamic>;
+    public var rseed: libs.Rand;
 
-  function __constructor__(a: hl.types.ArrayObj<Dynamic>, rseed: libs.Rand.Rand) {}
+    public function new(arg0: Array<Dynamic>, arg1: libs.Rand) {
+    }
 
-  function next(): tool.InventItem.InventItem {}
+    public function next(): tool.InventItem {
+        throw "stub: next not decompiled";
+    }
 
-  function draw(): tool.InventItem.InventItem {}
+    public function draw(): tool.InventItem {
+        throw "stub: draw not decompiled";
+    }
 
-  function drawGroup(g: Int): tool.InventItem.InventItem {}
+    public function drawGroup(arg0: Int): tool.InventItem {
+        throw "stub: drawGroup not decompiled";
+    }
 
-  function drawCond(cond: Dynamic): tool.InventItem.InventItem {}
+    public function drawCond(arg0: Dynamic): tool.InventItem {
+        throw "stub: drawCond not decompiled";
+    }
 
-  function countCond(cond: Dynamic): Int {}
+    public function countCond(arg0: Dynamic): Int {
+        throw "stub: countCond not decompiled";
+    }
 
-  function shuffle() {}
+    public function shuffle(): Void {
+    }
 }
-

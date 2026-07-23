@@ -1,50 +1,68 @@
 package ui;
-class Answering extends ui.Process {
-  var question: ui.Saying.Saying;
-  var flow: h2d.Flow.Flow;
-  var lBox: ui.Answering.Answering;
-  var rBox: ui.Answering.Answering;
-  var sel: ui.Answering.Answering;
-  static var CURRENT: Answering;
-
-  function __constructor__(question: ui.Saying.Saying, strYes: String, strNo: String, onYes: Dynamic, onNo: Dynamic) {}
-
-  function onResize() {}
-
-  function postUpdate() {}
-
-  function selectYes() {}
-
-  function selectNo() {}
-
-  function hasSelection(): Bool {}
-
-  function validate(): Bool {}
-
-  function onDispose() {}
-}
 
 class AnswerBox extends ui.Process {
-  var callback: Dynamic;
-  var tf: ui.Text.Text;
-  var box: h2d.Object.Object;
-  var offColor: Int;
-  var selColor: Int;
-  var bgColor: Int;
-  var padH: Int;
-  var padV: Int;
-  var arrow: libs.heaps.slib.HSprite.HSprite;
+    public var callback: Dynamic;
+    public var tf: ui.Text;
+    public var box: h2d.Object;
+    public var offColor: Int;
+    public var selColor: Int;
+    public var bgColor: Int;
+    public var padH: Int;
+    public var padV: Int;
+    public var arrow: libs.heaps.slib.HSprite;
 
-  function __constructor__(parent: ui.Answering.Answering, str: String, cb: Dynamic) {}
+    public function new(arg0: ui.Answering, arg1: String, arg2: Dynamic) {
+        super();
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function refreshBg() {}
+    public function refreshBg(): Void {
+    }
 
-  function select() {}
+    public function select(): Void {
+    }
 
-  function unselect() {}
+    public function unselect(): Void {
+    }
 }
 
+class Answering extends ui.Process {
+    public static var CURRENT: ui.Answering;
+    public var question: ui.Saying;
+    public var flow: h2d.Flow;
+    public var lBox: ui.AnswerBox;
+    public var rBox: ui.AnswerBox;
+    public var sel: ui.AnswerBox;
+
+    public function new(arg0: ui.Saying, arg1: String, arg2: String, arg3: Dynamic, arg4: Dynamic) {
+        super();
+    }
+
+    public override function onResize(): Void {
+    }
+
+    public function postUpdate(): Void {
+    }
+
+    public function selectYes(): Void {
+    }
+
+    public function selectNo(): Void {
+    }
+
+    public function hasSelection(): Bool {
+        throw "stub: hasSelection not decompiled";
+    }
+
+    public function validate(): Bool {
+        throw "stub: validate not decompiled";
+    }
+
+    public override function onDispose(): Void {
+    }
+}

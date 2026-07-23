@@ -1,12 +1,16 @@
 package cine;
+
 class PurpleTeleport extends GameCinematic {
-  var mask: h2d.Bitmap.Bitmap;
-  var container: Dynamic;
+    public var mask: h2d.Bitmap;
+    public var container: light.TopFx;
 
-  function __constructor__(hero: en.Hero.Hero, from: Entity, onComplete: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: Entity, arg2: Dynamic) {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

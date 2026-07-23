@@ -1,35 +1,53 @@
 package pow;
+
 class DamageAura extends Power {
-  var parts: hl.types.ArrayObj<Dynamic>;
-  var ang: Float;
-  var distScale: Float;
-  var range: Float;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var parts: Array<Dynamic>;
+    public var ang: Float;
+    public var distScale: Float;
+    public var range: Float;
 
-  function __constructor__(owner: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_hudSkill(): ui.hud.Skill.Skill {}
+    public function get_hudSkill(): ui.hud.Skill {
+        throw "stub: get_hudSkill not decompiled";
+    }
 
-  function shouldChangeLevelWithHero(): Bool {}
+    public override function shouldChangeLevelWithHero(): Bool {
+        throw "stub: shouldChangeLevelWithHero not decompiled";
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onHeroLevelChanged(oldLevel: pr.Level.Level) {}
+    public override function onHeroLevelChanged(arg0: pr.Level): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

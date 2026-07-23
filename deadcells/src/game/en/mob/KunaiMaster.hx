@@ -1,53 +1,83 @@
 package en.mob;
+
 class KunaiMaster extends en.Mob {
-  var swapSkill: tool.skill.OldSkill.OldSkill;
-  var fleeRange: Int;
-  var fleeSkill: tool.skill.OldSkill.OldSkill;
-  var count: Int;
-  var flewOnce: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var swapSkill: tool.skill.OldSkill;
+    public var fleeRange: Int;
+    public var fleeSkill: tool.skill.OldSkill;
+    public var count: Int;
+    public var flewOnce: Bool;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): KunaiMaster {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.KunaiMaster {
+        throw "stub: create not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function onBreach(attackData: tool.atk.AttackData.AttackData) {}
+    public override function onBreach(arg0: tool.atk.AttackData): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function cancelChain() {}
+    public function cancelChain(): Void {
+    }
 
-  function getAnimIdFromShootAng(a: Float): String {}
+    public function getAnimIdFromShootAng(arg0: Float): String {
+        throw "stub: getAnimIdFromShootAng not decompiled";
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function getClampedShootAng(e: Entity, baseAng: Float, maxAngDelta: Float): Float {}
+    public function getClampedShootAng(arg0: Entity, arg1: Float, arg2: Float): Float {
+        throw "stub: getClampedShootAng not decompiled";
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function shoot(inf: Dynamic, ang: Float) {}
+    public function shoot(arg0: Dynamic, arg1: Float): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

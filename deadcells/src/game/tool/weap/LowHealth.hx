@@ -1,14 +1,21 @@
 package tool.weap;
+
 class LowHealth extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function checkCondition(): Bool {
+        throw "stub: checkCondition not decompiled";
+    }
 
-  function checkCondition(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
-
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

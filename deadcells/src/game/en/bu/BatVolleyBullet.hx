@@ -1,54 +1,79 @@
 package en.bu;
+
 class BatVolleyBullet extends en.Bullet {
-  var hasHit: Bool;
-  var itemInf: Dynamic;
-  var theta: Float;
-  var amplitude: Float;
-  var waveFrequency: Float;
-  var bigBrains: Bool;
-  var hitWallCount: Int;
-  var alphaTween: libs.misc.Tweenie.Tweenie;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var hasHit: Bool;
+    public var itemInf: Dynamic;
+    public var theta: Float;
+    public var amplitude: Float;
+    public var waveFrequency: Float;
+    public var bigBrains: Bool;
+    public var hitWallCount: Int;
+    public var alphaTween: libs.misc.Tween;
 
-  function onCountered() {}
+    public function new(arg0: en.Hero, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Ref) {
+        super();
+    }
 
-  function onBlock(byEntity: Bool) {}
+    public function init(): Void {
+    }
 
-  function __constructor__(from: en.Hero.Hero, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, dir: Int, bigBrains: Dynamic) {}
+    public override function initGfx(): Void {
+    }
 
-  function init() {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function initGfx() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public function destroy(): Void {
+    }
 
-  function postUpdate() {}
+    public override function setSpriteTransform(): Void {
+    }
 
-  function destroy() {}
+    public override function blockOnCollision(): Void {
+    }
 
-  function setSpriteTransform() {}
+    public override function onStep(): Void {
+    }
 
-  function blockOnCollision() {}
+    public override function onPierce(): Void {
+    }
 
-  function onStep() {}
+    public override function getTailColor(): Int {
+        throw "stub: getTailColor not decompiled";
+    }
 
-  function onPierce() {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getTailColor(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserializeInit(): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserializeInit() {}
+    public function onCountered(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

@@ -1,102 +1,157 @@
 package en.mob;
+
 class S_LilStaphy extends en.pet.PetMob {
-  var tJumpTarget: Entity;
-  var paws: hl.types.ArrayObj<Dynamic>;
-  var attackFxSpriteBatchGroup: libs.heaps.SpriteBatchGroup.SpriteBatchGroup;
-  var t: Float;
-  var superbite1: tool.skill.OldSkill.OldSkill;
-  var superbite2: tool.skill.OldSkill.OldSkill;
-  var superbite1Area: tool.Area.Area;
-  var superbite2Area: tool.Area.Area;
-  var superbite: Bool;
-  var wasGrouwnUpBefore: Bool;
-  var bodyAnimatedY: Bool;
-  var animPositionY: Float;
-  var bodyChargePositionY: Float;
-  var bodyEndPositionY: Float;
-  var grownUpHeight: Float;
-  var winkingCD: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var tJumpTarget: Entity;
+    public var paws: Array<Dynamic>;
+    public var attackFxSpriteBatchGroup: libs.heaps.SpriteBatchGroup;
+    public var t: Float;
+    public var superbite1: tool.skill.OldSkill;
+    public var superbite2: tool.skill.OldSkill;
+    public var superbite1Area: tool.Area;
+    public var superbite2Area: tool.Area;
+    public var superbite: Bool;
+    public var wasGrouwnUpBefore: Bool;
+    public var bodyAnimatedY: Bool;
+    public var animPositionY: Float;
+    public var bodyChargePositionY: Float;
+    public var bodyEndPositionY: Float;
+    public var grownUpHeight: Float;
+    public var winkingCD: Float;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, maxDuplicates: Dynamic): S_LilStaphy {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem, arg7: Ref) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, parent: Entity, item: tool.InventItem.InventItem, maxDuplicates: Dynamic) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Entity, arg6: tool.InventItem, arg7: Ref): en.mob.S_LilStaphy {
+        throw "stub: create not decompiled";
+    }
 
-  function get_mainItem(): tool.InventItem.InventItem {}
+    public function get_mainItem(): tool.InventItem {
+        throw "stub: get_mainItem not decompiled";
+    }
 
-  function get_evoCounterItem(): tool.InventItem.InventItem {}
+    public function get_evoCounterItem(): tool.InventItem {
+        throw "stub: get_evoCounterItem not decompiled";
+    }
 
-  function get_isGrownUp(): Bool {}
+    public function get_isGrownUp(): Bool {
+        throw "stub: get_isGrownUp not decompiled";
+    }
 
-  function get_targetSprPosX(): Float {}
+    public function get_targetSprPosX(): Float {
+        throw "stub: get_targetSprPosX not decompiled";
+    }
 
-  function get_targetSprPosY(): Float {}
+    public function get_targetSprPosY(): Float {
+        throw "stub: get_targetSprPosY not decompiled";
+    }
 
-  function getDepopSound(): hxd.res.Sound.Sound {}
+    public override function getDepopSound(): hxd.res.Sound {
+        throw "stub: getDepopSound not decompiled";
+    }
 
-  function getUseSound(): hxd.res.Sound.Sound {}
+    public override function getUseSound(): hxd.res.Sound {
+        throw "stub: getUseSound not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initPaws(withClaw: Bool) {}
+    public function initPaws(arg0: Bool): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function getJumpingSpot(): Dynamic {}
+    public override function getJumpingSpot(): Dynamic {
+        throw "stub: getJumpingSpot not decompiled";
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function setPawsForJumping() {}
+    public function setPawsForJumping(): Void {
+    }
 
-  function setPawsForWalking() {}
+    public function setPawsForWalking(): Void {
+    }
 
-  function canBuff(): Bool {}
+    public override function canBuff(): Bool {
+        throw "stub: canBuff not decompiled";
+    }
 
-  function onBuff() {}
+    public override function onBuff(): Void {
+    }
 
-  function onTeleJumpEnd() {}
+    public override function onTeleJumpEnd(): Void {
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function followParent() {}
+    public function followParent(): Void {
+    }
 
-  function tpTo(target: Entity) {}
+    public override function tpTo(arg0: Entity): Void {
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function updatePaws() {}
+    public function updatePaws(): Void {
+    }
 
-  function updateWinking() {}
+    public function updateWinking(): Void {
+    }
 
-  function onHeroTeleport() {}
+    public override function onHeroTeleport(): Void {
+    }
 
-  function triggerEvolution() {}
+    public function triggerEvolution(): Void {
+    }
 
-  function playCustomAnimFx(id: String, inf: Dynamic) {}
+    public function playCustomAnimFx(arg0: String, arg1: Dynamic): Void {
+    }
 
-  function noPetReaction() {}
+    public override function noPetReaction(): Void {
+    }
 
-  function petReaction() {}
+    public override function petReaction(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

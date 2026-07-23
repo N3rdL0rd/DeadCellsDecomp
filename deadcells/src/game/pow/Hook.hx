@@ -1,41 +1,63 @@
 package pow;
+
 class Hook extends Power {
-  var chains: hl.types.ArrayObj<Dynamic>;
-  var hookedEntity: Entity;
-  var hasReachedSomething: Bool;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var chains: Array<Dynamic>;
+    public var hookedEntity: Entity;
+    public var hasReachedSomething: Bool;
 
-  function __constructor__(owner: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function launchChain(dir: Int) {}
+    public function launchChain(arg0: Int): Void {
+    }
 
-  function destroyChain(chain: tool.HookChain.HookChain) {}
+    public function destroyChain(arg0: tool.HookChain): Void {
+    }
 
-  function listOfHookableEntities(): hl.types.ArrayObj<Dynamic> {}
+    public function listOfHookableEntities(): Array<Dynamic> {
+        throw "stub: listOfHookableEntities not decompiled";
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class HookSource extends Entity {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  function __constructor__(source: Entity) {}
+    public function new(arg0: Entity) {
+        super();
+    }
 
-  function canBeHit(): Bool {}
+    public override function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

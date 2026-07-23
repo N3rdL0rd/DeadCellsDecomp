@@ -1,71 +1,103 @@
 package libs.misc;
-class Tweenie {
-  var tlist: hl.types.ArrayObj<Dynamic>;
-  var baseFps: Float;
-  static var DEFAULT_DURATION: Float;
-
-  function __constructor__(fps: Float) {}
-
-  function terminate_(getter: Dynamic, setter: Dynamic, withCallbacks: Bool) {}
-
-  function create_(getter: Dynamic, setter: Dynamic, from: Dynamic, to: Float, tp: Dynamic, duration_ms: Dynamic, allowDuplicates: Dynamic): libs.misc.Tweenie.Tweenie {}
-
-  function destroy() {}
-
-  function completeAll() {}
-
-  function update(dt: Dynamic) {}
-}
 
 class Tween {
-  var tw: Tweenie;
-  var done: Bool;
-  var paused: Bool;
-  var getter: Dynamic;
-  var setter: Dynamic;
-  var n: Float;
-  var ln: Float;
-  var speed: Float;
-  var from: Float;
-  var to: Float;
-  var type: Dynamic;
-  var plays: Int;
-  var backAndForth: Bool;
-  var pixelSnap: Bool;
-  var delay: Int;
+    public var tw: libs.misc.Tweenie;
+    public var done: Bool;
+    public var paused: Bool;
+    public var getter: Dynamic;
+    public var setter: Dynamic;
+    public var n: Float;
+    public var ln: Float;
+    public var speed: Float;
+    public var from: Float;
+    public var to: Float;
+    public var type: libs.misc.TType;
+    public var plays: Int;
+    public var backAndForth: Bool;
+    public var pixelSnap: Bool;
+    public var delay: Int;
 
-  function onStart() {}
+    public function new(arg0: libs.misc.Tweenie) {
+    }
 
-  function onEnd() {}
+    public function set_type(arg0: libs.misc.TType): libs.misc.TType {
+        throw "stub: set_type not decompiled";
+    }
 
-  function onUpdateT(t: Float) {}
+    public function end(arg0: Dynamic): libs.misc.Tween {
+        throw "stub: end not decompiled";
+    }
 
-  function onUpdate() {}
+    public function start(arg0: Dynamic): libs.misc.Tween {
+        throw "stub: start not decompiled";
+    }
 
-  function interpolate(v: Float): Float {}
+    public function update(arg0: Dynamic): libs.misc.Tween {
+        throw "stub: update not decompiled";
+    }
 
-  function chainedEvent() {}
+    public function updateT(arg0: Dynamic): libs.misc.Tween {
+        throw "stub: updateT not decompiled";
+    }
 
-  function __constructor__(tw: Tweenie) {}
+    public function delayMs(arg0: Float): Void {
+    }
 
-  function set_type(t: Dynamic): Dynamic {}
+    public function chainMs(arg0: Float, arg1: libs.misc.TType, arg2: Dynamic): libs.misc.Tween {
+        throw "stub: chainMs not decompiled";
+    }
 
-  function end(cb: Dynamic): Tween {}
+    public function endWithoutCallbacks(): Void {
+    }
 
-  function start(cb: Dynamic): Tween {}
+    public function complete(arg0: Ref): Void {
+    }
 
-  function update(cb: Dynamic): Tween {}
+    public function internalUpdate(arg0: Float): Bool {
+        throw "stub: internalUpdate not decompiled";
+    }
 
-  function updateT(cb: Dynamic): Tween {}
+    public function interpolate(arg0: Float): Float {
+        throw "stub: interpolate not decompiled";
+    }
 
-  function delayMs(d: Float) {}
+    public function chainedEvent(): Void {
+    }
 
-  function chainMs(to: Float, ease: Dynamic, duration_ms: Dynamic): Tween {}
+    public function onStart(): Void {
+    }
 
-  function endWithoutCallbacks() {}
+    public function onEnd(): Void {
+    }
 
-  function complete(fl_allowLoop: Dynamic) {}
+    public function onUpdateT(arg0: Float): Void {
+    }
 
-  function internalUpdate(dt: Float): Bool {}
+    public function onUpdate(): Void {
+    }
 }
 
+class Tweenie {
+    public static var DEFAULT_DURATION: Float;
+    public var tlist: Array<Dynamic>;
+    public var baseFps: Float;
+
+    public function new(arg0: Float) {
+    }
+
+    public function terminate_(arg0: Dynamic, arg1: Dynamic, arg2: Bool): Void {
+    }
+
+    public function create_(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic, arg3: Float, arg4: libs.misc.TType, arg5: Dynamic, arg6: Ref): libs.misc.Tween {
+        throw "stub: create_ not decompiled";
+    }
+
+    public function destroy(): Void {
+    }
+
+    public function completeAll(): Void {
+    }
+
+    public function update(arg0: Ref): Void {
+    }
+}

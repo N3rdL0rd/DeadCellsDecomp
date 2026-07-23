@@ -1,23 +1,34 @@
 package tool.weap;
+
 class GoldDigger extends tool.Weapon {
-  var evolved: Bool;
+    public var evolved: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem, _evolved: Bool) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem, arg2: Bool) {
+        super();
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function drop(amount: Int, from: Entity) {}
+    public function drop(arg0: Int, arg1: Entity): Void {
+    }
 
-  function dropGold(goldAmount: Int, dropNumber: Int, from: Entity) {}
+    public function dropGold(arg0: Int, arg1: Int, arg2: Entity): Void {
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function replaceItem() {}
+    public function replaceItem(): Void {
+    }
 
-  function dynOnFxFrame(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 }
-

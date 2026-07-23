@@ -1,22 +1,29 @@
 package tool.log;
+
 class BufferedFileOutput {
-  var BUFFER_SIZE: Int;
-  var logDir: String;
-  var logPrefix: String;
-  var logFile: String;
-  var buffer: tool.RingBuffer.RingBuffer;
-  var <none>: Dynamic;
+    public var BUFFER_SIZE: Int;
+    public var logDir: String;
+    public var logPrefix: String;
+    public var logFile: String;
+    public var buffer: tool.RingBuffer;
+    public var : Dynamic;
 
-  function __constructor__(data: Dynamic) {}
+    public function new(arg0: Dynamic) {
+    }
 
-  function initLogFile() {}
+    public function initLogFile(): Void {
+    }
 
-  function receiveLog(logEntry: Dynamic) {}
+    public function receiveLog(arg0: Dynamic): Void {
+    }
 
-  function saveLogs() {}
+    public function saveLogs(): Void {
+    }
 
-  function getLogs(): String {}
+    public function getLogs(): String {
+        throw "stub: getLogs not decompiled";
+    }
 
-  function onBufferFull() {}
+    public function onBufferFull(): Void {
+    }
 }
-

@@ -1,84 +1,134 @@
 package uicore;
+
 class UIElement {
-  var root: h2d.Object.Object;
-  var parent: UIElement;
-  var children: hl.types.ArrayObj<Dynamic>;
-  var selected: Bool;
-  var canHaveMouseInputs: Bool;
-  var interactiveComponent: uicore.InteractiveComponent.InteractiveComponent;
-  var highlighter: uicore.HighlighterComponent.HighlighterComponent;
-  var tw: libs.misc.Tweenie.Tweenie;
+    public var root: h2d.Object;
+    public var parent: uicore.UIElement;
+    public var children: Array<Dynamic>;
+    public var selected: Bool;
+    public var canHaveMouseInputs: Bool;
+    public var interactiveComponent: uicore.InteractiveComponent;
+    public var highlighter: uicore.HighlighterComponent;
+    public var tw: libs.misc.Tweenie;
 
-  function __constructor__(parent: UIElement) {}
+    public function new(arg0: uicore.UIElement) {
+    }
 
-  function initRoot() {}
+    public function initRoot(): Void {
+    }
 
-  function initHighlighter() {}
+    public function initHighlighter(): Void {
+    }
 
-  function initInteractive() {}
+    public function initInteractive(): Void {
+    }
 
-  function addChild(element: UIElement) {}
+    public function addChild(arg0: uicore.UIElement): Void {
+    }
 
-  function removeChild(element: UIElement) {}
+    public function removeChild(arg0: uicore.UIElement): Void {
+    }
 
-  function addChildRoot(element: UIElement) {}
+    public function addChildRoot(arg0: uicore.UIElement): Void {
+    }
 
-  function removeChildRoot(element: UIElement) {}
+    public function removeChildRoot(arg0: uicore.UIElement): Void {
+    }
 
-  function update(ftime: Float) {}
+    public function update(arg0: Float): Void {
+    }
 
-  function _canBeSelected(): Bool {}
+    public function _canBeSelected(): Bool {
+        throw "stub: _canBeSelected not decompiled";
+    }
 
-  function canBeSelected(): Bool {}
+    public function canBeSelected(): Bool {
+        throw "stub: canBeSelected not decompiled";
+    }
 
-  function trySelectChildren(mode: Dynamic): Bool {}
+    public function trySelectChildren(arg0: uicore.SelectionMode): Bool {
+        throw "stub: trySelectChildren not decompiled";
+    }
 
-  function select(mode: Dynamic): Bool {}
+    public function select(arg0: uicore.SelectionMode): Bool {
+        throw "stub: select not decompiled";
+    }
 
-  function unselect(): Bool {}
+    public function unselect(): Bool {
+        throw "stub: unselect not decompiled";
+    }
 
-  function onSelect(mode: Dynamic) {}
+    public function onSelect(arg0: uicore.SelectionMode): Void {
+    }
 
-  function onUnselect() {}
+    public function onUnselect(): Void {
+    }
 
-  function requestSelectionFromMouse(element: UIElement): Bool {}
+    public function requestSelectionFromMouse(arg0: uicore.UIElement): Bool {
+        throw "stub: requestSelectionFromMouse not decompiled";
+    }
 
-  function selectFromMouse(click: Bool): Bool {}
+    public function selectFromMouse(arg0: Bool): Bool {
+        throw "stub: selectFromMouse not decompiled";
+    }
 
-  function onChildSelected(child: UIElement, mode: Dynamic) {}
+    public function onChildSelected(arg0: uicore.UIElement, arg1: uicore.SelectionMode): Void {
+    }
 
-  function getSelectedChildRecursive(): UIElement {}
+    public function getSelectedChildRecursive(): uicore.UIElement {
+        throw "stub: getSelectedChildRecursive not decompiled";
+    }
 
-  function getScaledWidth(): Float {}
+    public function getScaledWidth(): Float {
+        throw "stub: getScaledWidth not decompiled";
+    }
 
-  function getScaledHeight(): Float {}
+    public function getScaledHeight(): Float {
+        throw "stub: getScaledHeight not decompiled";
+    }
 
-  function getMaxChildrenScaledWidth(): Float {}
+    public function getMaxChildrenScaledWidth(): Float {
+        throw "stub: getMaxChildrenScaledWidth not decompiled";
+    }
 
-  function getMaxChildrenScaledHeight(): Float {}
+    public function getMaxChildrenScaledHeight(): Float {
+        throw "stub: getMaxChildrenScaledHeight not decompiled";
+    }
 
-  function getRelativePos(element: UIElement): h2d.col.Point.Point {}
+    public function getRelativePos(arg0: uicore.UIElement): h2d.col.Point {
+        throw "stub: getRelativePos not decompiled";
+    }
 
-  function resizeChildren() {}
+    public function resizeChildren(): Void {
+    }
 
-  function resizeHighlighter() {}
+    public function resizeHighlighter(): Void {
+    }
 
-  function resizeInteractive() {}
+    public function resizeInteractive(): Void {
+    }
 
-  function resize() {}
+    public function resize(): Void {
+    }
 
-  function getMouseInteractiveBounds(): h2d.col.Bounds.Bounds {}
+    public function getMouseInteractiveBounds(): h2d.col.Bounds {
+        throw "stub: getMouseInteractiveBounds not decompiled";
+    }
 
-  function bindDefaultActions() {}
+    public function bindDefaultActions(): Void {
+    }
 
-  function registerActionCb(action: Int, cb: Dynamic) {}
+    public function registerActionCb(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function registerUnhandledActionCb(action: Int, cb: Dynamic, markHandledAfter: Bool) {}
+    public function registerUnhandledActionCb(arg0: Int, arg1: Dynamic, arg2: Bool): Void {
+    }
 
-  function handleAction(action: Int, actionStatus: Dynamic) {}
+    public function handleAction(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function handleKeyAction(action: Int, actionStatus: Dynamic) {}
+    public function handleKeyAction(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function handleMouseAction(action: Int, actionStatus: Dynamic) {}
+    public function handleMouseAction(arg0: Int, arg1: Dynamic): Void {
+    }
 }
-

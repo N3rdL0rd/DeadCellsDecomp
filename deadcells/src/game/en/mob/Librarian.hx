@@ -1,49 +1,73 @@
 package en.mob;
+
 class Librarian extends en.Mob {
-  var dest: tool.FPoint.FPoint;
-  var flyOverPf: level.Platform.Platform;
-  var isUsingLasers: Bool;
-  var curLaser: Int;
-  var laserBeamSkill: tool.skill.OldSkill.OldSkill;
-  var laserBeamArea: tool.Area.Area;
-  var fxLaserBeam: libs.heaps.slib.HSprite.HSprite;
-  var fxPentacle: libs.heaps.HParticle.HParticle;
-  var sbFx: libs.heaps.slib.HSprite.HSpriteBatch;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var dest: tool.FPoint;
+    public var flyOverPf: level.Platform;
+    public var isUsingLasers: Bool;
+    public var curLaser: Int;
+    public var laserBeamSkill: tool.skill.OldSkill;
+    public var laserBeamArea: tool.Area;
+    public var fxLaserBeam: libs.heaps.slib.HSprite;
+    public var fxPentacle: libs.heaps.HParticle;
+    public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Librarian {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Librarian {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function initMove() {}
+    public override function initMove(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function getGround(): Int {}
+    public function getGround(): Int {
+        throw "stub: getGround not decompiled";
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function onTargetReached() {}
+    public function onTargetReached(): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

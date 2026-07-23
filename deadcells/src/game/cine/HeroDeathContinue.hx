@@ -1,14 +1,19 @@
 package cine;
+
 class HeroDeathContinue extends cine.HeroDeathBase {
+    public function new(arg0: en.Hero, arg1: Bool) {
+        super();
+    }
 
-  function __constructor__(e: en.Hero.Hero, lostBody: Bool) {}
+    public function continueScreen(): Void {
+    }
 
-  function continueScreen() {}
+    public function continueGame(): Void {
+    }
 
-  function continueGame() {}
+    public function endGame(): Void {
+    }
 
-  function endGame() {}
-
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

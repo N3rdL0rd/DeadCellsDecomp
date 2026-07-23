@@ -1,51 +1,76 @@
 package en;
+
 class MIChallengeRoom extends Entity {
-  var hero: en.Hero.Hero;
-  var respawnSpot: tool.CPoint.CPoint;
-  var active: Bool;
-  var retryCount: Int;
-  var mainDoor: en.inter.door.BossDoor.BossDoor;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var hero: en.Hero;
+    public var respawnSpot: tool.CPoint;
+    public var active: Bool;
+    public var retryCount: Int;
+    public var mainDoor: en.inter.door.BossDoor;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, hero: en.Hero.Hero) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.Hero) {
+        super();
+    }
 
-  function canBeHit(): Bool {}
+    public override function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function getRespawnSpot() {}
+    public function getRespawnSpot(): Void {
+    }
 
-  function startChallenge() {}
+    public function startChallenge(): Void {
+    }
 
-  function populateChest() {}
+    public function populateChest(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function lockHeroInventory() {}
+    public function lockHeroInventory(): Void {
+    }
 
-  function unlockHeroInventory() {}
+    public function unlockHeroInventory(): Void {
+    }
 
-  function refreshHeroInventoryHud(isInventoryAvailable: Bool) {}
+    public function refreshHeroInventoryHud(arg0: Bool): Void {
+    }
 
-  function closeDoor() {}
+    public function closeDoor(): Void {
+    }
 
-  function openDoor() {}
+    public function openDoor(): Void {
+    }
 
-  function tpFeedback(from: tool.FPoint.FPoint) {}
+    public function tpFeedback(arg0: tool.FPoint): Void {
+    }
 
-  function endChallenge(win: Dynamic) {}
+    public function endChallenge(arg0: Ref): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

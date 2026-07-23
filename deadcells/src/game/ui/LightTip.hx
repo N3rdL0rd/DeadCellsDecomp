@@ -1,44 +1,60 @@
 package ui;
+
 class LightTip extends ui.Process {
-  var f: h2d.Flow.Flow;
-  var bmp: h2d.Bitmap.Bitmap;
-  var control: ui.ControlIcon.ControlIcon;
-  var controlLabels: hl.types.ArrayObj<Dynamic>;
-  var texts: hl.types.ArrayObj<Dynamic>;
-  var uWidText: Dynamic;
-  var e: Entity;
-  var level: pr.Level.Level;
-  var pos: Dynamic;
-  var offY: Float;
-  var distance: Float;
-  var visible: Bool;
-  var isPermanent: Bool;
-  static var ALL: hl.types.ArrayObj<Dynamic>;
+    public static var ALL: Array<Dynamic>;
+    public var f: h2d.Flow;
+    public var bmp: h2d.Bitmap;
+    public var control: ui.ControlIcon;
+    public var controlLabels: Array<Dynamic>;
+    public var texts: Array<Dynamic>;
+    public var uWidText: Dynamic;
+    public var e: Entity;
+    public var level: pr.Level;
+    public var pos: Direction;
+    public var offY: Float;
+    public var distance: Float;
+    public var visible: Bool;
+    public var isPermanent: Bool;
 
-  function __constructor__(e: Entity, pos: Dynamic) {}
+    public function new(arg0: Entity, arg1: Direction) {
+        super();
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function show() {}
+    public function show(): Void {
+    }
 
-  function setDelayS(t: Float) {}
+    public function setDelayS(arg0: Float): Void {
+    }
 
-  function hide() {}
+    public function hide(): Void {
+    }
 
-  function addControl(act: Int): h2d.Object.Object {}
+    public function addControl(arg0: Int): h2d.Object {
+        throw "stub: addControl not decompiled";
+    }
 
-  function addControlLabel(act: hl.types.ArrayBytes<Int>, str: String, longPress: Dynamic) {}
+    public function addControlLabel(arg0: Array<Int>, arg1: String, arg2: Dynamic): Void {
+    }
 
-  function addActivate(str: String, longPress: Dynamic, c: Dynamic) {}
+    public function addActivate(arg0: String, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function addText(str: String, c: Dynamic): ui.Text.Text {}
+    public function addText(arg0: String, arg1: Dynamic): ui.Text {
+        throw "stub: addText not decompiled";
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

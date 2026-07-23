@@ -1,55 +1,74 @@
 package ui;
+
 class StatsPanel extends ui.Process {
-  var controller: tool.Controller.Controller;
-  var fb: ui.FlowBox.FlowBox;
-  var title: ui.Text.Text;
-  var line: libs.heaps.slib.HSprite.HSprite;
-  var fStats: h2d.Flow.Flow;
-  var fContent: h2d.Flow.Flow;
-  var interactive: h2d.Interactive.Interactive;
-  var contentMask: h2d.Mask.Mask;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
-  var gb: libs.heaps.slib.HSprite.HSprite;
-  var gt: libs.heaps.slib.HSprite.HSprite;
-  var stats: hl.types.ArrayObj<Dynamic>;
-  var curStatId: Int;
-  var selection: libs.heaps.slib.HSprite.HSprite;
+    public var controller: tool.ControllerAccess;
+    public var fb: ui.FlowBox;
+    public var title: ui.Text;
+    public var line: libs.heaps.slib.HSprite;
+    public var fStats: h2d.Flow;
+    public var fContent: h2d.Flow;
+    public var interactive: h2d.Interactive;
+    public var contentMask: h2d.Mask;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
+    public var gb: libs.heaps.slib.HSprite;
+    public var gt: libs.heaps.slib.HSprite;
+    public var stats: Array<Dynamic>;
+    public var curStatId: Int;
+    public var selection: libs.heaps.slib.HSprite;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function showMetaUpgrade() {}
+    public function showMetaUpgrade(): Void {
+    }
 
-  function showWeapons() {}
+    public function showWeapons(): Void {
+    }
 
-  function showSkills() {}
+    public function showSkills(): Void {
+    }
 
-  function showPerks() {}
+    public function showPerks(): Void {
+    }
 
-  function showGeneral() {}
+    public function showGeneral(): Void {
+    }
 
-  function showExploration() {}
+    public function showExploration(): Void {
+    }
 
-  function showBiomes() {}
+    public function showBiomes(): Void {
+    }
 
-  function showMonster() {}
+    public function showMonster(): Void {
+    }
 
-  function showDeath() {}
+    public function showDeath(): Void {
+    }
 
-  function showAchievements() {}
+    public function showAchievements(): Void {
+    }
 
-  function select(id: Int) {}
+    public function select(arg0: Int): Void {
+    }
 
-  function updateCursor(id: Int) {}
+    public function updateCursor(arg0: Int): Void {
+    }
 
-  function moveRightPanel(down: Bool) {}
+    public function moveRightPanel(arg0: Bool): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

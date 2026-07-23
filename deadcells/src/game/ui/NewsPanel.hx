@@ -1,39 +1,52 @@
 package ui;
+
 class NewsPanel extends ui.Process {
-  var hidden: Bool;
-  var inter: h2d.Interactive.Interactive;
-  var flow: h2d.Flow.Flow;
-  var bmp: h2d.Bitmap.Bitmap;
-  var title: ui.Text.Text;
-  var text: ui.Text.Text;
-  var bg: h2d.Object.Object;
-  var controller: tool.Controller.Controller;
-  var focused: Bool;
-  var timeFocused: Float;
-  static var data: Dynamic;
+    public static var data: Dynamic;
+    public var hidden: Bool;
+    public var inter: h2d.Interactive;
+    public var flow: h2d.Flow;
+    public var bmp: h2d.Bitmap;
+    public var title: ui.Text;
+    public var text: ui.Text;
+    public var bg: h2d.Object;
+    public var controller: tool.ControllerAccess;
+    public var focused: Bool;
+    public var timeFocused: Float;
 
-  function onMove() {}
+    public function new(arg0: libs.Process) {
+        super();
+    }
 
-  function __constructor__(p: libs.Process.Process) {}
+    public function load(): Void {
+    }
 
-  function load() {}
+    public function onData(arg0: tool.Result): Void {
+    }
 
-  function onData(r: Dynamic) {}
+    public function clean(): Void {
+    }
 
-  function clean() {}
+    public function updateVisible(): Void {
+    }
 
-  function updateVisible() {}
+    public function focusIn(): Void {
+    }
 
-  function focusIn() {}
+    public function focusOut(): Void {
+    }
 
-  function focusOut() {}
+    public function openNews(): Void {
+    }
 
-  function openNews() {}
+    public override function onResize(): Void {
+    }
 
-  function onResize() {}
+    public function update(): Void {
+    }
 
-  function update() {}
+    public function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function onMove(): Void {
+    }
 }
-

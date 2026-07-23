@@ -1,12 +1,15 @@
 package cine.coll;
+
 class MeetCollectorEnd extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var collector: en.inter.npc.Collector.Collector;
-  var cureMachine: en.inter.CureMachine.CureMachine;
-  var boss: en.mob.boss.Collector.Collector;
+    public var hero: en.Hero;
+    public var collector: en.inter.npc.Collector;
+    public var cureMachine: en.inter.CureMachine;
+    public var boss: en.mob.boss.Collector;
 
-  function __constructor__(onEnd: Dynamic) {}
+    public function new(arg0: Dynamic) {
+        super();
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

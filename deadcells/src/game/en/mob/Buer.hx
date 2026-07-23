@@ -1,58 +1,88 @@
 package en.mob;
+
 class Buer extends en.Mob {
-  var backFx: libs.heaps.slib.HSprite.HSprite;
-  var jumpData: hxbit.Macros.Macros;
-  var teleJump: tool.skill.mobSkill.TeleJump.TeleJump;
-  var trailPointId: Int;
-  var touchedByFire: hl.types.ArrayObj<Dynamic>;
-  var fireBuildUp: haxe.ds.ObjectMap;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var backFx: libs.heaps.slib.HSprite;
+    public var jumpData: tool.skill.mobSkill.TeleJumpData;
+    public var teleJump: tool.skill.mobSkill.TeleJump;
+    public var trailPointId: Int;
+    public var touchedByFire: Array<Dynamic>;
+    public var fireBuildUp: haxe.ds.ObjectMap;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Buer {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Buer {
+        throw "stub: create not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function spriteUpdate() {}
+    public function spriteUpdate(): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function rushUpdate(sRush: Bool) {}
+    public function rushUpdate(arg0: Bool): Void {
+    }
 
-  function aiLocked(): Bool {}
+    public override function aiLocked(): Bool {
+        throw "stub: aiLocked not decompiled";
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function stopRush(turnBack: Bool, bumpDir: Dynamic) {}
+    public function stopRush(arg0: Bool, arg1: Dynamic): Void {
+    }
 
-  function stopSRush(turnBack: Bool, bumpDir: Dynamic) {}
+    public function stopSRush(arg0: Bool, arg1: Dynamic): Void {
+    }
 
-  function findJumpDestination(): Dynamic {}
+    public function findJumpDestination(): Dynamic {
+        throw "stub: findJumpDestination not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

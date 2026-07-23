@@ -1,23 +1,34 @@
 package tool.vote;
+
 class BecomeBoss extends tool.TwitchVote {
-  var prevNumVoter: Int;
-  static var ALL_COMMANDS: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
+    public static var ALL_COMMANDS: Array<Dynamic>;
+    public static var __clid: Int;
+    public var prevNumVoter: Int;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function onDelayedVoteInit() {}
+    public override function onDelayedVoteInit(): Void {
+    }
 
-  function acceptsVote(m: tool.TwitchMessage.TwitchMessage): Bool {}
+    public override function acceptsVote(arg0: tool.TwitchMessage): Bool {
+        throw "stub: acceptsVote not decompiled";
+    }
 
-  function onVote(m: tool.TwitchMessage.TwitchMessage, v: Dynamic, alias: String) {}
+    public override function onVote(arg0: tool.TwitchMessage, arg1: Dynamic, arg2: String): Void {
+    }
 
-  function onExpire() {}
+    public override function onExpire(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

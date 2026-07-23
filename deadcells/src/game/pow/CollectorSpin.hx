@@ -1,38 +1,60 @@
 package pow;
+
 class CollectorSpin extends Power {
-  var firstCast: Bool;
-  var fxTick: Int;
-  static var icons: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
+    public static var icons: Array<Dynamic>;
+    public static var __clid: Int;
+    public var firstCast: Bool;
+    public var fxTick: Int;
 
-  static function getCellsNeeded(): Int {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  static function getTimeLeft(): Float {}
+    public static function getTimeLeft(): Float {
+        throw "stub: getTimeLeft not decompiled";
+    }
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public static function getTierDamage(): Int {
+        throw "stub: getTierDamage not decompiled";
+    }
 
-  static function getTierDamage(): Int {}
+    public static function getCellsNeeded(): Int {
+        throw "stub: getCellsNeeded not decompiled";
+    }
 
-  function get_hudSkill(): ui.hud.Skill.Skill {}
+    public function get_hudSkill(): ui.hud.Skill {
+        throw "stub: get_hudSkill not decompiled";
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

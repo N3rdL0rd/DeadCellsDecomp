@@ -1,237 +1,290 @@
-
 class Options {
-  var gamepadRumble: Bool;
-  var isEditingCustomBindings: Bool;
-  var gamepad_normal: Dynamic;
-  var gamepad_custom: Dynamic;
-  var leftStickDeadzone: Float;
-  var rightStickDeadzone: Float;
-  var triggerDeadzone: Float;
-  var longActivateBind: Int;
-  var diveAttackBind: Int;
-  var jumpDownBind: Int;
-  var lstickDynamic: Int;
-  var rstickDynamic: Int;
-  var dpadDynamic: Int;
-  var invertPlayerMovements: Bool;
-  var invertCameraMovements: Bool;
-  var captureMouse: Bool;
-  var keyboard_normal: Dynamic;
-  var keyboard_custom: Dynamic;
-  var holdToAttack: Bool;
-  var holdToJump: Bool;
-  var pressToggleShield: Bool;
-  var holdToDodge: Bool;
-  var stopDodgeOnCliff: Bool;
-  var timerPermanent: Int;
-  var controlTuto: Bool;
-  var showDodgeCd: Bool;
-  var enemyAnnounce: Bool;
-  var offScreenAnnounceOff: Bool;
-  var attackAnnounceScale: Float;
-  var enableChroma: Bool;
-  var disableLoreRooms: Bool;
-  var skipCinematics: Bool;
-  var disableSlowMo: Bool;
-  var showModsUI: Bool;
-  var modsLocalPath: Dynamic;
-  var ignoreModAutoInstall: Bool;
-  var displayMode: Int;
-  var vsync: Bool;
-  var synergyFeedback: Bool;
-  var font: String;
-  var hideCursePopup: Bool;
-  var controlIconsType: Int;
-  var overrideControlIconsController: Int;
-  var hudAlpha: Float;
-  var hudSize: Float;
-  var backpackNextToWeapon: Bool;
-  var backpackAlpha: Float;
-  var hideControls: Bool;
-  var critFeedback: Bool;
-  var showLifeAsPct: Bool;
-  var showKillCount: Bool;
-  var displayMilliseconds: Bool;
-  var displaySeed: Bool;
-  var mute: Bool;
-  var masterVolume: Float;
-  var sfxVolume: Float;
-  var musicVolume: Float;
-  var ambientVolume: Float;
-  var playShopMusic: Bool;
-  var playElevatorMusic: Bool;
-  var musicFolder: String;
-  var sfxActVolume: Float;
-  var sfxEnmVolume: Float;
-  var sfxEnvVolume: Float;
-  var sfxHeroVolume: Float;
-  var sfxInterVolume: Float;
-  var sfxNpcVolume: Float;
-  var sfxWeapVolume: Float;
-  var sfxPrioPresets: hl.types.ArrayObj<Dynamic>;
-  var sfxPrioPresetId: Int;
-  var sfxThreshold: Int;
-  var sfxThresholdId: Int;
-  var lightFlashes: Bool;
-  var screenShakes: Bool;
-  var cameraPlayerMovementInfluence: Float;
-  var cameraCombatInfluence: Float;
-  var playerCameraSpeed: Float;
-  var poiCameraSpeed: Float;
-  var particleLimiterValue: Float;
-  var particleLimiterPass: Int;
-  var particleLimiterBlock: Int;
-  var noBlood: Bool;
-  var backgroundDarkenerShow: Bool;
-  var backgroundDarkenerColor: Int;
-  var backgroundDarkenerAlpha: Float;
-  var altFakeBlackWalls: Bool;
-  var textBackground: Bool;
-  var textBackgroundColor: Int;
-  var textBackgroundAlpha: Float;
-  var outlineHero: Bool;
-  var outlineHeroColor: Int;
-  var outlineMobs: Bool;
-  var outlineMobsColor: Int;
-  var outlineNPCs: Bool;
-  var outlineNPCsColor: Int;
-  var outlineProjectiles: Bool;
-  var outlineProjectilesColor: Int;
-  var outlineActives: Bool;
-  var outlineActivesColor: Int;
-  var outlineSecrets: Bool;
-  var outlineSecretsColor: Int;
-  var outlineSpikes: Bool;
-  var outlineSpikesColor: Int;
-  var tierIcons: Bool;
-  var doOverrideBrutalityColor: Bool;
-  var overrideBrutalityColor: Int;
-  var doOverrideTacticColor: Bool;
-  var overrideTacticColor: Int;
-  var doOverrideSurvivalColor: Bool;
-  var overrideSurvivalColor: Int;
-  var itemDescTextScale: Float;
-  var itemNameTextScale: Float;
-  var dialogueTextScale: Float;
-  var lang: String;
-  var foodKind: String;
-  var useTwitch: Bool;
-  var twitchNewVoteSystem: Bool;
-  var twitchChicken: Bool;
-  var twitchFreeChicken: Bool;
-  var twitchChickenSpeak: Bool;
-  var twitchLevelsMods: Bool;
-  var twitchCommunityScroll: Bool;
-  var twitchChest: Bool;
-  var twitchSecretTip: Bool;
-  var twitchTalismanAffix: Bool;
-  var twitchCommentary: Bool;
-  var twitchLevelSuggestion: Bool;
-  var twitchUIIsOnRight: Bool;
-  var twitchBoss: Bool;
-  var curSlot: Dynamic;
-  var version: String;
-  var uniqId: String;
-  var speedrunMode: Bool;
-  var speedrunPanel: Bool;
-  var debug: Dynamic;
-  var assistMode: AssistModeData;
-  var savedAssistMode: AssistModeData;
-  var titleScreen: Int;
-  static var defaultLeftStickDeadzone: Float;
-  static var defaultRightStickDeadzone: Float;
-  static var defaultTriggerDeadzone: Float;
-  static var inGameAction: hl.types.ArrayBytes<Int>;
-  static var keyboardRestrainedMultibindActions: hl.types.ArrayBytes<Int>;
-  static var LEGACY_FILE: String;
-  static var FILE: String;
-  static var _keepUniqId: String;
-  static var keyLayout: String;
+    public static var defaultLeftStickDeadzone: Float;
+    public static var defaultRightStickDeadzone: Float;
+    public static var defaultTriggerDeadzone: Float;
+    public static var inGameAction: Array<Int>;
+    public static var keyboardRestrainedMultibindActions: Array<Int>;
+    public static var LEGACY_FILE: String;
+    public static var FILE: String;
+    public static var _keepUniqId: String;
+    public static var keyLayout: String;
+    public var gamepadRumble: Bool;
+    public var isEditingCustomBindings: Bool;
+    public var gamepad_normal: Dynamic;
+    public var gamepad_custom: Dynamic;
+    public var leftStickDeadzone: Float;
+    public var rightStickDeadzone: Float;
+    public var triggerDeadzone: Float;
+    public var longActivateBind: Int;
+    public var diveAttackBind: Int;
+    public var jumpDownBind: Int;
+    public var lstickFunction: Int;
+    public var rstickFunction: Int;
+    public var dpadFunction: Int;
+    public var invertPlayerMovements: Bool;
+    public var invertCameraMovements: Bool;
+    public var captureMouse: Bool;
+    public var keyboard_normal: Dynamic;
+    public var keyboard_custom: Dynamic;
+    public var holdToAttack: Bool;
+    public var holdToJump: Bool;
+    public var pressToggleShield: Bool;
+    public var holdToDodge: Bool;
+    public var stopDodgeOnCliff: Bool;
+    public var timerPermanent: Int;
+    public var controlTuto: Bool;
+    public var showDodgeCd: Bool;
+    public var enemyAnnounce: Bool;
+    public var offScreenAnnounceOff: Bool;
+    public var attackAnnounceScale: Float;
+    public var enableChroma: Bool;
+    public var disableLoreRooms: Bool;
+    public var skipCinematics: Bool;
+    public var disableSlowMo: Bool;
+    public var showModsUI: Bool;
+    public var modsLocalPath: Dynamic;
+    public var ignoreModAutoInstall: Bool;
+    public var displayMode: Int;
+    public var vsync: Bool;
+    public var synergyFeedback: Bool;
+    public var font: String;
+    public var hideCursePopup: Bool;
+    public var controlIconsType: Int;
+    public var overrideControlIconsController: Int;
+    public var hudAlpha: Float;
+    public var hudSize: Float;
+    public var backpackNextToWeapon: Bool;
+    public var backpackAlpha: Float;
+    public var hideControls: Bool;
+    public var critFeedback: Bool;
+    public var showLifeAsPct: Bool;
+    public var showKillCount: Bool;
+    public var displayMilliseconds: Bool;
+    public var displaySeed: Bool;
+    public var mute: Bool;
+    public var masterVolume: Float;
+    public var sfxVolume: Float;
+    public var musicVolume: Float;
+    public var ambientVolume: Float;
+    public var playShopMusic: Bool;
+    public var playElevatorMusic: Bool;
+    public var musicFolder: String;
+    public var sfxActVolume: Float;
+    public var sfxEnmVolume: Float;
+    public var sfxEnvVolume: Float;
+    public var sfxHeroVolume: Float;
+    public var sfxInterVolume: Float;
+    public var sfxNpcVolume: Float;
+    public var sfxWeapVolume: Float;
+    public var sfxPrioPresets: Array<Dynamic>;
+    public var sfxPrioPresetId: Int;
+    public var sfxThreshold: Int;
+    public var sfxThresholdId: Int;
+    public var lightFlashes: Bool;
+    public var screenShakes: Bool;
+    public var cameraPlayerMovementInfluence: Float;
+    public var cameraCombatInfluence: Float;
+    public var playerCameraSpeed: Float;
+    public var poiCameraSpeed: Float;
+    public var particleLimiterValue: Float;
+    public var particleLimiterPass: Int;
+    public var particleLimiterBlock: Int;
+    public var noBlood: Bool;
+    public var backgroundDarkenerShow: Bool;
+    public var backgroundDarkenerColor: Int;
+    public var backgroundDarkenerAlpha: Float;
+    public var altFakeBlackWalls: Bool;
+    public var textBackground: Bool;
+    public var textBackgroundColor: Int;
+    public var textBackgroundAlpha: Float;
+    public var outlineHero: Bool;
+    public var outlineHeroColor: Int;
+    public var outlineMobs: Bool;
+    public var outlineMobsColor: Int;
+    public var outlineNPCs: Bool;
+    public var outlineNPCsColor: Int;
+    public var outlineProjectiles: Bool;
+    public var outlineProjectilesColor: Int;
+    public var outlineActives: Bool;
+    public var outlineActivesColor: Int;
+    public var outlineSecrets: Bool;
+    public var outlineSecretsColor: Int;
+    public var outlineSpikes: Bool;
+    public var outlineSpikesColor: Int;
+    public var tierIcons: Bool;
+    public var doOverrideBrutalityColor: Bool;
+    public var overrideBrutalityColor: Int;
+    public var doOverrideTacticColor: Bool;
+    public var overrideTacticColor: Int;
+    public var doOverrideSurvivalColor: Bool;
+    public var overrideSurvivalColor: Int;
+    public var itemDescTextScale: Float;
+    public var itemNameTextScale: Float;
+    public var dialogueTextScale: Float;
+    public var lang: String;
+    public var foodKind: String;
+    public var useTwitch: Bool;
+    public var twitchNewVoteSystem: Bool;
+    public var twitchChicken: Bool;
+    public var twitchFreeChicken: Bool;
+    public var twitchChickenSpeak: Bool;
+    public var twitchLevelsMods: Bool;
+    public var twitchCommunityScroll: Bool;
+    public var twitchChest: Bool;
+    public var twitchSecretTip: Bool;
+    public var twitchTalismanAffix: Bool;
+    public var twitchCommentary: Bool;
+    public var twitchLevelSuggestion: Bool;
+    public var twitchUIIsOnRight: Bool;
+    public var twitchBoss: Bool;
+    public var curSlot: Dynamic;
+    public var version: String;
+    public var uniqId: String;
+    public var speedrunMode: Bool;
+    public var speedrunPanel: Bool;
+    public var debug: Dynamic;
+    public var assistMode: AssistModeData;
+    public var savedAssistMode: AssistModeData;
+    public var titleScreen: Int;
 
-  static function load(): Options {}
+    public function new() {
+    }
 
-  function __constructor__() {}
+    public static function keyName(arg0: Int): String {
+        throw "stub: keyName not decompiled";
+    }
 
-  static function convKey(azertyKey: Int): Int {}
+    public static function convKey(arg0: Int): Int {
+        throw "stub: convKey not decompiled";
+    }
 
-  static function reset() {}
+    public static function dumpControllerConfig(arg0: Dynamic, arg1: Dynamic, arg2: Bool): Void {
+    }
 
-  static function loadAndApply(ignoreLang: Dynamic): Options {}
+    public static function reset(): Void {
+    }
 
-  static function dumpControllerConfig(_gamepad: Dynamic, _keyboard: Dynamic, isNormalBindings: Bool) {}
+    public static function loadAndApply(arg0: Ref): Options {
+        throw "stub: loadAndApply not decompiled";
+    }
 
-  static function keyName(code: Int): String {}
+    public static function load(): Options {
+        throw "stub: load not decompiled";
+    }
 
-  function get_gamepad(): Dynamic {}
+    public function get_gamepad(): Dynamic {
+        throw "stub: get_gamepad not decompiled";
+    }
 
-  function set_gamepad(v: Dynamic): Dynamic {}
+    public function set_gamepad(arg0: Dynamic): Dynamic {
+        throw "stub: set_gamepad not decompiled";
+    }
 
-  function get_keyboard(): Dynamic {}
+    public function get_keyboard(): Dynamic {
+        throw "stub: get_keyboard not decompiled";
+    }
 
-  function set_keyboard(v: Dynamic): Dynamic {}
+    public function set_keyboard(arg0: Dynamic): Dynamic {
+        throw "stub: set_keyboard not decompiled";
+    }
 
-  function get_foodKindEnum(): Dynamic {}
+    public function get_foodKindEnum(): FoodKind {
+        throw "stub: get_foodKindEnum not decompiled";
+    }
 
-  function get_musicKind(): String {}
+    public function get_musicKind(): String {
+        throw "stub: get_musicKind not decompiled";
+    }
 
-  function set_musicKind(value: String): String {}
+    public function set_musicKind(arg0: String): String {
+        throw "stub: set_musicKind not decompiled";
+    }
 
-  function genUniqId(): Bool {}
+    public function genUniqId(): Bool {
+        throw "stub: genUniqId not decompiled";
+    }
 
-  function applyLang() {}
+    public function applyLang(): Void {
+    }
 
-  function apply(ignoreLang: Dynamic) {}
+    public function apply(arg0: Ref): Void {
+    }
 
-  function applyVolumes() {}
+    public function applyVolumes(): Void {
+    }
 
-  function save() {}
+    public function save(): Void {
+    }
 
-  function setPadMapping(act: Int, key: Int) {}
+    public function setPadMapping(arg0: Int, arg1: Int): Void {
+    }
 
-  function getPadMapping(key: Int): String {}
+    public function getPadMapping(arg0: Int): String {
+        throw "stub: getPadMapping not decompiled";
+    }
 
-  function getKeyFromPadMapping(act: Int): hl.types.ArrayObj<Dynamic> {}
+    public function getKeyFromPadMapping(arg0: Int): Array<Dynamic> {
+        throw "stub: getKeyFromPadMapping not decompiled";
+    }
 
-  function getKeysFromKeyMapping(act: Int): hl.types.ArrayObj<Dynamic> {}
+    public function getKeysFromKeyMapping(arg0: Int): Array<Dynamic> {
+        throw "stub: getKeysFromKeyMapping not decompiled";
+    }
 
-  function setKeyMapping(act: Int, idx: Int, key: Dynamic) {}
+    public function setKeyMapping(arg0: Int, arg1: Int, arg2: Dynamic): Void {
+    }
 
-  function setTriggerDeadZone(value: Float) {}
+    public function setTriggerDeadZone(arg0: Float): Void {
+    }
 
-  function setDeadZoneLeftJoystick(value: Float) {}
+    public function setDeadZoneLeftJoystick(arg0: Float): Void {
+    }
 
-  function setDeadZoneRightJoystick(value: Float) {}
+    public function setDeadZoneRightJoystick(arg0: Float): Void {
+    }
 
-  function setDeadZoneJoystick(joystickId: Dynamic, value: Float) {}
+    public function setDeadZoneJoystick(arg0: JoystickId, arg1: Float): Void {
+    }
 
-  function getKeyMapping(key: Dynamic): String {}
+    public function getKeyMapping(arg0: Dynamic): String {
+        throw "stub: getKeyMapping not decompiled";
+    }
 
-  function resetKeyMapping() {}
+    public function resetKeyMapping(): Void {
+    }
 
-  function resetPadMapping() {}
+    public function resetPadMapping(): Void {
+    }
 
-  function resetSticksMapping() {}
+    public function resetSticksMapping(): Void {
+    }
 
-  function resetStickMapping(stickOption: Int, padKeys: hl.types.ArrayBytes<Int>) {}
+    public function resetStickMapping(arg0: Int, arg1: Array<Int>): Void {
+    }
 
-  function configController(resetSticksAndDpad: Dynamic) {}
+    public function configController(arg0: Dynamic): Void {
+    }
 
-  function ctrlBind(act: Int, padKeyA: Dynamic, padKeyB: Dynamic, padKeyC: Dynamic, keyA: Dynamic, keyB: Dynamic, keyC: Dynamic) {}
+    public function ctrlBind(arg0: Int, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic): Void {
+    }
 
-  function getTierColor(tierKind: String): Int {}
+    public function getTierColor(arg0: String): Int {
+        throw "stub: getTierColor not decompiled";
+    }
 }
 
 class SfxPrioPreset {
-  var sfxActPriority: Float;
-  var sfxEnmPriority: Float;
-  var sfxEnvPriority: Float;
-  var sfxHeroPriority: Float;
-  var sfxInterPriority: Float;
-  var sfxNpcPriority: Float;
-  var sfxWeapPriority: Float;
+    public var sfxActPriority: Float;
+    public var sfxEnmPriority: Float;
+    public var sfxEnvPriority: Float;
+    public var sfxHeroPriority: Float;
+    public var sfxInterPriority: Float;
+    public var sfxNpcPriority: Float;
+    public var sfxWeapPriority: Float;
 
-  function __constructor__() {}
+    public function new() {
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 }
-

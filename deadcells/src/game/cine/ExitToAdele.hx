@@ -1,16 +1,22 @@
 package cine;
+
 class ExitToAdele extends GameCinematic {
-  var blackScreen: h2d.Bitmap.Bitmap;
-  var hero: en.Hero.Hero;
-  var exit: Entity;
-  var gradient: libs.heaps.slib.HSprite.HSprite;
+    public var blackScreen: h2d.Bitmap;
+    public var hero: en.Hero;
+    public var exit: Entity;
+    public var gradient: libs.heaps.slib.HSprite;
 
-  function __constructor__(game: pr.Game.Game, hero: en.Hero.Hero, exit: Entity, to: String) {}
+    public function new(arg0: pr.Game, arg1: en.Hero, arg2: Entity, arg3: String) {
+        super();
+    }
 
-  function resetHeroBeforeTransition() {}
+    public function resetHeroBeforeTransition(): Void {
+    }
 
-  function setGradient() {}
+    public function setGradient(): Void {
+    }
 
-  function getDiveAttackData(): Dynamic {}
+    public function getDiveAttackData(): Dynamic {
+        throw "stub: getDiveAttackData not decompiled";
+    }
 }
-

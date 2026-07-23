@@ -1,32 +1,49 @@
 package en.loot;
+
 class HealDrop extends en.Loot {
-  var dr: Float;
-  var healPct: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var dr: Float;
+    public var healPct: Float;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, healPct: Float): HealDrop {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, healPct: Float) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float): en.loot.HealDrop {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onDropAsLoot() {}
+    public function onDropAsLoot(): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public function onLand(arg0: Float): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function pickUp(h: en.Hero.Hero) {}
+    public override function pickUp(arg0: en.Hero): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

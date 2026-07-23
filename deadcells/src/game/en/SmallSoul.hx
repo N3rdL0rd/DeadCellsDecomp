@@ -1,44 +1,61 @@
 package en;
+
 class SmallSoul extends Entity {
-  var customSbAdd: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var mainColor: Int;
-  var sideColor: Int;
-  var rAccu: Float;
-  var targetX: Dynamic;
-  var targetY: Dynamic;
-  var followFactor: Float;
-  var eyeVisible: Bool;
-  var eyeColor: Int;
-  var charged: Bool;
-  var angTrail: Float;
-  var even: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var customSbAdd: libs.heaps.slib.HSpriteBatch;
+    public var mainColor: Int;
+    public var sideColor: Int;
+    public var rAccu: Float;
+    public var targetX: Dynamic;
+    public var targetY: Dynamic;
+    public var followFactor: Float;
+    public var eyeVisible: Bool;
+    public var eyeColor: Int;
+    public var charged: Bool;
+    public var angTrail: Float;
+    public var even: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, active: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref) {
+        super();
+    }
 
-  function shouldSave(): Bool {}
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
 
-  function setActive(active: Bool) {}
+    public function setActive(arg0: Bool): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function overrideColor(color: Int, offColor: Dynamic) {}
+    public function overrideColor(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function setPosEased(x: Float, y: Float) {}
+    public function setPosEased(arg0: Float, arg1: Float): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

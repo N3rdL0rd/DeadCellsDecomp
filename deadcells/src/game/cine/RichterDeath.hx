@@ -1,17 +1,23 @@
 package cine;
+
 class RichterDeath extends cine.HeroDeathBase {
-  var wrapper: h2d.Object.Object;
-  var titleMask: h2d.Bitmap.Bitmap;
-  var titleScreenBg: pr.ts.DlcPTitleScreenBg.DlcPTitleScreenBg;
+    public var wrapper: h2d.Object;
+    public var titleMask: h2d.Bitmap;
+    public var titleScreenBg: pr.ts.DlcPTitleScreenBg;
 
-  function __constructor__(e: en.Hero.Hero, lostBody: Bool) {}
+    public function new(arg0: en.Hero, arg1: Bool) {
+        super();
+    }
 
-  function onResize() {}
+    public function onResize(): Void {
+    }
 
-  function gameOverTitle() {}
+    public override function gameOverTitle(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

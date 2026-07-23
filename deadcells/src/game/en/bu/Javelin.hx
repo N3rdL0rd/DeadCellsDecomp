@@ -1,43 +1,62 @@
 package en.bu;
+
 class Javelin extends en.Bullet {
-  var trailColor1: Int;
-  var trailColor2: Int;
-  var useFakePhysics: Bool;
-  var origin: tool.FPoint.FPoint;
-  var baseSpd: Float;
-  var target: tool.FPoint.FPoint;
-  var curvePow: Float;
-  var glowInnerColor: Int;
-  var glowOuterColor: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var trailColor1: Int;
+    public var trailColor2: Int;
+    public var useFakePhysics: Bool;
+    public var origin: tool.FPoint;
+    public var baseSpd: Float;
+    public var target: tool.FPoint;
+    public var curvePow: Float;
+    public var glowInnerColor: Int;
+    public var glowOuterColor: Int;
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, spd: Float, cxTarget: Int, cyTarget: Int, innerColor: Int, outerColor: Int, customSfxName: String) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: String) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onTouchGround() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function createJavelinAmmo(): JavelinAmmo {}
+    public function createJavelinAmmo(): en.bu.JavelinAmmo {
+        throw "stub: createJavelinAmmo not decompiled";
+    }
 
-  function initJavelinAmmo(a: JavelinAmmo) {}
+    public function initJavelinAmmo(arg0: en.bu.JavelinAmmo): Void {
+    }
 
-  function initThrowUsingFakePhysics(cx: Float, cy: Float, spd: Float) {}
+    public function initThrowUsingFakePhysics(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function disableFakePhysics() {}
+    public function disableFakePhysics(): Void {
+    }
 
-  function getProgress(): Float {}
+    public function getProgress(): Float {
+        throw "stub: getProgress not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

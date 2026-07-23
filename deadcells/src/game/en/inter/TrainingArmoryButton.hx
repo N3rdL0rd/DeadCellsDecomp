@@ -1,41 +1,60 @@
 package en.inter;
+
 class TrainingArmoryButton extends en.Interactive {
-  var isActivated: Bool;
-  var linkedSpawners: hl.types.ArrayObj<Dynamic>;
-  var hasLinkedSpawners: Bool;
-  var spawnedItemsWaves: hl.types.ArrayObj<Dynamic>;
-  var flushLimit: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var isActivated: Bool;
+    public var linkedSpawners: Array<Dynamic>;
+    public var hasLinkedSpawners: Bool;
+    public var spawnedItemsWaves: Array<Dynamic>;
+    public var flushLimit: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function disable() {}
+    public function disable(): Void {
+    }
 
-  function enable() {}
+    public function enable(): Void {
+    }
 
-  function respawnItems() {}
+    public function respawnItems(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function flush() {}
+    public function flush(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,35 +1,56 @@
 package ui.sel;
+
 class ItemSelector extends ui.sel.GridSelector {
-  var groups: hl.types.ArrayBytes<Int>;
-  var items: hl.types.ArrayObj<Dynamic>;
-  var itemDesc: ui.NewItemDesc.NewItemDesc;
-  var chosenItem: String;
-  var validateCb: Dynamic;
+    public var groups: Array<Int>;
+    public var items: Array<Dynamic>;
+    public var itemDesc: ui.NewItemDesc;
+    public var chosenItem: String;
+    public var validateCb: Dynamic;
 
-  function __constructor__(groups: hl.types.ArrayBytes<Int>, validateCb: Dynamic) {}
+    public function new(arg0: Array<Int>, arg1: Dynamic) {
+        super();
+    }
 
-  function get_wid(): Int {}
+    public override function get_wid(): Int {
+        throw "stub: get_wid not decompiled";
+    }
 
-  function initGrid() {}
+    public override function initGrid(): Void {
+    }
 
-  function itemIsFiltered(item: Dynamic): Bool {}
+    public function itemIsFiltered(arg0: Dynamic): Bool {
+        throw "stub: itemIsFiltered not decompiled";
+    }
 
-  function initRightFlow() {}
+    public override function initRightFlow(): Void {
+    }
 
-  function isEntryLocked(i: Int): Bool {}
+    public override function isEntryLocked(arg0: Int): Bool {
+        throw "stub: isEntryLocked not decompiled";
+    }
 
-  function getIconBmp(i: Int, p: h2d.Object.Object): h2d.Object.Object {}
+    public override function getIconBmp(arg0: Int, arg1: h2d.Object): h2d.Object {
+        throw "stub: getIconBmp not decompiled";
+    }
 
-  function updateRightFlow() {}
+    public override function updateRightFlow(): Void {
+    }
 
-  function getInventItem(): tool.InventItem.InventItem {}
+    public function getInventItem(): tool.InventItem {
+        throw "stub: getInventItem not decompiled";
+    }
 
-  function getTitleText(): String {}
+    public override function getTitleText(): String {
+        throw "stub: getTitleText not decompiled";
+    }
 
-  function itemFromEntry(entry: Dynamic): String {}
+    public function itemFromEntry(arg0: Dynamic): String {
+        throw "stub: itemFromEntry not decompiled";
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onValidate() {}
+    public override function onValidate(): Void {
+    }
 }
-

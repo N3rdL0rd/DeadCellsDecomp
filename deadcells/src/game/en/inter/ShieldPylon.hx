@@ -1,36 +1,55 @@
 package en.inter;
+
 class ShieldPylon extends en.Interactive {
-  var shieldTarget: Entity;
-  var color: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var shieldTarget: Entity;
+    public var color: Int;
 
-  function onPyloneDestroyed() {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Entity) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, t: Entity) {}
+    public static function countFor(arg0: Entity): Int {
+        throw "stub: countFor not decompiled";
+    }
 
-  static function countFor(e: Entity): Int {}
+    public function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function onDie(): Void {
+    }
 
-  function onDie() {}
+    public function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onPyloneDestroyed(): Void {
+    }
 }
-

@@ -1,25 +1,36 @@
 package libs;
+
 class RandDeck {
-  var size: Int;
-  var a: hl.types.ArrayDyn;
-  var cur: Int;
-  var max: Int;
-  var rnd: Dynamic;
+    public var size: Int;
+    public var a: Array<Dynamic>;
+    public var cur: Int;
+    public var max: Int;
+    public var rnd: Dynamic;
 
-  function __constructor__(rnd: Dynamic, max: Dynamic) {}
+    public function new(arg0: Dynamic, arg1: Ref) {
+    }
 
-  function grow(min: Dynamic) {}
+    public function grow(arg0: Ref): Void {
+    }
 
-  function push(v: Dynamic, n: Dynamic) {}
+    public function push(arg0: Dynamic, arg1: Ref): Void {
+    }
 
-  function remove(v: Dynamic): Bool {}
+    public function remove(arg0: Dynamic): Bool {
+        throw "stub: remove not decompiled";
+    }
 
-  function shuffle() {}
+    public function shuffle(): Void {
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function pop(): Dynamic {}
+    public function pop(): Dynamic {
+        throw "stub: pop not decompiled";
+    }
 
-  function peek(): Dynamic {}
+    public function peek(): Dynamic {
+        throw "stub: peek not decompiled";
+    }
 }
-

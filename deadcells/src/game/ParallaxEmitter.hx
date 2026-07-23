@@ -1,16 +1,17 @@
-
 class ParallaxEmitter extends libs.heaps.Emitter {
-  var scrollX: Float;
-  var scrollY: Float;
-  var bounds: h2d.col.Bounds.Bounds;
-  var view: Viewport;
-  var vwid: Float;
-  var vhei: Float;
-  var absX: Float;
-  var absY: Float;
+    public var scrollX: Float;
+    public var scrollY: Float;
+    public var bounds: h2d.col.Bounds;
+    public var view: Viewport;
+    public var vwid: Float;
+    public var vhei: Float;
+    public var absX: Float;
+    public var absY: Float;
 
-  function __constructor__(id: String, fps: Int, viewport: Viewport, bounds: h2d.col.Bounds.Bounds) {}
+    public function new(arg0: String, arg1: Int, arg2: Viewport, arg3: h2d.col.Bounds) {
+        super();
+    }
 
-  function update(dt: Float) {}
+    public override function update(arg0: Float): Void {
+    }
 }
-

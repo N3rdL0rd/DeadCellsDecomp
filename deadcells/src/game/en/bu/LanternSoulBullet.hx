@@ -1,29 +1,42 @@
 package en.bu;
+
 class LanternSoulBullet extends en.Bullet {
-  var soul: en.SmallSoul.SmallSoul;
-  var colorTail: Int;
-  var colorLight: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var soul: en.SmallSoul;
+    public var colorTail: Int;
+    public var colorLight: Int;
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, colorTail: Int, colorLight: Int, soul: en.SmallSoul.SmallSoul) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Int, arg6: en.SmallSoul) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function destroy() {}
+    public function destroy(): Void {
+    }
 
-  function vanish() {}
+    public override function vanish(): Void {
+    }
 
-  function playBlockSound() {}
+    public override function playBlockSound(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

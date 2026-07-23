@@ -1,48 +1,65 @@
 package en.inter;
+
 class CureMachine extends en.Interactive {
-  var cells: hl.types.ArrayObj<Dynamic>;
-  var cellsContainer: h2d.Mask.Mask;
-  var back: libs.heaps.slib.HSprite.HSprite;
-  var potion: libs.heaps.slib.HSprite.HSprite;
-  var smallTankFill: libs.heaps.slib.HSprite.HSprite;
-  var frontBlue: libs.heaps.slib.HSprite.HSprite;
-  var frontSmallBlue: libs.heaps.slib.HSprite.HSprite;
-  var hole: libs.heaps.slib.HSprite.HSprite;
-  var state: Dynamic;
-  var wid: Int;
-  var maxCells: Int;
-  var curGC: cine.coll.MeetCollectorEnd.MeetCollectorEnd;
-  var focusHole: hxbit.Macros.Macros;
-  var focusTop: hxbit.Macros.Macros;
-  var focusBot: hxbit.Macros.Macros;
-  var focusLittleTank: hxbit.Macros.Macros;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var cells: Array<Dynamic>;
+    public var cellsContainer: h2d.Mask;
+    public var back: libs.heaps.slib.HSprite;
+    public var potion: libs.heaps.slib.HSprite;
+    public var smallTankFill: libs.heaps.slib.HSprite;
+    public var frontBlue: libs.heaps.slib.HSprite;
+    public var frontSmallBlue: libs.heaps.slib.HSprite;
+    public var hole: libs.heaps.slib.HSprite;
+    public var state: en.inter.CMState;
+    public var wid: Int;
+    public var maxCells: Int;
+    public var curGC: cine.coll.MeetCollectorEnd;
+    public var focusHole: en.FocusEntity;
+    public var focusTop: en.FocusEntity;
+    public var focusBot: en.FocusEntity;
+    public var focusLittleTank: en.FocusEntity;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onSkip() {}
+    public function onSkip(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function dropFall() {}
+    public function dropFall(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,35 +1,46 @@
 package en.deco;
+
 class BossRushStatue extends Entity {
-  var container: h2d.Layers.Layers;
-  var basement: libs.heaps.slib.HSprite.HSprite;
-  var basementFireLeft: libs.heaps.slib.HSprite.HSprite;
-  var basementFireRight: libs.heaps.slib.HSprite.HSprite;
-  var cap: libs.heaps.slib.HSprite.HSprite;
-  var capTop: libs.heaps.slib.HSprite.HSprite;
-  var pant: libs.heaps.slib.HSprite.HSprite;
-  var skirt: libs.heaps.slib.HSprite.HSprite;
-  var skull: libs.heaps.slib.HSprite.HSprite;
-  var skullFire: libs.heaps.slib.HSprite.HSprite;
-  var skullBack: libs.heaps.slib.HSprite.HSprite;
-  var top: libs.heaps.slib.HSprite.HSprite;
-  var weapon: libs.heaps.slib.HSprite.HSprite;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var container: h2d.Layers;
+    public var basement: libs.heaps.slib.HSprite;
+    public var basementFireLeft: libs.heaps.slib.HSprite;
+    public var basementFireRight: libs.heaps.slib.HSprite;
+    public var cap: libs.heaps.slib.HSprite;
+    public var capTop: libs.heaps.slib.HSprite;
+    public var pant: libs.heaps.slib.HSprite;
+    public var skirt: libs.heaps.slib.HSprite;
+    public var skull: libs.heaps.slib.HSprite;
+    public var skullFire: libs.heaps.slib.HSprite;
+    public var skullBack: libs.heaps.slib.HSprite;
+    public var top: libs.heaps.slib.HSprite;
+    public var weapon: libs.heaps.slib.HSprite;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function setSprites() {}
+    public function setSprites(): Void {
+    }
 
-  function setPositions() {}
+    public function setPositions(): Void {
+    }
 
-  function updateSprites() {}
+    public function updateSprites(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

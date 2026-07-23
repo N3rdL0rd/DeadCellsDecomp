@@ -1,13 +1,18 @@
 package cine;
+
 class AfterCredits extends GameCinematic {
-  var hom: en.Homunculus.Homunculus;
+    public var hom: en.Homunculus;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

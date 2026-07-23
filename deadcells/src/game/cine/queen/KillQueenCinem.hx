@@ -1,16 +1,22 @@
 package cine.queen;
+
 class KillQueenCinem extends cine.KeyframesCinematic {
-  var endMask: h2d.Graphics.Graphics;
-  var music: hxd.snd.Channel.Channel;
+    public var endMask: h2d.Graphics;
+    public var music: hxd.snd.Channel;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function next() {}
+    public override function next(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 }
-

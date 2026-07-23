@@ -1,44 +1,70 @@
 package en.inter.button;
+
 class Button extends en.Interactive {
-  var activated: Bool;
-  var spriteReady: String;
-  var spriteActivated: String;
-  var activationFxColor: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var activated: Bool;
+    public var spriteReady: String;
+    public var spriteActivated: String;
+    public var activationFxColor: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function getSpriteLib(): libs.heaps.slib.SpriteLib.SpriteLib {}
+    public function getSpriteLib(): libs.heaps.slib.SpriteLib {
+        throw "stub: getSpriteLib not decompiled";
+    }
 
-  function getLightTipStr(): String {}
+    public function getLightTipStr(): String {
+        throw "stub: getLightTipStr not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function canActivate(by: en.Hero.Hero): Bool {}
+    public function canActivate(arg0: en.Hero): Bool {
+        throw "stub: canActivate not decompiled";
+    }
 
-  function onActivationFail(by: en.Hero.Hero) {}
+    public function onActivationFail(arg0: en.Hero): Void {
+    }
 
-  function onActivationSuccess(by: en.Hero.Hero) {}
+    public function onActivationSuccess(arg0: en.Hero): Void {
+    }
 
-  function setActivated() {}
+    public function setActivated(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function isActivated(): Bool {}
+    public function isActivated(): Bool {
+        throw "stub: isActivated not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

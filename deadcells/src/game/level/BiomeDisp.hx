@@ -1,196 +1,305 @@
 package level;
+
 class BiomeDisp extends level.LevelDisp {
-  var holeGen: level.HoleGenerator.HoleGenerator;
-  var holeCpt: Int;
-  var bgScrolls: hl.types.ArrayObj<Dynamic>;
-  var objPoints: haxe.ds.StringMap;
-  var lightPoints: hl.types.ArrayObj<Dynamic>;
-  var lanterns: hl.types.ArrayObj<Dynamic>;
-  var lightFX: hl.types.ArrayObj<Dynamic>;
-  var outsideJunkDeck: libs.RandDeck.RandDeck;
-  var floorJunkDeck: libs.RandDeck.RandDeck;
-  var floorWallJunkDeck: libs.RandDeck.RandDeck;
-  var wallJunkDeck: libs.RandDeck.RandDeck;
-  var floorStampDecks: hl.types.ArrayObj<Dynamic>;
-  var floorStampDecksL: hl.types.ArrayObj<Dynamic>;
-  var floorStampDecksR: hl.types.ArrayObj<Dynamic>;
-  var floorStampDecksLR: hl.types.ArrayObj<Dynamic>;
-  var waterPools: hl.types.ArrayObj<Dynamic>;
-  var voronoi: h2d.col.Voronoi.Voronoi;
-  var tmpBounds: h2d.col.Bounds.Bounds;
-  var bossFlags: hl.types.ArrayObj<Dynamic>;
-  var fxTorch: String;
-  var fxBrasero: String;
-  var fxCauldron: String;
-  var fxTorchEmitterColor: Int;
-  var useTorchEmitter: Bool;
-  var junkMode: Dynamic;
-  var posFlasks: hl.types.ArrayObj<Dynamic>;
-  var floorStampOffset: Int;
-  var bigFrontCornerMinHei: Int;
-  var floorJunkTileGroup: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var dirtTileBoundaries: hl.types.ArrayObj<Dynamic>;
-  var flipPlantsVertically: Bool;
-  var waterLayer: Int;
-  var wallHorizontalTrHeightPool: hl.types.ArrayBytes<Int>;
-  var wallVerticalTrWidthPool: hl.types.ArrayBytes<Int>;
-  var torchConfLightId: String;
-  var junkDecoFlags: Dynamic;
-  static var NOISE_FREQS: hl.types.ArrayBytes<Float>;
-  static var NOISE_WEIGHTS: hl.types.ArrayBytes<Float>;
+    public static var NOISE_FREQS: Array<Float>;
+    public static var NOISE_WEIGHTS: Array<Float>;
+    public var holeGen: level.HoleGenerator;
+    public var holeCpt: Int;
+    public var bgScrolls: Array<Dynamic>;
+    public var objPoints: haxe.ds.StringMap;
+    public var lightPoints: Array<Dynamic>;
+    public var lanterns: Array<Dynamic>;
+    public var lightFX: Array<Dynamic>;
+    public var outsideJunkDeck: libs.RandDeck;
+    public var floorJunkDeck: libs.RandDeck;
+    public var floorWallJunkDeck: libs.RandDeck;
+    public var wallJunkDeck: libs.RandDeck;
+    public var floorStampDecks: Array<Dynamic>;
+    public var floorStampDecksL: Array<Dynamic>;
+    public var floorStampDecksR: Array<Dynamic>;
+    public var floorStampDecksLR: Array<Dynamic>;
+    public var waterPools: Array<Dynamic>;
+    public var voronoi: h2d.col.Voronoi;
+    public var tmpBounds: h2d.col.Bounds;
+    public var bossFlags: Array<Dynamic>;
+    public var fxTorch: String;
+    public var fxBrasero: String;
+    public var fxCauldron: String;
+    public var fxTorchEmitterColor: Int;
+    public var useTorchEmitter: Bool;
+    public var junkMode: level.JunkMode;
+    public var posFlasks: Array<Dynamic>;
+    public var floorStampOffset: Int;
+    public var bigFrontCornerMinHei: Int;
+    public var floorJunkTileGroup: libs.heaps.StaticGeometryGroup;
+    public var dirtTileBoundaries: Array<Dynamic>;
+    public var flipPlantsVertically: Bool;
+    public var waterLayer: Int;
+    public var wallHorizontalTrHeightPool: Array<Int>;
+    public var wallVerticalTrWidthPool: Array<Int>;
+    public var torchConfLightId: String;
+    public var junkDecoFlags: Dynamic;
+
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: Array<Dynamic>) {
+        super();
+    }
+
+    public function fillDecks(): Void {
+    }
+
+    public function fillJunkDecks(): Void {
+    }
+
+    public function fillStampDecks(): Void {
+    }
+
+    public override function initDecoEntities(): Void {
+    }
+
+    public function flaskPosValid(arg0: Float, arg1: Float): Bool {
+        throw "stub: flaskPosValid not decompiled";
+    }
+
+    public function getNewPosFlask(arg0: libs.Rand, arg1: level.Room, arg2: Array<Dynamic>): tool.FPoint {
+        throw "stub: getNewPosFlask not decompiled";
+    }
+
+    public function canPlaceLoreDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Bool {
+        throw "stub: canPlaceLoreDeco not decompiled";
+    }
+
+    public function addLoreDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
+    }
+
+    public function addFireDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
+    }
+
+    public function addGodRayDeco(arg0: level.Marker, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic, arg10: Ref, arg11: Ref): Void {
+    }
+
+    public function initFlasks(arg0: level.Room): Void {
+    }
+
+    public function initBossParts(arg0: level.Room, arg1: Array<Dynamic>, arg2: Ref): Void {
+    }
+
+    public function getStampWallThreshold(): Float {
+        throw "stub: getStampWallThreshold not decompiled";
+    }
+
+    public override function renderBackWalls(): Void {
+    }
+
+    public function renderWallStamps(): Void {
+    }
+
+    public function renderLadders(): Void {
+    }
+
+    public function getPositionId(arg0: Int, arg1: Int, arg2: Int): Int {
+        throw "stub: getPositionId not decompiled";
+    }
+
+    public override function renderFrontWalls(): Void {
+    }
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, parallax: hl.types.ArrayObj<Dynamic>) {}
+    public function renderDirt(arg0: haxe.ds.IntMap): Void {
+    }
 
-  function fillDecks() {}
+    public function computeDirtTileBoundaries(arg0: haxe.ds.IntMap): Void {
+    }
 
-  function fillJunkDecks() {}
+    public function createDirtTileFromBoundaries(): Void {
+    }
 
-  function fillStampDecks() {}
+    public function renderOneWay(arg0: Int, arg1: Int, arg2: Bool, arg3: Bool, arg4: Bool): Void {
+    }
 
-  function initDecoEntities() {}
+    public function getHighlightColor(): String {
+        throw "stub: getHighlightColor not decompiled";
+    }
 
-  function flaskPosValid(x: Float, y: Float): Bool {}
+    public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 
-  function getNewPosFlask(rseed: libs.Rand.Rand, sr: level.Room.Room, fms: hl.types.ArrayObj<Dynamic>): tool.FPoint.FPoint {}
+    public override function renderFloorStamps(): Void {
+    }
 
-  function canPlaceLoreDeco(m: hxbit.Macros.Macros, casePosX: Int, casePosY: Int, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, onBounds: Dynamic, _templateFlip: Dynamic, dir: Dynamic, ratio: Dynamic, reload: Dynamic): Bool {}
+    public override function renderSlopes(): Void {
+    }
 
-  function addLoreDeco(m: hxbit.Macros.Macros, casePosX: Int, casePosY: Int, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, onBounds: Dynamic, _templateFlip: Dynamic, dir: Dynamic, ratio: Dynamic, reload: Dynamic) {}
+    public override function renderFakeBlackWalls(): Void {
+    }
 
-  function addFireDeco(m: hxbit.Macros.Macros, casePosX: Int, casePosY: Int, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, onBounds: Dynamic, _templateFlip: Dynamic, dir: Dynamic, ratio: Dynamic, reload: Dynamic) {}
+    public function isValidForPlants(arg0: Int, arg1: Int): Bool {
+        throw "stub: isValidForPlants not decompiled";
+    }
 
-  function addGodRayDeco(m: hxbit.Macros.Macros, casePosX: Int, casePosY: Int, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, onBounds: Dynamic, _templateFlip: Dynamic, dir: Dynamic, ratio: Dynamic, reload: Dynamic) {}
+    public override function renderFrontVegetation(): Void {
+    }
 
-  function initFlasks(sr: level.Room.Room) {}
+    public override function renderGroundSmoke(): Void {
+    }
 
-  function initBossParts(sr: level.Room.Room, list: hl.types.ArrayObj<Dynamic>, forceDisplay: Dynamic) {}
+    public function getOverWaterLight(): String {
+        throw "stub: getOverWaterLight not decompiled";
+    }
 
-  function getStampWallThreshold(): Float {}
+    public override function renderWaterPools(): Void {
+    }
 
-  function renderBackWalls() {}
+    public function getForcedWallTrWidth(): Int {
+        throw "stub: getForcedWallTrWidth not decompiled";
+    }
 
-  function renderWallStamps() {}
+    public function listWallTransitions(): Array<Dynamic> {
+        throw "stub: listWallTransitions not decompiled";
+    }
 
-  function renderLadders() {}
+    public function getSlicingForWallTransition(arg0: Int, arg1: String, arg2: Array<Int>): Array<Int> {
+        throw "stub: getSlicingForWallTransition not decompiled";
+    }
 
-  function getPositionId(cx: Int, cy: Int, xMax: Int): Int {}
+    public function renderHorizontalWallTransition(arg0: level.DecoTransition, arg1: Bool): Void {
+    }
 
-  function renderFrontWalls() {}
+    public function renderVerticalWallTransition(arg0: level.DecoTransition, arg1: Bool): Void {
+    }
 
-  function renderDirt(dirtPresenceByPositionId: haxe.ds.IntMap<Dynamic>) {}
+    public override function renderWallTransitions(): Void {
+    }
 
-  function computeDirtTileBoundaries(dirtPresenceByPositionId: haxe.ds.IntMap<Dynamic>) {}
+    public override function addCliffLights(): Void {
+    }
 
-  function createDirtTileFromBoundaries() {}
+    public function addFloorStamps(arg0: String, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function renderOneWay(cx: Int, cy: Int, leftCorner: Bool, rightCorner: Bool, isLadder: Bool) {}
+    public function _addFloorStamps(arg0: libs.tilemap.Rectangle, arg1: Bool, arg2: Bool): Void {
+    }
 
-  function getHighlightColor(): String {}
+    public function addCeilingStamps(arg0: String, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public function addCeilingStampTile(arg0: Int, arg1: Int, arg2: h2d.Tile): Void {
+    }
 
-  function renderFloorStamps() {}
+    public function getOverStructureRects(arg0: String, arg1: Int): Array<Dynamic> {
+        throw "stub: getOverStructureRects not decompiled";
+    }
 
-  function renderSlopes() {}
+    public function mergeOverStructureRects(arg0: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: mergeOverStructureRects not decompiled";
+    }
 
-  function renderFakeBlackWalls() {}
+    public function renderOverStructure(arg0: Array<Dynamic>): Void {
+    }
 
-  function isValidForPlants(cx: Int, cy: Int): Bool {}
+    public override function renderRoofs(): Void {
+    }
 
-  function renderFrontVegetation() {}
+    public override function renderStructures(): Void {
+    }
 
-  function renderGroundSmoke() {}
+    public function addLightFX(arg0: String): libs.heaps.slib.HSpriteBE {
+        throw "stub: addLightFX not decompiled";
+    }
 
-  function getOverWaterLight(): String {}
+    public function addTorch(arg0: Float, arg1: Float, arg2: h2d.Tile, arg3: Ref): Void {
+    }
 
-  function renderWaterPools() {}
+    public function addLantern(arg0: Float, arg1: Float, arg2: Ref): Void {
+    }
 
-  function getForcedWallTrWidth(): Int {}
+    public function addBrasero(arg0: Int, arg1: Int): Void {
+    }
 
-  function listWallTransitions(): hl.types.ArrayObj<Dynamic> {}
+    public function addCauldronBrasero(arg0: Int, arg1: Int, arg2: Ref, arg3: String): Void {
+    }
 
-  function getSlicingForWallTransition(trSize: Int, tname: String, pool: hl.types.ArrayBytes<Int>): hl.types.ArrayBytes<Int> {}
+    public function addCandle(arg0: Int, arg1: Int): Void {
+    }
 
-  function renderHorizontalWallTransition(t: Dynamic, left: Bool) {}
+    public function isHole(arg0: level.Room, arg1: Int, arg2: Int, arg3: Array<Dynamic>): Bool {
+        throw "stub: isHole not decompiled";
+    }
 
-  function renderVerticalWallTransition(t: Dynamic, down: Bool) {}
+    public function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: createHoleGrid not decompiled";
+    }
 
-  function renderWallTransitions() {}
+    public function createHoles(arg0: level.Room, arg1: Bool, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function addCliffLights() {}
+    public function drawHoleStamps(arg0: level.Room, arg1: Array<Dynamic>): Void {
+    }
 
-  function addFloorStamps(name: String, scale: Dynamic, ratio: Dynamic) {}
+    public function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function _addFloorStamps(r: Dynamic, first: Bool, last: Bool) {}
+    public function addBgScroller(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: h2d.Tile, arg5: Float, arg6: Dynamic, arg7: Ref, arg8: Dynamic, arg9: h2d.BlendMode): h2d.Bitmap {
+        throw "stub: addBgScroller not decompiled";
+    }
 
-  function addCeilingStamps(name: String, scale: Dynamic, ratio: Dynamic) {}
+    public function addObject(arg0: String, arg1: Int, arg2: Int): Void {
+    }
 
-  function addCeilingStampTile(cx: Int, cy: Int, t: h2d.Tile.Tile) {}
+    public function addEliteFront(arg0: Int, arg1: Int): Void {
+    }
 
-  function getOverStructureRects(marker: String, yOffset: Int): hl.types.ArrayObj<Dynamic> {}
+    public function addCollectorDeco(arg0: level.Room): Void {
+    }
 
-  function mergeOverStructureRects(rects: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function renderOverStructure(rects: hl.types.ArrayObj<Dynamic>) {}
+    public function renderCustomLights(arg0: level.Room): Void {
+    }
 
-  function renderRoofs() {}
+    public function renderCustomDeco(arg0: level.Room): Void {
+    }
 
-  function renderStructures() {}
+    public function hasObjectNear(arg0: String, arg1: Int, arg2: Int, arg3: Float): Bool {
+        throw "stub: hasObjectNear not decompiled";
+    }
 
-  function addLightFX(group: String): libs.heaps.slib.HSpriteBE.HSpriteBE {}
+    public function updateBiomeFx(): Void {
+    }
 
-  function addTorch(px: Float, py: Float, back: h2d.Tile.Tile, checkWallUsed: Dynamic) {}
+    public override function postUpdate(): Void {
+    }
 
-  function addLantern(px: Float, py: Float, fxOnly: Dynamic) {}
+    public function canStampOn(arg0: Int): Bool {
+        throw "stub: canStampOn not decompiled";
+    }
 
-  function addBrasero(px: Int, py: Int) {}
+    public function addWallStamp(arg0: Int, arg1: Int, arg2: Int, arg3: String): Bool {
+        throw "stub: addWallStamp not decompiled";
+    }
 
-  function addCauldronBrasero(px: Int, py: Int, lighted: Dynamic, tileName: String) {}
+    public override function addJunk(arg0: level.DecoZone): Void {
+    }
 
-  function addCandle(px: Int, py: Int) {}
+    public function _addFloorJunk(arg0: level.DecoZone, arg1: Float): Void {
+    }
 
-  function isHole(r: level.Room.Room, cx: Int, cy: Int, holeGrid: hl.types.ArrayObj<Dynamic>): Bool {}
+    public function _addWallJunk(arg0: level.DecoZone, arg1: Float, arg2: Ref): Void {
+    }
 
-  function createHoleGrid(r: level.Room.Room, rGrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function onAddFloorJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
+    }
 
-  function createHoles(r: level.Room.Room, stamps: Bool, forceHoles: Dynamic, addBackground: Dynamic) {}
-
-  function drawHoleStamps(r: level.Room.Room, hg: hl.types.ArrayObj<Dynamic>) {}
-
-  function addHoleBackground(r: level.Room.Room, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
-
-  function addBgScroller(xmin: Int, xmax: Int, ymin: Int, ymax: Int, t: h2d.Tile.Tile, speedX: Float, speedY: Dynamic, repeat: Dynamic, moveX: Dynamic, blendMode: Dynamic): h2d.Bitmap.Bitmap {}
-
-  function addObject(n: String, cx: Int, cy: Int) {}
-
-  function addEliteFront(px: Int, py: Int) {}
-
-  function addCollectorDeco(r: level.Room.Room) {}
-
-  function decorateRoom(r: level.Room.Room) {}
-
-  function renderCustomLights(r: level.Room.Room) {}
-
-  function renderCustomDeco(r: level.Room.Room) {}
-
-  function hasObjectNear(n: String, cx: Int, cy: Int, dist: Float): Bool {}
-
-  function updateBiomeFx() {}
-
-  function postUpdate() {}
-
-  function canStampOn(df: Int): Bool {}
-
-  function addWallStamp(cx: Int, cy: Int, size: Int, id: String): Bool {}
-
-  function addJunk(z: level.DecoTypes.DecoTypes) {}
-
-  function _addFloorJunk(z: level.DecoTypes.DecoTypes, density: Float) {}
-
-  function _addWallJunk(z: level.DecoTypes.DecoTypes, density: Float, nrelax: Dynamic) {}
-
-  function onAddFloorJunk(deckEntry: Dynamic, px: Float, py: Float, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
-
-  function onAddWallJunk(deckEntry: Dynamic, px: Float, py: Float, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public function onAddWallJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
+    }
 }
 
+class MarkerRect {
+    public var cy: Int;
+    public var xmin: Int;
+    public var xmax: Int;
+    public var ymin: Int;
+    public var ymax: Int;
+
+    public function new() {
+    }
+}

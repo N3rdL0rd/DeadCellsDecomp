@@ -1,25 +1,37 @@
 package tool.weap;
+
 class Tombstone extends tool.Weapon {
-  var modelNum: Int;
-  var modelNumRandDeck: libs.RandDeck.RandDeck;
-  var doomSfx: hxd.res.Sound.Sound;
+    public var modelNum: Int;
+    public var modelNumRandDeck: libs.RandDeck;
+    public var doomSfx: hxd.res.Sound;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function doGlas(wave: Int, targetMobs: hl.types.ArrayObj<Dynamic>) {}
+    public function doGlas(arg0: Int, arg1: Array<Dynamic>): Void {
+    }
 
-  function checkMobStatus() {}
+    public function checkMobStatus(): Void {
+    }
 
-  function initSkill(idx: Int, chainInf: Dynamic, skill: tool.Weapon.Weapon) {}
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function set_cycle(v: Int): Int {}
+    public override function set_cycle(arg0: Int): Int {
+        throw "stub: set_cycle not decompiled";
+    }
 
-  function onOwnerCooldownEnd(k: String, idx: Int) {}
+    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 }
-

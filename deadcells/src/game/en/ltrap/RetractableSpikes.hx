@@ -1,26 +1,40 @@
 package en.ltrap;
+
 class RetractableSpikes extends en.ltrap.Spikes {
-  var tIn: Float;
-  var tOut: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var tIn: Float;
+    public var tOut: Float;
 
-  function __constructor__(l: pr.Level.Level, x: Int, y: Int, ang: Dynamic, spikeDirection: Int, natural: Dynamic, variant: String, tIn: Dynamic, tOut: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Int, arg5: Dynamic, arg6: String, arg7: Ref, arg8: Ref) {
+        super();
+    }
 
-  function goOut(instant: Bool, ignoreOnOut: Dynamic) {}
+    public override function goOut(arg0: Bool, arg1: Ref): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function checkHeroPositionInCase(): Bool {}
+    public function checkHeroPositionInCase(): Bool {
+        throw "stub: checkHeroPositionInCase not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

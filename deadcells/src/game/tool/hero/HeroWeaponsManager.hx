@@ -1,129 +1,215 @@
 package tool.hero;
+
 class HeroWeaponsManager extends tool.HeroManager {
-  var mainWeapons: hl.types.ArrayObj<Dynamic>;
-  var backpackWeapons: hl.types.ArrayObj<Dynamic>;
-  var weaponInputs: hl.types.ArrayBytes<Int>;
-  var lastWeaponUsed: tool.Weapon.Weapon;
-  var weaponControlLocks: haxe.ds.IntMap<Dynamic>;
-  static var defSword: tool.weap.StartSword.StartSword;
-  static var __clid: Int;
+    public static var defSword: tool.weap.StartSword;
+    public static var __clid: Int;
+    public var mainWeapons: Array<Dynamic>;
+    public var backpackWeapons: Array<Dynamic>;
+    public var weaponInputs: Array<Int>;
+    public var lastWeaponUsed: tool.Weapon;
+    public var weaponControlLocks: haxe.ds.IntMap;
 
-  function __constructor__(h: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function findInMain(t: hl.Class): tool.Weapon.Weapon {}
+    public function findInMain(arg0: hl.Class): tool.Weapon {
+        throw "stub: findInMain not decompiled";
+    }
 
-  function findInBackpack(t: hl.Class): tool.Weapon.Weapon {}
+    public function findInBackpack(arg0: hl.Class): tool.Weapon {
+        throw "stub: findInBackpack not decompiled";
+    }
 
-  function findItemInMain(item: tool.InventItem.InventItem): tool.Weapon.Weapon {}
+    public function findItemInMain(arg0: tool.InventItem): tool.Weapon {
+        throw "stub: findItemInMain not decompiled";
+    }
 
-  function findItemInBackpack(item: tool.InventItem.InventItem): tool.Weapon.Weapon {}
+    public function findItemInBackpack(arg0: tool.InventItem): tool.Weapon {
+        throw "stub: findItemInBackpack not decompiled";
+    }
 
-  function findItemKindInMain(id: String): tool.Weapon.Weapon {}
+    public function findItemKindInMain(arg0: String): tool.Weapon {
+        throw "stub: findItemKindInMain not decompiled";
+    }
 
-  function findItemKindInBackpack(id: String): tool.Weapon.Weapon {}
+    public function findItemKindInBackpack(arg0: String): tool.Weapon {
+        throw "stub: findItemKindInBackpack not decompiled";
+    }
 
-  function findChargingWeapon(): tool.Weapon.Weapon {}
+    public function findChargingWeapon(): tool.Weapon {
+        throw "stub: findChargingWeapon not decompiled";
+    }
 
-  function findFirstMeleeWeapon(): tool.Weapon.Weapon {}
+    public function findFirstMeleeWeapon(): tool.Weapon {
+        throw "stub: findFirstMeleeWeapon not decompiled";
+    }
 
-  function disposeBackpackWeapon(id: Dynamic): Bool {}
+    public function disposeBackpackWeapon(arg0: Ref): Bool {
+        throw "stub: disposeBackpackWeapon not decompiled";
+    }
 
-  function hasInMain(t: hl.Class): Bool {}
+    public function hasInMain(arg0: hl.Class): Bool {
+        throw "stub: hasInMain not decompiled";
+    }
 
-  function hasInBackpack(t: hl.Class): Bool {}
+    public function hasInBackpack(arg0: hl.Class): Bool {
+        throw "stub: hasInBackpack not decompiled";
+    }
 
-  function hasItemKindInMain(id: String): Bool {}
+    public function hasItemKindInMain(arg0: String): Bool {
+        throw "stub: hasItemKindInMain not decompiled";
+    }
 
-  function hasItemKindInBackpack(id: String): Bool {}
+    public function hasItemKindInBackpack(arg0: String): Bool {
+        throw "stub: hasItemKindInBackpack not decompiled";
+    }
 
-  function hasChargingWeapon(): Bool {}
+    public function hasChargingWeapon(): Bool {
+        throw "stub: hasChargingWeapon not decompiled";
+    }
 
-  function hasChargingUninterruptibleWeapon(): Bool {}
+    public function hasChargingUninterruptibleWeapon(): Bool {
+        throw "stub: hasChargingUninterruptibleWeapon not decompiled";
+    }
 
-  function hasButtonDownForWeapon(weap: tool.Weapon.Weapon): Bool {}
+    public function hasButtonDownForWeapon(arg0: tool.Weapon): Bool {
+        throw "stub: hasButtonDownForWeapon not decompiled";
+    }
 
-  function hasButtonPressedForWeapon(weap: tool.Weapon.Weapon): Bool {}
+    public function hasButtonPressedForWeapon(arg0: tool.Weapon): Bool {
+        throw "stub: hasButtonPressedForWeapon not decompiled";
+    }
 
-  function getWeaponDamageMultiplier(weapon: tool.Weapon.Weapon): Float {}
+    public function getWeaponDamageMultiplier(arg0: tool.Weapon): Float {
+        throw "stub: getWeaponDamageMultiplier not decompiled";
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function addWeaponLock(str: String, id: Dynamic) {}
+    public function addWeaponLock(arg0: String, arg1: Ref): Void {
+    }
 
-  function removeWeaponLock(str: String, id: Dynamic) {}
+    public function removeWeaponLock(arg0: String, arg1: Ref): Void {
+    }
 
-  function applyHudLockFade() {}
+    public function applyHudLockFade(): Void {
+    }
 
-  function refillAllAmmo() {}
+    public function refillAllAmmo(): Void {
+    }
 
-  function killEntities() {}
+    public function killEntities(): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function onEquippedItemsUpdated(duringHeroInit: Dynamic) {}
+    public function onEquippedItemsUpdated(arg0: Ref): Void {
+    }
 
-  function onDropAndUpdateItem(item: tool.InventItem.InventItem) {}
+    public function onDropAndUpdateItem(arg0: tool.InventItem): Void {
+    }
 
-  function onPickItem() {}
+    public function onPickItem(): Void {
+    }
 
-  function onMobDeath(mob: en.Mob.Mob) {}
+    public function onMobDeath(arg0: en.Mob): Void {
+    }
 
-  function tryToCounterGrenade(grenade: en.Grenade.Grenade) {}
+    public function tryToCounterGrenade(arg0: en.Grenade): Void {
+    }
 
-  function cancelWeaponsAnticipation() {}
+    public function cancelWeaponsAnticipation(): Void {
+    }
 
-  function allowCrouch(): Bool {}
+    public function allowCrouch(): Bool {
+        throw "stub: allowCrouch not decompiled";
+    }
 
-  function isPlayingAttackAnim(): Bool {}
+    public function isPlayingAttackAnim(): Bool {
+        throw "stub: isPlayingAttackAnim not decompiled";
+    }
 
-  function interrupt() {}
+    public function interrupt(): Void {
+    }
 
-  function tryToCancelCharge(byWeapon: Bool): Bool {}
+    public function tryToCancelCharge(arg0: Bool): Bool {
+        throw "stub: tryToCancelCharge not decompiled";
+    }
 
-  function updateWeapons() {}
+    public function updateWeapons(): Void {
+    }
 
-  function updateWeapon(slot: Int) {}
+    public function updateWeapon(arg0: Int): Void {
+    }
 
-  function canUseWeapon(w: tool.Weapon.Weapon, hero: en.Hero.Hero, posId: Int, ctrlOk: Dynamic, key: Dynamic): Bool {}
+    public function canUseWeapon(arg0: tool.Weapon, arg1: en.Hero, arg2: Int, arg3: Ref, arg4: Dynamic): Bool {
+        throw "stub: canUseWeapon not decompiled";
+    }
 
-  function onWeaponExecute(weapon: tool.Weapon.Weapon) {}
+    public function onWeaponExecute(arg0: tool.Weapon): Void {
+    }
 
-  function startBackpackEffects(duration: Float) {}
+    public function startBackpackEffects(arg0: Float): Void {
+    }
 
-  function onLevelChanged() {}
+    public function onLevelChanged(): Void {
+    }
 
-  function resetTpItems() {}
+    public function resetTpItems(): Void {
+    }
 
-  function resetChargeDashItems() {}
+    public function resetChargeDashItems(): Void {
+    }
 
-  function onOwnerCooldownEnd(k: String, subIndex: Int) {}
+    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getWeaponAttackSpeed(w: tool.Weapon.Weapon): Float {}
+    public function getWeaponAttackSpeed(arg0: tool.Weapon): Float {
+        throw "stub: getWeaponAttackSpeed not decompiled";
+    }
 
-  function onWeaponUse(w: tool.Weapon.Weapon, slot: Int) {}
+    public function onWeaponUse(arg0: tool.Weapon, arg1: Int): Void {
+    }
 
-  function updateTutorials() {}
+    public function updateTutorials(): Void {
+    }
 
-  function canPerformAutoHit(weapon: tool.Weapon.Weapon): Bool {}
+    public function canPerformAutoHit(arg0: tool.Weapon): Bool {
+        throw "stub: canPerformAutoHit not decompiled";
+    }
 
-  function autoBreakDoors() {}
+    public function autoBreakDoors(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,9 +1,12 @@
 package cine;
+
 class EnterRoomBoss extends GameCinematic {
-  var boss: en.mob.Boss.Boss;
+    public var boss: en.mob.Boss;
 
-  function __constructor__(hero: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function triggerEliteScoring() {}
+    public function triggerEliteScoring(): Void {
+    }
 }
-

@@ -1,9 +1,12 @@
 package cine;
+
 class TierItemFoundScoring extends GameCinematic {
-  var icon: ui.icon.Icon.Icon;
+    public var icon: ui.icon.Icon;
 
-  function __constructor__(hero: en.Hero.Hero, e: Entity, item: tool.InventItem.InventItem, iconX: Float, iconY: Float, onComplete: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: Entity, arg2: tool.InventItem, arg3: Float, arg4: Float, arg5: Dynamic) {
+        super();
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

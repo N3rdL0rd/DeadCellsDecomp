@@ -1,54 +1,74 @@
-
 class GameCinematic extends libs.Process {
-  var id: String;
-  var cm: libs.misc.Cinematic.Cinematic;
-  var bars: Float;
-  var topBar: h2d.Bitmap.Bitmap;
-  var bottomBar: h2d.Bitmap.Bitmap;
-  var timeText: ui.Text.Text;
-  var disableShowHUD: Bool;
-  var onSkip: Dynamic;
-  var skipFrames: Float;
-  var skipTip: ui.ControlLabel.ControlLabel;
-  var allowAutoSkipOption: Bool;
-  var cancellable: Bool;
+    public var id: String;
+    public var cm: libs.misc.Cinematic;
+    public var bars: Float;
+    public var topBar: h2d.Bitmap;
+    public var bottomBar: h2d.Bitmap;
+    public var timeText: ui.Text;
+    public var disableShowHUD: Bool;
+    public var onSkip: Dynamic;
+    public var skipFrames: Float;
+    public var skipTip: ui.ControlLabel;
+    public var allowAutoSkipOption: Bool;
+    public var cancellable: Bool;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function closeAllSays() {}
+    public function closeAllSays(): Void {
+    }
 
-  function disableBars() {}
+    public function disableBars(): Void {
+    }
 
-  function hideBars(cb: Dynamic) {}
+    public function hideBars(arg0: Dynamic): Void {
+    }
 
-  function showGameTime() {}
+    public function showGameTime(): Void {
+    }
 
-  function checkForSpeedrun(onEnd: Dynamic) {}
+    public function checkForSpeedrun(arg0: Dynamic): Void {
+    }
 
-  function toString(): String {}
+    public override function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function signal(id: String) {}
+    public function signal(arg0: String): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function repeat(cb: Dynamic, totalDurationS: Float, freqS: Float) {}
+    public function repeat(arg0: Dynamic, arg1: Float, arg2: Float): Void {
+    }
 
-  function heroWalkUntilEntity(h: en.Hero.Hero, e: Entity, distPx: Dynamic, timeLimitS: Dynamic, onEnd: Dynamic) {}
+    public function heroWalkUntilEntity(arg0: en.Hero, arg1: Entity, arg2: Ref, arg3: Ref, arg4: Dynamic): Void {
+    }
 
-  function heroWalkUntil(h: en.Hero.Hero, px: Float, dir: Dynamic, timeLimitS: Dynamic, onEnd: Dynamic) {}
+    public function heroWalkUntil(arg0: en.Hero, arg1: Float, arg2: Dynamic, arg3: Ref, arg4: Dynamic): Void {
+    }
 
-  function walkUntil(e: Entity, px: Float, dir: Dynamic, spd: Float, walking: Bool, timeLimitS: Dynamic, onEnd: Dynamic) {}
+    public function walkUntil(arg0: Entity, arg1: Float, arg2: Dynamic, arg3: Float, arg4: Bool, arg5: Ref, arg6: Dynamic): Void {
+    }
 
-  function heroPlayAnim(h: en.Hero.Hero, animId: String) {}
+    public function heroPlayAnim(arg0: en.Hero, arg1: String): Void {
+    }
 
-  function updateBars() {}
+    public function updateBars(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function onExit(): Bool {}
+    public function onExit(): Bool {
+        throw "stub: onExit not decompiled";
+    }
 }
-

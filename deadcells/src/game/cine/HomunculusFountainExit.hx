@@ -1,13 +1,18 @@
 package cine;
+
 class HomunculusFountainExit extends GameCinematic {
-  var hom: en.Homunculus.Homunculus;
+    public var hom: en.Homunculus;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function moveViewport(dx: Float, dy: Float) {}
+    public function moveViewport(arg0: Float, arg1: Float): Void {
+    }
 
-  function startSfxLoop(fadeOutS: Float) {}
+    public function startSfxLoop(arg0: Float): Void {
+    }
 
-  function homMoveY(y: Float, ms: Float) {}
+    public function homMoveY(arg0: Float, arg1: Float): Void {
+    }
 }
-

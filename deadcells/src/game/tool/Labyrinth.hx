@@ -1,37 +1,54 @@
 package tool;
-class Labyrinth {
-  var nodes: hl.types.ArrayObj<Dynamic>;
-  var width: Int;
-  var height: Int;
-  var startNode: LabyrinthNode;
-  var endNode: LabyrinthNode;
-
-  function __constructor__(width: Int, height: Int, startCoords: hl.types.ArrayBytes<Int>, endCoords: hl.types.ArrayBytes<Int>) {}
-
-  function getNode(x: Int, y: Int): LabyrinthNode {}
-
-  function buildGraph(rseed: libs.Rand.Rand) {}
-}
 
 class LabyrinthNode {
-  var x: Int;
-  var y: Int;
-  var parent: LabyrinthNode;
-  var children: hl.types.ArrayObj<Dynamic>;
-  var lab: tool.Labyrinth.Labyrinth;
+    public var x: Int;
+    public var y: Int;
+    public var parent: tool.LabyrinthNode;
+    public var children: Array<Dynamic>;
+    public var lab: tool.Labyrinth;
 
-  function __constructor__(x: Int, y: Int, lab: tool.Labyrinth.Labyrinth) {}
+    public function new(arg0: Int, arg1: Int, arg2: tool.Labyrinth) {
+    }
 
-  function get_direction(): Dynamic {}
+    public function get_direction(): tool.NodeDirection {
+        throw "stub: get_direction not decompiled";
+    }
 
-  function isAbove(n: LabyrinthNode): Bool {}
+    public function isAbove(arg0: tool.LabyrinthNode): Bool {
+        throw "stub: isAbove not decompiled";
+    }
 
-  function isBelow(n: LabyrinthNode): Bool {}
+    public function isBelow(arg0: tool.LabyrinthNode): Bool {
+        throw "stub: isBelow not decompiled";
+    }
 
-  function isLeftOf(n: LabyrinthNode): Bool {}
+    public function isLeftOf(arg0: tool.LabyrinthNode): Bool {
+        throw "stub: isLeftOf not decompiled";
+    }
 
-  function isRightOf(n: LabyrinthNode): Bool {}
+    public function isRightOf(arg0: tool.LabyrinthNode): Bool {
+        throw "stub: isRightOf not decompiled";
+    }
 
-  function isNeighborOf(n: LabyrinthNode): Bool {}
+    public function isNeighborOf(arg0: tool.LabyrinthNode): Bool {
+        throw "stub: isNeighborOf not decompiled";
+    }
 }
 
+class Labyrinth {
+    public var nodes: Array<Dynamic>;
+    public var width: Int;
+    public var height: Int;
+    public var startNode: tool.LabyrinthNode;
+    public var endNode: tool.LabyrinthNode;
+
+    public function new(arg0: Int, arg1: Int, arg2: Array<Int>, arg3: Array<Int>) {
+    }
+
+    public function getNode(arg0: Int, arg1: Int): tool.LabyrinthNode {
+        throw "stub: getNode not decompiled";
+    }
+
+    public function buildGraph(arg0: libs.Rand): Void {
+    }
+}

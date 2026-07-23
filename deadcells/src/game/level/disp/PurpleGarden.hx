@@ -1,69 +1,107 @@
 package level.disp;
+
 class Grid {
-  var leftPos: Int;
-  var rightPos: Int;
-  var yPos: Int;
+    public var leftPos: Int;
+    public var rightPos: Int;
+    public var yPos: Int;
 
-  function __constructor__(cx: Int, cy: Int, length: Dynamic) {}
+    public function new(arg0: Int, arg1: Int, arg2: Ref) {
+    }
 
-  function get_length(): Int {}
+    public function get_length(): Int {
+        throw "stub: get_length not decompiled";
+    }
 }
 
 class PurpleGarden extends level.BiomeDisp {
-  var sbGodRays: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
+    public var sbGodRays: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function initGroups() {}
+    public function initGroups(): Void {
+    }
 
-  function towerPartRand(n: Int, ratio: Float, lastFrame: Int): Int {}
+    public function towerPartRand(arg0: Int, arg1: Float, arg2: Int): Int {
+        throw "stub: towerPartRand not decompiled";
+    }
 
-  function placeTower(x: Float, y: Float, hei: Float, px: Float, py: Float, group: ParallaxGroup) {}
+    public function placeTower(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: ParallaxGroup): Void {
+    }
 
-  function renderBackWalls() {}
+    public override function renderBackWalls(): Void {
+    }
 
-  function renderBgGrids() {}
+    public function renderBgGrids(): Void {
+    }
 
-  function onAddParallax(inf: Dynamic, p: Parallax, pg: ParallaxGroup) {}
+    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    }
 
-  function parallaxHFill(p: ParallaxGroup, tiles: hl.types.ArrayObj<Dynamic>, inf: Dynamic, rng: Dynamic, onAdd: Dynamic, y: Dynamic, randomAdditionalTile: h2d.Tile.Tile) {}
+    public function parallaxHFill(arg0: ParallaxGroup, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Ref, arg6: h2d.Tile): Void {
+    }
 
-  function addColumns(r: level.Room.Room) {}
+    public function addColumns(arg0: level.Room): Void {
+    }
 
-  function addColumnsInArea(xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public function addColumnsInArea(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function addSmallWindows(z: level.DecoTypes.DecoTypes, tileNames: hl.types.ArrayObj<Dynamic>) {}
+    public function addSmallWindows(arg0: level.DecoZone, arg1: Array<Dynamic>): Void {
+    }
 
-  function fillHorizontalCenteredZone(z: level.DecoTypes.DecoTypes, marginX: Int, paddingX: Int, curY: Int, pivotX: Float, pivotY: Float, placeChance: Float, tileNames: hl.types.ArrayObj<Dynamic>, setFlags: Int, abortFlags: Int, requiredFlags: Int, group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, onAdd: Dynamic): Int {}
+    public function fillHorizontalCenteredZone(arg0: level.DecoZone, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Array<Dynamic>, arg8: Int, arg9: Int, arg10: Int, arg11: libs.heaps.StaticGeometryGroup, arg12: Dynamic): Int {
+        throw "stub: fillHorizontalCenteredZone not decompiled";
+    }
 
-  function fillHorizontalCentered(widthToFill: Int, marginX: Int, paddingX: Int, initX: Int, curY: Int, pivotX: Float, pivotY: Float, placeChance: Float, tileNames: hl.types.ArrayObj<Dynamic>, setFlags: Int, abortFlags: Int, requiredFlags: Int, group: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, onAdd: Dynamic): Int {}
+    public function fillHorizontalCentered(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: Float, arg7: Float, arg8: Array<Dynamic>, arg9: Int, arg10: Int, arg11: Int, arg12: libs.heaps.StaticGeometryGroup, arg13: Dynamic): Int {
+        throw "stub: fillHorizontalCentered not decompiled";
+    }
 
-  function isAboveGround(z: level.DecoTypes.DecoTypes): Bool {}
+    public function isAboveGround(arg0: level.DecoZone): Bool {
+        throw "stub: isAboveGround not decompiled";
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function shouldSkipLightPoint(px: Int, py: Int, maxDist: Int): Bool {}
+    public function shouldSkipLightPoint(arg0: Int, arg1: Int, arg2: Int): Bool {
+        throw "stub: shouldSkipLightPoint not decompiled";
+    }
 
-  function addLights(r: level.Room.Room) {}
+    public function addLights(arg0: level.Room): Void {
+    }
 
-  function addCarriageDoorLights(r: level.Room.Room) {}
+    public function addCarriageDoorLights(arg0: level.Room): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function clear() {}
+    public function clear(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function onAddWallJunk(deckEntry: Dynamic, px: Float, py: Float, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public override function onAddWallJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
+    }
 
-  function isOnlyCollision(cx: Int, cy: Int): Bool {}
+    public function isOnlyCollision(arg0: Int, arg1: Int): Bool {
+        throw "stub: isOnlyCollision not decompiled";
+    }
 
-  function hasNormalTransitions(cx: Int, cy: Int): Bool {}
+    public function hasNormalTransitions(arg0: Int, arg1: Int): Bool {
+        throw "stub: hasNormalTransitions not decompiled";
+    }
 
-  function renderWallTransitions() {}
+    public override function renderWallTransitions(): Void {
+    }
 
-  function renderCustomDeco(r: level.Room.Room) {}
+    public override function renderCustomDeco(arg0: level.Room): Void {
+    }
 }
-

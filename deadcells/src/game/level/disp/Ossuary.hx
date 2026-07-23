@@ -1,29 +1,41 @@
 package level.disp;
+
 class Ossuary extends level.BiomeDisp {
-  var frontBodyDeck: libs.RandDeck.RandDeck;
-  var backBodyDeck: libs.RandDeck.RandDeck;
-  var spikeDeck: libs.RandDeck.RandDeck;
-  var glowShader: shader.GlowKey.GlowKey;
-  var sbBodySmoke: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
+    public var frontBodyDeck: libs.RandDeck;
+    public var backBodyDeck: libs.RandDeck;
+    public var spikeDeck: libs.RandDeck;
+    public var glowShader: shader.GlowKey;
+    public var sbBodySmoke: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function getStampWallThreshold(): Float {}
+    public override function getStampWallThreshold(): Float {
+        throw "stub: getStampWallThreshold not decompiled";
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function addSmallArch(z: level.DecoTypes.DecoTypes) {}
+    public function addSmallArch(arg0: level.DecoZone): Void {
+    }
 
-  function addWallLight(r: level.Room.Room, px: Float, py: Float) {}
+    public function addWallLight(arg0: level.Room, arg1: Float, arg2: Float): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 }
-

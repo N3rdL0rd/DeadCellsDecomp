@@ -1,11 +1,13 @@
 package level;
+
 class CritterGen {
-  var level: pr.Level.Level;
-  var rseed: libs.Rand.Rand;
-  static var LAST_LOG: hl.types.ArrayObj<Dynamic>;
+    public static var LAST_LOG: Array<Dynamic>;
+    public var level: pr.Level;
+    public var rseed: libs.Rand;
 
-  function __constructor__(lvl: pr.Level.Level) {}
+    public function new(arg0: pr.Level) {
+    }
 
-  function generate() {}
+    public function generate(): Void {
+    }
 }
-

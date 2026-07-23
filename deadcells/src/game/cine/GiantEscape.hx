@@ -1,15 +1,19 @@
 package cine;
+
 class GiantEscape extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var diveZone: h2d.col.Bounds.Bounds;
-  var head: libs.heaps.slib.HSprite.HSprite;
-  var headTargetY: Float;
-  var rng: libs.Rand.Rand;
+    public var hero: en.Hero;
+    public var diveZone: h2d.col.Bounds;
+    public var head: libs.heaps.slib.HSprite;
+    public var headTargetY: Float;
+    public var rng: libs.Rand;
 
-  function __constructor__(h: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 }
-

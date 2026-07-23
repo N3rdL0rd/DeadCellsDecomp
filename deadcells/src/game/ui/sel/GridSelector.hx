@@ -1,98 +1,148 @@
 package ui.sel;
+
 class GridSelector extends ui.Process {
-  var controller: tool.Controller.Controller;
-  var mainFlow: h2d.Flow.Flow;
-  var title: ui.Text.Text;
-  var mask: h2d.Mask.Mask;
-  var inter: h2d.Interactive.Interactive;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
-  var fbItems: ui.FlowBox.FlowBox;
-  var wrapperItem: h2d.Object.Object;
-  var entries: hl.types.ArrayObj<Dynamic>;
-  var sections: hl.types.ArrayObj<Dynamic>;
-  var hei: Int;
-  var sectionIdx: Int;
-  var curX: Int;
-  var curY: Int;
-  var selectionSG: h2d.ScaleGrid.ScaleGrid;
-  var rightFlow: h2d.Flow.Flow;
-  var scrollTweenTime: Float;
-  var disableNextScrollTween: Bool;
-  var closeOnValidate: Bool;
-  var onClose: Dynamic;
-  var hasMoved: Bool;
+    public var controller: tool.ControllerAccess;
+    public var mainFlow: h2d.Flow;
+    public var title: ui.Text;
+    public var mask: h2d.Mask;
+    public var inter: h2d.Interactive;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
+    public var fbItems: ui.FlowBox;
+    public var wrapperItem: h2d.Object;
+    public var entries: Array<Dynamic>;
+    public var sections: Array<Dynamic>;
+    public var hei: Int;
+    public var sectionIdx: Int;
+    public var curX: Int;
+    public var curY: Int;
+    public var selectionSG: h2d.ScaleGrid;
+    public var rightFlow: h2d.Flow;
+    public var scrollTweenTime: Float;
+    public var disableNextScrollTween: Bool;
+    public var closeOnValidate: Bool;
+    public var onClose: Dynamic;
+    public var hasMoved: Bool;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function get_wid(): Int {}
+    public function get_wid(): Int {
+        throw "stub: get_wid not decompiled";
+    }
 
-  function get_maxPixelHei(): Int {}
+    public function get_maxPixelHei(): Int {
+        throw "stub: get_maxPixelHei not decompiled";
+    }
 
-  function get_entryWid(): Int {}
+    public function get_entryWid(): Int {
+        throw "stub: get_entryWid not decompiled";
+    }
 
-  function get_entryHei(): Int {}
+    public function get_entryHei(): Int {
+        throw "stub: get_entryHei not decompiled";
+    }
 
-  function pauseGame() {}
+    public function pauseGame(): Void {
+    }
 
-  function setControlLabel() {}
+    public function setControlLabel(): Void {
+    }
 
-  function getTitleText(): String {}
+    public function getTitleText(): String {
+        throw "stub: getTitleText not decompiled";
+    }
 
-  function isEntryLocked(i: Int): Bool {}
+    public function isEntryLocked(arg0: Int): Bool {
+        throw "stub: isEntryLocked not decompiled";
+    }
 
-  function getIconBmp(i: Int, p: h2d.Object.Object): h2d.Object.Object {}
+    public function getIconBmp(arg0: Int, arg1: h2d.Object): h2d.Object {
+        throw "stub: getIconBmp not decompiled";
+    }
 
-  function getLockSprite(p: h2d.Object.Object, i: Dynamic): h2d.Object.Object {}
+    public function getLockSprite(arg0: h2d.Object, arg1: Dynamic): h2d.Object {
+        throw "stub: getLockSprite not decompiled";
+    }
 
-  function initGrid() {}
+    public function initGrid(): Void {
+    }
 
-  function initEntries(size: Int) {}
+    public function initEntries(arg0: Int): Void {
+    }
 
-  function addSectionAt(sectionName: String, cy: Int, length: Int): Int {}
+    public function addSectionAt(arg0: String, arg1: Int, arg2: Int): Int {
+        throw "stub: addSectionAt not decompiled";
+    }
 
-  function createNewSectionText(f: h2d.Flow.Flow, sectionName: String): ui.Text.Text {}
+    public function createNewSectionText(arg0: h2d.Flow, arg1: String): ui.Text {
+        throw "stub: createNewSectionText not decompiled";
+    }
 
-  function addEntryAt(i: Int, cx: Int, cy: Int, sectionIdx: Dynamic): Dynamic {}
+    public function addEntryAt(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Dynamic {
+        throw "stub: addEntryAt not decompiled";
+    }
 
-  function initRightFlow() {}
+    public function initRightFlow(): Void {
+    }
 
-  function getEntryAt(cx: Int, cy: Int): Dynamic {}
+    public function getEntryAt(arg0: Int, arg1: Int): Dynamic {
+        throw "stub: getEntryAt not decompiled";
+    }
 
-  function moveSelection(dx: Int, dy: Int, scroll: Dynamic, wrapAround: Dynamic, forceUpdate: Dynamic) {}
+    public function moveSelection(arg0: Int, arg1: Int, arg2: Ref, arg3: Ref, arg4: Ref): Void {
+    }
 
-  function selectEntry(entry: Dynamic, scroll: Dynamic) {}
+    public function selectEntry(arg0: Dynamic, arg1: Ref): Void {
+    }
 
-  function selectEntryAt(cx: Int, cy: Int, scroll: Dynamic) {}
+    public function selectEntryAt(arg0: Int, arg1: Int, arg2: Ref): Void {
+    }
 
-  function beforeUpdateSelection() {}
+    public function beforeUpdateSelection(): Void {
+    }
 
-  function updateSelection(scroll: Dynamic) {}
+    public function updateSelection(arg0: Ref): Void {
+    }
 
-  function updateRightFlow() {}
+    public function updateRightFlow(): Void {
+    }
 
-  function updateScrollingBox() {}
+    public function updateScrollingBox(): Void {
+    }
 
-  function disableScrollTweenOnce() {}
+    public function disableScrollTweenOnce(): Void {
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function setMainFlowPos() {}
+    public function setMainFlowPos(): Void {
+    }
 
-  function close() {}
+    public function close(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function controlsUpdate(): Bool {}
+    public function controlsUpdate(): Bool {
+        throw "stub: controlsUpdate not decompiled";
+    }
 
-  function controlMoveCheck(act: Int, dx: Int, dy: Int, forceWrapAround: Dynamic) {}
+    public function controlMoveCheck(arg0: Int, arg1: Int, arg2: Int, arg3: Ref): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function setOnCloseCallback(callback: Dynamic) {}
+    public function setOnCloseCallback(arg0: Dynamic): Void {
+    }
 }
-

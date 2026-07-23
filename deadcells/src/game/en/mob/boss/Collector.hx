@@ -1,171 +1,248 @@
 package en.mob.boss;
+
 class Collector extends en.mob.Boss {
-  var mode: Dynamic;
-  var lastMode: Dynamic;
-  var phase: Int;
-  var phaseTimer: Float;
-  var initialTimer: Float;
-  var stepPhase1: Int;
-  var stepPhase2: Int;
-  var stepPhase3: Int;
-  var isSafe: Bool;
-  var rseed: libs.Rand.Rand;
-  var hasBeenInterrupted: Bool;
-  var cxsBomb: hl.types.ArrayBytes<Int>;
-  var cyBomb: Int;
-  var numAtkBeforePause: Int;
-  var switchRoomSkill: tool.skill.OldSkill.OldSkill;
-  var drinkPhase: Int;
-  var hasDrink: Bool;
-  var powerHeal: pow.Heal.Heal;
-  var smallDashSkill: tool.skill.OldSkill.OldSkill;
-  var smallDashArea: tool.Area.Area;
-  var curSmallDash: Int;
-  var bigStompSkill: tool.skill.OldSkill.OldSkill;
-  var orgues: hl.types.ArrayObj<Dynamic>;
-  var spinSkill: tool.skill.OldSkill.OldSkill;
-  var spinSpeed: Float;
-  var spinArea: tool.Area.Area;
-  var ringPortal: libs.heaps.slib.HSprite.HSprite;
-  var throwBombSkill: tool.skill.OldSkill.OldSkill;
-  var laserBeamSkill: tool.skill.OldSkill.OldSkill;
-  var laserBeamArea: tool.Area.Area;
-  var curLaser: Int;
-  var fxLaserBeam: libs.heaps.slib.HSprite.HSprite;
-  var fireWallsSkill: tool.skill.OldSkill.OldSkill;
-  var curFW: Int;
-  var energyBallSkill: tool.skill.OldSkill.OldSkill;
-  var curEB: Int;
-  var randomSay: hl.types.ArrayObj<Dynamic>;
-  var currentSay: Int;
-  var arMobLevel1: hl.types.ArrayObj<Dynamic>;
-  var arMobLevel2: hl.types.ArrayObj<Dynamic>;
-  var arMobLevel3: hl.types.ArrayObj<Dynamic>;
-  var sbFx: libs.heaps.slib.HSprite.HSpriteBatch;
-  var arSBAngle: hl.types.ArrayBytes<Float>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var mode: en.mob.boss.BCMode;
+    public var lastMode: en.mob.boss.BCMode;
+    public var phase: Int;
+    public var phaseTimer: Float;
+    public var initialTimer: Float;
+    public var stepPhase1: Int;
+    public var stepPhase2: Int;
+    public var stepPhase3: Int;
+    public var isSafe: Bool;
+    public var rseed: libs.Rand;
+    public var hasBeenInterrupted: Bool;
+    public var cxsBomb: Array<Int>;
+    public var cyBomb: Int;
+    public var numAtkBeforePause: Int;
+    public var switchRoomSkill: tool.skill.OldSkill;
+    public var drinkPhase: Int;
+    public var hasDrink: Bool;
+    public var powerHeal: pow.Heal;
+    public var smallDashSkill: tool.skill.OldSkill;
+    public var smallDashArea: tool.Area;
+    public var curSmallDash: Int;
+    public var bigStompSkill: tool.skill.OldSkill;
+    public var orgues: Array<Dynamic>;
+    public var spinSkill: tool.skill.OldSkill;
+    public var spinSpeed: Float;
+    public var spinArea: tool.Area;
+    public var ringPortal: libs.heaps.slib.HSprite;
+    public var throwBombSkill: tool.skill.OldSkill;
+    public var laserBeamSkill: tool.skill.OldSkill;
+    public var laserBeamArea: tool.Area;
+    public var curLaser: Int;
+    public var fxLaserBeam: libs.heaps.slib.HSprite;
+    public var fireWallsSkill: tool.skill.OldSkill;
+    public var curFW: Int;
+    public var energyBallSkill: tool.skill.OldSkill;
+    public var curEB: Int;
+    public var randomSay: Array<Dynamic>;
+    public var currentSay: Int;
+    public var arMobLevel1: Array<Dynamic>;
+    public var arMobLevel2: Array<Dynamic>;
+    public var arMobLevel3: Array<Dynamic>;
+    public var sbFx: libs.heaps.slib.HSpriteBatch;
+    public var arSBAngle: Array<Float>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, forRTC: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Ref) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, forRTC: Dynamic): Collector {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Ref): en.mob.boss.Collector {
+        throw "stub: create not decompiled";
+    }
 
-  function initLife(v: Float, max: Dynamic) {}
+    public function initLife(arg0: Float, arg1: Dynamic): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initSpeechDeck() {}
+    public function initSpeechDeck(): Void {
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function talkFor(s: Float) {}
+    public function talkFor(arg0: Float): Void {
+    }
 
-  function say(str: String, bgCol: Dynamic, offsetX: Dynamic, offsetY: Dynamic) {}
+    public function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function setReady() {}
+    public override function setReady(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function aiLocked(): Bool {}
+    public function aiLocked(): Bool {
+        throw "stub: aiLocked not decompiled";
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function initSkills() {}
+    public function initSkills(): Void {
+    }
 
-  function addOrgue(tcx: Int, tcy: Int) {}
+    public function addOrgue(arg0: Int, arg1: Int): Void {
+    }
 
-  function canDash(): Bool {}
+    public function canDash(): Bool {
+        throw "stub: canDash not decompiled";
+    }
 
-  function initDashPhase() {}
+    public function initDashPhase(): Void {
+    }
 
-  function checkDashHit() {}
+    public function checkDashHit(): Void {
+    }
 
-  function endDashPhase(interrupt: Bool) {}
+    public function endDashPhase(arg0: Bool): Void {
+    }
 
-  function canSpin(): Bool {}
+    public function canSpin(): Bool {
+        throw "stub: canSpin not decompiled";
+    }
 
-  function stopSpin() {}
+    public function stopSpin(): Void {
+    }
 
-  function canBigStomp(): Bool {}
+    public function canBigStomp(): Bool {
+        throw "stub: canBigStomp not decompiled";
+    }
 
-  function initPopSpikeBall() {}
+    public function initPopSpikeBall(): Void {
+    }
 
-  function popSpikeBall() {}
+    public function popSpikeBall(): Void {
+    }
 
-  function endPopSpikeBall() {}
+    public function endPopSpikeBall(): Void {
+    }
 
-  function initLaserBeamPhase() {}
+    public function initLaserBeamPhase(): Void {
+    }
 
-  function endLaserBeamPhase(interrupt: Bool) {}
+    public function endLaserBeamPhase(arg0: Bool): Void {
+    }
 
-  function initFWPhase() {}
+    public function initFWPhase(): Void {
+    }
 
-  function endFWPhase() {}
+    public function endFWPhase(): Void {
+    }
 
-  function initEnergyBallPhase() {}
+    public function initEnergyBallPhase(): Void {
+    }
 
-  function endEnergyBallPhase() {}
+    public function endEnergyBallPhase(): Void {
+    }
 
-  function prepareDrink() {}
+    public function prepareDrink(): Void {
+    }
 
-  function endDrinkPhase(onReload: Dynamic) {}
+    public function endDrinkPhase(arg0: Ref): Void {
+    }
 
-  function loseDrink() {}
+    public function loseDrink(): Void {
+    }
 
-  function canSwitchPhase(): Bool {}
+    public function canSwitchPhase(): Bool {
+        throw "stub: canSwitchPhase not decompiled";
+    }
 
-  function canSwitchDrinkPhase(): Bool {}
+    public function canSwitchDrinkPhase(): Bool {
+        throw "stub: canSwitchDrinkPhase not decompiled";
+    }
 
-  function getDamageReduction(ad: tool.atk.AttackData.AttackData): Float {}
+    public function getDamageReduction(arg0: tool.atk.AttackData): Float {
+        throw "stub: getDamageReduction not decompiled";
+    }
 
-  function behaviourAi() {}
+    public function behaviourAi(): Void {
+    }
 
-  function spawnMob() {}
+    public function spawnMob(): Void {
+    }
 
-  function spawnBomb() {}
+    public function spawnBomb(): Void {
+    }
 
-  function mobsAreDead(): Bool {}
+    public function mobsAreDead(): Bool {
+        throw "stub: mobsAreDead not decompiled";
+    }
 
-  function backToFight() {}
+    public function backToFight(): Void {
+    }
 
-  function checkForExecute(a: tool.atk.AttackData.AttackData) {}
+    public function checkForExecute(arg0: tool.atk.AttackData): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onLastHit(): Dynamic {}
+    public function onLastHit(): cine.coll.EndCollectorPreSmash {
+        throw "stub: onLastHit not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function dropLoot() {}
+    public function dropLoot(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onStep() {}
+    public function onStep(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function giveHeadFeedback(headItem: String) {}
+    public override function giveHeadFeedback(arg0: String): Void {
+    }
 
-  function giveHeads() {}
+    public override function giveHeads(): Void {
+    }
 
-  function disposeGfx() {}
+    public function disposeGfx(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

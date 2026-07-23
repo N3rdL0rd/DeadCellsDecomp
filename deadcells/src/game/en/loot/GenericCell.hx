@@ -1,46 +1,67 @@
 package en.loot;
+
 class GenericCell extends en.Loot {
-  var stuckToHead: Bool;
-  var scale: Float;
-  var cell: ui.UpgradeCell.UpgradeCell;
-  var smokeColor: Int;
-  var hasLight: Bool;
-  var disableStats: Bool;
-  var value: Int;
-  var colorOverride: Dynamic;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var stuckToHead: Bool;
+    public var scale: Float;
+    public var cell: ui.UpgradeCell;
+    public var smokeColor: Int;
+    public var hasLight: Bool;
+    public var disableStats: Bool;
+    public var value: Int;
+    public var colorOverride: Dynamic;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, hasLight: Dynamic, scale: Dynamic, colorOverride: Dynamic): GenericCell {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Ref, arg5: Dynamic) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, hasLight: Dynamic, scale: Dynamic, colorOverride: Dynamic) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Ref, arg5: Dynamic): en.loot.GenericCell {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onFatalFallDamage() {}
+    public function onFatalFallDamage(): Void {
+    }
 
-  function pickUp(h: en.Hero.Hero) {}
+    public override function pickUp(arg0: en.Hero): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function updateMagnet(pow: Float) {}
+    public override function updateMagnet(arg0: Float): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

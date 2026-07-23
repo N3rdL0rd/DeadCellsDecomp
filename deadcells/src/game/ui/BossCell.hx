@@ -1,28 +1,35 @@
 package ui;
-class BossCell extends libs.Process.Process {
-  var hasShineFx: Bool;
-  var inTube: Bool;
-  var wid: Int;
-  var backSmoke: hl.types.ArrayObj<Dynamic>;
-  var cores: hl.types.ArrayObj<Dynamic>;
-  var coreLight: libs.heaps.slib.HSprite.HSprite;
-  var phong: libs.heaps.slib.HSprite.HSprite;
-  var id: Int;
-  var fxAddSb: h2d.SpriteBatch.SpriteBatch;
-  var fxNormalSb: h2d.SpriteBatch.SpriteBatch;
-  var fxPool: libs.heaps.HParticle.HParticle;
-  var isVisible: Bool;
 
-  function __constructor__(p: libs.Process.Process) {}
+class BossCell extends libs.Process {
+    public var hasShineFx: Bool;
+    public var inTube: Bool;
+    public var wid: Int;
+    public var backSmoke: Array<Dynamic>;
+    public var cores: Array<Dynamic>;
+    public var coreLight: libs.heaps.slib.HSprite;
+    public var phong: libs.heaps.slib.HSprite;
+    public var id: Int;
+    public var fxAddSb: h2d.SpriteBatch;
+    public var fxNormalSb: h2d.SpriteBatch;
+    public var fxPool: libs.heaps.ParticlePool;
+    public var isVisible: Bool;
 
-  function fxNucleus() {}
+    public function new(arg0: libs.Process) {
+        super();
+    }
 
-  function fxPlanets() {}
+    public function fxNucleus(): Void {
+    }
 
-  function onDispose() {}
+    public function fxPlanets(): Void {
+    }
 
-  function postUpdate() {}
+    public override function onDispose(): Void {
+    }
 
-  function setVisibility(isVisible: Bool) {}
+    public override function postUpdate(): Void {
+    }
+
+    public function setVisibility(arg0: Bool): Void {
+    }
 }
-

@@ -1,24 +1,34 @@
 package level.struct;
+
 class Swamp extends level.LevelStruct {
-  var trees: hl.types.ArrayObj<Dynamic>;
-  var treeIds: hl.types.ArrayBytes<Int>;
-  var exitTreeId: Int;
-  var branchCrosses: haxe.ds.IntMap<Dynamic>;
+    public var trees: Array<Dynamic>;
+    public var treeIds: Array<Int>;
+    public var exitTreeId: Int;
+    public var branchCrosses: haxe.ds.IntMap;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function getEnds(node: level.RoomNode.RoomNode, ends: hl.types.ArrayObj<Dynamic>, checkAnyway: Dynamic) {}
+    public function getEnds(arg0: level.RoomNode, arg1: Array<Dynamic>, arg2: Ref): Void {
+    }
 
-  function createBranch(room: level.RoomNode.RoomNode, treeId: Dynamic) {}
+    public function createBranch(arg0: level.RoomNode, arg1: Ref): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 
-  function addLoreRoom(lore: Dynamic, overrideStructMode: Dynamic) {}
+    public override function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 }
-

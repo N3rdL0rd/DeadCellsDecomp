@@ -1,469 +1,768 @@
 package en;
+
 class Mob extends Entity {
-  var type: String;
-  var _infos: Dynamic;
-  var forcedBlueprint: String;
-  var delayedVolte: Dynamic;
-  var allowHitOverlapAnims: Bool;
-  var attackeds: haxe.ds.IntMap<Dynamic>;
-  var oldSkills: hl.types.ArrayObj<Dynamic>;
-  var skills: hl.types.ArrayObj<Dynamic>;
-  var queuedOldSkill: Dynamic;
-  var queuedSkill: Dynamic;
-  var baseMoveSpeedMul: Float;
-  var baseMovePauseMul: Float;
-  var move: tool.AutoMove.AutoMove;
-  var pfEndMinDist: Int;
-  var threatList: hl.types.ArrayObj<Dynamic>;
-  var aTarget: Entity;
-  var nemesisTarget: Entity;
-  var elite: Bool;
-  var loots: hl.types.ArrayObj<Dynamic>;
-  var lootDropDelay: Float;
-  var multGlobalCD: Float;
-  var trueLifeTier: Int;
-  var eliteSkillId: String;
-  var aggrTeleport: tool.skill.OldSkill.OldSkill;
-  var necroTeleport: tool.skill.OldSkill.OldSkill;
-  var btTarget: tool.CPoint.CPoint;
-  var eTeleport: tool.skill.OldSkill.OldSkill;
-  var etTarget: tool.CPoint.CPoint;
-  var eSpecialInfos: Dynamic;
-  var eSpecialAtkUpdate: Dynamic;
-  var eSpecialAtkInterrupt: Dynamic;
-  var revive: tool.skill.OldSkill.OldSkill;
-  var revivals: Int;
-  var hidden: Bool;
-  var revealer: Entity;
-  var revealDurationS: Float;
-  var flawlessLoots: hl.types.ArrayObj<Dynamic>;
-  var disableSplatter: Bool;
-  var disableDeathSplatter: Bool;
-  var forceBodyPart: Bool;
-  var useBodyParts: Bool;
-  var minPfSize: Int;
-  var animationTracks: haxe.ds.StringMap;
-  var particleEmitters: hl.types.ArrayObj<Dynamic>;
-  var thawMaxStacks: Int;
-  var thawMinDiminushingFactor: Int;
-  var thawMaxDiminushingFactor: Int;
-  var moveWalkSpeed: Float;
-  var moveWalkPause: Float;
-  var threatDistanceAttack: Float;
-  var threatChangeTargetThreshold: Float;
-  var threatDecrease: Float;
-  var threatDecreaseDelayLastIncrement: Float;
-  var threatIncrementStep: Float;
-  var threatMaxScore: Float;
-  var threatTouchIncrementStep: Float;
-  var threatTouchMaxScore: Float;
-  var detectRangeFacing: Float;
-  var detectRangeBehind: Float;
-  var poisonPropagationRange: Int;
-  var poisonMinDuration: Float;
-  var poisonDamageRatio: Float;
-  var poisonCountLimit: Int;
-  var poisonAOEDuration: Float;
-  var poisonAOEDotDuration: Float;
-  var infectionReductionOnMobKill: Float;
-  var infectionReductionOnEliteKill: Float;
-  var infectionReductionOnBossKill: Float;
-  var breachDamageThreshold: Float;
-  var breachStunDuration: Float;
-  var breachDamageReduction: Float;
-  var fallSplashDamageFactor: Float;
-  var fallSplashDamageRange: Float;
-  var fallMobLowDamage: Float;
-  var fallMobHighDamage: Float;
-  var fallMobForceDamage: Float;
-  var fallMobForceSplashDamage: Float;
-  var modBloodthirstHealPercentage: Float;
-  var modBloodthirstHealSuspend: Float;
-  var modDeathGrenadeTimer: Float;
-  var modDeathGrenadeRadius: Float;
-  var modDeathGrenadeDamage: Float;
-  var bleedMaxStack: Int;
-  var scoreModeEliteValue: Int;
-  var diminishingReturnFallOff: Float;
-  var timeDistorsionFactor: Float;
-  var petrificationFallDamageFactor: Float;
-  var lockAttackAngleDelay: Float;
-  var darknessReductionOnKill: Float;
-  var wetStatusDuration: Float;
-  var isHitAddInfection: Bool;
-  var breachDamage: Float;
-  var pawGroundOffset: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var type: String;
+    public var _infos: Dynamic;
+    public var forcedBlueprint: String;
+    public var delayedVolte: Dynamic;
+    public var allowHitOverlapAnims: Bool;
+    public var attackeds: haxe.ds.IntMap;
+    public var oldSkills: Array<Dynamic>;
+    public var skills: Array<Dynamic>;
+    public var queuedOldSkill: Dynamic;
+    public var queuedSkill: Dynamic;
+    public var baseMoveSpeedMul: Float;
+    public var baseMovePauseMul: Float;
+    public var move: tool.AutoMove;
+    public var pfEndMinDist: Int;
+    public var threatList: Array<Dynamic>;
+    public var aTarget: Entity;
+    public var nemesisTarget: Entity;
+    public var elite: Bool;
+    public var loots: Array<Dynamic>;
+    public var lootDropDelay: Float;
+    public var multGlobalCD: Float;
+    public var trueLifeTier: Int;
+    public var eliteSkillId: String;
+    public var aggrTeleport: tool.skill.OldSkill;
+    public var necroTeleport: tool.skill.OldSkill;
+    public var btTarget: tool.CPoint;
+    public var eTeleport: tool.skill.OldSkill;
+    public var etTarget: tool.CPoint;
+    public var eSpecialInfos: Dynamic;
+    public var eSpecialAtkUpdate: Dynamic;
+    public var eSpecialAtkInterrupt: Dynamic;
+    public var revive: tool.skill.OldSkill;
+    public var revivals: Int;
+    public var hidden: Bool;
+    public var revealer: Entity;
+    public var revealDurationS: Float;
+    public var flawlessLoots: Array<Dynamic>;
+    public var disableSplatter: Bool;
+    public var disableDeathSplatter: Bool;
+    public var forceBodyPart: Bool;
+    public var useBodyParts: Bool;
+    public var minPfSize: Int;
+    public var animationTracks: haxe.ds.StringMap;
+    public var particleEmitters: Array<Dynamic>;
+    public var thawMaxStacks: Int;
+    public var thawMinDiminushingFactor: Int;
+    public var thawMaxDiminushingFactor: Int;
+    public var moveWalkSpeed: Float;
+    public var moveWalkPause: Float;
+    public var threatDistanceAttack: Float;
+    public var threatChangeTargetThreshold: Float;
+    public var threatDecrease: Float;
+    public var threatDecreaseDelayLastIncrement: Float;
+    public var threatIncrementStep: Float;
+    public var threatMaxScore: Float;
+    public var threatTouchIncrementStep: Float;
+    public var threatTouchMaxScore: Float;
+    public var detectRangeFacing: Float;
+    public var detectRangeBehind: Float;
+    public var poisonPropagationRange: Int;
+    public var poisonMinDuration: Float;
+    public var poisonDamageRatio: Float;
+    public var poisonCountLimit: Int;
+    public var poisonAOEDuration: Float;
+    public var poisonAOEDotDuration: Float;
+    public var infectionReductionOnMobKill: Float;
+    public var infectionReductionOnEliteKill: Float;
+    public var infectionReductionOnBossKill: Float;
+    public var breachDamageThreshold: Float;
+    public var breachStunDuration: Float;
+    public var breachDamageReduction: Float;
+    public var fallSplashDamageFactor: Float;
+    public var fallSplashDamageRange: Float;
+    public var fallMobLowDamage: Float;
+    public var fallMobHighDamage: Float;
+    public var fallMobForceDamage: Float;
+    public var fallMobForceSplashDamage: Float;
+    public var modBloodthirstHealPercentage: Float;
+    public var modBloodthirstHealSuspend: Float;
+    public var modDeathGrenadeTimer: Float;
+    public var modDeathGrenadeRadius: Float;
+    public var modDeathGrenadeDamage: Float;
+    public var bleedMaxStack: Int;
+    public var scoreModeEliteValue: Int;
+    public var diminishingReturnFallOff: Float;
+    public var timeDistorsionFactor: Float;
+    public var petrificationFallDamageFactor: Float;
+    public var lockAttackAngleDelay: Float;
+    public var darknessReductionOnKill: Float;
+    public var wetStatusDuration: Float;
+    public var isHitAddInfection: Bool;
+    public var breachDamage: Float;
+    public var pawGroundOffset: Int;
+
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+        super();
+    }
+
+    public static function create(arg0: String, arg1: pr.Level, arg2: Int, arg3: Int, arg4: Int, arg5: Ref): en.Mob {
+        throw "stub: create not decompiled";
+    }
 
-  function onBodyPartCreated(bodyParts: hl.types.ArrayObj<Dynamic>) {}
+    public static function createSideKick(arg0: en.Hero, arg1: String, arg2: Int, arg3: Int, arg4: Int): en.Mob {
+        throw "stub: createSideKick not decompiled";
+    }
 
-  static function create(k: String, level: pr.Level.Level, cx: Int, cy: Int, dmgTier: Int, lifeTier: Dynamic): Mob {}
+    public function addAttack_tool_skill_mobSkill_Melee(arg0: hl.Class, arg1: String): tool.skill.mobSkill.Melee {
+        throw "stub: addAttack_tool_skill_mobSkill_Melee not decompiled";
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, kind: String, dmgTier: Int, lifeTier: Int) {}
+    public function addAttack_tool_skill_OldMobSkill(arg0: hl.Class, arg1: String): tool.skill.OldMobSkill {
+        throw "stub: addAttack_tool_skill_OldMobSkill not decompiled";
+    }
 
-  static function createSideKick(h: en.Hero.Hero, k: String, cx: Int, cy: Int, tier: Int): Mob {}
+    public function addAttack_tool_skill_mobSkill_TeleJump(arg0: hl.Class, arg1: String): tool.skill.mobSkill.TeleJump {
+        throw "stub: addAttack_tool_skill_mobSkill_TeleJump not decompiled";
+    }
 
-  function addAttack_tool_skill_mobSkill_Melee(atkType: hl.Class, id: String): tool.skill.mobSkill.Melee.Melee {}
+    public function get_mvWalk(): tool.mv.MobWalk {
+        throw "stub: get_mvWalk not decompiled";
+    }
 
-  function addAttack_tool_skill_OldMobSkill(atkType: hl.Class, id: String): tool.skill.OldMobSkill.OldMobSkill {}
+    public function get_mvFly(): tool.mv.MvFly {
+        throw "stub: get_mvFly not decompiled";
+    }
 
-  function addAttack_tool_skill_mobSkill_TeleJump(atkType: hl.Class, id: String): tool.skill.mobSkill.TeleJump.TeleJump {}
+    public function get_mvBounce(): tool.mv.MobWalkBounce {
+        throw "stub: get_mvBounce not decompiled";
+    }
 
-  function get_mvWalk(): tool.mv.MobWalk.MobWalk {}
+    public function seeThroughOneWays(arg0: Entity): Bool {
+        throw "stub: seeThroughOneWays not decompiled";
+    }
 
-  function get_mvFly(): tool.mv.MvFly.MvFly {}
+    public function get_flying(): Bool {
+        throw "stub: get_flying not decompiled";
+    }
 
-  function get_mvBounce(): tool.mv.MobWalk.MobWalkBounce {}
+    public function get_slowPerStack(): Float {
+        throw "stub: get_slowPerStack not decompiled";
+    }
 
-  function seeThroughOneWays(e: Entity): Bool {}
+    public function get_slowFactor(): Float {
+        throw "stub: get_slowFactor not decompiled";
+    }
 
-  function get_flying(): Bool {}
+    public override function createAttackSource(): Void {
+    }
 
-  function get_slowPerStack(): Float {}
+    public override function createAttackTarget(): Void {
+    }
 
-  function get_slowFactor(): Float {}
+    public override function get_tmod(): Float {
+        throw "stub: get_tmod not decompiled";
+    }
 
-  function createAttackSource() {}
+    public override function initLife(arg0: Float, arg1: Dynamic): Void {
+    }
 
-  function createAttackTarget() {}
+    public override function init(): Void {
+    }
 
-  function get_tmod(): Float {}
+    public function initCDBData(): Void {
+    }
 
-  function initLife(v: Float, max: Dynamic) {}
+    public function onMobAlphaChanged(arg0: Float, arg1: Float): Void {
+    }
 
-  function init() {}
+    public function reloadLife(): Void {
+    }
 
-  function initCDBData() {}
+    public function callInitLife(): Void {
+    }
 
-  function onMobAlphaChanged(oldVal: Float, newVal: Float) {}
+    public override function initGfx(): Void {
+    }
 
-  function reloadLife() {}
+    public function getMobSprites(): Array<Dynamic> {
+        throw "stub: getMobSprites not decompiled";
+    }
 
-  function callInitLife() {}
+    public function canApplyColorSwap(): Bool {
+        throw "stub: canApplyColorSwap not decompiled";
+    }
 
-  function initGfx() {}
+    public function applyColorSwap(): Void {
+    }
 
-  function getMobSprites(): hl.types.ArrayObj<Dynamic> {}
+    public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function canApplyColorSwap(): Bool {}
+    public function canBeGrabbedByHomunculus(): Bool {
+        throw "stub: canBeGrabbedByHomunculus not decompiled";
+    }
 
-  function applyColorSwap() {}
+    public function isSideKick(): Bool {
+        throw "stub: isSideKick not decompiled";
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public override function invisibilitySuspended(): Bool {
+        throw "stub: invisibilitySuspended not decompiled";
+    }
 
-  function canBeGrabbedByHomunculus(): Bool {}
+    public function initMove(): Void {
+    }
 
-  function isSideKick(): Bool {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function invisibilitySuspended(): Bool {}
+    public function isWalking(): Bool {
+        throw "stub: isWalking not decompiled";
+    }
 
-  function initMove() {}
+    public function isMovingAtWalkSpeed(): Bool {
+        throw "stub: isMovingAtWalkSpeed not decompiled";
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onDetectRevealer(arg0: en.Hero): Void {
+    }
 
-  function isWalking(): Bool {}
+    public function hide(arg0: Float): Void {
+    }
 
-  function isMovingAtWalkSpeed(): Bool {}
+    public function onRevealComplete(): Void {
+    }
 
-  function onDetectRevealer(h: en.Hero.Hero) {}
+    public function reveal(): Void {
+    }
 
-  function hide(revealDurationS: Float) {}
+    public function delayedRevealS(arg0: Float): Void {
+    }
 
-  function onRevealComplete() {}
+    public function canBeElite(): Bool {
+        throw "stub: canBeElite not decompiled";
+    }
 
-  function reveal() {}
+    public function setElite(arg0: Bool): Void {
+    }
 
-  function delayedRevealS(s: Float) {}
+    public function turnIntoPokebombElite(): en.Mob {
+        throw "stub: turnIntoPokebombElite not decompiled";
+    }
 
-  function canBeElite(): Bool {}
+    public function getAltEliteForm(): String {
+        throw "stub: getAltEliteForm not decompiled";
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public function initPokebombElite(arg0: en.Mob): en.Mob {
+        throw "stub: initPokebombElite not decompiled";
+    }
 
-  function turnIntoPokebombElite(): Mob {}
+    public function lookAtDelayed(arg0: Entity): Bool {
+        throw "stub: lookAtDelayed not decompiled";
+    }
 
-  function getAltEliteForm(): String {}
+    public function onDelayedVolteStart(): Void {
+    }
 
-  function initPokebombElite(e: Mob): Mob {}
+    public function onDelayedVolteCancel(): Void {
+    }
 
-  function lookAtDelayed(e: Entity): Bool {}
+    public function onDelayedVolteDone(): Void {
+    }
 
-  function onDelayedVolteStart() {}
+    public function setDirDelayed(arg0: Int): Bool {
+        throw "stub: setDirDelayed not decompiled";
+    }
 
-  function onDelayedVolteCancel() {}
+    public function getVolteDelay(): Float {
+        throw "stub: getVolteDelay not decompiled";
+    }
 
-  function onDelayedVolteDone() {}
+    public override function lookAt(arg0: Entity): Void {
+    }
 
-  function setDirDelayed(d: Int): Bool {}
+    public function getOldSkillInfos(arg0: String): Dynamic {
+        throw "stub: getOldSkillInfos not decompiled";
+    }
 
-  function getVolteDelay(): Float {}
+    public function getSkillInfos(arg0: String): Dynamic {
+        throw "stub: getSkillInfos not decompiled";
+    }
 
-  function lookAt(e: Entity) {}
+    public function getEliteSkillInfos(arg0: String): Dynamic {
+        throw "stub: getEliteSkillInfos not decompiled";
+    }
 
-  function getOldSkillInfos(id: String): Dynamic {}
+    public function canTeleportNow(): Bool {
+        throw "stub: canTeleportNow not decompiled";
+    }
 
-  function getSkillInfos(id: String): Dynamic {}
+    public function canUseAggressiveTeleport(): Bool {
+        throw "stub: canUseAggressiveTeleport not decompiled";
+    }
 
-  function getEliteSkillInfos(id: String): Dynamic {}
+    public function setChargeTimerForAggressiveTeleport(arg0: Float): Void {
+    }
 
-  function canTeleportNow(): Bool {}
+    public function resetChargeTimerForAggressiveTeleport(): Void {
+    }
 
-  function canUseAggressiveTeleport(): Bool {}
+    public function initSkills(): Void {
+    }
 
-  function setChargeTimerForAggressiveTeleport(value: Float) {}
+    public function queueAttack(arg0: tool.skill.OldMobSkill, arg1: Bool, arg2: Dynamic): Void {
+    }
 
-  function resetChargeTimerForAggressiveTeleport() {}
+    public function resetQueuedOldSkill(): Void {
+    }
 
-  function initSkills() {}
+    public function shortCautiousJump(arg0: Int, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function queueAttack(a: tool.skill.OldMobSkill.OldMobSkill, requiresTargetInArea: Bool, data: Dynamic) {}
+    public function createOldMobSkill(arg0: Dynamic): tool.skill.OldMobSkill {
+        throw "stub: createOldMobSkill not decompiled";
+    }
 
-  function resetQueuedOldSkill() {}
+    public function createOldSkill(arg0: String, arg1: Dynamic): tool.skill.OldSkill {
+        throw "stub: createOldSkill not decompiled";
+    }
 
-  function shortCautiousJump(jDir: Int, dCase: Float, spd: Dynamic) {}
+    public function hasOldSkill(arg0: String): Bool {
+        throw "stub: hasOldSkill not decompiled";
+    }
 
-  function createOldMobSkill(inf: Dynamic): tool.skill.OldMobSkill.OldMobSkill {}
+    public function getOldSkill(arg0: String): tool.skill.OldSkill {
+        throw "stub: getOldSkill not decompiled";
+    }
 
-  function createOldSkill(id: String, cb: Dynamic): tool.skill.OldSkill.OldSkill {}
+    public function getSkill(arg0: String): tool.skill.Skill {
+        throw "stub: getSkill not decompiled";
+    }
 
-  function hasOldSkill(id: String): Bool {}
+    public function getChargingOldSkill(): tool.skill.OldSkill {
+        throw "stub: getChargingOldSkill not decompiled";
+    }
 
-  function getOldSkill(id: String): tool.skill.OldSkill.OldSkill {}
+    public function getChargingNewSkill(): tool.skill.Skill {
+        throw "stub: getChargingNewSkill not decompiled";
+    }
 
-  function getSkill(id: String): tool.skill.Skill.Skill {}
+    public function isChargingSkill(arg0: String): Bool {
+        throw "stub: isChargingSkill not decompiled";
+    }
 
-  function getChargingOldSkill(): tool.skill.OldSkill.OldSkill {}
+    public function isChargingOldSkill(arg0: String): Bool {
+        throw "stub: isChargingOldSkill not decompiled";
+    }
 
-  function getChargingNewSkill(): tool.skill.Skill.Skill {}
+    public function isChargingNewSkill(arg0: String): Bool {
+        throw "stub: isChargingNewSkill not decompiled";
+    }
 
-  function isChargingSkill(id: String): Bool {}
+    public function hasSkillCharging(): Bool {
+        throw "stub: hasSkillCharging not decompiled";
+    }
 
-  function isChargingOldSkill(id: String): Bool {}
+    public function hasOldSkillCharging(): Bool {
+        throw "stub: hasOldSkillCharging not decompiled";
+    }
 
-  function isChargingNewSkill(id: String): Bool {}
+    public function hasNewSkillCharging(): Bool {
+        throw "stub: hasNewSkillCharging not decompiled";
+    }
 
-  function hasSkillCharging(): Bool {}
+    public function addThreat(arg0: Entity, arg1: Float, arg2: Ref): Void {
+    }
 
-  function hasOldSkillCharging(): Bool {}
+    public function setNemesisTarget(arg0: Entity): Void {
+    }
 
-  function hasNewSkillCharging(): Bool {}
+    public function clearNemesisTarget(): Void {
+    }
 
-  function addThreat(source: Entity, v: Float, max: Dynamic) {}
+    public function reduceThreat(arg0: Entity, arg1: Float): Void {
+    }
 
-  function setNemesisTarget(e: Entity) {}
+    public function removeAllThreatFor(arg0: Entity): Void {
+    }
 
-  function clearNemesisTarget() {}
+    public function onAttackTargetChange(arg0: Entity): Void {
+    }
 
-  function reduceThreat(source: Entity, loss: Float) {}
+    public function setAttackTarget(arg0: Entity): Void {
+    }
 
-  function removeAllThreatFor(source: Entity) {}
+    public function shouldDecideAttackAngle(arg0: tool.skill.OldMobSkill): Bool {
+        throw "stub: shouldDecideAttackAngle not decompiled";
+    }
 
-  function onAttackTargetChange(old: Entity) {}
+    public override function dispose(): Void {
+    }
 
-  function setAttackTarget(target: Entity) {}
+    public function tpHeroBackToTraining(): Void {
+    }
 
-  function shouldDecideAttackAngle(atk: tool.skill.OldMobSkill.OldMobSkill): Bool {}
+    public function addToLoot(arg0: LootType, arg1: Ref): Void {
+    }
 
-  function dispose() {}
+    public function removeFromLoot(arg0: LootType): Void {
+    }
 
-  function tpHeroBackToTraining() {}
+    public function addMoneyToLoot(arg0: Int, arg1: Bool): Void {
+    }
 
-  function addToLoot(k: Dynamic, isFlawlessLoot: Dynamic) {}
+    public function removeFlawlessLoots(): Void {
+    }
 
-  function removeFromLoot(k: Dynamic) {}
+    public override function minimapTracking(): Void {
+    }
 
-  function addMoneyToLoot(v: Int, isGold: Bool) {}
+    public function hasImportantLoot(): Bool {
+        throw "stub: hasImportantLoot not decompiled";
+    }
 
-  function removeFlawlessLoots() {}
+    public function dropLoot(): Void {
+    }
 
-  function minimapTracking() {}
+    public function hasLoot(arg0: LootType): Bool {
+        throw "stub: hasLoot not decompiled";
+    }
 
-  function hasImportantLoot(): Bool {}
+    public function hasTag(arg0: String): Bool {
+        throw "stub: hasTag not decompiled";
+    }
 
-  function dropLoot() {}
+    public override function isUnconscious(): Bool {
+        throw "stub: isUnconscious not decompiled";
+    }
 
-  function hasLoot(k: Dynamic): Bool {}
+    public override function moveBlocked(): Bool {
+        throw "stub: moveBlocked not decompiled";
+    }
 
-  function hasTag(t: String): Bool {}
+    public function onTemporaryDeath(): Void {
+    }
 
-  function isUnconscious(): Bool {}
+    public function onTemporaryDeathRevive(arg0: Float): Void {
+    }
 
-  function moveBlocked(): Bool {}
+    public function isTrashMob(): Bool {
+        throw "stub: isTrashMob not decompiled";
+    }
 
-  function onTemporaryDeath() {}
+    public function markAsSuicided(): Void {
+    }
 
-  function onTemporaryDeathRevive(r: Float) {}
+    public override function onDie(): Void {
+    }
 
-  function isTrashMob(): Bool {}
+    public function notifyHeroOfDeath(): Void {
+    }
 
-  function markAsSuicided() {}
+    public function createBodyPart(): Array<Dynamic> {
+        throw "stub: createBodyPart not decompiled";
+    }
 
-  function onDie() {}
+    public function canBeNecromanced(): Bool {
+        throw "stub: canBeNecromanced not decompiled";
+    }
 
-  function notifyHeroOfDeath() {}
+    public function createNecromancySpot(): Void {
+    }
 
-  function createBodyPart(): hl.types.ArrayObj<Dynamic> {}
+    public function reduceHeroInfection(): Void {
+    }
 
-  function canBeNecromanced(): Bool {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function createNecromancySpot() {}
+    public override function beforeTryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Void {
+    }
 
-  function reduceHeroInfection() {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public function checkForExecute(arg0: tool.atk.AttackData): Void {
+    }
 
-  function beforeTryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public function canBeBreach(arg0: tool.atk.AttackData): Bool {
+        throw "stub: canBeBreach not decompiled";
+    }
 
-  function checkForExecute(a: tool.atk.AttackData.AttackData) {}
+    public function checkForBreach(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public function playDamageSounds(arg0: tool.atk.AttackData): Void {
+    }
 
-  function canBeBreach(a: tool.atk.AttackData.AttackData): Bool {}
+    public function onDirectHitFromHero(arg0: tool.atk.AttackData): Void {
+    }
 
-  function checkForBreach(a: tool.atk.AttackData.AttackData) {}
+    public function onBreach(arg0: tool.atk.AttackData): Void {
+    }
 
-  function playDamageSounds(a: tool.atk.AttackData.AttackData) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function onDirectHitFromHero(a: tool.atk.AttackData.AttackData) {}
+    public function getThawDiminishingFactor(): Float {
+        throw "stub: getThawDiminishingFactor not decompiled";
+    }
 
-  function onBreach(a: tool.atk.AttackData.AttackData) {}
+    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function getThawDiminishingFactor(): Float {}
+    public function thawStackExplosion(): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function bleedStackExplosion(): Void {
+    }
 
-  function setAffectS(x: Int, sec: Float, val: Dynamic, ignoreResist: Dynamic) {}
+    public function interruptRunningEliteSkills(): Void {
+    }
 
-  function thawStackExplosion() {}
+    public function interruptSkills(): Void {
+    }
 
-  function bleedStackExplosion() {}
+    public function contactAttack(arg0: Entity): Void {
+    }
 
-  function interruptRunningEliteSkills() {}
+    public function getAnimSpeed(): Float {
+        throw "stub: getAnimSpeed not decompiled";
+    }
 
-  function interruptSkills() {}
+    public override function postUpdate(): Void {
+    }
 
-  function contactAttack(e: Entity) {}
+    public override function refreshIcons(): Void {
+    }
 
-  function getAnimSpeed(): Float {}
+    public function preRevealAnim(arg0: Float): Void {
+    }
 
-  function postUpdate(soul: Mob) {}
+    public function onHorizontalStep(): Void {
+    }
 
-  function refreshIcons() {}
+    public function fallSplashDamage(arg0: Float, arg1: Float): Void {
+    }
 
-  function preRevealAnim(r: Float) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function onHorizontalStep() {}
+    public override function onLand(arg0: Float): Void {
+    }
 
-  function fallSplashDamage(dmg: Float, radius: Float) {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onFatalFallDamage(): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public function aiLocked(): Bool {
+        throw "stub: aiLocked not decompiled";
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public function getAiLockS(): Float {
+        throw "stub: getAiLockS not decompiled";
+    }
 
-  function onFatalFallDamage() {}
+    public function lockAiF(arg0: Float): Void {
+    }
 
-  function aiLocked(): Bool {}
+    public function lockAiS(arg0: Float): Void {
+    }
 
-  function getAiLockS(): Float {}
+    public function unlockAi(): Void {
+    }
 
-  function lockAiF(frames: Float) {}
+    public function getSkillSpeedMul(): Float {
+        throw "stub: getSkillSpeedMul not decompiled";
+    }
 
-  function lockAiS(sec: Float) {}
+    public function getMoveSpeedMul(): Float {
+        throw "stub: getMoveSpeedMul not decompiled";
+    }
 
-  function unlockAi() {}
+    public function getAttackDamageGlobalMul(): Float {
+        throw "stub: getAttackDamageGlobalMul not decompiled";
+    }
 
-  function getSkillSpeedMul(): Float {}
+    public function getMovePauseMul(): Float {
+        throw "stub: getMovePauseMul not decompiled";
+    }
 
-  function getMoveSpeedMul(): Float {}
+    public override function canHaveRepellingWith(arg0: Entity): Bool {
+        throw "stub: canHaveRepellingWith not decompiled";
+    }
 
-  function getAttackDamageGlobalMul(): Float {}
+    public override function getBumpResistanceFactor(): Float {
+        throw "stub: getBumpResistanceFactor not decompiled";
+    }
 
-  function getMovePauseMul(): Float {}
+    public override function canBeHitBy(arg0: Entity): Bool {
+        throw "stub: canBeHitBy not decompiled";
+    }
 
-  function canHaveRepellingWith(e: Entity): Bool {}
+    public function invalidateMove(arg0: Dynamic): Void {
+    }
 
-  function getBumpResistanceFactor(): Float {}
+    public function canUpdateMove(): Bool {
+        throw "stub: canUpdateMove not decompiled";
+    }
 
-  function canBeHitBy(by: Entity): Bool {}
+    public function behaviourAi(): Void {
+    }
 
-  function invalidateMove(immediate: Dynamic) {}
+    public override function preUpdate(): Void {
+    }
 
-  function canUpdateMove(): Bool {}
+    public function behaviour_platformPatrol(): Void {
+    }
 
-  function behaviourAi() {}
+    public function isNearSpikes(): Bool {
+        throw "stub: isNearSpikes not decompiled";
+    }
 
-  function preUpdate() {}
+    public function aggressiveTeleportAi(): Void {
+    }
 
-  function behaviour_platformPatrol() {}
+    public function onEliteTeleport(arg0: Float): Void {
+    }
 
-  function isNearSpikes(): Bool {}
+    public function eliteTeleportAi(): Void {
+    }
 
-  function aggressiveTeleportAi() {}
+    public function necromancedTeleportAi(): Void {
+    }
 
-  function onEliteTeleport(r: Float) {}
+    public function eliteWakeUp(arg0: Entity): Void {
+    }
 
-  function eliteTeleportAi() {}
+    public function onEliteWakeUp(): Void {
+    }
 
-  function necromancedTeleportAi() {}
+    public function eliteAnger(arg0: Ref): Void {
+    }
 
-  function eliteWakeUp(by: Entity) {}
+    public function getNearestEtheralDoor(): en.active.EtheralDoorSocle {
+        throw "stub: getNearestEtheralDoor not decompiled";
+    }
 
-  function onEliteWakeUp() {}
+    public function canBeBackStabbed(): Bool {
+        throw "stub: canBeBackStabbed not decompiled";
+    }
 
-  function eliteAnger(enableBump: Dynamic) {}
+    public override function canUpdate(): Bool {
+        throw "stub: canUpdate not decompiled";
+    }
 
-  function getNearestEtheralDoor(): en.active.EtheralDoorSocle.EtheralDoorSocle {}
+    public function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function canBeBackStabbed(): Bool {}
+    public function updateThreat(): Void {
+    }
 
-  function canUpdate(): Bool {}
+    public override function canBeDetected(): Bool {
+        throw "stub: canBeDetected not decompiled";
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public function canBeRevealedBy(arg0: en.Hero): Bool {
+        throw "stub: canBeRevealedBy not decompiled";
+    }
 
-  function updateThreat() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function canBeDetected(): Bool {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function canBeRevealedBy(h: en.Hero.Hero): Bool {}
+    public override function onEnterWater(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onLeaveWater(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function chooseAnchoredPoint(arg0: Int, arg1: Dynamic, arg2: tool.FPoint): tool.FPoint {
+        throw "stub: chooseAnchoredPoint not decompiled";
+    }
 
-  function onEnterWater() {}
+    public function chooseRandomAnchoredPoint(arg0: Int): tool.FPoint {
+        throw "stub: chooseRandomAnchoredPoint not decompiled";
+    }
 
-  function onLeaveWater() {}
+    public function snap(arg0: Dynamic): tool.FPoint {
+        throw "stub: snap not decompiled";
+    }
 
-  function chooseAnchoredPoint(pawRadius: Int, ang: Dynamic, offset: tool.FPoint.FPoint): tool.FPoint.FPoint {}
+    public function canMovePaws(): Bool {
+        throw "stub: canMovePaws not decompiled";
+    }
 
-  function chooseRandomAnchoredPoint(pawRadius: Int): tool.FPoint.FPoint {}
+    public function shootXHook(): Float {
+        throw "stub: shootXHook not decompiled";
+    }
 
-  function snap(pt: Dynamic): tool.FPoint.FPoint {}
+    public function shootYHook(): Float {
+        throw "stub: shootYHook not decompiled";
+    }
 
-  function canMovePaws(): Bool {}
+    public override function destroy(): Void {
+    }
 
-  function shootXHook(): Float {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function shootYHook(): Float {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function destroy() {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function unserializeInit(): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function unserializeInit() {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function onBodyPartCreated(arg0: Array<Dynamic>): Void {
+    }
 }
 
+class MobThreat {
+    public static var __clid: Int;
+    public var e: Entity;
+    public var score: Float;
+    public var max: Float;
+    public var __uid: Int;
+    public var : Dynamic;
+
+    public function new(arg0: Entity, arg1: Float, arg2: Float) {
+    }
+
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public function unserializeInit(): Void {
+    }
+
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
+}

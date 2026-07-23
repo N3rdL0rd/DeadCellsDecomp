@@ -1,69 +1,105 @@
 package en.ltrap;
+
 class LightningWall extends en.LevelTrap {
-  var isVertical: Bool;
-  var rot: Int;
-  var len: Int;
-  var endBallX: Float;
-  var endBallY: Float;
-  var endBall: libs.heaps.slib.HSprite.HSprite;
-  var lightningMainColor: Int;
-  var lightningSecColor: Int;
-  var soundEvent: level.LevelAudio.LevelAudio;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var isVertical: Bool;
+    public var rot: Int;
+    public var len: Int;
+    public var endBallX: Float;
+    public var endBallY: Float;
+    public var endBall: libs.heaps.slib.HSprite;
+    public var lightningMainColor: Int;
+    public var lightningSecColor: Int;
+    public var soundEvent: level._LevelAudio.Event;
 
-  function onRotSet(lastRot: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, custId: String) {}
+    public function setLenght(): Void {
+    }
 
-  function setLenght() {}
+    public function setSpot(arg0: Int, arg1: Int, arg2: Bool): Void {
+    }
 
-  function setSpot(x: Int, y: Int, active: Bool) {}
+    public override function initGfx(): Void {
+    }
 
-  function initGfx() {}
+    public function iterateCells(arg0: Dynamic): Void {
+    }
 
-  function iterateCells(cb: Dynamic) {}
+    public override function init(): Void {
+    }
 
-  function init() {}
+    public function initSfx(): Void {
+    }
 
-  function initSfx() {}
+    public function canBeActive(): Bool {
+        throw "stub: canBeActive not decompiled";
+    }
 
-  function canBeActive(): Bool {}
+    public function dispose(): Void {
+    }
 
-  function dispose() {}
+    public function getEndX(): Float {
+        throw "stub: getEndX not decompiled";
+    }
 
-  function getEndX(): Float {}
+    public function getEndY(): Float {
+        throw "stub: getEndY not decompiled";
+    }
 
-  function getEndY(): Float {}
+    public function getWallAng(): Float {
+        throw "stub: getWallAng not decompiled";
+    }
 
-  function getWallAng(): Float {}
+    public function hitHero(arg0: en.Hero, arg1: tool.FPoint): Void {
+    }
 
-  function hitHero(e: en.Hero.Hero, from: tool.FPoint.FPoint) {}
+    public function tpFeedback(arg0: en.Hero, arg1: tool.FPoint): Void {
+    }
 
-  function tpFeedback(e: en.Hero.Hero, from: tool.FPoint.FPoint) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function postUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function updateLightning(): Void {
+    }
 
-  function updateLightning() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function _isOnScreen(): Bool {
+        throw "stub: _isOnScreen not decompiled";
+    }
 
-  function _isOnScreen(): Bool {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserializeInit() {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onRotSet(arg0: Int): Void {
+    }
 }
-

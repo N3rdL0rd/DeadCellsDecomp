@@ -1,38 +1,55 @@
 package en.gr;
+
 class RollingBomb extends en.Grenade {
-  var reflectLight: libs.heaps.slib.HSprite.HSprite;
-  var triggerDelay: Float;
-  var isFromHero: Bool;
-  var friction: Float;
-  var announced: Bool;
-  var announcedTime: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var reflectLight: libs.heaps.slib.HSprite;
+    public var triggerDelay: Float;
+    public var isFromHero: Bool;
+    public var friction: Float;
+    public var announced: Bool;
+    public var announcedTime: Float;
 
-  function __constructor__(parent: Entity, triggerDelay: Float, isFromHero: Dynamic, initSpeed: Dynamic, friction: Dynamic) {}
+    public function new(arg0: Entity, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic) {
+        super();
+    }
 
-  function get_targetSprPosY(): Float {}
+    public function get_targetSprPosY(): Float {
+        throw "stub: get_targetSprPosY not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public function onLand(arg0: Float): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

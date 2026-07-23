@@ -1,39 +1,57 @@
 package en.deco;
+
 class BossPart extends en.deco.Pendulum {
-  var dc: libs.heaps.slib.HSprite.HSprite;
-  var bossKind: String;
-  var bossName: String;
-  var forceDisplay: Bool;
-  static var tingleSounds: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var tingleSounds: Array<Dynamic>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var dc: libs.heaps.slib.HSprite;
+    public var bossKind: String;
+    public var bossName: String;
+    public var forceDisplay: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, posX: Float, posY: Float, bossKind: String, forceDisplay: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Float, arg2: Float, arg3: String, arg4: Ref) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function initChain(offset: Dynamic) {}
+    public override function initChain(arg0: Ref): Void {
+    }
 
-  function initTingle(dir: Int, fromHero: Bool) {}
+    public override function initTingle(arg0: Int, arg1: Bool): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

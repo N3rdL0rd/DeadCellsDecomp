@@ -1,24 +1,37 @@
 package level.struct;
+
 class ClockTower extends level.LevelStruct {
-  var importants: hl.types.ArrayObj<Dynamic>;
-  var crosses: hl.types.ArrayObj<Dynamic>;
+    public var importants: Array<Dynamic>;
+    public var crosses: Array<Dynamic>;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function addLoreRoom(lore: Dynamic, overrideStructMode: Dynamic) {}
+    public override function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function addInBranch(n: level.RoomNode.RoomNode) {}
+    public function addInBranch(arg0: level.RoomNode): Void {
+    }
 
-  function buildSecondaryRooms() {}
+    public override function buildSecondaryRooms(): Void {
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 
-  function getInsideLoreRoomSpot(): level.RoomNode.RoomNode {}
+    public override function getInsideLoreRoomSpot(): level.RoomNode {
+        throw "stub: getInsideLoreRoomSpot not decompiled";
+    }
 
-  function createNode(type: String, templateId: String, group: Dynamic, id: String): level.RoomNode.RoomNode {}
+    public override function createNode(arg0: String, arg1: String, arg2: Dynamic, arg3: String): level.RoomNode {
+        throw "stub: createNode not decompiled";
+    }
 
-  function finalize() {}
+    public override function finalize(): Void {
+    }
 }
-

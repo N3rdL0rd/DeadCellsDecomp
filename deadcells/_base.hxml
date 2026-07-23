@@ -3,6 +3,8 @@
 -lib castle
 -lib heaps
 -lib hscript
+-lib hxbit
+-lib format
 -lib deepnightLibs
 -lib ldtk-haxe-api
 -lib heaps-aseprite

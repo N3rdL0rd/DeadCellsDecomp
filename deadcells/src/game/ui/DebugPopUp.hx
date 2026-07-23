@@ -1,55 +1,82 @@
 package ui;
+
 class DebugPopUp extends ui.Window {
-  var ctrap: h2d.Interactive.Interactive;
-  var focus: ui.WindowElement.WindowElement;
-  var focusSpr: libs.heaps.slib.HSprite.HSprite;
-  var fc0: libs.heaps.slib.HSprite.HSprite;
-  var fc1: libs.heaps.slib.HSprite.HSprite;
-  var fc2: libs.heaps.slib.HSprite.HSprite;
-  var fc3: libs.heaps.slib.HSprite.HSprite;
-  var cancelable: Bool;
-  var controller: tool.Controller.Controller;
-  var pageIncr: Int;
-  static var ALL: hl.types.ArrayObj<Dynamic>;
+    public static var ALL: Array<Dynamic>;
+    public var ctrap: h2d.Interactive;
+    public var focus: ui.WindowElement;
+    public var focusSpr: libs.heaps.slib.HSprite;
+    public var fc0: libs.heaps.slib.HSprite;
+    public var fc1: libs.heaps.slib.HSprite;
+    public var fc2: libs.heaps.slib.HSprite;
+    public var fc3: libs.heaps.slib.HSprite;
+    public var cancelable: Bool;
+    public var controller: tool.ControllerAccess;
+    public var pageIncr: Int;
 
-  function onNext() {}
+    public function new(arg0: libs.Process) {
+        super();
+    }
 
-  function onSwapAlt() {}
+    public override function close(): Void {
+    }
 
-  function onPrev() {}
+    public override function onDispose(): Void {
+    }
 
-  function onClose() {}
+    public override function render(): Void {
+    }
 
-  function onMap() {}
+    public function getFirstInteractive(): ui.WindowElement {
+        throw "stub: getFirstInteractive not decompiled";
+    }
 
-  function onCancel() {}
+    public function getLastInteractive(): ui.WindowElement {
+        throw "stub: getLastInteractive not decompiled";
+    }
 
-  function onSwap() {}
+    public function getPreviousInteractive(arg0: ui.WindowElement): ui.WindowElement {
+        throw "stub: getPreviousInteractive not decompiled";
+    }
 
-  function __constructor__(p: libs.Process.Process) {}
+    public function getNextInteractive(arg0: ui.WindowElement): ui.WindowElement {
+        throw "stub: getNextInteractive not decompiled";
+    }
 
-  function close() {}
+    public function getLeftInteractive(arg0: ui.WindowElement): ui.WindowElement {
+        throw "stub: getLeftInteractive not decompiled";
+    }
 
-  function onDispose() {}
+    public function getRightInteractive(arg0: ui.WindowElement): ui.WindowElement {
+        throw "stub: getRightInteractive not decompiled";
+    }
 
-  function render() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getFirstInteractive(): ui.WindowElement.WindowElement {}
+    public function setFocus(arg0: ui.WindowElement): Void {
+    }
 
-  function getLastInteractive(): ui.WindowElement.WindowElement {}
+    public override function update(): Void {
+    }
 
-  function getPreviousInteractive(cur: ui.WindowElement.WindowElement): ui.WindowElement.WindowElement {}
+    public function onMap(): Void {
+    }
 
-  function getNextInteractive(cur: ui.WindowElement.WindowElement): ui.WindowElement.WindowElement {}
+    public function onSwapAlt(): Void {
+    }
 
-  function getLeftInteractive(cur: ui.WindowElement.WindowElement): ui.WindowElement.WindowElement {}
+    public function onSwap(): Void {
+    }
 
-  function getRightInteractive(cur: ui.WindowElement.WindowElement): ui.WindowElement.WindowElement {}
+    public function onNext(): Void {
+    }
 
-  function postUpdate() {}
+    public function onPrev(): Void {
+    }
 
-  function setFocus(e: ui.WindowElement.WindowElement) {}
+    public function onClose(): Void {
+    }
 
-  function update() {}
+    public function onCancel(): Void {
+    }
 }
-

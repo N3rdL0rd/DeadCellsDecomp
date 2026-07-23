@@ -1,26 +1,45 @@
 package en.mob;
+
 class Merman extends en.mob.Archer {
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Merman {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Merman {
+        throw "stub: create not decompiled";
+    }
 
-  function getKind(): String {}
+    public override function getKind(): String {
+        throw "stub: getKind not decompiled";
+    }
 
-  function getLib(): libs.heaps.slib.SpriteLib.SpriteLib {}
+    public override function getLib(): libs.heaps.slib.SpriteLib {
+        throw "stub: getLib not decompiled";
+    }
 
-  function getNormalMap(): h3d.mat.Texture.Texture {}
+    public override function getNormalMap(): h3d.mat.Texture {
+        throw "stub: getNormalMap not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  function seeThroughOneWays(e: Entity): Bool {}
+    public function seeThroughOneWays(arg0: Entity): Bool {
+        throw "stub: seeThroughOneWays not decompiled";
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

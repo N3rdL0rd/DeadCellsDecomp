@@ -1,76 +1,112 @@
 package en;
+
 class Loot extends Entity {
-  var floating: Bool;
-  var lifeTimer: Float;
-  var magnetDist: Float;
-  var pickDist: Float;
-  var magneting: Bool;
-  var magnetedTo: Entity;
-  var magnetFrames: Float;
-  var tailColor: Dynamic;
-  var destroyOnEnd: Bool;
-  var needSightToMagnet: Bool;
-  var magnetMaxDurationS: Float;
-  var canBePickedByEntity: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var floating: Bool;
+    public var lifeTimer: Float;
+    public var magnetDist: Float;
+    public var pickDist: Float;
+    public var magneting: Bool;
+    public var magnetedTo: Entity;
+    public var magnetFrames: Float;
+    public var tailColor: Dynamic;
+    public var destroyOnEnd: Bool;
+    public var needSightToMagnet: Bool;
+    public var magnetMaxDurationS: Float;
+    public var canBePickedByEntity: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  static function create(lk: Dynamic, lvl: pr.Level.Level, cx: Int, cy: Int): Loot {}
+    public static function create(arg0: LootType, arg1: pr.Level, arg2: Int, arg3: Int): en.Loot {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function canBeHit(): Bool {}
+    public override function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function unlock() {}
+    public function unlock(): Void {
+    }
 
-  function lockFor(sec: Float) {}
+    public function lockFor(arg0: Float): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public override function onTouchWall(arg0: Int): Void {
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
 
-  function pickUp(h: en.Hero.Hero) {}
+    public function pickUp(arg0: en.Hero): Void {
+    }
 
-  function pickUpByEntity(e: Entity) {}
+    public function pickUpByEntity(arg0: Entity): Void {
+    }
 
-  function pickUpFeedBack(isHero: Dynamic) {}
+    public function pickUpFeedBack(arg0: Ref): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function vanish() {}
+    public function vanish(): Void {
+    }
 
-  function canBePickedUpBy(e: Entity): Bool {}
+    public function canBePickedUpBy(arg0: Entity): Bool {
+        throw "stub: canBePickedUpBy not decompiled";
+    }
 
-  function loseMagnet() {}
+    public function loseMagnet(): Void {
+    }
 
-  function startMagnet(e: Entity) {}
+    public function startMagnet(arg0: Entity): Void {
+    }
 
-  function allocateTo(e: Entity) {}
+    public function allocateTo(arg0: Entity): Void {
+    }
 
-  function updateMagnet(pow: Float) {}
+    public function updateMagnet(arg0: Float): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function pickUpdate() {}
+    public function pickUpdate(): Void {
+    }
 
-  function pickMagnetTarget() {}
+    public function pickMagnetTarget(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

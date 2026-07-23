@@ -1,0 +1,12 @@
+[project]
+name = "dead_cells_decomp"
+version = "0.1.0"
+description = "Python dependencies useful for working on the Dead Cells Decomp project."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "crashlink[extras]",
+]
+
+[tool.uv.sources]
+crashlink = { git = "https://github.com/N3rdL0rd/crashlink" }

@@ -1,57 +1,75 @@
 package pr.ts;
+
 class DlcPTitleScreenBg extends pr.TitleScreenBgBase {
-  var gameOverVersion: Bool;
-  var sb_fxSmoke: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sb_frontGrass: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sb_bats: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var layer: h2d.Layers.Layers;
-  var frontRock: libs.heaps.slib.HSprite.HSprite;
-  var pineTreeFront1: libs.heaps.slib.HSprite.HSprite;
-  var pineTreeFront2: libs.heaps.slib.HSprite.HSprite;
-  var pineTreeFront3: libs.heaps.slib.HSprite.HSprite;
-  var pineTreeMid1: libs.heaps.slib.HSprite.HSprite;
-  var pineTreeMid2: libs.heaps.slib.HSprite.HSprite;
-  var pineTreeBack1: libs.heaps.slib.HSprite.HSprite;
-  var lightWindow: libs.heaps.slib.HSprite.HSprite;
-  var castle: libs.heaps.slib.HSprite.HSprite;
-  var mountainBG: libs.heaps.slib.HSprite.HSprite;
-  var lowCloudsBack: libs.heaps.slib.HSprite.HSprite;
-  var lowCloudsFront: libs.heaps.slib.HSprite.HSprite;
-  var topClouds: libs.heaps.slib.HSprite.HSprite;
-  var windInfluenceObj: hl.types.ArrayObj<Dynamic>;
-  var birds: hl.types.ArrayObj<Dynamic>;
-  var grass: hl.types.ArrayObj<Dynamic>;
+    public var gameOverVersion: Bool;
+    public var sb_fxSmoke: libs.heaps.slib.HSpriteBatch;
+    public var sb_frontGrass: libs.heaps.slib.HSpriteBatch;
+    public var sb_bats: libs.heaps.slib.HSpriteBatch;
+    public var layer: h2d.Layers;
+    public var frontRock: libs.heaps.slib.HSprite;
+    public var pineTreeFront1: libs.heaps.slib.HSprite;
+    public var pineTreeFront2: libs.heaps.slib.HSprite;
+    public var pineTreeFront3: libs.heaps.slib.HSprite;
+    public var pineTreeMid1: libs.heaps.slib.HSprite;
+    public var pineTreeMid2: libs.heaps.slib.HSprite;
+    public var pineTreeBack1: libs.heaps.slib.HSprite;
+    public var lightWindow: libs.heaps.slib.HSprite;
+    public var castle: libs.heaps.slib.HSprite;
+    public var mountainBG: libs.heaps.slib.HSprite;
+    public var lowCloudsBack: libs.heaps.slib.HSprite;
+    public var lowCloudsFront: libs.heaps.slib.HSprite;
+    public var topClouds: libs.heaps.slib.HSprite;
+    public var windInfluenceObj: Array<Dynamic>;
+    public var birds: Array<Dynamic>;
+    public var grass: Array<Dynamic>;
 
-  function __constructor__(wrapper: h2d.Object.Object, titleLib: libs.heaps.slib.SpriteLib.SpriteLib, gameOverVersion: Dynamic) {}
+    public function new(arg0: h2d.Object, arg1: libs.heaps.slib.SpriteLib, arg2: Ref) {
+        super();
+    }
 
-  function initTitleScreen() {}
+    public override function initTitleScreen(): Void {
+    }
 
-  function makeBird(id: String, c: Int): libs.heaps.slib.HSprite.HSprite {}
+    public function makeBird(arg0: String, arg1: Int): libs.heaps.slib.HSprite {
+        throw "stub: makeBird not decompiled";
+    }
 
-  function reset() {}
+    public override function reset(): Void {
+    }
 
-  function updateTitleScreen() {}
+    public override function updateTitleScreen(): Void {
+    }
 
-  function blur(sigma: Dynamic, gain: Dynamic) {}
+    public override function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function unblur() {}
+    public override function unblur(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function doBatWave() {}
+    public function doBatWave(): Void {
+    }
 
-  function createBatPack(baseX: Float, baseY: Float, count: Int) {}
+    public function createBatPack(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function addBat(col: Int, x: Float, y: Float, dir: Int, vy: Float, z: Float) {}
+    public function addBat(arg0: Int, arg1: Float, arg2: Float, arg3: Int, arg4: Float, arg5: Float): Void {
+    }
 
-  function addFx() {}
+    public override function addFx(): Void {
+    }
 
-  function fogFx() {}
+    public function fogFx(): Void {
+    }
 
-  function godLights() {}
+    public function godLights(): Void {
+    }
 
-  function dustFx() {}
+    public function dustFx(): Void {
+    }
 
-  function dustParticlesFX(bigDustColor: Int, bigDustAlpha: Float, smallDustColor: Int, smallDustAlpha: Float) {}
+    public function dustParticlesFX(arg0: Int, arg1: Float, arg2: Int, arg3: Float): Void {
+    }
 }
-

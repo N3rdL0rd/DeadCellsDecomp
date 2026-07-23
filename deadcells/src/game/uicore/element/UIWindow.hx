@@ -1,23 +1,35 @@
 package uicore.element;
-class UIWindow extends uicore.UIElement.UIElement {
-  var paused: Bool;
-  var signals: Dynamic;
-  var controllerExclusivity: Bool;
 
-  function __constructor__(parent: uicore.UIElement.UIElement) {}
+class UIWindow extends uicore.UIElement {
+    public var paused: Bool;
+    public var signals: uicore.signals.WindowSignals;
+    public var controllerExclusivity: Bool;
 
-  function update(ftime: Float) {}
+    public function new(arg0: uicore.UIElement) {
+        super();
+    }
 
-  function _canBeSelected(): Bool {}
+    public override function update(arg0: Float): Void {
+    }
 
-  function selectFromMouse(click: Bool): Bool {}
+    public override function _canBeSelected(): Bool {
+        throw "stub: _canBeSelected not decompiled";
+    }
 
-  function requestSelectionFromMouse(element: uicore.UIElement.UIElement): Bool {}
+    public override function selectFromMouse(arg0: Bool): Bool {
+        throw "stub: selectFromMouse not decompiled";
+    }
 
-  function handleAction(action: Int, actionStatus: Dynamic) {}
+    public override function requestSelectionFromMouse(arg0: uicore.UIElement): Bool {
+        throw "stub: requestSelectionFromMouse not decompiled";
+    }
 
-  function bindDefaultActions() {}
+    public override function handleAction(arg0: Int, arg1: Dynamic): Void {
+    }
 
-  function close() {}
+    public override function bindDefaultActions(): Void {
+    }
+
+    public function close(): Void {
+    }
 }
-

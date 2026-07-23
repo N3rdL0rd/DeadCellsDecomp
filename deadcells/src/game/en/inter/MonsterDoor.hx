@@ -1,38 +1,55 @@
 package en.inter;
+
 class MonsterDoor extends en.inter.ZDoor {
-  var doorBack: libs.heaps.slib.HSprite.HSprite;
-  var circle: libs.heaps.slib.HSprite.HSprite;
-  var shadow: libs.heaps.slib.HSprite.HSprite;
-  var shakePow: Float;
-  var isBroken: Bool;
-  var isExit: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var doorBack: libs.heaps.slib.HSprite;
+    public var circle: libs.heaps.slib.HSprite;
+    public var shadow: libs.heaps.slib.HSprite;
+    public var shakePow: Float;
+    public var isBroken: Bool;
+    public var isExit: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, destMap: level.LevelMap.LevelMap, linkId: Int, isExit: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.LevelMap, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function updateDoorSkin() {}
+    public function updateDoorSkin(): Void {
+    }
 
-  function shake(pow: Float, t: Float, push: Bool) {}
+    public function shake(arg0: Float, arg1: Float, arg2: Bool): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function onFocus() {}
+    public override function onFocus(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

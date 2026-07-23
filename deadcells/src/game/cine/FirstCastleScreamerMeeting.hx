@@ -1,12 +1,18 @@
 package cine;
+
 class FirstCastleScreamerMeeting extends GameCinematic {
-  var mob: en.mob.Screamer.Screamer;
-  var levelsDone: hl.types.ArrayObj<Dynamic>;
+    public var mob: en.mob.Screamer;
+    public var levelsDone: Array<Dynamic>;
 
-  function __constructor__(room: level.Room.Room) {}
+    public function new(arg0: level.Room) {
+        super();
+    }
 
-  function getLevelUndone(): pr.Level.Level {}
+    public function getLevelUndone(): pr.Level {
+        throw "stub: getLevelUndone not decompiled";
+    }
 
-  function getScreamerWithScroll(le: pr.Level.Level): en.mob.Screamer.Screamer {}
+    public function getScreamerWithScroll(arg0: pr.Level): en.mob.Screamer {
+        throw "stub: getScreamerWithScroll not decompiled";
+    }
 }
-

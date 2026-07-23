@@ -1,55 +1,81 @@
 package ui;
-class Window extends ui.Process {
-  var elements: hl.types.ArrayObj<Dynamic>;
-  var uMaxWid: Float;
-  var uSpacing: Int;
-  var win: ui.Window.Window;
-  var bg: h2d.Object.Object;
-  var bgColor: Dynamic;
-  var flow: h2d.Flow.Flow;
-  var invalidated: Bool;
-  var disableBG: Bool;
-  static var ALL: hl.types.ArrayObj<Dynamic>;
-
-  function __constructor__(p: libs.Process.Process, overlay: Dynamic) {}
-
-  function set_uMaxWid(v: Float): Float {}
-
-  function text(str: String, col: Dynamic, big: Dynamic): ui.we.Text.Text {}
-
-  function iconText(tile: h2d.Tile.Tile, str: String, col: Dynamic, big: Dynamic): ui.we.IconText.IconText {}
-
-  function control(id: Int, label: String, color: Dynamic, longPress: Dynamic): ui.we.Wrapper.Wrapper {}
-
-  function activate(label: String, col: Dynamic, long: Dynamic): ui.we.Wrapper.Wrapper {}
-
-  function takeAndSell(lblTake: String, lblSell: String): WindowElement {}
-
-  function title(str: String) {}
-
-  function spacer() {}
-
-  function spacerLine(lineColor: Dynamic) {}
-
-  function clear() {}
-
-  function close() {}
-
-  function onDispose() {}
-
-  function onResize() {}
-
-  function render() {}
-
-  function update() {}
-
-  function postUpdate() {}
-}
 
 class Wrapper extends h2d.Layers {
+    public function new(arg0: h2d.Object) {
+        super();
+    }
 
-  function __constructor__(p: h2d.Object.Object) {}
-
-  function calcAbsPos() {}
+    public function calcAbsPos(): Void {
+    }
 }
 
+class Window extends ui.Process {
+    public static var ALL: Array<Dynamic>;
+    public var elements: Array<Dynamic>;
+    public var uMaxWid: Float;
+    public var uSpacing: Int;
+    public var win: ui.Wrapper;
+    public var bg: h2d.Object;
+    public var bgColor: Dynamic;
+    public var flow: h2d.Flow;
+    public var invalidated: Bool;
+    public var disableBG: Bool;
+
+    public function new(arg0: libs.Process, arg1: Dynamic) {
+        super();
+    }
+
+    public function set_uMaxWid(arg0: Float): Float {
+        throw "stub: set_uMaxWid not decompiled";
+    }
+
+    public function text(arg0: String, arg1: Dynamic, arg2: Dynamic): ui.we.Text {
+        throw "stub: text not decompiled";
+    }
+
+    public function iconText(arg0: h2d.Tile, arg1: String, arg2: Dynamic, arg3: Dynamic): ui.we.IconText {
+        throw "stub: iconText not decompiled";
+    }
+
+    public function control(arg0: Int, arg1: String, arg2: Dynamic, arg3: Dynamic): ui.we.Wrapper {
+        throw "stub: control not decompiled";
+    }
+
+    public function activate(arg0: String, arg1: Dynamic, arg2: Dynamic): ui.we.Wrapper {
+        throw "stub: activate not decompiled";
+    }
+
+    public function takeAndSell(arg0: String, arg1: String): ui.WindowElement {
+        throw "stub: takeAndSell not decompiled";
+    }
+
+    public function title(arg0: String): Void {
+    }
+
+    public function spacer(): Void {
+    }
+
+    public function spacerLine(arg0: Dynamic): Void {
+    }
+
+    public function clear(): Void {
+    }
+
+    public function close(): Void {
+    }
+
+    public override function onDispose(): Void {
+    }
+
+    public override function onResize(): Void {
+    }
+
+    public function render(): Void {
+    }
+
+    public function update(): Void {
+    }
+
+    public function postUpdate(): Void {
+    }
+}

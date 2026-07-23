@@ -1,19 +1,24 @@
 package ui;
+
 class BG extends h2d.Layers {
-  var process: ui.Process.Process;
-  var bgBlack: libs.heaps.slib.HSprite.HSprite;
-  var bgColor: h2d.Graphics.Graphics;
-  var topLine: libs.heaps.slib.HSprite.HSprite;
-  var botLine: libs.heaps.slib.HSprite.HSprite;
-  var botGradient: libs.heaps.slib.HSprite.HSprite;
-  var logo: libs.heaps.slib.HSprite.HSprite;
-  var topBotSame: Bool;
-  var exceptionDeMerde: Bool;
+    public var process: ui.Process;
+    public var bgBlack: libs.heaps.slib.HSprite;
+    public var bgColor: h2d.Graphics;
+    public var topLine: libs.heaps.slib.HSprite;
+    public var botLine: libs.heaps.slib.HSprite;
+    public var botGradient: libs.heaps.slib.HSprite;
+    public var logo: libs.heaps.slib.HSprite;
+    public var topBotSame: Bool;
+    public var exceptionDeMerde: Bool;
 
-  function __constructor__(process: ui.Process.Process, lines: Dynamic, logoDC: Dynamic) {}
+    public function new(arg0: ui.Process, arg1: Ref, arg2: Ref) {
+        super();
+    }
 
-  function get_pixelScale(): Float {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 
-  function onResize() {}
+    public function onResize(): Void {
+    }
 }
-

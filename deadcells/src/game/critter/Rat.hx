@@ -1,15 +1,20 @@
 package critter;
+
 class Rat extends Critter {
-  var spd: Float;
-  var foe: Entity;
-  var fleeDist2: Float;
+    public var spd: Float;
+    public var foe: Entity;
+    public var fleeDist2: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 }
-

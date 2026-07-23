@@ -1,53 +1,77 @@
 package pow;
+
 class PolloPower extends Entity {
-  var pHero: en.Hero.Hero;
-  var delayBetweenBombs: Float;
-  var baseInf: Dynamic;
-  var item: tool.InventItem.InventItem;
-  var jumpSound: hxd.res.Sound.Sound;
-  var hitSound: hxd.res.Sound.Sound;
-  var newBombSound: hxd.res.Sound.Sound;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var pHero: en.Hero;
+    public var delayBetweenBombs: Float;
+    public var baseInf: Dynamic;
+    public var item: tool.InventItem;
+    public var jumpSound: hxd.res.Sound;
+    public var hitSound: hxd.res.Sound;
+    public var newBombSound: hxd.res.Sound;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function setInfos(i: tool.InventItem.InventItem) {}
+    public function setInfos(arg0: tool.InventItem): Void {
+    }
 
-  function setInvisible() {}
+    public function setInvisible(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onEnd() {}
+    public function onEnd(): Void {
+    }
 
-  function resetHero() {}
+    public function resetHero(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function dropBomb() {}
+    public function dropBomb(): Void {
+    }
 
-  function tryToJump() {}
+    public function tryToJump(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function destroy() {}
+    public override function destroy(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

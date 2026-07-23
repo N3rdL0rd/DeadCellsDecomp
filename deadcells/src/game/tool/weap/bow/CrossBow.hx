@@ -1,25 +1,36 @@
 package tool.weap.bow;
+
 class CrossBow extends tool.weap.BaseBow {
-  var angs: hl.types.ArrayBytes<Float>;
-  var hookSent: Bool;
+    public var angs: Array<Float>;
+    public var hookSent: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function onBowChargeStart() {}
+    public override function onBowChargeStart(): Void {
+    }
 
-  function onBowCharging(r: Float) {}
+    public override function onBowCharging(arg0: Float): Void {
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 }
 
 class CrossBowOffHand extends tool.Weapon {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function playReleaseSfx(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Dynamic, arg4: Dynamic): Void {
+    }
 
-  function playReleaseSfx(volume: Dynamic, holdCond: Dynamic, loop: Dynamic, fadeOutTime: Dynamic, pitch: Dynamic) {}
-
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 }
-

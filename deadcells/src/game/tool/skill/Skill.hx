@@ -1,141 +1,207 @@
 package tool.skill;
+
 class Skill extends libs.Process {
-  var id: String;
-  var owner: Entity;
-  var chargeF: Float;
-  var chargeMaxF: Float;
-  var chargeMul: Float;
-  var cooldownF: Float;
-  var cooldownMaxF: Float;
-  var cooldownSpeedMul: Float;
-  var lockAfterS: Float;
-  var lockedAfter: Bool;
-  var hitFrame: Int;
-  var hasDynamicCharge: Bool;
-  var canMoveDuringCharge: Bool;
-  var ignoreUnconsciousness: Bool;
-  var ignoreInterrupt: Bool;
-  var data: Dynamic;
-  var active: Bool;
-  var sounds: hl.types.ArrayObj<Dynamic>;
-  var areas: hl.types.ArrayObj<Dynamic>;
-  var fxs: hl.types.ArrayObj<Dynamic>;
-  var commonEffects: hl.types.ArrayObj<Dynamic>;
-  var projectiles: hl.types.ArrayObj<Dynamic>;
-  var chargeAnim: SkillAnim;
-  var executeAnim: SkillAnim;
-  var hitEntities: hl.types.ArrayObj<Dynamic>;
-  var hasHit: Bool;
-  var damage: Dynamic;
-  var chargeSignal: libs.signals.Signal1.Signal1;
-  var executeSignal: libs.signals.Signal1.Signal1;
-  var cooldownCompleteSignal: libs.signals.Signal1.Signal1;
-  var interruptSignal: libs.signals.Signal1.Signal1;
-  var onHitSignal: libs.signals.Signal1.Signal1;
-  var chargingSignal: libs.signals.Signal1.Signal1;
-  var lockedAfterSignal: libs.signals.Signal1.Signal1;
-  var coolingdownSignal: libs.signals.Signal1.Signal1;
+    public var id: String;
+    public var owner: Entity;
+    public var chargeF: Float;
+    public var chargeMaxF: Float;
+    public var chargeMul: Float;
+    public var cooldownF: Float;
+    public var cooldownMaxF: Float;
+    public var cooldownSpeedMul: Float;
+    public var lockAfterS: Float;
+    public var lockedAfter: Bool;
+    public var hitFrame: Int;
+    public var hasDynamicCharge: Bool;
+    public var canMoveDuringCharge: Bool;
+    public var ignoreUnconsciousness: Bool;
+    public var ignoreInterrupt: Bool;
+    public var data: Dynamic;
+    public var active: Bool;
+    public var sounds: Array<Dynamic>;
+    public var areas: Array<Dynamic>;
+    public var fxs: Array<Dynamic>;
+    public var commonEffects: Array<Dynamic>;
+    public var projectiles: Array<Dynamic>;
+    public var chargeAnim: tool.skill.SkillAnim;
+    public var executeAnim: tool.skill.SkillAnim;
+    public var hitEntities: Array<Dynamic>;
+    public var hasHit: Bool;
+    public var damage: Dynamic;
+    public var chargeSignal: libs.signals.Signal1;
+    public var executeSignal: libs.signals.Signal1;
+    public var cooldownCompleteSignal: libs.signals.Signal1;
+    public var interruptSignal: libs.signals.Signal1;
+    public var onHitSignal: libs.signals.Signal1;
+    public var chargingSignal: libs.signals.Signal1;
+    public var lockedAfterSignal: libs.signals.Signal1;
+    public var coolingdownSignal: libs.signals.Signal1;
 
-  function __constructor__(id: String, owner: Entity) {}
+    public function new(arg0: String, arg1: Entity) {
+        super();
+    }
 
-  function onInfosInit() {}
+    public function onInfosInit(): Void {
+    }
 
-  function useMobSkillInfos(inf: Dynamic) {}
+    public function useMobSkillInfos(arg0: Dynamic): Void {
+    }
 
-  function toString(): String {}
+    public override function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function getCastSpeed(): Float {}
+    public function getCastSpeed(): Float {
+        throw "stub: getCastSpeed not decompiled";
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function prepare(data: Dynamic): Bool {}
+    public function prepare(arg0: Dynamic): Bool {
+        throw "stub: prepare not decompiled";
+    }
 
-  function isReady(): Bool {}
+    public function isReady(): Bool {
+        throw "stub: isReady not decompiled";
+    }
 
-  function execute(ratio: Dynamic) {}
+    public function execute(arg0: Dynamic): Void {
+    }
 
-  function interrupt() {}
+    public function interrupt(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function chargeUpdate() {}
+    public function chargeUpdate(): Void {
+    }
 
-  function cooldownUpdate() {}
+    public function cooldownUpdate(): Void {
+    }
 
-  function setTimers(chargeSec: Float, cdSec: Float, lockAfter: Dynamic) {}
+    public function setTimers(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function isCharging(): Bool {}
+    public function isCharging(): Bool {
+        throw "stub: isCharging not decompiled";
+    }
 
-  function resetCharge() {}
+    public function resetCharge(): Void {
+    }
 
-  function hasCooldown(): Bool {}
+    public function hasCooldown(): Bool {
+        throw "stub: hasCooldown not decompiled";
+    }
 
-  function startCooldown(overrideSec: Dynamic) {}
+    public function startCooldown(arg0: Dynamic): Void {
+    }
 
-  function resetCooldown() {}
+    public function resetCooldown(): Void {
+    }
 
-  function getCooldownSpeed(): Float {}
+    public function getCooldownSpeed(): Float {
+        throw "stub: getCooldownSpeed not decompiled";
+    }
 
-  function isLockedAfter(): Bool {}
+    public function isLockedAfter(): Bool {
+        throw "stub: isLockedAfter not decompiled";
+    }
 
-  function lockOwner(dur: Float) {}
+    public function lockOwner(arg0: Float): Void {
+    }
 
-  function lockOwnerMob(dur: Float) {}
+    public function lockOwnerMob(arg0: Float): Void {
+    }
 
-  function lockOwnerHero(dur: Float) {}
+    public function lockOwnerHero(arg0: Float): Void {
+    }
 
-  function onChargeStart() {}
+    public function onChargeStart(): Void {
+    }
 
-  function onExecute(ratio: Float) {}
+    public function onExecute(arg0: Float): Void {
+    }
 
-  function onCooldownComplete() {}
+    public function onCooldownComplete(): Void {
+    }
 
-  function onInterrupt(ratio: Float) {}
+    public function onInterrupt(arg0: Float): Void {
+    }
 
-  function onHit() {}
+    public function onHit(): Void {
+    }
 
-  function onCharging(ratio: Float) {}
+    public function onCharging(arg0: Float): Void {
+    }
 
-  function onLockedAfter(ratio: Float) {}
+    public function onLockedAfter(arg0: Float): Void {
+    }
 
-  function onCoolingdown(ratio: Float) {}
+    public function onCoolingdown(arg0: Float): Void {
+    }
 
-  function getSignalByTrigger(trigger: Dynamic): libs.signals.Signal1.Signal1 {}
+    public function getSignalByTrigger(arg0: Dynamic): libs.signals.Signal1 {
+        throw "stub: getSignalByTrigger not decompiled";
+    }
 
-  function getLoopCondByTrigger(trigger: Dynamic): Dynamic {}
+    public function getLoopCondByTrigger(arg0: Dynamic): Dynamic {
+        throw "stub: getLoopCondByTrigger not decompiled";
+    }
 
-  function addEventToSignal(trigger: Dynamic, event: SkillEvent) {}
+    public function addEventToSignal(arg0: Dynamic, arg1: tool.skill.SkillEvent): Void {
+    }
 
-  function useSoundsFromMob(inf: Dynamic) {}
+    public function useSoundsFromMob(arg0: Dynamic): Void {
+    }
 
-  function useAreasFromMob(inf: Dynamic) {}
+    public function useAreasFromMob(arg0: Dynamic): Void {
+    }
 
-  function executeAreas() {}
+    public function executeAreas(): Void {
+    }
 
-  function tryHitArea(skillArea: SkillArea) {}
+    public function tryHitArea(arg0: tool.skill.SkillArea): Void {
+    }
 
-  function onTouchOpponents(skillArea: SkillArea, opponents: hl.types.ArrayObj<Dynamic>) {}
+    public function onTouchOpponents(arg0: tool.skill.SkillArea, arg1: Array<Dynamic>): Void {
+    }
 
-  function onTouchAllies(skillArea: SkillArea, allies: hl.types.ArrayObj<Dynamic>) {}
+    public function onTouchAllies(arg0: tool.skill.SkillArea, arg1: Array<Dynamic>): Void {
+    }
 
-  function onTouchQuadElements(skillArea: SkillArea, quadElements: hl.types.ArrayObj<Dynamic>) {}
+    public function onTouchQuadElements(arg0: tool.skill.SkillArea, arg1: Array<Dynamic>): Void {
+    }
 
-  function tryHitEntities(skillArea: SkillArea, targets: hl.types.ArrayObj<Dynamic>, triggerOnHitEvent: Dynamic) {}
+    public function tryHitEntities(arg0: tool.skill.SkillArea, arg1: Array<Dynamic>, arg2: Ref): Void {
+    }
 
-  function createAttackData(): tool.atk.AttackData.AttackData {}
+    public function createAttackData(): tool.atk.AttackData {
+        throw "stub: createAttackData not decompiled";
+    }
 
-  function useAnimsFromMob(inf: Dynamic) {}
+    public function useAnimsFromMob(arg0: Dynamic): Void {
+    }
 
-  function useFxFromMob(inf: Dynamic) {}
+    public function useFxFromMob(arg0: Dynamic): Void {
+    }
 
-  function useCommonEffectsFromMob(inf: Dynamic) {}
+    public function useCommonEffectsFromMob(arg0: Dynamic): Void {
+    }
 
-  function getCustomCommonEffectTarget(customId: String): hl.types.ArrayObj<Dynamic> {}
+    public function getCustomCommonEffectTarget(arg0: String): Array<Dynamic> {
+        throw "stub: getCustomCommonEffectTarget not decompiled";
+    }
 
-  function useProjectilesFromMob(inf: Dynamic) {}
+    public function useProjectilesFromMob(arg0: Dynamic): Void {
+    }
 
-  function getProjectile(id: String): SkillProjectile {}
+    public function getProjectile(arg0: String): tool.skill.SkillProjectile {
+        throw "stub: getProjectile not decompiled";
+    }
 
-  function getProjectiles(id: String): hl.types.ArrayObj<Dynamic> {}
+    public function getProjectiles(arg0: String): Array<Dynamic> {
+        throw "stub: getProjectiles not decompiled";
+    }
 }
-

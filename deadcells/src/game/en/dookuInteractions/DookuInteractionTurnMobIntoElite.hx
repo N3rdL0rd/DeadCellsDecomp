@@ -1,22 +1,35 @@
 package en.dookuInteractions;
+
 class DookuInteractionTurnMobIntoElite extends en.dookuInteractions.DookuInteraction {
-  var possibleMobs: hl.types.ArrayObj<Dynamic>;
-  var mob: en.Mob.Mob;
+    public var possibleMobs: Array<Dynamic>;
+    public var mob: en.Mob;
 
-  function __constructor__(parent: en.dookuInteractions.DookuInteractionsManager.DookuInteractionsManager) {}
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+        super();
+    }
 
-  function initTexts() {}
+    public override function initTexts(): Void {
+    }
 
-  function canTrigger(): Bool {}
+    public override function canTrigger(): Bool {
+        throw "stub: canTrigger not decompiled";
+    }
 
-  function onStartup() {}
+    public override function onStartup(): Void {
+    }
 
-  function dynOnExecute() {}
+    public override function dynOnExecute(): Void {
+    }
 
-  function getRandomMob(): en.Mob.Mob {}
+    public function getRandomMob(): en.Mob {
+        throw "stub: getRandomMob not decompiled";
+    }
 
-  function getDookuPos(): Dynamic {}
+    public override function getDookuPos(): h2d.col.IPoint {
+        throw "stub: getDookuPos not decompiled";
+    }
 
-  function getDookuDir(): Int {}
+    public override function getDookuDir(): Int {
+        throw "stub: getDookuDir not decompiled";
+    }
 }
-

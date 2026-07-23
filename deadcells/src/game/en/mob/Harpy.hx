@@ -1,68 +1,104 @@
 package en.mob;
+
 class Harpy extends en.Mob {
-  var attach: tool.FPoint.FPoint;
-  var wander: tool.FPoint.FPoint;
-  var flee: tool.skill.OldSkill.OldSkill;
-  var side: Int;
-  var remainingDist: Float;
-  var chargeAng: Float;
-  var chargeSpeed: Float;
-  var charging: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var attach: tool.FPoint;
+    public var wander: tool.FPoint;
+    public var flee: tool.skill.OldSkill;
+    public var side: Int;
+    public var remainingDist: Float;
+    public var chargeAng: Float;
+    public var chargeSpeed: Float;
+    public var charging: Bool;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Harpy {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Harpy {
+        throw "stub: create not decompiled";
+    }
 
-  function canHaveRepellingWith(e: Entity): Bool {}
+    public override function canHaveRepellingWith(arg0: Entity): Bool {
+        throw "stub: canHaveRepellingWith not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function resetPhysicData() {}
+    public function resetPhysicData(): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function decideChargeAng() {}
+    public function decideChargeAng(): Void {
+    }
 
-  function reduceThreat(source: Entity, loss: Float) {}
+    public override function reduceThreat(arg0: Entity, arg1: Float): Void {
+    }
 
-  function onFlee(r: Float) {}
+    public function onFlee(arg0: Float): Void {
+    }
 
-  function initMove() {}
+    public override function initMove(): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function onAttackTargetChange(old: Entity) {}
+    public override function onAttackTargetChange(arg0: Entity): Void {
+    }
 
-  function tryToFlee(): Bool {}
+    public function tryToFlee(): Bool {
+        throw "stub: tryToFlee not decompiled";
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function canCrawlThrought(x: Int, y: Int): Bool {}
+    public function canCrawlThrought(arg0: Int, arg1: Int): Bool {
+        throw "stub: canCrawlThrought not decompiled";
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function stopCharge() {}
+    public function stopCharge(): Void {
+    }
 
-  function onStep() {}
+    public function onStep(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

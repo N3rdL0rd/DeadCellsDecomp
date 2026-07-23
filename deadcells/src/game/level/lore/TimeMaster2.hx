@@ -1,14 +1,20 @@
 package level.lore;
+
 class TimeMaster2 extends level.LoreManager {
-  var swordY: Float;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var swordY: Float;
 
-  function __constructor__(l: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function postUpdate(dt: Float) {}
+    public override function postUpdate(arg0: Float): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

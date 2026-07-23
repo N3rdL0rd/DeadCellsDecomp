@@ -1,42 +1,66 @@
 package ui.sel;
+
 class BossRushStatueSelector extends ui.sel.GridSelector {
-  var statue: en.deco.BossRushStatue.BossRushStatue;
-  var sectionsCallbacks: hl.types.ArrayObj<Dynamic>;
-  var sectionsIconName: hl.types.ArrayObj<Dynamic>;
-  var architect: en.inter.npc.Architect.Architect;
+    public var statue: en.deco.BossRushStatue;
+    public var sectionsCallbacks: Array<Dynamic>;
+    public var sectionsIconName: Array<Dynamic>;
+    public var architect: en.inter.npc.Architect;
 
-  function __constructor__(_architect: en.inter.npc.Architect.Architect) {}
+    public function new(arg0: en.inter.npc.Architect) {
+        super();
+    }
 
-  function getTitleText(): String {}
+    public override function getTitleText(): String {
+        throw "stub: getTitleText not decompiled";
+    }
 
-  function pauseGame() {}
+    public override function pauseGame(): Void {
+    }
 
-  function initGrid() {}
+    public override function initGrid(): Void {
+    }
 
-  function onValidate() {}
+    public override function onValidate(): Void {
+    }
 
-  function initEntries(size: Int) {}
+    public override function initEntries(arg0: Int): Void {
+    }
 
-  function createNewSectionText(f: h2d.Flow.Flow, sectionName: String): ui.Text.Text {}
+    public override function createNewSectionText(arg0: h2d.Flow, arg1: String): ui.Text {
+        throw "stub: createNewSectionText not decompiled";
+    }
 
-  function getSectionIndex(index: Int): Int {}
+    public function getSectionIndex(arg0: Int): Int {
+        throw "stub: getSectionIndex not decompiled";
+    }
 
-  function isSelected(index: Int): Bool {}
+    public function isSelected(arg0: Int): Bool {
+        throw "stub: isSelected not decompiled";
+    }
 
-  function isEntryLocked(i: Int): Bool {}
+    public override function isEntryLocked(arg0: Int): Bool {
+        throw "stub: isEntryLocked not decompiled";
+    }
 
-  function getIconBmp(i: Int, p: h2d.Object.Object): h2d.Object.Object {}
+    public override function getIconBmp(arg0: Int, arg1: h2d.Object): h2d.Object {
+        throw "stub: getIconBmp not decompiled";
+    }
 
-  function beforeUpdateSelection() {}
+    public override function beforeUpdateSelection(): Void {
+    }
 
-  function updateSelection(scroll: Dynamic) {}
+    public override function updateSelection(arg0: Ref): Void {
+    }
 
-  function updateItemBackground(sectionIndex: Int, itemIndex: Int, selected: Bool, hasCursor: Bool) {}
+    public function updateItemBackground(arg0: Int, arg1: Int, arg2: Bool, arg3: Bool): Void {
+    }
 
-  function updateBackground(bgSpr: libs.heaps.slib.HSprite.HSprite, selected: Bool, hasCursor: Bool) {}
+    public function updateBackground(arg0: libs.heaps.slib.HSprite, arg1: Bool, arg2: Bool): Void {
+    }
 
-  function setMainFlowPos() {}
+    public override function setMainFlowPos(): Void {
+    }
 
-  function close() {}
+    public override function close(): Void {
+    }
 }
-

@@ -1,28 +1,41 @@
 package en;
+
 class CaltropBase extends Entity {
-  var hero: en.Hero.Hero;
-  var dmg: Dynamic;
-  var thawDur: Float;
-  var thawVal: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var hero: en.Hero;
+    public var dmg: Dynamic;
+    public var thawDur: Float;
+    public var thawVal: Int;
 
-  function __constructor__(hero: en.Hero.Hero, cx: Int, cy: Int, dmg: Dynamic, thawDur: Float, thawVal: Int) {}
+    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Float, arg5: Int) {
+        super();
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

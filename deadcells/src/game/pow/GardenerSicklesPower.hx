@@ -1,32 +1,47 @@
 package pow;
+
 class GardenerSicklesPower extends Power {
-  var leftSickle: en.bu.GardenerSickleBullet.GardenerSickleBullet;
-  var rightSickle: en.bu.GardenerSickleBullet.GardenerSickleBullet;
-  var leftSickle2: en.bu.GardenerSickleBullet.GardenerSickleBullet;
-  var rightSickle2: en.bu.GardenerSickleBullet.GardenerSickleBullet;
-  var delayer: libs.Delayer.Delayer;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var leftSickle: en.bu.GardenerSickleBullet;
+    public var rightSickle: en.bu.GardenerSickleBullet;
+    public var leftSickle2: en.bu.GardenerSickleBullet;
+    public var rightSickle2: en.bu.GardenerSickleBullet;
+    public var delayer: libs.Delayer;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function throwSickle(dir: Int): en.bu.GardenerSickleBullet.GardenerSickleBullet {}
+    public function throwSickle(arg0: Int): en.bu.GardenerSickleBullet {
+        throw "stub: throwSickle not decompiled";
+    }
 
-  function finishCast() {}
+    public function finishCast(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

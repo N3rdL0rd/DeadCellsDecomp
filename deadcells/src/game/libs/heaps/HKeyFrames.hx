@@ -1,11 +1,15 @@
 package libs.heaps;
+
 class HKeyFrames extends h2d.KeyFrames {
-  var groupFirstIndex: Int;
+    public var groupFirstIndex: Int;
 
-  function __constructor__(file: Dynamic, filePrefix: String, parent: h2d.Object.Object) {}
+    public function new(arg0: Dynamic, arg1: String, arg2: h2d.Object) {
+        super();
+    }
 
-  function addAnimationGroups(file: Dynamic) {}
+    public function addAnimationGroups(arg0: Dynamic): Void {
+    }
 
-  function reparseParents(file: Dynamic) {}
+    public function reparseParents(arg0: Dynamic): Void {
+    }
 }
-

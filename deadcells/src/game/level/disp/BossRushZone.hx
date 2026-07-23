@@ -1,26 +1,37 @@
 package level.disp;
+
 class BossRushZone extends level.BiomeDisp {
-  var gears: hl.types.ArrayObj<Dynamic>;
-  var smallDoorTiles: hl.types.ArrayObj<Dynamic>;
+    public var gears: Array<Dynamic>;
+    public var smallDoorTiles: Array<Dynamic>;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function initDecoEntities() {}
+    public override function initDecoEntities(): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addSmallDoors(z: level.DecoTypes.DecoTypes) {}
+    public function addSmallDoors(arg0: level.DecoZone): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function addSmallArch(z: level.DecoTypes.DecoTypes) {}
+    public function addSmallArch(arg0: level.DecoZone): Void {
+    }
 
-  function addWallLight(r: level.Room.Room, px: Float, py: Float) {}
+    public function addWallLight(arg0: level.Room, arg1: Float, arg2: Float): Void {
+    }
 
-  function renderFloorStamps() {}
+    public override function renderFloorStamps(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 }
-

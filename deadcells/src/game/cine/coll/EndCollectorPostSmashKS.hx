@@ -1,15 +1,19 @@
 package cine.coll;
+
 class EndCollectorPostSmashKS extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var collectorCorpse: en.CollectorCorpse.CollectorCorpse;
-  var endMask: h2d.Graphics.Graphics;
-  var roomCenterX: Float;
-  var exitDir: Int;
+    public var hero: en.Hero;
+    public var collectorCorpse: en.CollectorCorpse;
+    public var endMask: h2d.Graphics;
+    public var roomCenterX: Float;
+    public var exitDir: Int;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 }
-

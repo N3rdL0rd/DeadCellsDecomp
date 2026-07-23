@@ -1,33 +1,49 @@
 package en.inter.door;
+
 class BossDoor extends en.inter.Door {
-  var isMain: Bool;
-  var shine: Bool;
-  var bgFx: libs.heaps.slib.HSprite.HSprite;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var isMain: Bool;
+    public var shine: Bool;
+    public var bgFx: libs.heaps.slib.HSprite;
 
-  function __constructor__(lvl: pr.Level.Level, cx: Int, cy: Int, isMain: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool) {
+        super();
+    }
 
-  function get_isADlcPLevel(): Bool {}
+    public function get_isADlcPLevel(): Bool {
+        throw "stub: get_isADlcPLevel not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function closeAndLock(onEnd: Dynamic) {}
+    public function closeAndLock(arg0: Dynamic): Void {
+    }
 
-  function openAndUnlock(dir: Dynamic) {}
+    public function openAndUnlock(arg0: Ref): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

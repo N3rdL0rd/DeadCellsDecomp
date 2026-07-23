@@ -1,37 +1,49 @@
 package tool.twitch;
+
 class CustomSocketConnection {
-  var socket: sys.net.Socket;
-  var address: String;
-  var port: Int;
-  var cd: tool.Cooldown.Cooldown;
-  var exponentialWait: Float;
-  var connected: Bool;
-  var connecting: Bool;
-  var destroyed: Bool;
-  var buffer: String;
+    public var socket: sys.net.Socket;
+    public var address: String;
+    public var port: Int;
+    public var cd: tool.Cooldown;
+    public var exponentialWait: Float;
+    public var connected: Bool;
+    public var connecting: Bool;
+    public var destroyed: Bool;
+    public var buffer: String;
 
-  function onMessage(type: String, data: String) {}
+    public function new(arg0: String, arg1: Dynamic) {
+    }
 
-  function onError(rawData: String, error: String) {}
+    public function disconnect(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public function reconnect(): Void {
+    }
 
-  function __constructor__(address: String, port: Dynamic) {}
+    public function sendConnectionData(): Void {
+    }
 
-  function disconnect() {}
+    public function analyse(arg0: String): Void {
+    }
 
-  function reconnect() {}
+    public function sendMessage(arg0: String, arg1: String): Void {
+    }
 
-  function sendConnectionData() {}
+    public function destroy(): Void {
+    }
 
-  function analyse(rawData: String) {}
+    public function preUpdate(arg0: Float): Void {
+    }
 
-  function sendMessage(type: String, data: String) {}
+    public function update(): Void {
+    }
 
-  function destroy() {}
+    public function onError(arg0: String, arg1: String): Void {
+    }
 
-  function preUpdate(dt: Float) {}
+    public function onMessage(arg0: String, arg1: String): Void {
+    }
 
-  function update() {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 }
-

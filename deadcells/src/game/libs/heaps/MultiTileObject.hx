@@ -1,37 +1,53 @@
 package libs.heaps;
-class MultiTileObject_libs_heaps_slib_HSpriteBatch {
-  var spriteLibs: hl.types.ArrayObj<Dynamic>;
-  var objectsByTextureId: haxe.ds.IntMap<Dynamic>;
-
-  function __constructor__(libs: hl.types.ArrayObj<Dynamic>, parent: h2d.Object.Object) {}
-
-  function getObjects(): Dynamic {}
-
-  function getObjectFromTile(tile: h2d.Tile.Tile): libs.heaps.slib.HSpriteBatch.HSpriteBatch {}
-
-  function remove() {}
-
-  function setBlendMode(blendMode: Dynamic) {}
-
-  function initObjects(tiles: hl.types.ArrayObj<Dynamic>, normalTiles: hl.types.ArrayObj<Dynamic>, parent: h2d.Object.Object) {}
-}
 
 class MultiTileObject_h2d_TileGroup {
-  var spriteLibs: hl.types.ArrayObj<Dynamic>;
-  var objectsByTextureId: haxe.ds.IntMap<Dynamic>;
+    public var spriteLibs: Array<Dynamic>;
+    public var objectsByTextureId: haxe.ds.IntMap;
 
-  function __constructor__(libs: hl.types.ArrayObj<Dynamic>, parent: h2d.Object.Object) {}
+    public function new(arg0: Array<Dynamic>, arg1: h2d.Object) {
+    }
 
-  function getObjectFromTile(tile: h2d.Tile.Tile): h2d.Tile.TileGroup {}
+    public function getObjectFromTile(arg0: h2d.Tile): h2d.TileGroup {
+        throw "stub: getObjectFromTile not decompiled";
+    }
 
-  function addShader(shader: hxsl.Shader.Shader) {}
+    public function addShader(arg0: hxsl.Shader): Void {
+    }
 
-  function setBlendMode(blendMode: Dynamic) {}
+    public function setBlendMode(arg0: h2d.BlendMode): Void {
+    }
 
-  function setAlpha(alphaValue: Float) {}
+    public function setAlpha(arg0: Float): Void {
+    }
 
-  function setVisibility(isVisible: Bool) {}
+    public function setVisibility(arg0: Bool): Void {
+    }
 
-  function initObjects(tiles: hl.types.ArrayObj<Dynamic>, normalTiles: hl.types.ArrayObj<Dynamic>, parent: h2d.Object.Object) {}
+    public function initObjects(arg0: Array<Dynamic>, arg1: Array<Dynamic>, arg2: h2d.Object): Void {
+    }
 }
 
+class MultiTileObject_libs_heaps_slib_HSpriteBatch {
+    public var spriteLibs: Array<Dynamic>;
+    public var objectsByTextureId: haxe.ds.IntMap;
+
+    public function new(arg0: Array<Dynamic>, arg1: h2d.Object) {
+    }
+
+    public function getObjects(): Dynamic {
+        throw "stub: getObjects not decompiled";
+    }
+
+    public function getObjectFromTile(arg0: h2d.Tile): libs.heaps.slib.HSpriteBatch {
+        throw "stub: getObjectFromTile not decompiled";
+    }
+
+    public function remove(): Void {
+    }
+
+    public function setBlendMode(arg0: h2d.BlendMode): Void {
+    }
+
+    public function initObjects(arg0: Array<Dynamic>, arg1: Array<Dynamic>, arg2: h2d.Object): Void {
+    }
+}

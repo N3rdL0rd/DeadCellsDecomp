@@ -1,44 +1,60 @@
 package en.deco;
+
 class CellFlask extends en.deco.Pendulum {
-  var flask: libs.heaps.slib.HSprite.HSprite;
-  var liquid: libs.heaps.slib.HSprite.HSprite;
-  var glow: libs.heaps.slib.HSprite.HSprite;
-  var item: h2d.Bitmap.Bitmap;
-  var nameFlask: String;
-  var invItem: tool.InventItem.InventItem;
-  var zone: Int;
-  var isFree: Bool;
-  static var num: Int;
-  static var DP_ITEM: Int;
-  static var DP_LIQU: Int;
-  static var DP_FLASK: Int;
-  static var DP_GLOW: Int;
-  static var tingleSounds: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var num: Int;
+    public static var DP_ITEM: Int;
+    public static var DP_LIQU: Int;
+    public static var DP_FLASK: Int;
+    public static var DP_GLOW: Int;
+    public static var tingleSounds: Array<Dynamic>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var flask: libs.heaps.slib.HSprite;
+    public var liquid: libs.heaps.slib.HSprite;
+    public var glow: libs.heaps.slib.HSprite;
+    public var item: h2d.Bitmap;
+    public var nameFlask: String;
+    public var invItem: tool.InventItem;
+    public var zone: Int;
+    public var isFree: Bool;
 
-  function __constructor__(lvl: pr.Level.Level, posX: Float, posY: Float, idRand: Int, item: tool.InventItem.InventItem) {}
+    public function new(arg0: pr.Level, arg1: Float, arg2: Float, arg3: Int, arg4: tool.InventItem) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function setItem(ii: tool.InventItem.InventItem, immediate: Dynamic) {}
+    public function setItem(arg0: tool.InventItem, arg1: Ref): Void {
+    }
 
-  function initChain(offset: Dynamic) {}
+    public override function initChain(arg0: Ref): Void {
+    }
 
-  function initTingle(dir: Int, fromHero: Bool) {}
+    public override function initTingle(arg0: Int, arg1: Bool): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

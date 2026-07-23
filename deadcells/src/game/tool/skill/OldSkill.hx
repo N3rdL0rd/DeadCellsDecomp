@@ -1,107 +1,155 @@
 package tool.skill;
+
 class OldSkill extends libs.Process {
-  var id: String;
-  var owner: Entity;
-  var chargeF: Float;
-  var chargeMaxF: Float;
-  var chargeMul: Float;
-  var coolDownF: Float;
-  var coolDownMaxF: Float;
-  var cooldownSpeedMul: Float;
-  var lockControlsAfterUseS: Float;
-  var sfxCharge: hxd.res.Sound.Sound;
-  var sfxRelease: hxd.res.Sound.Sound;
-  var sfxHit: hxd.res.Sound.Sound;
-  var hitFrame: Int;
-  var fxStartFrame: Dynamic;
-  var attackAnimDone: Bool;
-  var fxDone: Bool;
-  var fxAnimStartF: Float;
-  var hasDynamicCharge: Bool;
-  var canMoveDuringCharge: Bool;
-  var ignoreUnconsciousness: Bool;
-  var ignoreInterrupt: Bool;
-  var startCooldownAutomatically: Bool;
-  var data: Dynamic;
-  var active: Bool;
-  var sfxCustom: hxd.res.Sound.Sound;
+    public var id: String;
+    public var owner: Entity;
+    public var chargeF: Float;
+    public var chargeMaxF: Float;
+    public var chargeMul: Float;
+    public var coolDownF: Float;
+    public var coolDownMaxF: Float;
+    public var cooldownSpeedMul: Float;
+    public var lockControlsAfterUseS: Float;
+    public var sfxCharge: hxd.res.Sound;
+    public var sfxRelease: hxd.res.Sound;
+    public var sfxHit: hxd.res.Sound;
+    public var hitFrame: Int;
+    public var fxStartFrame: Dynamic;
+    public var attackAnimDone: Bool;
+    public var fxDone: Bool;
+    public var fxAnimStartF: Float;
+    public var hasDynamicCharge: Bool;
+    public var canMoveDuringCharge: Bool;
+    public var ignoreUnconsciousness: Bool;
+    public var ignoreInterrupt: Bool;
+    public var startCooldownAutomatically: Bool;
+    public var data: Dynamic;
+    public var active: Bool;
+    public var sfxCustom: hxd.res.Sound;
 
-  function dynOnExecute(ratio: Float) {}
+    public function new(arg0: String, arg1: Entity, arg2: Dynamic) {
+        super();
+    }
 
-  function dynOnInterrupt(ratio: Float) {}
+    public function useSoundsFromMob(arg0: Dynamic): Void {
+    }
 
-  function dynOnFxFrame() {}
+    public function useSoundsFromWeapon(arg0: Dynamic): Void {
+    }
 
-  function dynOnAttackAnim() {}
+    public override function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function onSetCooldown(f: Float) {}
+    public function setTimers(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function dynOnCoolDownComplete() {}
+    public function getTimersState(): Dynamic {
+        throw "stub: getTimersState not decompiled";
+    }
 
-  function dynHasCooldown(): Bool {}
+    public function setTimersState(arg0: Dynamic): Void {
+    }
 
-  function dynOnChargeComplete() {}
+    public function setChargeMul(arg0: Float): Void {
+    }
 
-  function dynOnCharging(ratio: Float) {}
+    public function setCooldownMul(arg0: Float): Void {
+    }
 
-  function dynOnChargeStart() {}
+    public function useWeaponSkillInfos(arg0: Dynamic): Void {
+    }
 
-  function __constructor__(id: String, e: Entity, cb: Dynamic) {}
+    public function useMobSkillInfos(arg0: Dynamic, arg1: Float): Void {
+    }
 
-  function useSoundsFromMob(inf: Dynamic) {}
+    public function useActiveItem(arg0: tool.InventItem): Void {
+    }
 
-  function useSoundsFromWeapon(inf: Dynamic) {}
+    public function prepare(arg0: Dynamic): Bool {
+        throw "stub: prepare not decompiled";
+    }
 
-  function toString(): String {}
+    public function execute(arg0: Dynamic): Void {
+    }
 
-  function setTimers(chargeSec: Float, cdSec: Float, lockAfter: Dynamic) {}
+    public function interrupt(): Void {
+    }
 
-  function getTimersState(): Dynamic {}
+    public function startCooldown(arg0: Dynamic): Void {
+    }
 
-  function setTimersState(s: Dynamic) {}
+    public function resetCoolDown(): Void {
+    }
 
-  function setChargeMul(mul: Float) {}
+    public function resetCharge(): Void {
+    }
 
-  function setCooldownMul(mul: Float) {}
+    public function playSfx(arg0: hxd.res.Sound, arg1: Dynamic, arg2: Bool, arg3: Float, arg4: Float, arg5: Dynamic): Void {
+    }
 
-  function useWeaponSkillInfos(inf: Dynamic) {}
+    public function playChargeSfx(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Ref, arg4: Dynamic): Void {
+    }
 
-  function useMobSkillInfos(inf: Dynamic, speedMul: Float) {}
+    public function playReleaseSfx(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Ref, arg4: Dynamic): Void {
+    }
 
-  function useActiveItem(ii: tool.InventItem.InventItem) {}
+    public function playHitSfx(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Ref, arg4: Dynamic): Void {
+    }
 
-  function prepare(data: Dynamic): Bool {}
+    public function playCustomSfx(arg0: Dynamic, arg1: Dynamic, arg2: Ref, arg3: Ref, arg4: Dynamic): Void {
+    }
 
-  function execute(ratio: Dynamic) {}
+    public function isReady(): Bool {
+        throw "stub: isReady not decompiled";
+    }
 
-  function interrupt() {}
+    public function isCharging(): Bool {
+        throw "stub: isCharging not decompiled";
+    }
 
-  function startCooldown(overrideSec: Dynamic) {}
+    public override function update(): Void {
+    }
 
-  function resetCoolDown() {}
+    public function getCastSpeed(): Float {
+        throw "stub: getCastSpeed not decompiled";
+    }
 
-  function resetCharge() {}
+    public function getCooldownSpeed(): Float {
+        throw "stub: getCooldownSpeed not decompiled";
+    }
 
-  function playSfx(sfx: hxd.res.Sound.Sound, holdCond: Dynamic, loop: Bool, fadeOutTime: Float, volume: Float, pitch: Dynamic) {}
+    public override function onDispose(): Void {
+    }
 
-  function playChargeSfx(volume: Dynamic, holdCond: Dynamic, loop: Dynamic, fadeOutTime: Dynamic, pitch: Dynamic) {}
+    public function onSetCooldown(arg0: Float): Void {
+    }
 
-  function playReleaseSfx(volume: Dynamic, holdCond: Dynamic, loop: Dynamic, fadeOutTime: Dynamic, pitch: Dynamic) {}
+    public function dynHasCooldown(): Bool {
+        throw "stub: dynHasCooldown not decompiled";
+    }
 
-  function playHitSfx(volume: Dynamic, holdCond: Dynamic, loop: Dynamic, fadeOutTime: Dynamic, pitch: Dynamic) {}
+    public function dynOnInterrupt(arg0: Float): Void {
+    }
 
-  function playCustomSfx(volume: Dynamic, holdCond: Dynamic, loop: Dynamic, fadeOutTime: Dynamic, pitch: Dynamic) {}
+    public function dynOnFxFrame(): Void {
+    }
 
-  function isReady(): Bool {}
+    public function dynOnAttackAnim(): Void {
+    }
 
-  function isCharging(): Bool {}
+    public function dynOnCoolDownComplete(): Void {
+    }
 
-  function update() {}
+    public function dynOnExecute(arg0: Float): Void {
+    }
 
-  function getCastSpeed(): Float {}
+    public function dynOnChargeComplete(): Void {
+    }
 
-  function getCooldownSpeed(): Float {}
+    public function dynOnCharging(arg0: Float): Void {
+    }
 
-  function onDispose() {}
+    public function dynOnChargeStart(): Void {
+    }
 }
-

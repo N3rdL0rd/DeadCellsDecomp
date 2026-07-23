@@ -1,91 +1,129 @@
 package en.inter;
+
 class Elevator extends en.Interactive {
-  var cbmpFront: h2d.Mask.Mask;
-  var cbmpBack: h2d.Mask.Mask;
-  var mainChainsLeft: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var mainChainsRight: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var bgChains: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var chainOffset: Float;
-  var mainShakeAmp: Float;
-  var bgShakeAmp: Float;
-  var speed: Float;
-  var maxSpeed: Float;
-  var acceleration: Float;
-  var moveDir: Int;
-  var ty: Float;
-  var cWid: Int;
-  var lastCy: Int;
-  var snappeds: hl.types.ArrayObj<Dynamic>;
-  var xLeft: Int;
-  var xRight: Int;
-  var yTop: Int;
-  var yBottom: Int;
-  var oldFootY: Float;
-  var offSetLeft: Int;
-  var offSetRight: Int;
-  var canJumpThrough: Bool;
-  var elevatorShakeFactor: Float;
-  var sfxElevatorStart: hxd.res.Sound.Sound;
-  var sfxElevatorLoop: hxd.res.Sound.Sound;
-  var sfxElevatorStop: hxd.res.Sound.Sound;
-  var sprLayer: Int;
-  var middleChainLayer: Int;
-  var sideChainLayer: Int;
-  var chainsIsVisible: Bool;
-  var chainsCullingBound: h2d.col.Bounds.Bounds;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var cbmpFront: h2d.Mask;
+    public var cbmpBack: h2d.Mask;
+    public var mainChainsLeft: libs.heaps.slib.HSpriteBatch;
+    public var mainChainsRight: libs.heaps.slib.HSpriteBatch;
+    public var bgChains: libs.heaps.slib.HSpriteBatch;
+    public var chainOffset: Float;
+    public var mainShakeAmp: Float;
+    public var bgShakeAmp: Float;
+    public var speed: Float;
+    public var maxSpeed: Float;
+    public var acceleration: Float;
+    public var moveDir: Int;
+    public var ty: Float;
+    public var cWid: Int;
+    public var lastCy: Int;
+    public var snappeds: Array<Dynamic>;
+    public var xLeft: Int;
+    public var xRight: Int;
+    public var yTop: Int;
+    public var yBottom: Int;
+    public var oldFootY: Float;
+    public var offSetLeft: Int;
+    public var offSetRight: Int;
+    public var canJumpThrough: Bool;
+    public var elevatorShakeFactor: Float;
+    public var sfxElevatorStart: hxd.res.Sound;
+    public var sfxElevatorLoop: hxd.res.Sound;
+    public var sfxElevatorStop: hxd.res.Sound;
+    public var sprLayer: Int;
+    public var middleChainLayer: Int;
+    public var sideChainLayer: Int;
+    public var chainsIsVisible: Bool;
+    public var chainsCullingBound: h2d.col.Bounds;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, w: Int, h: Int, initAtTop: Bool) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  function getYTop(): Int {}
+    public function getYTop(): Int {
+        throw "stub: getYTop not decompiled";
+    }
 
-  function setYTop(v: Int): Int {}
+    public function setYTop(arg0: Int): Int {
+        throw "stub: setYTop not decompiled";
+    }
 
-  function canBeHit(): Bool {}
+    public function canBeHit(): Bool {
+        throw "stub: canBeHit not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function initChains() {}
+    public function initChains(): Void {
+    }
 
-  function renderPlatform() {}
+    public function renderPlatform(): Void {
+    }
 
-  function bump(dx: Float, dy: Float, ignoreResist: Dynamic) {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function isReady(): Bool {}
+    public function isReady(): Bool {
+        throw "stub: isReady not decompiled";
+    }
 
-  function isMoving(): Bool {}
+    public function isMoving(): Bool {
+        throw "stub: isMoving not decompiled";
+    }
 
-  function onArrival(aDir: Int) {}
+    public function onArrival(arg0: Int): Void {
+    }
 
-  function onStep() {}
+    public function onStep(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function isSnapping(e: Entity): Bool {}
+    public function isSnapping(arg0: Entity): Bool {
+        throw "stub: isSnapping not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function afterFixedUpdate() {}
+    public function afterFixedUpdate(): Void {
+    }
 
-  function set_chainsIsVisible(value: Bool): Bool {}
+    public function set_chainsIsVisible(arg0: Bool): Bool {
+        throw "stub: set_chainsIsVisible not decompiled";
+    }
 
-  function setChainsVisibility(isVisible: Bool) {}
+    public function setChainsVisibility(arg0: Bool): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

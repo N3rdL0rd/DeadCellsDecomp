@@ -1,92 +1,136 @@
 package en.mob;
+
 class Screamer extends en.Mob {
-  var birds: hl.types.ArrayObj<Dynamic>;
-  var tcx: Dynamic;
-  var tcy: Dynamic;
-  var tpCounter: Int;
-  var chargescreamS: Float;
-  var isAwake: Bool;
-  var pointer: ui.Pointer.Pointer;
-  var visitedPoint: hl.types.ArrayObj<Dynamic>;
-  var us: en.inter.UpgradeShrine.UpgradeShrine;
-  var swords: hl.types.ArrayObj<Dynamic>;
-  var dbgs: hl.types.ArrayObj<Dynamic>;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var birds: Array<Dynamic>;
+    public var tcx: Dynamic;
+    public var tcy: Dynamic;
+    public var tpCounter: Int;
+    public var chargescreamS: Float;
+    public var isAwake: Bool;
+    public var pointer: ui.Pointer;
+    public var visitedPoint: Array<Dynamic>;
+    public var us: en.inter.UpgradeShrine;
+    public var swords: Array<Dynamic>;
+    public var dbgs: Array<Dynamic>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): Screamer {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Screamer {
+        throw "stub: create not decompiled";
+    }
 
-  function addToLoot(lt: Dynamic, flawless: Dynamic) {}
+    public override function addToLoot(arg0: LootType, arg1: Ref): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function setElite(disableEliteSkill: Bool) {}
+    public override function setElite(arg0: Bool): Void {
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function getDisabledSword(): ScreamerSword {}
+    public function getDisabledSword(): en.mob.ScreamerSword {
+        throw "stub: getDisabledSword not decompiled";
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function prepareTeleport() {}
+    public function prepareTeleport(): Void {
+    }
 
-  function teleportTo(x: Dynamic, y: Dynamic): Bool {}
+    public function teleportTo(arg0: Dynamic, arg1: Dynamic): Bool {
+        throw "stub: teleportTo not decompiled";
+    }
 
-  function onDamage(ad: tool.atk.AttackData.AttackData) {}
+    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
 
 class ScreamerSword extends Entity {
-  var inf: Dynamic;
-  var scr: en.mob.Screamer.Screamer;
-  var area: tool.Area.Area;
-  var isActivated: Bool;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var inf: Dynamic;
+    public var scr: en.mob.Screamer;
+    public var area: tool.Area;
+    public var isActivated: Bool;
 
-  function __constructor__(scr: en.mob.Screamer.Screamer, inf: Dynamic) {}
+    public function new(arg0: en.mob.Screamer, arg1: Dynamic) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function prepare(xp: Float) {}
+    public function prepare(arg0: Float): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

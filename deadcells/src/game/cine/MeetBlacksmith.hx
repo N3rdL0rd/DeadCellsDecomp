@@ -1,9 +1,12 @@
 package cine;
+
 class MeetBlacksmith extends GameCinematic {
-  var bs: en.inter.npc.Blacksmith.Blacksmith;
+    public var bs: en.inter.npc.Blacksmith;
 
-  function __constructor__(bs: en.inter.npc.Blacksmith.Blacksmith) {}
+    public function new(arg0: en.inter.npc.Blacksmith) {
+        super();
+    }
 
-  function onComplete() {}
+    public function onComplete(): Void {
+    }
 }
-

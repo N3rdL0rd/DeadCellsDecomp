@@ -1,170 +1,252 @@
 package en;
+
 class Bullet extends Entity {
-  var maxDist: Float;
-  var ocx: Int;
-  var ocy: Int;
-  var ox: Float;
-  var oy: Float;
-  var ignoreWalls: Bool;
-  var ignoreOneWays: Bool;
-  var isHeavy: Bool;
-  var autoSetDir: Bool;
-  var switchToMagicOnPierce: Bool;
-  var bulletRotation: Float;
-  var canStickInWall: Bool;
-  var ignoreTrashMobs: Bool;
-  var disabled: Bool;
-  var pierceCount: Int;
-  var tail: Dynamic;
-  var atk: tool.atk.AttackData.AttackData;
-  var endGravity: Float;
-  var hitLightIntensity: Float;
-  var noCounterBullet: Bool;
-  var noParry: Bool;
-  var destroyOnCinematic: Bool;
-  var itemAmmoRef: tool.InventItem.InventItem;
-  var ammoDropped: Bool;
-  var bulletDelayF: Float;
-  var hitFrequency: Float;
-  var ammoSkin: String;
-  var tailDuration: Float;
-  var spriteName: String;
-  var doExtraTail: Dynamic;
-  var hitSound: hxd.res.Sound.Sound;
-  var blockSound: hxd.res.Sound.Sound;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var maxDist: Float;
+    public var ocx: Int;
+    public var ocy: Int;
+    public var ox: Float;
+    public var oy: Float;
+    public var ignoreWalls: Bool;
+    public var ignoreOneWays: Bool;
+    public var isHeavy: Bool;
+    public var autoSetDir: Bool;
+    public var switchToMagicOnPierce: Bool;
+    public var bulletRotation: Float;
+    public var canStickInWall: Bool;
+    public var ignoreTrashMobs: Bool;
+    public var disabled: Bool;
+    public var pierceCount: Int;
+    public var tail: en.BulletTail;
+    public var atk: tool.atk.AttackData;
+    public var endGravity: Float;
+    public var hitLightIntensity: Float;
+    public var noCounterBullet: Bool;
+    public var noParry: Bool;
+    public var destroyOnCinematic: Bool;
+    public var itemAmmoRef: tool.InventItem;
+    public var ammoDropped: Bool;
+    public var bulletDelayF: Float;
+    public var hitFrequency: Float;
+    public var ammoSkin: String;
+    public var tailDuration: Float;
+    public var spriteName: String;
+    public var doExtraTail: Dynamic;
+    public var hitSound: hxd.res.Sound;
+    public var blockSound: hxd.res.Sound;
+
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Dynamic, arg4: String) {
+        super();
+    }
+
+    public function removeAmmoDrop(): Void {
+    }
+
+    public function hasAmmoToRetrieve(): Bool {
+        throw "stub: hasAmmoToRetrieve not decompiled";
+    }
+
+    public function stickAmmoOnVictims(): Bool {
+        throw "stub: stickAmmoOnVictims not decompiled";
+    }
+
+    public function initAmmo(arg0: en.loot.Ammo): Void {
+    }
+
+    public function shootFromWeapon(arg0: tool.Weapon, arg1: Ref, arg2: Ref, arg3: Ref): Void {
+    }
+
+    public override function shouldSave(): Bool {
+        throw "stub: shouldSave not decompiled";
+    }
+
+    public override function initGfx(): Void {
+    }
+
+    public function initBulletSprite(): Void {
+    }
+
+    public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
+    }
+
+    public function enableHeroFalling(arg0: Dynamic): Void {
+    }
+
+    public function enableDefaultGravity(arg0: Dynamic): Void {
+    }
+
+    public function initOrigin(arg0: Float, arg1: Float): Void {
+    }
+
+    public function offsetOrigin(arg0: Float, arg1: Float): Void {
+    }
 
-  function onBulletDelayDone() {}
+    public function defaultCanHit(arg0: Entity): Bool {
+        throw "stub: defaultCanHit not decompiled";
+    }
 
-  function onCountered() {}
+    public function getCoveredDistSqr(): Float {
+        throw "stub: getCoveredDistSqr not decompiled";
+    }
 
-  function onBlock(byEntity: Bool) {}
+    public override function dispose(): Void {
+    }
 
-  function onPostUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function onFixedUpdate() {}
+    public function setSpriteTransform(): Void {
+    }
 
-  function onBeforeRender() {}
+    public override function beforeRender(): Void {
+    }
 
-  function onReachMaxDist() {}
+    public function doTail(): Void {
+    }
 
-  function canHit(e: Entity): Bool {}
+    public function getTailColor(): Int {
+        throw "stub: getTailColor not decompiled";
+    }
 
-  function onBulletKill(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public override function onStep(): Void {
+    }
 
-  function onDispose() {}
+    public override function onTouchGround(): Void {
+    }
 
-  function onBulletHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public function blockOnCollision(): Void {
+    }
 
-  function beforeHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public function createAmmoDrop(): en.loot.Ammo {
+        throw "stub: createAmmoDrop not decompiled";
+    }
 
-  function __constructor__(from: Entity, a: tool.atk.AttackData.AttackData, ang: Float, spd: Dynamic, spriteName: String) {}
+    public function onHitWall(): Void {
+    }
 
-  function removeAmmoDrop() {}
+    public function attachFakeBulletStuck(): Void {
+    }
 
-  function hasAmmoToRetrieve(): Bool {}
+    public function createFakeBulletSprite(): libs.heaps.slib.HSprite {
+        throw "stub: createFakeBulletSprite not decompiled";
+    }
 
-  function stickAmmoOnVictims(): Bool {}
+    public function attachFakeBulletBounce(): Void {
+    }
 
-  function initAmmo(a: en.loot.Ammo.Ammo) {}
+    public function playHitSound(): Void {
+    }
 
-  function shootFromWeapon(w: tool.Weapon.Weapon, useAmmo: Dynamic, xOff: Dynamic, yOff: Dynamic) {}
+    public function playBlockSound(): Void {
+    }
 
-  function shouldSave(): Bool {}
+    public function block(arg0: Bool): Void {
+    }
 
-  function initGfx() {}
+    public function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function initBulletSprite() {}
+    public function onPierce(): Void {
+    }
 
-  function initSprite(lib: libs.heaps.slib.SpriteLib.SpriteLib, group: String, xr: Dynamic, yr: Dynamic, layer: Dynamic, lighted: Dynamic, depth: Dynamic, nrmTex: h3d.mat.Texture.Texture) {}
+    public function onReachSomething(): Void {
+    }
 
-  function enableHeroFalling(endGravMul: Dynamic) {}
+    public function getElapsedDistCase(): Float {
+        throw "stub: getElapsedDistCase not decompiled";
+    }
 
-  function enableDefaultGravity(intensity: Dynamic) {}
+    public function getElapsedDistRatio(): Float {
+        throw "stub: getElapsedDistRatio not decompiled";
+    }
 
-  function initOrigin(x: Float, y: Float) {}
+    public override function onTouch(arg0: Entity): Void {
+    }
 
-  function offsetOrigin(dx: Float, dy: Float) {}
+    public function vanish(): Void {
+    }
 
-  function defaultCanHit(e: Entity): Bool {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCoveredDistSqr(): Float {}
+    public override function _isOnScreen(): Bool {
+        throw "stub: _isOnScreen not decompiled";
+    }
 
-  function dispose() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function postUpdate() {}
+    public override function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function setSpriteTransform() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function beforeRender() {}
+    public function reachMaxDist(): Void {
+    }
 
-  function doTail() {}
+    public function updateDir(): Void {
+    }
 
-  function getTailColor(): Int {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onStep() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function onTouchGround() {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function blockOnCollision() {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function createAmmoDrop(): en.loot.Ammo.Ammo {}
+    public override function unserializeInit(): Void {
+    }
 
-  function onHitWall() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function attachFakeBulletStuck() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function createFakeBulletSprite(): libs.heaps.slib.HSprite.HSprite {}
+    public function onReachMaxDist(): Void {
+    }
 
-  function attachFakeBulletBounce() {}
+    public function onCountered(): Void {
+    }
 
-  function playHitSound() {}
+    public function onBlock(arg0: Bool): Void {
+    }
 
-  function playBlockSound() {}
+    public function onBeforeRender(): Void {
+    }
 
-  function block(byEntity: Bool) {}
+    public function onPostUpdate(): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public function onDispose(): Void {
+    }
 
-  function onPierce() {}
+    public function canHit(arg0: Entity): Bool {
+        throw "stub: canHit not decompiled";
+    }
 
-  function onReachSomething() {}
+    public function onBulletDelayDone(): Void {
+    }
 
-  function getElapsedDistCase(): Float {}
+    public function onFixedUpdate(): Void {
+    }
 
-  function getElapsedDistRatio(): Float {}
+    public function onBulletKill(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function onBulletHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 
-  function vanish() {}
-
-  function onCooldownEnd(k: String, idx: Int) {}
-
-  function _isOnScreen(): Bool {}
-
-  function onOutOfGameChange() {}
-
-  function onFatalFallStart(delay: Dynamic) {}
-
-  function onLeaveMap() {}
-
-  function reachMaxDist() {}
-
-  function updateDir() {}
-
-  function fixedUpdate() {}
-
-  function getCLID(): Int {}
-
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getSerializeSchema(): hxbit.Schema.Schema {}
-
-  function unserializeInit() {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function beforeHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 }
-

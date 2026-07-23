@@ -1,29 +1,46 @@
 package en.active;
+
 class TeslaCoil extends en.active.Turret {
-  var rangeCase: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var rangeCase: Int;
 
-  static function create(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem): TeslaCoil {}
+    public function new(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(h: en.Hero.Hero, cx: Int, cy: Int, i: tool.InventItem.InventItem) {}
+    public static function create(arg0: en.Hero, arg1: Int, arg2: Int, arg3: tool.InventItem): en.active.TeslaCoil {
+        throw "stub: create not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function initStats() {}
+    public override function initStats(): Void {
+    }
 
-  function getAttackTarget(): Entity {}
+    public override function getAttackTarget(): Entity {
+        throw "stub: getAttackTarget not decompiled";
+    }
 
-  function getVictims(): hl.types.ArrayObj<Dynamic> {}
+    public function getVictims(): Array<Dynamic> {
+        throw "stub: getVictims not decompiled";
+    }
 
-  function shoot(e: Entity) {}
+    public override function shoot(arg0: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

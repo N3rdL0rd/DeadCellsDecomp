@@ -1,252 +1,343 @@
 package en.mob.boss;
+
 class GardenerBoss extends en.mob.Boss {
-  var action: Dynamic;
-  var lastAction: Dynamic;
-  var phaseName: Dynamic;
-  var phase: Int;
-  var walkPhase: Bool;
-  var isJumping: Bool;
-  var shortRangeMax: Int;
-  var midRangeMin: Int;
-  var midRangeMax: Int;
-  var rangeDash: Int;
-  var longRangeMin: Int;
-  var maxSpeed: Float;
-  var currentNbLoop: Int;
-  var limitDistMushroom: Int;
-  var curActionTimeF: Float;
-  var defaultZoom: Float;
-  var nbBounce: Int;
-  var newAction: Dynamic;
-  var nbPitchFork: Int;
-  var nbShovel: Int;
-  var nbSickle: Int;
-  var nbHoe: Int;
-  var currentPhaseStep: Int;
-  var hoeLoop: Int;
-  var forkLoop: Int;
-  var sicklesLoop: Int;
-  var shovelLoop: Int;
-  var mainRoomCenterX: Int;
-  var mainRoomLeftX: Int;
-  var mainRoomRightX: Int;
-  var roomOffsetX: Int;
-  var roomOffsetY: Int;
-  var roomFloorY: Int;
-  var phaseTimer: Float;
-  var initialTimer: Float;
-  var bossRushModifiers: Dynamic;
-  var isBeaten: Bool;
-  var isBuried: Bool;
-  var plantAMush: Bool;
-  var looped: Bool;
-  var tryToPreventDeathBool: Bool;
-  var leftCarn: Bool;
-  var rightCarn: Bool;
-  var spawnCarn: Bool;
-  var leftLigamentAttacked: Bool;
-  var rightLigamentAttacked: Bool;
-  var upLigamentFromSource: Bool;
-  var duringVineLaunch: Bool;
-  var ligamentSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var ligamentsLeft1: hl.types.ArrayObj<Dynamic>;
-  var ligamentsRight1: hl.types.ArrayObj<Dynamic>;
-  var ligamentsLeft2: hl.types.ArrayObj<Dynamic>;
-  var ligamentsRight2: hl.types.ArrayObj<Dynamic>;
-  var ligamentsLeft3: hl.types.ArrayObj<Dynamic>;
-  var ligamentsRight3: hl.types.ArrayObj<Dynamic>;
-  var isDashing: Bool;
-  var onCeiling: Bool;
-  var onCeilingPitchFork: Bool;
-  var newStepCreation: Bool;
-  var isNextStepANewPhase: Bool;
-  var currentLifeQuarter: Int;
-  var totalLifeQuarter: Int;
-  var extraOffsetY: Int;
-  var sicklesFloatingAround: Bool;
-  var isLigamentRemoval: Bool;
-  var counter: Int;
-  var currentSpeed: Float;
-  var currentHoeNbHit: Int;
-  var timeLockBetweenPhase: Float;
-  var atkHoe: tool.skill.OldMobSkill.OldMobSkill;
-  var ligamentTargetPos: hl.types.ArrayBytes<Int>;
-  var mushes: hl.types.ArrayObj<Dynamic>;
-  var mushesCx: hl.types.ArrayBytes<Int>;
-  var mushesSide: hl.types.ArrayObj<Dynamic>;
-  var mobs: hl.types.ArrayObj<Dynamic>;
-  var sicklesAr: hl.types.ArrayObj<Dynamic>;
-  var seeds: hl.types.ArrayObj<Dynamic>;
-  var butterflyColors: hl.types.ArrayBytes<Int>;
-  var roomLeftPointX: Int;
-  var roomRightPointX: Int;
-  var roomTopPointY: Int;
-  var tw_roomLeftPointX: Int;
-  var tw_roomRightPointX: Int;
-  var tw_roomTopLeftPointY: Int;
-  var tw_roomTopRightPointY: Int;
-  var waterColorLight: Int;
-  var waterPoisonColorLight: Int;
-  var isHittable: Bool;
-  var isWateringIntroAnim: Bool;
-  var isAngryIntroAnim: Bool;
-  var tmp: libs.heaps.slib.SpriteLib.SpriteLib;
-  var <none>: Dynamic;
-  static var actionDeck1: libs.RandDeck.RandDeck;
-  static var actionDeck2: libs.RandDeck.RandDeck;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var actionDeck1: libs.RandDeck;
+    public static var actionDeck2: libs.RandDeck;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var action: en.mob.boss.BossAction;
+    public var lastAction: en.mob.boss.BossAction;
+    public var phaseName: en.mob.boss.Phase;
+    public var phase: Int;
+    public var walkPhase: Bool;
+    public var isJumping: Bool;
+    public var shortRangeMax: Int;
+    public var midRangeMin: Int;
+    public var midRangeMax: Int;
+    public var rangeDash: Int;
+    public var longRangeMin: Int;
+    public var maxSpeed: Float;
+    public var currentNbLoop: Int;
+    public var limitDistMushroom: Int;
+    public var curActionTimeF: Float;
+    public var defaultZoom: Float;
+    public var nbBounce: Int;
+    public var newAction: en.mob.boss.ActionDeck;
+    public var nbPitchFork: Int;
+    public var nbShovel: Int;
+    public var nbSickle: Int;
+    public var nbHoe: Int;
+    public var currentPhaseStep: Int;
+    public var hoeLoop: Int;
+    public var forkLoop: Int;
+    public var sicklesLoop: Int;
+    public var shovelLoop: Int;
+    public var mainRoomCenterX: Int;
+    public var mainRoomLeftX: Int;
+    public var mainRoomRightX: Int;
+    public var roomOffsetX: Int;
+    public var roomOffsetY: Int;
+    public var roomFloorY: Int;
+    public var phaseTimer: Float;
+    public var initialTimer: Float;
+    public var bossRushModifiers: Dynamic;
+    public var isBeaten: Bool;
+    public var isBuried: Bool;
+    public var plantAMush: Bool;
+    public var looped: Bool;
+    public var tryToPreventDeathBool: Bool;
+    public var leftCarn: Bool;
+    public var rightCarn: Bool;
+    public var spawnCarn: Bool;
+    public var leftLigamentAttacked: Bool;
+    public var rightLigamentAttacked: Bool;
+    public var upLigamentFromSource: Bool;
+    public var duringVineLaunch: Bool;
+    public var ligamentSb: libs.heaps.slib.HSpriteBatch;
+    public var ligamentsLeft1: Array<Dynamic>;
+    public var ligamentsRight1: Array<Dynamic>;
+    public var ligamentsLeft2: Array<Dynamic>;
+    public var ligamentsRight2: Array<Dynamic>;
+    public var ligamentsLeft3: Array<Dynamic>;
+    public var ligamentsRight3: Array<Dynamic>;
+    public var isDashing: Bool;
+    public var onCeiling: Bool;
+    public var onCeilingPitchFork: Bool;
+    public var newStepCreation: Bool;
+    public var isNextStepANewPhase: Bool;
+    public var currentLifeQuarter: Int;
+    public var totalLifeQuarter: Int;
+    public var extraOffsetY: Int;
+    public var sicklesFloatingAround: Bool;
+    public var isLigamentRemoval: Bool;
+    public var counter: Int;
+    public var currentSpeed: Float;
+    public var currentHoeNbHit: Int;
+    public var timeLockBetweenPhase: Float;
+    public var atkHoe: tool.skill.OldMobSkill;
+    public var ligamentTargetPos: Array<Int>;
+    public var mushes: Array<Dynamic>;
+    public var mushesCx: Array<Int>;
+    public var mushesSide: Array<Dynamic>;
+    public var mobs: Array<Dynamic>;
+    public var sicklesAr: Array<Dynamic>;
+    public var seeds: Array<Dynamic>;
+    public var butterflyColors: Array<Int>;
+    public var roomLeftPointX: Int;
+    public var roomRightPointX: Int;
+    public var roomTopPointY: Int;
+    public var tw_roomLeftPointX: Int;
+    public var tw_roomRightPointX: Int;
+    public var tw_roomTopLeftPointY: Int;
+    public var tw_roomTopRightPointY: Int;
+    public var waterColorLight: Int;
+    public var waterPoisonColorLight: Int;
+    public var isHittable: Bool;
+    public var isWateringIntroAnim: Bool;
+    public var isAngryIntroAnim: Bool;
+    public var tmp: libs.heaps.slib.SpriteLib;
+    public var : Dynamic;
+
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
+
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.boss.GardenerBoss {
+        throw "stub: create not decompiled";
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function get_shootX(): Float {
+        throw "stub: get_shootX not decompiled";
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): GardenerBoss {}
+    public function set_isHittable(arg0: Bool): Bool {
+        throw "stub: set_isHittable not decompiled";
+    }
 
-  function get_shootX(): Float {}
+    public override function init(): Void {
+    }
 
-  function set_isHittable(v: Bool): Bool {}
+    public function initRoomInfos(): Void {
+    }
 
-  function init() {}
+    public function initGfx(): Void {
+    }
 
-  function initRoomInfos() {}
+    public function nextStep(arg0: Dynamic): Void {
+    }
 
-  function initGfx() {}
+    public function initSkills(): Void {
+    }
 
-  function nextStep(dynamicLockTiming: Dynamic) {}
+    public override function onScream(): Void {
+    }
 
-  function initSkills() {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onScream() {}
+    public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function canHaveRepellingWith(arg0: Entity): Bool {
+        throw "stub: canHaveRepellingWith not decompiled";
+    }
 
-  function bump(_dx: Float, _dy: Float, ignoreResist: Dynamic) {}
+    public function behaviourAi(): Void {
+    }
 
-  function canHaveRepellingWith(e: Entity): Bool {}
+    public function doActionAi(): Void {
+    }
 
-  function behaviourAi() {}
+    public function isLigamentComingBack(): Bool {
+        throw "stub: isLigamentComingBack not decompiled";
+    }
 
-  function doActionAi() {}
+    public function postUpdate(): Void {
+    }
 
-  function isLigamentComingBack(): Bool {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function corruptOrExplodeMushroom(arg0: Int): Void {
+    }
 
-  function fixedUpdate() {}
+    public function initMushroomSide(): Void {
+    }
 
-  function corruptOrExplodeMushroom(distDir: Int) {}
+    public function initMushroom(arg0: Int): Void {
+    }
 
-  function initMushroomSide() {}
+    public function attackOnLigaments(): Void {
+    }
 
-  function initMushroom(posX: Int) {}
+    public function removeLigaments(): Void {
+    }
 
-  function attackOnLigaments() {}
+    public function removeLigament_exe(): Void {
+    }
 
-  function removeLigaments() {}
+    public function preUpdate(): Void {
+    }
 
-  function removeLigament_exe() {}
+    public function addLigament(): Void {
+    }
 
-  function preUpdate() {}
+    public function hoe(arg0: Int, arg1: Float): Void {
+    }
 
-  function addLigament() {}
+    public function fallFloorStun(arg0: Ref): Void {
+    }
 
-  function hoe(nbLoop: Int, speed: Float) {}
+    public function stunForS(arg0: Float): Void {
+    }
 
-  function fallFloorStun(death: Dynamic) {}
+    public function cancelCeilingWalk(): Void {
+    }
 
-  function stunForS(duration: Float) {}
+    public function onLand(arg0: Float): Void {
+    }
 
-  function cancelCeilingWalk() {}
+    public function onTouchGround(): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public function bounceBackToCeiling(): Void {
+    }
 
-  function onTouchGround() {}
+    public function atkPitchForkLoad(): Void {
+    }
 
-  function bounceBackToCeiling() {}
+    public function jumpToCeiling(arg0: Float): Void {
+    }
 
-  function atkPitchForkLoad() {}
+    public function vineEnd(): Void {
+    }
 
-  function jumpToCeiling(speed: Float) {}
+    public function toggleVisibility(arg0: Ref): Void {
+    }
 
-  function vineEnd() {}
+    public function wateringCan(arg0: Int, arg1: Float): Void {
+    }
 
-  function toggleVisibility(zoom: Dynamic) {}
+    public function pitchFork(arg0: Int, arg1: Float): Void {
+    }
 
-  function wateringCan(nbLoop: Int, speed: Float) {}
+    public function createMushMob(): Void {
+    }
 
-  function pitchFork(nbLoop: Int, speed: Float) {}
+    public function sickles(arg0: Int, arg1: Float): Void {
+    }
 
-  function createMushMob() {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function sickles(nbLoop: Int, speed: Float) {}
+    public function doThrowSickle(arg0: tool.atk.AttackData, arg1: Float, arg2: Float): en.mob.boss.gardener.Sickle {
+        throw "stub: doThrowSickle not decompiled";
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function sickleThrow(arg0: Ref): Void {
+    }
 
-  function doThrowSickle(atkData: tool.atk.AttackData.AttackData, angle: Float, speed: Float): en.mob.boss.gardener.Sickle.Sickle {}
+    public function endAirSickle(): Void {
+    }
 
-  function sickleThrow(airSickle: Dynamic) {}
+    public function atkSickleReverse(arg0: en.mob.boss.gardener.Sickle): Void {
+    }
 
-  function endAirSickle() {}
+    public function sporeAtk(arg0: Int, arg1: Float): Void {
+    }
 
-  function atkSickleReverse(s: en.mob.boss.gardener.Sickle.Sickle) {}
+    public function getRandFloorCx(): Int {
+        throw "stub: getRandFloorCx not decompiled";
+    }
 
-  function sporeAtk(nbLoop: Int, speed: Float) {}
+    public function createSpores(): Void {
+    }
 
-  function getRandFloorCx(): Int {}
+    public function shovel(arg0: Int, arg1: Float): Void {
+    }
 
-  function createSpores() {}
+    public function shovelAttack(): Void {
+    }
 
-  function shovel(nbLoop: Int, speed: Float) {}
+    public function shovelDisappear(): Void {
+    }
 
-  function shovelAttack() {}
+    public function shovelDisappear_end(): Void {
+    }
 
-  function shovelDisappear() {}
+    public function unBuried(): Void {
+    }
 
-  function shovelDisappear_end() {}
+    public function shovelEndAppear_end(): Void {
+    }
 
-  function unBuried() {}
+    public function shovelUpEnd(): Void {
+    }
 
-  function shovelEndAppear_end() {}
+    public function createAlly(arg0: String, arg1: String, arg2: Dynamic): en.Mob {
+        throw "stub: createAlly not decompiled";
+    }
 
-  function shovelUpEnd() {}
+    public function getAffectResist(arg0: Dynamic): Float {
+        throw "stub: getAffectResist not decompiled";
+    }
 
-  function createAlly(k: String, markerId: String, elite: Dynamic): en.Mob.Mob {}
+    public function onTouchWall(arg0: Int): Void {
+    }
 
-  function getAffectResist(a: Dynamic): Float {}
+    public function getHitLigament(): Void {
+    }
 
-  function onTouchWall(wDir: Int) {}
+    public function onDirectHitFromHero(arg0: tool.atk.AttackData): Void {
+    }
 
-  function getHitLigament() {}
+    public function interruptSkills(): Void {
+    }
 
-  function onDirectHitFromHero(a: tool.atk.AttackData.AttackData) {}
+    public function lockAiS(arg0: Float): Void {
+    }
 
-  function interruptSkills() {}
+    public function lockAiF(arg0: Float): Void {
+    }
 
-  function lockAiS(sec: Float) {}
+    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
+        throw "stub: canReceiveAttack not decompiled";
+    }
 
-  function lockAiF(frames: Float) {}
+    public function onDamage(arg0: tool.atk.AttackData): Void {
+    }
 
-  function canReceiveAttack(a: tool.atk.AttackData.AttackData): Bool {}
+    public override function onDie(): Void {
+    }
 
-  function onDamage(a: tool.atk.AttackData.AttackData) {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onDie() {}
+    public override function giveAchievements(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function giveAchievements() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserializeInit(): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserializeInit() {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

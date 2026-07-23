@@ -1,54 +1,88 @@
 package tool.mainSkills;
+
 class Heal extends tool.HeroMainSkill {
-  var blackboard: tool.mainSkills.blackboards.HealBlackBoard.HealBlackBoard;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var blackboard: tool.mainSkills.blackboards.HealBlackBoard;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function get_healings(): Int {}
+    public function get_healings(): Int {
+        throw "stub: get_healings not decompiled";
+    }
 
-  function set_healings(v: Int): Int {}
+    public function set_healings(arg0: Int): Int {
+        throw "stub: set_healings not decompiled";
+    }
 
-  function get_maxHealings(): Int {}
+    public function get_maxHealings(): Int {
+        throw "stub: get_maxHealings not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function destroy() {}
+    public override function destroy(): Void {
+    }
 
-  function onStart() {}
+    public override function onStart(): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function isUsingInputs(): Bool {}
+    public override function isUsingInputs(): Bool {
+        throw "stub: isUsingInputs not decompiled";
+    }
 
-  function canUse(): Bool {}
+    public override function canUse(): Bool {
+        throw "stub: canUse not decompiled";
+    }
 
-  function onOwnerFullHeal() {}
+    public function onOwnerFullHeal(): Void {
+    }
 
-  function onPickItem(from: Entity, i: tool.InventItem.InventItem) {}
+    public override function onPickItem(arg0: Entity, arg1: tool.InventItem): Void {
+    }
 
-  function onMobDeath(mob: en.Mob.Mob) {}
+    public override function onMobDeath(arg0: en.Mob): Void {
+    }
 
-  function onUse(inter: en.Interactive.Interactive) {}
+    public override function onUse(arg0: en.Interactive): Void {
+    }
 
-  function onFountainRefill() {}
+    public function onFountainRefill(): Void {
+    }
 
-  function onUnlockItem(kind: String) {}
+    public override function onUnlockItem(arg0: String): Void {
+    }
 
-  function canUseInteractive(inter: en.Interactive.Interactive): Bool {}
+    public override function canUseInteractive(arg0: en.Interactive): Bool {
+        throw "stub: canUseInteractive not decompiled";
+    }
 
-  function isItemUseful(item: tool.InventItem.InventItem): Bool {}
+    public override function isItemUseful(arg0: tool.InventItem): Bool {
+        throw "stub: isItemUseful not decompiled";
+    }
 
-  function onEquippedItemsUpdated(duringHeroInit: Dynamic) {}
+    public override function onEquippedItemsUpdated(arg0: Ref): Void {
+    }
 
-  function addHealingFlaskUnit(k: String) {}
+    public function addHealingFlaskUnit(arg0: String): Void {
+    }
 
-  function updateHealingTimers() {}
+    public function updateHealingTimers(): Void {
+    }
 
-  function getHealingSpeedMul(): Float {}
+    public function getHealingSpeedMul(): Float {
+        throw "stub: getHealingSpeedMul not decompiled";
+    }
 
-  function setFlaskGlow() {}
+    public function setFlaskGlow(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

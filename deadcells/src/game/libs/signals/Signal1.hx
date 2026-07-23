@@ -1,17 +1,24 @@
 package libs.signals;
+
 class Signal1 extends libs.signals.BaseSignal {
-  var value: Dynamic;
+    public var value: Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function dispatch(value1: Dynamic) {}
+    public function dispatch(arg0: Dynamic): Void {
+    }
 
-  function dispatchCallback(callback: Dynamic, callbackData: Dynamic) {}
+    public override function dispatchCallback(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function dispatchCallback1(callback: Dynamic, callbackData: Dynamic) {}
+    public override function dispatchCallback1(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function dispatchCallback2(callback: Dynamic, callbackData: Dynamic) {}
+    public override function dispatchCallback2(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function dispatchCallback3(callback: Dynamic, callbackData: Dynamic) {}
+    public override function dispatchCallback3(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 }
-

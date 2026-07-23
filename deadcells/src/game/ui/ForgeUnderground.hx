@@ -1,53 +1,72 @@
 package ui;
+
 class ForgeUnderground extends ui.Process {
-  var controller: tool.Controller.Controller;
-  var fb: ui.FlowBox.FlowBox;
-  var title: ui.Text.Text;
-  var subText: ui.Text.Text;
-  var line: libs.heaps.slib.HSprite.HSprite;
-  var cursor: h2d.ScaleGrid.ScaleGrid;
-  var fBars: h2d.Flow.Flow;
-  var fCount: h2d.Flow.Flow;
-  var count: ui.hud.Count.Count;
-  var lines: hl.types.ArrayObj<Dynamic>;
-  var choiceMask: h2d.Mask.Mask;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
-  var interactive: h2d.Interactive.Interactive;
-  var choicesFlow: h2d.Flow.Flow;
-  var emptyText: ui.Text.Text;
-  var choices: hl.types.ArrayObj<Dynamic>;
-  var currentIdx: Int;
-  var cBaseX: Float;
-  var itemDesc: ui.NewItemDesc.NewItemDesc;
-  var onClose: Dynamic;
+    public var controller: tool.ControllerAccess;
+    public var fb: ui.FlowBox;
+    public var title: ui.Text;
+    public var subText: ui.Text;
+    public var line: libs.heaps.slib.HSprite;
+    public var cursor: h2d.ScaleGrid;
+    public var fBars: h2d.Flow;
+    public var fCount: h2d.Flow;
+    public var count: ui.hud.Count;
+    public var lines: Array<Dynamic>;
+    public var choiceMask: h2d.Mask;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
+    public var interactive: h2d.Interactive;
+    public var choicesFlow: h2d.Flow;
+    public var emptyText: ui.Text;
+    public var choices: Array<Dynamic>;
+    public var currentIdx: Int;
+    public var cBaseX: Float;
+    public var itemDesc: ui.NewItemDesc;
+    public var onClose: Dynamic;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function initUndergroundForge() {}
+    public function initUndergroundForge(): Void {
+    }
 
-  function addItem(i: tool.InventItem.InventItem, parent: h2d.Flow.Flow): h2d.Flow.Flow {}
+    public function addItem(arg0: tool.InventItem, arg1: h2d.Flow): h2d.Flow {
+        throw "stub: addItem not decompiled";
+    }
 
-  function reforge(i: tool.InventItem.InventItem, bonusUpLevel: Dynamic) {}
+    public function reforge(arg0: tool.InventItem, arg1: Dynamic): Void {
+    }
 
-  function setItemDesc(i: tool.InventItem.InventItem) {}
+    public function setItemDesc(arg0: tool.InventItem): Void {
+    }
 
-  function registerChoice(f: ui.FlowBox.FlowBox, canBeUsed: Dynamic, cb: Dynamic, onSelect: Dynamic): Dynamic {}
+    public function registerChoice(arg0: ui.FlowBox, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Dynamic {
+        throw "stub: registerChoice not decompiled";
+    }
 
-  function select(instant: Bool, scroll: Dynamic) {}
+    public function select(arg0: Bool, arg1: Ref): Void {
+    }
 
-  function currentIsFirst(): Bool {}
+    public function currentIsFirst(): Bool {
+        throw "stub: currentIsFirst not decompiled";
+    }
 
-  function currentIsLast(): Bool {}
+    public function currentIsLast(): Bool {
+        throw "stub: currentIsLast not decompiled";
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
-

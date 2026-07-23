@@ -1,51 +1,71 @@
 package tool;
+
 class LevelAreaAffect {
-  var level: pr.Level.Level;
-  var cx: Int;
-  var cy: Int;
-  var frames: Float;
-  var initDurationF: Float;
-  var prevAffect: Dynamic;
-  var a: Int;
-  var aDurationS: Float;
-  var aValue: Float;
-  var affixes: hl.types.ArrayObj<Dynamic>;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var level: pr.Level;
+    public var cx: Int;
+    public var cy: Int;
+    public var frames: Float;
+    public var initDurationF: Float;
+    public var prevAffect: Dynamic;
+    public var a: Int;
+    public var aDurationS: Float;
+    public var aValue: Float;
+    public var affixes: Array<Dynamic>;
+    public var __uid: Int;
+    public var : Dynamic;
 
-  static function iceWaterPropagation(level: pr.Level.Level, cx: Int, cy: Int, aDurationS: Float, aValue: Float) {}
+    public function new(arg0: pr.Level) {
+    }
 
-  static function electricityWaterPropagation(level: pr.Level.Level, cx: Int, cy: Int, aDurationS: Float, aValue: Float) {}
+    public static function iceWaterPropagation(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float): Void {
+    }
 
-  static function waterPropagation(level: pr.Level.Level, affect: Int, cx: Int, cy: Int, aoeMinS: Float, aoeMaxS: Float, aDurationS: Float, aValue: Float) {}
+    public static function electricityWaterPropagation(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float): Void {
+    }
 
-  static function isValidPosFor(level: pr.Level.Level, a: Int, cx: Int, cy: Int): Bool {}
+    public static function waterPropagation(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Float): Void {
+    }
 
-  function __constructor__(l: pr.Level.Level) {}
+    public static function isValidPosFor(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int): Bool {
+        throw "stub: isValidPosFor not decompiled";
+    }
 
-  function init(x: Int, y: Int, durationS: Float, a: Int, aDurationS: Float, aValue: Float, affixes: hl.types.ArrayObj<Dynamic>) {}
+    public function init(arg0: Int, arg1: Int, arg2: Float, arg3: Int, arg4: Float, arg5: Float, arg6: Array<Dynamic>): Void {
+    }
 
-  function applyAnotherAffect(aoeDurationS: Float, a: Int, aDurationS: Float, aValue: Float, affixes: hl.types.ArrayObj<Dynamic>) {}
+    public function applyAnotherAffect(arg0: Float, arg1: Int, arg2: Float, arg3: Float, arg4: Array<Dynamic>): Void {
+    }
 
-  function spreadAffectThroughWater(affect: Int, aoeMinS: Float, aoeMaxS: Float, aDurationS: Float, aValue: Float, affixes: hl.types.ArrayObj<Dynamic>) {}
+    public function spreadAffectThroughWater(arg0: Int, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Array<Dynamic>): Void {
+    }
 
-  function applyTo(e: Entity) {}
+    public function applyTo(arg0: Entity): Void {
+    }
 
-  function applyToInternal(e: Entity) {}
+    public function applyToInternal(arg0: Entity): Void {
+    }
 
-  function dispose() {}
+    public function dispose(): Void {
+    }
 
-  function setDurationS(t: Float) {}
+    public function setDurationS(arg0: Float): Void {
+    }
 
-  function getCLID(): Int {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

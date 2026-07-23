@@ -1,50 +1,74 @@
 package pr;
+
 class Infection extends libs.Process {
-  var game: pr.Game.Game;
-  var infectionTier: Int;
-  var rules: Dynamic;
-  var isLessThanTenPrctMobsLeft: Bool;
-  var gracePeriodSources: hl.types.ArrayObj<Dynamic>;
-  var chargeTeleportationValue: Dynamic;
-  var volteDivider: Dynamic;
-  var mobsSpeedMultiplier: Dynamic;
-  var heroDamageBonus: Dynamic;
-  var mobsDamageBonus: Dynamic;
-  var mobTpWithNeighbourRange: Dynamic;
-  var mobDeck: libs.RandDeck.RandDeck;
+    public var game: pr.Game;
+    public var infectionTier: Int;
+    public var rules: Dynamic;
+    public var isLessThanTenPrctMobsLeft: Bool;
+    public var gracePeriodSources: Array<Dynamic>;
+    public var chargeTeleportationValue: Dynamic;
+    public var volteDivider: Dynamic;
+    public var mobsSpeedMultiplier: Dynamic;
+    public var heroDamageBonus: Dynamic;
+    public var mobsDamageBonus: Dynamic;
+    public var mobTpWithNeighbourRange: Dynamic;
+    public var mobDeck: libs.RandDeck;
 
-  static function getRulesActiveAt(tier: Int): hl.types.ArrayObj<Dynamic> {}
+    public function new(arg0: pr.Game) {
+        super();
+    }
 
-  static function isInfectionRuleActiveForTier(rule: Dynamic, tier: Int): Bool {}
+    public static function getRulesActivatingAtTier(arg0: Int): Array<Dynamic> {
+        throw "stub: getRulesActivatingAtTier not decompiled";
+    }
 
-  function __constructor__(game: pr.Game.Game) {}
+    public static function getRulesActiveAt(arg0: Int): Array<Dynamic> {
+        throw "stub: getRulesActiveAt not decompiled";
+    }
 
-  static function getRulesActivatingAtTier(tier: Int): hl.types.ArrayObj<Dynamic> {}
+    public static function isInfectionRuleActiveForTier(arg0: Dynamic, arg1: Int): Bool {
+        throw "stub: isInfectionRuleActiveForTier not decompiled";
+    }
 
-  function get_isInGracePeriod(): Bool {}
+    public function get_isInGracePeriod(): Bool {
+        throw "stub: get_isInGracePeriod not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function resetIsLessThanTenPrctMobsLeft() {}
+    public function resetIsLessThanTenPrctMobsLeft(): Void {
+    }
 
-  function initRuleProcess() {}
+    public function initRuleProcess(): Void {
+    }
 
-  function initMobPool() {}
+    public function initMobPool(): Void {
+    }
 
-  function loadMobAtlas() {}
+    public function loadMobAtlas(): Void {
+    }
 
-  function createRuleProcess(rule: Dynamic): InfectionRule {}
+    public function createRuleProcess(arg0: Dynamic): pr.InfectionRule {
+        throw "stub: createRuleProcess not decompiled";
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function updateGracePeriod() {}
+    public function updateGracePeriod(): Void {
+    }
 
-  function updateInfectionRules() {}
+    public function updateInfectionRules(): Void {
+    }
 
-  function isInfectionRuleActive(ruleId: String): Bool {}
+    public function isInfectionRuleActive(arg0: String): Bool {
+        throw "stub: isInfectionRuleActive not decompiled";
+    }
 
-  function startGracePeriodFrom(mob: en.Mob.Mob, overrideTime: Dynamic) {}
+    public function startGracePeriodFrom(arg0: en.Mob, arg1: Ref): Void {
+    }
 
-  function cancelGracePeriodFrom(mob: en.Mob.Mob) {}
+    public function cancelGracePeriodFrom(arg0: en.Mob): Void {
+    }
 }
-

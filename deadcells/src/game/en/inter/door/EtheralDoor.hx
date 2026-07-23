@@ -1,57 +1,86 @@
 package en.inter.door;
+
 class EtheralDoor extends en.inter.Door {
-  var item: tool.InventItem.InventItem;
-  var socleRight: en.active.EtheralDoorSocle.EtheralDoorSocle;
-  var socleLeft: en.active.EtheralDoorSocle.EtheralDoorSocle;
-  var elapsedTime: Float;
-  var opacity: Float;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var item: tool.InventItem;
+    public var socleRight: en.active.EtheralDoorSocle;
+    public var socleLeft: en.active.EtheralDoorSocle;
+    public var elapsedTime: Float;
+    public var opacity: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, xr: Float, ii: tool.InventItem.InventItem) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: tool.InventItem) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function cancelMobsPlannedMove(mobs: hl.types.ArrayObj<Dynamic>) {}
+    public function cancelMobsPlannedMove(arg0: Array<Dynamic>): Void {
+    }
 
-  function doorExplosionFx() {}
+    public override function doorExplosionFx(): Void {
+    }
 
-  function bumpOutOfTheDoor(all: hl.types.ArrayObj<Dynamic>) {}
+    public override function bumpOutOfTheDoor(arg0: Array<Dynamic>): Void {
+    }
 
-  function updateDoorSkin() {}
+    public override function updateDoorSkin(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function updateLightBlocking() {}
+    public override function updateLightBlocking(): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function shouldOneShot(a: tool.atk.AttackData.AttackData): Bool {}
+    public function shouldOneShot(arg0: tool.atk.AttackData): Bool {
+        throw "stub: shouldOneShot not decompiled";
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function applyCollisions() {}
+    public override function applyCollisions(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

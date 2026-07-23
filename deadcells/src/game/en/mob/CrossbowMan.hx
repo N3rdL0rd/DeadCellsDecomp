@@ -1,40 +1,66 @@
 package en.mob;
+
 class CrossbowMan extends en.Mob {
-  var swap: tool.skill.OldSkill.OldSkill;
-  var dodge: tool.skill.OldSkill.OldSkill;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var swap: tool.skill.OldSkill;
+    public var dodge: tool.skill.OldSkill;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): CrossbowMan {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.CrossbowMan {
+        throw "stub: create not decompiled";
+    }
 
-  function get_arrowTipTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_arrowTipTracks(): Array<Int> {
+        throw "stub: get_arrowTipTracks not decompiled";
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function getSkillSpeedMul(): Float {}
+    public override function getSkillSpeedMul(): Float {
+        throw "stub: getSkillSpeedMul not decompiled";
+    }
 
-  function initSkills() {}
+    public override function initSkills(): Void {
+    }
 
-  function throwArrows(nbArrows: Int, a: tool.atk.AttackData.AttackData, isCritical: Dynamic) {}
+    public function throwArrows(arg0: Int, arg1: tool.atk.AttackData, arg2: Ref): Void {
+    }
 
-  function explode(b: en.Bullet.Bullet, ta: tool.atk.AttackData.AttackData, te: Entity, isCritical: Dynamic) {}
+    public function explode(arg0: en.Bullet, arg1: tool.atk.AttackData, arg2: Entity, arg3: Dynamic): Void {
+    }
 
-  function inDetectArea(e: Entity): Bool {}
+    public override function inDetectArea(arg0: Entity): Bool {
+        throw "stub: inDetectArea not decompiled";
+    }
 
-  function arrowX(): Float {}
+    public function arrowX(): Float {
+        throw "stub: arrowX not decompiled";
+    }
 
-  function arrowY(): Float {}
+    public function arrowY(): Float {
+        throw "stub: arrowY not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function behaviourAi() {}
+    public override function behaviourAi(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

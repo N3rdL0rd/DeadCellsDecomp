@@ -1,21 +1,34 @@
 package tool.weap;
+
 class MoneyShooter extends tool.Weapon {
-  var hasEnoughGold: Bool;
+    public var hasEnoughGold: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_minGold(): Dynamic {}
+    public function get_minGold(): Dynamic {
+        throw "stub: get_minGold not decompiled";
+    }
 
-  function get_heroGold(): Int {}
+    public function get_heroGold(): Int {
+        throw "stub: get_heroGold not decompiled";
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function prepare(attackSpeed: Float) {}
+    public override function prepare(arg0: Float): Void {
+    }
 
-  function onOutOfAmmoTry() {}
+    public override function onOutOfAmmoTry(): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 }
-

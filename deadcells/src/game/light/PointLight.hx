@@ -1,23 +1,31 @@
 package light;
+
 class PointLight extends light.Light {
-  var shader: hxsl.Macros.Macros;
-  var range: Float;
-  var ignoredByHero: Bool;
-  var visibilityGroup: Int;
-  var needUpdate: Bool;
-  var maxRange: Float;
-  var lastPos: h2d.col.Point.Point;
-  static var nupdated: Int;
-  static var nvisible: Int;
+    public static var nupdated: Int;
+    public static var nvisible: Int;
+    public var shader: shader.PointLight;
+    public var range: Float;
+    public var ignoredByHero: Bool;
+    public var visibilityGroup: Int;
+    public var needUpdate: Bool;
+    public var maxRange: Float;
+    public var lastPos: h2d.col.Point;
 
-  function __constructor__(p: h2d.Object.Object) {}
+    public function new(arg0: h2d.Object) {
+        super();
+    }
 
-  function set_range(v: Float): Float {}
+    public function set_range(arg0: Float): Float {
+        throw "stub: set_range not decompiled";
+    }
 
-  function setColor(c: Int) {}
+    public override function setColor(arg0: Int): Void {
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public function sync(arg0: h2d.RenderContext): Void {
+    }
 
-  function cull(ctx: h2d.RenderContext.RenderContext): Bool {}
+    public function cull(arg0: h2d.RenderContext): Bool {
+        throw "stub: cull not decompiled";
+    }
 }
-

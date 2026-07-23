@@ -1,14 +1,21 @@
 package libs.tilemap;
+
 class Polygon {
-  var vertices: hl.types.ArrayObj<Dynamic>;
-  var edgeCache: hl.types.ArrayObj<Dynamic>;
+    public var vertices: Array<Dynamic>;
+    public var edgeCache: Array<Dynamic>;
 
-  function __constructor__(vertices: hl.types.ArrayObj<Dynamic>) {}
+    public function new(arg0: Array<Dynamic>) {
+    }
 
-  function isClockwise(): Bool {}
+    public function isClockwise(): Bool {
+        throw "stub: isClockwise not decompiled";
+    }
 
-  function getEdges(): hl.types.ArrayObj<Dynamic> {}
+    public function getEdges(): Array<Dynamic> {
+        throw "stub: getEdges not decompiled";
+    }
 
-  function inclusionScore(other: Polygon): Int {}
+    public function inclusionScore(arg0: libs.tilemap.Polygon): Int {
+        throw "stub: inclusionScore not decompiled";
+    }
 }
-

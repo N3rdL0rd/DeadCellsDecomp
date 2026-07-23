@@ -1,13 +1,18 @@
 package spine.support.error;
+
 class Error {
-  var errorID: Int;
-  var message: String;
-  var name: String;
+    public var errorID: Int;
+    public var message: String;
+    public var name: String;
 
-  function __constructor__(message: String, id: Dynamic) {}
+    public function new(arg0: String, arg1: Ref) {
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
-

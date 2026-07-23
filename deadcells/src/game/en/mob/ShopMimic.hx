@@ -1,120 +1,159 @@
 package en.mob;
-class ShopMimic extends en.Mob.Mob {
-  var merchantType: Dynamic;
-  var hasShot: Bool;
-  var bonusAtkType: Dynamic;
-  var itemToEat: en.inter.ItemDrop.ItemDrop;
-  var rseed: libs.Rand.Rand;
-  var MAX_BOUNCES_BEFORE_ATTACK: Int;
-  var melee: tool.skill.OldMobSkill.OldMobSkill;
-  var meleeInf: Dynamic;
-  var meleeArea: tool.Area.Area;
-  var midRange: tool.skill.OldMobSkill.OldMobSkill;
-  var midRangeInf: Dynamic;
-  var midRangeArea: tool.Area.Area;
-  var ranged: tool.skill.OldMobSkill.OldMobSkill;
-  var rangedInf: Dynamic;
-  var rangedArea: tool.Area.Area;
-  var hook: tool.skill.OldSkill.OldSkill;
-  var hookInf: Dynamic;
-  var hookObj: tool.HookChainTimeKeeper.HookChainTimeKeeper;
-  var fxHook: libs.heaps.slib.HSprite.HSprite;
-  var bAtkMelee: tool.skill.OldMobSkill.OldMobSkill;
-  var bAtkMeleeInf: Dynamic;
-  var bAtkMeleeArea: tool.Area.Area;
-  var bAtkRanged: tool.skill.OldMobSkill.OldMobSkill;
-  var bAtkRangedInf: Dynamic;
-  var bAtkShield: tool.skill.OldSkill.OldSkill;
-  var bAtkShieldInf: Dynamic;
-  var bAtkPower: tool.skill.OldMobSkill.OldMobSkill;
-  var bAtkPowerInf: Dynamic;
-  var bAtkPowerArea: tool.Area.Area;
-  var bAtkPowerAffects: hl.types.ArrayBytes<Int>;
-  var bAtkFood: tool.skill.OldMobSkill.OldMobSkill;
-  var bAtkFoodInf: Dynamic;
-  var teleJump: tool.skill.mobSkill.TeleJump.TeleJump;
-  var teleJumpInf: Dynamic;
-  var jumpAway: tool.skill.OldSkill.OldSkill;
-  var jumpAwayInf: Dynamic;
-  var walkBounceInf: Dynamic;
-  var landCount: Int;
-  var meleeDeck: hl.types.ArrayObj<Dynamic>;
-  var meleeDeckWeights: haxe.ds.ObjectMap;
-  var meleeDeckDh: tool.DecisionHelper.DecisionHelper;
-  var midRangeDeck: hl.types.ArrayObj<Dynamic>;
-  var midRangeDeckWeights: haxe.ds.ObjectMap;
-  var midRangeDeckDh: tool.DecisionHelper.DecisionHelper;
-  var rangedDeck: hl.types.ArrayObj<Dynamic>;
-  var rangedDeckWeights: haxe.ds.ObjectMap;
-  var rangedDeckDh: tool.DecisionHelper.DecisionHelper;
-  var afterHookDeck: hl.types.ArrayObj<Dynamic>;
-  var afterHookDeckWeights: haxe.ds.ObjectMap;
-  var afterHookDeckDh: tool.DecisionHelper.DecisionHelper;
-  var afterParryDeck: hl.types.ArrayObj<Dynamic>;
-  var afterParryDeckWeights: haxe.ds.ObjectMap;
-  var afterParryDeckDh: tool.DecisionHelper.DecisionHelper;
-  var sbFx: libs.heaps.slib.HSprite.HSpriteBatch;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, merchantType: Dynamic, bonusAttack: Dynamic, itemToEat: en.inter.ItemDrop.ItemDrop): ShopMimic {}
+class ShopMimic extends en.Mob {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var merchantType: level.MerchantType;
+    public var hasShot: Bool;
+    public var bonusAtkType: en.mob.BonusAttackType;
+    public var itemToEat: en.inter.ItemDrop;
+    public var rseed: libs.Rand;
+    public var MAX_BOUNCES_BEFORE_ATTACK: Int;
+    public var melee: tool.skill.OldMobSkill;
+    public var meleeInf: Dynamic;
+    public var meleeArea: tool.Area;
+    public var midRange: tool.skill.OldMobSkill;
+    public var midRangeInf: Dynamic;
+    public var midRangeArea: tool.Area;
+    public var ranged: tool.skill.OldMobSkill;
+    public var rangedInf: Dynamic;
+    public var rangedArea: tool.Area;
+    public var hook: tool.skill.OldSkill;
+    public var hookInf: Dynamic;
+    public var hookObj: tool.HookChainTimeKeeper;
+    public var fxHook: libs.heaps.slib.HSprite;
+    public var bAtkMelee: tool.skill.OldMobSkill;
+    public var bAtkMeleeInf: Dynamic;
+    public var bAtkMeleeArea: tool.Area;
+    public var bAtkRanged: tool.skill.OldMobSkill;
+    public var bAtkRangedInf: Dynamic;
+    public var bAtkShield: tool.skill.OldSkill;
+    public var bAtkShieldInf: Dynamic;
+    public var bAtkPower: tool.skill.OldMobSkill;
+    public var bAtkPowerInf: Dynamic;
+    public var bAtkPowerArea: tool.Area;
+    public var bAtkPowerAffects: Array<Int>;
+    public var bAtkFood: tool.skill.OldMobSkill;
+    public var bAtkFoodInf: Dynamic;
+    public var teleJump: tool.skill.mobSkill.TeleJump;
+    public var teleJumpInf: Dynamic;
+    public var jumpAway: tool.skill.OldSkill;
+    public var jumpAwayInf: Dynamic;
+    public var walkBounceInf: Dynamic;
+    public var landCount: Int;
+    public var meleeDeck: Array<Dynamic>;
+    public var meleeDeckWeights: haxe.ds.ObjectMap;
+    public var meleeDeckDh: tool.DecisionHelper;
+    public var midRangeDeck: Array<Dynamic>;
+    public var midRangeDeckWeights: haxe.ds.ObjectMap;
+    public var midRangeDeckDh: tool.DecisionHelper;
+    public var rangedDeck: Array<Dynamic>;
+    public var rangedDeckWeights: haxe.ds.ObjectMap;
+    public var rangedDeckDh: tool.DecisionHelper;
+    public var afterHookDeck: Array<Dynamic>;
+    public var afterHookDeckWeights: haxe.ds.ObjectMap;
+    public var afterHookDeckDh: tool.DecisionHelper;
+    public var afterParryDeck: Array<Dynamic>;
+    public var afterParryDeckWeights: haxe.ds.ObjectMap;
+    public var afterParryDeckDh: tool.DecisionHelper;
+    public var sbFx: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, merchantType: Dynamic, bonusAttack: Dynamic, itemToEat: en.inter.ItemDrop.ItemDrop) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: level.MerchantType, arg6: en.mob.BonusAttackType, arg7: en.inter.ItemDrop) {
+        super();
+    }
 
-  function init() {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: level.MerchantType, arg6: en.mob.BonusAttackType, arg7: en.inter.ItemDrop): en.mob.ShopMimic {
+        throw "stub: create not decompiled";
+    }
 
-  function initAffectResists() {}
+    public override function init(): Void {
+    }
 
-  function setAllAffectResist(v: Float) {}
+    public function initAffectResists(): Void {
+    }
 
-  function initMove() {}
+    public function setAllAffectResist(arg0: Float): Void {
+    }
 
-  function initGfx() {}
+    public override function initMove(): Void {
+    }
 
-  function initStateAnims() {}
+    public override function initGfx(): Void {
+    }
 
-  function initSkills() {}
+    public function initStateAnims(): Void {
+    }
 
-  function eatItem(t: Float) {}
+    public override function initSkills(): Void {
+    }
 
-  function destroyItem() {}
+    public function eatItem(arg0: Float): Void {
+    }
 
-  function behaviourAi() {}
+    public function destroyItem(): Void {
+    }
 
-  function onLand(floors: Float) {}
+    public override function behaviourAi(): Void {
+    }
 
-  function preUpdate() {}
+    public override function onLand(arg0: Float): Void {
+    }
 
-  function postUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getJumpingSpot(): Dynamic {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public function getJumpingSpot(): Dynamic {
+        throw "stub: getJumpingSpot not decompiled";
+    }
 
-  function shootXHook(): Float {}
+    public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function shootYHook(): Float {}
+    public override function shootXHook(): Float {
+        throw "stub: shootXHook not decompiled";
+    }
 
-  function onDie() {}
+    public override function shootYHook(): Float {
+        throw "stub: shootYHook not decompiled";
+    }
 
-  function dropBlueprint() {}
+    public override function onDie(): Void {
+    }
 
-  function turnIntoPokebombElite(): en.Mob.Mob {}
+    public function dropBlueprint(): Void {
+    }
 
-  function dispose() {}
+    public override function turnIntoPokebombElite(): en.Mob {
+        throw "stub: turnIntoPokebombElite not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function dispose(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserializeInit() {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserializeInit(): Void {
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

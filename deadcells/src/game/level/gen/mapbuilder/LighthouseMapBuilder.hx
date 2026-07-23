@@ -1,12 +1,17 @@
 package level.gen.mapbuilder;
+
 class LighthouseMapBuilder extends level.gen.MapBuilder {
+    public function new(arg0: User, arg1: Dynamic, arg2: Int, arg3: Dynamic, arg4: libs.Rand) {
+        super();
+    }
 
-  function __constructor__(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand.Rand) {}
+    public override function removeCollisionOutOfRooms(arg0: level.LevelMap, arg1: Array<Dynamic>, arg2: Array<Dynamic>, arg3: Bool): Void {
+    }
 
-  function removeCollisionOutOfRooms(dat: level.LevelMap.LevelMap, drooms: hl.types.ArrayObj<Dynamic>, inRoomCells: hl.types.ArrayObj<Dynamic>, hasError: Bool) {}
+    public override function fillRoomCollisions(arg0: level.RoomNode, arg1: level.LevelMap, arg2: Array<Dynamic>): Void {
+    }
 
-  function fillRoomCollisions(rn: level.RoomNode.RoomNode, dat: level.LevelMap.LevelMap, inRoomCells: hl.types.ArrayObj<Dynamic>) {}
-
-  function afterLevelMapInitProcess(levelMap: level.LevelMap.LevelMap): level.LevelMap.LevelMap {}
+    public override function afterLevelMapInitProcess(arg0: level.LevelMap): level.LevelMap {
+        throw "stub: afterLevelMapInitProcess not decompiled";
+    }
 }
-

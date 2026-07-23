@@ -1,48 +1,69 @@
 package en.inter;
+
 class BigBell extends en.Interactive {
-  var bellId: Int;
-  var bellActive: Bool;
-  var ball: libs.heaps.slib.HSprite.HSprite;
-  var dr: Float;
-  var bdr: Float;
-  var bAng: Float;
-  var fxRadius: Float;
-  var fxSpeed: Float;
-  var lastHitSide: Int;
-  static var MAX_BALL_ANG: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var MAX_BALL_ANG: Float;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var bellId: Int;
+    public var bellActive: Bool;
+    public var ball: libs.heaps.slib.HSprite;
+    public var dr: Float;
+    public var bdr: Float;
+    public var bAng: Float;
+    public var fxRadius: Float;
+    public var fxSpeed: Float;
+    public var lastHitSide: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, bid: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int) {
+        super();
+    }
 
-  function init() {}
+    public function init(): Void {
+    }
 
-  function ring(fromHit: Bool, volume: Dynamic) {}
+    public function ring(arg0: Bool, arg1: Dynamic): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function applyAttackResult(a: tool.atk.AttackData.AttackData) {}
+    public function applyAttackResult(arg0: tool.atk.AttackData): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

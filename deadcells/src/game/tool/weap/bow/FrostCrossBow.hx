@@ -1,25 +1,36 @@
 package tool.weap.bow;
+
 class FrostCrossBow extends tool.weap.BaseBow {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public override function onBowCharging(arg0: Float): Void {
+    }
 
-  function onBowCharging(r: Float) {}
-
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 }
 
 class FrostCrossBowOffHand extends tool.weap.dual.OffHandRanged {
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function get_shootY(): Float {}
+    public function onBowChargeStart(): Void {
+    }
 
-  function onBowChargeStart() {}
+    public function onBowCharging(arg0: Float): Void {
+    }
 
-  function onBowCharging(r: Float) {}
-
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public function shoot(arg0: Array<Dynamic>): Void {
+    }
 }
-

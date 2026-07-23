@@ -1,27 +1,40 @@
 package level;
+
 class ItemGen {
-  var affixes: libs.RandList.RandList;
-  var seed: Int;
-  var rseed: libs.Rand.Rand;
-  var isScoringMode: Bool;
-  var maxRetries: Int;
-  var lastError: Dynamic;
-  var failed: Bool;
+    public var affixes: libs.RandList;
+    public var seed: Int;
+    public var rseed: libs.Rand;
+    public var isScoringMode: Bool;
+    public var maxRetries: Int;
+    public var lastError: Dynamic;
+    public var failed: Bool;
 
-  function __constructor__(seed: Int, isScoringMode: Bool) {}
+    public function new(arg0: Int, arg1: Bool) {
+    }
 
-  function setSeed(s: Int) {}
+    public function setSeed(arg0: Int): Void {
+    }
 
-  function finalizeLegendary(i: tool.InventItem.InventItem) {}
+    public function finalizeLegendary(arg0: tool.InventItem): Void {
+    }
 
-  function generateStats(i: tool.InventItem.InventItem, u: User, realUpLevel: Dynamic, legendary: Dynamic, colorless: Dynamic, forceAdvanced: Dynamic, retry: Dynamic, keptAffixes: hl.types.ArrayObj<Dynamic>): Bool {}
+    public function generateStats(arg0: tool.InventItem, arg1: User, arg2: Ref, arg3: Ref, arg4: Ref, arg5: Ref, arg6: Ref, arg7: Array<Dynamic>): Bool {
+        throw "stub: generateStats not decompiled";
+    }
 
-  function tryAddAffixes(i: tool.InventItem.InventItem, miscAffixes: Int, legendary: Bool, forceAdvanced: Dynamic, ignoreAdvanced: Dynamic): Bool {}
+    public function tryAddAffixes(arg0: tool.InventItem, arg1: Int, arg2: Bool, arg3: Dynamic, arg4: Dynamic): Bool {
+        throw "stub: tryAddAffixes not decompiled";
+    }
 
-  function rerollAndReplaceTierAffix(i: tool.InventItem.InventItem, tierKind: String): Bool {}
+    public function rerollAndReplaceTierAffix(arg0: tool.InventItem, arg1: String): Bool {
+        throw "stub: rerollAndReplaceTierAffix not decompiled";
+    }
 
-  function addRandomTierAffix(i: tool.InventItem.InventItem): Bool {}
+    public function addRandomTierAffix(arg0: tool.InventItem): Bool {
+        throw "stub: addRandomTierAffix not decompiled";
+    }
 
-  function addRandomAffix(i: tool.InventItem.InventItem, g: Int): Bool {}
+    public function addRandomAffix(arg0: tool.InventItem, arg1: Int): Bool {
+        throw "stub: addRandomAffix not decompiled";
+    }
 }
-

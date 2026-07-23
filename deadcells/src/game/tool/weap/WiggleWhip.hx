@@ -1,84 +1,128 @@
 package tool.weap;
+
 class WiggleWhip extends tool.Weapon {
-  var initWhipDone: Bool;
-  var wigglingChain: tool.Chain.Chain;
-  var range: Float;
-  var chainHitPosX: Float;
-  var chainHitPosY: Float;
-  var lastBoulderPosX: Float;
-  var lastBoulderPosY: Float;
-  var chainDx: Float;
-  var chainDy: Float;
-  var gravity: Float;
-  var scale: Float;
-  var bouncePct: Float;
-  var frict: Float;
-  var limit: Float;
-  var segmentsCount: Int;
-  var backToNeutral: Bool;
-  var lastAngle: Float;
-  var chainRadius: Float;
-  var chainVisibilityRatio: Float;
-  var chainBoulderSprite: libs.heaps.slib.HSprite.HSprite;
-  var spriteLevel: pr.Level.Level;
-  var shouldUpdateChain: Bool;
-  var isPlayingWiggleSound: Bool;
-  var animationTracks: haxe.ds.StringMap;
+    public var initWhipDone: Bool;
+    public var wigglingChain: tool.Chain;
+    public var range: Float;
+    public var chainHitPosX: Float;
+    public var chainHitPosY: Float;
+    public var lastBoulderPosX: Float;
+    public var lastBoulderPosY: Float;
+    public var chainDx: Float;
+    public var chainDy: Float;
+    public var gravity: Float;
+    public var scale: Float;
+    public var bouncePct: Float;
+    public var frict: Float;
+    public var limit: Float;
+    public var segmentsCount: Int;
+    public var backToNeutral: Bool;
+    public var lastAngle: Float;
+    public var chainRadius: Float;
+    public var chainVisibilityRatio: Float;
+    public var chainBoulderSprite: libs.heaps.slib.HSprite;
+    public var spriteLevel: pr.Level;
+    public var shouldUpdateChain: Bool;
+    public var isPlayingWiggleSound: Bool;
+    public var animationTracks: haxe.ds.StringMap;
 
-  function __constructor__(owner: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function isNewAngle(angle: Float): Bool {}
+    public function isNewAngle(arg0: Float): Bool {
+        throw "stub: isNewAngle not decompiled";
+    }
 
-  function shouldBounceDirect(currentAngle: Float, incidenceAngle: Float): Bool {}
+    public function shouldBounceDirect(arg0: Float, arg1: Float): Bool {
+        throw "stub: shouldBounceDirect not decompiled";
+    }
 
-  function updateChainHitPos(applyInfluences: Bool) {}
+    public function updateChainHitPos(arg0: Bool): Void {
+    }
 
-  function getBoulderPosX(): Float {}
+    public function getBoulderPosX(): Float {
+        throw "stub: getBoulderPosX not decompiled";
+    }
 
-  function getBoulderPosY(): Float {}
+    public function getBoulderPosY(): Float {
+        throw "stub: getBoulderPosY not decompiled";
+    }
 
-  function displayBoulderPosX(): Float {}
+    public function displayBoulderPosX(): Float {
+        throw "stub: displayBoulderPosX not decompiled";
+    }
 
-  function displayBoulderPosY(): Float {}
+    public function displayBoulderPosY(): Float {
+        throw "stub: displayBoulderPosY not decompiled";
+    }
 
-  function get_whipTracks(): hl.types.ArrayBytes<Int> {}
+    public function get_whipTracks(): Array<Int> {
+        throw "stub: get_whipTracks not decompiled";
+    }
 
-  function getWhipPosX(): Float {}
+    public function getWhipPosX(): Float {
+        throw "stub: getWhipPosX not decompiled";
+    }
 
-  function getWhipPosY(): Float {}
+    public function getWhipPosY(): Float {
+        throw "stub: getWhipPosY not decompiled";
+    }
 
-  function allowTurnDuringCharge(): Bool {}
+    public override function allowTurnDuringCharge(): Bool {
+        throw "stub: allowTurnDuringCharge not decompiled";
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function tick(r: Float) {}
+    public function tick(arg0: Float): Void {
+    }
 
-  function updateBoulderPos() {}
+    public function updateBoulderPos(): Void {
+    }
 
-  function canTouch(e: Entity): Bool {}
+    public function canTouch(arg0: Entity): Bool {
+        throw "stub: canTouch not decompiled";
+    }
 
-  function doTick(applyInfluence: Bool) {}
+    public function doTick(arg0: Bool): Void {
+    }
 
-  function segmentTouch(e: Entity, chainX: Float, chainY: Float, chainRadius: Float): Bool {}
+    public function segmentTouch(arg0: Entity, arg1: Float, arg2: Float, arg3: Float): Bool {
+        throw "stub: segmentTouch not decompiled";
+    }
 
-  function tryToHit(e: Entity): Dynamic {}
+    public function tryToHit(arg0: Entity): Dynamic {
+        throw "stub: tryToHit not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function dynOnInterrupt(s: tool.Weapon.Weapon, r: Float) {}
+    public override function dynOnInterrupt(arg0: tool.WeaponSkill, arg1: Float): Void {
+    }
 
-  function stopWiggling() {}
+    public function stopWiggling(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function hasCycleLossCD(): Bool {}
+    public override function hasCycleLossCD(): Bool {
+        throw "stub: hasCycleLossCD not decompiled";
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 }
-

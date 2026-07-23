@@ -1,99 +1,138 @@
 package level.disp;
+
 class Cliff extends level.DynamicBiomeDisp {
-  var biome: String;
-  var biome_outside: String;
-  var glowShader: shader.GlowKey.GlowKey;
-  var ladderGlowShader: shader.GlowKey.GlowKey;
-  var groupAlpha: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupAdd: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var groupMainAlpha: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var sbFxBack: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbDisplaceBack: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbAddWalls: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var rainLayer: h2d.Object.Object;
-  var rainLayerSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var placedBrokenCuves: hl.types.ArrayObj<Dynamic>;
-  var thunderSoundsDeck: hl.types.ArrayObj<Dynamic>;
-  var cliffXperY: hl.types.ArrayBytes<Float>;
-  var insideAmbiantChannel: hxd.snd.Channel.Channel;
-  var outsideAmbiantChannel: hxd.snd.Channel.Channel;
-  var placedScroller: hl.types.ArrayObj<Dynamic>;
-  var minScrollerDistCase: Float;
-  var lightningParallaxes: hl.types.ArrayObj<Dynamic>;
-  var lightningFxInf: hl.types.ArrayObj<Dynamic>;
-  var frontLightningParallaxes: hl.types.ArrayObj<Dynamic>;
-  var frontLightningFxInf: Dynamic;
-  var lightningFlashPower: Float;
-  var countLightningFlash: Int;
-  var countParallaxFlash: hl.types.ArrayBytes<Int>;
-  var water: h2d.col.Bounds.Bounds;
-  var mainY: Float;
-  var frontY: Float;
-  var horizonY: Float;
-  var sbWaterFx: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
+    public var biome: String;
+    public var biome_outside: String;
+    public var glowShader: shader.GlowKey;
+    public var ladderGlowShader: shader.GlowKey;
+    public var groupAlpha: libs.heaps.StaticGeometryGroup;
+    public var groupAdd: libs.heaps.StaticGeometryGroup;
+    public var groupMainAlpha: libs.heaps.StaticGeometryGroup;
+    public var sbFxBack: libs.heaps.slib.HSpriteBatch;
+    public var sbDisplaceBack: libs.heaps.slib.HSpriteBatch;
+    public var sbAddWalls: libs.heaps.slib.HSpriteBatch;
+    public var rainLayer: h2d.Object;
+    public var rainLayerSb: libs.heaps.slib.HSpriteBatch;
+    public var placedBrokenCuves: Array<Dynamic>;
+    public var thunderSoundsDeck: Array<Dynamic>;
+    public var cliffXperY: Array<Float>;
+    public var insideAmbiantChannel: hxd.snd.Channel;
+    public var outsideAmbiantChannel: hxd.snd.Channel;
+    public var placedScroller: Array<Dynamic>;
+    public var minScrollerDistCase: Float;
+    public var lightningParallaxes: Array<Dynamic>;
+    public var lightningFxInf: Array<Dynamic>;
+    public var frontLightningParallaxes: Array<Dynamic>;
+    public var frontLightningFxInf: Dynamic;
+    public var lightningFlashPower: Float;
+    public var countLightningFlash: Int;
+    public var countParallaxFlash: Array<Int>;
+    public var water: h2d.col.Bounds;
+    public var mainY: Float;
+    public var frontY: Float;
+    public var horizonY: Float;
+    public var sbWaterFx: libs.heaps.slib.HSpriteBatch;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap, biome: String, biome_outside: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+        super();
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function render() {}
+    public override function render(): Void {
+    }
 
-  function computeCliffXperY() {}
+    public function computeCliffXperY(): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function addDesk(z: level.DecoTypes.DecoTypes) {}
+    public function addDesk(arg0: level.DecoZone): Void {
+    }
 
-  function needToPlaceEnigma(): Bool {}
+    public function needToPlaceEnigma(): Bool {
+        throw "stub: needToPlaceEnigma not decompiled";
+    }
 
-  function placeRuneFabric(tileName: String, px: Float, py: Float) {}
+    public function placeRuneFabric(arg0: String, arg1: Float, arg2: Float): Void {
+    }
 
-  function addFabric(z: level.DecoTypes.DecoTypes, oneWay: Bool, hintFabricTileName: String) {}
+    public function addFabric(arg0: level.DecoZone, arg1: Bool, arg2: String): Void {
+    }
 
-  function addAlcoves(z: level.DecoTypes.DecoTypes) {}
+    public function addAlcoves(arg0: level.DecoZone): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function addScroller(z: level.DecoTypes.DecoTypes) {}
+    public function addScroller(arg0: level.DecoZone): Void {
+    }
 
-  function renderOneWay(cx: Int, cy: Int, leftCorner: Bool, rightCorner: Bool, isLadder: Bool) {}
+    public function renderOneWay(arg0: Int, arg1: Int, arg2: Bool, arg3: Bool, arg4: Bool): Void {
+    }
 
-  function renderLadders() {}
+    public function renderLadders(): Void {
+    }
 
-  function renderWallTransitions() {}
+    public function renderWallTransitions(): Void {
+    }
 
-  function renderParallax(inf: Dynamic, parallaxName: String) {}
+    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    }
 
-  function onAddParallax(inf: Dynamic, p: Parallax, pg: ParallaxGroup) {}
+    public function onAddParallax(arg0: Dynamic, arg1: Parallax, arg2: ParallaxGroup): Void {
+    }
 
-  function lightningFlash() {}
+    public function lightningFlash(): Void {
+    }
 
-  function thunder(index: Int, lowPitch: Bool) {}
+    public function thunder(arg0: Int, arg1: Bool): Void {
+    }
 
-  function parallaxFlash(index: Int) {}
+    public function parallaxFlash(arg0: Int): Void {
+    }
 
-  function lightningFx(spriteBatch: libs.heaps.slib.HSpriteBatch.HSpriteBatch, inf: Dynamic) {}
+    public function lightningFx(arg0: libs.heaps.slib.HSpriteBatch, arg1: Dynamic): Void {
+    }
 
-  function getViewportBlendRatio(): Float {}
+    public override function getViewportBlendRatio(): Float {
+        throw "stub: getViewportBlendRatio not decompiled";
+    }
 
-  function getBlendRatioAt(px: Float, py: Float): Float {}
+    public override function getBlendRatioAt(arg0: Float, arg1: Float): Float {
+        throw "stub: getBlendRatioAt not decompiled";
+    }
 
-  function getCurrentNearBorderRatio(clamped: Dynamic): Float {}
+    public function getCurrentNearBorderRatio(arg0: Ref): Float {
+        throw "stub: getCurrentNearBorderRatio not decompiled";
+    }
 
-  function getNearBorderRatioAtPos(px: Float, py: Float, clamped: Dynamic): Float {}
+    public function getNearBorderRatioAtPos(arg0: Float, arg1: Float, arg2: Ref): Float {
+        throw "stub: getNearBorderRatioAtPos not decompiled";
+    }
 
-  function getLightningFlashPower(): Float {}
+    public function getLightningFlashPower(): Float {
+        throw "stub: getLightningFlashPower not decompiled";
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function addCompositeTile(spriteName: String, pixelPosX: Float, pixelPosY: Float, groupMain: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, groupAlpha: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, groupAdd: libs.heaps.StaticGeometryGroup.StaticGeometryGroup, pivotX: Dynamic, pivotY: Dynamic, setFlags: Dynamic, abortFlags: Dynamic, flipMode: Dynamic, onBounds: Dynamic) {}
+    public function addCompositeTile(arg0: String, arg1: Float, arg2: Float, arg3: libs.heaps.StaticGeometryGroup, arg4: libs.heaps.StaticGeometryGroup, arg5: libs.heaps.StaticGeometryGroup, arg6: Ref, arg7: Ref, arg8: Dynamic, arg9: Dynamic, arg10: libs.heaps.slib.TileFlipMode, arg11: Dynamic): Void {
+    }
 
-  function addWater() {}
+    public function addWater(): Void {
+    }
 
-  function renderFrontRocks() {}
+    public function renderFrontRocks(): Void {
+    }
 }
-

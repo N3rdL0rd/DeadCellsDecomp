@@ -1,86 +1,145 @@
 package level;
+
 class LevelStruct {
-  var user: User;
-  var lInfos: Dynamic;
-  var rng: libs.Rand.Rand;
-  var nodes: haxe.ds.StringMap;
-  var all: hl.types.ArrayObj<Dynamic>;
-  var zLinkId: Int;
-  var defaultGroup: Int;
-  var addCorridorsBeforeRunicZDoors: Bool;
+    public var user: User;
+    public var lInfos: Dynamic;
+    public var rng: libs.Rand;
+    public var nodes: haxe.ds.StringMap;
+    public var all: Array<Dynamic>;
+    public var zLinkId: Int;
+    public var defaultGroup: Int;
+    public var addCorridorsBeforeRunicZDoors: Bool;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+    }
 
-  static function get(user: User, l: Dynamic, rng: libs.Rand.Rand): LevelStruct {}
+    public static function get(arg0: User, arg1: Dynamic, arg2: libs.Rand): level.LevelStruct {
+        throw "stub: get not decompiled";
+    }
 
-  function createNode(type: String, templateId: String, group: Dynamic, id: String): level.RoomNode.RoomNode {}
+    public function createNode(arg0: String, arg1: String, arg2: Dynamic, arg3: String): level.RoomNode {
+        throw "stub: createNode not decompiled";
+    }
 
-  function createExit(dest: String, templateId: String, group: Dynamic, id: String): level.RoomNode.RoomNode {}
+    public function createExit(arg0: String, arg1: String, arg2: Dynamic, arg3: String): level.RoomNode {
+        throw "stub: createExit not decompiled";
+    }
 
-  function getId(id: String): level.RoomNode.RoomNode {}
+    public function getId(arg0: String): level.RoomNode {
+        throw "stub: getId not decompiled";
+    }
 
-  function listBetween(start: String, ends: Dynamic, minSpawnDist: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function listBetween(arg0: String, arg1: Dynamic, arg2: Dynamic): Array<Dynamic> {
+        throw "stub: listBetween not decompiled";
+    }
 
-  function addRooms(type: String, templateId: String, group: Dynamic, num: Int, start: String, ends: Dynamic, minSpawnDist: Dynamic): hl.types.ArrayObj<Dynamic> {}
+    public function addRooms(arg0: String, arg1: String, arg2: Dynamic, arg3: Int, arg4: String, arg5: Dynamic, arg6: Dynamic): Array<Dynamic> {
+        throw "stub: addRooms not decompiled";
+    }
 
-  function createCross(id: String): level.RoomNode.RoomNode {}
+    public function createCross(arg0: String): level.RoomNode {
+        throw "stub: createCross not decompiled";
+    }
 
-  function createZChallengeAfter(r: level.RoomNode.RoomNode, needCross: Bool, type: String, templateId: String, group: Dynamic) {}
+    public function createZChallengeAfter(arg0: level.RoomNode, arg1: Bool, arg2: String, arg3: String, arg4: Dynamic): Void {
+    }
 
-  function addZChallengeContent(entrance: level.RoomNode.RoomNode, contentFirstRoom: level.RoomNode.RoomNode) {}
+    public function addZChallengeContent(arg0: level.RoomNode, arg1: level.RoomNode): Void {
+    }
 
-  function createCursedChestNodes(baseChance: Float): hl.types.ArrayObj<Dynamic> {}
+    public function createCursedChestNodes(arg0: Float): Array<Dynamic> {
+        throw "stub: createCursedChestNodes not decompiled";
+    }
 
-  function createTimedBranch(timedDoor: Dynamic): level.RoomNode.RoomNode {}
+    public function createTimedBranch(arg0: Dynamic): level.RoomNode {
+        throw "stub: createTimedBranch not decompiled";
+    }
 
-  function createTimedBranchBefore(n: level.RoomNode.RoomNode, timedDoor: Dynamic): level.RoomNode.RoomNode {}
+    public function createTimedBranchBefore(arg0: level.RoomNode, arg1: Dynamic): level.RoomNode {
+        throw "stub: createTimedBranchBefore not decompiled";
+    }
 
-  function createTeleportAfter(ref: level.RoomNode.RoomNode, group: Dynamic): level.RoomNode.RoomNode {}
+    public function createTeleportAfter(arg0: level.RoomNode, arg1: Dynamic): level.RoomNode {
+        throw "stub: createTeleportAfter not decompiled";
+    }
 
-  function createTeleportBefore(ref: level.RoomNode.RoomNode, group: Dynamic): level.RoomNode.RoomNode {}
+    public function createTeleportBefore(arg0: level.RoomNode, arg1: Dynamic): level.RoomNode {
+        throw "stub: createTeleportBefore not decompiled";
+    }
 
-  function _createTeleport(ref: level.RoomNode.RoomNode, group: Dynamic): level.RoomNode.RoomNode {}
+    public function _createTeleport(arg0: level.RoomNode, arg1: Dynamic): level.RoomNode {
+        throw "stub: _createTeleport not decompiled";
+    }
 
-  function addTeleports() {}
+    public function addTeleports(): Void {
+    }
 
-  function canGenerateThisLoreRoom(lore: Dynamic): Bool {}
+    public function canGenerateThisLoreRoom(arg0: Dynamic): Bool {
+        throw "stub: canGenerateThisLoreRoom not decompiled";
+    }
 
-  function pickRandomLoreRoom(a: hl.types.ArrayObj<Dynamic>): Dynamic {}
+    public function pickRandomLoreRoom(arg0: Array<Dynamic>): Dynamic {
+        throw "stub: pickRandomLoreRoom not decompiled";
+    }
 
-  function getOutsideLoreRoomSpot(): level.RoomNode.RoomNode {}
+    public function getOutsideLoreRoomSpot(): level.RoomNode {
+        throw "stub: getOutsideLoreRoomSpot not decompiled";
+    }
 
-  function getInsideLoreRoomSpot(): level.RoomNode.RoomNode {}
+    public function getInsideLoreRoomSpot(): level.RoomNode {
+        throw "stub: getInsideLoreRoomSpot not decompiled";
+    }
 
-  function allowLoreRoomBefore(r: level.RoomNode.RoomNode): Bool {}
+    public function allowLoreRoomBefore(arg0: level.RoomNode): Bool {
+        throw "stub: allowLoreRoomBefore not decompiled";
+    }
 
-  function addLoreRoom(lore: Dynamic, overrideStructMode: Dynamic) {}
+    public function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
+    }
 
-  function buildEssentialLoreRooms() {}
+    public function buildEssentialLoreRooms(): Void {
+    }
 
-  function buildLoreRooms() {}
+    public function buildLoreRooms(): Void {
+    }
 
-  function tryAddLoreRoom(lore: Dynamic) {}
+    public function tryAddLoreRoom(arg0: Dynamic): Void {
+    }
 
-  function shouldBuildEliteRoom(rseed: libs.Rand.Rand): Bool {}
+    public function shouldBuildEliteRoom(arg0: libs.Rand): Bool {
+        throw "stub: shouldBuildEliteRoom not decompiled";
+    }
 
-  function removeEliteRoomBefore(rn: level.RoomNode.RoomNode): Bool {}
+    public function removeEliteRoomBefore(arg0: level.RoomNode): Bool {
+        throw "stub: removeEliteRoomBefore not decompiled";
+    }
 
-  function buildEliteRooms() {}
+    public function buildEliteRooms(): Void {
+    }
 
-  function createRunicZDoor(zDoorGroup: Dynamic, content: level.RoomNode.RoomNode, neededRunes: Int, clue: Dynamic, combatRooms: Dynamic, combatGroup: Dynamic, beforeTargets: hl.types.ArrayObj<Dynamic>): level.RoomNode.RoomNode {}
+    public function createRunicZDoor(arg0: Dynamic, arg1: level.RoomNode, arg2: Int, arg3: level.ZDoorContentClue, arg4: Dynamic, arg5: Dynamic, arg6: Array<Dynamic>): level.RoomNode {
+        throw "stub: createRunicZDoor not decompiled";
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function buildSecondaryRooms() {}
+    public function buildSecondaryRooms(): Void {
+    }
 
-  function buildTimedDoors() {}
+    public function buildTimedDoors(): Void {
+    }
 
-  function buildZChallengeDoors() {}
+    public function buildZChallengeDoors(): Void {
+    }
 
-  function buildTriggeredDoors(combatRooms: hl.types.ArrayObj<Dynamic>) {}
+    public function buildTriggeredDoors(arg0: Array<Dynamic>): Void {
+    }
 
-  function finalize() {}
+    public function finalize(): Void {
+    }
 
-  function applyDifficulty() {}
+    public function applyDifficulty(): Void {
+    }
 }
-

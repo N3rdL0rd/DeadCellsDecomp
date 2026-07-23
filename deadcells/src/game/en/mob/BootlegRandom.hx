@@ -1,40 +1,78 @@
 package en.mob;
-class BootlegBase extends en.Mob {
-  var soulHead: en.SmallSoul.SmallSoul;
-  var <none>: Dynamic;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, k: String, dmgTier: Int, lifeTier: Int, revealImmediatly: Bool) {}
+class BootlegRandom {
+    public static var variantHistory: Array<Dynamic>;
+    public static var rand: libs.Rand;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, k: String, dmgTier: Int, lifeTier: Int, revealImmediatly: Bool): BootlegBase {}
+    public static function chooseVariant(arg0: Dynamic): en.mob.Variant {
+        throw "stub: chooseVariant not decompiled";
+    }
 
-  function initGfx() {}
-
-  function init() {}
-
-  function preRevealAnim(r: Float) {}
-
-  function rescaleBootLeg() {}
-
-  function reveal() {}
-
-  function canBeRevealedBy(hero: en.Hero.Hero): Bool {}
-
-  function canStartNecromancy(): Bool {}
-
-  function activateByNecromant(_necro: en.mob.Necromant.Necromant): Entity {}
-
-  function destroy() {}
-
-  function get_headX(): Float {}
-
-  function get_headY(): Float {}
-
-  function postUpdate() {}
-
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
-
-  function getCLID(): Int {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Ref, arg5: Ref): en.Mob {
+        throw "stub: create not decompiled";
+    }
 }
 
+class BootlegBase extends en.Mob {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var soulHead: en.SmallSoul;
+    public var : Dynamic;
+
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Bool) {
+        super();
+    }
+
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int, arg6: Bool): en.mob.BootlegBase {
+        throw "stub: create not decompiled";
+    }
+
+    public override function initGfx(): Void {
+    }
+
+    public override function init(): Void {
+    }
+
+    public override function preRevealAnim(arg0: Float): Void {
+    }
+
+    public function rescaleBootLeg(): Void {
+    }
+
+    public override function reveal(): Void {
+    }
+
+    public override function canBeRevealedBy(arg0: en.Hero): Bool {
+        throw "stub: canBeRevealedBy not decompiled";
+    }
+
+    public function canStartNecromancy(): Bool {
+        throw "stub: canStartNecromancy not decompiled";
+    }
+
+    public function activateByNecromant(arg0: en.mob.Necromant): Entity {
+        throw "stub: activateByNecromant not decompiled";
+    }
+
+    public override function destroy(): Void {
+    }
+
+    public function get_headX(): Float {
+        throw "stub: get_headX not decompiled";
+    }
+
+    public function get_headY(): Float {
+        throw "stub: get_headY not decompiled";
+    }
+
+    public override function postUpdate(): Void {
+    }
+
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
+
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+}

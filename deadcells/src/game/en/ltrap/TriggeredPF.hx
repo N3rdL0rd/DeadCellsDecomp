@@ -1,47 +1,68 @@
 package en.ltrap;
+
 class TriggeredPF extends en.LevelTrap {
-  var triggerTime: Float;
-  var isOpen: Bool;
-  var leftEdge: Bool;
-  var rightEdge: Bool;
-  var triggerId: String;
-  var sprOffsetY: Float;
-  var tIdle: String;
-  var tDown: String;
-  var tUp: String;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var triggerTime: Float;
+    public var isOpen: Bool;
+    public var leftEdge: Bool;
+    public var rightEdge: Bool;
+    public var triggerId: String;
+    public var sprOffsetY: Float;
+    public var tIdle: String;
+    public var tDown: String;
+    public var tUp: String;
 
-  function __constructor__(h: pr.Level.Level, cx: Int, cy: Int, leftEdge: Bool, rightEdge: Bool, isOpen: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Bool, arg4: Bool, arg5: Dynamic) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function openGfx() {}
+    public function openGfx(): Void {
+    }
 
-  function closeGfx() {}
+    public function closeGfx(): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function setCollisionState(closed: Bool) {}
+    public function setCollisionState(arg0: Bool): Void {
+    }
 
-  function open() {}
+    public function open(): Void {
+    }
 
-  function close() {}
+    public function close(): Void {
+    }
 
-  function toggle(): Bool {}
+    public function toggle(): Bool {
+        throw "stub: toggle not decompiled";
+    }
 
-  function setState(wantOpen: Bool) {}
+    public function setState(arg0: Bool): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

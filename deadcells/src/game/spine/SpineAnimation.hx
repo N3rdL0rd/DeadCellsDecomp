@@ -1,9 +1,12 @@
 package spine;
+
 class SpineAnimation extends spine.SpineSprite {
-  var state: spine.AnimationState.AnimationState;
+    public var state: spine.AnimationState;
 
-  function __constructor__(skeletonData: spine.SkeletonData.SkeletonData, stateData: spine.AnimationState.AnimationStateData, parent: h2d.Object.Object) {}
+    public function new(arg0: spine.SkeletonData, arg1: spine.AnimationStateData, arg2: h2d.Object) {
+        super();
+    }
 
-  function advanceTime(time: Float) {}
+    public override function advanceTime(arg0: Float): Void {
+    }
 }
-

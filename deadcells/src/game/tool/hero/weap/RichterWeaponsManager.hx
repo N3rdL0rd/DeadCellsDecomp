@@ -1,17 +1,25 @@
 package tool.hero.weap;
+
 class RichterWeaponsManager extends tool.hero.weap.BeheadedWeaponsManager {
-  static var __clid: Int;
+    public static var __clid: Int;
 
-  function __constructor__(h: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initWeapons() {}
+    public override function initWeapons(): Void {
+    }
 
-  function onWeaponUse(w: tool.Weapon.Weapon, slot: Int) {}
+    public override function onWeaponUse(arg0: tool.Weapon, arg1: Int): Void {
+    }
 
-  function updateTutorials() {}
+    public override function updateTutorials(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

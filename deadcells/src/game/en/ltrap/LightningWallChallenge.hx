@@ -1,46 +1,66 @@
 package en.ltrap;
+
 class LightningWallChallenge extends en.ltrap.LightningWall {
-  var retractable: Bool;
-  var useOnChallenge: Bool;
-  var alive: Bool;
-  var baseAlpha: Float;
-  var previewTime: Float;
-  var retractableBaseColor: Int;
-  var retractableBaseSecColor: Int;
-  var previewBaseColor: Int;
-  var chains: hl.types.ArrayObj<Dynamic>;
-  var glowShaders: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var retractable: Bool;
+    public var useOnChallenge: Bool;
+    public var alive: Bool;
+    public var baseAlpha: Float;
+    public var previewTime: Float;
+    public var retractableBaseColor: Int;
+    public var retractableBaseSecColor: Int;
+    public var previewBaseColor: Int;
+    public var chains: Array<Dynamic>;
+    public var glowShaders: Array<Dynamic>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, custId: String, retractable: Dynamic, offset: Dynamic, useOnChallenge: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Ref, arg5: Ref, arg6: Ref) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function updateLightning() {}
+    public override function updateLightning(): Void {
+    }
 
-  function hitHero(e: en.Hero.Hero, from: tool.FPoint.FPoint) {}
+    public override function hitHero(arg0: en.Hero, arg1: tool.FPoint): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function canBeActive(): Bool {}
+    public override function canBeActive(): Bool {
+        throw "stub: canBeActive not decompiled";
+    }
 
-  function setLenght() {}
+    public override function setLenght(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

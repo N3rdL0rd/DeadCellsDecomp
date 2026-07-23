@@ -1,31 +1,47 @@
 package pow;
+
 class Indulgence extends Power {
-  var nbExecute: Int;
-  var target: Entity;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var nbExecute: Int;
+    public var target: Entity;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem) {}
+    public function new(arg0: Entity, arg1: tool.InventItem) {
+        super();
+    }
 
-  function start() {}
+    public function start(): Void {
+    }
 
-  function execute() {}
+    public function execute(): Void {
+    }
 
-  function hitTarget() {}
+    public function hitTarget(): Void {
+    }
 
-  function fail() {}
+    public function fail(): Void {
+    }
 
-  function getTarget(): en.Mob.Mob {}
+    public function getTarget(): en.Mob {
+        throw "stub: getTarget not decompiled";
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

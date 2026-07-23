@@ -1,55 +1,79 @@
 package en.bu;
+
 class Anchor extends en.Bullet {
-  var trailColor1: Int;
-  var trailColor2: Int;
-  var useFakePhysics: Bool;
-  var origin: tool.FPoint.FPoint;
-  var baseSpd: Float;
-  var target: tool.FPoint.FPoint;
-  var curvePow: Float;
-  var glowInnerColor: Int;
-  var glowOuterColor: Int;
-  var owner: Entity;
-  var firstHit: Bool;
-  var hasBeenBlocked: Bool;
-  var hasBeenCountered: Bool;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var trailColor1: Int;
+    public var trailColor2: Int;
+    public var useFakePhysics: Bool;
+    public var origin: tool.FPoint;
+    public var baseSpd: Float;
+    public var target: tool.FPoint;
+    public var curvePow: Float;
+    public var glowInnerColor: Int;
+    public var glowOuterColor: Int;
+    public var owner: Entity;
+    public var firstHit: Bool;
+    public var hasBeenBlocked: Bool;
+    public var hasBeenCountered: Bool;
 
-  function onCountered() {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: String) {
+        super();
+    }
 
-  function onTouchGroundCallback() {}
+    public override function initGfx(): Void {
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, spd: Float, cxTarget: Int, cyTarget: Int, innerColor: Int, outerColor: Int, customSfxName: String) {}
+    public override function onTouchGround(): Void {
+    }
 
-  function initGfx() {}
+    public function createAnchorAmmo(): en.bu.AnchorAmmo {
+        throw "stub: createAnchorAmmo not decompiled";
+    }
 
-  function onTouchGround() {}
+    public function initAnchorAmmo(arg0: en.bu.AnchorAmmo): Void {
+    }
 
-  function createAnchorAmmo(): AnchorAmmo {}
+    public function initThrowUsingFakePhysics(arg0: Float, arg1: Float, arg2: Float): Void {
+    }
 
-  function initAnchorAmmo(a: AnchorAmmo) {}
+    public function disableFakePhysics(): Void {
+    }
 
-  function initThrowUsingFakePhysics(cx: Float, cy: Float, spd: Float) {}
+    public function getProgress(): Float {
+        throw "stub: getProgress not decompiled";
+    }
 
-  function disableFakePhysics() {}
+    public function _isOutOfGame(): Bool {
+        throw "stub: _isOutOfGame not decompiled";
+    }
 
-  function getProgress(): Float {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function _isOutOfGame(): Bool {}
+    public override function onTouchValidTarget(arg0: Entity): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function block(arg0: Bool): Void {
+    }
 
-  function onTouchValidTarget(e: Entity) {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function block(byEntity: Bool) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function unserializeInit(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserializeInit() {}
+    public function onCountered(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onTouchGroundCallback(): Void {
+    }
 }
-

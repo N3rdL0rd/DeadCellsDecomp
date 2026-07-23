@@ -1,38 +1,55 @@
 package en.inter;
+
 class WallEgg extends en.Interactive {
-  var links: hl.types.ArrayObj<Dynamic>;
-  var gibs: hl.types.ArrayObj<Dynamic>;
-  var veins: hl.types.ArrayObj<Dynamic>;
-  var core2: libs.heaps.slib.HSprite.HSprite;
-  var mobData: level.LevelTypes.LevelTypes;
-  static var HATCH_DURATION: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var HATCH_DURATION: Float;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var links: Array<Dynamic>;
+    public var gibs: Array<Dynamic>;
+    public var veins: Array<Dynamic>;
+    public var core2: libs.heaps.slib.HSprite;
+    public var mobData: level.Mob;
 
-  function __constructor__(l: pr.Level.Level, cx: Int, cy: Int, m: level.LevelTypes.LevelTypes) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: level.Mob) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function setDepth(layer: Int) {}
+    public function setDepth(arg0: Int): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function hatch() {}
+    public function hatch(): Void {
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,280 +1,401 @@
 package pr;
+
 class Level extends libs.Process {
-  var map: level.LevelMap.LevelMap;
-  var game: pr.Game.Game;
-  var qTree: tool.quadTree.QuadTree.QuadTree;
-  var teamHero: tool.Team.Team;
-  var teamMob: tool.Team.Team;
-  var teamProp: tool.Team.Team;
-  var boss: en.mob.Boss.Boss;
-  var nbTotalMobs: Int;
-  var nbMobsLeft: Int;
-  var entities: hl.types.ArrayObj<Dynamic>;
-  var qTreeEntities: hl.types.ArrayObj<Dynamic>;
-  var savedEntities: hl.types.ArrayObj<Dynamic>;
-  var critters: hl.types.ArrayObj<Dynamic>;
-  var splatters: hl.types.ArrayObj<Dynamic>;
-  var nbTeleportOpened: Int;
-  var entitiesByClass: haxe.ds.IntMap<Dynamic>;
-  var entityLights: hl.types.ArrayObj<Dynamic>;
-  var loreManagers: hl.types.ArrayObj<Dynamic>;
-  var areaAffects: hl.types.ArrayObj<Dynamic>;
-  var fastAoeAccess: hl.types.ArrayObj<Dynamic>;
-  var from: Level;
-  var mask: h2d.Bitmap.Bitmap;
-  var bgDarkener: h2d.Bitmap.Bitmap;
-  var lastHeroCX: Int;
-  var lastHeroCY: Int;
-  var powers: hl.types.ArrayObj<Dynamic>;
-  var powersLocked: Bool;
-  var newLoots: hl.types.ArrayObj<Dynamic>;
-  var entitiesGC: hl.types.ArrayObj<Dynamic>;
-  var uiProcesses: hl.types.ArrayObj<Dynamic>;
-  var sbUi: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbCritters: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbSplatters: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbPendulum_ChainFront: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbPendulum_ChainBack: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbBodyPart: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var sbBodyPartFront: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var fx: Fx;
-  var minimap: ui.hud.MiniMap.MiniMap;
-  var mapFow: haxe.io.Bytes;
-  var needMapFow: Bool;
-  var slm: pr.ChallengeManager.ChallengeManager;
-  var isSecret: Bool;
-  var activated: Bool;
-  var atManager: pr.AncientTempleManager.AncientTempleManager;
-  var lDisp: level.LevelDisp.LevelDisp;
-  var lAudio: level.LevelAudio.LevelAudio;
-  var scroller: light.LightedLayers.LightedLayers;
-  var permanentTW: libs.misc.Tweenie.Tweenie;
-  var viewport: Viewport;
-  var localViewportLimits: hl.types.ArrayObj<Dynamic>;
-  var flashLights: hl.types.ArrayObj<Dynamic>;
-  var onionSkins: hl.types.ArrayObj<Dynamic>;
-  var controller: tool.Controller.Controller;
-  var accu: Float;
-  var slib: libs.heaps.slib.SpriteLib.SpriteLib;
-  var norm: h3d.mat.Texture.Texture;
-  var cm: libs.misc.Cinematic.Cinematic;
-  var reparsePlatformPointsNeeded: hl.types.ArrayObj<Dynamic>;
-  var viewportDebug: Bool;
-  var isSubLevel: Bool;
-  var levelSignals: Dynamic;
-  var cirColEntitiesBuffer: hl.types.ArrayObj<Dynamic>;
-  var currentCirColEntitiesCount: Int;
-  var currentCollisionData: Dynamic;
-  var freezeIdCooldown: Int;
-  var newViewportRect: Dynamic;
-  var isCursed: Bool;
-  var isBlur: Bool;
-  var listCurrentQuadElements: hl.types.ArrayObj<Dynamic>;
-  var oldMouseX: Float;
-  var oldMouseY: Float;
-  var debugPath: tool.Path.Path;
-  var __uid: Int;
-  var <none>: Dynamic;
-  static var ENTITIES_CLIDS: hl.types.ArrayBytes<Int>;
-  static var cirColBufferMaxCount: Int;
-  static var __clid: Int;
+    public static var ENTITIES_CLIDS: Array<Int>;
+    public static var cirColBufferMaxCount: Int;
+    public static var __clid: Int;
+    public var map: level.LevelMap;
+    public var game: pr.Game;
+    public var qTree: tool.quadTree.QuadTree;
+    public var teamHero: tool.Team;
+    public var teamMob: tool.Team;
+    public var teamProp: tool.Team;
+    public var boss: en.mob.Boss;
+    public var nbTotalMobs: Int;
+    public var nbMobsLeft: Int;
+    public var entities: Array<Dynamic>;
+    public var qTreeEntities: Array<Dynamic>;
+    public var savedEntities: Array<Dynamic>;
+    public var critters: Array<Dynamic>;
+    public var splatters: Array<Dynamic>;
+    public var nbTeleportOpened: Int;
+    public var entitiesByClass: haxe.ds.IntMap;
+    public var entityLights: Array<Dynamic>;
+    public var loreManagers: Array<Dynamic>;
+    public var areaAffects: Array<Dynamic>;
+    public var fastAoeAccess: Array<Dynamic>;
+    public var from: pr.Level;
+    public var mask: h2d.Bitmap;
+    public var bgDarkener: h2d.Bitmap;
+    public var lastHeroCX: Int;
+    public var lastHeroCY: Int;
+    public var powers: Array<Dynamic>;
+    public var powersLocked: Bool;
+    public var newLoots: Array<Dynamic>;
+    public var entitiesGC: Array<Dynamic>;
+    public var uiProcesses: Array<Dynamic>;
+    public var sbUi: libs.heaps.slib.HSpriteBatch;
+    public var sbCritters: libs.heaps.slib.HSpriteBatch;
+    public var sbSplatters: libs.heaps.slib.HSpriteBatch;
+    public var sbPendulum_ChainFront: libs.heaps.slib.HSpriteBatch;
+    public var sbPendulum_ChainBack: libs.heaps.slib.HSpriteBatch;
+    public var sbBodyPart: libs.heaps.slib.HSpriteBatch;
+    public var sbBodyPartFront: libs.heaps.slib.HSpriteBatch;
+    public var fx: Fx;
+    public var minimap: ui.hud.MiniMap;
+    public var mapFow: haxe.io.Bytes;
+    public var needMapFow: Bool;
+    public var slm: pr.ChallengeManager;
+    public var isSecret: Bool;
+    public var activated: Bool;
+    public var atManager: pr.AncientTempleManager;
+    public var lDisp: level.LevelDisp;
+    public var lAudio: level.LevelAudio;
+    public var scroller: light.LightedLayers;
+    public var permanentTW: libs.misc.Tweenie;
+    public var viewport: Viewport;
+    public var localViewportLimits: Array<Dynamic>;
+    public var flashLights: Array<Dynamic>;
+    public var onionSkins: Array<Dynamic>;
+    public var controller: tool.ControllerAccess;
+    public var accu: Float;
+    public var slib: libs.heaps.slib.SpriteLib;
+    public var norm: h3d.mat.Texture;
+    public var cm: libs.misc.Cinematic;
+    public var reparsePlatformPointsNeeded: Array<Dynamic>;
+    public var viewportDebug: Bool;
+    public var isSubLevel: Bool;
+    public var levelSignals: tool.signals.LevelSignals;
+    public var cirColEntitiesBuffer: Array<Dynamic>;
+    public var currentCirColEntitiesCount: Int;
+    public var currentCollisionData: Dynamic;
+    public var freezeIdCooldown: Int;
+    public var newViewportRect: Dynamic;
+    public var isCursed: Bool;
+    public var isBlur: Bool;
+    public var listCurrentQuadElements: Array<Dynamic>;
+    public var oldMouseX: Float;
+    public var oldMouseY: Float;
+    public var debugPath: tool.Path;
+    public var __uid: Int;
+    public var : Dynamic;
+
+    public function new(arg0: pr.Game, arg1: level.LevelMap, arg2: pr.Level, arg3: Bool, arg4: Ref, arg5: cine.LevelTransition) {
+        super();
+    }
+
+    public function get_totalMobCount(): Int {
+        throw "stub: get_totalMobCount not decompiled";
+    }
+
+    public function get_mobsLeftCount(): Int {
+        throw "stub: get_mobsLeftCount not decompiled";
+    }
+
+    public function set_mobsLeftCount(arg0: Int): Int {
+        throw "stub: set_mobsLeftCount not decompiled";
+    }
+
+    public function spawnEntitiesInAllRooms(arg0: libs.Rand, arg1: Array<Dynamic>, arg2: cine.LevelTransition): Void {
+    }
+
+    public function entitiesPostCreate(): Void {
+    }
+
+    public function getDiveAttackData(): Dynamic {
+        throw "stub: getDiveAttackData not decompiled";
+    }
 
-  function onMusicInitialized() {}
+    public function watchTmxHotReload(): Void {
+    }
 
-  function __constructor__(game: pr.Game.Game, map: level.LevelMap.LevelMap, from: Level, isSecret: Bool, isSubLevel: Dynamic, cineTrans: cine.LevelTransition.LevelTransition) {}
+    public function configureLoreRoomSpecialEquipment(arg0: level.Room): Void {
+    }
 
-  function get_totalMobCount(): Int {}
+    public function finalizeCreation(): Void {
+    }
 
-  function get_mobsLeftCount(): Int {}
+    public function createRandomEntities(arg0: Array<Dynamic>): Void {
+    }
 
-  function set_mobsLeftCount(value: Int): Int {}
+    public function getFreeRandomMapPos(arg0: Array<Dynamic>, arg1: Int): tool.CPoint {
+        throw "stub: getFreeRandomMapPos not decompiled";
+    }
 
-  function spawnEntitiesInAllRooms(rseed: libs.Rand.Rand, trapSpots: hl.types.ArrayObj<Dynamic>, cineTrans: cine.LevelTransition.LevelTransition) {}
+    public function attachDeadCultistsInTumulus(): Void {
+    }
 
-  function entitiesPostCreate() {}
+    public function attachDeadCultistToPlatform(arg0: level.Platform): Void {
+    }
 
-  function getDiveAttackData(): Dynamic {}
+    public function getCliffEnigmaAnswer(): en.inter.zdoor.CliffRuneCombo {
+        throw "stub: getCliffEnigmaAnswer not decompiled";
+    }
 
-  function watchTmxHotReload() {}
+    public function attachTimedShooter(arg0: level.Room, arg1: level.Marker): Void {
+    }
 
-  function configureLoreRoomSpecialEquipment(room: level.Room.Room) {}
+    public function attachTumulusTimedShooter(arg0: level.Room, arg1: level.Marker): Void {
+    }
 
-  function finalizeCreation() {}
+    public function getAvailableLoreRooms(): Array<Dynamic> {
+        throw "stub: getAvailableLoreRooms not decompiled";
+    }
 
-  function createRandomEntities(mainLevelRooms: hl.types.ArrayObj<Dynamic>) {}
+    public function createLoreManagers(): Void {
+    }
 
-  function getFreeRandomMapPos(mainLevelRooms: hl.types.ArrayObj<Dynamic>, infiniteLoopCheck: Int): tool.CPoint.CPoint {}
+    public function attachLoots(): Void {
+    }
 
-  function attachDeadCultistsInTumulus() {}
+    public function attachMoneyDoors(): Void {
+    }
 
-  function attachDeadCultistToPlatform(platform: level.Platform.Platform) {}
+    public function generateBreakableProps(): Void {
+    }
 
-  function getCliffEnigmaAnswer(): Dynamic {}
+    public function onLevelAssetsReloaded(): Void {
+    }
 
-  function attachTimedShooter(r: level.Room.Room, m: hxbit.Macros.Macros) {}
+    public override function init(): Void {
+    }
 
-  function attachTumulusTimedShooter(room: level.Room.Room, marker: hxbit.Macros.Macros) {}
+    public function initRender(): Void {
+    }
 
-  function getAvailableLoreRooms(): hl.types.ArrayObj<Dynamic> {}
+    public function playMusic(): Void {
+    }
 
-  function createLoreManagers() {}
+    public function alreadyInBossCombat(): Bool {
+        throw "stub: alreadyInBossCombat not decompiled";
+    }
 
-  function attachLoots() {}
+    public override function pause(): Void {
+    }
 
-  function attachMoneyDoors() {}
+    public function hide(): Void {
+    }
 
-  function generateBreakableProps() {}
+    public function addAreaAffectS(arg0: Int, arg1: Int, arg2: Float, arg3: Int, arg4: Float, arg5: Float, arg6: Array<Dynamic>): Void {
+    }
 
-  function onLevelAssetsReloaded() {}
+    public function addTickLineAreaAffectS(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Float, arg6: Float): Void {
+    }
 
-  function init() {}
+    public function addTickAreaAffectS(arg0: Int, arg1: Int, arg2: Int, arg3: Float, arg4: Float): Void {
+    }
 
-  function initRender() {}
+    public function initFastAoeAccess(): Void {
+    }
 
-  function playMusic() {}
+    public override function resume(): Void {
+    }
 
-  function alreadyInBossCombat(): Bool {}
+    public function onActivation(): Void {
+    }
 
-  function pause() {}
+    public function loadMinimap(): Void {
+    }
 
-  function hide() {}
+    public function redrawWorldMap(): Void {
+    }
 
-  function addAreaAffectS(cx: Int, cy: Int, aoeDurationS: Float, a: Int, aDurationS: Float, aValue: Float, affixes: hl.types.ArrayObj<Dynamic>) {}
+    public function loadReverb(): Void {
+    }
 
-  function addTickLineAreaAffectS(fx: Float, fy: Float, tx: Float, ty: Float, a: Int, aDurationS: Float, aValue: Float) {}
+    public function initReload(): Void {
+    }
 
-  function addTickAreaAffectS(cx: Int, cy: Int, a: Int, aDurationS: Float, aValue: Float) {}
+    public function preDeserialize(): Void {
+    }
 
-  function initFastAoeAccess() {}
+    public function onReload(): Void {
+    }
 
-  function resume() {}
+    public function postDeserialize(): Void {
+    }
 
-  function onActivation() {}
+    public function prepareSave(): Bool {
+        throw "stub: prepareSave not decompiled";
+    }
 
-  function loadMinimap() {}
+    public override function onDispose(): Void {
+    }
 
-  function redrawWorldMap() {}
+    public function runEntitiesGC(): Void {
+    }
 
-  function loadReverb() {}
+    public function registerEntity(arg0: Entity): Void {
+    }
 
-  function initReload() {}
+    public function unregisterEntity(arg0: Entity): Void {
+    }
 
-  function preDeserialize() {}
+    public function registerPower(arg0: Power): Void {
+    }
 
-  function onReload() {}
+    public function unregisterPower(arg0: Power): Void {
+    }
 
-  function postDeserialize() {}
+    public function getRunningPowers(arg0: hl.Class, arg1: Entity, arg2: tool.InventItem, arg3: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: getRunningPowers not decompiled";
+    }
 
-  function prepareSave(): Bool {}
+    public function afterBossRuneReload(): Void {
+    }
 
-  function onDispose() {}
+    public function quitBossRush(arg0: Bool): Void {
+    }
 
-  function runEntitiesGC() {}
+    public function afterBossRushEnd(arg0: Bool): Void {
+    }
 
-  function registerEntity(e: Entity) {}
+    public function attachMobs(): Void {
+    }
 
-  function unregisterEntity(e: Entity) {}
+    public function attachMob(arg0: level.Mob): en.Mob {
+        throw "stub: attachMob not decompiled";
+    }
 
-  function registerPower(p: Power) {}
+    public function digHiddenBlocks(): Void {
+    }
 
-  function unregisterPower(p: Power) {}
+    public function attachRoomLoots(): Void {
+    }
 
-  function getRunningPowers(pc: hl.Class, owner: Entity, inventItem: tool.InventItem.InventItem, ret: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function attachMerchants(): Void {
+    }
 
-  function afterBossRuneReload() {}
+    public function generateSecretExit(arg0: libs.Rand): Void {
+    }
 
-  function quitBossRush(failed: Bool) {}
+    public function closePortal(arg0: level.LevelMap): Void {
+    }
 
-  function afterBossRushEnd(failed: Bool) {}
+    public function toGlobalX(arg0: Float): Float {
+        throw "stub: toGlobalX not decompiled";
+    }
 
-  function attachMobs() {}
+    public function toGlobalY(arg0: Float): Float {
+        throw "stub: toGlobalY not decompiled";
+    }
 
-  function attachMob(m: level.LevelTypes.LevelTypes): en.Mob.Mob {}
+    public override function onResize(): Void {
+    }
 
-  function digHiddenBlocks() {}
+    public function updateBgDarkenerVisibility(): Void {
+    }
 
-  function attachRoomLoots() {}
+    public function onApplyOptions(): Void {
+    }
 
-  function attachMerchants() {}
+    public function needReparsePlatforms(arg0: tool.CPoint): Void {
+    }
 
-  function generateSecretExit(rseed: libs.Rand.Rand) {}
+    public function reparsePlatforms(): Void {
+    }
 
-  function closePortal(map: level.LevelMap.LevelMap) {}
+    public function blur(): Void {
+    }
 
-  function toGlobalX(x: Float): Float {}
+    public function unblur(): Void {
+    }
 
-  function toGlobalY(y: Float): Float {}
+    public function createStandardBatch(arg0: h2d.Tile, arg1: Int): libs.heaps.slib.HSpriteBatch {
+        throw "stub: createStandardBatch not decompiled";
+    }
 
-  function onResize() {}
+    public function countActiveCritters(): Int {
+        throw "stub: countActiveCritters not decompiled";
+    }
 
-  function updateBgDarkenerVisibility() {}
+    public function dropMobLoots(arg0: Int, arg1: Int, arg2: Array<Dynamic>, arg3: Dynamic): Void {
+    }
 
-  function onApplyOptions() {}
+    public function freezeEntities(arg0: Ref, arg1: Array<Dynamic>, arg2: Array<Dynamic>, arg3: Ref): Void {
+    }
 
-  function needReparsePlatforms(cp: tool.CPoint.CPoint) {}
+    public function updatedDelayedLoots(): Void {
+    }
 
-  function reparsePlatforms() {}
+    public override function update(): Void {
+    }
 
-  function blur() {}
+    public override function postUpdate(): Void {
+    }
 
-  function unblur() {}
+    public function fillCircularCollisionEntitiesBuffer(arg0: Array<Dynamic>): Void {
+    }
 
-  function createStandardBatch(t: h2d.Tile.Tile, depth: Int): libs.heaps.slib.HSpriteBatch.HSpriteBatch {}
+    public function resolveCircularCollisions(): Void {
+    }
 
-  function countActiveCritters(): Int {}
+    public function getMouse(): Dynamic {
+        throw "stub: getMouse not decompiled";
+    }
 
-  function dropMobLoots(cx: Int, cy: Int, all: hl.types.ArrayObj<Dynamic>, delayS: Dynamic) {}
+    public function onMouseMove(arg0: hxd.Event): Void {
+    }
 
-  function freezeEntities(duration: Dynamic, affectedTypes: hl.types.ArrayDyn, ignoredTypes: hl.types.ArrayDyn, freezeAnim: Dynamic) {}
+    public function onMouseDown(arg0: hxd.Event): Void {
+    }
 
-  function updatedDelayedLoots() {}
+    public function onMouseUp(arg0: hxd.Event): Void {
+    }
 
-  function update() {}
+    public function spawnCustomEntity(arg0: level.Room, arg1: level.Marker, arg2: Int, arg3: Int): Void {
+    }
 
-  function postUpdate() {}
+    public function spawnNpc(arg0: level.Room, arg1: level.Marker, arg2: Int, arg3: Int): Void {
+    }
 
-  function fillCircularCollisionEntitiesBuffer(entities: hl.types.ArrayObj<Dynamic>) {}
+    public function spawnTrainingBossDoor(arg0: level.Marker, arg1: Int, arg2: Int): Void {
+    }
 
-  function resolveCircularCollisions() {}
+    public function spawnSpikes(arg0: level.Marker, arg1: Int, arg2: Int): Bool {
+        throw "stub: spawnSpikes not decompiled";
+    }
 
-  function getMouse(): Dynamic {}
+    public function spawnEntitiesFromMarkers(arg0: level.Room, arg1: libs.Rand, arg2: Array<Dynamic>): Int {
+        throw "stub: spawnEntitiesFromMarkers not decompiled";
+    }
 
-  function onMouseMove(e: Dynamic) {}
+    public function attachZDoors(arg0: level.Room, arg1: libs.Rand): Void {
+    }
 
-  function onMouseDown(e: Dynamic) {}
+    public function attachSpecialEquipments(arg0: level.Room, arg1: libs.Rand, arg2: cine.LevelTransition): Void {
+    }
 
-  function onMouseUp(e: Dynamic) {}
+    public function attachNpcs(arg0: level.Room): Void {
+    }
 
-  function spawnCustomEntity(r: level.Room.Room, m: hxbit.Macros.Macros, cx: Int, cy: Int) {}
+    public function adjustLavaBounds(): Void {
+    }
 
-  function spawnNpc(r: level.Room.Room, m: hxbit.Macros.Macros, cx: Int, cy: Int) {}
+    public function attachFreeDarknessRemovers(arg0: level.Room, arg1: libs.Rand): Void {
+    }
 
-  function spawnTrainingBossDoor(m: hxbit.Macros.Macros, cx: Int, cy: Int) {}
+    public function getReverbPreset(arg0: Int): hxd.snd.effect.ReverbPreset {
+        throw "stub: getReverbPreset not decompiled";
+    }
 
-  function spawnSpikes(m: hxbit.Macros.Macros, cx: Int, cy: Int): Bool {}
+    public function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function spawnEntitiesFromMarkers(r: level.Room.Room, rseed: libs.Rand.Rand, trapSpots: hl.types.ArrayObj<Dynamic>): Int {}
+    public function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function attachZDoors(r: level.Room.Room, rseed: libs.Rand.Rand) {}
+    public function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function attachSpecialEquipments(r: level.Room.Room, rseed: libs.Rand.Rand, cineTrans: cine.LevelTransition.LevelTransition) {}
+    public function unserializeInit(): Void {
+    }
 
-  function attachNpcs(r: level.Room.Room) {}
+    public function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function adjustLavaBounds() {}
-
-  function attachFreeDarknessRemovers(r: level.Room.Room, rseed: libs.Rand.Rand) {}
-
-  function getReverbPreset(kind: Int): Dynamic {}
-
-  function getCLID(): Int {}
-
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getSerializeSchema(): hxbit.Schema.Schema {}
-
-  function unserializeInit() {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onMusicInitialized(): Void {
+    }
 }
-

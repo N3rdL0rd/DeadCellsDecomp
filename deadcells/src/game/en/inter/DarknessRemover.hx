@@ -1,53 +1,81 @@
 package en.inter;
+
 class DarknessRemover extends en.Interactive {
-  var deferred: Dynamic;
-  var holes: hl.types.ArrayObj<Dynamic>;
-  var specular: libs.heaps.slib.HSprite.HSprite;
-  var baseLightInt: Float;
-  var permanent: Bool;
-  var active: Bool;
-  var depleted: Bool;
-  var maxRadius: Float;
-  static var LOW_LIFE: Float;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var LOW_LIFE: Float;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var deferred: light.DarknessRemover;
+    public var holes: Array<Dynamic>;
+    public var specular: libs.heaps.slib.HSprite;
+    public var baseLightInt: Float;
+    public var permanent: Bool;
+    public var active: Bool;
+    public var depleted: Bool;
+    public var maxRadius: Float;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, r: Dynamic, perma: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Dynamic, arg4: Dynamic) {
+        super();
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function initLight() {}
+    public function initLight(): Void {
+    }
 
-  function updateSprite() {}
+    public function updateSprite(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function getLightRadius(): Float {}
+    public function getLightRadius(): Float {
+        throw "stub: getLightRadius not decompiled";
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function turnOn() {}
+    public function turnOn(): Void {
+    }
 
-  function getLightColor(): Int {}
+    public function getLightColor(): Int {
+        throw "stub: getLightColor not decompiled";
+    }
 
-  function getParticuleColor(): Int {}
+    public function getParticuleColor(): Int {
+        throw "stub: getParticuleColor not decompiled";
+    }
 
-  function getParticuleColorBright(): Int {}
+    public function getParticuleColorBright(): Int {
+        throw "stub: getParticuleColorBright not decompiled";
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

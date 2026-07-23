@@ -1,26 +1,36 @@
 package ui.hud.map;
+
 class MapFow extends h2d.Drawable {
-  var width: Int;
-  var height: Int;
-  var tile: h2d.Tile.Tile;
-  var wrapper: h2d.Object.Object;
-  var circle: h2d.Graphics.Graphics;
-  var shader: shader.MiniMap.MiniMap;
-  var png: haxe.io.Bytes;
-  static var TARGET_NAME: String;
+    public static var TARGET_NAME: String;
+    public var width: Int;
+    public var height: Int;
+    public var tile: h2d.Tile;
+    public var wrapper: h2d.Object;
+    public var circle: h2d.Graphics;
+    public var shader: shader.FowAdd;
+    public var png: haxe.io.Bytes;
 
-  function __constructor__(width: Int, height: Int, scale: Float, png: haxe.io.Bytes) {}
+    public function new(arg0: Int, arg1: Int, arg2: Float, arg3: haxe.io.Bytes) {
+        super();
+    }
 
-  function createGraphics(useShader: Dynamic): h2d.Graphics.Graphics {}
+    public function createGraphics(arg0: Ref): h2d.Graphics {
+        throw "stub: createGraphics not decompiled";
+    }
 
-  function clean() {}
+    public function clean(): Void {
+    }
 
-  function getTile(): h2d.Tile.Tile {}
+    public function getTile(): h2d.Tile {
+        throw "stub: getTile not decompiled";
+    }
 
-  function syncPosRec(s: h2d.Object.Object) {}
+    public function syncPosRec(arg0: h2d.Object): Void {
+    }
 
-  function draw(ctx: h2d.RenderContext.RenderContext) {}
+    public function draw(arg0: h2d.RenderContext): Void {
+    }
 
-  function drawRec(ctx: h2d.RenderContext.RenderContext) {}
+    public function drawRec(arg0: h2d.RenderContext): Void {
+    }
 }
-

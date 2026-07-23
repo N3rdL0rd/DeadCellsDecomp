@@ -1,108 +1,182 @@
 package level;
+
 class RoomNode {
-  var struct: level.LevelStruct.LevelStruct;
-  var uid: String;
-  var forcedTemplate: Dynamic;
-  var rType: String;
-  var template: level.RoomTemplate.RoomTemplate;
-  var flags: Int;
-  var exitLevel: String;
-  var exitName: String;
-  var exitColor: Dynamic;
-  var group: Int;
-  var children: hl.types.ArrayObj<Dynamic>;
-  var zChildren: hl.types.ArrayObj<Dynamic>;
-  var parent: RoomNode;
-  var parentLinkConstraint: Dynamic;
-  var isZRoot: Bool;
-  var zLinks: hl.types.ArrayObj<Dynamic>;
-  var subTeleportTo: RoomNode;
-  var childPriority: Int;
-  var fillerWeight: Float;
-  var genData: Dynamic;
-  var npcs: hl.types.ArrayObj<Dynamic>;
-  var id: Int;
-  var spawnDistance: Int;
-  var parentLink: level.RoomTemplate.RoomTemplateLink;
-  var childrenLinks: hl.types.ArrayObj<Dynamic>;
-  var x: Int;
-  var y: Int;
-  var errors: Int;
+    public var struct: level.LevelStruct;
+    public var uid: String;
+    public var forcedTemplate: Dynamic;
+    public var rType: String;
+    public var template: level.RoomTemplate;
+    public var flags: Int;
+    public var exitLevel: String;
+    public var exitName: String;
+    public var exitColor: Dynamic;
+    public var group: Int;
+    public var children: Array<Dynamic>;
+    public var zChildren: Array<Dynamic>;
+    public var parent: level.RoomNode;
+    public var parentLinkConstraint: level.LinkConstraint;
+    public var isZRoot: Bool;
+    public var zLinks: Array<Dynamic>;
+    public var subTeleportTo: level.RoomNode;
+    public var childPriority: Int;
+    public var fillerWeight: Float;
+    public var genData: Dynamic;
+    public var npcs: Array<Dynamic>;
+    public var id: Int;
+    public var spawnDistance: Int;
+    public var parentLink: level.RoomTemplateLink;
+    public var childrenLinks: Array<Dynamic>;
+    public var x: Int;
+    public var y: Int;
+    public var errors: Int;
 
-  function __constructor__(type: String, group: Dynamic, struct: level.LevelStruct.LevelStruct, uid: String) {}
+    public function new(arg0: String, arg1: Ref, arg2: level.LevelStruct, arg3: String) {
+    }
 
-  function copyRec(root: RoomNode): RoomNode {}
+    public static function copyRec(arg0: level.RoomNode): level.RoomNode {
+        throw "stub: copyRec not decompiled";
+    }
 
-  function setUID(_uid: String) {}
+    public function setUID(arg0: String): Void {
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function forceTemplate(templateId: String): RoomNode {}
+    public function forceTemplate(arg0: String): level.RoomNode {
+        throw "stub: forceTemplate not decompiled";
+    }
 
-  function set_spawnDistance(d: Int): Int {}
+    public function set_spawnDistance(arg0: Int): Int {
+        throw "stub: set_spawnDistance not decompiled";
+    }
 
-  function isInZBranch(): Bool {}
+    public function isInZBranch(): Bool {
+        throw "stub: isInZBranch not decompiled";
+    }
 
-  function set_isZRoot(v: Bool): Bool {}
+    public function set_isZRoot(arg0: Bool): Bool {
+        throw "stub: set_isZRoot not decompiled";
+    }
 
-  function set_parent(p: RoomNode): RoomNode {}
+    public function set_parent(arg0: level.RoomNode): level.RoomNode {
+        throw "stub: set_parent not decompiled";
+    }
 
-  function isChild(n: RoomNode): Bool {}
+    public function isChild(arg0: level.RoomNode): Bool {
+        throw "stub: isChild not decompiled";
+    }
 
-  function addZChild(c: RoomNode, clue: Dynamic): RoomNode {}
+    public function addZChild(arg0: level.RoomNode, arg1: level.ZDoorContentClue): level.RoomNode {
+        throw "stub: addZChild not decompiled";
+    }
 
-  function copy(s: level.LevelStruct.LevelStruct, p: RoomNode, map: haxe.ds.ObjectMap): RoomNode {}
+    public function copy(arg0: level.LevelStruct, arg1: level.RoomNode, arg2: haxe.ds.ObjectMap): level.RoomNode {
+        throw "stub: copy not decompiled";
+    }
 
-  function setConstraint(c: Dynamic): RoomNode {}
+    public function setConstraint(arg0: level.LinkConstraint): level.RoomNode {
+        throw "stub: setConstraint not decompiled";
+    }
 
-  function setChildPriority(p: Int): RoomNode {}
+    public function setChildPriority(arg0: Int): level.RoomNode {
+        throw "stub: setChildPriority not decompiled";
+    }
 
-  function addFlag(f: Dynamic): RoomNode {}
+    public function addFlag(arg0: level.RoomFlag): level.RoomNode {
+        throw "stub: addFlag not decompiled";
+    }
 
-  function addNpc(id: Dynamic): RoomNode {}
+    public function addNpc(arg0: NpcId): level.RoomNode {
+        throw "stub: addNpc not decompiled";
+    }
 
-  function setExit(e: String): RoomNode {}
+    public function setExit(arg0: String): level.RoomNode {
+        throw "stub: setExit not decompiled";
+    }
 
-  function calcDistanceCond(f: Dynamic, checkThis: Bool): Int {}
+    public function calcDistanceCond(arg0: Dynamic, arg1: Bool): Int {
+        throw "stub: calcDistanceCond not decompiled";
+    }
 
-  function calcTypeDistance(type: String, checkThis: Bool): Int {}
+    public function calcTypeDistance(arg0: String, arg1: Bool): Int {
+        throw "stub: calcTypeDistance not decompiled";
+    }
 
-  function parentDistanceType(type: String, checkThis: Bool): Int {}
+    public function parentDistanceType(arg0: String, arg1: Bool): Int {
+        throw "stub: parentDistanceType not decompiled";
+    }
 
-  function addBefore(e: RoomNode, id: String): RoomNode {}
+    public function addBefore(arg0: level.RoomNode, arg1: String): level.RoomNode {
+        throw "stub: addBefore not decompiled";
+    }
 
-  function branchTo(e: RoomNode, id: String): RoomNode {}
+    public function branchTo(arg0: level.RoomNode, arg1: String): level.RoomNode {
+        throw "stub: branchTo not decompiled";
+    }
 
-  function addAfter(e: RoomNode, id: String): RoomNode {}
+    public function addAfter(arg0: level.RoomNode, arg1: String): level.RoomNode {
+        throw "stub: addAfter not decompiled";
+    }
 
-  function addBetween(start: String, ends: Dynamic, minSpawnDist: Dynamic): RoomNode {}
+    public function addBetween(arg0: String, arg1: Dynamic, arg2: Dynamic): level.RoomNode {
+        throw "stub: addBetween not decompiled";
+    }
 
-  function branchBetween(start: String, ends: Dynamic, minSpawnDist: Dynamic, crossName: String): RoomNode {}
+    public function branchBetween(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: String): level.RoomNode {
+        throw "stub: branchBetween not decompiled";
+    }
 
-  function addToList(an: hl.types.ArrayObj<Dynamic>, as: hl.types.ArrayObj<Dynamic>): RoomNode {}
+    public function addToList(arg0: Array<Dynamic>, arg1: Array<Dynamic>): level.RoomNode {
+        throw "stub: addToList not decompiled";
+    }
 
-  function branchOrAddBetween(rseed: libs.Rand.Rand, start: String, ends: Dynamic, minSpawnDist: Dynamic): RoomNode {}
+    public function branchOrAddBetween(arg0: libs.Rand, arg1: String, arg2: Dynamic, arg3: Dynamic): level.RoomNode {
+        throw "stub: branchOrAddBetween not decompiled";
+    }
 
-  function hasParent(n: RoomNode, includeSelf: Dynamic): Bool {}
+    public function hasParent(arg0: level.RoomNode, arg1: Dynamic): Bool {
+        throw "stub: hasParent not decompiled";
+    }
 
-  function hasParentMetaGate(includeSelf: Bool): Bool {}
+    public function hasParentMetaGate(arg0: Bool): Bool {
+        throw "stub: hasParentMetaGate not decompiled";
+    }
 
-  function hasParentType(type: String): Bool {}
+    public function hasParentType(arg0: String): Bool {
+        throw "stub: hasParentType not decompiled";
+    }
 
-  function isParentOf(n: RoomNode, includeSelf: Dynamic): Bool {}
+    public function isParentOf(arg0: level.RoomNode, arg1: Dynamic): Bool {
+        throw "stub: isParentOf not decompiled";
+    }
 
-  function getRoot(): RoomNode {}
+    public function getRoot(): level.RoomNode {
+        throw "stub: getRoot not decompiled";
+    }
 
-  function searchChildren(type: String): RoomNode {}
+    public function searchChildren(arg0: String): level.RoomNode {
+        throw "stub: searchChildren not decompiled";
+    }
 
-  function searchParent(check: Dynamic): RoomNode {}
+    public function searchParent(arg0: Dynamic): level.RoomNode {
+        throw "stub: searchParent not decompiled";
+    }
 
-  function countParents(): Int {}
+    public function countParents(): Int {
+        throw "stub: countParents not decompiled";
+    }
 
-  function countChildrenRec(cond: Dynamic): Int {}
+    public function countChildrenRec(arg0: Dynamic): Int {
+        throw "stub: countChildrenRec not decompiled";
+    }
 
-  function addGenData(v: Dynamic): RoomNode {}
+    public function addGenData(arg0: Dynamic): level.RoomNode {
+        throw "stub: addGenData not decompiled";
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
-

@@ -1,31 +1,48 @@
 package en.gr;
+
 class Pokebomb extends en.gr.GrenadeSkill {
-  var prevDir: Int;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var prevDir: Int;
 
-  function canTouch(e: Entity): Bool {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onTrigger() {}
+    public function init(): Void {
+    }
 
-  function __constructor__(h: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function initGfx(): Void {
+    }
 
-  function init() {}
+    public function onFatalFallStart(arg0: Ref): Void {
+    }
 
-  function initGfx() {}
+    public function dropItem(arg0: tool.InventItem): en.inter.ItemDrop {
+        throw "stub: dropItem not decompiled";
+    }
 
-  function onFatalFallStart(delay: Dynamic) {}
+    public function postUpdate(): Void {
+    }
 
-  function dropItem(i: tool.InventItem.InventItem): en.inter.ItemDrop.ItemDrop {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function postUpdate() {}
+    public function unserializeInit(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserializeInit() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onTrigger(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function canTouch(arg0: Entity): Bool {
+        throw "stub: canTouch not decompiled";
+    }
 }
-

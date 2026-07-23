@@ -1,28 +1,40 @@
 package en.bu;
+
 class TimeKeeperShuriken extends en.Bullet {
-  var be: en.mob.boss.TimeKeeper.TimeKeeper;
-  var angRotation: Float;
-  var ang: Float;
-  var glow: libs.heaps.slib.HSprite.HSprite;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var be: en.mob.boss.TimeKeeper;
+    public var angRotation: Float;
+    public var ang: Float;
+    public var glow: libs.heaps.slib.HSprite;
 
-  function __constructor__(be: en.mob.boss.TimeKeeper.TimeKeeper, ad: tool.atk.AttackData.AttackData, ang: Float, speed: Dynamic) {}
+    public function new(arg0: en.mob.boss.TimeKeeper, arg1: tool.atk.AttackData, arg2: Float, arg3: Ref) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

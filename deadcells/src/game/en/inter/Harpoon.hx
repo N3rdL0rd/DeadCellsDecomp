@@ -1,42 +1,64 @@
 package en.inter;
-class Harpoon extends en.Interactive {
-  var isActivated: Bool;
-  var target: en.Mob.Mob;
-  var door: en.inter.door.TriggeredDoor.TriggeredDoor;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
-
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
-
-  function initGfx() {}
-
-  function canBeActivated(by: en.Hero.Hero): Bool {}
-
-  function onFocus() {}
-
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
-
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
-
-  function getCLID(): Int {}
-
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getSerializeSchema(): hxbit.Schema.Schema {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
-}
 
 class HarpoonBullet extends en.Bullet {
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
 
-  function __constructor__(from: Entity, target: Entity, door: en.inter.door.TriggeredDoor.TriggeredDoor) {}
+    public function new(arg0: Entity, arg1: Entity, arg2: en.inter.door.TriggeredDoor) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
 
+class Harpoon extends en.Interactive {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var isActivated: Bool;
+    public var target: en.Mob;
+    public var door: en.inter.door.TriggeredDoor;
+
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
+
+    public function initGfx(): Void {
+    }
+
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
+
+    public function onFocus(): Void {
+    }
+
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
+
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
+
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
+
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
+
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
+}

@@ -1,25 +1,30 @@
 package ui;
+
 class GameInfos extends ui.Process {
-  var bg: ui.BG.BG;
-  var title: ui.Text.Text;
-  var mainFlow: h2d.Flow.Flow;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
-  var controller: tool.Controller.Controller;
-  var pauseUI: ui.Pause.Pause;
-  var fGameplayMod: h2d.Flow.Flow;
-  var fBlueprint: ui.FlowBox.FlowBox;
-  var fBossCell: ui.FlowBox.FlowBox;
-  var fTimers: ui.FlowBox.FlowBox;
-  var fInfection: ui.FlowBox.FlowBox;
-  var heiContent: Int;
+    public var bg: ui.BG;
+    public var title: ui.Text;
+    public var mainFlow: h2d.Flow;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
+    public var controller: tool.ControllerAccess;
+    public var pauseUI: ui.Pause;
+    public var fGameplayMod: h2d.Flow;
+    public var fBlueprint: ui.FlowBox;
+    public var fBossCell: ui.FlowBox;
+    public var fTimers: ui.FlowBox;
+    public var fInfection: ui.FlowBox;
+    public var heiContent: Int;
 
-  function __constructor__(pauseUI: ui.Pause.Pause) {}
+    public function new(arg0: ui.Pause) {
+        super();
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

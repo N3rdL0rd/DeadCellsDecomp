@@ -1,59 +1,73 @@
 package cine.coll;
+
 class SmashCinem extends cine.KeyframesCinematic {
-  var startMask: h2d.Graphics.Graphics;
-  var endMask: h2d.Graphics.Graphics;
-  var endCb: Dynamic;
-  var clb: ui.ControlLabel.ControlLabel;
-  var waitForActionFrame: hl.types.ArrayBytes<Int>;
-  var speechSfxDeck: libs.RandDeck.RandDeck;
-  var kickSfxDeck: libs.RandDeck.RandDeck;
-  var cs: cine.coll.SmashCinem.SmashCinem;
-  var isEnding: Bool;
-  var painTexts: hl.types.ArrayObj<Dynamic>;
-  var texts: hl.types.ArrayObj<Dynamic>;
-  var funnyTexts: hl.types.ArrayObj<Dynamic>;
-  var funnySfx: hl.types.ArrayObj<Dynamic>;
+    public var startMask: h2d.Graphics;
+    public var endMask: h2d.Graphics;
+    public var endCb: Dynamic;
+    public var clb: ui.ControlLabel;
+    public var waitForActionFrame: Array<Int>;
+    public var speechSfxDeck: libs.RandDeck;
+    public var kickSfxDeck: libs.RandDeck;
+    public var cs: cine.coll.CollectorSaying;
+    public var isEnding: Bool;
+    public var painTexts: Array<Dynamic>;
+    public var texts: Array<Dynamic>;
+    public var funnyTexts: Array<Dynamic>;
+    public var funnySfx: Array<Dynamic>;
 
-  function __constructor__(hasKingSkin: Bool, endCb: Dynamic) {}
+    public function new(arg0: Bool, arg1: Dynamic) {
+        super();
+    }
 
-  function get_pixelScale(): Float {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 
-  function setText(nt: String) {}
+    public function setText(arg0: String): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
 
 class CollectorSaying extends ui.Process {
-  var text: String;
-  var charId: Float;
-  var chars: hl.types.ArrayBytes<Int>;
-  var box: ui.UIBox.UIBox;
-  var bgColor: Int;
-  var tf: ui.Text.Text;
-  var cleanedText: String;
-  var tags: hl.types.ArrayObj<Dynamic>;
-  var padding: Int;
-  var uMaxWid: Int;
-  var tHei: Float;
-  var tWid: Float;
-  var ox: Int;
-  var oy: Int;
-  var shake: Float;
-  var sfxDeck: libs.RandDeck.RandDeck;
-  var onSfxPlay: Dynamic;
+    public var text: String;
+    public var charId: Float;
+    public var chars: Array<Int>;
+    public var box: ui.UIBox;
+    public var bgColor: Int;
+    public var tf: ui.Text;
+    public var cleanedText: String;
+    public var tags: Array<Dynamic>;
+    public var padding: Int;
+    public var uMaxWid: Int;
+    public var tHei: Float;
+    public var tWid: Float;
+    public var ox: Int;
+    public var oy: Int;
+    public var shake: Float;
+    public var sfxDeck: libs.RandDeck;
+    public var onSfxPlay: Dynamic;
 
-  function __constructor__(p: libs.Process.Process, str: String, sfxDeck: libs.RandDeck.RandDeck, onSfxPlay: Dynamic) {}
+    public function new(arg0: libs.Process, arg1: String, arg2: libs.RandDeck, arg3: Dynamic) {
+        super();
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function playSpeechSfx() {}
+    public function playSpeechSfx(): Void {
+    }
 }
-

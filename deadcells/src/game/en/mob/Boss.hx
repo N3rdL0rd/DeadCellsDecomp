@@ -1,83 +1,128 @@
 package en.mob;
+
 class Boss extends en.Mob {
-  var bossLevel: Int;
-  var levelUpSteps: hl.types.ArrayObj<Dynamic>;
-  var offsetCamX: Int;
-  var offsetCamY: Int;
-  var cameraTrackingDisabled: Bool;
-  var ready: Bool;
-  var battleZone: hxbit.Macros.Macros;
-  var defeatAchievement: Dynamic;
-  var defeatFlawlessAchievement: Dynamic;
-  var flawlessHeadIndex: Int;
-  var bossRoom: level.Room.Room;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var bossLevel: Int;
+    public var levelUpSteps: Array<Dynamic>;
+    public var offsetCamX: Int;
+    public var offsetCamY: Int;
+    public var cameraTrackingDisabled: Bool;
+    public var ready: Bool;
+    public var battleZone: level.Marker;
+    public var defeatAchievement: achievements.EAchievement;
+    public var defeatFlawlessAchievement: achievements.EAchievement;
+    public var flawlessHeadIndex: Int;
+    public var bossRoom: level.Room;
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, k: String, dmgTier: Int, lifeTier: Int): Boss {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+        super();
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, k: String, dmgTier: Int, lifeTier: Int) {}
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int): en.mob.Boss {
+        throw "stub: create not decompiled";
+    }
 
-  function initBossBar() {}
+    public function initBossBar(): Void {
+    }
 
-  function getBossRoom(): level.Room.Room {}
+    public function getBossRoom(): level.Room {
+        throw "stub: getBossRoom not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function onReload() {}
+    public function onReload(): Void {
+    }
 
-  function setReady() {}
+    public function setReady(): Void {
+    }
 
-  function isReady(): Bool {}
+    public function isReady(): Bool {
+        throw "stub: isReady not decompiled";
+    }
 
-  function combatStarted(): Bool {}
+    public function combatStarted(): Bool {
+        throw "stub: combatStarted not decompiled";
+    }
 
-  function canApplyColorSwap(): Bool {}
+    public override function canApplyColorSwap(): Bool {
+        throw "stub: canApplyColorSwap not decompiled";
+    }
 
-  function canLevelUp(): Bool {}
+    public function canLevelUp(): Bool {
+        throw "stub: canLevelUp not decompiled";
+    }
 
-  function prepareLevelUp() {}
+    public function prepareLevelUp(): Void {
+    }
 
-  function bossLevelUp() {}
+    public function bossLevelUp(): Void {
+    }
 
-  function onBossLevelUp() {}
+    public function onBossLevelUp(): Void {
+    }
 
-  function onScream() {}
+    public function onScream(): Void {
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function stopOverrideMusic() {}
+    public function stopOverrideMusic(): Void {
+    }
 
-  function onDie() {}
+    public override function onDie(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function checkForLevelUp() {}
+    public function checkForLevelUp(): Void {
+    }
 
-  function getLifeRatioForStep(lb: Int): Float {}
+    public function getLifeRatioForStep(arg0: Int): Float {
+        throw "stub: getLifeRatioForStep not decompiled";
+    }
 
-  function removeAllLevelUpSteps() {}
+    public function removeAllLevelUpSteps(): Void {
+    }
 
-  function preventBossFightEscape() {}
+    public function preventBossFightEscape(): Void {
+    }
 
-  function giveAchievements() {}
+    public function giveAchievements(): Void {
+    }
 
-  function giveHeadFeedback(headItem: String) {}
+    public function giveHeadFeedback(arg0: String): Void {
+    }
 
-  function giveHeads() {}
+    public function giveHeads(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

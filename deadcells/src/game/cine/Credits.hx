@@ -1,104 +1,142 @@
 package cine;
-class Section extends h2d.Flow.Flow {
-  var scrolling: Bool;
-  var lastWasBig: Bool;
-  var lastNameFlow: h2d.Flow.Flow;
-  var lastNameFlowAlt: h2d.Flow.Flow;
-  var texts: hl.types.ArrayObj<Dynamic>;
-  var nameFlows: hl.types.ArrayObj<Dynamic>;
-  var splitFlows: hl.types.ArrayObj<Dynamic>;
-  var onDisplayEnd: Dynamic;
-  static var BIG_SPACER_SIZE: Int;
-  static var SMALL_SPACER_SIZE: Int;
-  static var BIG_SPACER_TILE: h2d.Tile.Tile;
-  static var SMALL_SPACER_TILE: h2d.Tile.Tile;
 
-  function __constructor__(scroll: Dynamic, lastWasBig: Dynamic) {}
+class Section extends h2d.Flow {
+    public static var BIG_SPACER_SIZE: Int;
+    public static var SMALL_SPACER_SIZE: Int;
+    public static var BIG_SPACER_TILE: h2d.Tile;
+    public static var SMALL_SPACER_TILE: h2d.Tile;
+    public var scrolling: Bool;
+    public var lastWasBig: Bool;
+    public var lastNameFlow: h2d.Flow;
+    public var lastNameFlowAlt: h2d.Flow;
+    public var texts: Array<Dynamic>;
+    public var nameFlows: Array<Dynamic>;
+    public var splitFlows: Array<Dynamic>;
+    public var onDisplayEnd: Dynamic;
 
-  function addTitle(str: String) {}
+    public function new(arg0: Ref, arg1: Ref) {
+        super();
+    }
 
-  function addRole(str: String, big: Bool) {}
+    public function addTitle(arg0: String): Void {
+    }
 
-  function removeRole() {}
+    public function addRole(arg0: String, arg1: Bool): Void {
+    }
 
-  function addName(str: String, validateStr: String) {}
+    public function removeRole(): Void {
+    }
 
-  function addHSpace() {}
+    public function addName(arg0: String, arg1: String): Void {
+    }
 
-  function onResize() {}
+    public function addHSpace(): Void {
+    }
+
+    public function onResize(): Void {
+    }
 }
 
 class Credits extends GameCinematic {
-  var LAST_NAMES: hl.types.ArrayObj<Dynamic>;
-  var bg: h2d.Graphics.Graphics;
-  var fg: h2d.Graphics.Graphics;
-  var cont: h2d.Object.Object;
-  var fadeSections: hl.types.ArrayObj<Dynamic>;
-  var activeSections: hl.types.ArrayObj<Dynamic>;
-  var lastFadeSection: cine.Credits.Credits;
-  var bullshitCredits: Bool;
-  var waitAndStop: Bool;
-  var roleDeck: libs.RandDeck.RandDeck;
-  var kind: Dynamic;
-  static var ROLES: hl.types.ArrayObj<Dynamic>;
-  static var FIRST_NAMES: hl.types.ArrayObj<Dynamic>;
-  static var LAST_NAME_SUFFIXES: hl.types.ArrayObj<Dynamic>;
-  static var _uniq: Int;
-  static var DP_BACKGROUND: Int;
-  static var DP_CONTENT: Int;
-  static var FADE_TIME: Float;
-  static var KEEP_TIME: Float;
+    public static var ROLES: Array<Dynamic>;
+    public static var FIRST_NAMES: Array<Dynamic>;
+    public static var LAST_NAME_SUFFIXES: Array<Dynamic>;
+    public static var _uniq: Int;
+    public static var DP_BACKGROUND: Int;
+    public static var DP_CONTENT: Int;
+    public static var FADE_TIME: Float;
+    public static var KEEP_TIME: Float;
+    public var LAST_NAMES: Array<Dynamic>;
+    public var bg: h2d.Graphics;
+    public var fg: h2d.Graphics;
+    public var cont: h2d.Object;
+    public var fadeSections: Array<Dynamic>;
+    public var activeSections: Array<Dynamic>;
+    public var lastFadeSection: cine.Section;
+    public var bullshitCredits: Bool;
+    public var waitAndStop: Bool;
+    public var roleDeck: libs.RandDeck;
+    public var kind: cine.EndRunKind;
 
-  function __constructor__(kind: Dynamic) {}
+    public function new(arg0: cine.EndRunKind) {
+        super();
+    }
 
-  function createSections() {}
+    public function createSections(): Void {
+    }
 
-  function createKatanaZeroEasterEgg(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createKatanaZeroEasterEgg(arg0: Array<Dynamic>): Void {
+    }
 
-  function createMotionTwinSections(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createMotionTwinSections(arg0: Array<Dynamic>): Void {
+    }
 
-  function createMT_Title(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createMT_Title(arg0: Array<Dynamic>): Void {
+    }
 
-  function createMT_Artists(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createMT_Artists(arg0: Array<Dynamic>): Void {
+    }
 
-  function createMT_Progs(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createMT_Progs(arg0: Array<Dynamic>): Void {
+    }
 
-  function createMusic(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createMusic(arg0: Array<Dynamic>): Void {
+    }
 
-  function createPagedSections(fadeSections: hl.types.ArrayObj<Dynamic>, allEntries: hl.types.ArrayDyn, createSectionFunc: Dynamic, targetEntriesPerPageNumber: Int) {}
+    public function createPagedSections(arg0: Array<Dynamic>, arg1: Array<Dynamic>, arg2: Dynamic, arg3: Int): Void {
+    }
 
-  function createEESection(fadeSections: hl.types.ArrayObj<Dynamic>, names: hl.types.ArrayObj<Dynamic>) {}
+    public function createEESection(arg0: Array<Dynamic>, arg1: Array<Dynamic>): Void {
+    }
 
-  function createEE(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createEE(arg0: Array<Dynamic>): Void {
+    }
 
-  function addEECustomHead(lastEESection: cine.Credits.Credits) {}
+    public function addEECustomHead(arg0: cine.Section): Void {
+    }
 
-  function createSpecialThanks(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createSpecialThanks(arg0: Array<Dynamic>): Void {
+    }
 
-  function createLocalization(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createLocalization(arg0: Array<Dynamic>): Void {
+    }
 
-  function createLegalMentionSection(fadeSections: hl.types.ArrayObj<Dynamic>, mentions: hl.types.ArrayObj<Dynamic>) {}
+    public function createLegalMentionSection(arg0: Array<Dynamic>, arg1: Array<Dynamic>): Void {
+    }
 
-  function createLegalMentions(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createLegalMentions(arg0: Array<Dynamic>): Void {
+    }
 
-  function createPurpleBullshit(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createPurpleBullshit(arg0: Array<Dynamic>): Void {
+    }
 
-  function createKonami(fadeSections: hl.types.ArrayObj<Dynamic>) {}
+    public function createKonami(arg0: Array<Dynamic>): Void {
+    }
 
-  function stop() {}
+    public function stop(): Void {
+    }
 
-  function giveAchievements() {}
+    public function giveAchievements(): Void {
+    }
 
-  function nextFadeSection(): Bool {}
+    public function nextFadeSection(): Bool {
+        throw "stub: nextFadeSection not decompiled";
+    }
 
-  function startBullshitSections() {}
+    public function startBullshitSections(): Void {
+    }
 
-  function update() {}
+    public override function update(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function createRandomName(): String {}
+    public function createRandomName(): String {
+        throw "stub: createRandomName not decompiled";
+    }
 
-  function createRandomSection(first: Bool, lastWasBig: Bool): cine.Credits.Credits {}
+    public function createRandomSection(arg0: Bool, arg1: Bool): cine.Section {
+        throw "stub: createRandomSection not decompiled";
+    }
 }
-

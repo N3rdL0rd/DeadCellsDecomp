@@ -1,27 +1,42 @@
 package level.lore;
+
 class PerkShop extends level.LoreManager {
-  var _pile: tool.CPoint.CPoint;
-  var size: Int;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var _pile: tool.CPoint;
+    public var size: Int;
 
-  function __constructor__(l: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function get_pile(): tool.CPoint.CPoint {}
+    public function get_pile(): tool.CPoint {
+        throw "stub: get_pile not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function isCdbExaminableEntryActive(id: String, idx: Int): Bool {}
+    public override function isCdbExaminableEntryActive(arg0: String, arg1: Int): Bool {
+        throw "stub: isCdbExaminableEntryActive not decompiled";
+    }
 
-  function postUpdate(dt: Float) {}
+    public override function postUpdate(arg0: Float): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

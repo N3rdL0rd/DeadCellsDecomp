@@ -1,40 +1,63 @@
 package tool.weap;
+
 class PureNail extends tool.Weapon {
-  var currentNailAttackType: Dynamic;
-  var anyRecoilHit: Bool;
-  var hitObjectSounds: hl.types.ArrayObj<Dynamic>;
-  var jumpStreakCount: Int;
+    public var currentNailAttackType: tool.weap.PureNailAttackType;
+    public var anyRecoilHit: Bool;
+    public var hitObjectSounds: Array<Dynamic>;
+    public var jumpStreakCount: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function checkLevelTrapsHit() {}
+    public function checkLevelTrapsHit(): Void {
+    }
 
-  function checkFriendSkinUnlock() {}
+    public function checkFriendSkinUnlock(): Void {
+    }
 
-  function checkLevelCollisionsHit() {}
+    public function checkLevelCollisionsHit(): Void {
+    }
 
-  function canHit(e: Entity, area: tool.Area.Area): Bool {}
+    public override function canHit(arg0: Entity, arg1: tool.Area): Bool {
+        throw "stub: canHit not decompiled";
+    }
 
-  function dynOnAttackAnim(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnAttackAnim(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function dynOnFxFrame(s: tool.Weapon.Weapon, cinf: Dynamic) {}
+    public override function dynOnFxFrame(arg0: tool.WeaponSkill, arg1: Dynamic): Void {
+    }
 
-  function isPlayingAttackAnim(): Bool {}
+    public override function isPlayingAttackAnim(): Bool {
+        throw "stub: isPlayingAttackAnim not decompiled";
+    }
 
-  function dirInputValueHorizontal(): Float {}
+    public function dirInputValueHorizontal(): Float {
+        throw "stub: dirInputValueHorizontal not decompiled";
+    }
 
-  function dirInputValueVertical(): Float {}
+    public function dirInputValueVertical(): Float {
+        throw "stub: dirInputValueVertical not decompiled";
+    }
 
-  function onBeforeCurSkillPrepare() {}
+    public override function onBeforeCurSkillPrepare(): Void {
+    }
 
-  function airControlOwner() {}
+    public override function airControlOwner(): Void {
+    }
 
-  function isReady(): Bool {}
+    public override function isReady(): Bool {
+        throw "stub: isReady not decompiled";
+    }
 }
-

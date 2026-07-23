@@ -1,11 +1,15 @@
 package ui.we;
-class Wrapper extends ui.Window.WindowElement {
-  var element: h2d.Flow.Flow;
 
-  function onBeforeReflow() {}
+class Wrapper extends ui.WindowElement {
+    public var element: h2d.Flow;
 
-  function __constructor__(w: ui.Window.Window, s: h2d.Flow.Flow, center: Bool) {}
+    public function new(arg0: ui.Window, arg1: h2d.Flow, arg2: Bool) {
+        super();
+    }
 
-  function beforeReflow() {}
+    public override function beforeReflow(): Void {
+    }
+
+    public function onBeforeReflow(): Void {
+    }
 }
-

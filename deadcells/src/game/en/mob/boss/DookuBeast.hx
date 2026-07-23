@@ -1,217 +1,319 @@
 package en.mob.boss;
+
 class DookuBeast extends en.mob.Boss {
-  var manager: en.DookuManager.DookuManager;
-  var rseed: libs.Rand.Rand;
-  var combatRoom: level.Room.Room;
-  var baseFlySpot: libs.Rand.RandDeck;
-  var maxBattleZoneY: Int;
-  var laserInf: Dynamic;
-  var onHeroLaserInf: Dynamic;
-  var laserTl: libs.Rand.RandDeck;
-  var headlaserTargetX: Float;
-  var headlaserTargetY: Float;
-  var overrideHeadlaserTargetX: Float;
-  var overrideHeadlaserTargetY: Float;
-  var laserS: Float;
-  var actualTl: hl.types.ArrayObj<Dynamic>;
-  var targetIndex: Int;
-  var queueCount: Int;
-  var targetHLPf: en.inter.DookuBreakableFloor.DookuBreakableFloor;
-  var targetStpPf: en.inter.DookuBreakableFloor.DookuBreakableFloor;
-  var wallPos: hl.types.ArrayObj<Dynamic>;
-  var onWall: Bool;
-  var pickedWallIdx: Int;
-  var basePos: tool.CPoint.CPoint;
-  var mobSpawnInf: Dynamic;
-  var aerialSpawnPos: hl.types.ArrayObj<Dynamic>;
-  var fireBallInf: Dynamic;
-  var onLastAnimEnd: Dynamic;
-  var fireCount: Int;
-  var kindleInf: Dynamic;
-  var anchorPoint: Parallax;
-  var isGoingBg: Bool;
-  var isOnBg: Bool;
-  var magmaBall: en.mob.boss.dooku.DookuMagmaBall.DookuMagmaBall;
-  var cameraYFocusMagmaBall: Float;
-  var skyBallYSpawnPos: Float;
-  var phaseAttackInf: Dynamic;
-  var phaseAttackEndInf: Dynamic;
-  var phasefloatingPlatforms: hl.types.ArrayObj<Dynamic>;
-  var flashBangMask: Dynamic;
-  var alertGradients: hl.types.ArrayObj<Dynamic>;
-  var alertSmokes: hl.types.ArrayObj<Dynamic>;
-  var batPickedDir: Int;
-  var batVolleySpawnOrder: hl.types.ArrayBytes<Int>;
-  var grabInf: Dynamic;
-  var targetGrabPf: en.inter.DookuBreakableFloor.DookuBreakableFloor;
-  var grabS: Float;
-  var dookuFist: libs.heaps.slib.HSprite.HSprite;
-  var currentBossCells: Int;
-  var hardModeBaseMult: Float;
-  var curAction: Dynamic;
-  var nextAnticipatedAttack: Dynamic;
-  var forcedNextAttack: Dynamic;
-  var phase1Action: libs.Rand.RandDeck;
-  var phase2Action: libs.Rand.RandDeck;
-  var lastAction: Dynamic;
-  var sprite: DookuBeastSpr;
-  var floatingPlatforms: hl.types.ArrayObj<Dynamic>;
-  var stompFxWarningTop: libs.heaps.HParticle.HParticle;
-  var stompFxWarningMid: libs.heaps.HParticle.HParticle;
-  var head: en.mob.boss.dooku.DookuHead.DookuHead;
-  var dookuHeadOffset: Float;
-  var dookuHandOffset: Float;
-  var lvlDisp: level.disp.DookuArena.DookuArena;
-  var sbDookuFx: libs.heaps.slib.HSprite.HSpriteBatch;
-  var sbDookuFxAdd: libs.heaps.slib.HSprite.HSpriteBatch;
-  var bossRushModifiers: Dynamic;
-  var firePillarCount: Int;
-  var <none>: Dynamic;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var manager: en.DookuManager;
+    public var rseed: libs.Rand;
+    public var combatRoom: level.Room;
+    public var baseFlySpot: libs.RandDeck;
+    public var maxBattleZoneY: Int;
+    public var laserInf: Dynamic;
+    public var onHeroLaserInf: Dynamic;
+    public var laserTl: libs.RandDeck;
+    public var headlaserTargetX: Float;
+    public var headlaserTargetY: Float;
+    public var overrideHeadlaserTargetX: Float;
+    public var overrideHeadlaserTargetY: Float;
+    public var laserS: Float;
+    public var actualTl: Array<Dynamic>;
+    public var targetIndex: Int;
+    public var queueCount: Int;
+    public var targetHLPf: en.inter.DookuBreakableFloor;
+    public var targetStpPf: en.inter.DookuBreakableFloor;
+    public var wallPos: Array<Dynamic>;
+    public var onWall: Bool;
+    public var pickedWallIdx: Int;
+    public var basePos: tool.CPoint;
+    public var mobSpawnInf: Dynamic;
+    public var aerialSpawnPos: Array<Dynamic>;
+    public var fireBallInf: Dynamic;
+    public var onLastAnimEnd: Dynamic;
+    public var fireCount: Int;
+    public var kindleInf: Dynamic;
+    public var anchorPoint: Parallax;
+    public var isGoingBg: Bool;
+    public var isOnBg: Bool;
+    public var magmaBall: en.mob.boss.dooku.DookuMagmaBall;
+    public var cameraYFocusMagmaBall: Float;
+    public var skyBallYSpawnPos: Float;
+    public var phaseAttackInf: Dynamic;
+    public var phaseAttackEndInf: Dynamic;
+    public var phasefloatingPlatforms: Array<Dynamic>;
+    public var flashBangMask: Dynamic;
+    public var alertGradients: Array<Dynamic>;
+    public var alertSmokes: Array<Dynamic>;
+    public var batPickedDir: Int;
+    public var batVolleySpawnOrder: Array<Int>;
+    public var grabInf: Dynamic;
+    public var targetGrabPf: en.inter.DookuBreakableFloor;
+    public var grabS: Float;
+    public var dookuFist: libs.heaps.slib.HSprite;
+    public var currentBossCells: Int;
+    public var hardModeBaseMult: Float;
+    public var curAction: en.mob.boss.DookuBeastAction;
+    public var nextAnticipatedAttack: en.mob.boss.DookuBeastAction;
+    public var forcedNextAttack: en.mob.boss.DookuBeastAction;
+    public var phase1Action: libs.RandDeck;
+    public var phase2Action: libs.RandDeck;
+    public var lastAction: en.mob.boss.DookuBeastAction;
+    public var sprite: en.mob.boss.DookuBeastSpr;
+    public var floatingPlatforms: Array<Dynamic>;
+    public var stompFxWarningTop: libs.heaps.HParticle;
+    public var stompFxWarningMid: libs.heaps.HParticle;
+    public var head: en.mob.boss.dooku.DookuHead;
+    public var dookuHeadOffset: Float;
+    public var dookuHandOffset: Float;
+    public var lvlDisp: level.disp.DookuArena;
+    public var sbDookuFx: libs.heaps.slib.HSpriteBatch;
+    public var sbDookuFxAdd: libs.heaps.slib.HSpriteBatch;
+    public var bossRushModifiers: Dynamic;
+    public var firePillarCount: Int;
+    public var : Dynamic;
+
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int) {
+        super();
+    }
+
+    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.boss.DookuBeast {
+        throw "stub: create not decompiled";
+    }
+
+    public function get_wallDir(): Int {
+        throw "stub: get_wallDir not decompiled";
+    }
+
+    public function get_otherWallIdx(): Int {
+        throw "stub: get_otherWallIdx not decompiled";
+    }
+
+    public function get_hardMode(): Bool {
+        throw "stub: get_hardMode not decompiled";
+    }
+
+    public function get_diffReduc(): Float {
+        throw "stub: get_diffReduc not decompiled";
+    }
+
+    public function get_diffMult(): Float {
+        throw "stub: get_diffMult not decompiled";
+    }
+
+    public function moveBlocked(): Bool {
+        throw "stub: moveBlocked not decompiled";
+    }
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int) {}
+    public override function init(): Void {
+    }
 
-  static function create(lvl: pr.Level.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): DookuBeast {}
+    public function initLoots(): Void {
+    }
 
-  function get_wallDir(): Int {}
+    public function pushBlueprintInList(arg0: String): Void {
+    }
 
-  function get_otherWallIdx(): Int {}
+    public override function onBossLevelUp(): Void {
+    }
 
-  function get_hardMode(): Bool {}
+    public function initGfx(): Void {
+    }
 
-  function get_diffReduc(): Float {}
+    public function getMobSprites(): Array<Dynamic> {
+        throw "stub: getMobSprites not decompiled";
+    }
 
-  function get_diffMult(): Float {}
+    public function postDeserialize(): Void {
+    }
 
-  function moveBlocked(): Bool {}
+    public function initMove(): Void {
+    }
 
-  function init() {}
+    public function onFlyTargetReached(): Void {
+    }
 
-  function initLoots() {}
+    public function pickNewTarget(): Void {
+    }
 
-  function pushBlueprintInList(blueprintKind: String) {}
+    public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
+        throw "stub: tryToPreventDeath not decompiled";
+    }
 
-  function onBossLevelUp() {}
+    public override function onDie(): Void {
+    }
 
-  function initGfx() {}
+    public function get_headX(): Float {
+        throw "stub: get_headX not decompiled";
+    }
 
-  function getMobSprites(): hl.types.ArrayObj<Dynamic> {}
+    public function get_headY(): Float {
+        throw "stub: get_headY not decompiled";
+    }
 
-  function postDeserialize() {}
+    public function getJawX(): Float {
+        throw "stub: getJawX not decompiled";
+    }
 
-  function initMove() {}
+    public function getJawY(): Float {
+        throw "stub: getJawY not decompiled";
+    }
 
-  function onFlyTargetReached() {}
+    public function getLeftHandX(arg0: Ref): Float {
+        throw "stub: getLeftHandX not decompiled";
+    }
 
-  function pickNewTarget() {}
+    public function getLeftHandY(): Float {
+        throw "stub: getLeftHandY not decompiled";
+    }
 
-  function tryToPreventDeath(a: tool.atk.AttackData.AttackData, prevLife: Float): Bool {}
+    public function onLeaveMap(): Void {
+    }
 
-  function onDie() {}
+    public function onFatalFallDamage(): Void {
+    }
 
-  function get_headX(): Float {}
+    public function initSkills(): Void {
+    }
 
-  function get_headY(): Float {}
+    public function applyBossRushModifier(arg0: Dynamic): Void {
+    }
 
-  function getJawX(): Float {}
+    public function onAnimEnd(arg0: String): Void {
+    }
 
-  function getJawY(): Float {}
+    public function spawnTempPlatforms(): Void {
+    }
 
-  function getLeftHandX(reverseDir: Dynamic): Float {}
+    public function onMagmaBallHitBottom(arg0: Int, arg1: Int): Void {
+    }
 
-  function getLeftHandY(): Float {}
+    public function resetScreenFlightPos(): Void {
+    }
 
-  function onLeaveMap() {}
+    public function createFirePillar(): Void {
+    }
 
-  function onFatalFallDamage() {}
+    public function createRock(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Ref): Void {
+    }
 
-  function initSkills() {}
+    public function createFireBall(): Void {
+    }
 
-  function applyBossRushModifier(bossRushProps: Dynamic) {}
+    public function spawnBatVolley(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: Array<Int>, arg7: Int, arg8: Float, arg9: Dynamic, arg10: Float, arg11: Float, arg12: Dynamic): Void {
+    }
 
-  function onAnimEnd(name: String) {}
+    public function getActionCooldown(arg0: en.mob.boss.DookuBeastAction): Float {
+        throw "stub: getActionCooldown not decompiled";
+    }
 
-  function spawnTempPlatforms() {}
+    public function createAlly(arg0: Int, arg1: Int, arg2: String, arg3: Dynamic): en.Mob {
+        throw "stub: createAlly not decompiled";
+    }
 
-  function onMagmaBallHitBottom(bcx: Int, bcy: Int) {}
+    public function isLasering(): Bool {
+        throw "stub: isLasering not decompiled";
+    }
 
-  function resetScreenFlightPos() {}
+    public function isOnFireballTravel(): Bool {
+        throw "stub: isOnFireballTravel not decompiled";
+    }
 
-  function createFirePillar() {}
+    public function checkAllActionInCD(arg0: libs.RandDeck): Bool {
+        throw "stub: checkAllActionInCD not decompiled";
+    }
 
-  function createRock(x: Float, y: Float, vel: Float, dmg: Int, big: Dynamic) {}
+    public function interruptSkills(): Void {
+    }
 
-  function createFireBall() {}
+    public function resetAndWait(arg0: Ref): Void {
+    }
 
-  function spawnBatVolley(cx: Int, cy: Int, dirX: Int, dirY: Int, count: Int, delayQ: Float, batVolleySpawnOrder: hl.types.ArrayBytes<Int>, height: Int, speed: Float, power: Dynamic, sineAmp: Float, sineFreq: Float, cb: Dynamic) {}
+    public function adaptWaitTime(arg0: Float): Float {
+        throw "stub: adaptWaitTime not decompiled";
+    }
 
-  function getActionCooldown(action: Dynamic): Float {}
+    public function adaptNextAnticipatedAttack(arg0: en.mob.boss.DookuBeastAction): Void {
+    }
 
-  function createAlly(posX: Int, posY: Int, k: String, elite: Dynamic): en.Mob.Mob {}
+    public function resetAction(): Void {
+    }
 
-  function isLasering(): Bool {}
+    public function reset(): Void {
+    }
 
-  function isOnFireballTravel(): Bool {}
+    public function pickNextAction(): Void {
+    }
 
-  function checkAllActionInCD(deck: libs.Rand.RandDeck): Bool {}
+    public function setAction(arg0: en.mob.boss.DookuBeastAction, arg1: Ref): Void {
+    }
 
-  function interruptSkills() {}
+    public function startAction(arg0: en.mob.boss.DookuBeastAction, arg1: Ref): Bool {
+        throw "stub: startAction not decompiled";
+    }
 
-  function resetAndWait(waitTime: Dynamic) {}
+    public override function onScream(): Void {
+    }
 
-  function adaptWaitTime(waitTime: Float): Float {}
+    public override function canLevelUp(): Bool {
+        throw "stub: canLevelUp not decompiled";
+    }
 
-  function adaptNextAnticipatedAttack(newAction: Dynamic) {}
+    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function resetAction() {}
+    public function onTouch(arg0: Entity): Void {
+    }
 
-  function reset() {}
+    public function pickColorBlink(arg0: tool.atk.AttackData): Void {
+    }
 
-  function pickNextAction() {}
+    public function colorBlink(arg0: Int, arg1: Dynamic, arg2: Dynamic): Void {
+    }
 
-  function setAction(newAction: Dynamic, isAQueueAttack: Dynamic) {}
+    public function getPfOnXPos(arg0: Int, arg1: Ref, arg2: Ref, arg3: Ref): en.inter.DookuBreakableFloor {
+        throw "stub: getPfOnXPos not decompiled";
+    }
 
-  function startAction(action: Dynamic, isAQueueAttack: Dynamic): Bool {}
+    public function getClosestWallPos(): Int {
+        throw "stub: getClosestWallPos not decompiled";
+    }
 
-  function onScream() {}
+    public function behaviourAi(): Void {
+    }
 
-  function canLevelUp(): Bool {}
+    public function canPickANewAction(): Bool {
+        throw "stub: canPickANewAction not decompiled";
+    }
 
-  function onCooldownEnd(k: String, idx: Int) {}
+    public function postUpdate(): Void {
+    }
 
-  function onTouch(e: Entity) {}
+    public function applyLaser(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int): Void {
+    }
 
-  function pickColorBlink(a: tool.atk.AttackData.AttackData) {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function colorBlink(c: Int, pow: Dynamic, t: Dynamic) {}
+    public function disposeGfx(): Void {
+    }
 
-  function getPfOnXPos(xPos: Int, returnCloserIfNull: Dynamic, forceEnabled: Dynamic, safeOffset: Dynamic): en.inter.DookuBreakableFloor.DookuBreakableFloor {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getClosestWallPos(): Int {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function behaviourAi() {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function canPickANewAction(): Bool {}
+    public override function unserializeInit(): Void {
+    }
 
-  function postUpdate() {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function applyLaser(fromX: Float, fromY: Float, toX: Float, toY: Float, dir: Int) {}
-
-  function fixedUpdate() {}
-
-  function disposeGfx() {}
-
-  function getCLID(): Int {}
-
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getSerializeSchema(): hxbit.Schema.Schema {}
-
-  function unserializeInit() {}
-
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
-
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

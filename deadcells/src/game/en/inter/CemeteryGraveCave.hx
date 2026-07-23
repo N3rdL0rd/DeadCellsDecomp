@@ -1,37 +1,58 @@
 package en.inter;
+
 class CemeteryGraveCave extends en.Interactive {
-  var glow: shader.GlowKey.GlowKey;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var glow: shader.GlowKey;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int) {
+        super();
+    }
 
-  function getKeySprite(): h2d.Bitmap.Bitmap {}
+    public function getKeySprite(): h2d.Bitmap {
+        throw "stub: getKeySprite not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function hasKey(): Bool {}
+    public function hasKey(): Bool {
+        throw "stub: hasKey not decompiled";
+    }
 
-  function narrate(by: Entity, str: String, c: Dynamic) {}
+    public function narrate(arg0: Entity, arg1: String, arg2: Dynamic): Void {
+    }
 
-  function onFocus() {}
+    public function onFocus(): Void {
+    }
 
-  function openDoor(by: Entity) {}
+    public function openDoor(arg0: Entity): Void {
+    }
 
-  function consumeKey() {}
+    public function consumeKey(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, lp: Bool) {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

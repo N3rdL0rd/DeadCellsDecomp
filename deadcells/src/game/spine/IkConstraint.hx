@@ -1,18 +1,22 @@
 package spine;
+
 class IkConstraint {
-  var data: IkConstraintData;
-  var bones: hl.types.ArrayObj<Dynamic>;
-  var target: spine.Bone.Bone;
-  var mix: Float;
-  var bendDirection: Int;
-  var <none>: Dynamic;
+    public var data: spine.IkConstraintData;
+    public var bones: Array<Dynamic>;
+    public var target: spine.Bone;
+    public var mix: Float;
+    public var bendDirection: Int;
+    public var : Dynamic;
 
-  static function applyTwo(parent: spine.Bone.Bone, child: spine.Bone.Bone, targetX: Float, targetY: Float, bendDir: Int, alpha: Float) {}
+    public function new(arg0: spine.IkConstraintData, arg1: spine.Skeleton) {
+    }
 
-  static function applyOne(bone: spine.Bone.Bone, targetX: Float, targetY: Float, alpha: Float) {}
+    public static function applyTwo(arg0: spine.Bone, arg1: spine.Bone, arg2: Float, arg3: Float, arg4: Int, arg5: Float): Void {
+    }
 
-  function __constructor__(data: IkConstraintData, skeleton: spine.Skeleton.Skeleton) {}
+    public static function applyOne(arg0: spine.Bone, arg1: Float, arg2: Float, arg3: Float): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 }
-

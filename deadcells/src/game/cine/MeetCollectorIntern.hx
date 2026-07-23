@@ -1,10 +1,13 @@
 package cine;
+
 class MeetCollectorIntern extends GameCinematic {
-  var hero: en.Hero.Hero;
-  var intern: en.inter.npc.CollectorIntern.CollectorIntern;
+    public var hero: en.Hero;
+    public var intern: en.inter.npc.CollectorIntern;
 
-  function __constructor__(hero: en.Hero.Hero, intern: en.inter.npc.CollectorIntern.CollectorIntern) {}
+    public function new(arg0: en.Hero, arg1: en.inter.npc.CollectorIntern) {
+        super();
+    }
 
-  function onComplete() {}
+    public function onComplete(): Void {
+    }
 }
-

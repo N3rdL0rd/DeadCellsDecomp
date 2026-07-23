@@ -1,56 +1,84 @@
 package ui.sel;
+
 class SkinSelector extends ui.sel.GridSelector {
-  var group: Dynamic;
-  var skinContainer: h2d.Object.Object;
-  var heroHead: tool.HeroHead.HeroHead;
-  var animationTracks: haxe.ds.StringMap;
-  var skins: hl.types.ArrayObj<Dynamic>;
-  var userSkin: String;
-  var curSkinId: Int;
-  var rightFlowHei: Int;
-  var rightFlowWid: Int;
-  var nameText: ui.Text.Text;
-  var descText: ui.Text.Text;
-  var lockedSprite: libs.heaps.slib.HSprite.HSprite;
-  var glitchShader: shader.Glitch.Glitch;
-  var skinner: en.inter.Skinner.Skinner;
+    public var group: Dynamic;
+    public var skinContainer: h2d.Object;
+    public var heroHead: tool.HeroHead;
+    public var animationTracks: haxe.ds.StringMap;
+    public var skins: Array<Dynamic>;
+    public var userSkin: String;
+    public var curSkinId: Int;
+    public var rightFlowHei: Int;
+    public var rightFlowWid: Int;
+    public var nameText: ui.Text;
+    public var descText: ui.Text;
+    public var lockedSprite: libs.heaps.slib.HSprite;
+    public var glitchShader: shader.Glitch;
+    public var skinner: en.inter.Skinner;
 
-  function __constructor__(group: Dynamic, skinner: en.inter.Skinner.Skinner) {}
+    public function new(arg0: Dynamic, arg1: en.inter.Skinner) {
+        super();
+    }
 
-  function get_wid(): Int {}
+    public override function get_wid(): Int {
+        throw "stub: get_wid not decompiled";
+    }
 
-  function pauseGame() {}
+    public override function pauseGame(): Void {
+    }
 
-  function initGrid() {}
+    public override function initGrid(): Void {
+    }
 
-  function createHeroHead(): tool.HeroHead.HeroHead {}
+    public function createHeroHead(): tool.HeroHead {
+        throw "stub: createHeroHead not decompiled";
+    }
 
-  function initRightFlow() {}
+    public override function initRightFlow(): Void {
+    }
 
-  function isEntryLocked(i: Int): Bool {}
+    public override function isEntryLocked(arg0: Int): Bool {
+        throw "stub: isEntryLocked not decompiled";
+    }
 
-  function isEntryIncompatible(i: Int): Bool {}
+    public function isEntryIncompatible(arg0: Int): Bool {
+        throw "stub: isEntryIncompatible not decompiled";
+    }
 
-  function getIconBmp(i: Int, p: h2d.Object.Object): h2d.Object.Object {}
+    public override function getIconBmp(arg0: Int, arg1: h2d.Object): h2d.Object {
+        throw "stub: getIconBmp not decompiled";
+    }
 
-  function beforeUpdateSelection() {}
+    public override function beforeUpdateSelection(): Void {
+    }
 
-  function updateRightFlow() {}
+    public override function updateRightFlow(): Void {
+    }
 
-  function getTitleText(): String {}
+    public override function getTitleText(): String {
+        throw "stub: getTitleText not decompiled";
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function updateTextsPosition(resize: Dynamic) {}
+    public function updateTextsPosition(arg0: Ref): Void {
+    }
 
-  function onValidate() {}
+    public override function onValidate(): Void {
+    }
 
-  function close() {}
+    public override function close(): Void {
+    }
 
-  function getHeadX(): Float {}
+    public function getHeadX(): Float {
+        throw "stub: getHeadX not decompiled";
+    }
 
-  function getHeadY(): Float {}
+    public function getHeadY(): Float {
+        throw "stub: getHeadY not decompiled";
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

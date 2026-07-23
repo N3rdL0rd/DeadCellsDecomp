@@ -1,56 +1,91 @@
 package tool.mod.script;
+
 class StructInterpreter extends tool.mod.script.ScriptInterpreter {
-  var currentLevelName: String;
-  var shouldCallDefaultAddTeleport: Bool;
-  var shouldDoInfamousMobScaling: Bool;
-  var mobTiers: hl.types.ArrayBytes<Int>;
+    public var currentLevelName: String;
+    public var shouldCallDefaultAddTeleport: Bool;
+    public var shouldDoInfamousMobScaling: Bool;
+    public var mobTiers: Array<Int>;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function callBuildMainRooms(): Bool {}
+    public function callBuildMainRooms(): Bool {
+        throw "stub: callBuildMainRooms not decompiled";
+    }
 
-  function loadLevel(_levelId: String) {}
+    public function loadLevel(arg0: String): Void {
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function reset() {}
+    public function reset(): Void {
+    }
 
-  function doesAllowInfamousMobScaling(): Bool {}
+    public function doesAllowInfamousMobScaling(): Bool {
+        throw "stub: doesAllowInfamousMobScaling not decompiled";
+    }
 
-  function callBuildSecondaryRooms(): Bool {}
+    public function callBuildSecondaryRooms(): Bool {
+        throw "stub: callBuildSecondaryRooms not decompiled";
+    }
 
-  function callBuildTriggeredDoors(_combatRooms: hl.types.ArrayObj<Dynamic>): Bool {}
+    public function callBuildTriggeredDoors(arg0: Array<Dynamic>): Bool {
+        throw "stub: callBuildTriggeredDoors not decompiled";
+    }
 
-  function callBuildTimedDoors(): Bool {}
+    public function callBuildTimedDoors(): Bool {
+        throw "stub: callBuildTimedDoors not decompiled";
+    }
 
-  function callAddTeleports(): Bool {}
+    public function callAddTeleports(): Bool {
+        throw "stub: callAddTeleports not decompiled";
+    }
 
-  function callFinalize(): Bool {}
+    public function callFinalize(): Bool {
+        throw "stub: callFinalize not decompiled";
+    }
 
-  function getCustomLevelInfo(_levelInfo: Dynamic): Dynamic {}
+    public function getCustomLevelInfo(arg0: Dynamic): Dynamic {
+        throw "stub: getCustomLevelInfo not decompiled";
+    }
 
-  function getMobRoster(): hl.types.ArrayObj<Dynamic> {}
+    public function getMobRoster(): Array<Dynamic> {
+        throw "stub: getMobRoster not decompiled";
+    }
 
-  function buildMainRooms() {}
+    public function buildMainRooms(): Void {
+    }
 
-  function buildMobRoster() {}
+    public function buildMobRoster(): Void {
+    }
 
-  function setLevelInfo() {}
+    public function setLevelInfo(): Void {
+    }
 
-  function setLevelInfoFrom(_levelName: String, _levelInfo: tool.mod.script.LevelInfo.LevelInfo) {}
+    public function setLevelInfoFrom(arg0: String, arg1: tool.mod.script.LevelInfo): Void {
+    }
 
-  function setLevelPropsFrom(_levelName: String, _levelProps: tool.mod.script.LevelProps.LevelProps) {}
+    public function setLevelPropsFrom(arg0: String, arg1: tool.mod.script.LevelProps): Void {
+    }
 
-  function addMobRosterFrom(_levelName: String, _mobList: hl.types.ArrayObj<Dynamic>) {}
+    public function addMobRosterFrom(arg0: String, arg1: Array<Dynamic>): Void {
+    }
 
-  function callDefaultAddTeleport() {}
+    public function callDefaultAddTeleport(): Void {
+    }
 
-  function setAutomaticMobScaling(_setting: Bool) {}
+    public function setAutomaticMobScaling(arg0: Bool): Void {
+    }
 
-  function getMobTier(_difficulty: Int): Int {}
+    public function getMobTier(arg0: Int): Int {
+        throw "stub: getMobTier not decompiled";
+    }
 
-  function setMobTier(_level: Int) {}
+    public function setMobTier(arg0: Int): Void {
+    }
 
-  function exposeTypesAndDynamics() {}
+    public override function exposeTypesAndFunctions(): Void {
+    }
 }
-

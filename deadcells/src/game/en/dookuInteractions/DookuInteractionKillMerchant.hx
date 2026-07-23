@@ -1,25 +1,38 @@
 package en.dookuInteractions;
+
 class DookuInteractionKillMerchant extends en.dookuInteractions.DookuInteraction {
-  var merchants: hl.types.ArrayObj<Dynamic>;
-  var curMerchant: en.inter.Merchant.Merchant;
-  var lootGen: level.LootGen.LootGen;
+    public var merchants: Array<Dynamic>;
+    public var curMerchant: en.inter.Merchant;
+    public var lootGen: level.LootGen;
 
-  function __constructor__(parent: en.dookuInteractions.DookuInteractionsManager.DookuInteractionsManager) {}
+    public function new(arg0: en.dookuInteractions.DookuInteractionsManager) {
+        super();
+    }
 
-  function initTexts() {}
+    public override function initTexts(): Void {
+    }
 
-  function canTrigger(): Bool {}
+    public override function canTrigger(): Bool {
+        throw "stub: canTrigger not decompiled";
+    }
 
-  function onStartup() {}
+    public override function onStartup(): Void {
+    }
 
-  function dynOnExecute() {}
+    public override function dynOnExecute(): Void {
+    }
 
-  function dropGem() {}
+    public function dropGem(): Void {
+    }
 
-  function destroyShop() {}
+    public function destroyShop(): Void {
+    }
 
-  function getDookuPos(): Dynamic {}
+    public override function getDookuPos(): h2d.col.IPoint {
+        throw "stub: getDookuPos not decompiled";
+    }
 
-  function getDookuDir(): Int {}
+    public override function getDookuDir(): Int {
+        throw "stub: getDookuDir not decompiled";
+    }
 }
-

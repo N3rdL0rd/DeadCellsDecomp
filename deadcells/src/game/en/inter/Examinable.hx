@@ -1,51 +1,77 @@
 package en.inter;
-class Examinable extends en.Interactive.Interactive {
-  var customId: String;
-  var tipLabel: String;
-  var loreMan: level.LoreManager.LoreManager;
-  var examineFrom: Int;
-  var icon: libs.heaps.slib.HSprite.HSprite;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, custId: String) {}
+class Examinable extends en.Interactive {
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var customId: String;
+    public var tipLabel: String;
+    public var loreMan: level.LoreManager;
+    public var examineFrom: Int;
+    public var icon: libs.heaps.slib.HSprite;
 
-  function setTip(s: String): Examinable {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String) {
+        super();
+    }
 
-  function onDistantTrigger(trigger: en.Interactive.Interactive, by: Entity) {}
+    public function setTip(arg0: String): en.inter.Examinable {
+        throw "stub: setTip not decompiled";
+    }
 
-  function initGfx() {}
+    public override function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
+    }
 
-  function dispose() {}
+    public function initGfx(): Void {
+    }
 
-  function onFocus() {}
+    public override function dispose(): Void {
+    }
 
-  function postUpdate() {}
+    public function onFocus(): Void {
+    }
 
-  function canBeActivated(by: en.Hero.Hero): Bool {}
+    public function postUpdate(): Void {
+    }
 
-  function closeAllTexts() {}
+    public override function canBeActivated(arg0: en.Hero): Bool {
+        throw "stub: canBeActivated not decompiled";
+    }
 
-  function say(str: String, bgCol: Dynamic, offsetX: Dynamic, offsetY: Dynamic) {}
+    public function closeAllTexts(): Void {
+    }
 
-  function narrate(by: Entity, str: String, c: Dynamic) {}
+    public function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
+    }
 
-  function enableAutoUse() {}
+    public function narrate(arg0: Entity, arg1: String, arg2: Dynamic): Void {
+    }
 
-  function hideToolTip() {}
+    public function enableAutoUse(): Void {
+    }
 
-  function onActivate(by: en.Hero.Hero, longPress: Bool) {}
+    public function hideToolTip(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public function fixedUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
+
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

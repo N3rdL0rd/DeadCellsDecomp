@@ -1,198 +1,280 @@
 package ui;
+
 class CollectorPanel extends ui.Process {
-  var collectorNpc: en.inter.npc.CollectorPanelNpc.CollectorPanelNpc;
-  var mainFlow: ui.FlowBox.FlowBox;
-  var mainFlowTween: libs.misc.Tweenie.Tweenie;
-  var title: ui.Text.Text;
-  var separator: libs.heaps.slib.HSprite.HSprite;
-  var subFlow: h2d.Flow.Flow;
-  var leftFlow: h2d.Flow.Flow;
-  var rightFlow: h2d.Flow.Flow;
-  var controller: tool.Controller.Controller;
-  var cm: libs.misc.Cinematic.Cinematic;
-  var filterEntries: Bool;
-  var fxSb: h2d.SpriteBatch.SpriteBatch;
-  var fxPool: libs.heaps.HParticle.HParticle;
-  var metaList: ui.CollectorPanel.CollectorPanel;
-  var cellCount: ui.CollectorPanel.CollectorPanel;
-  var itemDesc: ui.CollectorPanel.CollectorPanel;
-  var toHighlight: hl.types.ArrayBytes<Int>;
-  var cpBaseX: Float;
-  var adds: Int;
-  static var ME: CollectorPanel;
+    public static var ME: ui.CollectorPanel;
+    public var collectorNpc: en.inter.npc.CollectorPanelNpc;
+    public var mainFlow: ui.FlowBox;
+    public var mainFlowTween: libs.misc.Tween;
+    public var title: ui.Text;
+    public var separator: libs.heaps.slib.HSprite;
+    public var subFlow: h2d.Flow;
+    public var leftFlow: h2d.Flow;
+    public var rightFlow: h2d.Flow;
+    public var controller: tool.ControllerAccess;
+    public var cm: libs.misc.Cinematic;
+    public var filterEntries: Bool;
+    public var fxSb: h2d.SpriteBatch;
+    public var fxPool: libs.heaps.ParticlePool;
+    public var metaList: ui._CollectorPanel.MetaList;
+    public var cellCount: ui._CollectorPanel.CellCount;
+    public var itemDesc: ui._CollectorPanel.ItemDesc;
+    public var toHighlight: Array<Int>;
+    public var cpBaseX: Float;
+    public var adds: Int;
 
-  function __constructor__(collectorNpc: en.inter.npc.CollectorPanelNpc.CollectorPanelNpc) {}
+    public function new(arg0: en.inter.npc.CollectorPanelNpc) {
+        super();
+    }
 
-  function get_itemPops(): Int {}
+    public function get_itemPops(): Int {
+        throw "stub: get_itemPops not decompiled";
+    }
 
-  function set_itemPops(v: Int): Int {}
+    public function set_itemPops(arg0: Int): Int {
+        throw "stub: set_itemPops not decompiled";
+    }
 
-  function onMetaListBatchDone() {}
+    public function onMetaListBatchDone(): Void {
+    }
 
-  function onMetaListAllBatchesDone() {}
+    public function onMetaListAllBatchesDone(): Void {
+    }
 
-  function highlightNextBluePrint() {}
+    public function highlightNextBluePrint(): Void {
+    }
 
-  function baseFilter(data: tool.ItemMetaManager.ItemMetaManager): Bool {}
+    public function baseFilter(arg0: tool.ItemProgress): Bool {
+        throw "stub: baseFilter not decompiled";
+    }
 
-  function userFilter(data: tool.ItemMetaManager.ItemMetaManager): Bool {}
+    public function userFilter(arg0: tool.ItemProgress): Bool {
+        throw "stub: userFilter not decompiled";
+    }
 
-  function getEmptyStr(): String {}
+    public function getEmptyStr(): String {
+        throw "stub: getEmptyStr not decompiled";
+    }
 
-  function canInvest(data: tool.ItemMetaManager.ItemMetaManager): Bool {}
+    public function canInvest(arg0: tool.ItemProgress): Bool {
+        throw "stub: canInvest not decompiled";
+    }
 
-  function updateEntry(data: tool.ItemMetaManager.ItemMetaManager, e: ui.CollectorPanel.CollectorPanel, showAsDone: Bool) {}
+    public function updateEntry(arg0: tool.ItemProgress, arg1: ui.ListEntry, arg2: Bool): Void {
+    }
 
-  function makeDesc(data: tool.ItemMetaManager.ItemMetaManager, flow: h2d.Flow.Flow): Dynamic {}
+    public function makeDesc(arg0: tool.ItemProgress, arg1: h2d.Flow): Dynamic {
+        throw "stub: makeDesc not decompiled";
+    }
 
-  function makeItem(k: String): tool.InventItem.InventItem {}
+    public function makeItem(arg0: String): tool.InventItem {
+        throw "stub: makeItem not decompiled";
+    }
 
-  function applyEffect(k: String) {}
+    public function applyEffect(arg0: String): Void {
+    }
 
-  function updateEntries() {}
+    public function updateEntries(): Void {
+    }
 
-  function unlockedFx(e: ui.CollectorPanel.CollectorPanel): Float {}
+    public function unlockedFx(arg0: ui.ListEntry): Float {
+        throw "stub: unlockedFx not decompiled";
+    }
 
-  function updateItemDesc() {}
+    public function updateItemDesc(): Void {
+    }
 
-  function getEntryRect(e: ui.CollectorPanel.CollectorPanel): Dynamic {}
+    public function getEntryRect(arg0: ui.ListEntry): Dynamic {
+        throw "stub: getEntryRect not decompiled";
+    }
 
-  function tryInvest(): Int {}
+    public function tryInvest(): Int {
+        throw "stub: tryInvest not decompiled";
+    }
 
-  function completeFx(data: tool.ItemMetaManager.ItemMetaManager): Float {}
+    public function completeFx(arg0: tool.ItemProgress): Float {
+        throw "stub: completeFx not decompiled";
+    }
 
-  function onComplete(data: tool.ItemMetaManager.ItemMetaManager) {}
+    public function onComplete(arg0: tool.ItemProgress): Void {
+    }
 
-  function investAutoFire(): Bool {}
+    public function investAutoFire(): Bool {
+        throw "stub: investAutoFire not decompiled";
+    }
 
-  function getAddsPerFrame(): Int {}
+    public function getAddsPerFrame(): Int {
+        throw "stub: getAddsPerFrame not decompiled";
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function close() {}
+    public function close(): Void {
+    }
 
-  function onValidate() {}
+    public function onValidate(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
 
-class _CollectorPanel.MetaList extends h2d.Flow.Flow {
-  var entries: hl.types.ArrayObj<Dynamic>;
-  var onBatchDone: Dynamic;
-  var onAllBatchesDone: Dynamic;
-  var collectorNpc: en.inter.npc.CollectorPanelNpc.CollectorPanelNpc;
-  var parentFlow: h2d.Flow.Flow;
-  var listMask: h2d.Mask.Mask;
-  var listFlow: h2d.Flow.Flow;
-  var selIndex: Int;
-  var selCursor: h2d.ScaleGrid.ScaleGrid;
-  var headers: hl.types.ArrayObj<Dynamic>;
-  var inter: h2d.Interactive.Interactive;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
-  var isBatchProcessingDone: Bool;
-  var metaItems: hl.types.ArrayObj<Dynamic>;
-  var batchIndex: Int;
-  var lastEntriesGroup: Dynamic;
-  var nVisibleEntries: Int;
-  var emptyMessage: ui.Text.Text;
-  var ownerSprite: libs.heaps.slib.HSprite.HSprite;
-  var time: Float;
-  var baseFilter: Dynamic;
-  var userFilter: Dynamic;
-  static var BATCH_SIZE: Int;
+class MetaList extends h2d.Flow {
+    public static var BATCH_SIZE: Int;
+    public var entries: Array<Dynamic>;
+    public var onBatchDone: Dynamic;
+    public var onAllBatchesDone: Dynamic;
+    public var collectorNpc: en.inter.npc.CollectorPanelNpc;
+    public var parentFlow: h2d.Flow;
+    public var listMask: h2d.Mask;
+    public var listFlow: h2d.Flow;
+    public var selIndex: Int;
+    public var selCursor: h2d.ScaleGrid;
+    public var headers: Array<Dynamic>;
+    public var inter: h2d.Interactive;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
+    public var isBatchProcessingDone: Bool;
+    public var metaItems: Array<Dynamic>;
+    public var batchIndex: Int;
+    public var lastEntriesGroup: Dynamic;
+    public var nVisibleEntries: Int;
+    public var emptyMessage: ui.Text;
+    public var ownerSprite: libs.heaps.slib.HSprite;
+    public var time: Float;
+    public var baseFilter: Dynamic;
+    public var userFilter: Dynamic;
 
-  function __constructor__(p: h2d.Flow.Flow, baseFilter: Dynamic, userFilter: Dynamic, emptyStr: String, collectorNpc: en.inter.npc.CollectorPanelNpc.CollectorPanelNpc) {}
+    public function new(arg0: h2d.Flow, arg1: Dynamic, arg2: Dynamic, arg3: String, arg4: en.inter.npc.CollectorPanelNpc) {
+        super();
+    }
 
-  function tryIncSel(): Bool {}
+    public function tryIncSel(): Bool {
+        throw "stub: tryIncSel not decompiled";
+    }
 
-  function tryDecSel(): Bool {}
+    public function tryDecSel(): Bool {
+        throw "stub: tryDecSel not decompiled";
+    }
 
-  function filterEntries(activated: Bool, keep: String) {}
+    public function filterEntries(arg0: Bool, arg1: String): Void {
+    }
 
-  function getIndex(k: String): Int {}
+    public function getIndex(arg0: String): Int {
+        throw "stub: getIndex not decompiled";
+    }
 
-  function select(index: Int, instant: Dynamic, scroll: Dynamic, callback: Dynamic) {}
+    public function select(arg0: Int, arg1: Ref, arg2: Ref, arg3: Dynamic): Void {
+    }
 
-  function onResize() {}
+    public function onResize(): Void {
+    }
 
-  function processEntriesBatch() {}
+    public function processEntriesBatch(): Void {
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public override function sync(arg0: h2d.RenderContext): Void {
+    }
 }
 
-class _CollectorPanel.CellCount extends h2d.Flow.Flow {
-  var parentFlow: h2d.Flow.Flow;
-  var icon: h2d.Bitmap.Bitmap;
-  var text: ui.Text.Text;
+class CellCount extends h2d.Flow {
+    public var parentFlow: h2d.Flow;
+    public var icon: h2d.Bitmap;
+    public var text: ui.Text;
 
-  function __constructor__(p: h2d.Flow.Flow) {}
+    public function new(arg0: h2d.Flow) {
+        super();
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function onResize() {}
+    public function onResize(): Void {
+    }
 }
 
-class _CollectorPanel.ItemDesc extends h2d.Object {
-  var content: h2d.Flow.Flow;
-  var resizeContent: Dynamic;
-  var parentFlow: h2d.Flow.Flow;
-  var bg: ui.UIBox.UIBox;
+class ListItem extends h2d.Object {
+    public var flow: h2d.Flow;
 
-  function __constructor__(p: h2d.Flow.Flow) {}
+    public function new(arg0: h2d.Flow) {
+        super();
+    }
 
-  function onResize() {}
-}
+    public function get_hei(): Int {
+        throw "stub: get_hei not decompiled";
+    }
 
-class _CollectorPanel.ListItem extends h2d.Object {
-  var flow: h2d.Flow.Flow;
+    public function get_wid(): Int {
+        throw "stub: get_wid not decompiled";
+    }
 
-  function __constructor__(flow: h2d.Flow.Flow) {}
-
-  function get_hei(): Int {}
-
-  function get_wid(): Int {}
-
-  function onResize() {}
+    public function onResize(): Void {
+    }
 }
 
 class ListEntry extends ui._CollectorPanel.ListItem {
-  var data: tool.ItemMetaManager.ItemMetaManager;
-  var header: ui.CollectorPanel.CollectorPanel;
-  var bg: ui.UIBox.UIBox;
-  var time: Float;
-  var alt: Bool;
-  var icon: ui.hud.Skill.Skill;
-  var title: ui.Text.Text;
-  var newTag: h2d.Bitmap.Bitmap;
-  var right: h2d.Object.Object;
-  var stateBar: ui.Bar.Bar;
-  var content: h2d.Object.Object;
-  var inter: h2d.Interactive.Interactive;
-  var isPush: Bool;
+    public var data: tool.ItemProgress;
+    public var header: ui._CollectorPanel.ListHeader;
+    public var bg: ui.UIBox;
+    public var time: Float;
+    public var alt: Bool;
+    public var icon: ui.hud.Skill;
+    public var title: ui.Text;
+    public var newTag: h2d.Bitmap;
+    public var right: h2d.Object;
+    public var stateBar: ui.Bar;
+    public var content: h2d.Object;
+    public var inter: h2d.Interactive;
+    public var isPush: Bool;
 
-  function __constructor__(data: tool.ItemMetaManager.ItemMetaManager, header: ui.CollectorPanel.CollectorPanel, flow: h2d.Flow.Flow) {}
+    public function new(arg0: tool.ItemProgress, arg1: ui._CollectorPanel.ListHeader, arg2: h2d.Flow) {
+        super();
+    }
 
-  function get_wid(): Int {}
+    public override function get_wid(): Int {
+        throw "stub: get_wid not decompiled";
+    }
 
-  function get_hei(): Int {}
+    public override function get_hei(): Int {
+        throw "stub: get_hei not decompiled";
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public function sync(arg0: h2d.RenderContext): Void {
+    }
 }
 
-class _CollectorPanel.ListHeader extends ui._CollectorPanel.ListItem {
-  var group: Int;
-  var text: ui.Text.Text;
-  var line: h2d.Graphics.Graphics;
+class ListHeader extends ui._CollectorPanel.ListItem {
+    public var group: Int;
+    public var text: ui.Text;
+    public var line: h2d.Graphics;
 
-  function __constructor__(group: Int, flow: h2d.Flow.Flow) {}
+    public function new(arg0: Int, arg1: h2d.Flow) {
+        super();
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 }
 
+class ItemDesc extends h2d.Object {
+    public var content: h2d.Flow;
+    public var resizeContent: Dynamic;
+    public var parentFlow: h2d.Flow;
+    public var bg: ui.UIBox;
+
+    public function new(arg0: h2d.Flow) {
+        super();
+    }
+
+    public function onResize(): Void {
+    }
+}

@@ -1,13 +1,17 @@
 package cine.dlcp;
+
 class KillDookuBeastCinem extends cine.KeyframesCinematic {
-  var endMask: h2d.Graphics.Graphics;
-  var music: hxd.snd.Channel.Channel;
-  var sfx: hxd.snd.Channel.Channel;
+    public var endMask: h2d.Graphics;
+    public var music: hxd.snd.Channel;
+    public var sfx: hxd.snd.Channel;
 
-  function __constructor__() {}
+    public function new() {
+        super();
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 }
-

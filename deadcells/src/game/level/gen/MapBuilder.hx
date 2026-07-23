@@ -1,24 +1,33 @@
 package level.gen;
+
 class MapBuilder {
-  var user: User;
-  var infos: Dynamic;
-  var seed: Int;
-  var genMapData: Dynamic;
-  var rnd: libs.Rand.Rand;
-  var roomNodes: hl.types.ArrayObj<Dynamic>;
+    public var user: User;
+    public var infos: Dynamic;
+    public var seed: Int;
+    public var genMapData: Dynamic;
+    public var rnd: libs.Rand;
+    public var roomNodes: Array<Dynamic>;
 
-  function __constructor__(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: Int, arg3: Dynamic, arg4: libs.Rand) {
+    }
 
-  function initRoomNodes() {}
+    public function initRoomNodes(): Void {
+    }
 
-  function buildMap(): level.LevelMap.LevelMap {}
+    public function buildMap(): level.LevelMap {
+        throw "stub: buildMap not decompiled";
+    }
 
-  function afterLevelMapInitProcess(levelMap: level.LevelMap.LevelMap): level.LevelMap.LevelMap {}
+    public function afterLevelMapInitProcess(arg0: level.LevelMap): level.LevelMap {
+        throw "stub: afterLevelMapInitProcess not decompiled";
+    }
 
-  function removeCollisionOutOfRooms(dat: level.LevelMap.LevelMap, drooms: hl.types.ArrayObj<Dynamic>, inRoomCells: hl.types.ArrayObj<Dynamic>, hasError: Bool) {}
+    public function removeCollisionOutOfRooms(arg0: level.LevelMap, arg1: Array<Dynamic>, arg2: Array<Dynamic>, arg3: Bool): Void {
+    }
 
-  function fillRoomData(rn: level.RoomNode.RoomNode, rd: level.Room.Room, dat: level.LevelMap.LevelMap, inRoomCells: hl.types.ArrayObj<Dynamic>, drooms: hl.types.ArrayObj<Dynamic>) {}
+    public function fillRoomData(arg0: level.RoomNode, arg1: level.Room, arg2: level.LevelMap, arg3: Array<Dynamic>, arg4: Array<Dynamic>): Void {
+    }
 
-  function fillRoomCollisions(rn: level.RoomNode.RoomNode, dat: level.LevelMap.LevelMap, inRoomCells: hl.types.ArrayObj<Dynamic>) {}
+    public function fillRoomCollisions(arg0: level.RoomNode, arg1: level.LevelMap, arg2: Array<Dynamic>): Void {
+    }
 }
-

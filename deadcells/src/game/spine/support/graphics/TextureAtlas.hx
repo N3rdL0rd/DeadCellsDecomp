@@ -1,28 +1,79 @@
 package spine.support.graphics;
+
 class TextureAtlas {
-  var pages: hl.types.ArrayObj<Dynamic>;
-  var regions: hl.types.ArrayObj<Dynamic>;
-  var textureLoader: Dynamic;
+    public var pages: Array<Dynamic>;
+    public var regions: Array<Dynamic>;
+    public var textureLoader: Dynamic;
 
-  function __constructor__(object: String, textureLoader: Dynamic) {}
+    public function new(arg0: String, arg1: Dynamic) {
+    }
 
-  function load(atlasText: String, textureLoader: Dynamic) {}
+    public function load(arg0: String, arg1: Dynamic): Void {
+    }
 
-  function findRegion(name: String): Dynamic {}
+    public function findRegion(arg0: String): spine.support.graphics.AtlasRegion {
+        throw "stub: findRegion not decompiled";
+    }
 }
 
 class Reader {
-  var lines: hl.types.ArrayDyn;
-  var index: Int;
+    public var lines: Array<Dynamic>;
+    public var index: Int;
 
-  function __constructor__(text: String) {}
+    public function new(arg0: String) {
+    }
 
-  function trim(value: String): String {}
+    public function trim(arg0: String): String {
+        throw "stub: trim not decompiled";
+    }
 
-  function readLine(): String {}
+    public function readLine(): String {
+        throw "stub: readLine not decompiled";
+    }
 
-  function readValue(): String {}
+    public function readValue(): String {
+        throw "stub: readValue not decompiled";
+    }
 
-  function readTuple(tuple: hl.types.ArrayDyn): Int {}
+    public function readTuple(arg0: Array<Dynamic>): Int {
+        throw "stub: readTuple not decompiled";
+    }
 }
 
+class AtlasPage {
+    public var name: String;
+    public var format: String;
+    public var minFilter: String;
+    public var magFilter: String;
+    public var uWrap: spine.support.graphics.TextureWrap;
+    public var vWrap: spine.support.graphics.TextureWrap;
+    public var rendererObject: Dynamic;
+    public var width: Int;
+    public var height: Int;
+
+    public function new() {
+    }
+}
+
+class AtlasRegion extends spine.support.graphics.TextureRegion {
+    public var name: String;
+    public var x: Int;
+    public var y: Int;
+    public var width: Int;
+    public var height: Int;
+    public var packedWidth: Int;
+    public var packedHeight: Int;
+    public var offsetX: Float;
+    public var offsetY: Float;
+    public var originalWidth: Int;
+    public var originalHeight: Int;
+    public var index: Int;
+    public var rotate: Bool;
+    public var splits: Array<Int>;
+    public var pads: Array<Int>;
+    public var page: spine.support.graphics.AtlasPage;
+
+    public function new() {
+        super();
+    }
+}

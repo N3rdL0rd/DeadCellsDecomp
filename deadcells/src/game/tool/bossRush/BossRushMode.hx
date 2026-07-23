@@ -1,84 +1,138 @@
 package tool.bossRush;
+
 class BossRushMode {
-  var game: pr.Game.Game;
-  var currentBossArray: hl.types.ArrayObj<Dynamic>;
-  var currentStageBosses: hl.types.ArrayObj<Dynamic>;
-  var currentBossRushData: Dynamic;
-  var nextBossRushData: Dynamic;
-  var length: Dynamic;
-  var rseed: libs.Rand.Rand;
-  var endLoots: hl.types.ArrayObj<Dynamic>;
-  var flawless: Bool;
-  var currentStage: Int;
-  var mainTier: String;
-  var difficulty: Dynamic;
-  var disabledItems: hl.types.ArrayObj<Dynamic>;
-  var customRoute: hl.types.ArrayObj<Dynamic>;
-  var skippedStage: Int;
-  static var LAST_STAGE: Int;
+    public static var LAST_STAGE: Int;
+    public var game: pr.Game;
+    public var currentBossArray: Array<Dynamic>;
+    public var currentStageBosses: Array<Dynamic>;
+    public var currentBossRushData: Dynamic;
+    public var nextBossRushData: Dynamic;
+    public var length: tool.bossRush.BossRushModeLength;
+    public var rseed: libs.Rand;
+    public var endLoots: Array<Dynamic>;
+    public var flawless: Bool;
+    public var currentStage: Int;
+    public var mainTier: String;
+    public var difficulty: tool.bossRush.BossRushModeDifficulty;
+    public var disabledItems: Array<Dynamic>;
+    public var customRoute: Array<Dynamic>;
+    public var skippedStage: Int;
 
-  static function getBossLifePrctModifier(): Float {}
+    public function new(arg0: pr.Game) {
+    }
 
-  function __constructor__(_game: pr.Game.Game) {}
+    public static function getBossLifePrctModifier(): Float {
+        throw "stub: getBossLifePrctModifier not decompiled";
+    }
 
-  function get_isCustomRoute(): Bool {}
+    public function get_isCustomRoute(): Bool {
+        throw "stub: get_isCustomRoute not decompiled";
+    }
 
-  function get_isActualBossModified(): Bool {}
+    public function get_isActualBossModified(): Bool {
+        throw "stub: get_isActualBossModified not decompiled";
+    }
 
-  function init(length: Dynamic, difficulty: Dynamic, customRoute: hl.types.ArrayObj<Dynamic>) {}
+    public function init(arg0: tool.bossRush.BossRushModeLength, arg1: tool.bossRush.BossRushModeDifficulty, arg2: Array<Dynamic>): Void {
+    }
 
-  function initDisabledItems() {}
+    public function initDisabledItems(): Void {
+    }
 
-  function isItemDisabled(i: String): Bool {}
+    public function isItemDisabled(arg0: String): Bool {
+        throw "stub: isItemDisabled not decompiled";
+    }
 
-  function incrementStage() {}
+    public function incrementStage(): Void {
+    }
 
-  function registerBoss(mob: Dynamic) {}
+    public function registerBoss(arg0: Dynamic): Void {
+    }
 
-  function bossHitHero(): Bool {}
+    public function bossHitHero(): Bool {
+        throw "stub: bossHitHero not decompiled";
+    }
 
-  function getLength(): Dynamic {}
+    public function getLength(): tool.bossRush.BossRushModeLength {
+        throw "stub: getLength not decompiled";
+    }
 
-  function getDifficulty(): Dynamic {}
+    public function getDifficulty(): tool.bossRush.BossRushModeDifficulty {
+        throw "stub: getDifficulty not decompiled";
+    }
 
-  function onBossDeath(boss: Dynamic, canBeLastBoss: Dynamic) {}
+    public function onBossDeath(arg0: Dynamic, arg1: Ref): Void {
+    }
 
-  function extractLootsFromMob(mob: en.Mob.Mob) {}
+    public function extractLootsFromMob(arg0: en.Mob): Void {
+    }
 
-  function isLastBossOfStage(): Bool {}
+    public function isLastBossOfStage(): Bool {
+        throw "stub: isLastBossOfStage not decompiled";
+    }
 
-  function hasBossRemaining(ignoreBoss: Dynamic): Bool {}
+    public function hasBossRemaining(arg0: Dynamic): Bool {
+        throw "stub: hasBossRemaining not decompiled";
+    }
 
-  function isOver(): Bool {}
+    public function isOver(): Bool {
+        throw "stub: isOver not decompiled";
+    }
 
-  function getCdbStageData(stage: Dynamic): Dynamic {}
+    public function getCdbStageData(arg0: Dynamic): Dynamic {
+        throw "stub: getCdbStageData not decompiled";
+    }
 
-  function getAvailableBosses(): hl.types.ArrayObj<Dynamic> {}
+    public function getAvailableBosses(): Array<Dynamic> {
+        throw "stub: getAvailableBosses not decompiled";
+    }
 
-  function getNextLevelId(): String {}
+    public function getNextLevelId(): String {
+        throw "stub: getNextLevelId not decompiled";
+    }
 
-  function getEstimatedScrollUpsAtStage(stage: Int): Int {}
+    public function getEstimatedScrollUpsAtStage(arg0: Int): Int {
+        throw "stub: getEstimatedScrollUpsAtStage not decompiled";
+    }
 
-  function getScrollRepartition(): Dynamic {}
+    public function getScrollRepartition(): Dynamic {
+        throw "stub: getScrollRepartition not decompiled";
+    }
 
-  function onUpgradePick(item: tool.InventItem.InventItem) {}
+    public function onUpgradePick(arg0: tool.InventItem): Void {
+    }
 
-  function canGenerateArmory(): Bool {}
+    public function canGenerateArmory(): Bool {
+        throw "stub: canGenerateArmory not decompiled";
+    }
 
-  function getTierDoor(): en.inter.door.TriggeredDoor.TriggeredDoor {}
+    public function getTierDoor(): en.inter.door.TriggeredDoor {
+        throw "stub: getTierDoor not decompiled";
+    }
 
-  function onLevelActivated() {}
+    public function onLevelActivated(): Void {
+    }
 
-  function onLevelStructEnd(shouldHaveInterBoss: Bool) {}
+    public function onLevelStructEnd(arg0: Bool): Void {
+    }
 
-  function getItemLevel(): Int {}
+    public function getItemLevel(): Int {
+        throw "stub: getItemLevel not decompiled";
+    }
 
-  function shouldPerkResetBeFree(): Bool {}
+    public function shouldPerkResetBeFree(): Bool {
+        throw "stub: shouldPerkResetBeFree not decompiled";
+    }
 
-  function shouldHaveLegMultiTreasure(): Bool {}
+    public function shouldHaveLegMultiTreasure(): Bool {
+        throw "stub: shouldHaveLegMultiTreasure not decompiled";
+    }
 
-  function shouldHaveZDoorAfterBoss(): Bool {}
+    public function shouldHaveZDoorAfterBoss(): Bool {
+        throw "stub: shouldHaveZDoorAfterBoss not decompiled";
+    }
 
-  function getRewardLoots(): hl.types.ArrayObj<Dynamic> {}
+    public function getRewardLoots(): Array<Dynamic> {
+        throw "stub: getRewardLoots not decompiled";
+    }
 }
-

@@ -1,10 +1,13 @@
 package cine;
+
 class EnterDualBehemoth extends GameCinematic {
-  var boss: en.mob.boss.Behemoth.Behemoth;
-  var secondBoss: en.mob.boss.Behemoth.Behemoth;
+    public var boss: en.mob.boss.Behemoth;
+    public var secondBoss: en.mob.boss.Behemoth;
 
-  function __constructor__(hero: en.Hero.Hero) {}
+    public function new(arg0: en.Hero) {
+        super();
+    }
 
-  function triggerEliteScoring() {}
+    public function triggerEliteScoring(): Void {
+    }
 }
-

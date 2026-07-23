@@ -1,140 +1,215 @@
 package level.disp;
+
 class Shipwreck extends level.DynamicBiomeDisp {
-  var glowShader: shader.GlowKey.GlowKey;
-  var horizonCY: Int;
-  var horizonY: Float;
-  var centerX: Float;
-  var fishSprite: libs.heaps.slib.HSprite.HSprite;
-  var godrayInfos: Dynamic;
-  var behindWaterfallScrollers: hl.types.ArrayObj<Dynamic>;
-  var frontOfWaterfallScrollers: hl.types.ArrayObj<Dynamic>;
-  var maskScrollers: hl.types.ArrayObj<Dynamic>;
-  var godRays: hl.types.ArrayObj<Dynamic>;
-  var blorgSprites: hl.types.ArrayObj<Dynamic>;
-  var waterfallInfos: Dynamic;
-  var waterfallSprite: h2d.Object.Object;
-  var waterfallDisplaceSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var waterfallAddSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var waterfalls: hl.types.ArrayObj<Dynamic>;
-  var seaSprite: h2d.Object.Object;
-  var seaSurfaceSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var bubblesFxSb: libs.heaps.slib.HSprite.HSpriteBatch;
-  var gradientMapShaderToUpdate: hl.types.ArrayObj<Dynamic>;
-  var dioramaFog: h2d.Graphics.Graphics;
-  var dioramaDarkness: h2d.Graphics.Graphics;
-  var mainPropsGlowShader: shader.GlowKey.GlowKey;
-  var ambiantChannel: hxd.snd.Channel.Channel;
+    public var glowShader: shader.GlowKey;
+    public var horizonCY: Int;
+    public var horizonY: Float;
+    public var centerX: Float;
+    public var fishSprite: libs.heaps.slib.HSprite;
+    public var godrayInfos: Dynamic;
+    public var behindWaterfallScrollers: Array<Dynamic>;
+    public var frontOfWaterfallScrollers: Array<Dynamic>;
+    public var maskScrollers: Array<Dynamic>;
+    public var godRays: Array<Dynamic>;
+    public var blorgSprites: Array<Dynamic>;
+    public var waterfallInfos: Dynamic;
+    public var waterfallSprite: h2d.Object;
+    public var waterfallDisplaceSb: libs.heaps.slib.HSpriteBatch;
+    public var waterfallAddSb: libs.heaps.slib.HSpriteBatch;
+    public var waterfalls: Array<Dynamic>;
+    public var seaSprite: h2d.Object;
+    public var seaSurfaceSb: libs.heaps.slib.HSpriteBatch;
+    public var bubblesFxSb: libs.heaps.slib.HSpriteBatch;
+    public var gradientMapShaderToUpdate: Array<Dynamic>;
+    public var dioramaFog: h2d.Graphics;
+    public var dioramaDarkness: h2d.Graphics;
+    public var mainPropsGlowShader: shader.GlowKey;
+    public var ambiantChannel: hxd.snd.Channel;
 
-  function __constructor__(p: pr.Level.Level, m: level.LevelMap.LevelMap, biome1: String, biome2: String) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap, arg2: String, arg3: String) {
+        super();
+    }
 
-  function findParallaxInfoByName(name: String): Dynamic {}
+    public function findParallaxInfoByName(arg0: String): Dynamic {
+        throw "stub: findParallaxInfoByName not decompiled";
+    }
 
-  function computeHorizonY() {}
+    public function computeHorizonY(): Void {
+    }
 
-  function addTorch(px: Float, py: Float, back: h2d.Tile.Tile, checkWallUsed: Dynamic) {}
+    public function addTorch(arg0: Float, arg1: Float, arg2: h2d.Tile, arg3: Ref): Void {
+    }
 
-  function render() {}
+    public override function render(): Void {
+    }
 
-  function renderGroundSmoke() {}
+    public function renderGroundSmoke(): Void {
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function renderTorches() {}
+    public function renderTorches(): Void {
+    }
 
-  function renderWindows() {}
+    public function renderWindows(): Void {
+    }
 
-  function renderAlcoves() {}
+    public function renderAlcoves(): Void {
+    }
 
-  function renderPatchs() {}
+    public function renderPatchs(): Void {
+    }
 
-  function renderBlorgs() {}
+    public function renderBlorgs(): Void {
+    }
 
-  function renderBoatOutline() {}
+    public function renderBoatOutline(): Void {
+    }
 
-  function renderJunkBoatOutline(spriteName: String) {}
+    public function renderJunkBoatOutline(arg0: String): Void {
+    }
 
-  function renderBigBoatOutline(spriteName: String) {}
+    public function renderBigBoatOutline(arg0: String): Void {
+    }
 
-  function renderCornerBoatOutline(spriteName: String) {}
+    public function renderCornerBoatOutline(arg0: String): Void {
+    }
 
-  function renderCornerExt() {}
+    public function renderCornerExt(): Void {
+    }
 
-  function getMaxWidth(tileDeck: hl.types.ArrayObj<Dynamic>): Int {}
+    public function getMaxWidth(arg0: Array<Dynamic>): Int {
+        throw "stub: getMaxWidth not decompiled";
+    }
 
-  function getMaxHeight(tileDeck: hl.types.ArrayObj<Dynamic>): Int {}
+    public function getMaxHeight(arg0: Array<Dynamic>): Int {
+        throw "stub: getMaxHeight not decompiled";
+    }
 
-  function getMinWidth(tileDeck: hl.types.ArrayObj<Dynamic>): Int {}
+    public function getMinWidth(arg0: Array<Dynamic>): Int {
+        throw "stub: getMinWidth not decompiled";
+    }
 
-  function getMinWidthSpaceInLevelMap(rect: Dynamic, maxLimit: Int, towardLeft: Dynamic): Int {}
+    public function getMinWidthSpaceInLevelMap(arg0: libs.tilemap.Rectangle, arg1: Int, arg2: Ref): Int {
+        throw "stub: getMinWidthSpaceInLevelMap not decompiled";
+    }
 
-  function getMinHeightSpaceInLevelMap(rect: Dynamic, maxLimit: Int, towardUp: Dynamic): Int {}
+    public function getMinHeightSpaceInLevelMap(arg0: libs.tilemap.Rectangle, arg1: Int, arg2: Ref): Int {
+        throw "stub: getMinHeightSpaceInLevelMap not decompiled";
+    }
 
-  function getRandomSpriteThatFit(size: Int, tileDeck: hl.types.ArrayObj<Dynamic>): Int {}
+    public function getRandomSpriteThatFit(arg0: Int, arg1: Array<Dynamic>): Int {
+        throw "stub: getRandomSpriteThatFit not decompiled";
+    }
 
-  function getWidthForFrame(spriteName: String, frame: Int, tileDeck: hl.types.ArrayObj<Dynamic>): Int {}
+    public function getWidthForFrame(arg0: String, arg1: Int, arg2: Array<Dynamic>): Int {
+        throw "stub: getWidthForFrame not decompiled";
+    }
 
-  function getHeightForFrame(spriteName: String, frame: Int, tileDeck: hl.types.ArrayObj<Dynamic>): Int {}
+    public function getHeightForFrame(arg0: String, arg1: Int, arg2: Array<Dynamic>): Int {
+        throw "stub: getHeightForFrame not decompiled";
+    }
 
-  function divideRectIntoSprites(sizeToComplete: Int, _sizeOfSpritesDeck: hl.types.ArrayObj<Dynamic>, widthThreshold: Int): hl.types.ArrayObj<Dynamic> {}
+    public function divideRectIntoSprites(arg0: Int, arg1: Array<Dynamic>, arg2: Int): Array<Dynamic> {
+        throw "stub: divideRectIntoSprites not decompiled";
+    }
 
-  function placeBlorg(frame: Int, cx: Int, cy: Int, withGlow: Bool) {}
+    public function placeBlorg(arg0: Int, arg1: Int, arg2: Int, arg3: Bool): Void {
+    }
 
-  function addLightOnBlorg(px: Float, py: Float, frame: Int) {}
+    public function addLightOnBlorg(arg0: Float, arg1: Float, arg2: Int): Void {
+    }
 
-  function applyLightConf(light: light.PointLight.PointLight, lightKind: String, radius: Dynamic) {}
+    public override function applyLightConf(arg0: light.PointLight, arg1: String, arg2: Ref): Void {
+    }
 
-  function getBiggestSpriteSizeThatFit(width: Int, height: Int, sortedDeck: hl.types.ArrayObj<Dynamic>): Dynamic {}
+    public function getBiggestSpriteSizeThatFit(arg0: Int, arg1: Int, arg2: Array<Dynamic>): Dynamic {
+        throw "stub: getBiggestSpriteSizeThatFit not decompiled";
+    }
 
-  function getSortedDeckOfTileSize(k: String): hl.types.ArrayObj<Dynamic> {}
+    public function getSortedDeckOfTileSize(arg0: String): Array<Dynamic> {
+        throw "stub: getSortedDeckOfTileSize not decompiled";
+    }
 
-  function getSortedDeckOfTileSizeByHeight(k: String): hl.types.ArrayObj<Dynamic> {}
+    public function getSortedDeckOfTileSizeByHeight(arg0: String): Array<Dynamic> {
+        throw "stub: getSortedDeckOfTileSizeByHeight not decompiled";
+    }
 
-  function addFish(inner: Int, outer: Int) {}
+    public function addFish(arg0: Int, arg1: Int): Void {
+    }
 
-  function renderWaterInBackground(cx: Int, cy: Int, width: Int, height: Int, waterColor: Int, waterColorLight: Int) {}
+    public function renderWaterInBackground(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int): Void {
+    }
 
-  function renderFrontCorner(type: Dynamic, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool) {}
+    public function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function addWaterfallsInScroller(xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public function addWaterfallsInScroller(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function createHolesWithBounds(r: level.Room.Room, rect: Dynamic, stamps: Bool, forcesHoles: Dynamic, addBackground: Dynamic) {}
+    public function createHolesWithBounds(arg0: level.Room, arg1: libs.tilemap.Rectangle, arg2: Bool, arg3: Ref, arg4: Ref): Void {
+    }
 
-  function createHoleGrid(r: level.Room.Room, rGrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: createHoleGrid not decompiled";
+    }
 
-  function createHoleGridWithBounds(r: level.Room.Room, rect: Dynamic, rGrid: hl.types.ArrayObj<Dynamic>): hl.types.ArrayObj<Dynamic> {}
+    public function createHoleGridWithBounds(arg0: level.Room, arg1: libs.tilemap.Rectangle, arg2: Array<Dynamic>): Array<Dynamic> {
+        throw "stub: createHoleGridWithBounds not decompiled";
+    }
 
-  function addHoleBackground(r: level.Room.Room, xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    }
 
-  function updateBiomeFx() {}
+    public override function updateBiomeFx(): Void {
+    }
 
-  function addGodRays(xmin: Int, xmax: Int, ymin: Int, ymax: Int) {}
+    public function addGodRays(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
+    }
 
-  function createLightWalls() {}
+    public function createLightWalls(): Void {
+    }
 
-  function generateParallax(inf: Dynamic): Parallax {}
+    public function generateParallax(arg0: Dynamic): Parallax {
+        throw "stub: generateParallax not decompiled";
+    }
 
-  function generateParallaxGroup(inf: Dynamic): ParallaxGroup {}
+    public function generateParallaxGroup(arg0: Dynamic): ParallaxGroup {
+        throw "stub: generateParallaxGroup not decompiled";
+    }
 
-  function renderParallax(infos: Dynamic, parallaxName: String) {}
+    public function renderParallax(arg0: Dynamic, arg1: String): Void {
+    }
 
-  function applyLayerConf(obj: h2d.Drawable.Drawable, layer: String, allowAlpha: Dynamic, ratio: Dynamic) {}
+    public function applyLayerConf(arg0: h2d.Drawable, arg1: String, arg2: Ref, arg3: Ref): Void {
+    }
 
-  static function getBlendRatioAt(_: Shipwreck, py: Float, _: Float): Float {}
+    public override function getBlendRatioAt(arg0: Float, arg1: Float): Float {
+        throw "stub: getBlendRatioAt not decompiled";
+    }
 
-  function heroLightUpdate() {}
+    public function heroLightUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function updateGodRaysInScrollers() {}
+    public function updateGodRaysInScrollers(): Void {
+    }
 
-  function updateBlorgs() {}
+    public function updateBlorgs(): Void {
+    }
 
-  function updateBackgroundScrollers() {}
+    public function updateBackgroundScrollers(): Void {
+    }
 
-  function updateDiorama() {}
+    public function updateDiorama(): Void {
+    }
 }
-

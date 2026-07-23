@@ -1,18 +1,23 @@
 package tool.training;
+
 class TrainingMode {
-  var game: pr.Game.Game;
-  var curBossKind: String;
-  var weaponLevel: Int;
-  var weaponQuality: Int;
-  var weaponColorless: Bool;
-  var weaponLegendary: Bool;
-  var globalBiome: String;
-  var recommendedScrolls: Int;
+    public var game: pr.Game;
+    public var curBossKind: String;
+    public var weaponLevel: Int;
+    public var weaponQuality: Int;
+    public var weaponColorless: Bool;
+    public var weaponLegendary: Bool;
+    public var globalBiome: String;
+    public var recommendedScrolls: Int;
 
-  function __constructor__(game: pr.Game.Game) {}
+    public function new(arg0: pr.Game) {
+    }
 
-  function getDmgTier(): Int {}
+    public function getDmgTier(): Int {
+        throw "stub: getDmgTier not decompiled";
+    }
 
-  function getLifeTier(): Int {}
+    public function getLifeTier(): Int {
+        throw "stub: getLifeTier not decompiled";
+    }
 }
-

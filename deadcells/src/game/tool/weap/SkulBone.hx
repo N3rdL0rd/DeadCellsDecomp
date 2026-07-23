@@ -1,27 +1,40 @@
 package tool.weap;
+
 class SkulBone extends tool.Weapon {
-  var secondAttackHit: Bool;
-  var curWhirlwindAttackCounter: Int;
-  var whirlwindDelayBetweenAttacks: Float;
+    public var secondAttackHit: Bool;
+    public var curWhirlwindAttackCounter: Int;
+    public var whirlwindDelayBetweenAttacks: Float;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function initSkill(idx: Int, chainInf: Dynamic, s: tool.Weapon.Weapon) {}
+    public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.WeaponSkill): Void {
+    }
 
-  function onBeforeCurSkillPrepare() {}
+    public override function onBeforeCurSkillPrepare(): Void {
+    }
 
-  function launchWhirlwindAttack() {}
+    public function launchWhirlwindAttack(): Void {
+    }
 
-  function updateWhirlwindAttack(ratio: Float) {}
+    public function updateWhirlwindAttack(arg0: Float): Void {
+    }
 
-  function onExecute(): Bool {}
+    public override function onExecute(): Bool {
+        throw "stub: onExecute not decompiled";
+    }
 
-  function playAttack(): Bool {}
+    public function playAttack(): Bool {
+        throw "stub: playAttack not decompiled";
+    }
 
-  function playWhirlwindIntermediateAttack() {}
+    public function playWhirlwindIntermediateAttack(): Void {
+    }
 
-  function hitFromWeapon(e: Entity, _cycle: Dynamic) {}
+    public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
+    }
 
-  function addWhirlwindDur(sec: Float) {}
+    public function addWhirlwindDur(arg0: Float): Void {
+    }
 }
-

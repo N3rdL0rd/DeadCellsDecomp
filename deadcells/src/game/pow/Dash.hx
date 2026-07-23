@@ -1,36 +1,48 @@
 package pow;
+
 class Dash extends Power {
-  var isDashing: Bool;
-  var startCY: Int;
-  var startCX: Int;
-  var startX: Float;
-  var startY: Float;
-  var range: Float;
-  var prevSprX: Float;
-  var prevX: Float;
-  var didntMoveLastFrame: Bool;
-  var dir: Int;
-  var isBack: Bool;
-  var predictPixel: Float;
-  var predictCase: Float;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var isDashing: Bool;
+    public var startCY: Int;
+    public var startCX: Int;
+    public var startX: Float;
+    public var startY: Float;
+    public var range: Float;
+    public var prevSprX: Float;
+    public var prevX: Float;
+    public var didntMoveLastFrame: Bool;
+    public var dir: Int;
+    public var isBack: Bool;
+    public var predictPixel: Float;
+    public var predictCase: Float;
 
-  function __constructor__(o: Entity, i: tool.InventItem.InventItem, isBack: Bool) {}
+    public function new(arg0: Entity, arg1: tool.InventItem, arg2: Bool) {
+        super();
+    }
 
-  function shouldChangeLevelWithHero(): Bool {}
+    public override function shouldChangeLevelWithHero(): Bool {
+        throw "stub: shouldChangeLevelWithHero not decompiled";
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function endDash() {}
+    public function endDash(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

@@ -1,24 +1,38 @@
 package level.gen.mapbuilder;
+
 class DookuCastleMapBuilder extends level.gen.MapBuilder {
-  var extensionPossibleRooms: haxe.ds.IntMap<Dynamic>;
-  var roomSizes: hl.types.ArrayBytes<Int>;
+    public var extensionPossibleRooms: haxe.ds.IntMap;
+    public var roomSizes: Array<Int>;
 
-  function __constructor__(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: Int, arg3: Dynamic, arg4: libs.Rand) {
+        super();
+    }
 
-  function initRoomNodes() {}
+    public override function initRoomNodes(): Void {
+    }
 
-  function buildMap(): level.LevelMap.LevelMap {}
+    public override function buildMap(): level.LevelMap {
+        throw "stub: buildMap not decompiled";
+    }
 
-  function getBigRoomExtensionBounds(): Dynamic {}
+    public function getBigRoomExtensionBounds(): Dynamic {
+        throw "stub: getBigRoomExtensionBounds not decompiled";
+    }
 
-  function addBigRoomExtension() {}
+    public function addBigRoomExtension(): Void {
+    }
 
-  function computeExtensionPossibleRooms() {}
+    public function computeExtensionPossibleRooms(): Void {
+    }
 
-  function pickExtensionRoom(widToFill: Int): level.RoomTemplate.RoomTemplate {}
+    public function pickExtensionRoom(arg0: Int): level.RoomTemplate {
+        throw "stub: pickExtensionRoom not decompiled";
+    }
 
-  function buildBigRoomExtensionTransitions(dat: level.LevelMap.LevelMap): level.LevelMap.LevelMap {}
+    public function buildBigRoomExtensionTransitions(arg0: level.LevelMap): level.LevelMap {
+        throw "stub: buildBigRoomExtensionTransitions not decompiled";
+    }
 
-  function addIndependentRoom(cx: Int, cy: Int, template: level.RoomTemplate.RoomTemplate) {}
+    public function addIndependentRoom(arg0: Int, arg1: Int, arg2: level.RoomTemplate): Void {
+    }
 }
-

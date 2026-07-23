@@ -1,41 +1,58 @@
 package en.mob.boss.dooku;
+
 class DookuMagmaBall extends Entity {
-  var sprite: DookuMagmaBallSpr;
-  var dooku: en.mob.boss.DookuBeast.DookuBeast;
-  var speed: Float;
-  var pfSpawnDist: Float;
-  var destroyDist: Float;
-  var damage: Int;
-  var ox: Float;
-  var oy: Float;
-  var a: tool.Area.Area;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var sprite: en.mob.boss.dooku.DookuMagmaBallSpr;
+    public var dooku: en.mob.boss.DookuBeast;
+    public var speed: Float;
+    public var pfSpawnDist: Float;
+    public var destroyDist: Float;
+    public var damage: Int;
+    public var ox: Float;
+    public var oy: Float;
+    public var a: tool.Area;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, dooku: en.mob.boss.DookuBeast.DookuBeast, speed: Float, pfSpawnDist: Float, destroyDist: Float, damage: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.boss.DookuBeast, arg4: Float, arg5: Float, arg6: Float, arg7: Int) {
+        super();
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function onLeaveMap() {}
+    public override function onLeaveMap(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

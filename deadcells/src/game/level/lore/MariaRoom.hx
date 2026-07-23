@@ -1,22 +1,34 @@
 package level.lore;
+
 class MariaRoom extends level.LoreManager {
-  var catExam: en.inter.Examinable.Examinable;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var catExam: en.inter.Examinable;
 
-  function __constructor__(l: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function unlockCatExaminable() {}
+    public function unlockCatExaminable(): Void {
+    }
 
-  function onCreateExaminable(custId: String, exam: en.inter.Examinable.Examinable): Bool {}
+    public override function onCreateExaminable(arg0: String, arg1: en.inter.Examinable): Bool {
+        throw "stub: onCreateExaminable not decompiled";
+    }
 
-  function onCustomEvent(id: String, e: en.inter.Examinable.Examinable) {}
+    public override function onCustomEvent(arg0: String, arg1: en.inter.Examinable): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

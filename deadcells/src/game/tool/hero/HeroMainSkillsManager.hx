@@ -1,75 +1,124 @@
 package tool.hero;
+
 class HeroMainSkillsManager extends tool.HeroManager {
-  var skills: hl.types.ArrayObj<Dynamic>;
-  var blackBoards: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var skills: Array<Dynamic>;
+    public var blackBoards: Array<Dynamic>;
 
-  function __constructor__(h: en.Hero.Hero, game: pr.Game.Game) {}
+    public function new(arg0: en.Hero, arg1: pr.Game) {
+        super();
+    }
 
-  function getBlackBoard(type: hl.Class): tool.mainSkills.blackboards.MainSkillBlackBoard.MainSkillBlackBoard {}
+    public function getBlackBoard(arg0: hl.Class): tool.mainSkills.blackboards.MainSkillBlackBoard {
+        throw "stub: getBlackBoard not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function preUpdate() {}
+    public override function preUpdate(): Void {
+    }
 
-  function fixedUpdate() {}
+    public override function fixedUpdate(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function onOwnerCooldownEnd(k: String, subIndex: Int) {}
+    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function registerCustomSkill(skill: tool.HeroMainSkill.HeroMainSkill) {}
+    public function registerCustomSkill(arg0: tool.HeroMainSkill): Void {
+    }
 
-  function unregisterSkill(skill: tool.HeroMainSkill.HeroMainSkill) {}
+    public function unregisterSkill(arg0: tool.HeroMainSkill): Void {
+    }
 
-  function onAffectChange(x: Int, isActive: Bool) {}
+    public function onAffectChange(arg0: Int, arg1: Bool): Void {
+    }
 
-  function onEquippedItemsUpdated(duringHeroInit: Dynamic) {}
+    public function onEquippedItemsUpdated(arg0: Ref): Void {
+    }
 
-  function onPickItem(from: Entity, i: tool.InventItem.InventItem) {}
+    public function onPickItem(arg0: Entity, arg1: tool.InventItem): Void {
+    }
 
-  function onUnlockItem(kind: String) {}
+    public function onUnlockItem(arg0: String): Void {
+    }
 
-  function onMobDeath(mob: en.Mob.Mob) {}
+    public function onMobDeath(arg0: en.Mob): Void {
+    }
 
-  function onUse(inter: en.Interactive.Interactive) {}
+    public function onUse(arg0: en.Interactive): Void {
+    }
 
-  function getMainSkill(type: hl.Class): tool.HeroMainSkill.HeroMainSkill {}
+    public function getMainSkill(arg0: hl.Class): tool.HeroMainSkill {
+        throw "stub: getMainSkill not decompiled";
+    }
 
-  function getEnabledMainSkill(type: hl.Class): tool.HeroMainSkill.HeroMainSkill {}
+    public function getEnabledMainSkill(arg0: hl.Class): tool.HeroMainSkill {
+        throw "stub: getEnabledMainSkill not decompiled";
+    }
 
-  function cancelMainSkills(type: hl.Class) {}
+    public function cancelMainSkills(arg0: hl.Class): Void {
+    }
 
-  function tryInterruptBy(heroSkill: tool.HeroMainSkill.HeroMainSkill): Bool {}
+    public function tryInterruptBy(arg0: tool.HeroMainSkill): Bool {
+        throw "stub: tryInterruptBy not decompiled";
+    }
 
-  function shouldHaveSmallHitbox(): Bool {}
+    public function shouldHaveSmallHitbox(): Bool {
+        throw "stub: shouldHaveSmallHitbox not decompiled";
+    }
 
-  function canWallGrab(): Bool {}
+    public function canWallGrab(): Bool {
+        throw "stub: canWallGrab not decompiled";
+    }
 
-  function canJumpThroughUp(): Bool {}
+    public function canJumpThroughUp(): Bool {
+        throw "stub: canJumpThroughUp not decompiled";
+    }
 
-  function canPreventStuckInWall(cx: Int, cy: Int): Bool {}
+    public function canPreventStuckInWall(arg0: Int, arg1: Int): Bool {
+        throw "stub: canPreventStuckInWall not decompiled";
+    }
 
-  function canBreakDoors(): Bool {}
+    public function canBreakDoors(): Bool {
+        throw "stub: canBreakDoors not decompiled";
+    }
 
-  function canBreakTiles(): Bool {}
+    public function canBreakTiles(): Bool {
+        throw "stub: canBreakTiles not decompiled";
+    }
 
-  function canUseInteractive(inter: en.Interactive.Interactive): Bool {}
+    public function canUseInteractive(arg0: en.Interactive): Bool {
+        throw "stub: canUseInteractive not decompiled";
+    }
 
-  function isItemUseful(item: tool.InventItem.InventItem): Bool {}
+    public function isItemUseful(arg0: tool.InventItem): Bool {
+        throw "stub: isItemUseful not decompiled";
+    }
 
-  function startDoubleJumpTutorial() {}
+    public function startDoubleJumpTutorial(): Void {
+    }
 
-  function updateHealingTimers() {}
+    public function updateHealingTimers(): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 }
-

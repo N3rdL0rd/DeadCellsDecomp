@@ -1,11 +1,16 @@
 package level.struct;
+
 class CustomOutside extends level.LevelStruct {
-  static var CUSTOM_ROOM_ID: String;
+    public static var CUSTOM_ROOM_ID: String;
 
-  function __constructor__(user: User, level: Dynamic, rng: libs.Rand.Rand) {}
+    public function new(arg0: User, arg1: Dynamic, arg2: libs.Rand) {
+        super();
+    }
 
-  function buildMainRooms(): level.RoomNode.RoomNode {}
+    public override function buildMainRooms(): level.RoomNode {
+        throw "stub: buildMainRooms not decompiled";
+    }
 
-  function addTeleports() {}
+    public override function addTeleports(): Void {
+    }
 }
-

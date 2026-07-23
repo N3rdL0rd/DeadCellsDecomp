@@ -1,23 +1,34 @@
 package en.gr;
+
 class EnemyFloatingGrenade extends en.Grenade {
-  var glow: libs.heaps.slib.HSprite.HSprite;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var glow: libs.heaps.slib.HSprite;
 
-  function __constructor__(e: Entity) {}
+    public function new(arg0: Entity) {
+        super();
+    }
 
-  function throwFree(dx: Float, dy: Float) {}
+    public override function throwFree(arg0: Float, arg1: Float): Void {
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public function onOutOfGameChange(): Void {
+    }
 
-  function dispose() {}
+    public override function dispose(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

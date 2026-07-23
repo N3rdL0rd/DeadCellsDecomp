@@ -1,10 +1,13 @@
 package ui.we;
-class Spacer extends ui.Window.WindowElement {
-  var uHei: Float;
-  var filler: h2d.Bitmap.Bitmap;
 
-  function __constructor__(win: ui.Window.Window, uHei: Dynamic) {}
+class Spacer extends ui.WindowElement {
+    public var uHei: Float;
+    public var filler: h2d.Bitmap;
 
-  function beforeReflow() {}
+    public function new(arg0: ui.Window, arg1: Dynamic) {
+        super();
+    }
+
+    public override function beforeReflow(): Void {
+    }
 }
-

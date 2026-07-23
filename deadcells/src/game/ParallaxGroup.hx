@@ -1,38 +1,45 @@
+class ParallaxGroup extends h2d.TileGroup {
+    public var scrollX: Float;
+    public var scrollY: Float;
+    public var bounds: h2d.col.Bounds;
+    public var view: Viewport;
+    public var vwid: Float;
+    public var vhei: Float;
+    public var limitBounds: h2d.col.Bounds;
+    public var scrollMaxY: Int;
+    public var autoScrollX: Float;
+    public var curOffsetX: Float;
+    public var maxOffsetX: Float;
+    public var originX: Float;
+    public var autoScrollY: Float;
+    public var curOffsetY: Float;
+    public var maxOffsetY: Float;
+    public var originY: Float;
+    public var levelX: Float;
+    public var levelY: Float;
 
-class ParallaxGroup extends h2d.Tile.TileGroup {
-  var scrollX: Float;
-  var scrollY: Float;
-  var bounds: h2d.col.Bounds.Bounds;
-  var view: Viewport;
-  var vwid: Float;
-  var vhei: Float;
-  var limitBounds: h2d.col.Bounds.Bounds;
-  var scrollMaxY: Int;
-  var autoScrollX: Float;
-  var curOffsetX: Float;
-  var maxOffsetX: Float;
-  var originX: Float;
-  var autoScrollY: Float;
-  var curOffsetY: Float;
-  var maxOffsetY: Float;
-  var originY: Float;
-  var levelX: Float;
-  var levelY: Float;
+    public function new(arg0: h2d.Tile, arg1: h2d.col.Bounds, arg2: Viewport, arg3: Dynamic, arg4: Dynamic, arg5: h2d.Object, arg6: h2d.col.Bounds, arg7: Dynamic, arg8: Dynamic, arg9: Dynamic) {
+        super();
+    }
 
-  function __constructor__(t: h2d.Tile.Tile, bounds: h2d.col.Bounds.Bounds, viewport: Viewport, scrollX: Dynamic, scrollY: Dynamic, p: h2d.Object.Object, limitBounds: h2d.col.Bounds.Bounds, scrollMaxY: Dynamic, levelX: Dynamic, levelY: Dynamic) {}
+    public function calcAbsPos(): Void {
+    }
 
-  function calcAbsPos() {}
+    public function parallaxAdd(arg0: Float, arg1: Float, arg2: h2d.Tile): Void {
+    }
 
-  function parallaxAdd(x: Float, y: Float, t: h2d.Tile.Tile) {}
+    public function parallaxAddScaleTo(arg0: Float, arg1: Float, arg2: h2d.Tile, arg3: Int, arg4: Int): Void {
+    }
 
-  function parallaxAddScaleTo(x: Float, y: Float, t: h2d.Tile.Tile, w: Int, h: Int) {}
+    public function hfill(arg0: Array<Dynamic>, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Ref): Void {
+    }
 
-  function hfill(tiles: hl.types.ArrayObj<Dynamic>, y: Float, from: Dynamic, to: Dynamic, density: Dynamic, rnd: Dynamic, onAdd: Dynamic, scroll: Dynamic) {}
+    public function vfill(arg0: Array<Dynamic>, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: Ref, arg8: Ref): Void {
+    }
 
-  function vfill(tiles: hl.types.ArrayObj<Dynamic>, x: Float, from: Dynamic, to: Dynamic, density: Dynamic, rnd: Dynamic, onAdd: Dynamic, xOffset: Dynamic, scroll: Dynamic) {}
+    public function hfillRand(arg0: Array<Dynamic>, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Int, arg5: Int, arg6: Dynamic, arg7: Dynamic, arg8: Ref, arg9: h2d.Tile): Void {
+    }
 
-  function hfillRand(tiles: hl.types.ArrayObj<Dynamic>, y: Float, from: Dynamic, to: Dynamic, minSpace: Int, maxSpace: Int, rnd: Dynamic, onAdd: Dynamic, scroll: Dynamic, randomAdditionalTile: h2d.Tile.Tile) {}
-
-  function vfillRand(tiles: hl.types.ArrayObj<Dynamic>, x: Float, from: Dynamic, to: Dynamic, minSpace: Int, maxSpace: Int, rnd: Dynamic, onAdd: Dynamic, scroll: Dynamic, randomAdditionalTile: h2d.Tile.Tile) {}
+    public function vfillRand(arg0: Array<Dynamic>, arg1: Float, arg2: Dynamic, arg3: Dynamic, arg4: Int, arg5: Int, arg6: Dynamic, arg7: Dynamic, arg8: Ref, arg9: h2d.Tile): Void {
+    }
 }
-

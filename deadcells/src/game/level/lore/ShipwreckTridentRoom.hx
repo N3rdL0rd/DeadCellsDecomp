@@ -1,12 +1,17 @@
 package level.lore;
+
 class ShipwreckTridentRoom extends level.LoreManager {
-  var swordY: Float;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var swordY: Float;
 
-  function __constructor__(l: pr.Level.Level, r: level.Room.Room) {}
+    public function new(arg0: pr.Level, arg1: level.Room) {
+        super();
+    }
 
-  function onDropLoot(e: en.inter.Examinable.Examinable, by: Entity, examinableId: String) {}
+    public override function onDropLoot(arg0: en.inter.Examinable, arg1: Entity, arg2: String): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

@@ -1,40 +1,58 @@
 package libs.heaps.slib;
+
 class HSpriteBE extends h2d.BatchElement {
-  var _animManager: libs.heaps.slib.AnimManager.AnimManager;
-  var lib: libs.heaps.slib.SpriteLib.SpriteLib;
-  var groupName: String;
-  var group: Dynamic;
-  var frame: Int;
-  var frameData: Dynamic;
-  var pivot: libs.heaps.slib.SpritePivot.SpritePivot;
-  var destroyed: Bool;
-  var onAnimManAlloc: Dynamic;
-  var onFrameChange: Dynamic;
-  var allocated: Bool;
-  var <none>: Dynamic;
+    public var _animManager: libs.heaps.slib.AnimManager;
+    public var lib: libs.heaps.slib.SpriteLib;
+    public var groupName: String;
+    public var group: libs.heaps.slib.LibGroup;
+    public var frame: Int;
+    public var frameData: libs.heaps.slib.FrameData;
+    public var pivot: libs.heaps.slib.SpritePivot;
+    public var destroyed: Bool;
+    public var onAnimManAlloc: Dynamic;
+    public var onFrameChange: Dynamic;
+    public var allocated: Bool;
+    public var : Dynamic;
 
-  function __constructor__(sb: libs.heaps.slib.HSpriteBatch.HSpriteBatch, l: libs.heaps.slib.SpriteLib.SpriteLib, g: String, f: Dynamic) {}
+    public function new(arg0: libs.heaps.slib.HSpriteBatch, arg1: libs.heaps.slib.SpriteLib, arg2: String, arg3: Ref) {
+        super();
+    }
 
-  function onAdd() {}
+    public function onAdd(): Void {
+    }
 
-  function onRemove() {}
+    public function onRemove(): Void {
+    }
 
-  function get_anim(): libs.heaps.slib.AnimManager.AnimManager {}
+    public function get_anim(): libs.heaps.slib.AnimManager {
+        throw "stub: get_anim not decompiled";
+    }
 
-  function toString(): String {}
+    public function toString(): String {
+        throw "stub: toString not decompiled";
+    }
 
-  function set(l: libs.heaps.slib.SpriteLib.SpriteLib, g: String, f: Dynamic, stopAllAnims: Dynamic) {}
+    public function set(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref, arg3: Ref): Void {
+    }
 
-  function setFrame(f: Int) {}
+    public function setFrame(arg0: Int): Void {
+    }
 
-  function totalFrames(): Int {}
+    public function totalFrames(): Int {
+        throw "stub: totalFrames not decompiled";
+    }
 
-  function updateTile() {}
+    public function updateTile(): Void {
+    }
 
-  function remove() {}
+    public override function remove(): Void {
+    }
 
-  function update(et: Float): Bool {}
+    public override function update(arg0: Float): Bool {
+        throw "stub: update not decompiled";
+    }
 
-  function __string(): hl.Bytes {}
+    public function __string(): hl.Bytes {
+        throw "stub: __string not decompiled";
+    }
 }
-

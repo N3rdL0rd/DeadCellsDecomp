@@ -1,15 +1,21 @@
 package ui.popd;
+
 class PopDamageSts extends ui.PopDamage {
-  var dy: Float;
-  var dx: Float;
-  var dyFallOffSpeed: Float;
+    public var dy: Float;
+    public var dx: Float;
+    public var dyFallOffSpeed: Float;
 
-  function __constructor__(e: Entity, ad: tool.atk.AttackData.AttackData, dmgIdx: Int, big: Dynamic, customFont: Dynamic) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Int, arg3: Ref, arg4: Dynamic) {
+        super();
+    }
 
-  static function create(e: Entity, ad: tool.atk.AttackData.AttackData, dmgIdx: Int, big: Dynamic, customFont: Dynamic): PopDamageSts {}
+    public static function create(arg0: Entity, arg1: tool.atk.AttackData, arg2: Int, arg3: Ref, arg4: Dynamic): ui.popd.PopDamageSts {
+        throw "stub: create not decompiled";
+    }
 
-  function doMovement(e: Entity, ad: tool.atk.AttackData.AttackData) {}
+    public override function doMovement(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 }
-

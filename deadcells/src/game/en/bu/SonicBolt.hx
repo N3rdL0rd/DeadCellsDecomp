@@ -1,35 +1,52 @@
 package en.bu;
+
 class SonicBolt extends en.Bullet {
-  var hasLight: Bool;
-  var shouldCrit: Bool;
-  var color: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
+    public var hasLight: Bool;
+    public var shouldCrit: Bool;
+    public var color: Int;
 
-  function onBlock(byEnt: Bool) {}
+    public function new(arg0: Entity, arg1: tool.atk.AttackData, arg2: Float, arg3: Float, arg4: Int, arg5: Bool) {
+        super();
+    }
 
-  function beforeHit(e: Entity, atk: tool.atk.AttackData.AttackData) {}
+    public function init(): Void {
+    }
 
-  function __constructor__(from: Entity, atk: tool.atk.AttackData.AttackData, ang: Float, spd: Float, c: Int, hasLight: Bool) {}
+    public override function initGfx(): Void {
+    }
 
-  function init() {}
+    public override function doTail(): Void {
+    }
 
-  function initGfx() {}
+    public override function playBlockSound(): Void {
+    }
 
-  function doTail() {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function playBlockSound() {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function serialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getSerializeSchema(): hxbit.Schema {
+        throw "stub: getSerializeSchema not decompiled";
+    }
 
-  function serialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserializeInit(): Void {
+    }
 
-  function getSerializeSchema(): hxbit.Schema.Schema {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function unserializeInit() {}
+    public function beforeHit(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public function onBlock(arg0: Bool): Void {
+    }
 }
-

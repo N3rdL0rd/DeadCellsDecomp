@@ -1,18 +1,25 @@
 package cine;
-class HeroDeath extends HeroDeathBase {
-  var pool: libs.heaps.HParticle.HParticle;
-  var fxSb: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
 
-  function __constructor__(e: en.Hero.Hero, lostBody: Bool) {}
+class HeroDeath extends cine.HeroDeathBase {
+    public var pool: libs.heaps.ParticlePool;
+    public var fxSb: libs.heaps.slib.HSpriteBatch;
 
-  function homunculusExit() {}
+    public function new(arg0: en.Hero, arg1: Bool) {
+        super();
+    }
 
-  function _fxHomunculusExit(p: libs.heaps.HParticle.HParticle) {}
+    public function homunculusExit(): Void {
+    }
 
-  function fxHomunculusExit(x: Float, y: Float, groundY: Float, dir: Int, c: Int) {}
+    public function _fxHomunculusExit(arg0: libs.heaps.HParticle): Void {
+    }
 
-  function onDispose() {}
+    public function fxHomunculusExit(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Int): Void {
+    }
 
-  function postUpdate() {}
+    public function onDispose(): Void {
+    }
+
+    public override function postUpdate(): Void {
+    }
 }
-

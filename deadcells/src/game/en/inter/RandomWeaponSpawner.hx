@@ -1,47 +1,70 @@
 package en.inter;
+
 class RandomWeaponSpawner extends Entity {
-  var spawnDelayF: Int;
-  var allowSameItemKind: Bool;
-  var tier: String;
-  var baseSeed: Int;
-  var rseed: libs.Rand.Rand;
-  var hasSpawnedItem: Bool;
-  var qualityProbabilities: hl.types.ArrayBytes<Float>;
-  static var QUALITY_LEVEL_COUNT: Int;
-  static var lootGen: level.LootGen.LootGen;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var QUALITY_LEVEL_COUNT: Int;
+    public static var lootGen: level.LootGen;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var spawnDelayF: Int;
+    public var allowSameItemKind: Bool;
+    public var tier: String;
+    public var baseSeed: Int;
+    public var rseed: libs.Rand;
+    public var hasSpawnedItem: Bool;
+    public var qualityProbabilities: Array<Float>;
 
-  function __constructor__(lvl: pr.Level.Level, x: Int, y: Int, tier: String, seed: Int, delayF: Int) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: String, arg4: Int, arg5: Int) {
+        super();
+    }
 
-  function setTier(tier: String) {}
+    public function setTier(arg0: String): Void {
+    }
 
-  function setQualityProbabilities(probabilities: hl.types.ArrayBytes<Float>) {}
+    public function setQualityProbabilities(arg0: Array<Float>): Void {
+    }
 
-  function outOfGameUpdate() {}
+    public override function outOfGameUpdate(): Void {
+    }
 
-  function spawnItemInArmory() {}
+    public function spawnItemInArmory(): Void {
+    }
 
-  function spawnItem(inArmory: Bool): en.inter.ItemDrop.ItemDrop {}
+    public function spawnItem(arg0: Bool): en.inter.ItemDrop {
+        throw "stub: spawnItem not decompiled";
+    }
 
-  function isUnique(i: tool.InventItem.InventItem): Bool {}
+    public function isUnique(arg0: tool.InventItem): Bool {
+        throw "stub: isUnique not decompiled";
+    }
 
-  function applyQualities(item: tool.InventItem.InventItem) {}
+    public function applyQualities(arg0: tool.InventItem): Void {
+    }
 
-  function getTargetTier(tier: String): Dynamic {}
+    public function getTargetTier(arg0: String): Dynamic {
+        throw "stub: getTargetTier not decompiled";
+    }
 
-  function getPossibleWeapons(): Dynamic {}
+    public function getPossibleWeapons(): Dynamic {
+        throw "stub: getPossibleWeapons not decompiled";
+    }
 
-  function respawnInArmory() {}
+    public function respawnInArmory(): Void {
+    }
 
-  function respawn(inArmory: Bool) {}
+    public function respawn(arg0: Bool): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function unserializeInit() {}
+    public override function unserializeInit(): Void {
+    }
 
-  function unserialize(__ctx: hxbit.Serializer.Serializer) {}
+    public override function unserialize(arg0: hxbit.Serializer): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

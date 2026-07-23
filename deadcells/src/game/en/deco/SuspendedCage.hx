@@ -1,25 +1,35 @@
 package en.deco;
+
 class SuspendedCage extends en.deco.Pendulum {
-  var dc: libs.heaps.slib.HSprite.HSprite;
-  var bottomName: String;
-  var flipX: Bool;
-  var forcedFrame: Dynamic;
-  static var tingleSounds: hl.types.ArrayObj<Dynamic>;
-  static var __clid: Int;
-  static var __eclids: hl.types.ArrayBytes<Int>;
+    public static var tingleSounds: Array<Dynamic>;
+    public static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public var dc: libs.heaps.slib.HSprite;
+    public var bottomName: String;
+    public var flipX: Bool;
+    public var forcedFrame: Dynamic;
 
-  function __constructor__(lvl: pr.Level.Level, posX: Float, posY: Float, chainName: String, botName: String, flipX: Dynamic, frame: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Float, arg2: Float, arg3: String, arg4: String, arg5: Ref, arg6: Dynamic) {
+        super();
+    }
 
-  function initGfx() {}
+    public override function initGfx(): Void {
+    }
 
-  function onOutOfGameChange() {}
+    public override function onOutOfGameChange(): Void {
+    }
 
-  function initTingle(dir: Int, fromHero: Bool) {}
+    public override function initTingle(arg0: Int, arg1: Bool): Void {
+    }
 
-  function initChain(offset: Dynamic) {}
+    public override function initChain(arg0: Ref): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 }
-

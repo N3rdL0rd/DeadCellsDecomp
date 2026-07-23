@@ -1,27 +1,40 @@
 package tool.weap.bow;
+
 class MultiCrossBow extends tool.weap.BaseBow {
-  var angDir: Int;
+    public var angDir: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_shootY(): Float {}
+    public override function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function playShootAnim() {}
+    public override function playShootAnim(): Void {
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public override function shoot(arg0: Array<Dynamic>): Void {
+    }
 }
 
 class MultiCrossBowOffHand extends tool.weap.dual.OffHandRanged {
-  var minCYhit: Int;
+    public var minCYhit: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function get_shootY(): Float {}
+    public function get_shootY(): Float {
+        throw "stub: get_shootY not decompiled";
+    }
 
-  function onBowChargeStart() {}
+    public function onBowChargeStart(): Void {
+    }
 
-  function onBowCharging(r: Float) {}
+    public function onBowCharging(arg0: Float): Void {
+    }
 
-  function shoot(bulletsOut: hl.types.ArrayObj<Dynamic>) {}
+    public function shoot(arg0: Array<Dynamic>): Void {
+    }
 }
-

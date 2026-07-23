@@ -1,14 +1,18 @@
 package cine.coll;
+
 class CollectorTransform extends cine.KeyframesCinematic {
-  var startMask: h2d.Graphics.Graphics;
-  var endMask: h2d.Graphics.Graphics;
-  var music: hxd.snd.Channel.Channel;
-  var endCb: Dynamic;
+    public var startMask: h2d.Graphics;
+    public var endMask: h2d.Graphics;
+    public var music: hxd.snd.Channel;
+    public var endCb: Dynamic;
 
-  function __constructor__(endCb: Dynamic) {}
+    public function new(arg0: Dynamic) {
+        super();
+    }
 
-  function onEnd() {}
+    public override function onEnd(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 }
-

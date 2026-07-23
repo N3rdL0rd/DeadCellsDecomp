@@ -1,48 +1,69 @@
 package level.disp;
+
 class Astrolab extends level.BiomeDisp {
-  var torchPoints: hl.types.ArrayObj<Dynamic>;
-  var clouds: hl.types.ArrayObj<Dynamic>;
-  var sprites: hl.types.ArrayObj<Dynamic>;
-  var bgPool: libs.heaps.HParticle.HParticle;
-  var bgParticles: libs.heaps.slib.HSpriteBatch.HSpriteBatch;
-  var groupBackStructures: libs.heaps.StaticGeometryGroup.StaticGeometryGroup;
-  var shelfDeck: libs.RandDeck.RandDeck;
-  var starAccu: Float;
+    public var torchPoints: Array<Dynamic>;
+    public var clouds: Array<Dynamic>;
+    public var sprites: Array<Dynamic>;
+    public var bgPool: libs.heaps.ParticlePool;
+    public var bgParticles: libs.heaps.slib.HSpriteBatch;
+    public var groupBackStructures: libs.heaps.StaticGeometryGroup;
+    public var shelfDeck: libs.RandDeck;
+    public var starAccu: Float;
 
-  function __constructor__(p: pr.Level.Level, map: level.LevelMap.LevelMap) {}
+    public function new(arg0: pr.Level, arg1: level.LevelMap) {
+        super();
+    }
 
-  function onDispose() {}
+    public function onDispose(): Void {
+    }
 
-  function render() {}
+    public function render(): Void {
+    }
 
-  function decorateRoom(r: level.Room.Room) {}
+    public override function decorateRoom(arg0: level.Room): Void {
+    }
 
-  function canStampOn(df: Int): Bool {}
+    public override function canStampOn(arg0: Int): Bool {
+        throw "stub: canStampOn not decompiled";
+    }
 
-  function decorateLevel() {}
+    public function decorateLevel(): Void {
+    }
 
-  function decorateZone(z: level.DecoTypes.DecoTypes) {}
+    public function decorateZone(arg0: level.DecoZone): Void {
+    }
 
-  function renderStructures() {}
+    public override function renderStructures(): Void {
+    }
 
-  function addBigShelves(z: level.DecoTypes.DecoTypes) {}
+    public function addBigShelves(arg0: level.DecoZone): Void {
+    }
 
-  function addMedShelf(z: level.DecoTypes.DecoTypes) {}
+    public function addMedShelf(arg0: level.DecoZone): Void {
+    }
 
-  function addSmallShelf(z: level.DecoTypes.DecoTypes) {}
+    public function addSmallShelf(arg0: level.DecoZone): Void {
+    }
 
-  function addBigPoster(z: level.DecoTypes.DecoTypes) {}
+    public function addBigPoster(arg0: level.DecoZone): Void {
+    }
 
-  function addMedPoster(z: level.DecoTypes.DecoTypes) {}
+    public function addMedPoster(arg0: level.DecoZone): Void {
+    }
 
-  function addDecoTorch(z: level.DecoTypes.DecoTypes) {}
+    public function addDecoTorch(arg0: level.DecoZone): Void {
+    }
 
-  function addCandlePendulum(z: level.DecoTypes.DecoTypes) {}
+    public function addCandlePendulum(arg0: level.DecoZone): Void {
+    }
 
-  function renderBackground() {}
+    public function renderBackground(): Void {
+    }
 
-  function postUpdate() {}
+    public override function postUpdate(): Void {
+    }
 
-  function getStampWallThreshold(): Float {}
+    public override function getStampWallThreshold(): Float {
+        throw "stub: getStampWallThreshold not decompiled";
+    }
 }
-

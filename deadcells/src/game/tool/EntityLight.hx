@@ -1,31 +1,37 @@
 package tool;
+
 class EntityLight {
-  var level: pr.Level.Level;
-  var l: light.PointLight.PointLight;
-  var e: Entity;
-  var killed: Bool;
-  var globalAlpha: Float;
-  var coreColor: Int;
-  var coreAlpha: Float;
-  var intensity: Float;
-  var offX: Float;
-  var offY: Float;
-  var lastStable: tool.FPoint.FPoint;
-  var core: libs.heaps.slib.HSpriteBE.HSpriteBE;
-  var debug: h2d.Graphics.Graphics;
-  var invalidateDebug: Bool;
-  static var DEBUG_LIGHTS_FLAGS: String;
+    public static var DEBUG_LIGHTS_FLAGS: String;
+    public var level: pr.Level;
+    public var l: light.PointLight;
+    public var e: Entity;
+    public var killed: Bool;
+    public var globalAlpha: Float;
+    public var coreColor: Int;
+    public var coreAlpha: Float;
+    public var intensity: Float;
+    public var offX: Float;
+    public var offY: Float;
+    public var lastStable: tool.FPoint;
+    public var core: libs.heaps.slib.HSpriteBE;
+    public var debug: h2d.Graphics;
+    public var invalidateDebug: Bool;
 
-  function onUpdate() {}
+    public function new(arg0: pr.Level, arg1: Entity, arg2: String, arg3: Dynamic) {
+    }
 
-  function __constructor__(lvl: pr.Level.Level, e: Entity, conf: String, col: Dynamic) {}
+    public function removeAdditiveCore(): Void {
+    }
 
-  function removeAdditiveCore() {}
+    public function dispose(): Void {
+    }
 
-  function dispose() {}
+    public function update(arg0: Float): Void {
+    }
 
-  function update(dt: Float) {}
+    public function setConf(arg0: String): Void {
+    }
 
-  function setConf(kind: String) {}
+    public function onUpdate(): Void {
+    }
 }
-

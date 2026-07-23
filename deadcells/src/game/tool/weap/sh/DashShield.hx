@@ -1,25 +1,34 @@
 package tool.weap.sh;
+
 class DashShield extends tool.weap.BaseShield {
-  var dashingF: Float;
-  var frontArea: tool.Area.Area;
-  var dashMul: Float;
-  var hasDashCharged: Bool;
-  var fxColor: Int;
+    public var dashingF: Float;
+    public var frontArea: tool.Area;
+    public var dashMul: Float;
+    public var hasDashCharged: Bool;
+    public var fxColor: Int;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function onShieldStartParry() {}
+    public override function onShieldStartParry(): Void {
+    }
 
-  function onShieldBlock(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public override function onShieldBlock(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function push(e: Entity) {}
+    public function push(arg0: Entity): Void {
+    }
 
-  function cancelDash() {}
+    public function cancelDash(): Void {
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function onShieldHolding(ratio: Float) {}
+    public override function onShieldHolding(arg0: Float): Void {
+    }
 
-  function onShieldReleased() {}
+    public override function onShieldReleased(): Void {
+    }
 }
-

@@ -1,19 +1,27 @@
 package tool.weap.sh;
+
 class AreaShield extends tool.weap.BaseShield {
-  var hasTriggeredBonusAreaThisFrame: Bool;
+    public var hasTriggeredBonusAreaThisFrame: Bool;
 
-  function __constructor__(o: en.Hero.Hero, i: tool.InventItem.InventItem) {}
+    public function new(arg0: en.Hero, arg1: tool.InventItem) {
+        super();
+    }
 
-  function fixedUpdate() {}
+    public function fixedUpdate(): Void {
+    }
 
-  function areaEffect(excluded: Entity, crit: Bool) {}
+    public function areaEffect(arg0: Entity, arg1: Bool): Void {
+    }
 
-  function counterGrenade(source: en.Grenade.Grenade) {}
+    public override function counterGrenade(arg0: en.Grenade): Void {
+    }
 
-  function onShieldBlock(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public override function onShieldBlock(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function onShieldCounterSuccessful(sourceAtk: tool.atk.AttackData.AttackData, fullParry: Bool) {}
+    public override function onShieldCounterSuccessful(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    }
 
-  function tryTriggerBonusAreaEffect(crit: Bool) {}
+    public function tryTriggerBonusAreaEffect(arg0: Bool): Void {
+    }
 }
-

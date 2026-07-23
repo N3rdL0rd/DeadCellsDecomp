@@ -1,38 +1,61 @@
 package ui;
+
 class UIDlc extends ui.Process {
-  var ts: pr.TitleScreen.TitleScreen;
-  var controller: tool.Controller.Controller;
-  var fb: ui.FlowBox.FlowBox;
-  var title: ui.Text.Text;
-  var selection: h2d.ScaleGrid.ScaleGrid;
-  var dlcs: hl.types.ArrayObj<Dynamic>;
-  var mask: h2d.Mask.Mask;
-  var inter: h2d.Interactive.Interactive;
-  var fMenu: h2d.Flow.Flow;
-  var curDLCId: Int;
-  var boxScroller: ui.UIBox.UIBox;
-  var sliderScroller: libs.heaps.slib.HSprite.HSprite;
+    public var ts: pr.TitleScreen;
+    public var controller: tool.ControllerAccess;
+    public var fb: ui.FlowBox;
+    public var title: ui.Text;
+    public var selection: h2d.ScaleGrid;
+    public var dlcs: Array<Dynamic>;
+    public var mask: h2d.Mask;
+    public var inter: h2d.Interactive;
+    public var fMenu: h2d.Flow;
+    public var curDLCId: Int;
+    public var boxScroller: ui.UIBox;
+    public var sliderScroller: libs.heaps.slib.HSprite;
 
-  function __constructor__(ts: pr.TitleScreen.TitleScreen) {}
+    public function new(arg0: pr.TitleScreen) {
+        super();
+    }
 
-  function select(id: Int, instant: Dynamic) {}
+    public function select(arg0: Int, arg1: Ref): Void {
+    }
 
-  function hasScroll(): Bool {}
+    public function hasScroll(): Bool {
+        throw "stub: hasScroll not decompiled";
+    }
 
-  function moveSelection() {}
+    public function moveSelection(): Void {
+    }
 
-  function blur(sigma: Dynamic, gain: Dynamic) {}
+    public override function blur(arg0: Ref, arg1: Ref): Void {
+    }
 
-  function unblur() {}
+    public override function unblur(): Void {
+    }
 
-  function onDispose() {}
+    public override function onDispose(): Void {
+    }
 
-  function onResize() {}
+    public override function onResize(): Void {
+    }
 
-  function update() {}
+    public function update(): Void {
+    }
 
-  function onCancel() {}
+    public function onCancel(): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 }
 
+class DLCWindow extends h2d.Layers {
+    public var dlcId: tool.DLCId;
+    public var wid: Int;
+    public var hei: Int;
+
+    public function new(arg0: ui.UIDlc, arg1: Int, arg2: Int, arg3: tool.DLCId) {
+        super();
+    }
+}

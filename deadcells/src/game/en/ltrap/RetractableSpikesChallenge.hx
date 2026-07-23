@@ -1,24 +1,38 @@
 package en.ltrap;
+
 class RetractableSpikesChallenge extends en.ltrap.RetractableSpikes {
-  static var __eclids: hl.types.ArrayBytes<Int>;
-  static var __clid: Int;
+    public static var __eclids: Array<Int>;
+    public static var __clid: Int;
 
-  function __constructor__(l: pr.Level.Level, x: Int, y: Int, ang: Dynamic, spikeDirection: Int, natural: Dynamic, variable: String, tIn: Dynamic, tOut: Dynamic) {}
+    public function new(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Ref, arg4: Int, arg5: Dynamic, arg6: String, arg7: Ref, arg8: Ref) {
+        super();
+    }
 
-  function get_normalSprite(): String {}
+    public function get_normalSprite(): String {
+        throw "stub: get_normalSprite not decompiled";
+    }
 
-  function get_bloodySprite(): String {}
+    public function get_bloodySprite(): String {
+        throw "stub: get_bloodySprite not decompiled";
+    }
 
-  function initGfx() {}
+    public function initGfx(): Void {
+    }
 
-  function onHitHero() {}
+    public function onHitHero(): Void {
+    }
 
-  function goOut(instant: Bool, ignoreOnOut: Dynamic) {}
+    public override function goOut(arg0: Bool, arg1: Ref): Void {
+    }
 
-  function postUpdate() {}
+    public function postUpdate(): Void {
+    }
 
-  function getEntityCLIDS(): hl.types.ArrayBytes<Int> {}
+    public override function getEntityCLIDS(): Array<Int> {
+        throw "stub: getEntityCLIDS not decompiled";
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

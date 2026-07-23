@@ -1,33 +1,52 @@
 package tool.mainSkills;
+
 class AirJump extends tool.HeroMainSkill {
-  var blackboard: hxbit.Macros.Macros;
-  var holdDoubleJumpLock: Float;
-  static var __clid: Int;
+    public static var __clid: Int;
+    public var blackboard: tool.mainSkills.blackboards.JumpBlackBoard;
+    public var holdDoubleJumpLock: Float;
 
-  function __constructor__(hero: en.Hero.Hero, game: pr.Game.Game, skillInfos: Dynamic) {}
+    public function new(arg0: en.Hero, arg1: pr.Game, arg2: Dynamic) {
+        super();
+    }
 
-  function get_airJumps(): Int {}
+    public function get_airJumps(): Int {
+        throw "stub: get_airJumps not decompiled";
+    }
 
-  function set_airJumps(v: Int): Int {}
+    public function set_airJumps(arg0: Int): Int {
+        throw "stub: set_airJumps not decompiled";
+    }
 
-  function init() {}
+    public override function init(): Void {
+    }
 
-  function destroy() {}
+    public override function destroy(): Void {
+    }
 
-  function passivePreUpdate() {}
+    public override function passivePreUpdate(): Void {
+    }
 
-  function canUse(): Bool {}
+    public override function canUse(): Bool {
+        throw "stub: canUse not decompiled";
+    }
 
-  function isUsingInputs(): Bool {}
+    public override function isUsingInputs(): Bool {
+        throw "stub: isUsingInputs not decompiled";
+    }
 
-  function onStart() {}
+    public override function onStart(): Void {
+    }
 
-  function startDoubleJumpTutorial() {}
+    public function startDoubleJumpTutorial(): Void {
+    }
 
-  function onStartClimbing(onLadder: Bool) {}
+    public function onStartClimbing(arg0: Bool): Void {
+    }
 
-  function onCooldownEnd(k: String, subIndex: Int) {}
+    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    }
 
-  function getCLID(): Int {}
+    public override function getCLID(): Int {
+        throw "stub: getCLID not decompiled";
+    }
 }
-

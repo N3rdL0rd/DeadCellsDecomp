@@ -1,40 +1,51 @@
 package ui.hud;
+
 class ComboCount extends h2d.Flow {
-  var value: Int;
-  var text: ui.Text.Text;
-  var multText: ui.Text.Text;
-  var sizePopLerp: Float;
-  var multSizePopLerp: Float;
-  var baseSize: Float;
-  var maxSizeMult: Float;
-  var sizePop: Float;
-  var sizePopLerpSpeed: Float;
-  var sizePopLerpHoldTime: Float;
-  var passiveFadeSpeed: Float;
-  var passiveMultFadeSpeed: Float;
-  var maxCombo: Int;
-  var colorlerpSpeed: Float;
-  var alphaLerpSpeed: Float;
-  var startColor: Int;
-  var endColorS1: Int;
-  var endColorS2: Int;
-  var endColorS3: Int;
-  var multTextBaseSize: Float;
+    public var value: Int;
+    public var text: ui.Text;
+    public var multText: ui.Text;
+    public var sizePopLerp: Float;
+    public var multSizePopLerp: Float;
+    public var baseSize: Float;
+    public var maxSizeMult: Float;
+    public var sizePop: Float;
+    public var sizePopLerpSpeed: Float;
+    public var sizePopLerpHoldTime: Float;
+    public var passiveFadeSpeed: Float;
+    public var passiveMultFadeSpeed: Float;
+    public var maxCombo: Int;
+    public var colorlerpSpeed: Float;
+    public var alphaLerpSpeed: Float;
+    public var startColor: Int;
+    public var endColorS1: Int;
+    public var endColorS2: Int;
+    public var endColorS3: Int;
+    public var multTextBaseSize: Float;
 
-  function get_pixelScale(): Float {}
+    public function new(arg0: h2d.Object) {
+        super();
+    }
 
-  function __constructor__(p: h2d.Object.Object) {}
+    public function setValue(arg0: Int, arg1: Float): Int {
+        throw "stub: setValue not decompiled";
+    }
 
-  function setValue(v: Int, mult: Float): Int {}
+    public function reset(): Void {
+    }
 
-  function reset() {}
+    public override function sync(arg0: h2d.RenderContext): Void {
+    }
 
-  function sync(ctx: h2d.RenderContext.RenderContext) {}
+    public function playFx(arg0: String): Void {
+    }
 
-  function playFx(fxName: String) {}
+    public function setText(arg0: String): Void {
+    }
 
-  function setText(str: String) {}
+    public function onResize(): Void {
+    }
 
-  function onResize() {}
+    public function get_pixelScale(): Float {
+        throw "stub: get_pixelScale not decompiled";
+    }
 }
-
