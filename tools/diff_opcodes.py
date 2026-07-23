@@ -43,6 +43,37 @@ from crashlink.disasm import type_name
 ROOT = Path(__file__).resolve().parent.parent
 ORIGINAL_HL = ROOT / "hlboot.dat"
 RECOMPILED_HL = ROOT / "deadcells" / "bin" / "client.hl"
+SRC = ROOT / "deadcells" / "src" / "game"
+
+
+def game_top_level_names() -> set[str]:
+    """
+    Top-level package/class names that are actually ours to decompile, derived
+    from what's physically present under deadcells/src/game rather than a
+    hand-maintained list - this is what's left after vendored libraries
+    (h2d/h3d/hxd/hxsl/hxbit/hscript/format/cdb/steam/dx/chroma) were pulled out
+    via -lib (see docs/notes.md), so anything NOT in this set is either one of
+    those libraries or the Haxe/HashLink/SDL standard library - present in
+    both the original and recompiled bytecode "for free," not something this
+    project is decompiling.
+    """
+    names = set()
+    for entry in SRC.iterdir():
+        if entry.is_dir():
+            names.add(entry.name)
+        elif entry.suffix == ".hx":
+            names.add(entry.stem)
+    return names
+
+
+def top_level_name(func_name: str) -> str:
+    """'$Class.method' or 'pack.Class.method' -> 'Class' or 'pack'."""
+    name = func_name[1:] if func_name.startswith("$") else func_name
+    return name.split(".")[0]
+
+
+def is_game_function(func_name: str, game_names: set[str]) -> bool:
+    return top_level_name(func_name) in game_names
 
 
 def _fmt_operand(val: object, code: Bytecode) -> str:
@@ -152,6 +183,11 @@ def main() -> None:
     parser.add_argument("--recompiled", default=str(RECOMPILED_HL), help="path to the recompiled .hl")
     parser.add_argument("--function", help="show a unified opcode diff for one Class.method")
     parser.add_argument("--json", help="write full per-function results to this path")
+    parser.add_argument(
+        "--game-only",
+        action="store_true",
+        help="exclude vendored libraries and the Haxe/HL/SDL standard library from the summary",
+    )
     args = parser.parse_args()
 
     original = Bytecode.from_path(args.original)
@@ -162,6 +198,9 @@ def main() -> None:
         return
 
     results = compare_project(original, recompiled)
+    if args.game_only:
+        game_names = game_top_level_names()
+        results = {name: r for name, r in results.items() if is_game_function(name, game_names)}
     print_summary(results)
     if args.json:
         Path(args.json).write_text(json.dumps(results, indent=2))

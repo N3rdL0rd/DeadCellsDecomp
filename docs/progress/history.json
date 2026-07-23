@@ -1,21 +1,11 @@
 [
   {
-    "commit": "37b15b4",
+    "commit": "8ce979d",
     "dirty": true,
-    "timestamp": "2026-07-23T20:45:49Z",
-    "avg_score": 0.11169823027399067,
-    "matched_funcs": 1954,
-    "total_funcs": 23170,
-    "done_files": 0,
-    "total_files": 1680
-  },
-  {
-    "commit": "6c8714b",
-    "dirty": false,
-    "timestamp": "2026-07-23T20:46:44Z",
-    "avg_score": 0.11169823027399067,
-    "matched_funcs": 1954,
-    "total_funcs": 23170,
+    "timestamp": "2026-07-23T21:06:23Z",
+    "avg_score": 0.026910455787240422,
+    "matched_funcs": 343,
+    "total_funcs": 20412,
     "done_files": 0,
     "total_files": 1680
   }

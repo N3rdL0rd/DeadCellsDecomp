@@ -23,7 +23,7 @@ from pathlib import Path
 
 from crashlink.core import Bytecode
 
-from diff_opcodes import ORIGINAL_HL, RECOMPILED_HL, compare_project
+from diff_opcodes import ORIGINAL_HL, RECOMPILED_HL, compare_project, game_top_level_names, is_game_function
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "deadcells" / "src" / "game"
@@ -152,8 +152,11 @@ PAGE = """<!doctype html>
 <body>
 <h1>Dead Cells decompilation progress</h1>
 <p>Opcode-level match: recompiled <code>deadcells/bin/client.hl</code> vs original <code>hlboot.dat</code>,
-per class (average of per-method scores from <code>tools/diff_opcodes.py</code>). File status: the
-<code>// This file has been completely decompiled.</code> marker convention.</p>
+per class (average of per-method scores from <code>tools/diff_opcodes.py</code>).
+<strong>Vendored libraries and the Haxe/HashLink/SDL standard library are excluded</strong> -
+only functions under <code>deadcells/src/game</code>'s own packages/classes count, so this
+reflects actual decompilation progress rather than "did the library compile."
+File status: the <code>// This file has been completely decompiled.</code> marker convention.</p>
 <div class="stats">
   <div class="stat">{matched_funcs}/{total_funcs}<span>functions byte-matched</span></div>
   <div class="stat">{avg_score:.1%}<span>average opcode score</span></div>
@@ -179,6 +182,8 @@ def build(out_dir: Path, original_path: str, recompiled_path: str) -> None:
     original = Bytecode.from_path(original_path)
     recompiled = Bytecode.from_path(recompiled_path)
     results = compare_project(original, recompiled)
+    game_names = game_top_level_names()
+    results = {name: r for name, r in results.items() if is_game_function(name, game_names)}
 
     total_funcs = len(results)
     matched_funcs = sum(1 for r in results.values() if r["score"] == 1.0)
