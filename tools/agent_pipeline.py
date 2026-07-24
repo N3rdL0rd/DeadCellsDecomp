@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """
-Multi-threaded first-pass decompilation agent, backed by OpenRouter's free
-NVIDIA Nemotron 3 Ultra (1M context, $0/token: nvidia/nemotron-3-ultra-550b-a55b:free).
+Multi-threaded first-pass decompilation agent. Talks to any OpenAI-completions-
+shaped API - see PROVIDER_PRESETS for what's wired up: OpenRouter's free
+NVIDIA Nemotron 3 Ultra (1M context, $0/token, but capped at 50 requests/day
+with no credit balance) and the "Kimi for Coding" flat-rate plan (K2.7 by
+default, api.kimi.com/coding/v1, using the same client-identifying headers
+OpenCode uses to get that plan's dedicated rate limits).
 
 For each queued function: gathers context (current stub source file,
 crashlink's decompiled pseudocode, the current opcode diff or last compile
@@ -10,8 +14,8 @@ response didn't touch anything else, compiles, rescoring via
 tools/diff_opcodes.py, and keeps the best-scoring compiling result.
 
 Concurrency model (read this before assuming it's fully parallel):
-  - Generation (the OpenRouter call) is the slow, I/O-bound part and runs
-    across --workers threads freely.
+  - Generation (the API call) is the slow, I/O-bound part and runs across
+    --workers threads freely.
   - Applying an edit + `haxe build.dev.hxml` + rebuilding client.hl + diffing
     is serialized behind one global lock, because all workers share the same
     deadcells/src/game tree and there's one compiled output. This is fast in
@@ -29,14 +33,15 @@ successful compile.
 
 Functions that end a run scoring below DEFER_THRESHOLD are marked "deferred" in
 the ledger rather than retried blindly - they need a stronger model, not more
-attempts with the same one. Re-run with --deferred-only --model <bigger model>
+attempts with the same one. Re-run with --deferred-only --provider/--model
 to specifically target them.
 
 Usage:
-    export OPENROUTER_API_KEY=...
+    export OPENROUTER_API_KEY=...           # or KIMI_API_KEY - see .env / PROVIDER_PRESETS
     uv run tools/agent_pipeline.py --limit 20 --workers 8
     uv run tools/agent_pipeline.py --dry-run --limit 5   # no API calls, no writes
-    uv run tools/agent_pipeline.py --deferred-only --model <stronger-model-id>
+    uv run tools/agent_pipeline.py --provider kimi --limit 20
+    uv run tools/agent_pipeline.py --deferred-only --provider kimi --model kimi-for-coding-highspeed
 """
 
 import argparse
@@ -45,6 +50,7 @@ import os
 import re
 import subprocess
 import sys
+import textwrap
 import threading
 import time
 import urllib.error
@@ -73,8 +79,47 @@ RECOMPILED_HL = DEADCELLS / "bin" / "client.hl"
 LEDGER_FILE = ROOT / "tools" / "agent_runs" / "ledger.json"
 LOG_DIR = ROOT / "tools" / "agent_runs" / "logs"
 
-OPENROUTER_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
-OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
+
+def load_dotenv(path: Path = ROOT / ".env") -> None:
+    """Minimal KEY=VALUE loader (stdlib only, no new dependency) - only sets
+    vars not already present in the environment, so an explicit `export`
+    always wins. .env is gitignored; never commit real keys into it."""
+    if not path.is_file():
+        return
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip())
+
+
+load_dotenv()
+
+# Providers this pipeline can talk to, all OpenAI-completions-shaped so the
+# same request/response code works for either - just different URL, default
+# model, API key env var, and (for Kimi's coding-plan endpoint) extra headers
+# that identify the client as the official Kimi CLI to get that plan's
+# dedicated rate limits instead of generic public-API throttling.
+PROVIDER_PRESETS = {
+    "openrouter": {
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "api_key_env": "OPENROUTER_API_KEY",
+        "headers": {},
+    },
+    "kimi": {
+        # api.kimi.com/coding/v1 - the "Kimi for Coding" flat-rate plan (not
+        # per-token billed). "kimi-for-coding" currently resolves to K2.7
+        # Coding; "kimi-for-coding-highspeed" and "kimi-k2.5" are also on this
+        # plan. K3 ("k3") is available too but consumes plan quota faster.
+        "url": "https://api.kimi.com/coding/v1/chat/completions",
+        "model": "kimi-for-coding",
+        "api_key_env": "KIMI_API_KEY",
+        "headers": {"User-Agent": "KimiCLI/1.0", "X-Msh-Platform": "kimi_cli"},
+    },
+}
+
 MAX_ATTEMPTS = 3
 MAX_TOKENS = 8000
 
@@ -215,25 +260,29 @@ class DailyQuotaExhausted(Exception):
 
 def openrouter_chat(
     messages: list[dict],
-    model: str = OPENROUTER_MODEL,
+    model: str,
+    url: str,
+    api_key_env: str,
+    extra_headers: Optional[dict] = None,
     max_tokens: int = MAX_TOKENS,
     log_name: Optional[str] = None,
     attempt: int = 1,
     live: bool = False,
 ) -> str:
-    """Streams the response (OpenRouter/SSE) rather than waiting for the whole
-    thing at once. Always writes the full transcript - reasoning tokens AND
-    content tokens, both otherwise thrown away - to tools/agent_runs/logs/ if
-    log_name is given, so `tail -f` on that file shows the model thinking in
-    real time even when running multi-threaded (where printing raw tokens to
-    a shared stdout from several threads at once would just interleave into
-    garbage). Pass live=True (only sensible with --workers 1) to also echo
-    tokens straight to stdout as they arrive."""
-    api_key = os.environ.get("OPENROUTER_API_KEY")
+    """Streams the response (SSE) rather than waiting for the whole thing at
+    once. Always writes the full transcript - reasoning tokens AND content
+    tokens, both otherwise thrown away - to tools/agent_runs/logs/ if log_name
+    is given, so `tail -f` on that file shows the model thinking in real time
+    even when running multi-threaded (where printing raw tokens to a shared
+    stdout from several threads at once would just interleave into garbage).
+    Pass live=True (only sensible with --workers 1) to also echo tokens
+    straight to stdout as they arrive. Works against any OpenAI-completions-
+    shaped endpoint - see PROVIDER_PRESETS for what's wired up."""
+    api_key = os.environ.get(api_key_env)
     if not api_key:
-        raise RuntimeError("OPENROUTER_API_KEY not set")
+        raise RuntimeError(f"{api_key_env} not set")
     req = urllib.request.Request(
-        OPENROUTER_URL,
+        url,
         data=json.dumps(
             {
                 "model": model,
@@ -245,6 +294,7 @@ def openrouter_chat(
         headers={
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
+            **(extra_headers or {}),
         },
         method="POST",
     )
@@ -525,7 +575,8 @@ def process_item(
     orig_idx: SearchIndex,
     item: WorkItem,
     dry_run: bool,
-    model: str = OPENROUTER_MODEL,
+    provider: dict,
+    model: str,
     live: bool = False,
 ) -> Result:
     orig_func = orig_idx._full[item.name][0]
@@ -571,6 +622,9 @@ def process_item(
                 response = openrouter_chat(
                     [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}],
                     model=model,
+                    url=provider["url"],
+                    api_key_env=provider["api_key_env"],
+                    extra_headers=provider["headers"],
                     log_name=item.name,
                     attempt=attempt,
                     live=live,
@@ -592,7 +646,12 @@ def process_item(
                     print(f"  [{item.name}] attempt {attempt}: rejected - {rejection}")
                     feedback = f"Your last response was rejected: {rejection}. Return only the {method_name} method."
                     continue
-                candidate = original_content[: span[0]] + snippet.strip() + "\n" + original_content[span[1] :]
+                # Re-indent to match the original method's indentation - the model's
+                # snippet starts at column 0 (or whatever it felt like), and span[0]
+                # points right after the original line's leading whitespace, not before it.
+                indent = re.match(r"[ \t]*", original_content[span[0] :]).group(0)
+                reindented = textwrap.indent(textwrap.dedent(snippet.strip("\n")), indent)
+                candidate = original_content[: span[0]] + reindented + "\n" + original_content[span[1] :]
             else:
                 candidate = snippet
                 rejection = guard_ok(original_content, candidate)
@@ -673,16 +732,22 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=None, help="cap the number of functions this run processes")
     parser.add_argument("--dry-run", action="store_true", help="build the queue and print it, make no API calls")
     parser.add_argument(
+        "--provider",
+        choices=sorted(PROVIDER_PRESETS),
+        default="openrouter",
+        help="which API/plan to use - see PROVIDER_PRESETS (default: openrouter)",
+    )
+    parser.add_argument(
         "--model",
-        default=OPENROUTER_MODEL,
-        help=f"OpenRouter model id to use (default: {OPENROUTER_MODEL})",
+        default=None,
+        help="model id to use - defaults to the chosen --provider's default model",
     )
     parser.add_argument(
         "--deferred-only",
         action="store_true",
         help="only process functions the ledger already marked 'deferred' (score < "
         f"{DEFER_THRESHOLD:.0%} with the model that last attempted them) - pair with "
-        "--model to point a stronger model at exactly the functions the default one couldn't handle",
+        "--provider/--model to point a stronger model at exactly the functions the default one couldn't handle",
     )
     parser.add_argument(
         "--live",
@@ -694,6 +759,8 @@ def main() -> None:
         "`tail -f` on a specific function's log works fine even multi-threaded)",
     )
     args = parser.parse_args()
+    provider = PROVIDER_PRESETS[args.provider]
+    model = args.model or provider["model"]
     if args.live and args.workers > 1:
         print(f"Note: --live with --workers {args.workers} will interleave output from multiple "
               "functions - consider --workers 1 for readable live output.")
@@ -723,7 +790,7 @@ def main() -> None:
     done = 0
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures = {
-            pool.submit(process_item, original, orig_idx, item, False, args.model, args.live): item
+            pool.submit(process_item, original, orig_idx, item, False, provider, model, args.live): item
             for item in queue
         }
         for future in as_completed(futures):
@@ -755,7 +822,8 @@ def main() -> None:
                 "score": result.score,
                 "attempts": result.attempts,
                 "note": result.note,
-                "model": args.model,
+                "model": model,
+                "provider": args.provider,
             }
             save_ledger(ledger)
             done += 1

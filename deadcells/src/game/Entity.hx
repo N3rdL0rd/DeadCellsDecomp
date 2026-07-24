@@ -257,11 +257,11 @@ class Entity {
     }
 
     public function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return true;
     }
 
     public function isInQuadTree(): Bool {
-        throw "stub: isInQuadTree not decompiled";
+        return false;
     }
 
     public function isBreakableByHero(): Bool {
