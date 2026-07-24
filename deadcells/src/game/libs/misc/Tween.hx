@@ -58,8 +58,9 @@ class Tween {
     }
 
     public function interpolate(arg0: Float): Float {
-        throw "stub: interpolate not decompiled";
+        return arg0;
     }
+
 
     public function chainedEvent(): Void {
     }

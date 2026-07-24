@@ -140,6 +140,27 @@ CODE_BLOCK_RE = re.compile(r"```(?:haxe)?\s*\n(.*?)\n```", re.DOTALL)
 
 compile_lock = threading.Lock()
 
+# Per-file locks, so two workers can never concurrently process two functions
+# that live in the same file. compile_lock alone is NOT enough for this: it
+# only serializes the physical write+compile+score critical section, but each
+# thread reads original_content/computes its splice span ONCE at the top of
+# process_item, outside any lock - if another thread commits its own change to
+# the same file in between, this thread's stale snapshot silently overwrites
+# it when its own (later) write/revert happens. This actually happened live:
+# 5 functions from Entity.hx were queued in one 2-worker run and the file was
+# wiped to 0 bytes, which then broke every other function's compile for the
+# rest of the run (Entity.hx is the base class for nearly everything, so a
+# broken Entity.hx breaks the whole project, not just Entity's own functions).
+_file_locks: dict[Path, threading.Lock] = {}
+_file_locks_meta = threading.Lock()
+
+
+def get_file_lock(path: Path) -> threading.Lock:
+    with _file_locks_meta:
+        if path not in _file_locks:
+            _file_locks[path] = threading.Lock()
+        return _file_locks[path]
+
 
 def _match_brace(text: str, open_pos: int) -> Optional[int]:
     """Given the index of an opening '{', returns the index of its matching
@@ -607,6 +628,23 @@ def build_queue(original: Bytecode) -> list[WorkItem]:
 
 
 def process_item(
+    original: Bytecode,
+    orig_idx: SearchIndex,
+    item: WorkItem,
+    dry_run: bool,
+    provider: dict,
+    model: str,
+    live: bool = False,
+) -> Result:
+    """Thin wrapper: holds item.file_path's lock for the ENTIRE duration of
+    processing this item, so two workers can never interleave edits to the
+    same file (see get_file_lock's docstring/comment for why this is needed -
+    compile_lock alone isn't enough). Actual logic is _process_item_locked."""
+    with get_file_lock(item.file_path):
+        return _process_item_locked(original, orig_idx, item, dry_run, provider, model, live)
+
+
+def _process_item_locked(
     original: Bytecode,
     orig_idx: SearchIndex,
     item: WorkItem,
