@@ -393,11 +393,10 @@ Rewrite this method so that, once compiled, its bytecode matches the original as
 closely as possible. Rules:
 - Return ONLY this one method's full declaration (modifiers, signature, and body) -
   nothing else. Do not return the class, other methods, or file-level content.
-- Keep the same method name AND the same parameter names as the current text
-  (this codebase's convention is generic arg0/arg1/... names, since the original
-  parameter names aren't recoverable from bytecode - keep whatever names are
-  already there, don't invent more descriptive ones). You may adjust parameter
-  or return types only if strictly required for correctness.
+- Keep the same method name. Prefer crashlink's pseudocode's parameter names
+  when it gives meaningful ones (it can recover real names from bytecode debug
+  info); otherwise keep the stub's existing arg0/arg1/... names. You may adjust
+  parameter or return types only if strictly required for correctness.
 - Do not add explanatory comments.
 - Wrap your entire answer in a single ```haxe fenced code block containing just this
   one method, and output nothing else outside that block.
@@ -413,11 +412,10 @@ against the original bytecode or a compiler error from the previous attempt.
 
 Rewrite ONLY the body of the target function so that, once compiled, its bytecode \
 matches the original as closely as possible. Rules:
-- Return the ENTIRE file, unchanged except for the target function's body (keep its \
-  existing parameter names as-is - this codebase's convention is generic arg0/arg1/... \
-  names, since the originals aren't recoverable from bytecode; don't invent more \
-  descriptive ones - and only adjust parameter/return types if strictly required for \
-  correctness).
+- Return the ENTIRE file, unchanged except for the target function (prefer crashlink's \
+  pseudocode's parameter names when it gives meaningful ones, otherwise keep the \
+  stub's existing arg0/arg1/... names; only adjust parameter/return types if strictly \
+  required for correctness).
 - Do not modify, add, or remove any other function, class, or import.
 - Do not add explanatory comments.
 - Wrap your entire answer in a single ```haxe fenced code block containing the full \
@@ -535,6 +533,30 @@ def score_function(original: Bytecode, orig_func: Function, func_name: str) -> t
     return s, diff
 
 
+def build_class_index() -> dict[tuple[Path, str], Path]:
+    """(directory, class name) -> the file that actually declares it, scanned
+    live from the current tree, scoped per-directory rather than a flat
+    project-wide name -> path map: class names are only unique WITHIN a
+    package in Haxe, not globally (this project has real same-name-different-
+    package collisions, e.g. en.gr.Magnet vs en.inter.Magnet), so a global
+    index would wrongly merge unrelated classes. Scoping to "same directory as
+    where the bytecode originally recorded this module" is safe because every
+    class-split done this session (e.g. libs/misc/Tween.hx split out of
+    Tweenie.hx) kept the class in the same package directory - only the
+    specific file within that directory changed.
+
+    Needed because Function.resolve_file() only reports the ORIGINAL
+    bytecode's recorded module filename, which goes stale the moment a class
+    is split into its own file, silently pointing WorkItems at the wrong file
+    (guard rejections / spurious whole-file fallback in find_function_span,
+    since the target class genuinely isn't in the file being read)."""
+    index: dict[tuple[Path, str], Path] = {}
+    for path in SRC.rglob("*.hx"):
+        for m in CLASS_NAME_RE.finditer(path.read_text(errors="ignore")):
+            index.setdefault((path.parent, m.group(1)), path)  # first declaration wins on a rare duplicate
+    return index
+
+
 def build_queue(original: Bytecode) -> list[WorkItem]:
     """Game-only functions, excluding: already-perfect matches, functions whose
     original debug info resolves into a vendor path (hxbit/castle/etc macro
@@ -546,16 +568,17 @@ def build_queue(original: Bytecode) -> list[WorkItem]:
     results = compare_project(original, recompiled)
     game_names = game_top_level_names()
     orig_idx = SearchIndex.build(original)
+    class_index = build_class_index()
 
     items = []
     skipped_macro = 0
+    relocated = 0
     for name, r in results.items():
         if not is_game_function(name, game_names):
             continue
         if r["score"] == 1.0:
             continue
-        cls = name[1:] if name.startswith("$") else name
-        cls = cls.split(".")[0]
+        cls, _ = parse_target_name(name)
         if cls in EXCLUDED_CLASSES:
             continue
         func = orig_idx._full[name][0]
@@ -567,12 +590,19 @@ def build_queue(original: Bytecode) -> list[WorkItem]:
         if not file_path.is_file():
             skipped_macro += 1  # resolves outside our source tree - macro-generated, not ours to write
             continue
+        actual_path = class_index.get((file_path.parent, cls))
+        if actual_path is not None and actual_path != file_path:
+            file_path = actual_path  # trust the live scan over stale bytecode-recorded module name
+            relocated += 1
         # r["orig_ops"] is only populated for "partial" status (see compare_project) -
         # for "missing" functions, always compute from the original function directly.
         items.append(WorkItem(name=name, file_path=file_path, difficulty=len(func.ops)))
 
     items.sort(key=lambda i: i.difficulty)
-    print(f"queued {len(items)} functions ({skipped_macro} skipped as macro/vendor-generated)")
+    print(
+        f"queued {len(items)} functions ({skipped_macro} skipped as macro/vendor-generated, "
+        f"{relocated} relocated to a class's current file)"
+    )
     return items
 
 
