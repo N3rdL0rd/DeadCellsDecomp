@@ -393,8 +393,11 @@ Rewrite this method so that, once compiled, its bytecode matches the original as
 closely as possible. Rules:
 - Return ONLY this one method's full declaration (modifiers, signature, and body) -
   nothing else. Do not return the class, other methods, or file-level content.
-- Keep the same method name. You may adjust the signature (types/params) only if
-  strictly required for correctness.
+- Keep the same method name AND the same parameter names as the current text
+  (this codebase's convention is generic arg0/arg1/... names, since the original
+  parameter names aren't recoverable from bytecode - keep whatever names are
+  already there, don't invent more descriptive ones). You may adjust parameter
+  or return types only if strictly required for correctness.
 - Do not add explanatory comments.
 - Wrap your entire answer in a single ```haxe fenced code block containing just this
   one method, and output nothing else outside that block.
@@ -410,8 +413,11 @@ against the original bytecode or a compiler error from the previous attempt.
 
 Rewrite ONLY the body of the target function so that, once compiled, its bytecode \
 matches the original as closely as possible. Rules:
-- Return the ENTIRE file, unchanged except for the target function (you may adjust \
-  that function's signature too, only if strictly required for correctness).
+- Return the ENTIRE file, unchanged except for the target function's body (keep its \
+  existing parameter names as-is - this codebase's convention is generic arg0/arg1/... \
+  names, since the originals aren't recoverable from bytecode; don't invent more \
+  descriptive ones - and only adjust parameter/return types if strictly required for \
+  correctness).
 - Do not modify, add, or remove any other function, class, or import.
 - Do not add explanatory comments.
 - Wrap your entire answer in a single ```haxe fenced code block containing the full \
