@@ -115,6 +115,7 @@ class AsyncHttp {
     }
 
     public function onError(arg0: libs.HttpError): Void {
+        throw arg0;
     }
 
     public function onStatus(arg0: Int): Void {

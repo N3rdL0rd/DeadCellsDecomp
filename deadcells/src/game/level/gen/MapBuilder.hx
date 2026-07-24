@@ -19,7 +19,7 @@ class MapBuilder {
     }
 
     public function afterLevelMapInitProcess(arg0: level.LevelMap): level.LevelMap {
-        throw "stub: afterLevelMapInitProcess not decompiled";
+        return arg0;
     }
 
     public function removeCollisionOutOfRooms(arg0: level.LevelMap, arg1: Array<Dynamic>, arg2: Array<Dynamic>, arg3: Bool): Void {

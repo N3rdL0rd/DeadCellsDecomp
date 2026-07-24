@@ -225,7 +225,7 @@ class BiomeDisp extends level.LevelDisp {
     }
 
     public function createHoleGrid(arg0: level.Room, arg1: Array<Dynamic>): Array<Dynamic> {
-        throw "stub: createHoleGrid not decompiled";
+        return arg1;
     }
 
     public function createHoles(arg0: level.Room, arg1: Bool, arg2: Ref, arg3: Ref): Void {
