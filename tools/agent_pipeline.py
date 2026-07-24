@@ -64,6 +64,7 @@ SRC = DEADCELLS / "src" / "game"
 ORIGINAL_HL = ROOT / "hlboot.dat"
 RECOMPILED_HL = DEADCELLS / "bin" / "client.hl"
 LEDGER_FILE = ROOT / "tools" / "agent_runs" / "ledger.json"
+LOG_DIR = ROOT / "tools" / "agent_runs" / "logs"
 
 OPENROUTER_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
@@ -104,7 +105,27 @@ class Result:
     note: str = ""
 
 
-def openrouter_chat(messages: list[dict], model: str = OPENROUTER_MODEL, max_tokens: int = MAX_TOKENS) -> str:
+def _log_path(log_name: str, attempt: int) -> Path:
+    safe = re.sub(r"[^\w.-]", "_", log_name)
+    return LOG_DIR / f"{safe}-attempt{attempt}.log"
+
+
+def openrouter_chat(
+    messages: list[dict],
+    model: str = OPENROUTER_MODEL,
+    max_tokens: int = MAX_TOKENS,
+    log_name: Optional[str] = None,
+    attempt: int = 1,
+    live: bool = False,
+) -> str:
+    """Streams the response (OpenRouter/SSE) rather than waiting for the whole
+    thing at once. Always writes the full transcript - reasoning tokens AND
+    content tokens, both otherwise thrown away - to tools/agent_runs/logs/ if
+    log_name is given, so `tail -f` on that file shows the model thinking in
+    real time even when running multi-threaded (where printing raw tokens to
+    a shared stdout from several threads at once would just interleave into
+    garbage). Pass live=True (only sensible with --workers 1) to also echo
+    tokens straight to stdout as they arrive."""
     api_key = os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
         raise RuntimeError("OPENROUTER_API_KEY not set")
@@ -115,6 +136,7 @@ def openrouter_chat(messages: list[dict], model: str = OPENROUTER_MODEL, max_tok
                 "model": model,
                 "messages": messages,
                 "max_tokens": max_tokens,
+                "stream": True,
             }
         ).encode(),
         headers={
@@ -124,31 +146,67 @@ def openrouter_chat(messages: list[dict], model: str = OPENROUTER_MODEL, max_tok
         method="POST",
     )
 
+    log_file = None
+    if log_name:
+        LOG_DIR.mkdir(parents=True, exist_ok=True)
+        log_file = open(_log_path(log_name, attempt), "w", encoding="utf-8")
+
+    def emit(text: str) -> None:
+        if log_file:
+            log_file.write(text)
+            log_file.flush()
+        if live:
+            print(text, end="", flush=True)
+
     # The free tier is rate-limited server-side (observed: "Worker local total
-    # request limit reached (32/32)") and returns HTTP 200 with an {"error":
-    # ...} body rather than a 429, so retrying on transport errors alone isn't
-    # enough - retry on that body shape too, with backoff.
+    # request limit reached (32/32)") and can return either an HTTP error or,
+    # mid-stream, a chunk shaped like {"error": ...} instead of {"choices":
+    # ...} - retry on both, with backoff. TimeoutError/OSError cover a read
+    # timing out partway through the stream (urlopen() succeeding doesn't
+    # guarantee the body/stream won't stall later).
     last_err = None
-    for backoff in (5, 15, 30):
-        try:
-            with urllib.request.urlopen(req, timeout=180) as resp:
-                data = json.load(resp)
-        except urllib.error.URLError as e:
-            last_err = e
-            time.sleep(backoff)
-            continue
+    try:
+        for backoff in (5, 15, 30):
+            content_parts: list[str] = []
+            finish_reason = None
+            try:
+                with urllib.request.urlopen(req, timeout=180) as resp:
+                    emit(f"\n--- reasoning ({model}) ---\n")
+                    seen_content_header = False
+                    for raw_line in resp:
+                        line = raw_line.decode("utf-8", errors="replace").strip()
+                        if not line or line == "data: [DONE]":
+                            continue
+                        if not line.startswith("data: "):
+                            continue
+                        chunk = json.loads(line[6:])
+                        if "error" in chunk:
+                            raise RuntimeError(f"OpenRouter error: {chunk['error']}")
+                        choice = chunk["choices"][0]
+                        delta = choice.get("delta", {})
+                        if delta.get("reasoning"):
+                            emit(delta["reasoning"])
+                        if delta.get("content"):
+                            if not seen_content_header:
+                                emit("\n--- content ---\n")
+                                seen_content_header = True
+                            emit(delta["content"])
+                            content_parts.append(delta["content"])
+                        if choice.get("finish_reason"):
+                            finish_reason = choice["finish_reason"]
+            except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError, RuntimeError) as e:
+                last_err = e
+                time.sleep(backoff)
+                continue
 
-        if "error" in data:
-            last_err = RuntimeError(f"OpenRouter error: {data['error']}")
-            time.sleep(backoff)
-            continue
+            if finish_reason == "length":
+                raise RuntimeError("response truncated (hit max_tokens) - raise MAX_TOKENS")
+            return "".join(content_parts)
 
-        choice = data["choices"][0]
-        if choice.get("finish_reason") == "length":
-            raise RuntimeError("response truncated (hit max_tokens) - raise MAX_TOKENS")
-        return choice["message"]["content"]
-
-    raise RuntimeError(f"OpenRouter request failed after retries: {last_err}")
+        raise RuntimeError(f"OpenRouter request failed after retries: {last_err}")
+    finally:
+        if log_file:
+            log_file.close()
 
 
 SYSTEM_PROMPT = """\
@@ -287,13 +345,32 @@ def build_queue(original: Bytecode) -> list[WorkItem]:
 
 
 def process_item(
-    original: Bytecode, orig_idx: SearchIndex, item: WorkItem, dry_run: bool, model: str = OPENROUTER_MODEL
+    original: Bytecode,
+    orig_idx: SearchIndex,
+    item: WorkItem,
+    dry_run: bool,
+    model: str = OPENROUTER_MODEL,
+    live: bool = False,
 ) -> Result:
     orig_func = orig_idx._full[item.name][0]
     original_content = item.file_path.read_text()
     pseudo_src = pseudo(IRFunction(original, orig_func))
 
-    best_score, best_content = 0.0, original_content
+    # Never assume the file starts at 0% - if a previous run already got this
+    # function matching (e.g. its result never made it into the ledger because
+    # of a crash elsewhere in that run - this has actually happened), starting
+    # from an assumed 0.0 baseline would let a worse attempt silently
+    # overwrite an already-correct function. Establish the real baseline first.
+    with compile_lock:
+        baseline_compile_err = try_compile()
+        baseline_score = 0.0
+        if not baseline_compile_err:
+            baseline_build_err = rebuild_client_hl()
+            if not baseline_build_err:
+                baseline_score, _ = score_function(original, orig_func, item.name)
+    best_score, best_content = baseline_score, original_content
+    if best_score == 1.0:
+        return Result(item.name, "matched", best_score, 0, "already matched before this run")
     feedback = None
     attempt = 0
 
@@ -302,10 +379,15 @@ def process_item(
             user_prompt = build_user_prompt(item.file_path, item.name, original_content, pseudo_src, feedback)
             if dry_run:
                 return Result(item.name, "error", 0.0, attempt, "dry-run, no API call made")
+            if live:
+                print(f"\n=== [{item.name}] attempt {attempt} ===")
             try:
                 response = openrouter_chat(
                     [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": user_prompt}],
                     model=model,
+                    log_name=item.name,
+                    attempt=attempt,
+                    live=live,
                 )
             except (urllib.error.URLError, RuntimeError) as e:
                 print(f"  [{item.name}] attempt {attempt}: API error - {e}")
@@ -407,10 +489,22 @@ def main() -> None:
         f"{DEFER_THRESHOLD:.0%} with the model that last attempted them) - pair with "
         "--model to point a stronger model at exactly the functions the default one couldn't handle",
     )
+    parser.add_argument(
+        "--live",
+        action="store_true",
+        help="echo the model's reasoning and content tokens straight to stdout as they stream in "
+        "(only makes sense with --workers 1 - with more than one worker, tokens from different "
+        "functions would interleave into garbage on a shared terminal; the full transcript is "
+        "always written per-attempt to tools/agent_runs/logs/ regardless of this flag, so "
+        "`tail -f` on a specific function's log works fine even multi-threaded)",
+    )
     args = parser.parse_args()
+    if args.live and args.workers > 1:
+        print(f"Note: --live with --workers {args.workers} will interleave output from multiple "
+              "functions - consider --workers 1 for readable live output.")
 
     print("Loading original bytecode (hlboot.dat)... this takes ~20s and only happens once.")
-    original = Bytecode.from_path(str(ORIGINAL_HL))
+    original = Bytecode.from_path(str(ORIGINAL_HL), progress_cb=lambda p, s: print(f"  {p:.0%} {s}                       ", end="\r", flush=True))
     orig_idx = SearchIndex.build(original)
 
     queue = build_queue(original)
@@ -434,11 +528,23 @@ def main() -> None:
     done = 0
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures = {
-            pool.submit(process_item, original, orig_idx, item, False, args.model): item for item in queue
+            pool.submit(process_item, original, orig_idx, item, False, args.model, args.live): item
+            for item in queue
         }
         for future in as_completed(futures):
             item = futures[future]
-            result = future.result()
+            try:
+                result = future.result()
+            except Exception as e:
+                # One item's uncaught exception must never lose bookkeeping for
+                # every other future in this batch (this happened for real: a
+                # future.result() exception used to propagate straight out of
+                # this loop, killing the whole run and silently dropping ledger
+                # entries for several already-completed, already-on-disk
+                # results). process_item's own try/finally still guarantees the
+                # file itself was left in a safe (best_content) state.
+                print(f"  [{item.name}] uncaught exception: {e}")
+                result = Result(item.name, "error", 0.0, 0, str(e))
             ledger[result.name] = {
                 "status": result.status,
                 "score": result.score,
