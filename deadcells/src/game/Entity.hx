@@ -265,8 +265,9 @@ class Entity {
     }
 
     public function isBreakableByHero(): Bool {
-        throw "stub: isBreakableByHero not decompiled";
+        return false;
     }
+
 
     public function preDeserialize(): Void {
     }
@@ -278,8 +279,9 @@ class Entity {
     }
 
     public function prepareSave(): Bool {
-        throw "stub: prepareSave not decompiled";
+        return true;
     }
+
 
     public function init(): Void {
     }
@@ -443,7 +445,9 @@ class Entity {
     }
 
     public function recoil(arg0: Float): Void {
+        this.recoilX = arg0;
     }
+
 
     public function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }
@@ -481,8 +485,9 @@ class Entity {
     }
 
     public function get_weight(): Float {
-        throw "stub: get_weight not decompiled";
+        return this.baseWeight;
     }
+
 
     public function isAlive(): Bool {
         throw "stub: isAlive not decompiled";
@@ -497,9 +502,10 @@ class Entity {
     public function beforeTryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Void {
     }
 
-    public function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
-        throw "stub: tryToPreventDeath not decompiled";
+    public function tryToPreventDeath(a: tool.atk.AttackData, prevLife: Float): Bool {
+        return false;
     }
+
 
     public function onAttackMissed(arg0: tool.atk.AttackData): Void {
     }
@@ -518,8 +524,9 @@ class Entity {
     }
 
     public function getDamageReduction(arg0: tool.atk.AttackData): Float {
-        throw "stub: getDamageReduction not decompiled";
+        return 1.0;
     }
+
 
     public function onDamage(arg0: tool.atk.AttackData): Void {
     }
@@ -610,8 +617,9 @@ class Entity {
     }
 
     public function getAllAffects(): Array<Dynamic> {
-        throw "stub: getAllAffects not decompiled";
+        return this.affects;
     }
+
 
     public function removeAffects(arg0: Dynamic): Void {
     }
@@ -728,9 +736,10 @@ class Entity {
     public function onTouchCeil(): Void {
     }
 
-    public function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public function canBeActivated(by: en.Hero): Bool {
+        return false;
     }
+
 
     public function canBeHit(): Bool {
         throw "stub: canBeHit not decompiled";
