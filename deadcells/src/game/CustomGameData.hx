@@ -126,7 +126,7 @@ class CustomGameData {
     }
 
     public function canRandomizeHead(arg0: User): Bool {
-        throw "stub: canRandomizeHead not decompiled";
+        return true;
     }
 
     public function unlockItem(arg0: String): Void {

@@ -61,6 +61,7 @@ class Critter {
     }
 
     public function onLeaveScreen(): Void {
+        this.deactivate();
     }
 
     public function fixedUpdate(): Void {

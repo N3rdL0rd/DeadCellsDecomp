@@ -31,8 +31,8 @@ class SnakeSwordBase extends tool.Weapon {
     public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
     }
 
-    public function onCreateAttack(arg0: tool.atk.AttackData): tool.atk.AttackData {
-        throw "stub: onCreateAttack not decompiled";
+    public function onCreateAttack(atk: tool.atk.AttackData): tool.atk.AttackData {
+        return atk;
     }
 
     public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {

@@ -11,7 +11,7 @@ class Process {
     public var paused: Bool;
     public var destroyed: Bool;
     public var speedMod: Float;
-    public var parent: libs.Process;
+    public var parent: Process;
     public var tmod: Float;
     public var name: String;
     public var children: Array<Dynamic>;
@@ -20,22 +20,22 @@ class Process {
     public var tw: libs.misc.Tweenie;
     public var root: h2d.Layers;
 
-    public function new(arg0: libs.Process = null) {
+    public function new(arg0: Process = null) {
     }
 
-    public static function _dispose(arg0: libs.Process): Void {
+    public static function _dispose(arg0: Process): Void {
     }
 
     public static function _checkDestroyeds(arg0: Array<Dynamic>): Void {
     }
 
-    public static function _postUpdate(arg0: libs.Process): Void {
+    public static function _postUpdate(arg0: Process): Void {
     }
 
-    public static function _update(arg0: libs.Process, arg1: Float, arg2: Dynamic): Void {
+    public static function _update(arg0: Process, arg1: Float, arg2: Dynamic): Void {
     }
 
-    public static function _resize(arg0: libs.Process): Void {
+    public static function _resize(arg0: Process): Void {
     }
 
     public static function resizeAll(): Void {
@@ -90,14 +90,15 @@ class Process {
     public function destroy(): Void {
     }
 
-    public function addChild(arg0: libs.Process): Void {
+    public function addChild(arg0: Process): Void {
     }
 
-    public function createChildProcess(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic): libs.Process {
+    public function createChildProcess(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic): Process {
         throw "stub: createChildProcess not decompiled";
     }
 
     public function disposeImmediately(): Void {
+        _dispose(this);
     }
 
     public function __string(): hl.Bytes {
