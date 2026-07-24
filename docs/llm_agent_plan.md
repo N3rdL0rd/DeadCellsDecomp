@@ -89,32 +89,70 @@ not guessed). Implements the loop above end to end:
   annotations) fixed instead, a different, coordinated kind of task not yet
   automated (see "Macro clusters" below).
 - Sorted easiest (fewest original opcodes) first.
-- **Context per attempt**: full current file content, crashlink's decompiled
-  pseudocode (`crashlink.decomp.IRFunction` + `crashlink.pseudo.pseudo`) for
-  the target function, and on retry either the last compile error or a
-  unified opcode diff.
-- **Sandbox check** before ever writing to disk or compiling: regexes over
-  function/class names must match exactly between the original file and the
-  model's returned full-file rewrite, or the attempt is rejected without
-  spending a compile.
+- **Selective splice, not whole-file rewrite**: the model is shown and asked
+  to return only the ONE target method's text, not the whole file. Python
+  locates the method's exact span in the source (`find_function_span` - a
+  string/comment-aware brace matcher scoped to the right class, since method
+  names can collide across classes in a multi-class file) and splices the
+  model's answer in directly. This matters because files can have dozens of
+  unrelated classes/methods; regenerating all of them as output tokens on
+  every attempt was pure waste (slower per attempt, no benefit) before this
+  was fixed. Falls back to the original whole-file-rewrite mode (full context
+  + a function/class-name-set guard check) for the minority of cases
+  `find_function_span` can't locate unambiguously - constructors, and the
+  nested "module quirk" classes (`pack._Module.$Class_Impl_.method`) crashlink
+  emits for private/secondary classes sharing a module with another class.
+- **Context per attempt**: the target method's current text (or the whole
+  file, in whole-file-fallback mode), crashlink's decompiled pseudocode
+  (`crashlink.decomp.IRFunction` + `crashlink.pseudo.pseudo`) for the target
+  function, and on retry either the last compile error or a unified opcode
+  diff.
+- **Sandbox check** before ever writing to disk or compiling: in selective
+  mode, the returned snippet must contain exactly one method declaration with
+  the expected name and balanced braces (`validate_selective_snippet`); in
+  whole-file mode, regexes over function/class names must match exactly
+  between the original file and the model's returned rewrite. Either way, a
+  rejected attempt costs zero compiles.
+- **Baseline scoring, not an assumed 0%**: before ever calling the model, the
+  function's *current* score is measured first. Without this, if a result
+  from a previous run never made it into the ledger (has actually happened -
+  see the streaming/logging section below), a worse new attempt could
+  silently overwrite an already-matching function, since "best so far"
+  would've otherwise started from a wrong assumption of 0%.
 - **Concurrency**: OpenRouter calls run across `--workers` threads in
   parallel (the slow, I/O-bound part). Applying an edit, `haxe
-  build.dev.hxml`, rebuilding `client.hl` via `build.opengl.hxml`, and
+  build.dev.hxml`, rebuilding `client.hl` via `build.match.hxml`, and
   rescoring are serialized behind one lock, since all workers share one
   source tree and one compiled output - measured at ~2s per compile, so this
   is fast in absolute terms but is the actual bottleneck at thousands of
   functions, not model latency. `hlboot.dat` (the ~19s-to-load original) is
   loaded once for the whole run and never reloaded.
-- **Retry budget**: 3 attempts per function; keeps the best-scoring compiling
-  result even if it never reaches 100%, same "record partial progress"
-  principle as the plan above.
+- **Retry budget**: 3 attempts per function. If the best score across those
+  attempts is still below `DEFER_THRESHOLD` (80%), the function is marked
+  "deferred" rather than retried blindly with the same model - it needs a
+  stronger one. `--deferred-only --model <stronger-model-id>` targets exactly
+  those functions later.
+- **Streaming, not blocking**: `openrouter_chat` uses OpenRouter's SSE
+  streaming rather than waiting for a full response, and always writes the
+  reasoning + content transcript to `tools/agent_runs/logs/<function>-attempt
+  <N>.log` (so `tail -f` shows the model thinking in real time even when
+  multi-threaded, where printing raw tokens from several functions to one
+  shared stdout would just interleave into garbage). Pass `--live` (with
+  `--workers 1`) to also echo tokens straight to the terminal.
+- **Daily quota is a hard stop, not a retry-with-backoff case**: OpenRouter's
+  free tier caps at 50 requests/day with no credit balance (confirmed live -
+  `X-RateLimit-Limit: 50`; a 10-credit top-up raises this to 1000/day).
+  Hitting it aborts the whole run immediately with a clear message rather
+  than retrying with backoff (which cannot fix a cap that won't reset for up
+  to 24h) or, worse, marking every remaining function "deferred" as if the
+  model had tried and failed rather than never gotten a real attempt.
 - **Ledger**: `tools/agent_runs/ledger.json` (gitignored - ephemeral run
-  state), so reruns skip already-matched functions and resume rather than
-  redo work.
+  state), so reruns skip already-matched/deferred functions and resume rather
+  than redo work.
 
 Run with `uv run tools/agent_pipeline.py --workers 8 --limit N`
 (`--dry-run` builds and prints the queue with no API calls, for sanity-checking
-before spending real runs).
+before spending real runs; `--live --workers 1` to watch it think).
 
 ## Macro clusters: still needs a human/coordinator pass
 

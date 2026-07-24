@@ -44,6 +44,7 @@ import json
 import os
 import re
 import subprocess
+import sys
 import threading
 import time
 import urllib.error
@@ -51,6 +52,12 @@ import urllib.request
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional
+
+# Piping stdout (to `tail`, a log file, etc.) makes Python fully block-buffer
+# instead of line-buffer, which would sit on every progress/live-token print
+# until the buffer fills or the process exits - defeating the entire point of
+# --live and of watching a long run's progress as it happens.
+sys.stdout.reconfigure(line_buffering=True)
 
 from crashlink.core import Bytecode, Function, SearchIndex
 from crashlink.decomp import IRFunction
@@ -89,6 +96,93 @@ CODE_BLOCK_RE = re.compile(r"```(?:haxe)?\s*\n(.*?)\n```", re.DOTALL)
 compile_lock = threading.Lock()
 
 
+def _match_brace(text: str, open_pos: int) -> Optional[int]:
+    """Given the index of an opening '{', returns the index of its matching
+    '}' (string/comment-aware - naive brace counting breaks the moment a
+    string literal or comment contains a stray brace, which stub bodies with
+    throw "stub: ..." messages don't currently do, but a `//` or `/* */`
+    comment could). Returns None if unbalanced."""
+    depth = 0
+    i = open_pos
+    n = len(text)
+    while i < n:
+        c = text[i]
+        if c == '"' or c == "'":
+            quote = c
+            i += 1
+            while i < n and text[i] != quote:
+                i += 2 if text[i] == "\\" else 1
+            i += 1
+            continue
+        if text[i : i + 2] == "//":
+            i = text.find("\n", i)
+            if i == -1:
+                return None
+            continue
+        if text[i : i + 2] == "/*":
+            i = text.find("*/", i)
+            if i == -1:
+                return None
+            i += 2
+            continue
+        if c == "{":
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0:
+                return i
+        i += 1
+    return None
+
+
+def find_function_span(content: str, class_name: str, method_name: str) -> Optional[tuple[int, int]]:
+    """(start, end) character offsets of a named method's full declaration
+    (modifiers through closing brace) within a specific class in this file, or
+    None if it can't be located unambiguously - callers should fall back to a
+    whole-file rewrite rather than guess."""
+    class_m = re.search(r"\bclass\s+" + re.escape(class_name) + r"\b[^{]*\{", content)
+    if not class_m:
+        return None
+    class_body_end = _match_brace(content, class_m.end() - 1)
+    if class_body_end is None:
+        return None
+    class_body = content[class_m.end() : class_body_end]
+
+    # Only look at brace depth 0 within the class body, so we don't match a
+    # same-named method on some other nested/local construct.
+    method_re = re.compile(r"\bfunction\s+" + re.escape(method_name) + r"\s*\(")
+    matches = list(method_re.finditer(class_body))
+    if len(matches) != 1:
+        return None  # zero or ambiguous (multiple) matches - don't guess
+
+    func_m = matches[0]
+    open_brace = class_body.find("{", func_m.end())
+    if open_brace == -1:
+        return None
+    close_brace = _match_brace(class_body, open_brace)
+    if close_brace is None:
+        return None
+
+    # Walk back from the `function` keyword to the start of its line, to
+    # capture modifiers (public/static/override/etc).
+    line_start = class_body.rfind("\n", 0, func_m.start()) + 1
+    return (class_m.end() + line_start, class_m.end() + close_brace + 1)
+
+
+def parse_target_name(item_name: str) -> tuple[str, str]:
+    """'$Class.method' / 'pack.Class.method' / 'pack._Module.$Class_Impl_.method'
+    -> (class_name, haxe_source_method_name). Strips crashlink's '$'
+    static-namespace markers and maps the bytecode constructor name to
+    Haxe's `new`."""
+    name = item_name[1:] if item_name.startswith("$") else item_name
+    parts = name.split(".")
+    class_name = parts[-2].lstrip("$")
+    method_name = parts[-1]
+    if method_name == "__constructor__":
+        method_name = "new"
+    return class_name, method_name
+
+
 @dataclass
 class WorkItem:
     name: str  # e.g. "$Achievements.init" or "tool.Controller.someMethod"
@@ -108,6 +202,15 @@ class Result:
 def _log_path(log_name: str, attempt: int) -> Path:
     safe = re.sub(r"[^\w.-]", "_", log_name)
     return LOG_DIR / f"{safe}-attempt{attempt}.log"
+
+
+class DailyQuotaExhausted(Exception):
+    """OpenRouter's free-tier daily request cap is hit (observed live: 50/day
+    with no credit balance). Backoff-and-retry can't fix this - it won't
+    reset for up to 24h - so this must abort the whole run immediately rather
+    than burn through the rest of the queue with guaranteed-to-fail calls (and
+    definitely not get marked 'deferred', which would wrongly look like the
+    model tried and failed rather than never got a real attempt)."""
 
 
 def openrouter_chat(
@@ -194,6 +297,17 @@ def openrouter_chat(
                             content_parts.append(delta["content"])
                         if choice.get("finish_reason"):
                             finish_reason = choice["finish_reason"]
+            except urllib.error.HTTPError as e:
+                # Checked first since HTTPError is itself a URLError subclass -
+                # a hard daily-quota 429 (confirmed live: "Rate limit exceeded:
+                # free-models-per-day", 50/day with no credit balance) must
+                # not be retried with backoff like a transient one would be.
+                body = e.read().decode(errors="replace") if hasattr(e, "read") else ""
+                if e.code == 429 and "free-models-per-day" in body:
+                    raise DailyQuotaExhausted(body) from None
+                last_err = e
+                time.sleep(backoff)
+                continue
             except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError, RuntimeError) as e:
                 last_err = e
                 time.sleep(backoff)
@@ -209,7 +323,34 @@ def openrouter_chat(
             log_file.close()
 
 
-SYSTEM_PROMPT = """\
+# Selective mode (default): the model only ever sees/returns the ONE target
+# function, not the whole file, since files can have dozens of unrelated
+# classes/methods and regenerating all of them as output tokens on every
+# attempt is pure waste - slower and (on a metered model) more expensive for
+# zero benefit. Python does the splice via find_function_span's brace-aware
+# boundaries. Whole-file mode is the fallback for the minority of cases
+# find_function_span can't locate unambiguously (constructors, nested/quirk
+# classes, name collisions) - see docs/llm_agent_plan.md.
+SELECTIVE_SYSTEM_PROMPT = """\
+You are assisting with matching decompilation of Dead Cells, a Haxe game that \
+compiles to HashLink bytecode. You will be given ONE method's current text \
+(currently a stub, possibly with a wrong or incomplete body), crashlink's decompiled \
+pseudocode for it (approximate - types and variable names may be wrong, but the shape \
+is a useful hint), and either the current opcode-level diff against the original \
+bytecode or a compiler error from the previous attempt.
+
+Rewrite this method so that, once compiled, its bytecode matches the original as \
+closely as possible. Rules:
+- Return ONLY this one method's full declaration (modifiers, signature, and body) -
+  nothing else. Do not return the class, other methods, or file-level content.
+- Keep the same method name. You may adjust the signature (types/params) only if
+  strictly required for correctness.
+- Do not add explanatory comments.
+- Wrap your entire answer in a single ```haxe fenced code block containing just this
+  one method, and output nothing else outside that block.
+"""
+
+WHOLE_FILE_SYSTEM_PROMPT = """\
 You are assisting with matching decompilation of Dead Cells, a Haxe game that \
 compiles to HashLink bytecode. You will be given one Haxe source file (currently \
 a stub, possibly with a wrong or incomplete body for the target function), crashlink's \
@@ -228,7 +369,21 @@ matches the original as closely as possible. Rules:
 """
 
 
-def build_user_prompt(
+def build_selective_prompt(
+    file_path: Path, func_name: str, current_func_text: str, pseudo_src: str, feedback: Optional[str]
+) -> str:
+    parts = [
+        f"File: {file_path.relative_to(ROOT)}",
+        f"Target method: {func_name}",
+        "\nCurrent method text:\n```haxe\n" + current_func_text + "\n```",
+        "\ncrashlink decompiled pseudocode for this method (approximate):\n```haxe\n" + pseudo_src + "\n```",
+    ]
+    if feedback:
+        parts.append("\n" + feedback)
+    return "\n".join(parts)
+
+
+def build_whole_file_prompt(
     file_path: Path, func_name: str, file_content: str, pseudo_src: str, feedback: Optional[str]
 ) -> str:
     parts = [
@@ -249,8 +404,29 @@ def parse_response(content: str) -> Optional[str]:
     return m.group(1) if m else None
 
 
+def validate_selective_snippet(snippet: str, method_name: str) -> Optional[str]:
+    """None if snippet looks like exactly one well-formed method named
+    method_name, else a rejection reason."""
+    matches = list(FUNC_NAME_RE.finditer(snippet))
+    if len(matches) != 1:
+        return f"expected exactly one method declaration, found {len(matches)}"
+    if matches[0].group(1) != method_name:
+        return f"method name changed: expected '{method_name}', got '{matches[0].group(1)}'"
+    open_brace = snippet.find("{", matches[0].end())
+    if open_brace == -1:
+        return "no opening brace found for method body"
+    close_brace = _match_brace(snippet, open_brace)
+    if close_brace is None:
+        return "unbalanced braces in method body"
+    if snippet[close_brace + 1 :].strip():
+        return "unexpected content after method body's closing brace"
+    return None
+
+
 def guard_ok(original: str, candidate: str) -> Optional[str]:
-    """None if candidate passes the sandbox check, else a rejection reason."""
+    """None if candidate passes the sandbox check, else a rejection reason. Only
+    used in whole-file mode (selective mode's guard is validate_selective_snippet
+    plus the fact that Python does the splice, not the model)."""
     orig_funcs = set(FUNC_NAME_RE.findall(original))
     cand_funcs = set(FUNC_NAME_RE.findall(candidate))
     if orig_funcs != cand_funcs:
@@ -356,6 +532,10 @@ def process_item(
     original_content = item.file_path.read_text()
     pseudo_src = pseudo(IRFunction(original, orig_func))
 
+    class_name, method_name = parse_target_name(item.name)
+    span = find_function_span(original_content, class_name, method_name)
+    selective = span is not None  # else falls back to whole-file mode below
+
     # Never assume the file starts at 0% - if a previous run already got this
     # function matching (e.g. its result never made it into the ledger because
     # of a crash elsewhere in that run - this has actually happened), starting
@@ -376,14 +556,20 @@ def process_item(
 
     try:
         for attempt in range(1, MAX_ATTEMPTS + 1):
-            user_prompt = build_user_prompt(item.file_path, item.name, original_content, pseudo_src, feedback)
+            if selective:
+                current_func_text = original_content[span[0] : span[1]]
+                user_prompt = build_selective_prompt(item.file_path, item.name, current_func_text, pseudo_src, feedback)
+                system_prompt = SELECTIVE_SYSTEM_PROMPT
+            else:
+                user_prompt = build_whole_file_prompt(item.file_path, item.name, original_content, pseudo_src, feedback)
+                system_prompt = WHOLE_FILE_SYSTEM_PROMPT
             if dry_run:
                 return Result(item.name, "error", 0.0, attempt, "dry-run, no API call made")
             if live:
-                print(f"\n=== [{item.name}] attempt {attempt} ===")
+                print(f"\n=== [{item.name}] attempt {attempt} ({'selective' if selective else 'whole-file'}) ===")
             try:
                 response = openrouter_chat(
-                    [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": user_prompt}],
+                    [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}],
                     model=model,
                     log_name=item.name,
                     attempt=attempt,
@@ -394,17 +580,26 @@ def process_item(
                 feedback = None  # give the next attempt a clean slate rather than repeating a transport error
                 continue
 
-            candidate = parse_response(response)
-            if candidate is None:
+            snippet = parse_response(response)
+            if snippet is None:
                 print(f"  [{item.name}] attempt {attempt}: no fenced code block in response ({len(response)} chars)")
-                feedback = "Your last response had no ```haxe fenced code block. Return the full file in one."
+                feedback = "Your last response had no ```haxe fenced code block. Return your answer in one."
                 continue
 
-            rejection = guard_ok(original_content, candidate)
-            if rejection:
-                print(f"  [{item.name}] attempt {attempt}: rejected - {rejection}")
-                feedback = f"Your last response was rejected: {rejection}. Only edit {item.name}'s body."
-                continue
+            if selective:
+                rejection = validate_selective_snippet(snippet, method_name)
+                if rejection:
+                    print(f"  [{item.name}] attempt {attempt}: rejected - {rejection}")
+                    feedback = f"Your last response was rejected: {rejection}. Return only the {method_name} method."
+                    continue
+                candidate = original_content[: span[0]] + snippet.strip() + "\n" + original_content[span[1] :]
+            else:
+                candidate = snippet
+                rejection = guard_ok(original_content, candidate)
+                if rejection:
+                    print(f"  [{item.name}] attempt {attempt}: rejected - {rejection}")
+                    feedback = f"Your last response was rejected: {rejection}. Only edit {item.name}'s body."
+                    continue
 
             with compile_lock:
                 # Always leave disk holding best_content-so-far by the time we release the
@@ -535,6 +730,16 @@ def main() -> None:
             item = futures[future]
             try:
                 result = future.result()
+            except DailyQuotaExhausted as e:
+                # Backoff can't fix this (resets in up to 24h) - stop the whole
+                # run rather than burn through the rest of the queue with
+                # guaranteed-to-fail calls, and don't record ledger entries for
+                # in-flight items that never got a real attempt (see the
+                # DailyQuotaExhausted docstring for why "deferred" would be wrong).
+                print(f"\nOpenRouter daily quota exhausted, stopping run: {e}")
+                pool.shutdown(wait=True, cancel_futures=True)
+                save_ledger(ledger)
+                return
             except Exception as e:
                 # One item's uncaught exception must never lose bookkeeping for
                 # every other future in this batch (this happened for real: a
