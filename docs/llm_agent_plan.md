@@ -165,11 +165,29 @@ lower volume than the per-function queue but higher-stakes (one wrong fix
 breaks many functions at once), and much less amenable to blind automation
 than the bulk of the queue is.
 
-## Tiered models: superseded by "it's free"
+## Tiered models: superseded by "it's free" - and now multi-provider
 
 The tiered cheap/expensive model plan above was written under the assumption
 of real per-token cost. Nemotron 3 Ultra on OpenRouter's free tier removes
-that constraint for now - no cost-based escalation logic was built. Worth
-revisiting if the free tier's rate limits become the binding constraint
-instead of money, or if quality on hard functions turns out to need a bigger
-model than free-tier Nemotron.
+that constraint for now - no cost-based escalation logic was built. What did
+become the binding constraint, exactly as anticipated: OpenRouter's free tier
+caps at 50 requests/day with no credit balance, which this project hit for
+real during testing.
+
+Rather than pay for OpenRouter credits, `tools/agent_pipeline.py` now
+supports multiple providers via `PROVIDER_PRESETS` and `--provider`: alongside
+OpenRouter, the "Kimi for Coding" flat-rate plan (`api.kimi.com/coding/v1`,
+K2.7 by default) - same account/API key already used by this machine's
+OpenCode setup, authenticated by sending the same client-identifying headers
+(`User-Agent: KimiCLI/1.0`, `X-Msh-Platform: kimi_cli`) OpenCode itself uses
+to get that plan's dedicated rate limits rather than generic public-API
+throttling. In testing, Kimi was also dramatically faster per function
+(~20-45s vs. 100-600s on free-tier Nemotron, whose heavy reasoning overhead
+shows up even on trivial one-line fixes). Both providers speak the same
+OpenAI-completions-shaped API, so `openrouter_chat` didn't need a rewrite,
+just URL/header/model parameterization.
+
+`.env` (gitignored) holds `KIMI_API_KEY`, loaded by a minimal stdlib-only
+loader in the script - deliberately not reading OpenCode's own credential
+store directly (`~/.local/share/opencode/auth.json`) to avoid coupling this
+project to another tool's local secret storage.
