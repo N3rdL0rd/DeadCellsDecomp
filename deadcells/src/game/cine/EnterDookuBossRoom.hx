@@ -33,8 +33,9 @@ class EDBR_BossRush extends cine.EnterDookuBRCineBase {
     }
 
     public override function canSkip(): Bool {
-        throw "stub: canSkip not decompiled";
+        return true;
     }
+
 }
 
 class EDBR_Richter extends cine.EnterDookuBRCineBase {
@@ -173,8 +174,9 @@ class EnterDookuBRCineBase extends GameCinematic {
     }
 
     public function canSkip(): Bool {
-        throw "stub: canSkip not decompiled";
+        return false;
     }
+
 
     public function onEnd(): Void {
     }

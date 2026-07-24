@@ -20,16 +20,18 @@ class Emitter {
     }
 
     public function get_top(): Float {
-        throw "stub: get_top not decompiled";
+        return this.y;
     }
+
 
     public function get_bottom(): Float {
         throw "stub: get_bottom not decompiled";
     }
 
     public function get_left(): Float {
-        throw "stub: get_left not decompiled";
+        return this.x;
     }
+
 
     public function get_right(): Float {
         throw "stub: get_right not decompiled";

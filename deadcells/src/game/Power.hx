@@ -12,8 +12,9 @@ class Power {
     }
 
     public function shouldChangeLevelWithHero(): Bool {
-        throw "stub: shouldChangeLevelWithHero not decompiled";
+        return false;
     }
+
 
     public function onReload(): Void {
     }

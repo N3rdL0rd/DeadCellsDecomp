@@ -15,5 +15,7 @@ class HeroDeathContinue extends cine.HeroDeathBase {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
     }
+
 }

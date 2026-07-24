@@ -10,7 +10,9 @@ class GiantDeath extends GameCinematic {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
     }
+
 
     public function trackHeroLanding(): Void {
     }

@@ -43,7 +43,9 @@ class Active extends Entity {
     }
 
     public override function onDamage(arg0: tool.atk.AttackData): Void {
+        super.onDamage(arg0);
     }
+
 
     public override function onFatalFallDamage(): Void {
     }

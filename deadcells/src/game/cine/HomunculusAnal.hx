@@ -28,5 +28,7 @@ class HomunculusAnal extends GameCinematic {
     }
 
     public override function update(): Void {
+        super.update();
     }
+
 }

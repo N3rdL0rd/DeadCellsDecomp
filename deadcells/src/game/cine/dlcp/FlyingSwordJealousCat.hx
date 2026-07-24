@@ -18,7 +18,9 @@ class FlyingSwordJealousCat extends GameCinematic {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public override function onDispose(): Void {
     }

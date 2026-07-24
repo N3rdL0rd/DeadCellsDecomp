@@ -13,8 +13,9 @@ class PassivePower extends Power {
     }
 
     public override function shouldChangeLevelWithHero(): Bool {
-        throw "stub: shouldChangeLevelWithHero not decompiled";
+        return true;
     }
+
 
     public function doActive(): Void {
     }
@@ -28,9 +29,10 @@ class PassivePower extends Power {
     public function doPassive(): Void {
     }
 
-    public function onBeforeOwnerApplyAttackResult(arg0: tool.atk.AttackData): Bool {
-        throw "stub: onBeforeOwnerApplyAttackResult not decompiled";
+    public function onBeforeOwnerApplyAttackResult(a: tool.atk.AttackData): Bool {
+        return true;
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

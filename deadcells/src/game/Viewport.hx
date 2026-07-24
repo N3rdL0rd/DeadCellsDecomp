@@ -45,9 +45,11 @@ class Viewport extends libs.Process {
         throw "stub: damp not decompiled";
     }
 
-    public function set_zoom(arg0: Float): Float {
-        throw "stub: set_zoom not decompiled";
+    public function set_zoom(v: Float): Float {
+        this.zoom = v;
+        return v;
     }
+
 
     public function onReload(): Void {
     }

@@ -749,9 +749,10 @@ class Entity {
         throw "stub: canBeHitBy not decompiled";
     }
 
-    public function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
-        throw "stub: canReceiveAttack not decompiled";
+    public function canReceiveAttack(a: tool.atk.AttackData): Bool {
+        return this.canBeHit();
     }
+
 
     public function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }

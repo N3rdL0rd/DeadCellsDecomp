@@ -11,15 +11,17 @@ class SteamAchievementManager {
     }
 
     public function shouldDisplayInGameNotification(): Bool {
-        throw "stub: shouldDisplayInGameNotification not decompiled";
+        return true;
     }
+
 
     public function init(arg0: haxe.ds.EnumValueMap<Dynamic, Dynamic>): Void {
     }
 
     public function getConfigResourceName(): String {
-        throw "stub: getConfigResourceName not decompiled";
+        return null;
     }
+
 
     public function isUnlocked(arg0: achievements.EAchievement): Bool {
         throw "stub: isUnlocked not decompiled";

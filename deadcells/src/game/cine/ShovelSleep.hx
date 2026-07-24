@@ -6,5 +6,7 @@ class ShovelSleep extends GameCinematic {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 }

@@ -25,8 +25,9 @@ class Main extends libs.Process {
     }
 
     public static function canOpenURL(): Bool {
-        throw "stub: canOpenURL not decompiled";
+        return true;
     }
+
 
     public static function openUrlInBrowser(arg0: String): Void {
     }
