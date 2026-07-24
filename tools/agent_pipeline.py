@@ -27,10 +27,16 @@ whole run - loading it is the single slowest operation (~19s) and it never
 changes, unlike the recompiled client.hl which is reloaded after every
 successful compile.
 
+Functions that end a run scoring below DEFER_THRESHOLD are marked "deferred" in
+the ledger rather than retried blindly - they need a stronger model, not more
+attempts with the same one. Re-run with --deferred-only --model <bigger model>
+to specifically target them.
+
 Usage:
     export OPENROUTER_API_KEY=...
     uv run tools/agent_pipeline.py --limit 20 --workers 8
     uv run tools/agent_pipeline.py --dry-run --limit 5   # no API calls, no writes
+    uv run tools/agent_pipeline.py --deferred-only --model <stronger-model-id>
 """
 
 import argparse
@@ -64,6 +70,12 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MAX_ATTEMPTS = 3
 MAX_TOKENS = 8000
 
+# If a function's best score after MAX_ATTEMPTS is below this, it's marked
+# "deferred" instead of "no_improvement"/"improved" - a signal that this model
+# couldn't get it close, and it should be escalated to a stronger model
+# (--deferred-only --model ...) rather than retried blindly with the same one.
+DEFER_THRESHOLD = 0.8
+
 # Files with real hand-written decompiled logic (not just stubs) - never
 # touched by first-pass automation, same rule established earlier in this
 # project for Boot.hx.
@@ -86,13 +98,13 @@ class WorkItem:
 @dataclass
 class Result:
     name: str
-    status: str  # "matched" | "improved" | "no_improvement" | "rejected" | "error"
+    status: str  # "matched" | "improved" | "deferred" | "no_improvement" | "rejected" | "error"
     score: float
     attempts: int
     note: str = ""
 
 
-def openrouter_chat(messages: list[dict], max_tokens: int = MAX_TOKENS) -> str:
+def openrouter_chat(messages: list[dict], model: str = OPENROUTER_MODEL, max_tokens: int = MAX_TOKENS) -> str:
     api_key = os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
         raise RuntimeError("OPENROUTER_API_KEY not set")
@@ -100,7 +112,7 @@ def openrouter_chat(messages: list[dict], max_tokens: int = MAX_TOKENS) -> str:
         OPENROUTER_URL,
         data=json.dumps(
             {
-                "model": OPENROUTER_MODEL,
+                "model": model,
                 "messages": messages,
                 "max_tokens": max_tokens,
             }
@@ -274,7 +286,9 @@ def build_queue(original: Bytecode) -> list[WorkItem]:
     return items
 
 
-def process_item(original: Bytecode, orig_idx: SearchIndex, item: WorkItem, dry_run: bool) -> Result:
+def process_item(
+    original: Bytecode, orig_idx: SearchIndex, item: WorkItem, dry_run: bool, model: str = OPENROUTER_MODEL
+) -> Result:
     orig_func = orig_idx._full[item.name][0]
     original_content = item.file_path.read_text()
     pseudo_src = pseudo(IRFunction(original, orig_func))
@@ -290,7 +304,8 @@ def process_item(original: Bytecode, orig_idx: SearchIndex, item: WorkItem, dry_
                 return Result(item.name, "error", 0.0, attempt, "dry-run, no API call made")
             try:
                 response = openrouter_chat(
-                    [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": user_prompt}]
+                    [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": user_prompt}],
+                    model=model,
                 )
             except (urllib.error.URLError, RuntimeError) as e:
                 print(f"  [{item.name}] attempt {attempt}: API error - {e}")
@@ -345,10 +360,16 @@ def process_item(original: Bytecode, orig_idx: SearchIndex, item: WorkItem, dry_
 
     if best_score == 1.0:
         status = "matched"
-    elif best_content != original_content:
+    elif best_score >= DEFER_THRESHOLD:
         status = "improved"
     else:
-        status = "no_improvement"
+        # Below DEFER_THRESHOLD regardless of whether any progress was made at
+        # all (best_content == original_content) or the model just couldn't
+        # get close enough - either way this model isn't cutting it for this
+        # function, defer to a stronger one rather than keep retrying blindly.
+        status = "deferred"
+        note = "never produced a compiling candidate" if best_content == original_content else ""
+        return Result(item.name, status, best_score, attempt, note)
     return Result(item.name, status, best_score, attempt, "")
 
 
@@ -374,6 +395,18 @@ def main() -> None:
     )
     parser.add_argument("--limit", type=int, default=None, help="cap the number of functions this run processes")
     parser.add_argument("--dry-run", action="store_true", help="build the queue and print it, make no API calls")
+    parser.add_argument(
+        "--model",
+        default=OPENROUTER_MODEL,
+        help=f"OpenRouter model id to use (default: {OPENROUTER_MODEL})",
+    )
+    parser.add_argument(
+        "--deferred-only",
+        action="store_true",
+        help="only process functions the ledger already marked 'deferred' (score < "
+        f"{DEFER_THRESHOLD:.0%} with the model that last attempted them) - pair with "
+        "--model to point a stronger model at exactly the functions the default one couldn't handle",
+    )
     args = parser.parse_args()
 
     print("Loading original bytecode (hlboot.dat)... this takes ~20s and only happens once.")
@@ -382,7 +415,10 @@ def main() -> None:
 
     queue = build_queue(original)
     ledger = load_ledger()
-    queue = [i for i in queue if ledger.get(i.name, {}).get("status") not in ("matched",)]
+    if args.deferred_only:
+        queue = [i for i in queue if ledger.get(i.name, {}).get("status") == "deferred"]
+    else:
+        queue = [i for i in queue if ledger.get(i.name, {}).get("status") not in ("matched", "deferred")]
     if args.limit:
         queue = queue[: args.limit]
 
@@ -397,7 +433,9 @@ def main() -> None:
     start = time.time()
     done = 0
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(process_item, original, orig_idx, item, False): item for item in queue}
+        futures = {
+            pool.submit(process_item, original, orig_idx, item, False, args.model): item for item in queue
+        }
         for future in as_completed(futures):
             item = futures[future]
             result = future.result()
@@ -406,6 +444,7 @@ def main() -> None:
                 "score": result.score,
                 "attempts": result.attempts,
                 "note": result.note,
+                "model": args.model,
             }
             save_ledger(ledger)
             done += 1
@@ -416,7 +455,8 @@ def main() -> None:
             )
 
     matched = sum(1 for v in ledger.values() if v["status"] == "matched")
-    print(f"\nDone. {matched} functions fully matched this run.")
+    deferred = sum(1 for v in ledger.values() if v["status"] == "deferred")
+    print(f"\nDone. {matched} functions fully matched this run, {deferred} deferred (score < {DEFER_THRESHOLD:.0%}) total.")
 
 
 if __name__ == "__main__":
