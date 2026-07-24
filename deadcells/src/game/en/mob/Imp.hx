@@ -57,9 +57,10 @@ class Imp extends en.Mob {
     public override function onDie(): Void {
     }
 
-    public override function canBeHitBy(arg0: Entity): Bool {
-        throw "stub: canBeHitBy not decompiled";
+    public override function canBeHitBy(by: Entity): Bool {
+        return super.canBeHitBy(by);
     }
+
 
     public override function fixedUpdate(): Void {
     }
@@ -71,7 +72,9 @@ class Imp extends en.Mob {
     }
 
     public override function onLeaveMap(): Void {
+        super.destroy();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

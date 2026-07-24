@@ -31,9 +31,10 @@ class Spiker extends en.Mob {
     public override function behaviourAi(): Void {
     }
 
-    public override function inDetectArea(arg0: Entity): Bool {
-        throw "stub: inDetectArea not decompiled";
+    public override function inDetectArea(e: Entity): Bool {
+        return true;
     }
+
 
     public function willSpikeAtPoint(arg0: tool.CPoint): Bool {
         throw "stub: willSpikeAtPoint not decompiled";
@@ -46,7 +47,9 @@ class Spiker extends en.Mob {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

@@ -71,13 +71,15 @@ class LevelDisp extends libs.Process {
         throw "stub: getDepthFromInfos not decompiled";
     }
 
-    public function getParallaxBounds(arg0: Dynamic): h2d.col.Bounds {
-        throw "stub: getParallaxBounds not decompiled";
+    public function getParallaxBounds(inf: Dynamic): h2d.col.Bounds {
+        return null;
     }
 
-    public function getParallaxScrollMaxY(arg0: Dynamic): Dynamic {
-        throw "stub: getParallaxScrollMaxY not decompiled";
+
+    public function getParallaxScrollMaxY(inf: Dynamic): Dynamic {
+        return null;
     }
+
 
     public function createBoundedParallax(arg0: Int, arg1: h2d.col.Bounds, arg2: Dynamic, arg3: Dynamic): Parallax {
         throw "stub: createBoundedParallax not decompiled";

@@ -11,8 +11,10 @@ class Docker extends en.inter.Npc {
     public override function initGfx(): Void {
     }
 
-    public override function onGreet(arg0: en.Hero): Void {
+    public override function onGreet(h: en.Hero): Void {
+        super.onGreet(h);
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

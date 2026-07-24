@@ -18,8 +18,9 @@ class Lava extends en.LevelTrap {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public function finalizeBounds(arg0: Int, arg1: Int, arg2: Int, arg3: Int): Void {
     }

@@ -39,12 +39,14 @@ class HandBase extends en.Mob {
     }
 
     public function get_idleX(): Float {
-        throw "stub: get_idleX not decompiled";
+        return -1.0;
     }
 
+
     public function get_idleY(): Float {
-        throw "stub: get_idleY not decompiled";
+        return -1.0;
     }
+
 
     public function getShootY(): Float {
         throw "stub: getShootY not decompiled";
@@ -111,8 +113,9 @@ class HandBase extends en.Mob {
     }
 
     public function chooseAction(): en.mob.boss.giant.GHAction {
-        throw "stub: chooseAction not decompiled";
+        return GH_Idle;
     }
+
 
     public function shockWaveHit(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }

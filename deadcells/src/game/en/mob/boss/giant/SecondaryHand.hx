@@ -4,9 +4,10 @@ class SecondaryHand extends en.mob.boss.giant.HandBase {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: en.mob.boss.Giant = null, arg1: Bool = false, arg2: Int = 0, arg3: Int = 0) {
-        super();
+    public function new(giant: en.mob.boss.Giant, right: Bool, damageTier: Int, lifeTier: Int) {
+        super(giant, right, damageTier, lifeTier);
     }
+
 
     public static function create(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int): en.mob.boss.giant.SecondaryHand {
         throw "stub: create not decompiled";

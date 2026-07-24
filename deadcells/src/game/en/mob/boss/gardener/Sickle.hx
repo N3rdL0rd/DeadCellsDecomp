@@ -68,5 +68,7 @@ class Sickle extends en.Bullet {
     }
 
     public override function onBlock(arg0: Bool): Void {
+        this.destroy();
     }
+
 }

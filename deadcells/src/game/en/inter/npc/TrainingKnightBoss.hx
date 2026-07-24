@@ -9,7 +9,9 @@ class TrainingKnightBoss extends en.inter.npc.TrainingKnight {
     }
 
     public override function onFocus(): Void {
+        super.onFocus();
     }
+
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }

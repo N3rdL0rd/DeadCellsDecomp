@@ -15,7 +15,9 @@ class SecretLever extends en.Interactive {
     }
 
     public override function init(): Void {
+        super.init();
     }
+
 
     public override function initGfx(): Void {
     }

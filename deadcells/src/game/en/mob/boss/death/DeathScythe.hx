@@ -30,8 +30,9 @@ class DeathScythe extends Entity {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public function canHit(arg0: Entity): Bool {
         throw "stub: canHit not decompiled";

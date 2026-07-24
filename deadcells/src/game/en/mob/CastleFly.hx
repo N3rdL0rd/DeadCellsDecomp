@@ -14,10 +14,14 @@ class CastleFly extends en.mob.Fly {
     }
 
     public static function preloadGfx(): Void {
+        en.mob.Fly.preloadGfx();
     }
 
+
     public override function initGfx(): Void {
+        super.initGfx();
     }
+
 
     public override function behaviourAi(): Void {
     }

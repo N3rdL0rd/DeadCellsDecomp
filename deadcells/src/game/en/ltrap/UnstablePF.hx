@@ -32,7 +32,9 @@ class UnstablePF extends en.LevelTrap {
     }
 
     public override function onOutOfGameChange(): Void {
+        super.onOutOfGameChange();
     }
+
 
     public function setCollisionState(arg0: Bool): Void {
     }

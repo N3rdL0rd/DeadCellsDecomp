@@ -67,8 +67,9 @@ class PetMob extends en.Mob {
     }
 
     public function canBuff(): Bool {
-        throw "stub: canBuff not decompiled";
+        return true;
     }
+
 
     public function buff(): Void {
     }

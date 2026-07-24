@@ -62,7 +62,9 @@ class Screamer extends en.Mob {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";
@@ -114,7 +116,9 @@ class ScreamerSword extends Entity {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

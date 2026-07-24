@@ -26,7 +26,9 @@ class Samurai extends en.Mob {
     }
 
     public override function behaviourAi(): Void {
+        super.behaviourAi();
     }
+
 
     public override function fixedUpdate(): Void {
     }

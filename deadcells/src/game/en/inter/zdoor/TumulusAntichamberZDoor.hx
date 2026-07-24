@@ -48,8 +48,10 @@ class TumulusAntichamberZDoor extends en.inter.ZDoor {
     public override function enter(arg0: en.Hero): Void {
     }
 
-    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(by: en.Hero, lp: Bool): Void {
+        super.onActivate(by, lp);
     }
+
 
     public function open(arg0: Dynamic): Void {
     }

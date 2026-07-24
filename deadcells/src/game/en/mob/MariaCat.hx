@@ -25,8 +25,9 @@ class MariaCat extends en.Mob {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
@@ -64,7 +65,9 @@ class MariaCat extends en.Mob {
     }
 
     public override function onDie(): Void {
+        super.onDie();
     }
+
 
     public override function behaviour_platformPatrol(): Void {
     }

@@ -48,7 +48,9 @@ class S_ProtectorMushroom extends en.pet.PetMob {
     }
 
     public override function onBuff(): Void {
+        this.giveExplodeOrder();
     }
+
 
     public override function onDebuff(): Void {
     }

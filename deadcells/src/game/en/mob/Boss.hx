@@ -40,8 +40,9 @@ class Boss extends en.Mob {
     }
 
     public function isReady(): Bool {
-        throw "stub: isReady not decompiled";
+        return this.ready;
     }
+
 
     public function combatStarted(): Bool {
         throw "stub: combatStarted not decompiled";
@@ -56,7 +57,9 @@ class Boss extends en.Mob {
     }
 
     public function prepareLevelUp(): Void {
+        this.bossLevelUp();
     }
+
 
     public function bossLevelUp(): Void {
     }

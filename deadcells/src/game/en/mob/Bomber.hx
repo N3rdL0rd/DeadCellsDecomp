@@ -53,7 +53,9 @@ class Bomber extends en.Mob {
     }
 
     public override function onStep(): Void {
+        super.onStep();
     }
+
 
     public override function onLand(arg0: Float): Void {
     }

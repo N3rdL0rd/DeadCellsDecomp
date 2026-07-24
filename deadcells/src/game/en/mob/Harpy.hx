@@ -59,9 +59,10 @@ class Harpy extends en.Mob {
     public override function onDie(): Void {
     }
 
-    public override function canCrawlThrought(arg0: Int, arg1: Int): Bool {
-        throw "stub: canCrawlThrought not decompiled";
+    public override function canCrawlThrought(x: Int, y: Int): Bool {
+        return true;
     }
+
 
     public override function onDamage(arg0: tool.atk.AttackData): Void {
     }

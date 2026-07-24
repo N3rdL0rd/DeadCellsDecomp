@@ -31,7 +31,9 @@ class TriggeredDoor extends en.inter.Door {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

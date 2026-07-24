@@ -22,8 +22,10 @@ class Fogger extends en.Mob {
     public override function behaviourAi(): Void {
     }
 
-    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(a: tool.atk.AttackData): Void {
+        super.onDamage(a);
     }
+
 
     public override function postUpdate(): Void {
     }

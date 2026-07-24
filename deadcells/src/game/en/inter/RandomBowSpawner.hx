@@ -4,9 +4,10 @@ class RandomBowSpawner extends en.inter.RandomWeaponSpawner {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: Int = 0, arg5: Int = 0) {
-        super();
+    public function new(lvl: pr.Level, x: Int, y: Int, tier: String, seed: Int, delayF: Int) {
+        super(lvl, x, y, tier, seed, delayF);
     }
+
 
     public override function getPossibleWeapons(): Dynamic {
         throw "stub: getPossibleWeapons not decompiled";

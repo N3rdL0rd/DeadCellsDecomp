@@ -18,8 +18,9 @@ class Rampager extends en.Mob {
     }
 
     public function getKind(): String {
-        throw "stub: getKind not decompiled";
+        return "Rampager";
     }
+
 
     public function getLib(): libs.heaps.slib.SpriteLib {
         throw "stub: getLib not decompiled";

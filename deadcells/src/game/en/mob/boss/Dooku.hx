@@ -90,12 +90,14 @@ class Dooku extends en.mob.Boss {
     }
 
     public override function get_headX(): Float {
-        throw "stub: get_headX not decompiled";
+        return super.get_headX();
     }
 
+
     public override function get_headY(): Float {
-        throw "stub: get_headY not decompiled";
+        return super.get_headY();
     }
+
 
     public function get_handTracks(): Array<Int> {
         throw "stub: get_handTracks not decompiled";
@@ -204,20 +206,29 @@ class Dooku extends en.mob.Boss {
     }
 
     public override function canLevelUp(): Bool {
-        throw "stub: canLevelUp not decompiled";
+        return super.canLevelUp();
     }
+
 
     public override function bossLevelUp(): Void {
+        super.bossLevelUp();
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+    	super.onCooldownEnd(k, idx);
     }
 
-    public override function onTouch(arg0: Entity): Void {
+
+    public override function onTouch(e: Entity): Void {
+        super.onTouch(e);
     }
+
 
     public override function onHorizontalStep(): Void {
+        super.onHorizontalStep();
     }
+
 
     public override function behaviourAi(): Void {
     }

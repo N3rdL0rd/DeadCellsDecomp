@@ -9,12 +9,14 @@ class RetractableSpikesChallenge extends en.ltrap.RetractableSpikes {
     }
 
     public override function get_normalSprite(): String {
-        throw "stub: get_normalSprite not decompiled";
+        return "spikesBank";
     }
 
+
     public override function get_bloodySprite(): String {
-        throw "stub: get_bloodySprite not decompiled";
+        return "spikesBloodBank";
     }
+
 
     public override function initGfx(): Void {
     }

@@ -21,8 +21,9 @@ class LighthouseExitDoor extends en.inter.exit.RockDoor {
     }
 
     public override function getDoorName(): String {
-        throw "stub: getDoorName not decompiled";
+        return "exitDoor";
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

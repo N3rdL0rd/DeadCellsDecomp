@@ -26,7 +26,9 @@ class BulletBomb extends en.LevelTrap {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public function shoot(): Void {
     }

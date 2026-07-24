@@ -130,9 +130,10 @@ class BoilerRoom extends en.Mob {
         throw "stub: forbiddenPosition not decompiled";
     }
 
-    public override function lookAtDelayed(arg0: Entity): Bool {
-        throw "stub: lookAtDelayed not decompiled";
+    public override function lookAtDelayed(e: Entity): Bool {
+        return false;
     }
+
 
     public override function fixedUpdate(): Void {
     }
@@ -153,7 +154,9 @@ class BoilerRoom extends en.Mob {
     }
 
     public override function disposeGfx(): Void {
+        super.disposeGfx();
     }
+
 
     public override function sightCheckCase(arg0: Int, arg1: Int, arg2: Ref, arg3: Dynamic): Bool {
         throw "stub: sightCheckCase not decompiled";

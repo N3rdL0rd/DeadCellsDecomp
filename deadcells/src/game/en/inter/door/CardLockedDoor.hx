@@ -5,9 +5,10 @@ class CardLockedDoor extends en.inter.door.LockedDoor {
     public static var __clid: Int;
     public var heroHasCard: Bool;
 
-    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: String = null, arg4: String = null) {
-        super();
+    public function new(lvl: pr.Level, cx: Int, cy: Int, key: String, customId: String) {
+        super(lvl, cx, cy, key, customId);
     }
+
 
     public override function init(): Void {
     }

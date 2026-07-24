@@ -49,7 +49,9 @@ class Teleport extends en.Interactive {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public override function fixedUpdate(): Void {
     }

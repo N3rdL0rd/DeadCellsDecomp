@@ -54,9 +54,10 @@ class Blowgunner extends en.Mob {
     public override function initSkills(): Void {
     }
 
-    public override function canBeHitBy(arg0: Entity): Bool {
-        throw "stub: canBeHitBy not decompiled";
+    public override function canBeHitBy(by: Entity): Bool {
+        return super.canBeHitBy(by);
     }
+
 
     public override function inDetectArea(arg0: Entity): Bool {
         throw "stub: inDetectArea not decompiled";
@@ -66,7 +67,9 @@ class Blowgunner extends en.Mob {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public function onJumpEnd(): Void {
     }

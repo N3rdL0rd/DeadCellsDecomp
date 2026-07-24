@@ -15,7 +15,9 @@ class SpeedRunner extends en.Pet {
     }
 
     public override function init(): Void {
+        super.init();
     }
+
 
     public override function depop(): Void {
     }

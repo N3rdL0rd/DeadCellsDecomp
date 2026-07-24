@@ -38,8 +38,9 @@ class AdeleScytheGhost extends en.Mob {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public function initSprState(): Void {
     }

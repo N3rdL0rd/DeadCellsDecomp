@@ -148,8 +148,9 @@ class GardenerBoss extends en.mob.Boss {
     }
 
     public function isLigamentComingBack(): Bool {
-        throw "stub: isLigamentComingBack not decompiled";
+        return this.isLigamentRemoval;
     }
+
 
     public override function postUpdate(): Void {
     }
@@ -193,8 +194,10 @@ class GardenerBoss extends en.mob.Boss {
     public function cancelCeilingWalk(): Void {
     }
 
-    public override function onLand(arg0: Float): Void {
+    public override function onLand(floors: Float): Void {
+        super.onLand(floors);
     }
+
 
     public override function onTouchGround(): Void {
     }
@@ -226,8 +229,10 @@ class GardenerBoss extends en.mob.Boss {
     public function sickles(arg0: Int, arg1: Float): Void {
     }
 
-    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    public override function onAffectChange(x: Int, isActive: Bool): Void {
+        super.onAffectChange(x, isActive);
     }
+
 
     public function doThrowSickle(arg0: tool.atk.AttackData, arg1: Float, arg2: Float): en.mob.boss.gardener.Sickle {
         throw "stub: doThrowSickle not decompiled";
@@ -300,8 +305,9 @@ class GardenerBoss extends en.mob.Boss {
     }
 
     public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
-        throw "stub: canReceiveAttack not decompiled";
+        return this.isHittable;
     }
+
 
     public override function onDamage(arg0: tool.atk.AttackData): Void {
     }

@@ -59,9 +59,10 @@ class BeholderTtcl extends en.Mob {
     public override function initSkills(): Void {
     }
 
-    public override function inDetectArea(arg0: Entity): Bool {
-        throw "stub: inDetectArea not decompiled";
+    public override function inDetectArea(e: Entity): Bool {
+        return true;
     }
+
 
     public override function behaviourAi(): Void {
     }
@@ -90,8 +91,10 @@ class BeholderTtcl extends en.Mob {
     public function updateSweepingAttk(): Void {
     }
 
-    public override function contactAttack(arg0: Entity): Void {
+    public override function contactAttack(e: Entity): Void {
+        super.contactAttack(e);
     }
+
 
     public function hitSweep(arg0: Entity): Void {
     }

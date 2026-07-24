@@ -29,8 +29,9 @@ class CollectorPanelNpc extends en.inter.Npc {
     }
 
     public function getPanelPixelOffset(): Int {
-        throw "stub: getPanelPixelOffset not decompiled";
+        return 30;
     }
+
 
     public function openPanel(): Void {
     }

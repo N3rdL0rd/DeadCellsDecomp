@@ -13,9 +13,10 @@ class BoneThrower extends en.Mob {
         throw "stub: create not decompiled";
     }
 
-    public override function seeThroughOneWays(arg0: Entity): Bool {
-        throw "stub: seeThroughOneWays not decompiled";
+    public override function seeThroughOneWays(e: Entity): Bool {
+        return true;
     }
+
 
     public override function initGfx(): Void {
     }

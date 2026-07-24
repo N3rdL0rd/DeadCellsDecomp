@@ -55,8 +55,10 @@ class Collector extends en.mob.Boss {
         throw "stub: create not decompiled";
     }
 
-    public override function initLife(arg0: Float, arg1: Dynamic): Void {
+    public override function initLife(v: Float, max: Dynamic): Void {
+        super.initLife(v, max);
     }
+
 
     public override function init(): Void {
     }

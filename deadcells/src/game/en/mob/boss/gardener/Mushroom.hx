@@ -60,11 +60,15 @@ class Mushroom extends en.Interactive {
     public function flashRed(): Void {
     }
 
-    public override function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(wDir: Int): Void {
+        super.onTouchWall(wDir);
     }
 
+
     public override function onTouchGround(): Void {
+        super.onTouchGround();
     }
+
 
     public override function onTouch(arg0: Entity): Void {
     }
@@ -73,7 +77,9 @@ class Mushroom extends en.Interactive {
     }
 
     public override function onDie(): Void {
+        super.onDie();
     }
+
 
     public override function kill(): Void {
     }

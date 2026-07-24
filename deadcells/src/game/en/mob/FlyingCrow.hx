@@ -35,8 +35,9 @@ class FlyingCrow extends en.Mob {
     }
 
     public override function aiLocked(): Bool {
-        throw "stub: aiLocked not decompiled";
+        return true;
     }
+
 
     public override function onTouch(arg0: Entity): Void {
     }

@@ -15,8 +15,9 @@ class Archer extends en.Mob {
     }
 
     public function getKind(): String {
-        throw "stub: getKind not decompiled";
+        return "Archer";
     }
+
 
     public function getLib(): libs.heaps.slib.SpriteLib {
         throw "stub: getLib not decompiled";
@@ -27,8 +28,9 @@ class Archer extends en.Mob {
     }
 
     public function getPivotY(): Float {
-        throw "stub: getPivotY not decompiled";
+        return 0.5;
     }
+
 
     public override function initGfx(): Void {
     }

@@ -30,7 +30,9 @@ class Banker extends en.inter.Npc {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

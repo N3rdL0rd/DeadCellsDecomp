@@ -94,7 +94,9 @@ class AnchorGuy extends en.Mob {
     }
 
     public override function onLeaveMap(): Void {
+        this.kill();
     }
+
 
     public override function outOfGameUpdate(): Void {
     }

@@ -24,7 +24,9 @@ class UnstableGround extends en.LevelTrap {
     }
 
     public override function onOutOfGameChange(): Void {
+        super.onOutOfGameChange();
     }
+
 
     public override function init(): Void {
     }

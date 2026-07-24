@@ -30,8 +30,9 @@ class Hand extends en.mob.boss.giant.HandBase {
     }
 
     public function getSuperCharges(): Int {
-        throw "stub: getSuperCharges not decompiled";
+        return this.superCharges;
     }
+
 
     public function increaseSuperCharge(): Int {
         throw "stub: increaseSuperCharge not decompiled";

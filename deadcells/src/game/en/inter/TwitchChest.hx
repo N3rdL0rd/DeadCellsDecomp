@@ -40,7 +40,9 @@ class TwitchChest extends en.Interactive {
     }
 
     public override function onDie(): Void {
+        this.open();
     }
+
 
     public override function dispose(): Void {
     }
@@ -69,7 +71,9 @@ class TwitchChest extends en.Interactive {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

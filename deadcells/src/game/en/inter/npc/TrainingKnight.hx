@@ -17,7 +17,9 @@ class TrainingKnight extends en.inter.Npc {
     }
 
     public override function onFocus(): Void {
+        super.onFocus();
     }
+
 
     public function onComplete(): Void {
     }

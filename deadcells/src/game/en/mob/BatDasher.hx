@@ -20,12 +20,14 @@ class BatDasher extends en.mob.Bat {
     }
 
     public function getAnimName(): String {
-        throw "stub: getAnimName not decompiled";
+        return "brigitte";
     }
 
+
     public function getKind(): String {
-        throw "stub: getKind not decompiled";
+        return "BatDasher";
     }
+
 
     public override function initGfx(): Void {
     }

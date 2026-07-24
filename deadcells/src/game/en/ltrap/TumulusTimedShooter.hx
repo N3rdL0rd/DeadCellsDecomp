@@ -29,7 +29,9 @@ class TumulusTimedShooter extends en.LevelTrap {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public override function _isOnScreen(): Bool {
         throw "stub: _isOnScreen not decompiled";

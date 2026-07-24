@@ -12,8 +12,9 @@ class CollectorEnergyBall extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function initGfx(): Void {
     }

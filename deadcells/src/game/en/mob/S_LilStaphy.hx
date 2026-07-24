@@ -41,8 +41,9 @@ class S_LilStaphy extends en.pet.PetMob {
     }
 
     public override function get_targetSprPosX(): Float {
-        throw "stub: get_targetSprPosX not decompiled";
+        return this.get_headX();
     }
+
 
     public override function get_targetSprPosY(): Float {
         throw "stub: get_targetSprPosY not decompiled";

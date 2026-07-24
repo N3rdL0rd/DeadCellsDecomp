@@ -20,7 +20,9 @@ class DeathMage extends en.Mob {
     }
 
     public override function init(): Void {
+        super.init();
     }
+
 
     public override function initGfx(): Void {
     }

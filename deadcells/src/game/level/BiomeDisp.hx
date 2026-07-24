@@ -84,8 +84,9 @@ class BiomeDisp extends level.LevelDisp {
     }
 
     public function getStampWallThreshold(): Float {
-        throw "stub: getStampWallThreshold not decompiled";
+        return 0.34;
     }
+
 
     public override function renderBackWalls(): Void {
     }
@@ -116,8 +117,9 @@ class BiomeDisp extends level.LevelDisp {
     }
 
     public function getHighlightColor(): String {
-        throw "stub: getHighlightColor not decompiled";
+        return "Highlight";
     }
+
 
     public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
     }
@@ -142,15 +144,17 @@ class BiomeDisp extends level.LevelDisp {
     }
 
     public function getOverWaterLight(): String {
-        throw "stub: getOverWaterLight not decompiled";
+        return "Water";
     }
+
 
     public override function renderWaterPools(): Void {
     }
 
     public function getForcedWallTrWidth(): Int {
-        throw "stub: getForcedWallTrWidth not decompiled";
+        return -1;
     }
+
 
     public function listWallTransitions(): Array<Dynamic> {
         throw "stub: listWallTransitions not decompiled";

@@ -165,9 +165,10 @@ class Beholder extends en.mob.Boss {
     public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public override function getAdjustedWeightFactor(arg0: Entity): Float {
-        throw "stub: getAdjustedWeightFactor not decompiled";
+    public override function getAdjustedWeightFactor(against: Entity): Float {
+        return 99999.0;
     }
+
 
     public override function canBeHitBy(arg0: Entity): Bool {
         throw "stub: canBeHitBy not decompiled";

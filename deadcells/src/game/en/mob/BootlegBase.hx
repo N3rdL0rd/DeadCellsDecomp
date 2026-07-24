@@ -28,13 +28,15 @@ class BootlegBase extends en.Mob {
     public override function reveal(): Void {
     }
 
-    public override function canBeRevealedBy(arg0: en.Hero): Bool {
-        throw "stub: canBeRevealedBy not decompiled";
+    public override function canBeRevealedBy(hero: en.Hero): Bool {
+        return false;
     }
 
+
     public function canStartNecromancy(): Bool {
-        throw "stub: canStartNecromancy not decompiled";
+        return this.hidden;
     }
+
 
     public function activateByNecromant(arg0: en.mob.Necromant): Entity {
         throw "stub: activateByNecromant not decompiled";

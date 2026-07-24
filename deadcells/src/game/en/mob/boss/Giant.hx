@@ -103,8 +103,9 @@ class Giant extends en.mob.Boss {
     }
 
     public override function canBeGrabbedByHomunculus(): Bool {
-        throw "stub: canBeGrabbedByHomunculus not decompiled";
+        return false;
     }
+
 
     public function moveTo(arg0: Float, arg1: Float, arg2: Float, arg3: String, arg4: Ref): Void {
     }
@@ -112,9 +113,10 @@ class Giant extends en.mob.Boss {
     public function moveToStep(): Void {
     }
 
-    public override function canBeHitBy(arg0: Entity): Bool {
-        throw "stub: canBeHitBy not decompiled";
+    public override function canBeHitBy(by: Entity): Bool {
+        return false;
     }
+
 
     public override function init(): Void {
     }
@@ -160,9 +162,10 @@ class Giant extends en.mob.Boss {
     public function createStalactiteWave(): Void {
     }
 
-    public override function canReceiveAttack(arg0: tool.atk.AttackData): Bool {
-        throw "stub: canReceiveAttack not decompiled";
+    public override function canReceiveAttack(a: tool.atk.AttackData): Bool {
+        return false;
     }
+
 
     public override function onLeaveMap(): Void {
     }

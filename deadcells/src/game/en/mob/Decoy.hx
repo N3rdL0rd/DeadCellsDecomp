@@ -21,9 +21,10 @@ class Decoy extends en.Mob {
     public override function behaviourAi(): Void {
     }
 
-    public override function setDirDelayed(arg0: Int): Bool {
-        throw "stub: setDirDelayed not decompiled";
+    public override function setDirDelayed(d: Int): Bool {
+        return false;
     }
+
 
     public override function onTouch(arg0: Entity): Void {
     }

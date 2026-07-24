@@ -95,8 +95,9 @@ class U28_VacuumCleaner extends en.Mob {
     }
 
     public override function createBodyPart(): Array<Dynamic> {
-        throw "stub: createBodyPart not decompiled";
+        return super.createBodyPart();
     }
+
 
     public override function postUpdate(): Void {
     }

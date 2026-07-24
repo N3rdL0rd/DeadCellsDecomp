@@ -36,7 +36,9 @@ class CaptainChicken extends en.TwitchPet {
     }
 
     public override function init(): Void {
+        super.init();
     }
+
 
     public override function dispose(): Void {
     }

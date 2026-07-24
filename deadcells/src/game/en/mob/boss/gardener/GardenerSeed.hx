@@ -14,8 +14,9 @@ class GardenerSeed extends en.Interactive {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function initGfx(): Void {
     }
@@ -26,8 +27,10 @@ class GardenerSeed extends en.Interactive {
     public function startLaunch(arg0: Int): Void {
     }
 
-    public override function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(wDir: Int): Void {
+        super.onTouchWall(wDir);
     }
+
 
     public override function onTouchGround(): Void {
     }

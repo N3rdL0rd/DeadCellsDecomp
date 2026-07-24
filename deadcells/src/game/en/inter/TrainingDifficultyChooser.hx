@@ -16,14 +16,17 @@ class TrainingDifficultyChooser extends en.Interactive {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public override function initGfx(): Void {
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return super.canBeActivated(by);
     }
+
 
     public override function onFocus(): Void {
     }

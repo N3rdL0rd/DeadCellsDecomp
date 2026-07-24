@@ -26,9 +26,10 @@ class Skull extends en.Mob {
     public override function initSkills(): Void {
     }
 
-    public override function inDetectArea(arg0: Entity): Bool {
-        throw "stub: inDetectArea not decompiled";
+    public override function inDetectArea(e: Entity): Bool {
+        return false;
     }
+
 
     public override function onDamage(arg0: tool.atk.AttackData): Void {
     }

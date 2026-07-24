@@ -95,7 +95,9 @@ class FlyingSword extends en.Pet {
     }
 
     public override function onTargetLost(): Void {
+        this.resetAttackQueue();
     }
+
 
     public function resetAttackQueue(): Void {
     }
@@ -129,8 +131,9 @@ class FlyingSword extends en.Pet {
     }
 
     public function getStoredWeaponItem(): tool.InventItem {
-        throw "stub: getStoredWeaponItem not decompiled";
+        return this.replacedWeaponItem;
     }
+
 
     public function overrideEquipedWeapon(arg0: Bool): Void {
     }

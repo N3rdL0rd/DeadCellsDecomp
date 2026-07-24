@@ -19,14 +19,17 @@ class NunchuckPitcher extends en.mob.Pitcher {
     }
 
     public function forceReveal(): Void {
+        this.reveal();
     }
+
 
     public override function reveal(): Void {
     }
 
-    public override function canBeRevealedBy(arg0: en.Hero): Bool {
-        throw "stub: canBeRevealedBy not decompiled";
+    public override function canBeRevealedBy(h: en.Hero): Bool {
+        return false;
     }
+
 
     public override function hide(arg0: Float): Void {
     }

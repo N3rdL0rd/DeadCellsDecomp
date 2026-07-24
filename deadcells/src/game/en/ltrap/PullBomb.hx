@@ -29,7 +29,9 @@ class PullBomb extends en.LevelTrap {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public override function postUpdate(): Void {
     }

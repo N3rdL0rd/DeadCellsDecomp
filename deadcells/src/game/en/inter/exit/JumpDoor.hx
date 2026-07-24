@@ -17,13 +17,17 @@ class JumpDoor extends en.inter.Exit {
     }
 
     public override function onOutOfGameChange(): Void {
+        super.onOutOfGameChange();
     }
+
 
     public override function preUpdate(): Void {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

@@ -96,8 +96,10 @@ class Chain {
     public function dispose(): Void {
     }
 
-    public function setMode(arg0: tool.ChainMode): Void {
+    public function setMode(m: tool.ChainMode): Void {
+        this.mode = m;
     }
+
 
     public function setVisible(arg0: Bool): Void {
     }
@@ -117,18 +119,22 @@ class Chain {
     }
 
     public function getStartY(): Float {
-        throw "stub: getStartY not decompiled";
+        return 0.0;
     }
+
 
     public function getStartX(): Float {
-        throw "stub: getStartX not decompiled";
+        return 0.0;
     }
+
 
     public function getEndY(): Float {
-        throw "stub: getEndY not decompiled";
+        return 0.0;
     }
 
+
     public function getEndX(): Float {
-        throw "stub: getEndX not decompiled";
+        return 0.0;
     }
+
 }

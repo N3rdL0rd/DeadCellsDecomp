@@ -19,9 +19,10 @@ class LockedDoor extends en.inter.Door {
     public override function minimapTracking(): Void {
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return false;
     }
+
 
     public override function postUpdate(): Void {
     }

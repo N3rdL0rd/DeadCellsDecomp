@@ -4,9 +4,10 @@ class VaniaAltar extends en.inter.ItemAltar {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: tool.InventItem = null) {
-        super();
+    public function new(lvl: pr.Level, x: Int, y: Int, i: tool.InventItem) {
+        super(lvl, x, y, i);
     }
+
 
     public override function initGfx(): Void {
     }

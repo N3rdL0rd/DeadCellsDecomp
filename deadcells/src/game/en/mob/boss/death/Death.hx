@@ -121,7 +121,9 @@ class Death extends en.mob.Boss {
     }
 
     public override function behaviourAi(): Void {
+        this.actionUpdate();
     }
+
 
     public override function onScream(): Void {
     }

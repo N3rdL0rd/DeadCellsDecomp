@@ -25,7 +25,9 @@ class TrainingTierChooser extends en.Interactive {
     }
 
     public override function onApplyOptions(): Void {
+        this.applyShaderColors();
     }
+
 
     public override function onFocus(): Void {
     }

@@ -5,9 +5,10 @@ class DeathArenaWall extends en.inter.ForceField {
     public static var __eclids: Array<Int>;
     public var wallSprites: Array<Dynamic>;
 
-    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Bool = false) {
-        super();
+    public function new(lvl: pr.Level, x: Int, y: Int, startClosed: Bool) {
+        super(lvl, x, y, startClosed);
     }
+
 
     public override function initGfx(): Void {
     }

@@ -97,8 +97,9 @@ class Queen extends en.mob.Boss {
     }
 
     public function get_headDir(): Int {
-        throw "stub: get_headDir not decompiled";
+        return this.dir;
     }
+
 
     public function interpolate(arg0: Float, arg1: libs.misc.TType): Float {
         throw "stub: interpolate not decompiled";

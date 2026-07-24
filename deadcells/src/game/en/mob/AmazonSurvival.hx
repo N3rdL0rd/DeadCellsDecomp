@@ -35,12 +35,14 @@ class AmazonSurvival extends en.mob.AmazonBase {
     }
 
     public override function get_shootX(): Float {
-        throw "stub: get_shootX not decompiled";
+        return this.get_handRightX();
     }
 
+
     public override function get_shootY(): Float {
-        throw "stub: get_shootY not decompiled";
+        return this.get_handRightY();
     }
+
 
     public function get_ballLeftTipTracks(): Array<Int> {
         throw "stub: get_ballLeftTipTracks not decompiled";

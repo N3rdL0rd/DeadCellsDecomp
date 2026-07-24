@@ -66,8 +66,9 @@ class AmazonBase extends en.Mob {
     }
 
     public function getNextIsTpWaitTime(): Float {
-        throw "stub: getNextIsTpWaitTime not decompiled";
+        return 0.2;
     }
+
 
     public function nextIsTp(): Void {
     }
@@ -140,8 +141,9 @@ class AmazonBase extends en.Mob {
     }
 
     public function canDropServantSkin(): Bool {
-        throw "stub: canDropServantSkin not decompiled";
+        return true;
     }
+
 
     public function tpAwayFromHero(arg0: Ref, arg1: Ref, arg2: Ref): Void {
     }

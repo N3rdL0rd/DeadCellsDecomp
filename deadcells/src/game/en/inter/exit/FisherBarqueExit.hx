@@ -26,8 +26,9 @@ class FisherBarqueExit extends en.inter.Exit {
     }
 
     public function get_backY(): Float {
-        throw "stub: get_backY not decompiled";
+        return this.get_frontY();
     }
+
 
     public override function initSpeechDeck(): Void {
     }
@@ -44,9 +45,10 @@ class FisherBarqueExit extends en.inter.Exit {
     public function onGreet(arg0: en.Hero): Void {
     }
 
-    public function canGreet(arg0: en.Hero): Bool {
-        throw "stub: canGreet not decompiled";
+    public function canGreet(h: en.Hero): Bool {
+        return true;
     }
+
 
     public override function getDestName(): String {
         throw "stub: getDestName not decompiled";

@@ -16,8 +16,9 @@ class CollectorBomb extends en.Grenade {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return true;
     }
+
 
     public override function init(): Void {
     }

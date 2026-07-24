@@ -13,7 +13,9 @@ class TrainingBossDoor extends en.inter.exit.BgDoor {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
     }
+
 
     public override function getSlibAndNorm(): Void {
     }
@@ -26,8 +28,9 @@ class TrainingBossDoor extends en.inter.exit.BgDoor {
     }
 
     public override function getDoorName(): String {
-        throw "stub: getDoorName not decompiled";
+        return this.doorName;
     }
+
 
     public function hasSeenBoss(): Bool {
         throw "stub: hasSeenBoss not decompiled";

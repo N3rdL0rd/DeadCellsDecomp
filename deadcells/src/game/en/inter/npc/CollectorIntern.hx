@@ -17,7 +17,9 @@ class CollectorIntern extends en.inter.npc.CollectorPanelNpc {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public override function onGreet(arg0: en.Hero): Void {
     }
@@ -30,8 +32,9 @@ class CollectorIntern extends en.inter.npc.CollectorPanelNpc {
     }
 
     public override function getPanelPixelOffset(): Int {
-        throw "stub: getPanelPixelOffset not decompiled";
+        return 10;
     }
+
 
     public override function onPanelClose(): Void {
     }

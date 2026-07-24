@@ -52,9 +52,10 @@ class SewerTtcl extends en.Mob {
     public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
 
-    public override function inDetectArea(arg0: Entity): Bool {
-        throw "stub: inDetectArea not decompiled";
+    public override function inDetectArea(e: Entity): Bool {
+        return true;
     }
+
 
     public override function behaviourAi(): Void {
     }

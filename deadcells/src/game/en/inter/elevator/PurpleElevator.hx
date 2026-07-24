@@ -14,8 +14,9 @@ class PurpleElevator extends en.inter.elevator.SimpleElevator {
     }
 
     public override function isReady(): Bool {
-        throw "stub: isReady not decompiled";
+        return true;
     }
+
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }

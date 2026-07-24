@@ -45,8 +45,10 @@ class ThrowableMushroom extends en.Mob {
     public override function onTouch(arg0: Entity): Void {
     }
 
-    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(a: tool.atk.AttackData): Void {
+        super.onDamage(a);
     }
+
 
     public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
@@ -69,9 +71,10 @@ class ThrowableMushroom extends en.Mob {
         throw "stub: getMoveSpeedMul not decompiled";
     }
 
-    public override function canBeRevealedBy(arg0: en.Hero): Bool {
-        throw "stub: canBeRevealedBy not decompiled";
+    public override function canBeRevealedBy(h: en.Hero): Bool {
+        return false;
     }
+
 
     public function startHiding(): Void {
     }

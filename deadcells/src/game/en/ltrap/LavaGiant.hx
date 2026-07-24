@@ -14,8 +14,9 @@ class LavaGiant extends en.LevelTrap {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
@@ -27,7 +28,9 @@ class LavaGiant extends en.LevelTrap {
     }
 
     public override function init(): Void {
+        super.init();
     }
+
 
     public override function dispose(): Void {
     }

@@ -9,18 +9,24 @@ class TopLighthouseGetAway extends en.Interactive {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
     }
+
 
     public override function dispose(): Void {
+        super.dispose();
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+
+    public override function canBeActivated(by: en.Hero): Bool {
+        return false;
     }
 
-    public override function canBeActivatedByHomunculus(arg0: en.Homunculus): Bool {
-        throw "stub: canBeActivatedByHomunculus not decompiled";
+
+    public override function canBeActivatedByHomunculus(by: en.Homunculus): Bool {
+        return true;
     }
+
 
     public override function onFocusHomunculus(arg0: en.Homunculus): Void {
     }
@@ -29,10 +35,14 @@ class TopLighthouseGetAway extends en.Interactive {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
 
+
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

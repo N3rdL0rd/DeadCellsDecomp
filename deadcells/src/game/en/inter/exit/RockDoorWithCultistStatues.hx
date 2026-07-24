@@ -14,7 +14,9 @@ class RockDoorWithCultistStatues extends en.inter.exit.RockDoor {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
     }
+
 
     public override function launchClosedDoorCine(arg0: en.Hero): Void {
     }

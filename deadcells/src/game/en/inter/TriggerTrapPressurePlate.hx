@@ -12,9 +12,10 @@ class TriggerTrapPressurePlate extends en.inter.PressurePlate {
     public override function dispose(): Void {
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return false;
     }
+
 
     public override function postUpdate(): Void {
     }

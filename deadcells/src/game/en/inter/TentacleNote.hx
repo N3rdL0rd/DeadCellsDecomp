@@ -23,7 +23,9 @@ class TentacleNote extends en.Interactive {
     }
 
     public override function minimapTracking(): Void {
+        super.minimapTracking();
     }
+
 
     public function onCompleteCine(): Void {
     }

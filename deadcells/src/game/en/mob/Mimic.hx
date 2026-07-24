@@ -53,7 +53,9 @@ class Mimic extends en.Mob {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function behaviourAi(): Void {
     }

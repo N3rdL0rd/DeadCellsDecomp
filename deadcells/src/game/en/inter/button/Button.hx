@@ -30,9 +30,10 @@ class Button extends en.Interactive {
     public override function onFocus(): Void {
     }
 
-    public function canActivate(arg0: en.Hero): Bool {
-        throw "stub: canActivate not decompiled";
+    public function canActivate(by: en.Hero): Bool {
+        return true;
     }
+
 
     public function onActivationFail(arg0: en.Hero): Void {
     }
@@ -47,8 +48,9 @@ class Button extends en.Interactive {
     }
 
     public function isActivated(): Bool {
-        throw "stub: isActivated not decompiled";
+        return this.activated;
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

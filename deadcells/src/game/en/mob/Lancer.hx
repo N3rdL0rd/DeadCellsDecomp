@@ -19,8 +19,9 @@ class Lancer extends en.Mob {
     }
 
     public function getKind(): String {
-        throw "stub: getKind not decompiled";
+        return "Lancer";
     }
+
 
     public function getLib(): libs.heaps.slib.SpriteLib {
         throw "stub: getLib not decompiled";
@@ -31,7 +32,9 @@ class Lancer extends en.Mob {
     }
 
     public override function init(): Void {
+        super.init();
     }
+
 
     public override function initGfx(): Void {
     }
