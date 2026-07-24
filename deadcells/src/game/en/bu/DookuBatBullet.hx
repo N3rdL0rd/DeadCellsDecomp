@@ -32,8 +32,9 @@ class DookuBatBullet extends en.Bullet {
     }
 
     public override function _isOnScreen(): Bool {
-        throw "stub: _isOnScreen not decompiled";
+        return this.activated;
     }
+
 
     public override function initGfx(): Void {
     }
@@ -66,7 +67,9 @@ class DookuBatBullet extends en.Bullet {
     }
 
     public override function reachMaxDist(): Void {
+        this.deactivate();
     }
+
 
     public override function blockOnCollision(): Void {
     }
@@ -75,8 +78,9 @@ class DookuBatBullet extends en.Bullet {
     }
 
     public override function getTailColor(): Int {
-        throw "stub: getTailColor not decompiled";
+        return 16711680;
     }
+
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }

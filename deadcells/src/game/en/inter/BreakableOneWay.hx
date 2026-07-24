@@ -12,8 +12,9 @@ class BreakableOneWay extends en.Interactive {
     }
 
     public override function isInQuadTree(): Bool {
-        throw "stub: isInQuadTree not decompiled";
+        return true;
     }
+
 
     public override function initGfx(): Void {
     }
@@ -31,10 +32,14 @@ class BreakableOneWay extends en.Interactive {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
 
+
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function onOutOfGameChange(): Void {
     }

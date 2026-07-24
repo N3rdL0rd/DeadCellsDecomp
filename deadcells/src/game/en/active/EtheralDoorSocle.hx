@@ -29,7 +29,9 @@ class EtheralDoorSocle extends en.Active {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

@@ -41,8 +41,9 @@ class Grenade extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function initGfx(): Void {
     }
@@ -78,7 +79,9 @@ class Grenade extends Entity {
     }
 
     public override function onTouchCeil(): Void {
+        super.onTouchCeil();
     }
+
 
     public override function onTouchGround(): Void {
     }
@@ -125,12 +128,14 @@ class Grenade extends Entity {
     }
 
     public function canTouch(arg0: Entity): Bool {
-        throw "stub: canTouch not decompiled";
+        return true;
     }
 
+
     public function canTrigger(): Bool {
-        throw "stub: canTrigger not decompiled";
+        return true;
     }
+
 
     public function onTrigger(): Void {
     }

@@ -11,8 +11,9 @@ class LauncherExplosiveBarrel extends en.inter.ExplosiveBarrel {
     }
 
     public override function getSkillId(): String {
-        throw "stub: getSkillId not decompiled";
+        return "Launched";
     }
+
 
     public override function init(): Void {
     }
@@ -28,8 +29,9 @@ class LauncherExplosiveBarrel extends en.inter.ExplosiveBarrel {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

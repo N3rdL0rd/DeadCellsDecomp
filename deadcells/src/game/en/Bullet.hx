@@ -58,8 +58,9 @@ class Bullet extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function initGfx(): Void {
     }
@@ -232,8 +233,9 @@ class Bullet extends Entity {
     }
 
     public function canHit(arg0: Entity): Bool {
-        throw "stub: canHit not decompiled";
+        return this.defaultCanHit(arg0);
     }
+
 
     public function onBulletDelayDone(): Void {
     }

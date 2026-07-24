@@ -133,9 +133,10 @@ class Mob extends Entity {
         throw "stub: get_mvBounce not decompiled";
     }
 
-    public function seeThroughOneWays(arg0: Entity): Bool {
-        throw "stub: seeThroughOneWays not decompiled";
+    public function seeThroughOneWays(e: Entity): Bool {
+        return false;
     }
+
 
     public function get_flying(): Bool {
         throw "stub: get_flying not decompiled";
@@ -185,8 +186,9 @@ class Mob extends Entity {
     }
 
     public function canApplyColorSwap(): Bool {
-        throw "stub: canApplyColorSwap not decompiled";
+        return true;
     }
+
 
     public function applyColorSwap(): Void {
     }
@@ -247,8 +249,9 @@ class Mob extends Entity {
     }
 
     public function getAltEliteForm(): String {
-        throw "stub: getAltEliteForm not decompiled";
+        return "Zombie";
     }
+
 
     public function initPokebombElite(arg0: en.Mob): en.Mob {
         throw "stub: initPokebombElite not decompiled";
@@ -703,12 +706,14 @@ class Mob extends Entity {
     }
 
     public function shootXHook(): Float {
-        throw "stub: shootXHook not decompiled";
+        return this.get_shootX();
     }
 
+
     public function shootYHook(): Float {
-        throw "stub: shootYHook not decompiled";
+        return this.get_shootY();
     }
+
 
     public override function destroy(): Void {
     }

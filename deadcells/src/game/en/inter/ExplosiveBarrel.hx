@@ -36,8 +36,9 @@ class ExplosiveBarrel extends en.Interactive {
     }
 
     public function getSkillId(): String {
-        throw "stub: getSkillId not decompiled";
+        return "Explode";
     }
+
 
     public override function init(): Void {
     }
@@ -87,8 +88,9 @@ class ExplosiveBarrel extends en.Interactive {
     }
 
     public function canBeGrabbedByHomunculus(): Bool {
-        throw "stub: canBeGrabbedByHomunculus not decompiled";
+        return true;
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

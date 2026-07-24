@@ -25,7 +25,9 @@ class BossRushTierHotel extends Entity {
     }
 
     public override function onApplyOptions(): Void {
+        this.applyShaderColors();
     }
+
 
     public function setActivated(arg0: String, arg1: Ref): Void {
     }

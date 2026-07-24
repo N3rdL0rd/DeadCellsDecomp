@@ -32,7 +32,9 @@ class MobThrowingAxe extends en.Bullet {
     }
 
     public override function reachMaxDist(): Void {
+        this.comeBack();
     }
+
 
     public override function postUpdate(): Void {
     }

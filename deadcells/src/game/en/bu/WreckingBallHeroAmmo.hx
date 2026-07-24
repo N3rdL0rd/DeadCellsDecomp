@@ -16,8 +16,9 @@ class WreckingBallHeroAmmo extends en.loot.Ammo {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function init(): Void {
     }

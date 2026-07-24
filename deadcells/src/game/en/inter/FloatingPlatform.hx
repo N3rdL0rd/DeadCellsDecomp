@@ -43,8 +43,9 @@ class FloatingPlatform extends en.Interactive {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public function initSize(arg0: Int, arg1: Int, arg2: Ref, arg3: Ref): Void {
     }
@@ -68,8 +69,9 @@ class FloatingPlatform extends en.Interactive {
     }
 
     public override function canApplyRepelling(): Bool {
-        throw "stub: canApplyRepelling not decompiled";
+        return false;
     }
+
 
     public override function onDie(): Void {
     }
@@ -78,7 +80,9 @@ class FloatingPlatform extends en.Interactive {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public function recreatePlatform(): Void {
     }

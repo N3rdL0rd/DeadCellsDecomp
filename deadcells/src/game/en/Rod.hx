@@ -11,7 +11,9 @@ class Rod extends Entity {
     }
 
     public override function onReload(): Void {
+        super.onReload();
     }
+
 
     public override function initGfx(): Void {
     }
@@ -23,8 +25,9 @@ class Rod extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

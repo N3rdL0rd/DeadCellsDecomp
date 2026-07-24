@@ -28,8 +28,9 @@ class BodyPart extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function dispose(): Void {
     }

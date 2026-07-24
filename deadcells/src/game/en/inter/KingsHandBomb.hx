@@ -14,7 +14,9 @@ class KingsHandBomb extends en.Interactive {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
@@ -32,7 +34,9 @@ class KingsHandBomb extends en.Interactive {
     }
 
     public override function onOutOfGameChange(): Void {
+        super.onOutOfGameChange();
     }
+
 
     public override function postUpdate(): Void {
     }

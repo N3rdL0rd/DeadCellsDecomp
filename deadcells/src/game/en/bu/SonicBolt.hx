@@ -12,7 +12,9 @@ class SonicBolt extends en.Bullet {
     }
 
     public override function init(): Void {
+        super.init();
     }
+
 
     public override function initGfx(): Void {
     }

@@ -22,8 +22,9 @@ class Flail extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return this.isLaunched;
     }
+
 
     public function hitByHero(arg0: Entity): Void {
     }
@@ -32,8 +33,9 @@ class Flail extends Entity {
     }
 
     public override function canApplyRepelling(): Bool {
-        throw "stub: canApplyRepelling not decompiled";
+        return false;
     }
+
 
     public override function onDie(): Void {
     }

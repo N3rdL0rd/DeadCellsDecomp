@@ -36,9 +36,10 @@ class DarknessRemover extends en.Interactive {
         throw "stub: getLightRadius not decompiled";
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return false;
     }
+
 
     public function turnOn(): Void {
     }

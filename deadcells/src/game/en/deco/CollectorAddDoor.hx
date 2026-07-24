@@ -8,9 +8,10 @@ class CollectorAddDoor extends en.Deco {
     public var isOpen: Bool;
     public var offY: Float;
 
-    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
-        super();
+    public function new(l: pr.Level, cx: Int, cy: Int) {
+        super(l, cx, cy);
     }
+
 
     public override function initGfx(): Void {
     }

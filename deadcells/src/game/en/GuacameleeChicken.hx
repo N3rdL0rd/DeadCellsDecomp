@@ -25,7 +25,9 @@ class GuacameleeChicken extends Entity {
     }
 
     public override function kill(): Void {
+        super.kill();
     }
+
 
     public override function fixedUpdate(): Void {
     }

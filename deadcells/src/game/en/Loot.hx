@@ -28,8 +28,9 @@ class Loot extends Entity {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public function unlock(): Void {
     }
@@ -52,11 +53,15 @@ class Loot extends Entity {
     public function pickUpFeedBack(arg0: Ref): Void {
     }
 
-    public override function onTouch(arg0: Entity): Void {
+    public override function onTouch(e: Entity): Void {
+        super.onTouch(e);
     }
 
+
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public override function postUpdate(): Void {
     }

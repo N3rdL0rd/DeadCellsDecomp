@@ -45,8 +45,9 @@ class GardenerSickleBullet extends en.Bullet {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return true;
     }
+
 
     public function addHitCount(): Void {
     }

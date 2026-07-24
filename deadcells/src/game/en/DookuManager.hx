@@ -24,8 +24,9 @@ class DookuManager extends Entity {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public override function postCreate(): Void {
     }
@@ -49,8 +50,9 @@ class DookuManager extends Entity {
     }
 
     public override function canApplyRepelling(): Bool {
-        throw "stub: canApplyRepelling not decompiled";
+        return false;
     }
+
 
     public function prepareDookuBeast(arg0: Int): Void {
     }

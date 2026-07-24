@@ -11,9 +11,10 @@ class FallToLevelTrigger extends en.Interactive {
         super();
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return false;
     }
+
 
     public function trigger(arg0: Entity): Void {
     }

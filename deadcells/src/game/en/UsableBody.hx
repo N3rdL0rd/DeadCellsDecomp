@@ -17,13 +17,15 @@ class UsableBody extends en.Interactive {
     public override function initGfx(): Void {
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return false;
     }
 
-    public override function canBeActivatedByHomunculus(arg0: en.Homunculus): Bool {
-        throw "stub: canBeActivatedByHomunculus not decompiled";
+
+    public override function canBeActivatedByHomunculus(by: en.Homunculus): Bool {
+        return this._targetable;
     }
+
 
     public override function onActivateHomunculus(arg0: en.Homunculus): Void {
     }

@@ -10,8 +10,9 @@ class CarmillaMask extends en.Interactive {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public override function onFocus(): Void {
     }

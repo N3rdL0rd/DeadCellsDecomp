@@ -24,15 +24,19 @@ class Turret extends en.Active {
     }
 
     public function canBeGrabbedByHomunculus(): Bool {
-        throw "stub: canBeGrabbedByHomunculus not decompiled";
+        return false;
     }
+
 
     public function getAttackTarget(): Entity {
-        throw "stub: getAttackTarget not decompiled";
+        return null;
     }
 
+
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public function shoot(arg0: Entity): Void {
     }

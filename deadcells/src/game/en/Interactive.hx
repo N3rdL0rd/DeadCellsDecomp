@@ -14,7 +14,9 @@ class Interactive extends Entity {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }
@@ -23,9 +25,10 @@ class Interactive extends Entity {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function canBeActivatedByHomunculus(arg0: en.Homunculus): Bool {
-        throw "stub: canBeActivatedByHomunculus not decompiled";
+    public function canBeActivatedByHomunculus(by: en.Homunculus): Bool {
+        return false;
     }
+
 
     public function onActivateHomunculus(arg0: en.Homunculus): Void {
     }

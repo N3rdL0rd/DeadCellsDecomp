@@ -34,12 +34,14 @@ class AnathemaProjectile extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
 
+
     public override function canApplyRepelling(): Bool {
-        throw "stub: canApplyRepelling not decompiled";
+        return false;
     }
+
 
     public override function initGfx(): Void {
     }
@@ -63,10 +65,14 @@ class AnathemaProjectile extends Entity {
     }
 
     public override function onOutOfGameChange(): Void {
+        super.destroy();
     }
 
+
     public override function onLeaveMap(): Void {
+        super.destroy();
     }
+
 
     public override function fixedUpdate(): Void {
     }

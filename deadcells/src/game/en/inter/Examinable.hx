@@ -13,9 +13,11 @@ class Examinable extends en.Interactive {
         super();
     }
 
-    public function setTip(arg0: String): en.inter.Examinable {
-        throw "stub: setTip not decompiled";
+    public function setTip(s: String): en.inter.Examinable {
+        this.tipLabel = s;
+        return this;
     }
+
 
     public override function onDistantTrigger(arg0: en.Interactive, arg1: Entity): Void {
     }

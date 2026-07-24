@@ -14,7 +14,9 @@ class WallFragment extends en.Bullet {
     }
 
     public override function vanish(): Void {
+        this.destroy();
     }
+
 
     public override function postUpdate(): Void {
     }

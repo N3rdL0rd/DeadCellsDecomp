@@ -60,8 +60,9 @@ class Pet extends Entity {
     }
 
     public function canBuff(): Bool {
-        throw "stub: canBuff not decompiled";
+        return true;
     }
+
 
     public function buff(arg0: tool.InventItem): Void {
     }
@@ -82,7 +83,9 @@ class Pet extends Entity {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public function onHeroTeleport(): Void {
     }
@@ -97,8 +100,9 @@ class Pet extends Entity {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public override function onLeaveMap(): Void {
     }

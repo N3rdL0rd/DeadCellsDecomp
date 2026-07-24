@@ -5,9 +5,10 @@ class SkulBonePile extends en.Deco {
     public static var __clid: Int;
     public var crumbled: Bool;
 
-    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
-        super();
+    public function new(lvl: pr.Level, x: Int, y: Int) {
+        super(lvl, x, y);
     }
+
 
     public override function initGfx(): Void {
     }
@@ -16,8 +17,9 @@ class SkulBonePile extends en.Deco {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return true;
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

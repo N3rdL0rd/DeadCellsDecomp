@@ -17,9 +17,10 @@ class ExitToDookuTrigger extends en.Interactive {
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return false;
     }
+
 
     public function trigger(arg0: Entity): Void {
     }

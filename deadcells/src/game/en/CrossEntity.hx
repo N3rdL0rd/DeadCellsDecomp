@@ -37,8 +37,9 @@ class CrossEntity extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
     }
@@ -47,11 +48,14 @@ class CrossEntity extends Entity {
     }
 
     public override function canApplyRepelling(): Bool {
-        throw "stub: canApplyRepelling not decompiled";
+        return false;
     }
 
+
     public override function onOutOfGameChange(): Void {
+        this.retrieve();
     }
+
 
     public override function onLeaveMap(): Void {
     }
@@ -125,14 +129,17 @@ class CrossFake extends libs.heaps.slib.HSprite {
     }
 
     public function isActive(): Bool {
-        throw "stub: isActive not decompiled";
+        return this.active;
     }
+
 
     public function activate(arg0: Float): Void {
     }
 
-    public function fadeOut(arg0: Float): Void {
+    public function fadeOut(killPos: Float): Void {
+        this.killPos = killPos;
     }
+
 
     public function free(): Void {
     }

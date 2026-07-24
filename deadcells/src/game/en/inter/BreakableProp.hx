@@ -10,12 +10,14 @@ class BreakableProp extends en.Interactive {
     }
 
     public override function isInQuadTree(): Bool {
-        throw "stub: isInQuadTree not decompiled";
+        return true;
     }
 
+
     public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+        return false;
     }
+
 
     public override function initGfx(): Void {
     }

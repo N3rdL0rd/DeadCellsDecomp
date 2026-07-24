@@ -19,10 +19,14 @@ class ExitToRichterCastle extends en.Interactive {
     }
 
     public override function disposeGfx(): Void {
+        super.disposeGfx();
     }
 
+
     public override function onApplyOptions(): Void {
+        super.onApplyOptions();
     }
+
 
     public override function minimapTracking(): Void {
     }

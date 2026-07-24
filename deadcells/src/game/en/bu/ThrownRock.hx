@@ -14,7 +14,9 @@ class ThrownRock extends en.Bullet {
     }
 
     public override function init(): Void {
+        super.init();
     }
+
 
     public override function initAmmo(arg0: en.loot.Ammo): Void {
     }
@@ -26,7 +28,9 @@ class ThrownRock extends en.Bullet {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

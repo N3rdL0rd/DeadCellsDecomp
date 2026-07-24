@@ -17,7 +17,9 @@ class CemeteryGraveCave extends en.Interactive {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";
@@ -43,10 +45,14 @@ class CemeteryGraveCave extends en.Interactive {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
 
+
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

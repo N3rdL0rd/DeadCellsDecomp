@@ -24,9 +24,10 @@ class BigBell extends en.Interactive {
     public function ring(arg0: Bool, arg1: Dynamic): Void {
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return false;
     }
+
 
     public override function initGfx(): Void {
     }

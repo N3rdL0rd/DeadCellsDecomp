@@ -15,7 +15,9 @@ class LanternSoulBullet extends en.Bullet {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public override function destroy(): Void {
     }
@@ -27,7 +29,9 @@ class LanternSoulBullet extends en.Bullet {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function postUpdate(): Void {
     }

@@ -169,8 +169,9 @@ class Hero extends Entity {
     }
 
     public function getTierInfectionCount(): Int {
-        throw "stub: getTierInfectionCount not decompiled";
+        return this.infectionTierCount;
     }
+
 
     public function setInfection(arg0: Float, arg1: Dynamic): Void {
     }

@@ -36,16 +36,24 @@ class Shark extends en.Bullet {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
 
-    public override function onTouch(arg0: Entity): Void {
+
+    public override function onTouch(e: Entity): Void {
+        super.onTouch(e);
     }
+
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
 
+
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function spriteUpdate(): Void {
     }

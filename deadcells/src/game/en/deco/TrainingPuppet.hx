@@ -11,8 +11,10 @@ class TrainingPuppet extends en.deco.Pendulum {
     public override function initGfx(): Void {
     }
 
-    public override function initTingle(arg0: Int, arg1: Bool): Void {
+    public override function initTingle(dir: Int, fromHero: Bool): Void {
+        super.initTingle(dir, fromHero);
     }
+
 
     public override function initChain(arg0: Ref): Void {
     }

@@ -9,8 +9,9 @@ class Deco extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

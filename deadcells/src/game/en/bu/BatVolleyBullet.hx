@@ -44,8 +44,9 @@ class BatVolleyBullet extends en.Bullet {
     }
 
     public override function getTailColor(): Int {
-        throw "stub: getTailColor not decompiled";
+        return 16711680;
     }
+
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }
@@ -72,7 +73,9 @@ class BatVolleyBullet extends en.Bullet {
     }
 
     public override function onCountered(): Void {
+        blockOnCollision();
     }
+
 
     public override function onBlock(arg0: Bool): Void {
     }

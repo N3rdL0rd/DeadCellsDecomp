@@ -8,9 +8,10 @@ class FirePillarHorizontal extends en.FirePillar {
     public var leftPillarFx: libs.heaps.HParticle;
     public var rightPillarFx: libs.heaps.HParticle;
 
-    public function new(arg0: en.mob.boss.DookuBeast = null, arg1: String = null, arg2: Int = 0, arg3: Int = 0, arg4: Float = 0., arg5: Float = 0., arg6: Float = 0., arg7: en.inter.DookuBreakableFloor = null) {
-        super();
+    public function new(dooku: en.mob.boss.DookuBeast, skillName: String, cx: Int, cy: Int, pillarWid: Float, pillarHei: Float, delay: Float, dookuPf: en.inter.DookuBreakableFloor) {
+        super(dooku, skillName, cx, cy, pillarWid, pillarHei, delay, dookuPf);
     }
+
 
     public override function playCreationFx(): Void {
     }

@@ -14,15 +14,17 @@ class DookuBatManager extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function init(): Void {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public function initBatPool(): Void {
     }
@@ -32,7 +34,9 @@ class DookuBatManager extends Entity {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function onLeaveMap(): Void {
     }
@@ -47,8 +51,9 @@ class DookuBatManager extends Entity {
     }
 
     public override function canApplyRepelling(): Bool {
-        throw "stub: canApplyRepelling not decompiled";
+        return false;
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

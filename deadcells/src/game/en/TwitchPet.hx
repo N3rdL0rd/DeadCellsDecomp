@@ -16,7 +16,9 @@ class TwitchPet extends Entity {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public function onHeroTeleport(): Void {
     }

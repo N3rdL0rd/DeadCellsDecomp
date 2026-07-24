@@ -17,8 +17,9 @@ class Boomerang extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function initGfx(): Void {
     }
@@ -81,8 +82,9 @@ class Boomerang extends Entity {
     }
 
     public function onTouchTarget(arg0: Entity): Bool {
-        throw "stub: onTouchTarget not decompiled";
+        return false;
     }
+
 
     public function onDispose(): Void {
     }

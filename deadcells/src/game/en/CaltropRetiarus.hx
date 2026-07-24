@@ -4,9 +4,10 @@ class CaltropRetiarus extends en.CaltropBase {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: en.Hero = null, arg1: Int = 0, arg2: Int = 0, arg3: Dynamic = null, arg4: Float = 0., arg5: Int = 0) {
-        super();
+    public function new(hero: en.Hero, cx: Int, cy: Int, dmg: Dynamic, thawDur: Float, thawVal: Int) {
+        super(hero, cx, cy, dmg, thawDur, thawVal);
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

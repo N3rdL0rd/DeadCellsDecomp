@@ -25,9 +25,10 @@ class DancingGhosts extends en.Interactive {
     public override function onFocus(): Void {
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return this.canTrigger;
     }
+
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }

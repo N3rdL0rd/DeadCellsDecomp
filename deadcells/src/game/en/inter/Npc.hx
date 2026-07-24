@@ -41,9 +41,10 @@ class Npc extends en.Interactive {
     public override function onFocus(): Void {
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return super.canBeActivated(by);
     }
+
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
@@ -54,9 +55,10 @@ class Npc extends en.Interactive {
     public function onGreet(arg0: en.Hero): Void {
     }
 
-    public function canGreet(arg0: en.Hero): Bool {
-        throw "stub: canGreet not decompiled";
+    public function canGreet(h: en.Hero): Bool {
+        return true;
     }
+
 
     public override function fixedUpdate(): Void {
     }

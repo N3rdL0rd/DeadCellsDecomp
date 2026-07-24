@@ -41,7 +41,9 @@ class Javelin extends en.Bullet {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public override function fixedUpdate(): Void {
     }

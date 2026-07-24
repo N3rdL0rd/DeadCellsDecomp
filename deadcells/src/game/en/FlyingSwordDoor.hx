@@ -23,10 +23,14 @@ class FlyingSwordDoor extends Entity {
     }
 
     public override function preUpdate(): Void {
+        super.preUpdate();
     }
 
+
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public function shake(arg0: Float, arg1: Float): Void {
     }

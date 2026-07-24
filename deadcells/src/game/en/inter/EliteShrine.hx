@@ -19,12 +19,14 @@ class EliteShrine extends en.Interactive {
     }
 
     public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+        return false;
     }
 
+
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public function trigger(arg0: Entity): Void {
     }

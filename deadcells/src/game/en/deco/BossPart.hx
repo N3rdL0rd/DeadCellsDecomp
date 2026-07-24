@@ -17,7 +17,9 @@ class BossPart extends en.deco.Pendulum {
     }
 
     public override function onOutOfGameChange(): Void {
+        super.onOutOfGameChange();
     }
+
 
     public override function initChain(arg0: Ref): Void {
     }
@@ -26,13 +28,19 @@ class BossPart extends en.deco.Pendulum {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
     }
+
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

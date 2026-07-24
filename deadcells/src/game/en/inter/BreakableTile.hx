@@ -30,12 +30,14 @@ class BreakableTile extends en.Interactive {
     }
 
     public override function isInQuadTree(): Bool {
-        throw "stub: isInQuadTree not decompiled";
+        return true;
     }
 
+
     public override function isBreakableByHero(): Bool {
-        throw "stub: isBreakableByHero not decompiled";
+        return true;
     }
+
 
     public override function initGfx(): Void {
     }

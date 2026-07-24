@@ -21,9 +21,10 @@ class CandleLighthouse extends en.Interactive {
     public override function onTouch(arg0: Entity): Void {
     }
 
-    public override function canBeActivated(arg0: en.Hero): Bool {
-        throw "stub: canBeActivated not decompiled";
+    public override function canBeActivated(by: en.Hero): Bool {
+        return super.canBeActivated(by);
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

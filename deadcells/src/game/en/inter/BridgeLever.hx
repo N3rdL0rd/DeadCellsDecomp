@@ -5,9 +5,10 @@ class BridgeLever extends en.Interactive {
     public static var __clid: Int;
     public var bridge: en.inter.PurpleBridge;
 
-    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0) {
-        super();
+    public function new(lvl: pr.Level, cx: Int, cy: Int) {
+        super(lvl, cx, cy);
     }
+
 
     public override function postCreate(): Void {
     }

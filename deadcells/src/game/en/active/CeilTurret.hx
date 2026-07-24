@@ -41,8 +41,9 @@ class CeilTurret extends en.active.Turret {
     }
 
     public override function canBeGrabbedByHomunculus(): Bool {
-        throw "stub: canBeGrabbedByHomunculus not decompiled";
+        return false;
     }
+
 
     public override function getAttackTarget(): Entity {
         throw "stub: getAttackTarget not decompiled";

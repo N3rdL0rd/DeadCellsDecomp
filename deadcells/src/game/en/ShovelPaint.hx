@@ -9,7 +9,9 @@ class ShovelPaint extends Entity {
     }
 
     public override function init(): Void {
+        super.init();
     }
+
 
     public override function canBeHitBy(arg0: Entity): Bool {
         throw "stub: canBeHitBy not decompiled";
@@ -26,11 +28,14 @@ class ShovelPaint extends Entity {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
 
+
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return true;
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

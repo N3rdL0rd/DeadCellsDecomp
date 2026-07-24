@@ -55,15 +55,17 @@ class Richter extends en.Hero {
     }
 
     public override function canWallGrab(): Bool {
-        throw "stub: canWallGrab not decompiled";
+        return false;
     }
+
 
     public override function landStun(arg0: Float, arg1: Bool): Void {
     }
 
     public override function canJumpThroughUp(): Bool {
-        throw "stub: canJumpThroughUp not decompiled";
+        return false;
     }
+
 
     public override function onTouchWall(arg0: Int): Void {
     }
@@ -85,8 +87,9 @@ class Richter extends en.Hero {
     }
 
     public override function prepareSave(): Bool {
-        throw "stub: prepareSave not decompiled";
+        return false;
     }
+
 
     public function hudSetHearts(arg0: Int, arg1: Int, arg2: Ref): Void {
     }

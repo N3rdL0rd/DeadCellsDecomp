@@ -35,7 +35,9 @@ class BleedAxeBullet extends en.Bullet {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

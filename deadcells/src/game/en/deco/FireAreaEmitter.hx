@@ -11,8 +11,9 @@ class FireAreaEmitter extends en.Deco {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return true;
     }
+
 
     public override function postUpdate(): Void {
     }

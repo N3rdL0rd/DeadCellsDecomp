@@ -25,7 +25,9 @@ class NecromancySpot extends Entity {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
     }
+
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }

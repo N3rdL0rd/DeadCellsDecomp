@@ -104,8 +104,9 @@ class AmazonManager extends Entity {
     }
 
     public override function canApplyRepelling(): Bool {
-        throw "stub: canApplyRepelling not decompiled";
+        return false;
     }
+
 
     public function checkActiveAmazon(): Void {
     }
@@ -148,7 +149,9 @@ class AmazonManager extends Entity {
     }
 
     public override function destroy(): Void {
+        super.destroy();
     }
+
 
     public function initChaseFleeSpots(): Void {
     }

@@ -9,8 +9,9 @@ class LevelTrap extends Entity {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public override function createAttackSource(): Void {
     }

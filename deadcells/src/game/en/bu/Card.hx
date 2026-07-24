@@ -19,7 +19,9 @@ class Card extends en.Bullet {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public override function createAmmoDrop(): en.loot.Ammo {
         throw "stub: createAmmoDrop not decompiled";
@@ -29,7 +31,9 @@ class Card extends en.Bullet {
     }
 
     public override function vanish(): Void {
+        this.destroy();
     }
+
 
     public override function playBlockSound(): Void {
     }

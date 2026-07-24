@@ -19,8 +19,9 @@ class GroundPart extends Entity {
     }
 
     public override function canApplyRepelling(): Bool {
-        throw "stub: canApplyRepelling not decompiled";
+        return false;
     }
+
 
     public override function onTouch(arg0: Entity): Void {
     }
@@ -38,7 +39,9 @@ class GroundPart extends Entity {
     }
 
     public override function destroy(): Void {
+        super.destroy();
     }
+
 
     public override function fixedUpdate(): Void {
     }

@@ -12,7 +12,9 @@ class MorpherPop extends en.Grenade {
     }
 
     public override function init(): Void {
+        super.init();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

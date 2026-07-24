@@ -37,8 +37,9 @@ class SlicePart extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
+
 
     public override function onOutOfGameChange(): Void {
     }

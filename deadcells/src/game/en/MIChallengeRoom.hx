@@ -14,8 +14,9 @@ class MIChallengeRoom extends Entity {
     }
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public function getRespawnSpot(): Void {
     }

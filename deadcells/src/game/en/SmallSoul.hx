@@ -21,11 +21,14 @@ class SmallSoul extends Entity {
     }
 
     public override function shouldSave(): Bool {
-        throw "stub: shouldSave not decompiled";
+        return false;
     }
 
-    public function setActive(arg0: Bool): Void {
+
+    public function setActive(active: Bool): Void {
+        this.visible = active;
     }
+
 
     public override function initGfx(): Void {
     }

@@ -26,7 +26,9 @@ class CannonBullet extends en.Bullet {
     }
 
     public override function reachMaxDist(): Void {
+        this.transitionToGrenade();
     }
+
 
     public override function onStep(): Void {
     }

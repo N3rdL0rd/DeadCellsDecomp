@@ -27,8 +27,9 @@ class SuspendedWeight extends Entity {
     }
 
     public override function canApplyRepelling(): Bool {
-        throw "stub: canApplyRepelling not decompiled";
+        return false;
     }
+
 
     public override function dispose(): Void {
     }
@@ -40,7 +41,9 @@ class SuspendedWeight extends Entity {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public override function onFatalFallStart(arg0: Ref): Void {
     }

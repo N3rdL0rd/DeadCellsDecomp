@@ -16,7 +16,9 @@ class FireBall extends en.Bullet {
     }
 
     public override function dispose(): Void {
+        super.dispose();
     }
+
 
     public override function vanish(): Void {
     }

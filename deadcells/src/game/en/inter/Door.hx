@@ -119,9 +119,10 @@ class Door extends en.Interactive {
         throw "stub: canBeActivated not decompiled";
     }
 
-    public function tryToUnlock(arg0: en.Hero): Bool {
-        throw "stub: tryToUnlock not decompiled";
+    public function tryToUnlock(by: en.Hero): Bool {
+        return false;
     }
+
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }

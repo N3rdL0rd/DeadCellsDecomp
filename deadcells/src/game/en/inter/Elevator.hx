@@ -42,16 +42,20 @@ class Elevator extends en.Interactive {
     }
 
     public function getYTop(): Int {
-        throw "stub: getYTop not decompiled";
+        return this.yTop;
     }
 
-    public function setYTop(arg0: Int): Int {
-        throw "stub: setYTop not decompiled";
+
+    public function setYTop(v: Int): Int {
+        this.yTop = v;
+        return v;
     }
+
 
     public override function canBeHit(): Bool {
-        throw "stub: canBeHit not decompiled";
+        return false;
     }
+
 
     public override function initGfx(): Void {
     }
