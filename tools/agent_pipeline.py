@@ -208,8 +208,12 @@ def find_function_span(content: str, class_name: str, method_name: str) -> Optio
     whole-file rewrite rather than guess."""
     # (?:\w+\.)* tolerates crashlink's pseudo() sometimes printing the full
     # dotted package path in the class line (e.g. "class en.Foo {" instead of
-    # "class Foo {") - real .hx source never does this, but pseudo output does.
-    class_m = re.search(r"\bclass\s+(?:\w+\.)*" + re.escape(class_name) + r"\b[^{]*\{", content)
+    # "class Foo {"), and \$? tolerates it also keeping the literal '$' prefix
+    # crashlink uses for "module quirk" secondary classes (e.g.
+    # "class level.lore.$MariaRoom {") even though parse_target_name strips
+    # that '$' from class_name for lookup purposes - real .hx source has
+    # neither of these, but pseudo output can have both.
+    class_m = re.search(r"\bclass\s+(?:\w+\.)*\$?" + re.escape(class_name) + r"\b[^{]*\{", content)
     if not class_m:
         return None
     class_body_end = _match_brace(content, class_m.end() - 1)
