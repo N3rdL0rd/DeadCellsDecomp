@@ -118,10 +118,18 @@ def main() -> None:
         # PYTHONHASHSEED by default, which would assign the same file to
         # DIFFERENT shards in different worker processes and break the
         # no-two-shards-share-a-file guarantee this depends on.
+        #
+        # Hash the path RELATIVE TO ROOT, not the absolute path - each
+        # parallel_direct_apply.py worker runs in its own git worktree at a
+        # different absolute location (/tmp/.../shard-0/... vs
+        # /tmp/.../shard-14/...), so hashing the absolute path made the same
+        # logical file hash differently in every worktree, silently breaking
+        # the one-file-one-shard guarantee (confirmed live: the same function
+        # got independently processed by 3 different shards in one run).
         queue = [
             i
             for i in queue
-            if zlib.crc32(str(i.file_path).encode()) % args.shard_count == args.shard_index
+            if zlib.crc32(str(i.file_path.relative_to(ROOT)).encode()) % args.shard_count == args.shard_index
         ]
     if args.limit:
         queue = queue[: args.limit]

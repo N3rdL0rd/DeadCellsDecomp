@@ -87,6 +87,7 @@ class TrackEntryPool extends spine.support.utils.Pool {
     }
 
     public override function newObject(): Dynamic {
-        throw "stub: newObject not decompiled";
+        return new spine.TrackEntry();
     }
+
 }

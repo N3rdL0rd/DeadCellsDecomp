@@ -21,8 +21,11 @@ class KunaiMaster extends en.Mob {
         throw "stub: get_shootY not decompiled";
     }
 
-    public override function onBreach(arg0: tool.atk.AttackData): Void {
+    public override function onBreach(attackData: tool.atk.AttackData): Void {
+        super.onBreach(attackData);
+        this.cancelChain();
     }
+
 
     public override function initGfx(): Void {
     }

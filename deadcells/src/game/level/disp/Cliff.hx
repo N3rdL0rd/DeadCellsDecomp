@@ -102,12 +102,14 @@ class Cliff extends level.DynamicBiomeDisp {
     }
 
     public override function getViewportBlendRatio(): Float {
-        throw "stub: getViewportBlendRatio not decompiled";
+        return this.getCurrentNearBorderRatio(null);
     }
 
-    public override function getBlendRatioAt(arg0: Float, arg1: Float): Float {
-        throw "stub: getBlendRatioAt not decompiled";
+
+    public override function getBlendRatioAt(px: Float, py: Float): Float {
+        return this.getNearBorderRatioAtPos(px, py, null);
     }
+
 
     public function getCurrentNearBorderRatio(arg0: Ref): Float {
         throw "stub: getCurrentNearBorderRatio not decompiled";

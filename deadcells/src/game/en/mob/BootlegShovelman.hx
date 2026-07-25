@@ -7,9 +7,10 @@ class BootlegShovelman extends en.mob.BootlegBase {
     public var repelSkillInf: Dynamic;
     public var repelArea: tool.Area;
 
-    public function new(arg0: pr.Level = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Bool = false) {
-        super();
+    public function new(lvl: pr.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, reveal: Bool) {
+        super(lvl, x, y, "BootlegShovelman", dmgTier, lifeTier, reveal);
     }
+
 
     public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): en.mob.BootlegShovelman {
         throw "stub: create not decompiled";

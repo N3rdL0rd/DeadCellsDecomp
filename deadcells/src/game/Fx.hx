@@ -40,13 +40,15 @@ class Fx extends libs.Process {
     public override function onDispose(): Void {
     }
 
-    public override function secToFrames(arg0: Float): Float {
-        throw "stub: secToFrames not decompiled";
+    public override function secToFrames(v: Float): Float {
+        return super.secToFrames(v) * 0.5;
     }
 
-    public override function framesToSec(arg0: Float): Float {
-        throw "stub: framesToSec not decompiled";
+
+    public override function framesToSec(v: Float): Float {
+        return super.framesToSec(v) * 2.0;
     }
+
 
     public function killEmitters(arg0: String): Void {
     }

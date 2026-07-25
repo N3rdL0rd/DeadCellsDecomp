@@ -25,8 +25,11 @@ class SpeedRunner extends en.Pet {
     public override function postUpdate(): Void {
     }
 
-    public function goto(arg0: Float, arg1: Float): Void {
+    public function goto(x: Float, y: Float): Void {
+        this.tx = x;
+        this.ty = y;
     }
+
 
     public override function onHeroTeleport(): Void {
     }

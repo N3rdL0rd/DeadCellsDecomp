@@ -36,7 +36,10 @@ class Decoy extends en.Mob {
     }
 
     public override function onDie(): Void {
+        super.onDie();
+        this.detonate();
     }
+
 
     public function detonate(): Void {
     }

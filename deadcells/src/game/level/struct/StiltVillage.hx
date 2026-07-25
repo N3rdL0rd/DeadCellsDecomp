@@ -37,7 +37,10 @@ class StiltVillage extends level.LevelStruct {
     }
 
     public override function buildLoreRooms(): Void {
+        this.buildEssentialLoreRooms();
+        super.buildLoreRooms();
     }
+
 
     public override function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
     }

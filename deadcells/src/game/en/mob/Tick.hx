@@ -21,7 +21,10 @@ class Tick extends en.Mob {
     }
 
     public override function init(): Void {
+        super.init();
+        this.fillBossDoor();
     }
+
 
     public function fillBossDoor(): Void {
     }
@@ -38,8 +41,11 @@ class Tick extends en.Mob {
     public override function onLand(arg0: Float): Void {
     }
 
-    public override function onAffectChange(arg0: Int, arg1: Bool): Void {
+    public override function onAffectChange(x: Int, isActive: Bool): Void {
+        super.onAffectChange(x, isActive);
+        super.resetQueuedOldSkill();
     }
+
 
     public override function initSkills(): Void {
     }

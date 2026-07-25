@@ -30,7 +30,9 @@ class ControlIcon extends h2d.Object {
     }
 
     public function onResize(): Void {
+        this.setKey(this.id);
     }
+
 
     public function setKey(arg0: tool.MainKey): Void {
     }

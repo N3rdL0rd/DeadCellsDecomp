@@ -36,9 +36,10 @@ class TeleJump extends tool.skill.OldMobSkill {
     public function onJumpChargeStartCallback(): Void {
     }
 
-    public function listAlikes(): Array<Dynamic> {
-        throw "stub: listAlikes not decompiled";
+    public static function listAlikes(var0: tool.skill.mobSkill.TeleJump): Array<Dynamic> {
+        return null;
     }
+
 
     public override function dynOnExecute(arg0: Float): Void {
     }

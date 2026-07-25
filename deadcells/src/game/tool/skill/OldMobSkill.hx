@@ -119,9 +119,10 @@ class OldMobSkill extends tool.skill.OldSkill {
     public function dynOnAnnounce(): Void {
     }
 
-    public function dynNeedFacing(): Bool {
-        throw "stub: dynNeedFacing not decompiled";
+    public static function dynNeedFacing(var0: tool.skill.OldMobSkill): Bool {
+        return true;
     }
+
 
     public function dynOnBeforePrepare(): Void {
     }

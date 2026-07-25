@@ -142,6 +142,8 @@ class MobGenInfos {
         throw "stub: getPackCount not decompiled";
     }
 
-    public function setMaxSpawn(arg0: Int): Void {
+    public function setMaxSpawn(count: Int): Void {
+        this.maxSpawn = count;
     }
+
 }

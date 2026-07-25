@@ -125,9 +125,10 @@ class OldSkill extends libs.Process {
     public function onSetCooldown(arg0: Float): Void {
     }
 
-    public function dynHasCooldown(): Bool {
-        throw "stub: dynHasCooldown not decompiled";
+    public static function dynHasCooldown(var0: tool.skill.OldSkill): Bool {
+        return true;
     }
+
 
     public function dynOnInterrupt(arg0: Float): Void {
     }

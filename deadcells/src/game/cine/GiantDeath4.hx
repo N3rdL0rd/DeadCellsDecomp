@@ -20,7 +20,9 @@ class GiantDeath4 extends GameCinematic {
 
 
     public function trackHeroLanding(): Void {
+        this.heroLanded = false;
     }
+
 
     public override function update(): Void {
     }

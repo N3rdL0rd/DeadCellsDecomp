@@ -46,7 +46,10 @@ class AdeleScytheGhost extends en.Mob {
     }
 
     public override function init(): Void {
+        super.init();
+        this.updateCulling();
     }
+
 
     public override function initGfx(): Void {
     }

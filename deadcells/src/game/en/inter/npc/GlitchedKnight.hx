@@ -31,8 +31,10 @@ class GlitchedKnight extends en.inter.Npc {
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function setHeadFlip(arg0: Bool): Void {
+    public function setHeadFlip(v: Bool): Void {
+        this.headFlip = v;
     }
+
 
     public override function postUpdate(): Void {
     }

@@ -229,11 +229,17 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
         throw "stub: setAnimDuration not decompiled";
     }
 
-    public function setScale(arg0: Float): Void {
+    public function setScale(v: Float): Void {
+        this.scaleY = v;
+        this.scaleX = v;
     }
 
-    public function setPosition(arg0: Float, arg1: Float): Void {
+
+    public function setPosition(x: Float, y: Float): Void {
+        this.x = x;
+        this.y = y;
     }
+
 
     public function reset(arg0: h2d.SpriteBatch, arg1: h2d.Tile, arg2: Ref, arg3: Ref, arg4: Ref): Void {
     }
@@ -256,9 +262,12 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
     public function setCenterRatio(arg0: Float, arg1: Float): Void {
     }
 
-    public function set_frict(arg0: Float): Float {
-        throw "stub: set_frict not decompiled";
+    public function set_frict(v: Float): Float {
+        this.frictY = v;
+        this.frictX = v;
+        return v;
     }
+
 
     public function get_frict(): Float {
         throw "stub: get_frict not decompiled";
@@ -360,7 +369,9 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
     }
 
     public function resetAnimCursor(): Void {
+        this.animCursor = 0.0;
     }
+
 
     public function optimPow(arg0: Float, arg1: Float): Float {
         throw "stub: optimPow not decompiled";

@@ -125,5 +125,8 @@ class WiggleWhip extends tool.Weapon {
     }
 
     public override function dispose(): Void {
+        this.stopWiggling();
+        super.dispose();
     }
+
 }

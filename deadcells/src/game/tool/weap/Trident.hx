@@ -52,9 +52,11 @@ class Trident extends tool.Weapon {
     public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
     }
 
-    public override function tryToCancel(arg0: Bool): Bool {
-        throw "stub: tryToCancel not decompiled";
+    public override function tryToCancel(byWeapon: Bool): Bool {
+        this.cancelByWeapon = byWeapon;
+        return super.tryToCancel(byWeapon);
     }
+
 
     public override function fixedUpdate(): Void {
     }

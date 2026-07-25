@@ -201,14 +201,20 @@ class Entity {
         throw "stub: isOpponent not decompiled";
     }
 
-    public function setBrutalityTier(arg0: Int): Void {
+    public function setBrutalityTier(v: Int): Void {
+        this.brutalityTier = v;
     }
 
-    public function setSurvivalTier(arg0: Int): Void {
+
+    public function setSurvivalTier(v: Int): Void {
+        this.survivalTier = v;
     }
 
-    public function setTacticTier(arg0: Int): Void {
+
+    public function setTacticTier(v: Int): Void {
+        this.tacticTier = v;
     }
+
 
     public function getRelevantTierFor(arg0: tool.InventItem): Int {
         throw "stub: getRelevantTierFor not decompiled";
@@ -745,9 +751,10 @@ class Entity {
         throw "stub: canBeHit not decompiled";
     }
 
-    public function canBeHitBy(arg0: Entity): Bool {
-        throw "stub: canBeHitBy not decompiled";
+    public function canBeHitBy(by: Entity): Bool {
+        return this.canBeHit();
     }
+
 
     public function canReceiveAttack(a: tool.atk.AttackData): Bool {
         return this.canBeHit();
@@ -815,7 +822,9 @@ class Entity {
     }
 
     public function onLeaveMap(): Void {
+        this.destroy();
     }
+
 
     public function onEnterWater(): Void {
     }
@@ -830,9 +839,10 @@ class Entity {
     public function updateDeployedBuffs(): Void {
     }
 
-    public function canCrawlThrought(arg0: Int, arg1: Int): Bool {
-        throw "stub: canCrawlThrought not decompiled";
+    public function canCrawlThrought(x: Int, y: Int): Bool {
+        return false;
     }
+
 
     public function updateLastSprPos(): Void {
     }
@@ -856,9 +866,10 @@ class Entity {
         throw "stub: canApplyRepelling not decompiled";
     }
 
-    public function canHaveRepellingWith(arg0: Entity): Bool {
-        throw "stub: canHaveRepellingWith not decompiled";
+    public function canHaveRepellingWith(entity: Entity): Bool {
+        return true;
     }
+
 
     public function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

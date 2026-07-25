@@ -26,7 +26,10 @@ class DynamicBiomeDisp extends level.BiomeDisp {
     }
 
     public function reloadBlends(): Void {
+        this.reloadLightConfs();
+        this.reloadDustConf();
     }
+
 
     public function getBlendRatioAt(px: Float, py: Float): Float {
         return 0.0;

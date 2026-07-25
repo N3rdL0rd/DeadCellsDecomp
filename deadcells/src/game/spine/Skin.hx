@@ -24,6 +24,7 @@ class KeyPool extends spine.support.utils.Pool {
     }
 
     public override function newObject(): Dynamic {
-        throw "stub: newObject not decompiled";
+        return new spine.Key();
     }
+
 }

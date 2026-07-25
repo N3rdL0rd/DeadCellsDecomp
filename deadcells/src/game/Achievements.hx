@@ -25,7 +25,9 @@ class Achievements {
     }
 
     public static function init(): Void {
+        Achievements.initManager();
     }
+
 }
 class AnathemaProjectile extends Entity {
     public static var __clid: Int;

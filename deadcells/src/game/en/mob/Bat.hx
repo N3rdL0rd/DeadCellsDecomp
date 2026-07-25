@@ -28,8 +28,9 @@ class Bat extends en.Mob {
     }
 
     public function canWakeUp(): Bool {
-        throw "stub: canWakeUp not decompiled";
+        return !this.destroyed;
     }
+
 
     public function wakeUp(): Void {
     }
@@ -47,7 +48,10 @@ class Bat extends en.Mob {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
+        this.commonBatAi();
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

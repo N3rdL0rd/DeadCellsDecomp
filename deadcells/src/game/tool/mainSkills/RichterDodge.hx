@@ -65,8 +65,10 @@ class RichterDodge extends tool.mainSkills.Dodge {
     }
 
     public override function canWallGrab(): Bool {
-        throw "stub: canWallGrab not decompiled";
+        var var1: Bool = this.isActive();
+        return !var1;
     }
+
 
     public override function canJumpThroughUp(): Bool {
         throw "stub: canJumpThroughUp not decompiled";

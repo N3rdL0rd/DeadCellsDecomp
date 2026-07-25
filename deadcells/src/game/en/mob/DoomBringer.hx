@@ -8,9 +8,12 @@ class DoomBringer extends en.Mob {
         super();
     }
 
-    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.DoomBringer {
-        throw "stub: create not decompiled";
+    public static function create(lvl: pr.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): en.mob.DoomBringer {
+        var e: en.mob.DoomBringer = new en.mob.DoomBringer(lvl, x, y, dmgTier, lifeTier);
+        e.init();
+        return e;
     }
+
 
     public override function initGfx(): Void {
     }

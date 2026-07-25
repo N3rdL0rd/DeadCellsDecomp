@@ -16,14 +16,18 @@ class SkulBone extends tool.Weapon {
     }
 
     public function launchWhirlwindAttack(): Void {
+        this.curWhirlwindAttackCounter = 0;
     }
+
 
     public function updateWhirlwindAttack(arg0: Float): Void {
     }
 
     public override function onExecute(): Bool {
-        throw "stub: onExecute not decompiled";
+        super.onExecute();
+        return this.playAttack();
     }
+
 
     public function playAttack(): Bool {
         throw "stub: playAttack not decompiled";

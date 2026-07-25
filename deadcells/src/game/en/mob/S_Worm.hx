@@ -38,8 +38,11 @@ class S_Worm extends en.Mob {
         throw "stub: getMoveSpeedMul not decompiled";
     }
 
-    public override function onLand(arg0: Float): Void {
+    public override function onLand(floors: Float): Void {
+        super.onLand(floors);
+        this.enableRepelling();
     }
+
 
     public override function postUpdate(): Void {
     }

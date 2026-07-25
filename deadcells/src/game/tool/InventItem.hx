@@ -89,8 +89,9 @@ class InventItem {
     }
 
     public function canBeForged(): Bool {
-        throw "stub: canBeForged not decompiled";
+        return this.canReceiveAffix("QualityUp");
     }
+
 
     public function getForgeRerollCost(): Int {
         throw "stub: getForgeRerollCost not decompiled";
@@ -174,9 +175,10 @@ class InventItem {
         throw "stub: authorizeDoublons not decompiled";
     }
 
-    public function isUsefulFor(arg0: en.Hero): Bool {
-        throw "stub: isUsefulFor not decompiled";
+    public function isUsefulFor(h: en.Hero): Bool {
+        return h.isItemUseful(this);
     }
+
 
     public function isHealing(): Bool {
         throw "stub: isHealing not decompiled";
@@ -187,12 +189,14 @@ class InventItem {
     }
 
     public function isSmallHealing(): Bool {
-        throw "stub: isSmallHealing not decompiled";
+        return this.hasTag("SmallHealConsumable");
     }
 
+
     public function isLargeHealing(): Bool {
-        throw "stub: isLargeHealing not decompiled";
+        return this.hasTag("LargeHealConsumable");
     }
+
 
     public function isWrongHealingKind(): Bool {
         throw "stub: isWrongHealingKind not decompiled";

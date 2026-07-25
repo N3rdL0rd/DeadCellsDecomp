@@ -171,5 +171,7 @@ class DeferredList {
     public var last: light.DeferredSprite;
 
     public function new() {
+        this.first = null;
     }
+
 }

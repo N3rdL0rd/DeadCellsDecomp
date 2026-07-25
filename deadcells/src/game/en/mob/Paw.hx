@@ -44,7 +44,9 @@ class AnimatedPaw {
     }
 
     public function unsetRelativeToParent(): Void {
+        this.relativeToParent = false;
     }
+
 
     public function dispose(): Void {
     }

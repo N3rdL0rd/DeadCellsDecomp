@@ -45,7 +45,10 @@ class Rampager extends en.Mob {
     }
 
     public override function onDelayedVolteStart(): Void {
+        super.onDelayedVolteStart();
+        this.cancelChain();
     }
+
 
     public override function fixedUpdate(): Void {
     }
@@ -73,8 +76,11 @@ class Rampager extends en.Mob {
     public function cancelChain(): Void {
     }
 
-    public override function onBreach(arg0: tool.atk.AttackData): Void {
+    public override function onBreach(a: tool.atk.AttackData): Void {
+        super.onBreach(a);
+        this.cancelChain();
     }
+
 
     public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
