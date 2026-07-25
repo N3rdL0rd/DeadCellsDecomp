@@ -7,9 +7,17 @@ class Parallax extends h2d.Object {
     public var vhei: Float;
     public var limitBounds: h2d.col.Bounds;
 
-    public function new(arg0: h2d.col.Bounds, arg1: Viewport, arg2: h2d.Object, arg3: h2d.col.Bounds) {
-        super();
+    public function new(bounds: h2d.col.Bounds, viewport: Viewport, p: h2d.Object, limitBounds: h2d.col.Bounds) {
+        super(p);
+        this.scrollX = 1.0;
+        this.scrollY = 1.0;
+        this.view = viewport;
+        this.vwid = Viewport.NATIVE_WIDTH;
+        this.vhei = Viewport.NATIVE_HEIGHT;
+        this.bounds = bounds;
+        this.limitBounds = limitBounds;
     }
+
 
     public override function calcAbsPos(): Void {
     }

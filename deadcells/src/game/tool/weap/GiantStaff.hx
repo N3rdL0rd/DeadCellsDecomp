@@ -10,9 +10,15 @@ class GiantStaff extends tool.Weapon {
     public override function dispose(): Void {
     }
 
-    public override function set_cycle(arg0: Int): Int {
-        throw "stub: set_cycle not decompiled";
+    public override function set_cycle(v: Int): Int {
+        var newCycle: Int = super.set_cycle(v);
+        if (newCycle == 0) {
+            this.shouldCrit = false;
+            super.stopCritFeedback();
+        }
+        return newCycle;
     }
+
 
     public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.Weapon.WeaponSkill): Void {
     }

@@ -70,7 +70,12 @@ class Hitbox extends Entity {
     }
 
     public override function destroy(): Void {
+        super.destroy();
+        if (this.parent != null) {
+            this.parent = null;
+        }
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

@@ -27,13 +27,21 @@ class Scarecrow extends en.Mob {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        super.initSprite(Assets.gameElements, "scareCrow", 0.5, 0.95, null, true, null, null);
     }
+
 
     public function endDamageSession(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
+        if (k == "dmg") {
+            this.endDamageSession();
+        }
     }
+
 
     public override function onDamage(arg0: tool.atk.AttackData): Void {
     }

@@ -31,10 +31,18 @@ class ScarfSegment {
     }
 
     public function invertFrontAndBack(): Void {
+        this.invertFront = true;
+        this.needLayerUpdate = true;
     }
 
+
     public function dispose(): Void {
+        this.spr.remove();
+        this.spr = null;
+        this.owner = null;
+        this.parent = null;
     }
+
 
     public function push(arg0: Float): Void {
     }
@@ -75,11 +83,27 @@ class ScarfManager {
     public function push(arg0: Float, arg1: Ref): Void {
     }
 
-    public function overrideBlendMode(arg0: h2d.BlendMode): Void {
+    public function overrideBlendMode(blendMode: h2d.BlendMode): Void {
+        if (this.sbFront.blendMode == blendMode) {
+            if (this.sbBack.blendMode == blendMode) {
+                return;
+            }
+        }
+        this.sbFront.blendMode = blendMode;
+        this.sbBack.blendMode = blendMode;
     }
 
+
     public function restoreBlendMode(): Void {
+        if (this.sbFront.blendMode == this.blendMode) {
+            if (this.sbBack.blendMode == this.blendMode) {
+                return;
+            }
+        }
+        this.sbFront.blendMode = this.blendMode;
+        this.sbBack.blendMode = this.blendMode;
     }
+
 }
 
 class Scarf {

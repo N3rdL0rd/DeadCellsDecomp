@@ -123,17 +123,27 @@ class LightedLayers extends h2d.Layers {
     public override function sync(arg0: h2d.RenderContext): Void {
     }
 
-    public override function addChildAt(arg0: h2d.Object, arg1: Int): Void {
+    public override function addChildAt(s: h2d.Object, pos: Int): Void {
+        super.addChildAt(s, pos);
+        s.setParentContainer(this);
+        this.needRebuildDepthMap = true;
     }
+
 
     public override function contentChanged(arg0: h2d.Object): Void {
     }
 
-    public override function under(arg0: h2d.Object): Void {
+    public override function under(obj: h2d.Object): Void {
+        super.under(obj);
+        this.needRebuildDepthMap = true;
     }
 
-    public override function over(arg0: h2d.Object): Void {
+
+    public override function over(obj: h2d.Object): Void {
+        super.over(obj);
+        this.needRebuildDepthMap = true;
     }
+
 
     public override function drawRec(arg0: h2d.RenderContext): Void {
     }
@@ -158,7 +168,14 @@ class LightedLayers extends h2d.Layers {
     }
 
     public function clean(): Void {
+        this.removeChildren();
+        this.depthMap.clear();
+        if (this.depthBuffer != null) {
+            this.depthBuffer.dispose();
+        }
+        this.depthBuffer = null;
     }
+
 }
 
 class RenderContextExtender {

@@ -24,8 +24,9 @@ class Lancer extends en.Mob {
 
 
     public function getLib(): libs.heaps.slib.SpriteLib {
-        throw "stub: getLib not decompiled";
+        return Assets.lib.get("atlas/lancer.atlas");
     }
+
 
     public function getNormalMap(): h3d.mat.Texture {
         throw "stub: getNormalMap not decompiled";
@@ -39,8 +40,12 @@ class Lancer extends en.Mob {
     public override function initGfx(): Void {
     }
 
-    public override function setElite(arg0: Bool): Void {
+    public override function setElite(disableEliteSkill: Bool): Void {
+        super.setElite(disableEliteSkill);
+        var var3: libs.heaps.slib.AnimManager = this.spr.get_anim();
+        var3.setStateAnimSpeed("walk", 2.0);
     }
+
 
     public override function initSkills(): Void {
     }

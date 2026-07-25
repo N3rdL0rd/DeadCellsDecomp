@@ -28,8 +28,9 @@ class HardLightGun extends tool.Weapon {
     }
 
     public override function get_shootY(): Float {
-        throw "stub: get_shootY not decompiled";
+        return super.get_shootY() - 10.0;
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";

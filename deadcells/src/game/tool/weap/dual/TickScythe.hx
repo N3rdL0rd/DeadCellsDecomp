@@ -44,15 +44,23 @@ class CombinedTickScythe extends tool.Weapon {
     public override function setWeaponGlow(): Void {
     }
 
-    public override function tryToCancel(arg0: Bool): Bool {
-        throw "stub: tryToCancel not decompiled";
+    public override function tryToCancel(byWeapon: Bool): Bool {
+        if (this.lastWeap != null) {
+            return this.lastWeap.tryToCancel(byWeapon);
+        }
+        return super.tryToCancel(byWeapon);
     }
+
 
     public override function dynOnInterrupt(arg0: tool.Weapon.WeaponSkill, arg1: Float): Void {
     }
 
     public override function cancelChain(): Void {
+        super.cancelChain();
+        super.interrupt();
+        this.combo = 0;
     }
+
 
     public override function fixedUpdate(): Void {
     }

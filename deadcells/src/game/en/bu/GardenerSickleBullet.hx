@@ -77,7 +77,11 @@ class GardenerSickleBullet extends en.Bullet {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
+        this.accelerateTowardParent();
+        this.checkTouchParent();
     }
+
 
     public function accelerateTowardParent(): Void {
     }

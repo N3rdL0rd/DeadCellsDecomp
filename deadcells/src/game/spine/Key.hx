@@ -6,6 +6,9 @@ class Key {
     public var hashCode: Int;
 
     public function new() {
+        this.hashCode = 0;
+        this.slotIndex = 0;
     }
+
 }
 

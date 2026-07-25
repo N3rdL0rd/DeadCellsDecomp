@@ -10,23 +10,34 @@ class StatusIcon {
     }
 
     public function get_game(): pr.Game {
-        throw "stub: get_game not decompiled";
+        return pr.Game.ME;
     }
+
 
     public function dispose(): Void {
+        this.icon.remove();
+        this.icon = null;
     }
 
-    public function set_x(arg0: Float): Float {
-        throw "stub: set_x not decompiled";
+
+    public function set_x(v: Float): Float {
+        this.icon.x = v;
+        return v;
     }
 
-    public function set_y(arg0: Float): Float {
-        throw "stub: set_y not decompiled";
+
+    public function set_y(v: Float): Float {
+        this.icon.y = v;
+        return v;
     }
 
-    public function set_visible(arg0: Bool): Bool {
-        throw "stub: set_visible not decompiled";
+
+    public function set_visible(v: Bool): Bool {
+        this.visible = v;
+        this.icon.visible = v;
+        return v;
     }
+
 
     public function update(arg0: Float): Void {
     }

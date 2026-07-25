@@ -18,8 +18,9 @@ class Button extends en.Interactive {
 
 
     public function getLightTipStr(): String {
-        throw "stub: getLightTipStr not decompiled";
+        return Lang.t.get("Activer", null);
     }
+
 
     public override function initGfx(): Void {
     }

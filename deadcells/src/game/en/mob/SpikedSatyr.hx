@@ -16,8 +16,12 @@ class SpikedSatyr extends en.Mob {
     public override function initGfx(): Void {
     }
 
-    public override function setElite(arg0: Bool): Void {
+    public override function setElite(disableEliteSkill: Bool): Void {
+        super.setElite(disableEliteSkill);
+        var var3: libs.heaps.slib.AnimManager = this.spr.get_anim();
+        var3.setStateAnimSpeed("walk", 2.0);
     }
+
 
     public function turnBackAt(arg0: Entity): Void {
     }
@@ -32,8 +36,13 @@ class SpikedSatyr extends en.Mob {
         throw "stub: aiLocked not decompiled";
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
+        if (k == "rolling") {
+            this.stopRoll(true, null);
+        }
     }
+
 
     public override function onTouchWall(arg0: Int): Void {
     }

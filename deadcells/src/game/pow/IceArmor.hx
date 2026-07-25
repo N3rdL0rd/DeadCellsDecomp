@@ -13,8 +13,13 @@ class IceArmor extends Power {
     }
 
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
+        if (k == "setArmor") {
+            this.setArmor();
+        }
     }
+
 
     public function setArmor(): Void {
     }

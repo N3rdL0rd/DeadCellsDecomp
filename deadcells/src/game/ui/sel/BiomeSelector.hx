@@ -79,8 +79,9 @@ class BiomeSelector extends ui.sel.GridSelector {
     }
 
     public override function getTitleText(): String {
-        throw "stub: getTitleText not decompiled";
+        return Lang.t.get("Levels", null);
     }
+
 
     public override function onResize(): Void {
     }

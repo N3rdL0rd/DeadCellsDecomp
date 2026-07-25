@@ -31,5 +31,8 @@ class MedusaHead extends tool.Weapon {
     }
 
     public function reset(): Void {
+        this.item.refillAmmo();
+        this.spawnedBullet = null;
     }
+
 }

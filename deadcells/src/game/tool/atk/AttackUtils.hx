@@ -46,9 +46,12 @@ class AttackUtils {
     }
 
 
-    public static function createRetaliation(arg0: tool.atk.AttackData): tool.atk.AttackData {
-        throw "stub: createRetaliation not decompiled";
+    public static function createRetaliation(a: tool.atk.AttackData): tool.atk.AttackData {
+        a = tool.atk.AttackData._create(null, a.finalDmg, 1);
+        a.addTag(7);
+        return a;
     }
+
 
     public static function createFromHeroGrenade(arg0: en.gr.GrenadeSkill, arg1: Dynamic): tool.atk.AttackData {
         throw "stub: createFromHeroGrenade not decompiled";

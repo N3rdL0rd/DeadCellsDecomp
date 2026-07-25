@@ -23,7 +23,10 @@ class HeroActiveSkillsManager extends tool.HeroManager {
     }
 
     public override function preUpdate(): Void {
+        super.preUpdate();
+        this.updateSkills();
     }
+
 
     public override function fixedUpdate(): Void {
     }
@@ -47,9 +50,14 @@ class HeroActiveSkillsManager extends tool.HeroManager {
         throw "stub: hasChargingSkill not decompiled";
     }
 
-    public function getOldSkill(arg0: tool.InventItem): tool.skill.OldSkill {
-        throw "stub: getOldSkill not decompiled";
+    public function getOldSkill(item: tool.InventItem): tool.skill.OldSkill {
+        var as: tool.hero.HeroActiveSkill = this.getActiveSkill(item);
+        if (as == null) {
+            return null;
+        }
+        return as.skill;
     }
+
 
     public function getActiveSkill(arg0: tool.InventItem): tool.hero.HeroActiveSkill {
         throw "stub: getActiveSkill not decompiled";
@@ -194,15 +202,25 @@ class HeroActiveSkill {
     }
 
     public function getNextUseCooldownRatio(): Float {
-        throw "stub: getNextUseCooldownRatio not decompiled";
+        return this.getNextUseCooldownF() / this.cdPerUseF;
     }
+
 
     public function dispose(): Void {
+        this.skill.destroyed = true;
+        this.killEntities(null);
+        this.entities = null;
     }
 
+
     public function prepareSave(): Bool {
-        throw "stub: prepareSave not decompiled";
+        if (this.skill != null) {
+            var var2: Dynamic = this.skill.getTimersState();
+            this.timers = var2;
+        }
+        return true;
     }
+
 
     public function init(s: tool.skill.OldSkill): Void {
         this.skill = s;
@@ -210,7 +228,11 @@ class HeroActiveSkill {
 
 
     public function restoreTimers(): Void {
+        if (this.skill != null) {
+            this.skill.setTimersState(this.timers);
+        }
     }
+
 
     public function registerEntity(arg0: en.Active, arg1: Ref): Void {
     }

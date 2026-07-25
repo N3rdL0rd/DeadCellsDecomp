@@ -18,8 +18,9 @@ class S_Fly extends en.Mob {
     }
 
     public static function preloadGfx(): libs.heaps.slib.SpriteLib {
-        throw "stub: preloadGfx not decompiled";
+        return Assets.lib.get("atlas/macFly.atlas");
     }
+
 
     public override function canHaveRepellingWith(arg0: Entity): Bool {
         throw "stub: canHaveRepellingWith not decompiled";
@@ -31,8 +32,11 @@ class S_Fly extends en.Mob {
     public override function initSkills(): Void {
     }
 
-    public override function reduceThreat(arg0: Entity, arg1: Float): Void {
+    public override function reduceThreat(source: Entity, loss: Float): Void {
+        loss *= 0.2;
+        super.reduceThreat(source, loss);
     }
+
 
     public function onFlee(arg0: Float): Void {
     }

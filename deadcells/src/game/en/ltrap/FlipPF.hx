@@ -22,7 +22,10 @@ class FlipPF extends en.LevelTrap {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        this.initSprite(Assets.common, "unstablePlatformPurple", 0.5, 0.5, null, null, null, null);
     }
+
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }

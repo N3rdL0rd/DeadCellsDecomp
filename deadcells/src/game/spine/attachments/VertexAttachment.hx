@@ -11,7 +11,14 @@ class VertexAttachment extends spine.attachments.Attachment {
         super();
     }
 
-    public function applyDeform(arg0: spine.attachments.VertexAttachment): Bool {
-        throw "stub: applyDeform not decompiled";
+    public function applyDeform(sourceAttachment: spine.attachments.VertexAttachment): Bool {
+        var var2: Bool;
+        if (this != sourceAttachment) {
+            var2 = false;
+        } else {
+            var2 = true;
+        }
+        return var2;
     }
+
 }

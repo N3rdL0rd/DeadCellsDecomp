@@ -34,7 +34,10 @@ class ModManager {
     }
 
     public function onSteamInit(): Void {
+        steam.ugc.Item.init(this.onItemDownloaded, this.onItemInstalled);
+        this.refreshModsList();
     }
+
 
     public function refreshModsList(): Void {
     }

@@ -12,7 +12,10 @@ class TwitchDoor extends en.inter.Door {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        super.initDoorSkin("magicDoor", "magicDoorSide", "hingeBigDoors", "magicDoorGradient", null, null);
     }
+
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }

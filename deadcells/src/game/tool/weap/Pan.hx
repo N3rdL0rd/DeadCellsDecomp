@@ -3,9 +3,11 @@ package tool.weap;
 class Pan extends tool.Weapon {
     public var oneCrit: Bool;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        this.oneCrit = false;
+        super(o, i);
     }
+
 
     public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }

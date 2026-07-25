@@ -13,7 +13,10 @@ class HealCaptainChicken extends tool.mainSkills.Heal {
     }
 
     public override function init(): Void {
+        super.init();
+        this.hold = true;
     }
+
 
     public override function passiveFixedUpdate(): Void {
     }

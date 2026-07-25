@@ -21,9 +21,13 @@ class MusicManager {
         throw "stub: extractMusicName not decompiled";
     }
 
-    public static function getMusicFilePath(arg0: String, arg1: String): String {
-        throw "stub: getMusicFilePath not decompiled";
+    public static function getMusicFilePath(musicName: String, folder: String): String {
+        if (folder == null) {
+            folder = tool.MusicManager.getMusicFolder();
+        }
+        return 'music/$folder/$musicName.ogg';
     }
+
 
     public static function getAllMusicFolders(): Array<Dynamic> {
         throw "stub: getAllMusicFolders not decompiled";

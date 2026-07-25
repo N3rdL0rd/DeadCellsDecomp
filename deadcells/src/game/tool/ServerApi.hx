@@ -22,11 +22,16 @@ class ServerApi {
     public static function saveScore(arg0: Dynamic, arg1: Int, arg2: Bool, arg3: Int, arg4: Int, arg5: Dynamic): Void {
     }
 
-    public static function getNews(arg0: Dynamic): Void {
+    public static function getNews(onData: Dynamic): Void {
+        tool.ServerApi.request("/lastNews", null, false, onData);
     }
 
-    public static function getDailySeed(arg0: Dynamic): Void {
+
+    public static function getDailySeed(onData: Dynamic): Void {
+        var userRequired: Bool = tool.ServerApi.canSaveScore();
+        tool.ServerApi.request("/daily/seed", null, userRequired, onData);
     }
+
 
     public static function getPlatformName(): String {
         return "Steam";

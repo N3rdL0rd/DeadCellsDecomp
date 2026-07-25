@@ -87,9 +87,13 @@ class TeamMobIterator {
     }
 
 
-    public function reset(arg0: tool.Team): tool.TeamMobIterator {
-        throw "stub: reset not decompiled";
+    public function reset(t: tool.Team): tool.TeamMobIterator {
+        this.team = t;
+        this.teamIdx = 0;
+        this.memberIdx = 0;
+        return this;
     }
+
 
     public function hasNext(): Bool {
         throw "stub: hasNext not decompiled";

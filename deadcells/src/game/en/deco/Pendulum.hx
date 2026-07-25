@@ -42,8 +42,11 @@ class Pendulum extends en.Deco {
     public function ySort(): Void {
     }
 
-    public function setPosition(arg0: Float, arg1: Float): Void {
+    public function setPosition(x: Float, y: Float): Void {
+        this.setPosPixel(x, y);
+        this.initChain(null);
     }
+
 
     public function initChain(arg0: Ref): Void {
     }

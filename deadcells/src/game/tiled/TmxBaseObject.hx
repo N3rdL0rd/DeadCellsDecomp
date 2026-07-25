@@ -6,7 +6,11 @@ class TmxBaseObject {
     public var properties: haxe.ds.StringMap<Dynamic>;
 
     public function new() {
+        this.properties = new haxe.ds.StringMap();
+        this.id = -1;
+        this.name = null;
     }
+
 
     public function getString(arg0: String): String {
         throw "stub: getString not decompiled";

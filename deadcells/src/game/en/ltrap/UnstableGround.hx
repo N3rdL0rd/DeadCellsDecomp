@@ -29,7 +29,10 @@ class UnstableGround extends en.LevelTrap {
 
 
     public override function init(): Void {
+        super.init();
+        this.setCollisionState(true);
     }
+
 
     public function setCollisionState(arg0: Bool): Void {
     }

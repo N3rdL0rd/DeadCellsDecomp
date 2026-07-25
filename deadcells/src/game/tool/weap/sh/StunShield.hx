@@ -1,9 +1,12 @@
 package tool.weap.sh;
 
 class StunShield extends tool.weap.BaseShield {
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
+        this.holdAnimId = "block";
+        this.parryAnimId = "blockEnd";
     }
+
 
     public override function onShieldBlock(arg0: tool.atk.AttackData, arg1: Bool): Void {
     }

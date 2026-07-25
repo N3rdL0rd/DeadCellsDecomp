@@ -30,8 +30,14 @@ class DeathSickle extends Entity {
     public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        super.onCooldownEnd(k, subIndex);
+        if (k == "appearing") {
+            super.set_targetable(true);
+            this.hasEntityTouchChecks = true;
+        }
     }
+
 
     public function canHit(arg0: Entity): Bool {
         throw "stub: canHit not decompiled";

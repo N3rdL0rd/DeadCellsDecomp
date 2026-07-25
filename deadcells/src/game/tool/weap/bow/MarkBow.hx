@@ -1,9 +1,11 @@
 package tool.weap.bow;
 
 class MarkBow extends tool.weap.BaseBow {
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
+        this.startAnimRatio = 0.4;
     }
+
 
     public override function shoot(arg0: Array<Dynamic>): Void {
     }

@@ -16,7 +16,10 @@ class SewerShort extends level.LevelStruct {
     }
 
     public override function buildLoreRooms(): Void {
+        this.buildEssentialLoreRooms();
+        super.buildLoreRooms();
     }
+
 
     public override function buildSecondaryRooms(): Void {
     }

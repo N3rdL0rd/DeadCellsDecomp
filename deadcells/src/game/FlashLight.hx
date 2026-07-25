@@ -7,7 +7,14 @@ class FlashLight {
     public var createTime: Float;
 
     public function new() {
+        this.maxLife = 0.0;
+        this.life = 0.0;
+        this.maxIntensity = 0.0;
+        this.active = false;
+        this.light = new light.PointLight(null);
+        this.disable();
     }
+
 
     public static function create(arg0: pr.Level, arg1: Float, arg2: Float, arg3: Int, arg4: Float, arg5: Dynamic, arg6: Dynamic, arg7: Dynamic): FlashLight {
         throw "stub: create not decompiled";

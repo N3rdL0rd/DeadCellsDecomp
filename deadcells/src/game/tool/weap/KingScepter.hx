@@ -19,7 +19,12 @@ class KingScepter extends tool.Weapon {
 
 
     public function cancelAll(): Void {
+        if (this.spinning) {
+            this.stopSpin();
+        }
+        this.reset();
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";
@@ -38,7 +43,11 @@ class KingScepter extends tool.Weapon {
     }
 
     public function onOwnerTouchGround(): Void {
+        if (this.spinning) {
+            this.stopSpin();
+        }
     }
+
 
     public function onOwnerTouch(arg0: Entity): Void {
     }

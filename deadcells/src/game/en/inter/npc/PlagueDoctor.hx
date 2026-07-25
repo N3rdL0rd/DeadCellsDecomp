@@ -4,9 +4,12 @@ class PlagueDoctor extends en.inter.Npc {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
-        super();
+    public function new(lvl: pr.Level, r: level.Room) {
+        super(lvl, PlagueDoctor);
+        super.autoPlace(r, "close", -1);
+        this.hei = 67.19999999999999;
     }
+
 
     public override function initGfx(): Void {
     }

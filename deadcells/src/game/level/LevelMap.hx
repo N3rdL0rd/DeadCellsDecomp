@@ -137,9 +137,14 @@ class LevelMap {
         throw "stub: hasMarker not decompiled";
     }
 
-    public function isRoomRevealedAt(arg0: Int, arg1: Int): Bool {
-        throw "stub: isRoomRevealedAt not decompiled";
+    public function isRoomRevealedAt(cx: Int, cy: Int): Bool {
+        var r: level.Room = this.getRoomAt(cx, cy);
+        if (r != null) {
+            return r.revealed;
+        }
+        return true;
     }
+
 
     public function revealRoomAt(arg0: Int, arg1: Int): Bool {
         throw "stub: revealRoomAt not decompiled";

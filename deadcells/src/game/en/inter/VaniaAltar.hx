@@ -15,8 +15,13 @@ class VaniaAltar extends en.inter.ItemAltar {
     public override function onFocus(): Void {
     }
 
-    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(by: en.Hero, lp: Bool): Void {
+        super.onActivate(by, lp);
+        if (!lp) {
+            this.disable(true);
+        }
     }
+
 
     public override function disable(arg0: Bool): Void {
     }

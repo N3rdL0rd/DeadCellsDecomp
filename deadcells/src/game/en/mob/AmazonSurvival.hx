@@ -195,8 +195,9 @@ class AmazonSurvival extends en.mob.AmazonBase {
 
 class AmazonSurvivalChain extends tool.Chain {
     public function new() {
-        super(null, null, null, null, null);
+        super(Assets.gameElements, null, null, null, null);
     }
+
 
     public override function createSegment(arg0: Dynamic): tool.Chain.ChainSegment {
         throw "stub: createSegment not decompiled";

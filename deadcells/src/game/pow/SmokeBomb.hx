@@ -7,8 +7,12 @@ class SmokeBomb extends Power {
         super();
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        if (k == "cast") {
+            this.finishCast();
+        }
     }
+
 
     public function finishCast(): Void {
     }

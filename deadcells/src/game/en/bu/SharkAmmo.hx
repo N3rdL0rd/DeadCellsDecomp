@@ -32,8 +32,11 @@ class SharkAmmo extends en.loot.Ammo {
     public override function fixedUpdate(): Void {
     }
 
-    public override function startMagnet(arg0: Entity): Void {
+    public override function startMagnet(e: Entity): Void {
+        super.startMagnet(e);
+        this.hasEntityTouchChecks = false;
     }
+
 
     public override function onTouch(arg0: Entity): Void {
     }

@@ -5,7 +5,11 @@ class SteamAchievementManager {
     public var idByAchievement: haxe.ds.EnumValueMap<Dynamic, Dynamic>;
 
     public function new() {
+        this.isApiAvailable = false;
+        this.idByAchievement = new haxe.ds.EnumValueMap();
+        steam.Api.whenAchievementStored = achievements.SteamAchievementManager.onAchievementStored;
     }
+
 
     public static function onAchievementStored(arg0: String): Void {
     }

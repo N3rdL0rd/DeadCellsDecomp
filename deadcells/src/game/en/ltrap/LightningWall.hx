@@ -36,8 +36,12 @@ class LightningWall extends en.LevelTrap {
     }
 
     public function canBeActive(): Bool {
-        throw "stub: canBeActive not decompiled";
+        if (this.life > 0) {
+            return !this.destroyed;
+        }
+        return false;
     }
+
 
     public override function dispose(): Void {
     }

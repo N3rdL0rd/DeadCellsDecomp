@@ -10,7 +10,10 @@ class ChallengeManager extends libs.Process {
     }
 
     public function onReload(): Void {
+        super.init();
+        this.onResume();
     }
+
 
     public function onResume(): Void {
     }

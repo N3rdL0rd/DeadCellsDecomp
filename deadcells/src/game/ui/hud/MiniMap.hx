@@ -194,8 +194,15 @@ class MMTarget {
     public var line: h2d.ScaleGrid;
     public var onChoose: Dynamic;
 
-    public function new(arg0: Entity = null, arg1: Array<Dynamic> = null, arg2: Entity = null, arg3: h2d.ScaleGrid = null, arg4: h2d.ScaleGrid = null, arg5: Dynamic = null) {
+    public function new(var1: Entity, var2: Array<Dynamic>, var3: Entity, var4: h2d.ScaleGrid, var5: h2d.ScaleGrid, var6: Dynamic) {
+        this.origin = var1;
+        this.targets = var2;
+        this.current = var3;
+        this.highlight = var4;
+        this.line = var5;
+        this.onChoose = var6;
     }
+
 }
 
 class MMLink {

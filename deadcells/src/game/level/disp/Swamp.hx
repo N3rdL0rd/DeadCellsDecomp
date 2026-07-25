@@ -44,7 +44,10 @@ class Swamp extends level.BiomeDisp {
     }
 
     public override function renderFloorStamps(): Void {
+        super.addCeilingStamps("stampCeiling", null, null);
+        super.addFloorStamps("floorStamp", null, null);
     }
+
 
     public override function update(): Void {
     }
@@ -120,6 +123,11 @@ class Zone {
     public var waterLevel: Int;
     public var depth: Int;
 
-    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
+    public function new(left: Int, right: Int, waterLevel: Int, depth: Int) {
+        this.left = left;
+        this.right = right;
+        this.waterLevel = waterLevel;
+        this.depth = depth;
     }
+
 }

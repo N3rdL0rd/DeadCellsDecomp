@@ -19,8 +19,13 @@ class BipartiteGraph {
     public var _dist: Array<Int>;
     public var _maxDist: Int;
 
-    public function new(arg0: Int = 0, arg1: Int = 0) {
+    public function new(n: Int, m: Int) {
+        this.reset(n, m);
+        if (m < n) {
+            throw "n should be <= m";
+        }
     }
+
 
     public function reset(arg0: Int, arg1: Int): Void {
     }

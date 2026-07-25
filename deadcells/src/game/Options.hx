@@ -173,20 +173,40 @@ class Options {
     }
 
     public function get_gamepad(): Dynamic {
-        throw "stub: get_gamepad not decompiled";
+        if (this.isEditingCustomBindings) {
+            return this.gamepad_custom;
+        }
+        return this.gamepad_normal;
     }
 
-    public function set_gamepad(arg0: Dynamic): Dynamic {
-        throw "stub: set_gamepad not decompiled";
+
+    public function set_gamepad(v: Dynamic): Dynamic {
+        if (this.isEditingCustomBindings) {
+            this.gamepad_custom = v;
+            return v;
+        }
+        this.gamepad_normal = v;
+        return v;
     }
+
 
     public function get_keyboard(): Dynamic {
-        throw "stub: get_keyboard not decompiled";
+        if (this.isEditingCustomBindings) {
+            return this.keyboard_custom;
+        }
+        return this.keyboard_normal;
     }
 
-    public function set_keyboard(arg0: Dynamic): Dynamic {
-        throw "stub: set_keyboard not decompiled";
+
+    public function set_keyboard(v: Dynamic): Dynamic {
+        if (this.isEditingCustomBindings) {
+            this.keyboard_custom = v;
+            return v;
+        }
+        this.keyboard_normal = v;
+        return v;
     }
+
 
     public function get_foodKindEnum(): FoodKind {
         throw "stub: get_foodKindEnum not decompiled";
@@ -205,7 +225,14 @@ class Options {
     }
 
     public function applyLang(): Void {
+        if (this.lang != null) {
+            Lang.set(this.lang, null);
+        } else {
+            Lang.setDefault();
+        }
+        Main.ME.refreshLoadingText();
     }
+
 
     public function apply(arg0: Ref): Void {
     }
@@ -260,10 +287,19 @@ class Options {
 
 
     public function resetPadMapping(): Void {
+        this.set_gamepad(null);
+        this.setDeadZoneLeftJoystick(Options.defaultLeftStickDeadzone);
+        this.setDeadZoneRightJoystick(Options.defaultRightStickDeadzone);
+        this.setTriggerDeadZone(Options.defaultTriggerDeadzone);
     }
 
+
     public function resetSticksMapping(): Void {
+        this.resetStickMapping(this.lstickFunction, ui.OptionsBase.LSTICK_PAD_KEYS);
+        this.resetStickMapping(this.rstickFunction, ui.OptionsBase.RSTICK_PAD_KEYS);
+        this.resetStickMapping(this.dpadFunction, ui.OptionsBase.DPAD_PAD_KEYS);
     }
+
 
     public function resetStickMapping(arg0: Int, arg1: Array<Int>): Void {
     }

@@ -23,8 +23,12 @@ class Morpher extends en.Mob {
     public override function initGfx(): Void {
     }
 
-    public override function setElite(arg0: Bool): Void {
+    public override function setElite(disableEliteSkill: Bool): Void {
+        super.setElite(disableEliteSkill);
+        var var3: libs.heaps.slib.AnimManager = this.spr.get_anim();
+        var3.setStateAnimSpeed("walk", 2.0);
     }
+
 
     public override function initSkills(): Void {
     }
@@ -39,7 +43,10 @@ class Morpher extends en.Mob {
     }
 
     public override function onDie(): Void {
+        this.setLocksAround(null);
+        super.onDie();
     }
+
 
     public override function fixedUpdate(): Void {
     }

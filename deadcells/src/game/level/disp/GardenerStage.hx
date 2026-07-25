@@ -21,7 +21,11 @@ class GardenerStage extends level.disp.Cliff {
     }
 
     public override function render(): Void {
+        super.render();
+        this.addWater();
+        this.renderFrontRocks();
     }
+
 
     public override function addScroller(arg0: level.DecoZone): Void {
     }

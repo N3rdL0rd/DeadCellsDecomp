@@ -11,5 +11,8 @@ class Observatory extends level.disp.Astrolab {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
+        Assets.disposeAtlas(FxCollector);
     }
+
 }

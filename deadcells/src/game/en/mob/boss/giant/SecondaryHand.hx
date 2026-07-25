@@ -9,9 +9,12 @@ class SecondaryHand extends en.mob.boss.giant.HandBase {
     }
 
 
-    public static function create(arg0: en.mob.boss.Giant, arg1: Bool, arg2: Int, arg3: Int): en.mob.boss.giant.SecondaryHand {
-        throw "stub: create not decompiled";
+    public static function create(giant: en.mob.boss.Giant, right: Bool, damageTier: Int, lifeTier: Int): en.mob.boss.giant.SecondaryHand {
+        var e: en.mob.boss.giant.SecondaryHand = new en.mob.boss.giant.SecondaryHand(giant, right, damageTier, lifeTier);
+        e.init();
+        return e;
     }
+
 
     public override function get_idleX(): Float {
         throw "stub: get_idleX not decompiled";

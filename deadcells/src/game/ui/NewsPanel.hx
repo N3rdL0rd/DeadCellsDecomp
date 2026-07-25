@@ -18,7 +18,9 @@ class NewsPanel extends ui.Process {
     }
 
     public function load(): Void {
+        tool.ServerApi.getNews(this.onData);
     }
+
 
     public function onData(arg0: tool.Result): Void {
     }

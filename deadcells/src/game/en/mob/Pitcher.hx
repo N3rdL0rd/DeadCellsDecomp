@@ -82,7 +82,11 @@ class Pitcher extends en.Mob {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
+        this.updateHardyLaunch(null);
+        this.updateRockLaunch(null);
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

@@ -54,8 +54,9 @@ class GridSelector extends ui.Process {
     }
 
     public function getTitleText(): String {
-        throw "stub: getTitleText not decompiled";
+        return Lang.t.untranslated("Grid Selector");
     }
+
 
     public function isEntryLocked(i: Int): Bool {
         return false;

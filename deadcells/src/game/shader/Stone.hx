@@ -6,9 +6,15 @@ class Stone extends hxsl.Shader {
     public var brightness__: Float;
     public var contrast__: Float;
 
-    public function new(arg0: Float, arg1: Float) {
+    public function new(contrast: Float, brightness: Float) {
+        this.contrast__ = 0.0;
+        this.brightness__ = 0.0;
         super();
+        this.brightness__ = brightness / 10.0;
+        var var3: Float = Math.max(0.0, contrast);
+        this.contrast__ = var3;
     }
+
 
     public override function updateConstants(arg0: hxsl.Globals): Void {
     }

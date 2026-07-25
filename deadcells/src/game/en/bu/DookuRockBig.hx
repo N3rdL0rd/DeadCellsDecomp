@@ -12,8 +12,11 @@ class DookuRockBig extends en.bu.DookuRock {
     public override function initGfx(): Void {
     }
 
-    public override function onTouchDookuBreakableFloor(arg0: en.inter.DookuBreakableFloor): Void {
+    public override function onTouchDookuBreakableFloor(pf: en.inter.DookuBreakableFloor): Void {
+        super.onTouchDookuBreakableFloor(pf);
+        pf.killPf(null, null, null);
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

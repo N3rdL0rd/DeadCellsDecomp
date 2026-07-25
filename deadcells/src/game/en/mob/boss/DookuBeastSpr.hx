@@ -69,7 +69,13 @@ class DookuBeastSpr {
     }
 
     public function unserializeInit(): Void {
+        this.baseColor = 2529687;
+        this.targetInnerColor = 2529687;
+        this.targetOuterColor = 2529687;
+        this.colorLerpSpeed = 3.0;
+        this.glowPower = 1.0;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

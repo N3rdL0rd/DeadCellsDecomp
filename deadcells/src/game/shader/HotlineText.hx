@@ -6,8 +6,10 @@ class HotlineText extends hxsl.Shader {
     public var depth__: Float;
 
     public function new() {
+        this.depth__ = 0.0;
         super();
     }
+
 
     public override function updateConstants(arg0: hxsl.Globals): Void {
     }

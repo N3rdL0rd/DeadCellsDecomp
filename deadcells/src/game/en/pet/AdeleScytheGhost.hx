@@ -81,8 +81,13 @@ class AdeleScytheGhost extends en.Mob {
         throw "stub: getTeleportSpot not decompiled";
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
+        if (k == "lifeSpan") {
+            this.explode();
+        }
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

@@ -9,8 +9,9 @@ class Grid {
     }
 
     public function get_length(): Int {
-        throw "stub: get_length not decompiled";
+        return this.rightPos + 1 - this.leftPos;
     }
+
 }
 
 class PurpleGarden extends level.BiomeDisp {
@@ -31,7 +32,10 @@ class PurpleGarden extends level.BiomeDisp {
     }
 
     public override function renderBackWalls(): Void {
+        super.renderBackWalls();
+        this.renderBgGrids();
     }
+
 
     public function renderBgGrids(): Void {
     }
@@ -54,9 +58,10 @@ class PurpleGarden extends level.BiomeDisp {
     public function addSmallWindows(arg0: level.DecoZone, arg1: Array<Dynamic>): Void {
     }
 
-    public function fillHorizontalCenteredZone(arg0: level.DecoZone, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Array<Dynamic>, arg8: Int, arg9: Int, arg10: Int, arg11: libs.heaps.StaticGeometryGroup, arg12: Dynamic): Int {
-        throw "stub: fillHorizontalCenteredZone not decompiled";
+    public function fillHorizontalCenteredZone(z: level.DecoZone, marginX: Int, paddingX: Int, curY: Int, pivotX: Float, pivotY: Float, placeChance: Float, tileNames: Array<Dynamic>, setFlags: Int, abortFlags: Int, requiredFlags: Int, group: libs.heaps.StaticGeometryGroup, onAdd: Dynamic): Int {
+        return this.fillHorizontalCentered(z.xmax - z.xmin, marginX, paddingX, z.xmin, curY, pivotX, pivotY, placeChance, tileNames, setFlags, abortFlags, requiredFlags, group, onAdd);
     }
+
 
     public function fillHorizontalCentered(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Float, arg6: Float, arg7: Float, arg8: Array<Dynamic>, arg9: Int, arg10: Int, arg11: Int, arg12: libs.heaps.StaticGeometryGroup, arg13: Dynamic): Int {
         throw "stub: fillHorizontalCentered not decompiled";

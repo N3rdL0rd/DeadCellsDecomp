@@ -13,9 +13,38 @@ class AssistModeData {
     public var autoBreakDoors: Bool;
     public var slowerMobs: Bool;
 
-    public function new(arg0: Dynamic = null) {
+    public function new(data: Dynamic) {
+        this.slowerMobs = false;
+        this.autoBreakDoors = false;
+        this.modeAuto = false;
+        this.lockMimicSpawn = false;
+        this.enemyDamage = 1.0;
+        this.enemyHealth = 1.0;
+        this.trapDamage = 1.0;
+        this.revealMap = false;
+        this.easyTrap = false;
+        this.easyParry = false;
+        this.gameContinue = 0;
+        this.continueEnabled = false;
+        this.enabled = false;
+        if (data != null) {
+            this.clone(data);
+        }
     }
 
-    public function clone(arg0: Dynamic): Void {
+
+    public function clone(data: Dynamic): Void {
+        this.enabled = data.enabled;
+        this.continueEnabled = data.continueEnabled;
+        this.gameContinue = data.gameContinue;
+        this.easyParry = data.easyParry;
+        this.easyTrap = data.easyTrap;
+        this.revealMap = data.revealMap;
+        this.trapDamage = data.trapDamage;
+        this.enemyHealth = data.enemyHealth;
+        this.enemyDamage = data.enemyDamage;
+        this.modeAuto = data.modeAuto;
+        this.autoBreakDoors = data.autoBreakDoors;
     }
+
 }

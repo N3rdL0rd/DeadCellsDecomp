@@ -9,9 +9,12 @@ class BatDasherPurple extends en.mob.BatDasher {
     }
 
 
-    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.BatDasherPurple {
-        throw "stub: create not decompiled";
+    public static function create(lvl: pr.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): en.mob.BatDasherPurple {
+        var e: en.mob.BatDasherPurple = new en.mob.BatDasherPurple(lvl, x, y, dmgTier, lifeTier);
+        e.init();
+        return e;
     }
+
 
     public override function getAnimName(): String {
         return "brigittePurple";

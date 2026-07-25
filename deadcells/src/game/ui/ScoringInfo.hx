@@ -27,7 +27,12 @@ class ScoringInfo extends ui.Process {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
+        if (ui.ScoringInfo.ME == this) {
+            ui.ScoringInfo.ME = null;
+        }
     }
+
 
     public function checkCombo(): Void {
     }

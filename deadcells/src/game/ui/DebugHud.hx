@@ -60,7 +60,12 @@ class DebugHud extends libs.Process {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
+        if (ui.DebugHud.ME == this) {
+            ui.DebugHud.ME = null;
+        }
     }
+
 
     public override function postUpdate(): Void {
     }

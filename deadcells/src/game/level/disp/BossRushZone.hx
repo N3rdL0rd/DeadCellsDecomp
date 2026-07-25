@@ -26,11 +26,16 @@ class BossRushZone extends level.BiomeDisp {
     public function addSmallArch(arg0: level.DecoZone): Void {
     }
 
-    public function addWallLight(arg0: level.Room, arg1: Float, arg2: Float): Void {
+    public function addWallLight(r: level.Room, px: Float, py: Float): Void {
+        super.addTorch(px, py, null, null);
     }
 
+
     public override function renderFloorStamps(): Void {
+        super.addCeilingStamps("stampCeiling", null, null);
+        super.addFloorStamps("floorStamp", null, null);
     }
+
 
     public override function updateBiomeFx(): Void {
     }

@@ -16,7 +16,12 @@ class Active extends Entity {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        this.initSprite(Assets.gameElements, "todoRed", null, null, null, null, null, null);
+        super.set_easeSpritePos(true);
+        super.enableBar(16763904, false);
     }
+
 
     public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
     }

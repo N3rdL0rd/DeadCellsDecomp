@@ -30,8 +30,17 @@ class Wings extends Power {
     public function onOwnerJump(arg0: Bool): Void {
     }
 
-    public function onOwnerStartClimbing(arg0: Bool): Void {
+    public function onOwnerStartClimbing(onLadder: Bool): Void {
+        if (!this.destroyed) {
+            this.destroyed = true;
+            if (!this.owner.destroyed) {
+                if (this.owner._level != null) {
+                    this.onEnd();
+                }
+            }
+        }
     }
+
 
     public function onOwnerTouchGround(): Void {
         this.owner.removeAllAffects(61);

@@ -18,7 +18,11 @@ class Behemoth extends en.mob.Boss {
     }
 
     public override function initBossBar(): Void {
+        if (!ui.HUD.ME.hasBossBar()) {
+            super.initBossBar();
+        }
     }
+
 
     public override function init(): Void {
     }

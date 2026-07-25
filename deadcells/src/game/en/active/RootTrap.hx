@@ -18,7 +18,16 @@ class RootTrap extends en.Active {
     }
 
     public override function initStats(): Void {
+        super.initStats();
+        super.clearActiveCells();
+        super.addActiveCell(-1, 0);
+        super.addActiveCell(-1, -1);
+        super.addActiveCell(0, 0);
+        super.addActiveCell(0, -1);
+        super.addActiveCell(1, 0);
+        super.addActiveCell(1, -1);
     }
+
 
     public function remove(): Void {
     }

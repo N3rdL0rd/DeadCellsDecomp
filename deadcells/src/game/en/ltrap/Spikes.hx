@@ -20,8 +20,9 @@ class Spikes extends en.LevelTrap {
     }
 
     public function get_bloodySprite(): String {
-        throw "stub: get_bloodySprite not decompiled";
+        return this.get_normalSprite() + "Blood";
     }
+
 
     public override function init(): Void {
     }

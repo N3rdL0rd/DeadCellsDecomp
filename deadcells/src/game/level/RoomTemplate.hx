@@ -48,9 +48,29 @@ class RoomTemplate {
     public function new(arg0: Dynamic = null, arg1: Dynamic = null, arg2: Dynamic = null) {
     }
 
-    public static function getCellType(arg0: Int): level.ColType {
-        throw "stub: getCellType not decompiled";
+    public static function getCellType(v: Int): level.ColType {
+        switch (v) {
+            case 0:
+                return Empty;
+            case 1:
+                return Plain;
+            case 2:
+                return OneWay;
+            case 3:
+                return Ladder;
+            case 4:
+                return Invisible;
+            case 5:
+                return RollZone;
+            case 6:
+                return SlopeRight;
+            case 7:
+                return SlopeLeft;
+            default:
+                throw "Invalid cell type: #" + v;
+        }
     }
+
 
     public static function getTemplate(arg0: Dynamic, arg1: Dynamic, arg2: Dynamic): level.RoomTemplate {
         throw "stub: getTemplate not decompiled";

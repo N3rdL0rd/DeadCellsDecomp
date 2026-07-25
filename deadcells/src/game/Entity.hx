@@ -138,24 +138,29 @@ class Entity {
     }
 
     public function get_tmod(): Float {
-        throw "stub: get_tmod not decompiled";
+        return pr.Game.ME.tmod;
     }
+
 
     public function get_headX(): Float {
-        throw "stub: get_headX not decompiled";
+        return (this.cx + this.xr) * 24.0;
     }
+
 
     public function get_headY(): Float {
-        throw "stub: get_headY not decompiled";
+        return (this.cy + this.yr) * 24.0 - this.hei;
     }
+
 
     public function get_targetSprPosX(): Float {
-        throw "stub: get_targetSprPosX not decompiled";
+        return (this.cx + this.xr) * 24.0;
     }
 
+
     public function get_targetSprPosY(): Float {
-        throw "stub: get_targetSprPosY not decompiled";
+        return (this.cy + this.yr) * 24.0;
     }
+
 
     public function get_globalSprX(): Float {
         throw "stub: get_globalSprX not decompiled";
@@ -166,20 +171,23 @@ class Entity {
     }
 
     public function get_shootX(): Float {
-        throw "stub: get_shootX not decompiled";
+        return (this.cx + this.xr) * 24.0 + this.dir * 10;
     }
+
 
     public function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
     }
 
     public function get_interactX(): Float {
-        throw "stub: get_interactX not decompiled";
+        return (this.cx + this.xr) * 24.0;
     }
 
+
     public function get_interactY(): Float {
-        throw "stub: get_interactY not decompiled";
+        return (this.cy + this.yr) * 24.0 - this.hei * 0.5;
     }
+
 
     public function get_globalUiX(): Float {
         throw "stub: get_globalUiX not decompiled";
@@ -189,13 +197,40 @@ class Entity {
         throw "stub: get_globalUiY not decompiled";
     }
 
-    public function set_team(arg0: tool.Team): tool.Team {
-        throw "stub: set_team not decompiled";
+    public function set_team(t: tool.Team): tool.Team {
+        if (t != this._team) {
+            if (this._targetable) {
+                if (!this.isInQuadTree()) {
+                    if (this._team != null) {
+                        this._team.removeMember(this);
+                    }
+                    if (t != null) {
+                        t.addMember(this);
+                    }
+                }
+            }
+        }
+        this._team = t;
+        return t;
     }
 
-    public function set_targetable(arg0: Bool): Bool {
-        throw "stub: set_targetable not decompiled";
+
+    public function set_targetable(b: Bool): Bool {
+        if (b != this._targetable) {
+            if (this._team != null) {
+                if (!this.isInQuadTree()) {
+                    if (b) {
+                        this._team.addMember(this);
+                    } else {
+                        this._team.removeMember(this);
+                    }
+                }
+            }
+        }
+        this._targetable = b;
+        return b;
     }
+
 
     public function isOpponent(arg0: Entity): Bool {
         throw "stub: isOpponent not decompiled";
@@ -239,8 +274,15 @@ class Entity {
     }
 
     public function canUpdate(): Bool {
-        throw "stub: canUpdate not decompiled";
+        if (!this.isAlwaysUpdated) {
+            if (!this.isOutOfGame) {
+                return !this.isFreeze;
+            }
+            return false;
+        }
+        return true;
     }
+
 
     public function removeAllLights(arg0: Bool): Void {
     }
@@ -249,9 +291,10 @@ class Entity {
         throw "stub: createLight not decompiled";
     }
 
-    public function createConfLight(arg0: String): tool.EntityLight {
-        throw "stub: createConfLight not decompiled";
+    public function createConfLight(conf: String): tool.EntityLight {
+        return new tool.EntityLight(this._level, this, conf, null);
     }
+
 
     public function registerLight(arg0: tool.EntityLight): Void {
     }
@@ -259,8 +302,12 @@ class Entity {
     public function unregisterLight(arg0: tool.EntityLight): Void {
     }
 
-    public function setSpriteParent(arg0: h2d.Object): Void {
+    public function setSpriteParent(parent: h2d.Object): Void {
+        if (this.spr != null) {
+            parent.addChild(this.spr);
+        }
     }
+
 
     public function shouldSave(): Bool {
         return true;
@@ -279,7 +326,12 @@ class Entity {
     }
 
     public function onReload(): Void {
+        if (this.cd != null) {
+            this.cd.init(this.onCooldownEnd);
+        }
+        this.init();
     }
+
 
     public function postDeserialize(): Void {
     }
@@ -301,18 +353,57 @@ class Entity {
     public function initClonesGfx(): Void {
     }
 
-    public function setColorMap(arg0: String, arg1: String, arg2: libs.heaps.slib.HSprite): Void {
+    public function setColorMap(model: String, skin: String, sspr: libs.heaps.slib.HSprite): Void {
+        var var11: shader.ColorMap;
+        if (sspr == null) {
+            sspr = this.spr;
+        }
+        var map: h3d.mat.Texture = Assets.getColorMap(model, skin);
+        if (map != null) {
+            var colorMapShader: shader.ColorMap = sspr.getShader(shader.ColorMap);
+            if (colorMapShader == null) {
+                var11 = new shader.ColorMap(null);
+                colorMapShader = var11;
+                sspr.addShader(var11);
+            }
+            colorMapShader.map__ = map;
+        }
     }
+
 
     public function minimapTracking(): Void {
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public function onCooldownEnd(k: String, subIndex: Int): Void {
+        if (k == Entity.str_fatalFallDmg) {
+            this.onFatalFallDamage();
+        } else {
+            if (k == "stopIntengible") {
+                this.setIntengible(false, null);
+            } else {
+                if (k == "circCollIgnore") {
+                    this.hasRepelling = true;
+                }
+            }
+        }
     }
 
-    public function set_level(arg0: pr.Level): pr.Level {
-        throw "stub: set_level not decompiled";
+
+    public function set_level(lvl: pr.Level): pr.Level {
+        if (lvl == this._level) {
+            return this._level;
+        }
+        if (this._level != null) {
+            this._level.unregisterEntity(this);
+            this._level = null;
+        }
+        if (lvl != null) {
+            lvl.registerEntity(this);
+        }
+        this._level = lvl;
+        return lvl;
     }
+
 
     public function inSanctuaryRoom(arg0: en.Mob): Bool {
         throw "stub: inSanctuaryRoom not decompiled";
@@ -330,11 +421,23 @@ class Entity {
     public function setGlowColor(arg0: Int, arg1: Dynamic, arg2: Dynamic, arg3: libs.heaps.slib.HSprite): Void {
     }
 
-    public function setGlowData(arg0: Int, arg1: Dynamic, arg2: libs.heaps.slib.HSprite): Void {
+    public function setGlowData(index: Int, glowData: Dynamic, sprite: libs.heaps.slib.HSprite): Void {
+        if (sprite == null) {
+            sprite = this.spr;
+        }
+        var glowShader: shader.GlowKey = tool.DrawableExtender.getOrCreateShader_shader_GlowKey(sprite, shader.GlowKey);
+        glowShader.setGlowData(index, glowData);
     }
 
-    public function setGlowDatas(arg0: Array<Dynamic>, arg1: libs.heaps.slib.HSprite): Void {
+
+    public function setGlowDatas(colorsData: Array<Dynamic>, sprite: libs.heaps.slib.HSprite): Void {
+        if (sprite == null) {
+            sprite = this.spr;
+        }
+        var glowShader: shader.GlowKey = tool.DrawableExtender.getOrCreateShader_shader_GlowKey(sprite, shader.GlowKey);
+        glowShader.setGlowDatas(colorsData);
     }
+
 
     public function setNormal(arg0: libs.heaps.slib.HSprite, arg1: h3d.mat.Texture, arg2: Dynamic, arg3: String): Void {
     }
@@ -409,7 +512,12 @@ class Entity {
     }
 
     public function closeSay(): Void {
+        if (this.lastSay != null) {
+            this.lastSay.destroyed = true;
+            this.lastSay = null;
+        }
     }
+
 
     public function initSpeechDeck(): Void {
     }
@@ -441,8 +549,9 @@ class Entity {
     }
 
     public function getLifeRatio(): Float {
-        throw "stub: getLifeRatio not decompiled";
+        return this.life / this.maxLife;
     }
+
 
     public function heal(arg0: Int): Void {
     }
@@ -485,7 +594,13 @@ class Entity {
     }
 
     public function disableBar(): Void {
+        if (this.lifeBar == null) {
+            return;
+        }
+        this.lifeBar.destroy();
+        this.lifeBar = null;
     }
+
 
     public function enableBar(arg0: Int, arg1: Bool): Void {
     }
@@ -496,11 +611,21 @@ class Entity {
 
 
     public function isAlive(): Bool {
-        throw "stub: isAlive not decompiled";
+        if (this.life > 0) {
+            return !this.destroyed;
+        }
+        return false;
     }
 
+
     public function kill(): Void {
+        if (this.life > 0) {
+            this.onDie();
+            this.lastAtkData = null;
+            this.life = 0;
+        }
     }
+
 
     public function onDropAsLoot(): Void {
     }
@@ -541,7 +666,11 @@ class Entity {
     }
 
     public function onDie(): Void {
+        this.onDieDone = true;
+        this.baseWeight = 0.0;
+        this.destroy();
     }
+
 
     public function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
     }
@@ -611,9 +740,10 @@ class Entity {
         throw "stub: getShortestAffect not decompiled";
     }
 
-    public function getHighestAffectDurationS(arg0: Int): Float {
-        throw "stub: getHighestAffectDurationS not decompiled";
+    public function getHighestAffectDurationS(x: Int): Float {
+        return this.getHighestAffectDurationF(x) / 60.0;
     }
+
 
     public function addTimeToAffect(arg0: Dynamic, arg1: Float): Void {
     }
@@ -649,7 +779,13 @@ class Entity {
     }
 
     public function cleanDOT(): Void {
+        this.removeAllAffects(88);
+        this.removeAllAffects(89);
+        this.removeAllAffects(130);
+        this.removeAllAffects(90);
+        this.removeAllAffects(91);
     }
+
 
     public function getAffectResist(arg0: Dynamic): Float {
         throw "stub: getAffectResist not decompiled";
@@ -740,7 +876,10 @@ class Entity {
     }
 
     public function onTouchCeil(): Void {
+        this.bdy = 0.0;
+        this.dy = this.dy * 0.8;
     }
+
 
     public function canBeActivated(by: en.Hero): Bool {
         return false;
@@ -773,7 +912,12 @@ class Entity {
     }
 
     public function removeLightTip(): Void {
+        if (this.lightTip == null) {
+            return;
+        }
+        this.lightTip.hide();
     }
+
 
     public function onFocus(): Void {
     }
@@ -785,7 +929,10 @@ class Entity {
     }
 
     public function onBlur(): Void {
+        this.removeLightTip();
+        this.removeLargeTip(null);
     }
+
 
     public function createLargeTip(arg0: Dynamic): ui.Tooltip {
         throw "stub: createLargeTip not decompiled";
@@ -845,7 +992,10 @@ class Entity {
 
 
     public function updateLastSprPos(): Void {
+        this.lastSprX = this.get_targetSprPosX();
+        this.lastSprY = this.get_targetSprPosY();
     }
+
 
     public function slopeCollisionHandling(arg0: Int, arg1: Float): Void {
     }
@@ -863,8 +1013,15 @@ class Entity {
     }
 
     public function canApplyRepelling(): Bool {
-        throw "stub: canApplyRepelling not decompiled";
+        var var1: Float = this.get_weight();
+        if (var1 > 0.0) {
+            if (this.hasRepelling) {
+                return !this.useRectHitbox;
+            }
+        }
+        return false;
     }
+
 
     public function canHaveRepellingWith(entity: Entity): Bool {
         return true;

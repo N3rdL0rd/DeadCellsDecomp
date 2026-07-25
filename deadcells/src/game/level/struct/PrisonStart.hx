@@ -4,9 +4,12 @@ class PrisonStart extends level.LevelStruct {
     public var ldTool: Bool;
     public var friendLoreRoomGenerated: Bool;
 
-    public function new(arg0: User = null, arg1: Dynamic = null, arg2: libs.Rand = null) {
-        super();
+    public function new(user: User, level: Dynamic, rng: libs.Rand) {
+        this.friendLoreRoomGenerated = false;
+        this.ldTool = false;
+        super(user, level, rng);
     }
+
 
     public override function buildMainRooms(): level.RoomNode {
         throw "stub: buildMainRooms not decompiled";
@@ -40,7 +43,11 @@ class PrisonStart extends level.LevelStruct {
     }
 
     public override function buildLoreRooms(): Void {
+        if (this.user.userStats.runs > 1) {
+            super.buildLoreRooms();
+        }
     }
+
 
     public override function buildEssentialLoreRooms(): Void {
     }

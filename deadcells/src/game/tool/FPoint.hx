@@ -10,18 +10,28 @@ class FPoint {
     }
 
     public function normalize(): Void {
+        var magnitude: Float = this.magnitude();
+        if (magnitude > 0.0) {
+            this.x = this.x / magnitude;
+            this.y = this.y / magnitude;
+        }
     }
+
 
     public function magnitude(): Float {
         throw "stub: magnitude not decompiled";
     }
 
-    public function scale(arg0: Float): Void {
+    public function scale(value: Float): Void {
+        this.x = this.x * value;
+        this.y = this.y * value;
     }
 
-    public function dot(arg0: tool.FPoint): Float {
-        throw "stub: dot not decompiled";
+
+    public function dot(other: tool.FPoint): Float {
+        return this.x * other.x + this.y * other.y;
     }
+
 
     public function getCLID(): Int {
         throw "stub: getCLID not decompiled";

@@ -54,7 +54,10 @@ class Hand extends en.mob.boss.giant.HandBase {
     }
 
     public function onHandLand(): Void {
+        this.delayer.addS("resetAction", this.resetAction, 4.0);
+        this.setCollisions(true);
     }
+
 
     public override function updateGrounded(): Void {
     }

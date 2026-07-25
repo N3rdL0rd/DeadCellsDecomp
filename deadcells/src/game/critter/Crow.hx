@@ -28,7 +28,12 @@ class Crow extends Critter {
     }
 
     public override function onLeaveScreen(): Void {
+        super.onLeaveScreen();
+        if (this.fleeing) {
+            super.reset();
+        }
     }
+
 
     public override function fixedUpdate(): Void {
     }

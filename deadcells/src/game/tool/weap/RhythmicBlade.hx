@@ -46,7 +46,10 @@ class RhythmicBlade extends tool.Weapon {
     }
 
     public override function cancelChain(): Void {
+        super.cancelChain();
+        this.prevSkillInf = null;
     }
+
 
     public override function postUpdate(): Void {
     }

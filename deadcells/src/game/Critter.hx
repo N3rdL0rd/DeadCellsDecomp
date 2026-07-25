@@ -40,7 +40,9 @@ class Critter {
     }
 
     public function preUpdate(): Void {
+        this.cd.update(pr.Game.ME.tmod);
     }
+
 
     public function postUpdate(): Void {
     }
@@ -49,7 +51,13 @@ class Critter {
     }
 
     public function reset(): Void {
+        this.deactivate();
+        this.setLabel(null, null);
+        this.reactivateCurF = 0.0;
+        this.cx = this.origin.cx;
+        this.cy = this.origin.cy;
     }
+
 
     public function inactiveFixedUpdate(): Void {
     }

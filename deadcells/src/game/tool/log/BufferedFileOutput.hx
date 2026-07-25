@@ -13,8 +13,10 @@ class BufferedFileOutput {
     public function initLogFile(): Void {
     }
 
-    public function receiveLog(arg0: Dynamic): Void {
+    public function receiveLog(logEntry: Dynamic): Void {
+        this.buffer.push(logEntry);
     }
+
 
     public function saveLogs(): Void {
     }

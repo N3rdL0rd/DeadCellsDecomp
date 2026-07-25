@@ -45,16 +45,25 @@ class User {
     }
 
     public function pickDeathMoney(): Int {
-        throw "stub: pickDeathMoney not decompiled";
+        var v: Int = this.deathMoney;
+        this.deathMoney = 0;
+        return v;
     }
+
 
     public function pickDeathCells(): Int {
-        throw "stub: pickDeathCells not decompiled";
+        var v: Int = this.deathCells;
+        this.deathCells = 0;
+        return v;
     }
 
+
     public function pickDeathItem(): String {
-        throw "stub: pickDeathItem not decompiled";
+        var v: String = this.deathItem;
+        this.deathItem = null;
+        return v;
     }
+
 
     public function getDailyRewards(): Array<Dynamic> {
         throw "stub: getDailyRewards not decompiled";
@@ -69,14 +78,20 @@ class User {
     }
 
     public function canPlayCustomGame(): Bool {
-        throw "stub: canPlayCustomGame not decompiled";
+        return this.itemMeta.hasPermanentItem("CustomKey");
     }
+
 
     public function br_enableOne(): Void {
     }
 
     public function br_disableOne(): Void {
+        this.bossRuneActivated--;
+        if (this.bossRuneActivated < 0) {
+            this.bossRuneActivated = 0;
+        }
     }
+
 
     public function br_setActivated(arg0: Int): Void {
     }
@@ -201,8 +216,17 @@ class User {
     public function activateMainGame(): Void {
     }
 
-    public function global_incNpcProgress(arg0: NpcId): Void {
+    public function global_incNpcProgress(npcId: NpcId): Void {
+        this.story.incNpcProgress(npcId);
+        if (this.game != this.mainGame) {
+            if (this.mainGameData != null) {
+                if (this.mainGameData.sUser != null) {
+                    this.mainGameData.sUser.story.incNpcProgress(npcId);
+                }
+            }
+        }
     }
+
 
     public function getCLID(): Int {
         throw "stub: getCLID not decompiled";

@@ -19,8 +19,13 @@ class DookuExplosiveFireBall extends en.Bullet {
     public override function initGfx(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        super.onCooldownEnd(k, subIndex);
+        if (k == "explode") {
+            this.explode();
+        }
     }
+
 
     public function explode(): Void {
     }

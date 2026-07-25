@@ -102,8 +102,9 @@ class HauntedArmorAxe extends Entity {
     }
 
     public override function get_targetSprPosY(): Float {
-        throw "stub: get_targetSprPosY not decompiled";
+        return (this.cy + this.yr) * 24.0 - this.hei * 0.5;
     }
+
 
     public override function shouldSave(): Bool {
         return false;

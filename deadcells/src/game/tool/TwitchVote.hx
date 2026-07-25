@@ -42,9 +42,13 @@ class TwitchVote {
         throw "stub: get_pixelScale not decompiled";
     }
 
-    public function set_oneVotePerUser(arg0: Bool): Bool {
-        throw "stub: set_oneVotePerUser not decompiled";
+    public function set_oneVotePerUser(v: Bool): Bool {
+        this.oneVotePerUser = v;
+        if (this.window != null) {
+        }
+        return v;
     }
+
 
     public function set_keepDisplayNames(arg0: Bool): Bool {
         throw "stub: set_keepDisplayNames not decompiled";
@@ -78,8 +82,11 @@ class TwitchVote {
     public function disposeGfx(): Void {
     }
 
-    public function setDesc(arg0: String): Void {
+    public function setDesc(str: String): Void {
+        this.desc = str;
+        this.onResize();
     }
+
 
     public function renderDesc(): Void {
     }
@@ -98,8 +105,10 @@ class TwitchVote {
         throw "stub: acceptsVote not decompiled";
     }
 
-    public function markUser(arg0: String): Void {
+    public function markUser(u: String): Void {
+        this.userVotes.set(u, true);
     }
+
 
     public function isValidVote(arg0: tool.TwitchMessage): Bool {
         throw "stub: isValidVote not decompiled";
@@ -139,16 +148,24 @@ class TwitchVote {
     }
 
     public function expire(): Void {
+        this.onExpire();
+        this.close();
     }
+
 
     public function onExpire(): Void {
     }
 
     public function onReload(): Void {
+        this.cd.init(null);
+        this.initGfx();
     }
 
+
     public function destroy(): Void {
+        this.destroyed = true;
     }
+
 
     public function close(): Void {
     }
@@ -174,7 +191,12 @@ class TwitchVote {
     }
 
     public function suspendedUpdate(): Void {
+        if (!this.wasSuspended) {
+            this.onSuspend();
+        }
+        this.wasSuspended = true;
     }
+
 
     public function update(): Void {
     }
@@ -191,7 +213,16 @@ class TwitchVote {
     }
 
     public function unserializeInit(): Void {
+        this.destroyed = false;
+        this.keepOnNextLevel = false;
+        this.longVoteLabels = false;
+        this.onlyChoiceCmd = false;
+        this.showPct = false;
+        this.blinkOnVote = true;
+        this.locksTwitchDoor = true;
+        this.lastDebug = false;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

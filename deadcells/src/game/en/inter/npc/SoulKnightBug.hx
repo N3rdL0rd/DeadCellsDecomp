@@ -4,9 +4,11 @@ class SoulKnightBug extends en.inter.Npc {
     public static var __clid: Int;
     public static var __eclids: Array<Int>;
 
-    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
-        super();
+    public function new(lvl: pr.Level, r: level.Room) {
+        super(lvl, SoulKnightBug);
+        super.autoPlace(r, null, null);
     }
+
 
     public override function initGfx(): Void {
     }

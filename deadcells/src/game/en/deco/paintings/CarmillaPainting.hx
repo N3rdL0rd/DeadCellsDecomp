@@ -20,10 +20,17 @@ class CarmillaEye {
     }
 
     public function updateLastSprPos(): Void {
+        this.lastSprPosX = this.targetSprPosX;
+        this.lastSprPosY = this.targetSprPosY;
     }
 
-    public function setPos(arg0: Float, arg1: Float, arg2: Float): Void {
+
+    public function setPos(refX: Float, posX: Float, posY: Float): Void {
+        this.refX = refX;
+        this.posX = posX;
+        this.posY = posY;
     }
+
 }
 
 class CarmillaPainting extends en.deco.paintings.LoopPainting {

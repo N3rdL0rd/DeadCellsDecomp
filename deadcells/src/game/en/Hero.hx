@@ -598,8 +598,9 @@ class Hero extends Entity {
     }
 
     public function moveControlled(): Bool {
-        throw "stub: moveControlled not decompiled";
+        return this.cd.fastCheck.exists(1231028224);
     }
+
 
     public override function kill(): Void {
     }
@@ -899,7 +900,9 @@ class Hero extends Entity {
     }
 
     public function hudInitItems(): Void {
+        ui.HUD.ME.initItems(this);
     }
+
 
     public function hudSetMoney(arg0: Int): Void {
     }
@@ -916,8 +919,10 @@ class Hero extends Entity {
     public function hudSetTactic(arg0: Int, arg1: Ref): Void {
     }
 
-    public function hudOnItemPick(arg0: tool.InventItem, arg1: Float, arg2: Float): Void {
+    public function hudOnItemPick(item: tool.InventItem, x: Float, y: Float): Void {
+        ui.HUD.ME.onItemPick(item, x, y);
     }
+
 
     public function hudUpdateKeyStock(): Void {
     }

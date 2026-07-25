@@ -10,9 +10,16 @@ class FlowBox extends h2d.Flow {
     public var padLeft: Dynamic;
     public var padRight: Dynamic;
 
-    public function new(arg0: h2d.Object = null) {
-        super();
+    public function new(p: h2d.Object) {
+        this.padRight = null;
+        this.padLeft = null;
+        this.padBot = null;
+        this.padTop = null;
+        this.padV = 0.0;
+        this.padH = 0.0;
+        super(p);
     }
+
 
     public static function createBoxBlueAssist(arg0: h2d.Object, arg1: Int, arg2: Int, arg3: Int): ui.FlowBox {
         throw "stub: createBoxBlueAssist not decompiled";

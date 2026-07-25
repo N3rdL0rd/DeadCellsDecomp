@@ -17,8 +17,13 @@ class HomingSoul extends en.Bullet {
     public override function fixedUpdate(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
+        if (k == "life") {
+            this.vanish();
+        }
     }
+
 
     public override function vanish(): Void {
     }

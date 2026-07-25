@@ -6,7 +6,9 @@ class DirLighted extends hxsl.Shader {
 
     public function new() {
         super();
+        this.priority = 25;
     }
+
 
     public override function updateConstants(arg0: hxsl.Globals): Void {
     }

@@ -116,8 +116,20 @@ class AmazonBase extends en.Mob {
     public function endBossFight(arg0: Float): Void {
     }
 
-    public function tpResistance(arg0: Bool): Void {
+    public function tpResistance(state: Bool): Void {
+        this.removeAllAffects(8);
+        this.removeAllAffects(23);
+        this.removeAllAffects(15);
+        this.removeAllAffects(10);
+        this.removeAllAffects(133);
+        this.setDotsResistance(state);
+        if (state) {
+            this.setAffectS(80, 1.5, null, null);
+        } else {
+            this.removeAllAffects(80);
+        }
     }
+
 
     public function setDotsResistance(arg0: Bool): Void {
     }

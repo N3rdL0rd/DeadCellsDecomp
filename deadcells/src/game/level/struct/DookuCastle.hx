@@ -55,7 +55,9 @@ class DookuCastle extends level.LevelStruct {
     }
 
     public override function finalize(): Void {
+        this.user.story.counters.set("unlockKeyDoors-petrifiedDoor", 1);
     }
+
 
     public override function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
     }

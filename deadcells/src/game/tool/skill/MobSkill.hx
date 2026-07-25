@@ -57,7 +57,13 @@ class MobSkill extends tool.skill.Skill {
     }
 
     public override function executeAreas(): Void {
+        super.executeAreas();
+        var var2: Bool = ui.Console.ME.flags.exists("area");
+        if (var2) {
+            this.debugAreas();
+        }
     }
+
 
     public function announce(): Void {
     }

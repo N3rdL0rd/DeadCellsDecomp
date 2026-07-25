@@ -11,7 +11,10 @@ class Tutorial {
     }
 
     public function reset(): Void {
+        this.dones = new haxe.ds.StringMap();
+        this.init();
     }
+
 
     public function onReload(): Void {
         this.init();
@@ -24,7 +27,10 @@ class Tutorial {
 
 
     public function init(): Void {
+        this.lastT = 0.0;
+        this.current = null;
     }
+
 
     public function cancel(arg0: String): Void {
     }
@@ -49,7 +55,9 @@ class Tutorial {
     }
 
     public function unserializeInit(): Void {
+        this.lastT = 0.0;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

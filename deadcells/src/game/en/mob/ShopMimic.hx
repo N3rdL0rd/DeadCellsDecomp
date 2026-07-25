@@ -72,8 +72,12 @@ class ShopMimic extends en.Mob {
     public function initAffectResists(): Void {
     }
 
-    public function setAllAffectResist(arg0: Float): Void {
+    public function setAllAffectResist(v: Float): Void {
+        for (i in 0...Entity.maxAffects) {
+            this.affectResists[i] = v;
+        }
     }
+
 
     public override function initMove(): Void {
     }
@@ -116,12 +120,14 @@ class ShopMimic extends en.Mob {
     }
 
     public override function shootXHook(): Float {
-        throw "stub: shootXHook not decompiled";
+        return (this.cx + this.xr) * 24.0 + this.dir * 20;
     }
 
+
     public override function shootYHook(): Float {
-        throw "stub: shootYHook not decompiled";
+        return (this.cy + this.yr) * 24.0 - 25.0;
     }
+
 
     public override function onDie(): Void {
     }

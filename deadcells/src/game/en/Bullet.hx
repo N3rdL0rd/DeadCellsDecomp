@@ -63,7 +63,11 @@ class Bullet extends Entity {
 
 
     public override function initGfx(): Void {
+        super.initGfx();
+        super.set_easeSpritePos(true);
+        this.initBulletSprite();
     }
+
 
     public function initBulletSprite(): Void {
     }
@@ -127,7 +131,13 @@ class Bullet extends Entity {
     }
 
     public function onHitWall(): Void {
+        if (this.hasAmmoToRetrieve()) {
+            var e: en.loot.Ammo = this.createAmmoDrop();
+            e.stickInWall(this);
+        }
+        this.block(false);
     }
+
 
     public function attachFakeBulletStuck(): Void {
     }
@@ -175,8 +185,12 @@ class Bullet extends Entity {
     }
 
     public override function _isOnScreen(): Bool {
-        throw "stub: _isOnScreen not decompiled";
+        if (!this.parent.visible) {
+            return super._isOnScreen();
+        }
+        return true;
     }
+
 
     public override function onOutOfGameChange(): Void {
     }

@@ -78,7 +78,10 @@ class EventQueue {
     public var drainDisabled: Bool;
 
     public function new() {
+        this.drainDisabled = false;
+        this.objects = [];
     }
+
 }
 
 class TrackEntryPool extends spine.support.utils.Pool {

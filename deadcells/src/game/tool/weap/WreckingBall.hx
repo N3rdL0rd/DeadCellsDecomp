@@ -15,11 +15,26 @@ class WreckingBall extends tool.Weapon {
     public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.Weapon.WeaponSkill): Void {
     }
 
-    public function registerAmmo(arg0: en.bu.WreckingBallHeroAmmo): Void {
+    public function registerAmmo(ammo: en.bu.WreckingBallHeroAmmo): Void {
+        if (this.onWorldAmmo != null) {
+            this.onWorldAmmo.destroy();
+        }
+        this.onWorldAmmo = ammo;
+        this.chainedEntity = ammo;
     }
 
+
     public override function cancelChain(): Void {
+        super.cancelChain();
+        if (this.onWorldAmmo != null) {
+            if (!this.onWorldAmmo.destroyed) {
+                this.onWorldAmmo.destroy();
+                this.onWorldAmmo = null;
+            }
+        }
+        this.chainedEntity = null;
     }
+
 
     public function getChainStartX(): Float {
         throw "stub: getChainStartX not decompiled";
@@ -43,9 +58,14 @@ class WreckingBall extends tool.Weapon {
         throw "stub: onExecute not decompiled";
     }
 
-    public override function set_cycle(arg0: Int): Int {
-        throw "stub: set_cycle not decompiled";
+    public override function set_cycle(v: Int): Int {
+        if (v == 0) {
+            super.stopCritFeedback();
+        }
+        this._cycle = v;
+        return v;
     }
+
 
     public override function incrementCycle(): Void {
     }
@@ -103,6 +123,15 @@ class WreckingBall extends tool.Weapon {
         throw "stub: get_ballY not decompiled";
     }
 
-    public function countSwingKills(arg0: Entity, arg1: tool.atk.AttackData): Void {
+    public function countSwingKills(e: Entity, atk: tool.atk.AttackData): Void {
+        var var6: achievements.EAchievement;
+        if (e.life <= 0) {
+            this.enemiesKilledInOneSwing++;
+            if (this.enemiesKilledInOneSwing >= 5) {
+                var6 = FEAT_WRECKINGBALL_STRIKE;
+                Achievements.setAchievement(var6, null);
+            }
+        }
     }
+
 }

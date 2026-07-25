@@ -9,8 +9,9 @@ class RichterCross extends Power {
     }
 
     public function get_shootX(): Float {
-        throw "stub: get_shootX not decompiled";
+        return this.owner.get_shootX();
     }
+
 
     public function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";

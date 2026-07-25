@@ -55,13 +55,23 @@ class AsyncHttp {
         throw "stub: setParameter not decompiled";
     }
 
-    public function setIdleTimeout(arg0: Float): libs.AsyncHttp {
-        throw "stub: setIdleTimeout not decompiled";
+    public function setIdleTimeout(s: Float): libs.AsyncHttp {
+        if (this.started != null) {
+            throw "started";
+        }
+        this.idleTimeout = s;
+        return this;
     }
 
-    public function setTimeout(arg0: Float): libs.AsyncHttp {
-        throw "stub: setTimeout not decompiled";
+
+    public function setTimeout(s: Float): libs.AsyncHttp {
+        if (this.started != null) {
+            throw "started";
+        }
+        this.timeout = s;
+        return this;
     }
+
 
     public function request(arg0: Dynamic): Void {
     }
@@ -79,8 +89,18 @@ class AsyncHttp {
     }
 
     public function writeRequest(): Bool {
-        throw "stub: writeRequest not decompiled";
+        var var7: Bool;
+        var l: Int = this.sock.output.writeBytes(this.requestData, this.bufpos, this.bufsize - this.bufpos);
+        this.bufpos = this.bufpos + l;
+        this.requestSent = this.requestSent + l;
+        if (this.bufpos != this.bufsize) {
+            var7 = false;
+        } else {
+            var7 = true;
+        }
+        return var7;
     }
+
 
     public function writeData(): Bool {
         throw "stub: writeData not decompiled";
@@ -109,7 +129,15 @@ class AsyncHttp {
     }
 
     public function close(): Void {
+        if (this.sock != null) {
+            try {
+                this.sock.close();
+            } catch (e) {
+            }
+        }
+        this.closed = true;
     }
+
 
     public function onProgress(arg0: Bool, arg1: Int, arg2: Int): Void {
     }

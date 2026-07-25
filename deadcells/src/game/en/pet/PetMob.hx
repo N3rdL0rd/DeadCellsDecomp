@@ -84,8 +84,13 @@ class PetMob extends en.Mob {
         throw "stub: inDetectArea not decompiled";
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        super.onCooldownEnd(k, subIndex);
+        if (k == "buffed") {
+            this.onDebuff();
+        }
     }
+
 
     public override function postUpdate(): Void {
     }
@@ -122,7 +127,9 @@ class PetMob extends en.Mob {
     }
 
     public override function onFatalFallDamage(): Void {
+        this.tpTo(this.parent);
     }
+
 
     public override function canBeActivated(arg0: en.Hero): Bool {
         throw "stub: canBeActivated not decompiled";

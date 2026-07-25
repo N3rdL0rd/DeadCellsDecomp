@@ -74,9 +74,18 @@ class MobsGen {
     public function generate(arg0: Array<Dynamic>): Void {
     }
 
-    public function hasRequiredDepth(arg0: Int, arg1: Array<Dynamic>): Bool {
-        throw "stub: hasRequiredDepth not decompiled";
+    public function hasRequiredDepth(levelDepth: Int, depthList: Array<Dynamic>): Bool {
+        var var3: Int = 0;
+        while (var3 < depthList.length) {
+            var depth: Dynamic = depthList[var3];
+            var3++;
+            if (depth == levelDepth) {
+                return true;
+            }
+        }
+        return false;
     }
+
 
     public function getDmgTier(arg0: level.LevelMap, arg1: level.Room, arg2: Int): Int {
         throw "stub: getDmgTier not decompiled";

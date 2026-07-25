@@ -13,8 +13,15 @@ class Options extends ui.OptionsBase {
         super();
     }
 
-    public static function onItemInstalled(arg0: steam.ugc.Item): Void {
+    public static function onItemInstalled(_item: steam.ugc.Item): Void {
+        tool.mod.ModManager.instance.refreshModsList();
+        if (ui.Options.ME != null) {
+            if (!ui.Options.ME.destroyed) {
+                ui.Options.ME.onResize();
+            }
+        }
     }
+
 
     public static function onItemDownloaded(arg0: steam.ugc.Item): Void {
     }
@@ -33,8 +40,9 @@ class Options extends ui.OptionsBase {
     }
 
     public function getPadTxt(): String {
-        throw "stub: getPadTxt not decompiled";
+        return Lang.t.get("Manette", null);
     }
+
 
     public function showMain(): Void {
     }
@@ -137,7 +145,10 @@ class Options extends ui.OptionsBase {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
+        ui.Options.ME = null;
     }
+
 
     public override function update(): Void {
     }

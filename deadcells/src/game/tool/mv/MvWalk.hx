@@ -15,7 +15,13 @@ class MvWalk extends tool.AutoMove {
     }
 
     public override function init(): Void {
+        super.init();
+        if (tool.mv.MvWalk.tmpPath == null) {
+            var var2: tool.Path = new tool.Path();
+            tool.mv.MvWalk.tmpPath = var2;
+        }
     }
+
 
     public function set_canFall(arg0: Bool): Bool {
         throw "stub: set_canFall not decompiled";

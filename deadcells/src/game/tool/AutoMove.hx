@@ -54,7 +54,9 @@ class AutoMove {
     }
 
     public function unserializeInit(): Void {
+        this.speed = 1.0;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

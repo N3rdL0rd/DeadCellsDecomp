@@ -62,8 +62,13 @@ class TombstoneEntity extends Entity {
     public function glasDamage(): Void {
     }
 
-    public function setPosFluid(arg0: Float, arg1: Float): Void {
+    public function setPosFluid(x: Float, y: Float): Void {
+        this.cx = Std.int(x / 24.0);
+        this.cy = Std.int(y / 24.0);
+        this.xr = (x - this.cx * 24) / 24.0;
+        this.yr = (y - this.cy * 24) / 24.0;
     }
+
 
     public override function fixedUpdate(): Void {
     }

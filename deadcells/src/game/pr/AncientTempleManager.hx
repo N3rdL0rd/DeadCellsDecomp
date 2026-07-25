@@ -14,7 +14,10 @@ class AncientTempleManager extends libs.Process {
     }
 
     public function onReload(): Void {
+        super.init();
+        this.onResume();
     }
+
 
     public function updateState(): Void {
     }

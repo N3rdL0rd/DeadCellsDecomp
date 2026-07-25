@@ -26,7 +26,9 @@ class SkinSelector extends ui.sel.GridSelector {
 
 
     public override function pauseGame(): Void {
+        ui.HUD.ME.hide(null);
     }
+
 
     public override function initGrid(): Void {
     }
@@ -57,8 +59,9 @@ class SkinSelector extends ui.sel.GridSelector {
     }
 
     public override function getTitleText(): String {
-        throw "stub: getTitleText not decompiled";
+        return Lang.t.get("Sélectionnez votre style", null);
     }
+
 
     public override function onResize(): Void {
     }

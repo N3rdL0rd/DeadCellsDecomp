@@ -18,8 +18,9 @@ class Werewolf extends en.mob.Rampager {
     }
 
     public override function getLib(): libs.heaps.slib.SpriteLib {
-        throw "stub: getLib not decompiled";
+        return Assets.lib.get("atlas/werewolf.atlas");
     }
+
 
     public override function getNormalMap(): h3d.mat.Texture {
         throw "stub: getNormalMap not decompiled";

@@ -19,6 +19,19 @@ class AtlasRegion extends spine.support.graphics.TextureRegion {
     public var page: spine.support.graphics.AtlasPage;
 
     public function new() {
+        this.rotate = false;
+        this.index = 0;
+        this.originalHeight = 0;
+        this.originalWidth = 0;
+        this.offsetY = 0.0;
+        this.offsetX = 0.0;
+        this.packedHeight = 0;
+        this.packedWidth = 0;
+        this.height = 0;
+        this.width = 0;
+        this.y = 0;
+        this.x = 0;
         super();
     }
+
 }

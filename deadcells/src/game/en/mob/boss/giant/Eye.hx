@@ -18,9 +18,12 @@ class Eye extends en.Mob {
         super();
     }
 
-    public static function create(arg0: en.mob.boss.Giant, arg1: Int, arg2: Int): en.mob.boss.giant.Eye {
-        throw "stub: create not decompiled";
+    public static function create(giant: en.mob.boss.Giant, damageTier: Int, lifeTier: Int): en.mob.boss.giant.Eye {
+        var e: en.mob.boss.giant.Eye = new en.mob.boss.giant.Eye(giant, damageTier, lifeTier);
+        e.init();
+        return e;
     }
+
 
     public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
         throw "stub: tryToPreventDeath not decompiled";

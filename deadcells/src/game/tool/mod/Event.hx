@@ -4,8 +4,11 @@ class EventObject {
     public var id: Int;
     public var callback: Dynamic;
 
-    public function new(arg0: Dynamic = null, arg1: Int = 0) {
+    public function new(_callback: Dynamic, _id: Int) {
+        this.callback = _callback;
+        this.id = _id;
     }
+
 }
 
 class Event {

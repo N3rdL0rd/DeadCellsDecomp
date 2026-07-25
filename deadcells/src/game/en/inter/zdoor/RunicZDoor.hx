@@ -22,9 +22,13 @@ class RunicZDoor extends en.inter.ZDoor {
     public override function disposeGfx(): Void {
     }
 
-    public override function getClueIconId(arg0: Bool): String {
-        throw "stub: getClueIconId not decompiled";
+    public override function getClueIconId(forMap: Bool): String {
+        if (!forMap) {
+            return null;
+        }
+        return super.getClueIconId(forMap);
     }
+
 
     public override function onOutOfGameChange(): Void {
     }

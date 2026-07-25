@@ -13,20 +13,31 @@ class Transition extends level.LevelStruct {
     }
 
     public override function buildZChallengeDoors(): Void {
+        super.buildZChallengeDoors();
+        var r: level.RoomNode = super.getId("start");
+        if (r != null) {
+            var var4: level.RoomNode = super.getId("start");
+            super.createZChallengeAfter(var4, false, null, null, null);
+        }
     }
+
 
     public override function buildSecondaryRooms(): Void {
     }
 
     public override function finalize(): Void {
+        super.finalize();
+        this.addTwitchDoorBeforeExits();
     }
+
 
     public function addTwitchDoorBeforeExits(): Void {
     }
 
     public function createTwitchDoor(): level.RoomNode {
-        throw "stub: createTwitchDoor not decompiled";
+        return super.createNode("TwitchDoor", null, 1, null);
     }
+
 
     public function checkForBank(): Bool {
         throw "stub: checkForBank not decompiled";

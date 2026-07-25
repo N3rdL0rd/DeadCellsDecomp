@@ -19,8 +19,9 @@ class SlicePart extends Entity {
     }
 
     public override function get_targetSprPosX(): Float {
-        throw "stub: get_targetSprPosX not decompiled";
+        return (this.cx + this.xr) * 24.0;
     }
+
 
     public override function get_targetSprPosY(): Float {
         throw "stub: get_targetSprPosY not decompiled";
@@ -42,7 +43,12 @@ class SlicePart extends Entity {
 
 
     public override function onOutOfGameChange(): Void {
+        super.onOutOfGameChange();
+        if (this.isOutOfGame) {
+            super.destroy();
+        }
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

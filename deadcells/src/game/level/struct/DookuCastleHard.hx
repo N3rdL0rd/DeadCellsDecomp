@@ -11,5 +11,7 @@ class DookuCastleHard extends level.struct.DookuCastle {
     }
 
     public override function finalize(): Void {
+        this.user.story.counters.set("unlockKeyDoors-petrifiedDoor", 0);
     }
+
 }

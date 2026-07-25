@@ -6,6 +6,13 @@ class EventData {
     public var floatValue: Float;
     public var stringValue: String;
 
-    public function new(arg0: String = null) {
+    public function new(name: String) {
+        this.floatValue = 0.0;
+        this.intValue = 0;
+        if (name == null) {
+            throw new spine.support.error.IllegalArgumentException("name cannot be null.");
+        }
+        this.name = name;
     }
+
 }

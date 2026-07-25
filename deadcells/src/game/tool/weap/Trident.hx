@@ -8,9 +8,14 @@ class Trident extends tool.Weapon {
     public var cancelByWeapon: Bool;
     public var stabbedEntity: Entity;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
+        this.isDoingCharge = false;
+        this.isCrit = false;
+        this.canTurnNbLeft = 0;
+        this.cancelByWeapon = false;
     }
+
 
     public function canInterruptCharge(): Bool {
         throw "stub: canInterruptCharge not decompiled";
@@ -42,9 +47,14 @@ class Trident extends tool.Weapon {
         throw "stub: onExecute not decompiled";
     }
 
-    public override function set_cycle(arg0: Int): Int {
-        throw "stub: set_cycle not decompiled";
+    public override function set_cycle(v: Int): Int {
+        if (v == 0) {
+            super.stopCritFeedback();
+        }
+        this._cycle = v;
+        return v;
     }
+
 
     public override function dynOnAttackAnim(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
@@ -59,7 +69,10 @@ class Trident extends tool.Weapon {
 
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
+        this.cancelByWeapon = false;
     }
+
 
     public function doChargeAttack(arg0: Float): Void {
     }

@@ -32,10 +32,14 @@ class Bone {
     }
 
     public function update(): Void {
+        this.updateWorldTransformWithData(this.x, this.y, this.rotation, this.scaleX, this.scaleY, this.shearX, this.shearY);
     }
 
+
     public function updateWorldTransform(): Void {
+        this.updateWorldTransformWithData(this.x, this.y, this.rotation, this.scaleX, this.scaleY, this.shearX, this.shearY);
     }
+
 
     public function updateWorldTransformWithData(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Float): Void {
     }

@@ -4,8 +4,10 @@ class Signal1 extends libs.signals.Signal.BaseSignal {
     public var value: Dynamic;
 
     public function new() {
-        super();
+        super(null);
+        this.defaultCallbackProps = 1;
     }
+
 
     public function dispatch(arg0: Dynamic): Void {
     }

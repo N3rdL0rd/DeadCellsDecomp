@@ -19,13 +19,21 @@ class SeededRandom {
         throw "stub: irange not decompiled";
     }
 
-    public static function arrayPick(arg0: Array<Dynamic>): Dynamic {
-        throw "stub: arrayPick not decompiled";
+    public static function arrayPick(_array: Array<Dynamic>): Dynamic {
+        if (tool.mod.script.SeededRandom.p_seededRandom == null) {
+            throw "The seeded random from the level is not set yet and cannot be called in a structure script at this point";
+        }
+        return tool.mod.script.SeededRandom.p_seededRandom.arrayPick(_array);
     }
 
-    public static function arraySplice(arg0: Array<Dynamic>): Dynamic {
-        throw "stub: arraySplice not decompiled";
+
+    public static function arraySplice(_array: Array<Dynamic>): Dynamic {
+        if (tool.mod.script.SeededRandom.p_seededRandom == null) {
+            throw "The seeded random from the level is not set yet and cannot be called in a structure script at this point";
+        }
+        return tool.mod.script.SeededRandom.p_seededRandom.arraySplice(_array);
     }
+
 
     public static function p_getSeededRandom(): libs.Rand {
         return tool.mod.script.SeededRandom.p_seededRandom;

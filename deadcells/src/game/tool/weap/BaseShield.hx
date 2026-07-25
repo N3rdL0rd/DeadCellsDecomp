@@ -22,9 +22,13 @@ class BaseShield extends tool.Weapon {
     public override function dispose(): Void {
     }
 
-    public override function tryToCancel(arg0: Bool): Bool {
-        throw "stub: tryToCancel not decompiled";
+    public override function tryToCancel(byWeapon: Bool): Bool {
+        if (!this.canBeHeld) {
+            return false;
+        }
+        return super.tryToCancel(byWeapon);
     }
+
 
     public function onShieldChargeStart(): Void {
     }
@@ -53,8 +57,19 @@ class BaseShield extends tool.Weapon {
     public function beforeCounterAttackHit(arg0: tool.atk.AttackData, arg1: tool.atk.AttackData, arg2: Bool): Void {
     }
 
-    public function shieldCounterAttack(arg0: tool.atk.AttackData, arg1: Bool): Void {
+    public function shieldCounterAttack(sourceAtk: tool.atk.AttackData, fullParry: Bool): Void {
+        var ar: tool.atk.AttackData = tool.atk.AttackUtils.createFromHeroWeapon(this, null);
+        ar.addTag(13);
+        ar.setTag(25, fullParry);
+        ar.setTag(1, fullParry);
+        ar.setTag(2, fullParry);
+        this.beforeCounterAttackHit(sourceAtk, ar, fullParry);
+        tool.atk.AttackUtils.hit(ar, sourceAtk.source);
+        if (ar.isSuccess()) {
+            this.onShieldCounterSuccessful(sourceAtk, fullParry);
+        }
     }
+
 
     public function counterGrenade(arg0: en.Grenade): Void {
     }

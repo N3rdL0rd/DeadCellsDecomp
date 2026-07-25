@@ -39,8 +39,13 @@ class SmallSoul extends Entity {
     public override function preUpdate(): Void {
     }
 
-    public function setPosEased(arg0: Float, arg1: Float): Void {
+    public function setPosEased(x: Float, y: Float): Void {
+        this.cx = Std.int(x / 24.0);
+        this.cy = Std.int(y / 24.0);
+        this.xr = (x - this.cx * 24) / 24.0;
+        this.yr = (y - this.cy * 24) / 24.0;
     }
+
 
     public override function fixedUpdate(): Void {
     }

@@ -9,13 +9,21 @@ class JumpCastlevania extends tool.mainSkills.Jump {
 
 
     public override function init(): Void {
+        super.init();
+        this.hero.tempFrict = -1.0;
     }
+
 
     public override function passiveFixedUpdate(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        super.onCooldownEnd(k, subIndex);
+        if (k == "jumping") {
+            this.onEndJump();
+        }
     }
+
 
     public override function normalJump(): Void {
     }

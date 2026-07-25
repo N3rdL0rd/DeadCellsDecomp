@@ -15,8 +15,12 @@ class QuadTree {
     public var divided: Bool;
     public var debugGraphic: h2d.Graphics;
 
-    public function new(arg0: tool.quadTree.QtRectangle, arg1: Int, arg2: Int, arg3: h2d.Graphics) {
+    public function new(boundary: tool.quadTree.QtRectangle, capacity: Int, minimumSquareSize: Int, _debugGraphic: h2d.Graphics) {
+        this.colorQuad = 0;
+        this.nbEntities = 0;
+        this.initBoundaries(boundary, capacity, minimumSquareSize, _debugGraphic);
     }
+
 
     public function initBoundaries(arg0: tool.quadTree.QtRectangle, arg1: Int, arg2: Int, arg3: h2d.Graphics): Void {
     }
@@ -43,9 +47,13 @@ class QuadTree {
         throw "stub: insert not decompiled";
     }
 
-    public function tryInsert(arg0: Int, arg1: Int, arg2: Entity): Bool {
-        throw "stub: tryInsert not decompiled";
+    public function tryInsert(cx: Int, cy: Int, entity: Entity): Bool {
+        if (this.boundary != null) {
+            return this.insert(cx, cy, entity);
+        }
+        return false;
     }
+
 
     public function query(arg0: tool.quadTree.QtRectangle, arg1: Array<Dynamic>): Array<Dynamic> {
         throw "stub: query not decompiled";

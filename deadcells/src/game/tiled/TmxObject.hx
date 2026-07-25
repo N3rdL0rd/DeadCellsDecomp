@@ -15,5 +15,13 @@ class TmxObject extends tiled.TmxBaseObject {
 
     public function new() {
         super();
+        this.id = -1;
+        this.gid = -1;
+        this.rotationDegrees = 0.0;
+        this.flipX = false;
+        this.flipY = false;
+        this.shape = Rectangle;
+        this.points = null;
     }
+
 }

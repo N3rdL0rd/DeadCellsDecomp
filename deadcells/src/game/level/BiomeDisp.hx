@@ -45,7 +45,10 @@ class BiomeDisp extends level.LevelDisp {
     }
 
     public function fillDecks(): Void {
+        this.fillJunkDecks();
+        this.fillStampDecks();
     }
+
 
     public function fillJunkDecks(): Void {
     }
@@ -97,9 +100,10 @@ class BiomeDisp extends level.LevelDisp {
     public function renderLadders(): Void {
     }
 
-    public function getPositionId(arg0: Int, arg1: Int, arg2: Int): Int {
-        throw "stub: getPositionId not decompiled";
+    public function getPositionId(cx: Int, cy: Int, xMax: Int): Int {
+        return cx + cy * xMax;
     }
+
 
     public override function renderFrontWalls(): Void {
     }

@@ -13,5 +13,16 @@ class ActionSignals {
     public var scrollRightSignal: libs.signals.Signal1;
 
     public function new() {
+        this.scrollRightSignal = new libs.signals.Signal1();
+        this.scrollLeftSignal = new libs.signals.Signal1();
+        this.scrollDownSignal = new libs.signals.Signal1();
+        this.scrollUpSignal = new libs.signals.Signal1();
+        this.rightSignal = new libs.signals.Signal1();
+        this.leftSignal = new libs.signals.Signal1();
+        this.downSignal = new libs.signals.Signal1();
+        this.upSignal = new libs.signals.Signal1();
+        this.cancelSignal = new libs.signals.Signal1();
+        this.validateSignal = new libs.signals.Signal1();
     }
+
 }

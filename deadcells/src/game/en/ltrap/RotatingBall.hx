@@ -36,8 +36,10 @@ class RotatingBall extends en.LevelTrap {
     public function setBloodSprite(): Void {
     }
 
-    public function onHitHero(arg0: en.Hero): Void {
+    public function onHitHero(h: en.Hero): Void {
+        h.cancelMainSkills(null);
     }
+
 
     public override function postUpdate(): Void {
     }

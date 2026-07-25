@@ -11,12 +11,14 @@ class BossRushTierButton extends en.inter.button.Button {
     }
 
     public override function getSpriteLib(): libs.heaps.slib.SpriteLib {
-        throw "stub: getSpriteLib not decompiled";
+        return Assets.lib.get("atlas/bossRushZone.atlas");
     }
 
+
     public override function getLightTipStr(): String {
-        throw "stub: getLightTipStr not decompiled";
+        return Lang.t.get("U31_TIERBUTTON_CHOOSE", null);
     }
+
 
     public function getActivatedGlowColor(): Int {
         throw "stub: getActivatedGlowColor not decompiled";

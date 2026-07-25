@@ -38,8 +38,14 @@ class FireTurret extends en.active.Turret {
     }
 
     public function isFiring(): Bool {
-        throw "stub: isFiring not decompiled";
+        if (this.life > 0) {
+            if (!this.destroyed) {
+                return this.cd.fastCheck.exists(-1900019712);
+            }
+        }
+        return false;
     }
+
 
     public override function shoot(arg0: Entity): Void {
     }

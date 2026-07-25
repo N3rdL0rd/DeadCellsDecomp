@@ -73,8 +73,13 @@ class HeroWeaponsManager extends tool.HeroManager {
     }
 
     public function hasChargingUninterruptibleWeapon(): Bool {
-        throw "stub: hasChargingUninterruptibleWeapon not decompiled";
+        var weapon: tool.Weapon = this.findChargingWeapon();
+        if (weapon != null) {
+            return weapon.item.hasAffix("CannotInterrupt");
+        }
+        return false;
     }
+
 
     public function hasButtonDownForWeapon(arg0: tool.Weapon): Bool {
         throw "stub: hasButtonDownForWeapon not decompiled";

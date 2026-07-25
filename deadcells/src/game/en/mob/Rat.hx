@@ -14,7 +14,10 @@ class Rat extends en.Mob {
     }
 
     public override function init(): Void {
+        super.init();
+        this.disableRepellingForS(99999.0, null);
     }
+
 
     public override function initGfx(): Void {
     }

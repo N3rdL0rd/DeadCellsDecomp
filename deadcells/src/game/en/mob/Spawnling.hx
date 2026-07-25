@@ -17,8 +17,9 @@ class Spawnling extends en.Mob {
     }
 
     public static function preloadGfx(): libs.heaps.slib.SpriteLib {
-        throw "stub: preloadGfx not decompiled";
+        return Assets.lib.get("atlas/limon.atlas");
     }
+
 
     public override function initGfx(): Void {
     }

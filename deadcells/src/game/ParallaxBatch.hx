@@ -71,9 +71,10 @@ class ParallaxBatch extends libs.heaps.slib.HSpriteBatch {
         super();
     }
 
-    public static function sortLayers(arg0: ParallaxLayer, arg1: ParallaxLayer): Int {
-        throw "stub: sortLayers not decompiled";
+    public static function sortLayers(a: ParallaxLayer, b: ParallaxLayer): Int {
+        return a.prio - b.prio;
     }
+
 
     public function createLayer(arg0: Int, arg1: Dynamic, arg2: Dynamic): ParallaxLayer {
         throw "stub: createLayer not decompiled";

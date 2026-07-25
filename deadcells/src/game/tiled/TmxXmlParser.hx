@@ -53,13 +53,33 @@ class TmxXmlParser {
     public static function readTilesetImages(arg0: haxe.io.BytesInput, arg1: tiled.Tmx): Void {
     }
 
-    public static function readTilesetImage(arg0: haxe.io.BytesInput): tiled.TmxTilesetImage {
-        throw "stub: readTilesetImage not decompiled";
+    public static function readTilesetImage(r: haxe.io.BytesInput): tiled.TmxTilesetImage {
+        var tilesetImage: tiled.TmxTilesetImage = new tiled.TmxTilesetImage();
+        tilesetImage.id = r.readInt32();
+        tilesetImage.type = tiled.TmxXmlParser.readString(r);
+        tilesetImage.probability = r.readFloat();
+        tilesetImage.properties = tiled.TmxXmlParser.readProperties(r);
+        tilesetImage.imageSource = tiled.TmxXmlParser.readString(r);
+        tilesetImage.width = r.readUInt16();
+        tilesetImage.height = r.readUInt16();
+        return tilesetImage;
     }
 
-    public static function readAnyLayer(arg0: haxe.io.BytesInput): tiled.TmxBaseLayer {
-        throw "stub: readAnyLayer not decompiled";
+
+    public static function readAnyLayer(r: haxe.io.BytesInput): tiled.TmxBaseLayer {
+        var kind: Int = r.readByte();
+        switch (kind) {
+            case 1:
+                return tiled.TmxXmlParser.readGroupLayer(r);
+            case 2:
+                return tiled.TmxXmlParser.readObjectLayer(r);
+            case 3:
+                return tiled.TmxXmlParser.readTileLayer(r);
+            default:
+                throw "Unexpected layer kind " + kind;
+        }
     }
+
 
     public static function readTileLayer(arg0: haxe.io.BytesInput): tiled.TmxTileLayer {
         throw "stub: readTileLayer not decompiled";
@@ -89,16 +109,28 @@ class TmxXmlParser {
     }
 
 
-    public static function readBaseObject(arg0: haxe.io.BytesInput, arg1: tiled.TmxBaseObject): Void {
+    public static function readBaseObject(r: haxe.io.BytesInput, object: tiled.TmxBaseObject): Void {
+        object.id = r.readInt32();
+        object.name = tiled.TmxXmlParser.readString(r);
+        object.properties = tiled.TmxXmlParser.readProperties(r);
     }
+
 
     public static function readProperties(arg0: haxe.io.BytesInput): haxe.ds.StringMap<Dynamic> {
         throw "stub: readProperties not decompiled";
     }
 
-    public static function readString(arg0: haxe.io.BytesInput): String {
-        throw "stub: readString not decompiled";
+    public static function readString(r: haxe.io.BytesInput): String {
+        var length: Int = r.readByte();
+        if (length == 0) {
+            return null;
+        }
+        if (length == 255) {
+            length = r.readUInt16();
+        }
+        return r.readString(length, null);
     }
+
 
     public static function parseTmx(arg0: haxe.io.Bytes, arg1: String, arg2: haxe.ds.StringMap<Dynamic>): tiled.Tmx {
         throw "stub: parseTmx not decompiled";

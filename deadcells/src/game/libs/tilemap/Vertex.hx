@@ -10,11 +10,13 @@ class Vertex {
     public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0) {
     }
 
-    public static function ySort(arg0: libs.tilemap.Vertex, arg1: libs.tilemap.Vertex): Int {
-        throw "stub: ySort not decompiled";
+    public static function ySort(v1: libs.tilemap.Vertex, v2: libs.tilemap.Vertex): Int {
+        return v1.y - v2.y;
     }
 
-    public static function xSort(arg0: libs.tilemap.Vertex, arg1: libs.tilemap.Vertex): Int {
-        throw "stub: xSort not decompiled";
+
+    public static function xSort(v1: libs.tilemap.Vertex, v2: libs.tilemap.Vertex): Int {
+        return v1.x - v2.x;
     }
+
 }

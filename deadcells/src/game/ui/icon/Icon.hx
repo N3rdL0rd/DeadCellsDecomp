@@ -7,9 +7,11 @@ class Icon extends h2d.Bitmap {
         super();
     }
 
-    public static function createMobIcon(arg0: String, arg1: h2d.Object): ui.icon.Icon {
-        throw "stub: createMobIcon not decompiled";
+    public static function createMobIcon(mobKind: String, parent: h2d.Object): ui.icon.Icon {
+        var tile: h2d.Tile = Assets.getMob(mobKind);
+        return new ui.icon.Icon(tile, parent);
     }
+
 
     public static function createItemIcon(arg0: String, arg1: h2d.Object): ui.icon.Icon {
         throw "stub: createItemIcon not decompiled";

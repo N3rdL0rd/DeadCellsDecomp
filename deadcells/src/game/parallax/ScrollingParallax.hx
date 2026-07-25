@@ -5,8 +5,12 @@ class ScrollingParallaxData {
     public var inf: Dynamic;
     public var speed: Float;
 
-    public function new(arg0: Parallax, arg1: Dynamic, arg2: Float) {
+    public function new(p: Parallax, inf: Dynamic, speed: Float) {
+        this.p = p;
+        this.inf = inf;
+        this.speed = speed;
     }
+
 }
 
 class ScrollingParallax extends libs.Process {

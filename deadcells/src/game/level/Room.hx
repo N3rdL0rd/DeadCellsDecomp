@@ -100,16 +100,37 @@ class Room {
     }
 
     public function isInZBranch(): Bool {
-        throw "stub: isInZBranch not decompiled";
+        var n: level.Room = this;
+        while (n != null) {
+            if (n.isZChild) {
+                return true;
+            }
+            n = n.parent;
+        }
+        return false;
     }
+
 
     public function getZParent(): level.Room {
         throw "stub: getZParent not decompiled";
     }
 
-    public function countParents(arg0: String): Int {
-        throw "stub: countParents not decompiled";
+    public function countParents(type: String): Int {
+        var n: Int = 0;
+        var r: level.Room = this.parent;
+        while (r != null) {
+            if (r.rType == type) {
+                n++;
+            }
+            if (r.parent == null && r.isZChild) {
+                r = r.getZParent();
+            } else {
+                r = r.parent;
+            }
+        }
+        return n;
     }
+
 
     public function isSanctuary(): Bool {
         throw "stub: isSanctuary not decompiled";

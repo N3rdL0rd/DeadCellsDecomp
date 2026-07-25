@@ -28,8 +28,9 @@ class HSpriteBE extends h2d.SpriteBatch.BatchElement {
     }
 
     public function toString(): String {
-        throw "stub: toString not decompiled";
+        return 'HSpriteBE_${this.groupName}[${this.frame}]';
     }
+
 
     public function set(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref, arg3: Ref): Void {
     }
@@ -45,7 +46,16 @@ class HSpriteBE extends h2d.SpriteBatch.BatchElement {
     }
 
     public override function remove(): Void {
+        super.remove();
+        if (!this.destroyed) {
+            this.destroyed = true;
+            if (this._animManager != null) {
+                this._animManager.destroy();
+                this._animManager = null;
+            }
+        }
     }
+
 
     public override function update(arg0: Float): Bool {
         throw "stub: update not decompiled";

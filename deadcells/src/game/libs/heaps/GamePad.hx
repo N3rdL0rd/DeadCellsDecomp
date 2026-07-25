@@ -26,8 +26,12 @@ class GamePad {
     public function disable(): Void {
     }
 
-    public function rumble(arg0: Float, arg1: Float): Void {
+    public function rumble(strength: Float, time_s: Float): Void {
+        if (this.device != null) {
+            this.device.rumble(strength, time_s);
+        }
     }
+
 
     public function isPressed(arg0: Int): Bool {
         throw "stub: isPressed not decompiled";

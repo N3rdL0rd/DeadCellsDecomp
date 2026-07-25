@@ -33,8 +33,11 @@ class Ammo extends en.Loot {
     public override function initGfx(): Void {
     }
 
-    public override function startMagnet(arg0: Entity): Void {
+    public override function startMagnet(e: Entity): Void {
+        super.startMagnet(e);
+        this.dx = this.dx * -1.0;
     }
+
 
     public function stickInWall(arg0: en.Bullet): Void {
     }

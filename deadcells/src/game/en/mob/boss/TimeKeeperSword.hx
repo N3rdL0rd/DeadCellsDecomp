@@ -27,8 +27,19 @@ class TimeKeeperSword extends Entity {
     public override function initGfx(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
+        if (k == "suspension") {
+            this.hasGravity = true;
+        }
+        if (k == "willDisappear") {
+            this.disappear();
+        }
+        if (k == "disappear") {
+            super.destroy();
+        }
     }
+
 
     public function disappear(): Void {
     }

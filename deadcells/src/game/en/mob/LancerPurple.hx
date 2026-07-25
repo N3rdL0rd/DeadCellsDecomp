@@ -9,9 +9,12 @@ class LancerPurple extends en.mob.Lancer {
     }
 
 
-    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.LancerPurple {
-        throw "stub: create not decompiled";
+    public static function create(lvl: pr.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): en.mob.LancerPurple {
+        var e: en.mob.LancerPurple = new en.mob.LancerPurple(lvl, x, y, dmgTier, lifeTier);
+        e.init();
+        return e;
     }
+
 
     public override function getKind(): String {
         return "LancerPurple";
@@ -19,8 +22,9 @@ class LancerPurple extends en.mob.Lancer {
 
 
     public override function getLib(): libs.heaps.slib.SpriteLib {
-        throw "stub: getLib not decompiled";
+        return Assets.lib.get("atlas/lancerPurple.atlas");
     }
+
 
     public override function getNormalMap(): h3d.mat.Texture {
         throw "stub: getNormalMap not decompiled";

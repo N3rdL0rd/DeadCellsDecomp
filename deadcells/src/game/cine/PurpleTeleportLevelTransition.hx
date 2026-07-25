@@ -7,9 +7,10 @@ class PurpleTeleportLevelTransition extends cine.LevelTransition {
         super();
     }
 
-    public static function gotoSub(arg0: level.LevelMap, arg1: Dynamic): cine.PurpleTeleportLevelTransition {
-        throw "stub: gotoSub not decompiled";
+    public static function gotoSub(map: level.LevelMap, linkId: Dynamic): cine.PurpleTeleportLevelTransition {
+        return new cine.PurpleTeleportLevelTransition(null, map, linkId);
     }
+
 
     public override function loadNewLevel(): Void {
     }

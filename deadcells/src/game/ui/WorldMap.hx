@@ -38,36 +38,44 @@ class WorldMap {
     }
 
     public function get_bannerWidth(): Int {
-        throw "stub: get_bannerWidth not decompiled";
+        return Std.int(ui.LevelCard.CARD_MAX_WIDTH * this.scale);
     }
+
 
     public function get_bannerHeight(): Int {
-        throw "stub: get_bannerHeight not decompiled";
+        return Std.int(ui.LevelCard.CARD_MAX_HEIGHT * this.scale);
     }
+
 
     public function get_columnGap(): Int {
-        throw "stub: get_columnGap not decompiled";
+        return Std.int(ui.WorldMap._columnGap * this.scale);
     }
+
 
     public function get_baseX(): Int {
-        throw "stub: get_baseX not decompiled";
+        return Std.int(ui.WorldMap._baseX * this.scale);
     }
+
 
     public function get_rowGap(): Int {
-        throw "stub: get_rowGap not decompiled";
+        return Std.int(ui.WorldMap._rowGap * this.scale);
     }
+
 
     public function get_colOffsetY(): Int {
-        throw "stub: get_colOffsetY not decompiled";
+        return Std.int(ui.WorldMap._colOffsetY * this.scale);
     }
+
 
     public function get_bezierOffset(): Int {
-        throw "stub: get_bezierOffset not decompiled";
+        return Std.int(ui.WorldMap._bezierOffset * this.scale);
     }
 
+
     public function get_bezierSteps(): Int {
-        throw "stub: get_bezierSteps not decompiled";
+        return Std.int(ui.WorldMap._bezierSteps * this.scale);
     }
+
 
     public function getSelectionDLCIfLocked(): tool.DLCId {
         throw "stub: getSelectionDLCIfLocked not decompiled";
@@ -104,9 +112,10 @@ class WorldMap {
     public function drawConnection(arg0: h2d.Object, arg1: h2d.Object, arg2: h2d.Object, arg3: Int, arg4: Float): Void {
     }
 
-    public function bezier(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Float {
-        throw "stub: bezier not decompiled";
+    public function bezier(t: Float, a: Float, b: Float, c: Float): Float {
+        return (1.0 - t) * (1.0 - t) * a + 2.0 * (1.0 - t) * t * b + t * t * c;
     }
+
 
     public function drawBezier(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: h2d.Object, arg7: Int, arg8: Float): Void {
     }

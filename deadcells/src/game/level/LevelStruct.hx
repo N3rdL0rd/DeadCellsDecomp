@@ -37,9 +37,10 @@ class LevelStruct {
         throw "stub: addRooms not decompiled";
     }
 
-    public function createCross(arg0: String): level.RoomNode {
-        throw "stub: createCross not decompiled";
+    public function createCross(id: String): level.RoomNode {
+        return this.createNode("Corridor", null, this.defaultGroup, id);
     }
+
 
     public function createZChallengeAfter(arg0: level.RoomNode, arg1: Bool, arg2: String, arg3: String, arg4: Dynamic): Void {
     }
@@ -59,13 +60,15 @@ class LevelStruct {
         throw "stub: createTimedBranchBefore not decompiled";
     }
 
-    public function createTeleportAfter(arg0: level.RoomNode, arg1: Dynamic): level.RoomNode {
-        throw "stub: createTeleportAfter not decompiled";
+    public function createTeleportAfter(ref: level.RoomNode, group: Dynamic): level.RoomNode {
+        return this._createTeleport(ref, group).addAfter(ref, null);
     }
 
-    public function createTeleportBefore(arg0: level.RoomNode, arg1: Dynamic): level.RoomNode {
-        throw "stub: createTeleportBefore not decompiled";
+
+    public function createTeleportBefore(ref: level.RoomNode, group: Dynamic): level.RoomNode {
+        return this._createTeleport(ref, group).addBefore(ref, null);
     }
+
 
     public function _createTeleport(arg0: level.RoomNode, arg1: Dynamic): level.RoomNode {
         throw "stub: _createTeleport not decompiled";

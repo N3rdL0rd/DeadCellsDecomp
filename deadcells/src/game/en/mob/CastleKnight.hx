@@ -19,12 +19,22 @@ class CastleKnight extends en.Mob {
     public override function initGfx(): Void {
     }
 
-    public override function setElite(arg0: Bool): Void {
+    public override function setElite(disableEliteSkill: Bool): Void {
+        super.setElite(disableEliteSkill);
+        var var3: libs.heaps.slib.AnimManager = this.spr.get_anim();
+        var3.setStateAnimSpeed("walk", 2.0);
     }
 
+
     public function isSpinning(): Bool {
-        throw "stub: isSpinning not decompiled";
+        if (this.life > 0) {
+            if (!this.destroyed) {
+                return this.cd.fastCheck.exists(25165824);
+            }
+        }
+        return false;
     }
+
 
     public override function onCooldownEnd(k: String, idx: Int): Void {
         super.onCooldownEnd(k, idx);

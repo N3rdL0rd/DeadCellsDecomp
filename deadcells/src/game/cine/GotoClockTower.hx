@@ -8,7 +8,10 @@ class GotoClockTower extends GameCinematic {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
+        cine.LevelTransition.gotoNoLoading("TopClockTower");
     }
+
 
     public override function update(): Void {
     }

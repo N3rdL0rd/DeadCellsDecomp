@@ -25,13 +25,18 @@ class Section extends h2d.Flow {
     }
 
     public function removeRole(): Void {
+        this.lastNameFlow = null;
+        this.lastNameFlowAlt = null;
     }
+
 
     public function addName(arg0: String, arg1: String): Void {
     }
 
     public function addHSpace(): Void {
+        this.addName("   ", null);
     }
+
 
     public function onResize(): Void {
     }
@@ -68,8 +73,12 @@ class Credits extends GameCinematic {
     public function createKatanaZeroEasterEgg(arg0: Array<Dynamic>): Void {
     }
 
-    public function createMotionTwinSections(arg0: Array<Dynamic>): Void {
+    public function createMotionTwinSections(fadeSections: Array<Dynamic>): Void {
+        this.createMT_Title(fadeSections);
+        this.createMT_Artists(fadeSections);
+        this.createMT_Progs(fadeSections);
     }
+
 
     public function createMT_Title(arg0: Array<Dynamic>): Void {
     }

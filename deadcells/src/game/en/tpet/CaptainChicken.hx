@@ -66,7 +66,10 @@ class CaptainChicken extends en.TwitchPet {
     }
 
     public override function onHeroTeleport(): Void {
+        super.onHeroTeleport();
+        this.goto((this.cx + this.xr) * 24.0, (this.cy + this.yr) * 24.0 - this.hei * 0.5);
     }
+
 
     public override function postUpdate(): Void {
     }

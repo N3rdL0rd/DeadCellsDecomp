@@ -28,7 +28,9 @@ class HeadSelector extends ui.sel.GridSelector {
     }
 
     public override function pauseGame(): Void {
+        ui.HUD.ME.hide(null);
     }
+
 
     public override function initGrid(): Void {
     }
@@ -65,8 +67,9 @@ class HeadSelector extends ui.sel.GridSelector {
     }
 
     public override function getTitleText(): String {
-        throw "stub: getTitleText not decompiled";
+        return Lang.t.get("U34_TAILORDAUGHTER_UI_TITLE", null);
     }
+
 
     public override function onResize(): Void {
     }

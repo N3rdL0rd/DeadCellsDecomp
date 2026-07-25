@@ -18,8 +18,12 @@ class Spinner extends en.Mob {
     public override function initGfx(): Void {
     }
 
-    public override function setElite(arg0: Bool): Void {
+    public override function setElite(disableEliteSkill: Bool): Void {
+        var old: Float = this.bumpResistance;
+        super.setElite(disableEliteSkill);
+        this.bumpResistance = old;
     }
+
 
     public override function initSkills(): Void {
     }
@@ -27,15 +31,26 @@ class Spinner extends en.Mob {
     public override function postUpdate(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
+        if (k == "attacking") {
+            this.stopSpin();
+        }
     }
+
 
     public function stopSpin(): Void {
     }
 
     public function isSpinning(): Bool {
-        throw "stub: isSpinning not decompiled";
+        if (this.life > 0) {
+            if (!this.destroyed) {
+                return this.cd.fastCheck.exists(-2088763392);
+            }
+        }
+        return false;
     }
+
 
     public override function getSkillSpeedMul(): Float {
         throw "stub: getSkillSpeedMul not decompiled";

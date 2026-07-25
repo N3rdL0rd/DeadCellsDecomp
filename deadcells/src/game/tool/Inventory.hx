@@ -88,12 +88,24 @@ class Inventory {
 
 
     public function hasEmptyWeaponSlot(): Bool {
-        throw "stub: hasEmptyWeaponSlot not decompiled";
+        for (i in 0...this.nbWeapons) {
+            if (this.getEquippedWeaponOn(i) == null) {
+                return true;
+            }
+        }
+        return false;
     }
 
+
     public function hasNoWeaponEquipped(): Bool {
-        throw "stub: hasNoWeaponEquipped not decompiled";
+        for (i in 0...this.nbWeapons) {
+            if (this.getEquippedWeaponOn(i) != null) {
+                return false;
+            }
+        }
+        return true;
     }
+
 
     public function hasDualWeapon(): Bool {
         throw "stub: hasDualWeapon not decompiled";
@@ -179,8 +191,14 @@ class Inventory {
     }
 
     public function hasEmptyActiveSlot(): Bool {
-        throw "stub: hasEmptyActiveSlot not decompiled";
+        for (i in 0...this.nbActives) {
+            if (this.getActiveOn(i) == null) {
+                return true;
+            }
+        }
+        return false;
     }
+
 
     public function needPlayerDecision(arg0: tool.InventItem): Bool {
         throw "stub: needPlayerDecision not decompiled";

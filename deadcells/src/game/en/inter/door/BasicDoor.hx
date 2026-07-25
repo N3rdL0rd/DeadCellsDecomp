@@ -12,7 +12,10 @@ class BasicDoor extends en.inter.Door {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        super.initDoorSkin("normalDoor", "normalDoorSide", "hingeSmallDoor", null, null, null);
     }
+
 
     public override function onFocus(): Void {
     }

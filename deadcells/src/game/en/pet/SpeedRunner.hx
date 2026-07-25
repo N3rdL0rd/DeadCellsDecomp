@@ -32,7 +32,10 @@ class SpeedRunner extends en.Pet {
 
 
     public override function onHeroTeleport(): Void {
+        super.onHeroTeleport();
+        this.goto((this.cx + this.xr) * 24.0, (this.cy + this.yr) * 24.0 - this.hei * 0.5);
     }
+
 
     public function onMobDeath(): Void {
     }

@@ -50,8 +50,14 @@ class Process {
     public function createRoot(arg0: h2d.Object): Void {
     }
 
-    public function createRootInLayers(arg0: h2d.Layers, arg1: Int): Void {
+    public function createRootInLayers(ctx: h2d.Layers, plan: Int): Void {
+        if (this.root != null) {
+            throw Std.string(this) + ": root already exists";
+        }
+        this.root = new h2d.Layers(null);
+        ctx.addChildAt(this.root, plan);
     }
+
 
     public function update(): Void {
     }

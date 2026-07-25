@@ -28,6 +28,7 @@ class BiomeMobsSelector extends ui.sel.BiomeSelector {
     }
 
     public override function getTitleText(): String {
-        throw "stub: getTitleText not decompiled";
+        return Lang.t.get("U34_CHOOSE_MOBS_PRESET", null);
     }
+
 }

@@ -23,8 +23,9 @@ class TierSelectFree extends ui.TierSelect {
     }
 
     public override function get_tiersHei(): Int {
-        throw "stub: get_tiersHei not decompiled";
+        return super.get_tiersHei() - this.get_infoHei();
     }
+
 
     public function get_infoHei(): Int {
         throw "stub: get_infoHei not decompiled";

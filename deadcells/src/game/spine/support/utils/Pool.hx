@@ -20,6 +20,11 @@ class Pool {
 
 
     public function obtain(): Dynamic {
-        throw "stub: obtain not decompiled";
+        var var1: Int = this.freeObjects.length;
+        if (var1 == 0) {
+            return this.newObject();
+        }
+        return this.freeObjects.pop();
     }
+
 }

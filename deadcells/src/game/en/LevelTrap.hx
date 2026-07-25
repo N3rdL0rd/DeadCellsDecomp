@@ -21,10 +21,16 @@ class LevelTrap extends Entity {
     }
 
     public override function init(): Void {
+        super.init();
+        this.frameCountThresholdForOutOfGame = 0;
     }
 
+
     public override function initGfx(): Void {
+        super.initGfx();
+        this.initSprite(Assets.gameElements, "todoPink", null, null, null, null, null, null);
     }
+
 
     public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }

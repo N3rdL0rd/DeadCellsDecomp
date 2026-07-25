@@ -5,9 +5,10 @@ class AirJump extends tool.HeroMainSkill {
     public var blackboard: tool.mainSkills.blackboards.JumpBlackBoard;
     public var holdDoubleJumpLock: Float;
 
-    public function new(arg0: en.Hero = null, arg1: pr.Game = null, arg2: Dynamic = null) {
-        super();
+    public function new(hero: en.Hero, game: pr.Game, skillInfos: Dynamic) {
+        super(hero, game, skillInfos);
     }
+
 
     public function get_airJumps(): Int {
         throw "stub: get_airJumps not decompiled";
@@ -40,8 +41,10 @@ class AirJump extends tool.HeroMainSkill {
     public function startDoubleJumpTutorial(): Void {
     }
 
-    public function onStartClimbing(arg0: Bool): Void {
+    public function onStartClimbing(onLadder: Bool): Void {
+        this.set_airJumps(0);
     }
+
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }

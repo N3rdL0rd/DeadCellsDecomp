@@ -63,8 +63,11 @@ class Fugitive extends en.Mob {
     public override function onTouchGround(): Void {
     }
 
-    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(a: tool.atk.AttackData): Void {
+        super.onDamage(a);
+        this.dropDown();
     }
+
 
     public function dropDown(): Void {
     }

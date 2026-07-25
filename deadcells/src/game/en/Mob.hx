@@ -105,9 +105,15 @@ class Mob extends Entity {
         throw "stub: create not decompiled";
     }
 
-    public static function createSideKick(arg0: en.Hero, arg1: String, arg2: Int, arg3: Int, arg4: Int): en.Mob {
-        throw "stub: createSideKick not decompiled";
+    public static function createSideKick(h: en.Hero, k: String, cx: Int, cy: Int, tier: Int): en.Mob {
+        var e: en.Mob = en.Mob.create(k, h._level, cx, cy, tier, null);
+        h.addSideKick(e);
+        e.set_team(h._team);
+        e.parent = h;
+        e.dx = 0.2 * h.dir;
+        return e;
     }
+
 
     public function addAttack_tool_skill_mobSkill_Melee(arg0: Class<Dynamic>, arg1: String): tool.skill.mobSkill.Melee {
         throw "stub: addAttack_tool_skill_mobSkill_Melee not decompiled";
@@ -574,8 +580,12 @@ class Mob extends Entity {
     }
 
     public function aiLocked(): Bool {
-        throw "stub: aiLocked not decompiled";
+        if (this.life > 0) {
+            return this.cd.fastCheck.exists(54525952);
+        }
+        return true;
     }
+
 
     public function getAiLockS(): Float {
         throw "stub: getAiLockS not decompiled";
@@ -599,8 +609,15 @@ class Mob extends Entity {
     }
 
     public function getAttackDamageGlobalMul(): Float {
-        throw "stub: getAttackDamageGlobalMul not decompiled";
+        if (this.cd != null) {
+            var var2: Bool = this.cd.fastCheck.exists(18874368);
+            if (var2) {
+                return 0.0;
+            }
+        }
+        return 1.0;
     }
+
 
     public function getMovePauseMul(): Float {
         throw "stub: getMovePauseMul not decompiled";

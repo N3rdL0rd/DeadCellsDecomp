@@ -154,7 +154,9 @@ class Level extends libs.Process {
     }
 
     public function onLevelAssetsReloaded(): Void {
+        Main.ME.writeSave();
     }
+
 
     public override function init(): Void {
     }
@@ -191,7 +193,10 @@ class Level extends libs.Process {
     }
 
     public function onActivation(): Void {
+        this.initRender();
+        this.generateBreakableProps();
     }
+
 
     public function loadMinimap(): Void {
     }
@@ -374,9 +379,239 @@ class Level extends libs.Process {
     public function attachFreeDarknessRemovers(arg0: level.Room, arg1: libs.Rand): Void {
     }
 
-    public function getReverbPreset(arg0: Int): hxd.snd.effect.ReverbPreset {
-        throw "stub: getReverbPreset not decompiled";
+    public function getReverbPreset(kind: Int): hxd.snd.effect.ReverbPreset {
+        switch (kind) {
+            case 0:
+                return hxd.snd.effect.ReverbPreset.GENERIC;
+            case 1:
+                return hxd.snd.effect.ReverbPreset.PADDEDCELL;
+            case 2:
+                return hxd.snd.effect.ReverbPreset.ROOM;
+            case 3:
+                return hxd.snd.effect.ReverbPreset.BATHROOM;
+            case 4:
+                return hxd.snd.effect.ReverbPreset.LIVINGROOM;
+            case 5:
+                return hxd.snd.effect.ReverbPreset.STONEROOM;
+            case 6:
+                return hxd.snd.effect.ReverbPreset.AUDITORIUM;
+            case 7:
+                return hxd.snd.effect.ReverbPreset.CONCERTHALL;
+            case 8:
+                return hxd.snd.effect.ReverbPreset.CAVE;
+            case 9:
+                return hxd.snd.effect.ReverbPreset.ARENA;
+            case 10:
+                return hxd.snd.effect.ReverbPreset.HANGAR;
+            case 11:
+                return hxd.snd.effect.ReverbPreset.CARPETEDHALLWAY;
+            case 12:
+                return hxd.snd.effect.ReverbPreset.HALLWAY;
+            case 13:
+                return hxd.snd.effect.ReverbPreset.STONECORRIDOR;
+            case 14:
+                return hxd.snd.effect.ReverbPreset.ALLEY;
+            case 15:
+                return hxd.snd.effect.ReverbPreset.FOREST;
+            case 16:
+                return hxd.snd.effect.ReverbPreset.CITY;
+            case 17:
+                return hxd.snd.effect.ReverbPreset.MOUNTAINS;
+            case 18:
+                return hxd.snd.effect.ReverbPreset.QUARRY;
+            case 19:
+                return hxd.snd.effect.ReverbPreset.PLAIN;
+            case 20:
+                return hxd.snd.effect.ReverbPreset.PARKINGLOT;
+            case 21:
+                return hxd.snd.effect.ReverbPreset.SEWERPIPE;
+            case 22:
+                return hxd.snd.effect.ReverbPreset.UNDERWATER;
+            case 23:
+                return hxd.snd.effect.ReverbPreset.DRUGGED;
+            case 24:
+                return hxd.snd.effect.ReverbPreset.DIZZY;
+            case 25:
+                return hxd.snd.effect.ReverbPreset.PSYCHOTIC;
+            case 26:
+                return hxd.snd.effect.ReverbPreset.CASTLE_SMALLROOM;
+            case 27:
+                return hxd.snd.effect.ReverbPreset.CASTLE_SHORTPASSAGE;
+            case 28:
+                return hxd.snd.effect.ReverbPreset.CASTLE_MEDIUMROOM;
+            case 29:
+                return hxd.snd.effect.ReverbPreset.CASTLE_LARGEROOM;
+            case 30:
+                return hxd.snd.effect.ReverbPreset.CASTLE_LONGPASSAGE;
+            case 31:
+                return hxd.snd.effect.ReverbPreset.CASTLE_HALL;
+            case 32:
+                return hxd.snd.effect.ReverbPreset.CASTLE_CUPBOARD;
+            case 33:
+                return hxd.snd.effect.ReverbPreset.CASTLE_COURTYARD;
+            case 34:
+                return hxd.snd.effect.ReverbPreset.CASTLE_ALCOVE;
+            case 35:
+                return hxd.snd.effect.ReverbPreset.FACTORY_SMALLROOM;
+            case 36:
+                return hxd.snd.effect.ReverbPreset.FACTORY_SHORTPASSAGE;
+            case 37:
+                return hxd.snd.effect.ReverbPreset.FACTORY_MEDIUMROOM;
+            case 38:
+                return hxd.snd.effect.ReverbPreset.FACTORY_LARGEROOM;
+            case 39:
+                return hxd.snd.effect.ReverbPreset.FACTORY_LONGPASSAGE;
+            case 40:
+                return hxd.snd.effect.ReverbPreset.FACTORY_HALL;
+            case 41:
+                return hxd.snd.effect.ReverbPreset.FACTORY_CUPBOARD;
+            case 42:
+                return hxd.snd.effect.ReverbPreset.FACTORY_COURTYARD;
+            case 43:
+                return hxd.snd.effect.ReverbPreset.FACTORY_ALCOVE;
+            case 44:
+                return hxd.snd.effect.ReverbPreset.ICEPALACE_SMALLROOM;
+            case 45:
+                return hxd.snd.effect.ReverbPreset.ICEPALACE_SHORTPASSAGE;
+            case 46:
+                return hxd.snd.effect.ReverbPreset.ICEPALACE_MEDIUMROOM;
+            case 47:
+                return hxd.snd.effect.ReverbPreset.ICEPALACE_LARGEROOM;
+            case 48:
+                return hxd.snd.effect.ReverbPreset.ICEPALACE_LONGPASSAGE;
+            case 49:
+                return hxd.snd.effect.ReverbPreset.ICEPALACE_HALL;
+            case 50:
+                return hxd.snd.effect.ReverbPreset.ICEPALACE_CUPBOARD;
+            case 51:
+                return hxd.snd.effect.ReverbPreset.ICEPALACE_COURTYARD;
+            case 52:
+                return hxd.snd.effect.ReverbPreset.ICEPALACE_ALCOVE;
+            case 53:
+                return hxd.snd.effect.ReverbPreset.SPACESTATION_SMALLROOM;
+            case 54:
+                return hxd.snd.effect.ReverbPreset.SPACESTATION_SHORTPASSAGE;
+            case 55:
+                return hxd.snd.effect.ReverbPreset.SPACESTATION_MEDIUMROOM;
+            case 56:
+                return hxd.snd.effect.ReverbPreset.SPACESTATION_LARGEROOM;
+            case 57:
+                return hxd.snd.effect.ReverbPreset.SPACESTATION_LONGPASSAGE;
+            case 58:
+                return hxd.snd.effect.ReverbPreset.SPACESTATION_HALL;
+            case 59:
+                return hxd.snd.effect.ReverbPreset.SPACESTATION_CUPBOARD;
+            case 60:
+                return hxd.snd.effect.ReverbPreset.SPACESTATION_ALCOVE;
+            case 61:
+                return hxd.snd.effect.ReverbPreset.WOODEN_SMALLROOM;
+            case 62:
+                return hxd.snd.effect.ReverbPreset.WOODEN_SHORTPASSAGE;
+            case 63:
+                return hxd.snd.effect.ReverbPreset.WOODEN_MEDIUMROOM;
+            case 64:
+                return hxd.snd.effect.ReverbPreset.WOODEN_LARGEROOM;
+            case 65:
+                return hxd.snd.effect.ReverbPreset.WOODEN_LONGPASSAGE;
+            case 66:
+                return hxd.snd.effect.ReverbPreset.WOODEN_HALL;
+            case 67:
+                return hxd.snd.effect.ReverbPreset.WOODEN_CUPBOARD;
+            case 68:
+                return hxd.snd.effect.ReverbPreset.WOODEN_COURTYARD;
+            case 69:
+                return hxd.snd.effect.ReverbPreset.WOODEN_ALCOVE;
+            case 70:
+                return hxd.snd.effect.ReverbPreset.SPORT_EMPTYSTADIUM;
+            case 71:
+                return hxd.snd.effect.ReverbPreset.SPORT_SQUASHCOURT;
+            case 72:
+                return hxd.snd.effect.ReverbPreset.SPORT_SMALLSWIMMINGPOOL;
+            case 73:
+                return hxd.snd.effect.ReverbPreset.SPORT_LARGESWIMMINGPOOL;
+            case 74:
+                return hxd.snd.effect.ReverbPreset.SPORT_GYMNASIUM;
+            case 75:
+                return hxd.snd.effect.ReverbPreset.SPORT_FULLSTADIUM;
+            case 76:
+                return hxd.snd.effect.ReverbPreset.SPORT_STADIUMTANNOY;
+            case 77:
+                return hxd.snd.effect.ReverbPreset.PREFAB_WORKSHOP;
+            case 78:
+                return hxd.snd.effect.ReverbPreset.PREFAB_SCHOOLROOM;
+            case 79:
+                return hxd.snd.effect.ReverbPreset.PREFAB_PRACTISEROOM;
+            case 80:
+                return hxd.snd.effect.ReverbPreset.PREFAB_OUTHOUSE;
+            case 81:
+                return hxd.snd.effect.ReverbPreset.PREFAB_CARAVAN;
+            case 82:
+                return hxd.snd.effect.ReverbPreset.DOME_TOMB;
+            case 83:
+                return hxd.snd.effect.ReverbPreset.PIPE_SMALL;
+            case 84:
+                return hxd.snd.effect.ReverbPreset.DOME_SAINTPAULS;
+            case 85:
+                return hxd.snd.effect.ReverbPreset.PIPE_LONGTHIN;
+            case 86:
+                return hxd.snd.effect.ReverbPreset.PIPE_LARGE;
+            case 87:
+                return hxd.snd.effect.ReverbPreset.PIPE_RESONANT;
+            case 88:
+                return hxd.snd.effect.ReverbPreset.OUTDOORS_BACKYARD;
+            case 89:
+                return hxd.snd.effect.ReverbPreset.OUTDOORS_ROLLINGPLAINS;
+            case 90:
+                return hxd.snd.effect.ReverbPreset.OUTDOORS_DEEPCANYON;
+            case 91:
+                return hxd.snd.effect.ReverbPreset.OUTDOORS_CREEK;
+            case 92:
+                return hxd.snd.effect.ReverbPreset.OUTDOORS_VALLEY;
+            case 93:
+                return hxd.snd.effect.ReverbPreset.MOOD_HEAVEN;
+            case 94:
+                return hxd.snd.effect.ReverbPreset.MOOD_HELL;
+            case 95:
+                return hxd.snd.effect.ReverbPreset.MOOD_MEMORY;
+            case 96:
+                return hxd.snd.effect.ReverbPreset.DRIVING_COMMENTATOR;
+            case 97:
+                return hxd.snd.effect.ReverbPreset.DRIVING_PITGARAGE;
+            case 98:
+                return hxd.snd.effect.ReverbPreset.DRIVING_INCAR_RACER;
+            case 99:
+                return hxd.snd.effect.ReverbPreset.DRIVING_INCAR_SPORTS;
+            case 100:
+                return hxd.snd.effect.ReverbPreset.DRIVING_INCAR_LUXURY;
+            case 101:
+                return hxd.snd.effect.ReverbPreset.DRIVING_FULLGRANDSTAND;
+            case 102:
+                return hxd.snd.effect.ReverbPreset.DRIVING_EMPTYGRANDSTAND;
+            case 103:
+                return hxd.snd.effect.ReverbPreset.DRIVING_TUNNEL;
+            case 104:
+                return hxd.snd.effect.ReverbPreset.CITY_STREETS;
+            case 105:
+                return hxd.snd.effect.ReverbPreset.CITY_SUBWAY;
+            case 106:
+                return hxd.snd.effect.ReverbPreset.CITY_MUSEUM;
+            case 107:
+                return hxd.snd.effect.ReverbPreset.CITY_LIBRARY;
+            case 108:
+                return hxd.snd.effect.ReverbPreset.CITY_UNDERPASS;
+            case 109:
+                return hxd.snd.effect.ReverbPreset.CITY_ABANDONED;
+            case 110:
+                return hxd.snd.effect.ReverbPreset.DUSTYROOM;
+            case 111:
+                return hxd.snd.effect.ReverbPreset.CHAPEL;
+            case 112:
+                return hxd.snd.effect.ReverbPreset.SMALLWATERROOM;
+            default:
+                return null;
+        }
     }
+
 
     public function getCLID(): Int {
         throw "stub: getCLID not decompiled";

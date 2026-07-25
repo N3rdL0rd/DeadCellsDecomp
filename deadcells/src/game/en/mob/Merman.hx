@@ -9,9 +9,12 @@ class Merman extends en.mob.Archer {
     }
 
 
-    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int): en.mob.Merman {
-        throw "stub: create not decompiled";
+    public static function create(lvl: pr.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int): en.mob.Merman {
+        var e: en.mob.Merman = new en.mob.Merman(lvl, x, y, dmgTier, lifeTier);
+        e.init();
+        return e;
     }
+
 
     public override function getKind(): String {
         return "Merman";
@@ -19,8 +22,9 @@ class Merman extends en.mob.Archer {
 
 
     public override function getLib(): libs.heaps.slib.SpriteLib {
-        throw "stub: getLib not decompiled";
+        return Assets.lib.get("atlas/Merman.atlas");
     }
+
 
     public override function getNormalMap(): h3d.mat.Texture {
         throw "stub: getNormalMap not decompiled";

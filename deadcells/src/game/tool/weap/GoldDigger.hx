@@ -3,9 +3,12 @@ package tool.weap;
 class GoldDigger extends tool.Weapon {
     public var evolved: Bool;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null, arg2: Bool = false) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem, _evolved: Bool) {
+        this.evolved = false;
+        super(o, i);
+        this.evolved = _evolved;
     }
+
 
     public override function fixedUpdate(): Void {
     }

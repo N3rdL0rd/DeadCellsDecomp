@@ -36,9 +36,15 @@ class CDBSeparator {
     public var name: String;
     public var lineIndex: Int;
 
-    public function new(arg0: Int = 0, arg1: String = null, arg2: Int = 0) {
+    public function new(_id: Int, _name: String, _lineIndex: Int) {
+        this.id = _id;
+        this.name = _name;
+        this.lineIndex = _lineIndex;
     }
 
+
     public function pushLine(): Void {
+        this.lineIndex++;
     }
+
 }

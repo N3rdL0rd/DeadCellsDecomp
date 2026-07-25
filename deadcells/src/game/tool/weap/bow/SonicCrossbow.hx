@@ -15,7 +15,10 @@ class SonicCrossbow extends tool.weap.BaseBow {
     }
 
     public override function onBowChargeStart(): Void {
+        super.onBowChargeStart();
+        this.shootIdx = 0;
     }
+
 
     public override function shoot(arg0: Array<Dynamic>): Void {
     }

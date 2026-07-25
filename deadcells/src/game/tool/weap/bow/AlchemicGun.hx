@@ -3,9 +3,11 @@ package tool.weap.bow;
 class AlchemicGun extends tool.weap.BaseBow {
     public var gunCycle: Int;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
+        this.gunCycle = 0;
     }
+
 
     public override function initAnimIds(): Void {
     }

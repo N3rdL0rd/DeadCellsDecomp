@@ -19,6 +19,11 @@ class ElbowBlades extends tool.Weapon {
     }
 
     public override function autoAim(): Bool {
-        throw "stub: autoAim not decompiled";
+        var var1: Int = super.get_cycle();
+        if (var1 == 0) {
+            return false;
+        }
+        return super.autoAim();
     }
+
 }

@@ -14,8 +14,10 @@ class Starfury extends tool.Weapon {
     public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
     }
 
-    public function onHitFromBackpack(arg0: tool.Weapon, arg1: Entity): Void {
+    public function onHitFromBackpack(weapon: tool.Weapon, target: Entity): Void {
+        this.shootStars(2);
     }
+
 
     public function shootStars(arg0: Int): Void {
     }

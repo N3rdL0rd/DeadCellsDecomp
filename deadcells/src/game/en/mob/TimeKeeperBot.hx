@@ -71,8 +71,11 @@ class TimeKeeperBot extends en.Mob {
     public override function onDamage(arg0: tool.atk.AttackData): Void {
     }
 
-    public override function hide(arg0: Float): Void {
+    public override function hide(revealDurationS: Float): Void {
+        super.hide(revealDurationS);
+        this.enableRepelling();
     }
+
 
     public override function canBeHitBy(arg0: Entity): Bool {
         throw "stub: canBeHitBy not decompiled";

@@ -5,9 +5,13 @@ class SkulBone extends tool.Weapon {
     public var curWhirlwindAttackCounter: Int;
     public var whirlwindDelayBetweenAttacks: Float;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        this.whirlwindDelayBetweenAttacks = 0.0;
+        this.curWhirlwindAttackCounter = 0;
+        this.secondAttackHit = false;
+        super(o, i);
     }
+
 
     public override function initSkill(arg0: Int, arg1: Dynamic, arg2: tool.Weapon.WeaponSkill): Void {
     }

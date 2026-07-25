@@ -48,8 +48,12 @@ class AnchorGuy extends en.Mob {
         throw "stub: isFalling not decompiled";
     }
 
-    public override function setElite(arg0: Bool): Void {
+    public override function setElite(disableEliteSkill: Bool): Void {
+        super.setElite(disableEliteSkill);
+        var var3: libs.heaps.slib.AnimManager = this.spr.get_anim();
+        var3.setStateAnimSpeed("walk", 2.0);
     }
+
 
     public override function initSkills(): Void {
     }

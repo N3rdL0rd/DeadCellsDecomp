@@ -63,15 +63,33 @@ class Gear {
     public var cooldown: Float;
     public var isWaiting: Bool;
 
-    public function new(arg0: libs.heaps.slib.HSpriteBE, arg1: Float) {
+    public function new(hbe: libs.heaps.slib.HSpriteBE, delay: Float) {
+        this.hbe = hbe;
+        this.stepDelay = delay;
+        this.stepAngle = 0.10466666666666667;
+        this.stepTime = 0.66;
+        this.curTime = 0.0;
+        this.curStart = hbe.rotation;
+        this.curEnd = hbe.rotation + this.stepAngle;
+        this.cooldown = this.stepDelay;
+        this.isWaiting = true;
     }
+
 
     public function update(arg0: Float): Void {
     }
 
-    public function updateCooldown(arg0: Float): Float {
-        throw "stub: updateCooldown not decompiled";
+    public function updateCooldown(dt: Float): Float {
+        this.cooldown = this.cooldown - dt;
+        if (this.cooldown > 0.0) {
+            return dt;
+        }
+        var processed: Float = dt + this.cooldown;
+        this.cooldown = this.stepDelay;
+        this.isWaiting = false;
+        return processed;
     }
+
 
     public function updateRotation(arg0: Float): Float {
         throw "stub: updateRotation not decompiled";

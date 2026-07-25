@@ -9,19 +9,30 @@ class Richter extends en.Hero {
         super();
     }
 
-    public static function create(arg0: pr.Game): en.hero.Richter {
-        throw "stub: create not decompiled";
+    public static function create(game: pr.Game): en.hero.Richter {
+        var e: en.hero.Richter = new en.hero.Richter(game);
+        e.init();
+        return e;
     }
+
 
     public override function init(): Void {
     }
 
     public override function dispose(): Void {
+        super.dispose();
+        Cdb.NO_RANDOM = false;
     }
 
+
     public function getRunAnimId(): String {
-        throw "stub: getRunAnimId not decompiled";
+        var var1: Float = this.getLifeRatio();
+        if (var1 <= 0.33) {
+            return "runInjured";
+        }
+        return "run";
     }
+
 
     public override function getSkinInfo(): Dynamic {
         throw "stub: getSkinInfo not decompiled";
@@ -73,7 +84,10 @@ class Richter extends en.Hero {
     }
 
     public override function onTouchGround(): Void {
+        super.onTouchGround();
+        this.dx = 0.0;
     }
+
 
     public override function onPickupLoot(arg0: en.Loot): Void {
     }

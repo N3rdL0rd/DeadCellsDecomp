@@ -23,8 +23,9 @@ class Rampager extends en.Mob {
 
 
     public function getLib(): libs.heaps.slib.SpriteLib {
-        throw "stub: getLib not decompiled";
+        return Assets.lib.get("atlas/Rampager.atlas");
     }
+
 
     public function getNormalMap(): h3d.mat.Texture {
         throw "stub: getNormalMap not decompiled";

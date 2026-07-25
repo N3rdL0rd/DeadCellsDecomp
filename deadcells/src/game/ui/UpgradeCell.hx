@@ -17,7 +17,13 @@ class UpgradeCell extends h2d.Object {
     }
 
     public override function onRemove(): Void {
+        super.onRemove();
+        this.proc.destroyed = true;
+        this.outers = null;
+        this.cores = null;
+        this.coreLight = null;
     }
+
 
     public function setBlendMode(arg0: h2d.BlendMode): Void {
     }

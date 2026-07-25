@@ -12,9 +12,12 @@ class BootlegShovelman extends en.mob.BootlegBase {
     }
 
 
-    public static function create(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): en.mob.BootlegShovelman {
-        throw "stub: create not decompiled";
+    public static function create(lvl: pr.Level, x: Int, y: Int, dmgTier: Int, lifeTier: Int, reveal: Bool): en.mob.BootlegShovelman {
+        var e: en.mob.BootlegShovelman = new en.mob.BootlegShovelman(lvl, x, y, dmgTier, lifeTier, reveal);
+        e.init();
+        return e;
     }
+
 
     public override function initGfx(): Void {
     }

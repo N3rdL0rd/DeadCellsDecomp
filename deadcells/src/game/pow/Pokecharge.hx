@@ -16,7 +16,10 @@ class Pokecharge extends Power {
     }
 
     public override function onEnd(): Void {
+        super.onEnd();
+        this.owner.spr.get_anim().stopWithStateAnims();
     }
+
 
     public function isTooFar(): Bool {
         throw "stub: isTooFar not decompiled";

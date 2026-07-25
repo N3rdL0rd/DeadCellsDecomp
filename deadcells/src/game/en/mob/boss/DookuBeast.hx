@@ -213,8 +213,16 @@ class DookuBeast extends en.mob.Boss {
     }
 
     public function isOnFireballTravel(): Bool {
-        throw "stub: isOnFireballTravel not decompiled";
+        if (this.life > 0) {
+            if (!this.destroyed) {
+                if (this.cd != null) {
+                    return this.cd.fastCheck.exists(1637875712);
+                }
+            }
+        }
+        return false;
     }
+
 
     public function checkAllActionInCD(arg0: libs.RandDeck): Bool {
         throw "stub: checkAllActionInCD not decompiled";
@@ -234,7 +242,11 @@ class DookuBeast extends en.mob.Boss {
     }
 
     public function resetAction(): Void {
+        this.reset();
+        this.cancelVelocities();
+        this.pickNextAction();
     }
+
 
     public function reset(): Void {
     }

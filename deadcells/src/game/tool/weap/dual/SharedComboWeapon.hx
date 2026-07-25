@@ -13,9 +13,14 @@ class SharedComboWeapon extends tool.Weapon {
         throw "stub: get_cycle not decompiled";
     }
 
-    public override function set_cycle(arg0: Int): Int {
-        throw "stub: set_cycle not decompiled";
+    public override function set_cycle(v: Int): Int {
+        if (this.share) {
+            tool.weap.dual.SharedComboWeapon.sharedCycle = v;
+            return v;
+        }
+        return super.set_cycle(v);
     }
+
 
     public override function cancelChain(): Void {
     }
@@ -27,6 +32,7 @@ class SharedComboWeapon extends tool.Weapon {
     }
 
     public override function hasCycleLossCD(): Bool {
-        throw "stub: hasCycleLossCD not decompiled";
+        return this.owner.cd.fastCheck.exists(1451229184);
     }
+
 }

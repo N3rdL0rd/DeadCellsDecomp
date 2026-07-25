@@ -21,8 +21,9 @@ class TierInfoFree extends ui.TierInfo {
     }
 
     public function get_curTier(): Int {
-        throw "stub: get_curTier not decompiled";
+        return this.tierSelectFree.getChosenTier(this.tier);
     }
+
 
     public override function updateTexts(): Void {
     }

@@ -86,12 +86,14 @@ class Weapon {
     }
 
     public function get_shootX(): Float {
-        throw "stub: get_shootX not decompiled";
+        return this.owner.get_shootX();
     }
 
+
     public function get_shootY(): Float {
-        throw "stub: get_shootY not decompiled";
+        return this.owner.get_shootY();
     }
+
 
     public function onOwnerTurned(): Void {
     }
@@ -132,8 +134,9 @@ class Weapon {
     }
 
     public function isReady(): Bool {
-        throw "stub: isReady not decompiled";
+        return this.get_curSkill().isReady();
     }
+
 
     public function allowTurnDuringCharge(): Bool {
         return true;
@@ -258,8 +261,12 @@ class Weapon {
         throw "stub: hasCycleLossCD not decompiled";
     }
 
-    public function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public function onCooldownEnd(k: String, subIndex: Int): Void {
+        if (k == "critFeedback") {
+            this.stopCritFeedback();
+        }
     }
+
 
     public function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
     }

@@ -10,9 +10,10 @@ class Shipwreck extends level.LevelStruct {
         throw "stub: buildMainRooms not decompiled";
     }
 
-    public override function createCross(arg0: String): level.RoomNode {
-        throw "stub: createCross not decompiled";
+    public override function createCross(id: String): level.RoomNode {
+        return super.createNode("Corridor", null, 101, id);
     }
+
 
     public override function buildSecondaryRooms(): Void {
     }

@@ -19,7 +19,10 @@ class DookuCastle extends level.BiomeDisp {
     }
 
     public override function fillDecks(): Void {
+        super.fillDecks();
+        this.fillAnimatedPaintingsDeck();
     }
+
 
     public function fillAnimatedPaintingsDeck(): Void {
     }
@@ -55,13 +58,116 @@ class DookuCastle extends level.BiomeDisp {
     }
 
     public override function renderBackWalls(): Void {
+        this.moveHauntedArmorsToAlcoves();
+        this.addStatuesToAlcoves();
+        super.renderBackWalls();
+        this.renderFrise();
     }
+
 
     public override function renderWallTransitions(): Void {
     }
 
     public function renderFrise(): Void {
+        var df: Int = 0;
+        var var15: Bool = false;
+        var canPlace: Bool = false;
+        var tileToAdd: String = "";
+        var collRight: Bool = false;
+        var collLeft: Bool = false;
+        var canPlaceFrise: Dynamic = this;
+        for (cy in 0...this.lmap.hei) {
+            for (cx in 0...this.lmap.wid) {
+                if (cx >= 0) {
+                    if (cx < this.lmap.wid) {
+                        if (cy >= 0) {
+                            if (cy < this.lmap.hei) {
+                                if (cx + cy * this.lmap.wid >= this.lmap.decoGrid.length) {
+                                    df = 0;
+                                } else {
+                                    df = this.lmap.decoGrid[df];
+                                }
+                            } else {
+                                df = 0;
+                            }
+                            if (df & 24 == 8) {
+                                var15 = canPlaceFrise(cx, cy);
+                                if (var15) {
+                                    canPlace = true;
+                                    tileToAdd = "frieze";
+                                    collRight = canPlaceFrise(cx + 1, cy);
+                                    collLeft = canPlaceFrise(cx - 1, cy);
+                                    if (!collRight) {
+                                        canPlace = collLeft;
+                                        if (!collLeft) {
+                                            continue;
+                                        }
+                                        if (!collRight) {
+                                            tileToAdd = "friezecornerRight";
+                                        } else {
+                                            if (!collLeft) {
+                                                tileToAdd = "friezecornerLeft";
+                                            }
+                                        }
+                                        this.addTile(this.groupBackWalls, tileToAdd, cx, cy, null, null, null, null, null, null, null, null, null, null);
+                                    }
+                                    canPlace = true;
+                                    if (!canPlace) {
+                                        continue;
+                                    }
+                                    if (!collRight) {
+                                        tileToAdd = "friezecornerRight";
+                                    } else {
+                                        if (!collLeft) {
+                                            tileToAdd = "friezecornerLeft";
+                                        }
+                                    }
+                                    this.addTile(this.groupBackWalls, tileToAdd, cx, cy, null, null, null, null, null, null, null, null, null, null);
+                                }
+                            }
+                        }
+                    }
+                }
+                df = 0;
+                if (df & 24 == 8) {
+                    var15 = canPlaceFrise(cx, cy);
+                    if (var15) {
+                        canPlace = true;
+                        tileToAdd = "frieze";
+                        collRight = canPlaceFrise(cx + 1, cy);
+                        collLeft = canPlaceFrise(cx - 1, cy);
+                        if (!collRight) {
+                            canPlace = collLeft;
+                            if (!collLeft) {
+                                continue;
+                            }
+                            if (!collRight) {
+                                tileToAdd = "friezecornerRight";
+                            } else {
+                                if (!collLeft) {
+                                    tileToAdd = "friezecornerLeft";
+                                }
+                            }
+                            this.addTile(this.groupBackWalls, tileToAdd, cx, cy, null, null, null, null, null, null, null, null, null, null);
+                        }
+                        canPlace = true;
+                        if (!canPlace) {
+                            continue;
+                        }
+                        if (!collRight) {
+                            tileToAdd = "friezecornerRight";
+                        } else {
+                            if (!collLeft) {
+                                tileToAdd = "friezecornerLeft";
+                            }
+                        }
+                        this.addTile(this.groupBackWalls, tileToAdd, cx, cy, null, null, null, null, null, null, null, null, null, null);
+                    }
+                }
+            }
+        }
     }
+
 
     public function renderCrenels(): Void {
     }
@@ -70,8 +176,14 @@ class DookuCastle extends level.BiomeDisp {
         throw "stub: createHoleGrid not decompiled";
     }
 
-    public override function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
+    public override function addHoleBackground(room: level.Room, xmin: Int, xmax: Int, ymin: Int, ymax: Int): Void {
+        if (this.roomIsPartOfBigRoom(room)) {
+            this.computeBigRoomCoords(xmin, xmax, ymin, ymax);
+            return;
+        }
+        super.addHoleBackground(room, xmin, xmax, ymin, ymax);
     }
+
 
     public function roomIsPartOfBigRoom(arg0: level.Room): Bool {
         throw "stub: roomIsPartOfBigRoom not decompiled";

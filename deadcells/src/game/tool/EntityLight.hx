@@ -21,7 +21,12 @@ class EntityLight {
     }
 
     public function removeAdditiveCore(): Void {
+        if (this.core != null) {
+            this.core.remove();
+            this.core = null;
+        }
     }
+
 
     public function dispose(): Void {
     }

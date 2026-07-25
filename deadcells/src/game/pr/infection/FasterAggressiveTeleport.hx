@@ -1,9 +1,10 @@
 package pr.infection;
 
 class FasterAggressiveTeleport extends pr.infection.VariableInfectionRule {
-    public function new(arg0: pr.Infection = null, arg1: String = null, arg2: Dynamic = null) {
-        super();
+    public function new(infection: pr.Infection, ruleId: String, variable: Dynamic) {
+        super(infection, ruleId, variable, "aggroTeleportCharge");
     }
+
 
     public override function checkData(): Void {
     }

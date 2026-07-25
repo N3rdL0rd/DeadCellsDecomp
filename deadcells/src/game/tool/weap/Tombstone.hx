@@ -32,6 +32,10 @@ class Tombstone extends tool.Weapon {
         throw "stub: set_cycle not decompiled";
     }
 
-    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onOwnerCooldownEnd(k: String, idx: Int): Void {
+        if (k == "checkTombstoneStatuses") {
+            this.checkMobStatus();
+        }
     }
+
 }

@@ -21,11 +21,21 @@ class GiantKiller extends tool.Weapon {
     }
 
     public function resetGodSlayerBuff(): Void {
+        this.godSlayerBuff = 0.0;
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        if (k == "godSlayerBuff") {
+            this.resetGodSlayerBuff();
+        }
     }
 
-    public function onOwnerAttackResultReceived(arg0: tool.atk.AttackData): Void {
+
+    public function onOwnerAttackResultReceived(a: tool.atk.AttackData): Void {
+        if (a.isSuccess()) {
+            this.resetGodSlayerBuff();
+        }
     }
+
 }

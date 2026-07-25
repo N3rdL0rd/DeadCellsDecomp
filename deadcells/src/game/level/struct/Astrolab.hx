@@ -10,9 +10,12 @@ class Astrolab extends level.LevelStruct {
         throw "stub: buildMainRooms not decompiled";
     }
 
-    public function createAstrolabBranch(arg0: level.RoomNode): level.RoomNode {
-        throw "stub: createAstrolabBranch not decompiled";
+    public function createAstrolabBranch(content: level.RoomNode): level.RoomNode {
+        var cross: level.RoomNode = super.createNode("Combat", null, null, null);
+        content.set_parent(cross);
+        return cross;
     }
+
 
     public override function buildSecondaryRooms(): Void {
     }

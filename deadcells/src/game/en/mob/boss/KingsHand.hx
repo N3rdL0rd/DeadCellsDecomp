@@ -43,7 +43,9 @@ class KingsHand extends en.mob.Boss {
     }
 
     public function resetAction(): Void {
+        this.setAction(KH_Wait);
     }
+
 
     public function inCombat(): Bool {
         throw "stub: inCombat not decompiled";

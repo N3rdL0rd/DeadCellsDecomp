@@ -5,9 +5,13 @@ class Scissor extends tool.Weapon {
     public var mobDead: Bool;
     public var lastRndFrame: Int;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        this.lastRndFrame = -1;
+        this.mobDead = false;
+        super(o, i);
+        this.delayer = new libs.Delayer(60.0);
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";
@@ -27,8 +31,20 @@ class Scissor extends tool.Weapon {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
+        if (this.delayer != null) {
+            if (pr.Game.ME != null) {
+                this.delayer.update(pr.Game.ME.tmod);
+            }
+        }
     }
 
+
     public override function dispose(): Void {
+        super.dispose();
+        if (this.delayer != null) {
+            this.delayer.cancelEverything();
+        }
     }
+
 }

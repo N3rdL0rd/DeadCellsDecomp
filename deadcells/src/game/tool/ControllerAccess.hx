@@ -10,8 +10,10 @@ class ControllerAccess {
     public function new(arg0: tool.Controller, arg1: String, arg2: Dynamic) {
     }
 
-    public function setUseCustomBindings(arg0: Bool): Void {
+    public function setUseCustomBindings(v: Bool): Void {
+        this.parent.useCustomBindings = v;
     }
+
 
     public function isAnyActionDown(): Bool {
         throw "stub: isAnyActionDown not decompiled";
@@ -28,8 +30,11 @@ class ControllerAccess {
     public function dispose(arg0: Dynamic): Void {
     }
 
-    public function setAnalogButtonThreshold(arg0: Float): Void {
+    public function setAnalogButtonThreshold(threshold: Float): Void {
+        this.parent.triggerDeadzone = threshold;
+        this.parent.syncTriggerDeadzone();
     }
+
 
     public function onActPressed(arg0: Int, arg1: Bool): Void {
     }

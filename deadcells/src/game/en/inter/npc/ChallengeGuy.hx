@@ -6,9 +6,12 @@ class ChallengeGuy extends en.inter.Npc {
     public var glowSpr: libs.heaps.slib.HSprite;
     public var light: tool.EntityLight;
 
-    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
-        super();
+    public function new(lvl: pr.Level, r: level.Room) {
+        super(lvl, ChallengeGuy);
+        super.autoPlace(r, null, null);
+        this.hei = 78.0;
     }
+
 
     public override function initGfx(): Void {
     }

@@ -22,8 +22,12 @@ class BubbleShieldPower extends Power {
     public override function fixedUpdate(): Void {
     }
 
-    public function _killParticlesOnEndUpdate(arg0: libs.heaps.HParticle): Void {
+    public function _killParticlesOnEndUpdate(p: libs.heaps.HParticle): Void {
+        if (this.destroyed) {
+            p.kill();
+        }
     }
+
 
     public override function postUpdate(): Void {
     }

@@ -113,6 +113,7 @@ class BossSelector extends ui.sel.GridSelector {
     }
 
     public override function getTitleText(): String {
-        throw "stub: getTitleText not decompiled";
+        return Lang.t.untranslated("");
     }
+
 }

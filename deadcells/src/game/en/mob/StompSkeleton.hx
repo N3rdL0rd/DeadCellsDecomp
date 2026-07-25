@@ -42,8 +42,14 @@ class StompSkeleton extends en.Mob {
     public override function postUpdate(): Void {
     }
 
-    public override function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(wDir: Int): Void {
+        super.onTouchWall(wDir);
+        var var4: Bool = this.cd.fastCheck.exists(142606336);
+        if (var4) {
+            this.stopHellStomp();
+        }
     }
+
 
     public override function onTouchCeil(): Void {
     }

@@ -13,8 +13,13 @@ class ATStatue extends Entity {
         super();
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        super.onCooldownEnd(k, subIndex);
+        if (k == "destroy") {
+            super.destroy();
+        }
     }
+
 
     public override function initGfx(): Void {
     }

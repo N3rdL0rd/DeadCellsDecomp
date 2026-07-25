@@ -1,9 +1,12 @@
 package en.dookuInteractions;
 
 class DookuInteractionProjectileWave extends en.dookuInteractions.DookuInteraction {
-    public function new(arg0: en.dookuInteractions.DookuInteractionsManager = null) {
-        super();
+    public function new(parent: en.dookuInteractions.DookuInteractionsManager) {
+        super(parent);
+        this.type = "ProjectileWave";
+        this.ID = 4;
     }
+
 
     public override function initTexts(): Void {
     }

@@ -20,9 +20,10 @@ class Struct {
         throw "stub: getRoomByName not decompiled";
     }
 
-    public static function createCross(arg0: String): tool.mod.script.RoomNode {
-        throw "stub: createCross not decompiled";
+    public static function createCross(_roomName: String): tool.mod.script.RoomNode {
+        return tool.mod.script.Struct.createRoomWithTypeFromGroup("Corridor", "Common").setName(_roomName);
     }
+
 
     public static function createExit(arg0: String): tool.mod.script.ExitNode {
         throw "stub: createExit not decompiled";
@@ -104,8 +105,10 @@ class Struct {
         throw "stub: get_allRooms not decompiled";
     }
 
-    public static function p_OnHeroDies(arg0: Dynamic): Void {
+    public static function p_OnHeroDies(_dummy: Dynamic): Void {
+        level.struct.ModedLevel.nextLevel = "";
     }
+
 
     public static function p_OnHeroChangeExitRoom(arg0: Dynamic): Void {
     }

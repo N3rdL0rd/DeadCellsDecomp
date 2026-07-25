@@ -150,9 +150,57 @@ class Assets {
         throw "stub: getDynamicLoadAtlasEnumFromString not decompiled";
     }
 
-    public static function getAtlasPath(arg0: DynamicLoadAtlas): String {
-        throw "stub: getAtlasPath not decompiled";
+    public static function getAtlasPath(atlas: DynamicLoadAtlas): String {
+        switch (atlas) {
+            case Lore:
+                return "atlas/lore.atlas";
+            case Friends:
+                return "atlas/friends.atlas";
+            case CustomHead:
+                return "atlas/customHead.atlas";
+            case LevelFire:
+                return "atlas/fxLevelFire.atlas";
+            case LevelWind:
+                return "atlas/fxLevelWind.atlas";
+            case LevelCandle:
+                return "atlas/fxLevelCandle.atlas";
+            case LevelGodRay:
+                return "atlas/fxLevelGodRay.atlas";
+            case FxMamaTick:
+                return "atlas/fxMamaTick.atlas";
+            case FxQueen:
+                return "atlas/fxQueen.atlas";
+            case FxDooku:
+                return "atlas/fxDooku.atlas";
+            case FxDeath:
+                return "atlas/fxAdele.atlas";
+            case FxBeholder:
+                return "atlas/fxBeholder.atlas";
+            case FxBuer:
+                return "atlas/fxBuer.atlas";
+            case FxCollector:
+                return "atlas/fxCollector.atlas";
+            case FxGoldGorger:
+                return "atlas/fxGoldGorger.atlas";
+            case FxHandOfTheKing:
+                return "atlas/fxHandOfTheKing.atlas";
+            case FxMedusa:
+                return "atlas/fxMedusa.atlas";
+            case FxServante:
+                return "atlas/fxServante.atlas";
+            case FxShopMimic:
+                return "atlas/fxShopMimic.atlas";
+            case FxTick:
+                return "atlas/fxTick.atlas";
+            case FxTimeKeeper:
+                return "atlas/fxTimeKeeper.atlas";
+            case FxLibrarian:
+                return "atlas/fxLibrarian.atlas";
+            default:
+                return null;
+        }
     }
+
 
     public static function initDynamicAtlasByAtlasId(): Void {
     }

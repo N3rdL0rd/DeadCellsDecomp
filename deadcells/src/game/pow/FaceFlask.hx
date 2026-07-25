@@ -13,8 +13,13 @@ class FaceFlask extends Power {
     public function playFlaskEffect(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        super.onCooldownEnd(k, subIndex);
+        if (k == "prepare") {
+            this.playFlaskEffect();
+        }
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

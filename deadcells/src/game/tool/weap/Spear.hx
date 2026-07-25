@@ -3,9 +3,11 @@ package tool.weap;
 class Spear extends tool.Weapon {
     public var n: Int;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        this.n = 0;
+        super(o, i);
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";

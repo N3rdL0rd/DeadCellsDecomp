@@ -18,7 +18,12 @@ class HydraSpell extends tool.Weapon {
     }
 
     public override function cancelChain(): Void {
+        super.cancelChain();
+        if (this.fxCircle != null) {
+            this.deleteFxCircle(null);
+        }
     }
+
 
     public override function fixedUpdate(): Void {
     }

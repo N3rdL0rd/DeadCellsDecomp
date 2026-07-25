@@ -40,12 +40,17 @@ class BoilerRoom extends en.Mob {
     }
 
     public function get_eyePosX(): Float {
-        throw "stub: get_eyePosX not decompiled";
+        if (this.dir > 0) {
+            return this.spr.x + 4.0;
+        }
+        return this.spr.x - 3.0;
     }
 
+
     public function get_eyePosY(): Float {
-        throw "stub: get_eyePosY not decompiled";
+        return this.spr.y + 5.0;
     }
+
 
     public override function get_targetSprPosX(): Float {
         throw "stub: get_targetSprPosX not decompiled";
@@ -85,8 +90,12 @@ class BoilerRoom extends en.Mob {
     public override function initGfx(): Void {
     }
 
-    public override function setElite(arg0: Bool): Void {
+    public override function setElite(disableEliteSkill: Bool): Void {
+        super.setElite(disableEliteSkill);
+        var var3: libs.heaps.slib.AnimManager = this.spr.get_anim();
+        var3.setStateAnimSpeed("walk", 2.0);
     }
+
 
     public override function onOutOfGameChange(): Void {
     }

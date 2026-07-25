@@ -15,7 +15,13 @@ class CustomSocketConnection {
     }
 
     public function disconnect(): Void {
+        if (this.socket != null) {
+            this.socket.close();
+        }
+        this.connected = false;
+        this.connecting = false;
     }
+
 
     public function reconnect(): Void {
     }
@@ -30,7 +36,11 @@ class CustomSocketConnection {
     }
 
     public function destroy(): Void {
+        this.disconnect();
+        this.cd.destroy();
+        this.destroyed = true;
     }
+
 
     public function preUpdate(arg0: Float): Void {
     }

@@ -57,8 +57,10 @@ class Save {
     public static function syncGameData(arg0: User, arg1: tool.GameData, arg2: pr.Game): Void {
     }
 
-    public static function delete(arg0: Dynamic): Void {
+    public static function delete(slot: Dynamic): Void {
+        tool.File.delete(tool.Save.fileName(slot));
     }
+
 
     public static function listSlots(arg0: Ref): Array<Dynamic> {
         throw "stub: listSlots not decompiled";

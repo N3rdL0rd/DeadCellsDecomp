@@ -38,7 +38,11 @@ class ChainSegment {
     }
 
     public function updateSprite(): Void {
+        this.sprite.x = this.attachX;
+        this.sprite.y = this.attachY;
+        this.sprite.rotation = this.angle;
     }
+
 
     public function set_visible(v: Bool): Bool {
         if (v != this.visible) {

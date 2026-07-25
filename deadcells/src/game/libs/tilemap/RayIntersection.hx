@@ -9,6 +9,11 @@ class RayIntersection {
     public function new() {
     }
 
-    public function load(arg0: libs.tilemap.RayIntersection): Void {
+    public function load(o: libs.tilemap.RayIntersection): Void {
+        this.x = o.x;
+        this.y = o.y;
+        this.seg = o.seg;
+        this.dist = o.dist;
     }
+
 }

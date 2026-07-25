@@ -20,5 +20,19 @@ class Tmx {
     public var objectTypes: haxe.ds.StringMap<Dynamic>;
 
     public function new() {
+        this.formatVersion = "unknown";
+        this.tiledVersion = "unknown";
+        this.tileWidth = 32;
+        this.tileHeight = 32;
+        this.width = 100;
+        this.height = 100;
+        this.backgroundColor = -7763575;
+        this.properties = new haxe.ds.StringMap();
+        this.tilesetImages = new haxe.ds.IntMap();
+        this.tilesetGIDs = new haxe.ds.StringMap();
+        this.tilesetGIDPaths = new haxe.ds.IntMap();
+        this.rootLayer = new tiled.TmxGroupLayer();
+        this.objectTypes = null;
     }
+
 }

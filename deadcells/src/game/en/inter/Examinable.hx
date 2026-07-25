@@ -44,8 +44,12 @@ class Examinable extends en.Interactive {
     public override function say(arg0: String, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
-    public function narrate(arg0: Entity, arg1: String, arg2: Dynamic): Void {
+    public function narrate(by: Entity, str: String, c: Dynamic): Void {
+        this.closeAllTexts();
+        this.lastSay = new ui.Saying(by, str, c, null, null, null, null);
+        this.lastSay.offset(0.0, -25.0);
     }
+
 
     public function enableAutoUse(): Void {
     }

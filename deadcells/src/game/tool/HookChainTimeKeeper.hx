@@ -39,8 +39,12 @@ class HookChainTimeKeeper extends libs.Process {
     }
 
     public function isExtending(): Bool {
-        throw "stub: isExtending not decompiled";
+        if (!this.destroyed) {
+            return this.cd.fastCheck.exists(633339904);
+        }
+        return false;
     }
+
 
     public function isRetracting(): Bool {
         throw "stub: isRetracting not decompiled";

@@ -3,9 +3,12 @@ package level.struct;
 class ModedLevel extends level.LevelStruct {
     public static var nextLevel: String;
 
-    public function new(arg0: User = null, arg1: Dynamic = null, arg2: libs.Rand = null) {
-        super();
+    public function new(user: User, level: Dynamic, rng: libs.Rand) {
+        super(user, level, rng);
+        var scriptManager: tool.mod.script.ScriptManager = tool.mod.script.ScriptManager.get_instance();
+        scriptManager.initLevelStruct(this);
     }
+
 
     public override function buildMainRooms(): level.RoomNode {
         throw "stub: buildMainRooms not decompiled";

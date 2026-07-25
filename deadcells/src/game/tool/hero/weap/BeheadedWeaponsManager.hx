@@ -12,7 +12,10 @@ class BeheadedWeaponsManager extends tool.hero.HeroWeaponsManager {
     }
 
     public override function init(): Void {
+        this.initWeapons();
+        super.init();
     }
+
 
     public function initWeapons(): Void {
     }

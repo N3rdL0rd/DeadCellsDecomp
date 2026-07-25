@@ -17,10 +17,14 @@ class TickArm {
     }
 
     public function announce(): Void {
+        this.setGlowColors(12543488, 9908224);
     }
 
+
     public function stopAnnounce(): Void {
+        this.setGlowColors(10178815, 7938041);
     }
+
 
     public function update(): Void {
     }

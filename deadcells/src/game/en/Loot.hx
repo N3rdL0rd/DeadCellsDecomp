@@ -25,7 +25,11 @@ class Loot extends Entity {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        this.initSprite(Assets.gameElements, "todoRed", null, null, null, null, null, null);
+        super.set_easeSpritePos(true);
     }
+
 
     public override function canBeHit(): Bool {
         return false;
@@ -38,8 +42,10 @@ class Loot extends Entity {
     public function lockFor(arg0: Float): Void {
     }
 
-    public override function onTouchWall(arg0: Int): Void {
+    public override function onTouchWall(wDir: Int): Void {
+        this.dx = -this.dx;
     }
+
 
     public override function initSprite(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Dynamic, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic, arg6: Dynamic, arg7: h3d.mat.Texture): Void {
     }
@@ -69,9 +75,13 @@ class Loot extends Entity {
     public function vanish(): Void {
     }
 
-    public function canBePickedUpBy(arg0: Entity): Bool {
-        throw "stub: canBePickedUpBy not decompiled";
+    public function canBePickedUpBy(e: Entity): Bool {
+        if (e.life > 0) {
+            return !e.destroyed;
+        }
+        return false;
     }
+
 
     public function loseMagnet(): Void {
     }

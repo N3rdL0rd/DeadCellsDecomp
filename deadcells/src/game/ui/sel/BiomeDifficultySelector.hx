@@ -26,6 +26,7 @@ class BiomeDifficultySelector extends ui.sel.BiomeSelector {
     }
 
     public override function getTitleText(): String {
-        throw "stub: getTitleText not decompiled";
+        return Lang.t.get("U34_COPY_BIOME_DIFFICULTY", null);
     }
+
 }

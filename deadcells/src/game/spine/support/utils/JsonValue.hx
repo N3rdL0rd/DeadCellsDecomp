@@ -21,9 +21,16 @@ class JsonDynamic {
         throw "stub: get not decompiled";
     }
 
-    public function getChild(arg0: String): Dynamic {
-        throw "stub: getChild not decompiled";
+    public function getChild(key: String): Dynamic {
+        var item: Dynamic = Reflect.field(this.data, key);
+        if (item == null) {
+            return null;
+        }
+        var value: spine.support.utils.JsonDynamic = new spine.support.utils.JsonDynamic(item);
+        var child: Dynamic = value.get_child();
+        return child;
     }
+
 
     public function getString(arg0: String, arg1: String): String {
         throw "stub: getString not decompiled";
@@ -46,20 +53,24 @@ class JsonDynamic {
     }
 
     public function asFloatArray(): Array<Float> {
-        throw "stub: asFloatArray not decompiled";
+        return this.data;
     }
+
 
     public function asShortArray(): Array<Int> {
-        throw "stub: asShortArray not decompiled";
+        return this.data;
     }
+
 
     public function asFloat(): Float {
-        throw "stub: asFloat not decompiled";
+        return this.data;
     }
 
+
     public function asInt(): Int {
-        throw "stub: asInt not decompiled";
+        return this.data;
     }
+
 
     public function isString(): Bool {
         throw "stub: isString not decompiled";
@@ -93,8 +104,12 @@ class JsonChild {
     public var data: Array<Dynamic>;
     public var index: Int;
 
-    public function new(arg0: Array<Dynamic>, arg1: Int, arg2: Array<Dynamic>) {
+    public function new(data: Array<Dynamic>, index: Int, keys: Array<Dynamic>) {
+        this.data = data;
+        this.index = index;
+        this.keys = keys;
     }
+
 
     public function has(arg0: String): Bool {
         throw "stub: has not decompiled";
@@ -130,16 +145,28 @@ class JsonChild {
     }
 
     public function asString(): String {
-        throw "stub: asString not decompiled";
+        var var4: String;
+        var var3: Dynamic = this.data[this.index];
+        if (var3 == null) {
+            var4 = null;
+        } else {
+            var4 = Std.string(var3);
+        }
+        return var4;
     }
+
 
     public function asFloat(): Float {
-        throw "stub: asFloat not decompiled";
+        var var3: Dynamic = this.data[this.index];
+        return var3;
     }
 
+
     public function asInt(): Int {
-        throw "stub: asInt not decompiled";
+        var var3: Dynamic = this.data[this.index];
+        return var3;
     }
+
 
     public function isString(): Bool {
         throw "stub: isString not decompiled";
@@ -166,10 +193,14 @@ class JsonChild {
     }
 
     public function asFloatArray(): Array<Float> {
-        throw "stub: asFloatArray not decompiled";
+        var var3: Dynamic = this.data[this.index];
+        return var3;
     }
 
+
     public function asShortArray(): Array<Int> {
-        throw "stub: asShortArray not decompiled";
+        var var3: Dynamic = this.data[this.index];
+        return var3;
     }
+
 }

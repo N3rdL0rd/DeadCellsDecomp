@@ -12,14 +12,27 @@ class VarSecure {
     }
 
     public function get(): Int {
-        throw "stub: get not decompiled";
+        var v: Int = this.value ^ this.key1;
+        if (this.check ^ this.key2 != v) {
+            this.bug = true;
+        }
+        return v;
     }
 
-    public function setValue(arg0: Int): Void {
+
+    public function setValue(v: Int): Void {
+        this.value = v ^ this.key1;
+        this.check = v ^ this.key2;
+        this.updateDummies();
     }
 
-    public function addValue(arg0: Int): Void {
+
+    public function addValue(v: Int): Void {
+        this.value = (this.value ^ this.key1) + v ^ this.key1;
+        this.check = (this.check ^ this.key2) + v ^ this.key2;
+        this.updateDummies();
     }
+
 
     public function fullRand(): Int {
         throw "stub: fullRand not decompiled";

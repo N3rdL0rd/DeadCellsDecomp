@@ -70,8 +70,9 @@ class Mob {
     }
 
     public function toString(): String {
-        throw "stub: toString not decompiled";
+        return '${this.kind}@${this.cx},${this.cy}(elite=${Std.string(this.elite)})';
     }
+
 
     public function getCLID(): Int {
         throw "stub: getCLID not decompiled";

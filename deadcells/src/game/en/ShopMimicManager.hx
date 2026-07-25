@@ -17,7 +17,11 @@ class ShopMimicManager extends Entity {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        Assets.lib.get("atlas/ShopMimic.atlas");
+        Assets.loadAtlas(FxShopMimic);
     }
+
 
     public override function fixedUpdate(): Void {
     }
@@ -36,7 +40,10 @@ class ShopMimicManager extends Entity {
     }
 
     public override function disposeGfx(): Void {
+        super.disposeGfx();
+        Assets.disposeAtlas(FxShopMimic);
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

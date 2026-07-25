@@ -6,6 +6,9 @@ class TextureWrap {
     public var ordinal: Int;
     public var name: String;
 
-    public function new(arg0: Int = 0, arg1: String = null) {
+    public function new(ordinal: Int, name: String) {
+        this.ordinal = ordinal;
+        this.name = name;
     }
+
 }

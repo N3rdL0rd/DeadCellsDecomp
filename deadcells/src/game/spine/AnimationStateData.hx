@@ -6,8 +6,16 @@ class AnimationStateData {
     public var tempAnimationStateDataKey: spine.AnimationStateDataKey;
     public var defaultMix: Float;
 
-    public function new(arg0: spine.SkeletonData) {
+    public function new(skeletonData: spine.SkeletonData) {
+        this.defaultMix = 0.0;
+        this.tempAnimationStateDataKey = new spine.AnimationStateDataKey();
+        this.animationToMixTime = new haxe.ds.IntMap();
+        if (skeletonData == null) {
+            throw new spine.support.error.IllegalArgumentException("skeletonData cannot be null.");
+        }
+        this.skeletonData = skeletonData;
     }
+
 }
 
 class AnimationStateDataKey {
@@ -20,10 +28,37 @@ class AnimationStateDataKey {
 
 
     public function getHashCode(): Int {
-        throw "stub: getHashCode not decompiled";
+        return 31 * (31 + this.a1.hashCode) + this.a2.hashCode;
     }
 
-    public function equals(arg0: Dynamic): Bool {
-        throw "stub: equals not decompiled";
+
+    public function equals(obj: Dynamic): Bool {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        var other: spine.AnimationStateDataKey = obj;
+        if (this.a1 == null) {
+            if (other.a1 != null) {
+                return false;
+            }
+        } else {
+            if (this.a1 != other.a1) {
+                return false;
+            }
+        }
+        if (this.a2 == null) {
+            if (other.a2 != null) {
+                return false;
+            }
+        } else {
+            if (this.a2 != other.a2) {
+                return false;
+            }
+        }
+        return true;
     }
+
 }

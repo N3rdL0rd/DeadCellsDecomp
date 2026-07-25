@@ -14,7 +14,10 @@ class ElevatorDoor extends en.inter.Door {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        super.initDoorSkin("magicDoor", "magicDoorSide", "hingeBigDoors", "magicDoorGradient", null, null);
     }
+
 
     public override function onFocus(): Void {
     }

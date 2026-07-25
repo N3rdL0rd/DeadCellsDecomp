@@ -21,8 +21,13 @@ class Minimoth extends en.Mob {
     public override function initSkills(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
+        if (k == "rolling") {
+            this.stopRoll();
+        }
     }
+
 
     public override function behaviourAi(): Void {
     }

@@ -59,8 +59,13 @@ class DodgeRoll extends tool.mainSkills.Dodge {
     public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }
 
-    public function onOwnerLand(arg0: Float): Void {
+    public function onOwnerLand(height: Float): Void {
+        if (!this.isActive()) {
+            return;
+        }
+        this.hero.dx = this.hero.dx + this.hero.dir * 0.2;
     }
+
 
     public override function onOwnerDamaged(arg0: tool.atk.AttackData): Void {
     }

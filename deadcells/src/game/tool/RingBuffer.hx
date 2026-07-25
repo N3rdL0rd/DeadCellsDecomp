@@ -24,12 +24,20 @@ class RingBuffer {
     }
 
     public function hasNext(): Bool {
-        throw "stub: hasNext not decompiled";
+        var r: Bool = this.curIndex != this.indexEnd;
+        if (!r) {
+            this.curIndex = this.indexStart;
+        }
+        return r;
     }
 
+
     public function next(): Dynamic {
-        throw "stub: next not decompiled";
+        var element: Dynamic = this.vector[this.curIndex];
+        this.incrementCurIndex();
+        return element;
     }
+
 
     public function reset(): Void {
     }

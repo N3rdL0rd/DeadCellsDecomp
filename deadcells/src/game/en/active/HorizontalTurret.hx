@@ -36,16 +36,18 @@ class HorizontalTurret extends en.active.Turret {
     }
 
     public function get_leftBow(): Bool {
-        throw "stub: get_leftBow not decompiled";
+        return this.cd.fastCheck.exists(-1958739968);
     }
+
 
     public function set_leftBow(arg0: Bool): Bool {
         throw "stub: set_leftBow not decompiled";
     }
 
     public function get_rightBow(): Bool {
-        throw "stub: get_rightBow not decompiled";
+        return this.cd.fastCheck.exists(-1960837120);
     }
+
 
     public function set_rightBow(arg0: Bool): Bool {
         throw "stub: set_rightBow not decompiled";

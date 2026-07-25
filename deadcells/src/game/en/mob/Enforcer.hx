@@ -39,8 +39,14 @@ class Enforcer extends en.Mob {
     public override function fixedUpdate(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        super.onCooldownEnd(k, subIndex);
+        if (k == "blocking") {
+            var var5: libs.heaps.slib.AnimManager = this.spr.get_anim();
+            var5.stopWithStateAnims();
+        }
     }
+
 
     public function isHeroDirectAttacking(): Bool {
         throw "stub: isHeroDirectAttacking not decompiled";

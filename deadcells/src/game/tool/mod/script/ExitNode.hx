@@ -6,7 +6,10 @@ class ExitNode extends tool.mod.script.RoomNode {
     }
 
 
-    public function setTitleAndColor(arg0: String, arg1: Int): tool.mod.script.ExitNode {
-        throw "stub: setTitleAndColor not decompiled";
+    public function setTitleAndColor(_exitTitle: String, _exitColor: Int): tool.mod.script.ExitNode {
+        this.p_RoomNode.exitName = _exitTitle;
+        this.p_RoomNode.exitColor = _exitColor;
+        return this;
     }
+
 }

@@ -29,11 +29,19 @@ class Main extends libs.Process {
     }
 
 
-    public static function openUrlInBrowser(arg0: String): Void {
+    public static function openUrlInBrowser(url: String): Void {
+        Sys.command("xdg-open", [url]);
     }
 
-    public static function openURL(arg0: String): Void {
+
+    public static function openURL(url: String): Void {
+        if (steam.Api.isOverlayEnabled()) {
+            steam.Api.openOverlay(url);
+        } else {
+            Main.openUrlInBrowser(url);
+        }
     }
+
 
     public function checkSaveCompat(): Void {
     }
@@ -51,7 +59,12 @@ class Main extends libs.Process {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
+        if (Main.ME == this) {
+            Main.ME = null;
+        }
     }
+
 
     public function cleanUser(): Void {
     }

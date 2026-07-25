@@ -8,8 +8,18 @@ class AlucardIntroRoom extends level.LoreManager {
     }
 
 
-    public override function onDropLoot(arg0: en.inter.Examinable, arg1: Entity, arg2: String): Void {
+    public override function onDropLoot(e: en.inter.Examinable, by: Entity, examinableId: String): Void {
+        super.onDropLoot(e, by, examinableId);
+        var shieldSpr: libs.heaps.slib.HSprite = super.getSprite("ukood_shield");
+        if (shieldSpr != null) {
+            if (shieldSpr != null) {
+                if (shieldSpr.parent != null) {
+                    shieldSpr.parent.removeChild(shieldSpr);
+                }
+            }
+        }
     }
+
 
     public override function onCustomEvent(arg0: String, arg1: en.inter.Examinable): Void {
     }

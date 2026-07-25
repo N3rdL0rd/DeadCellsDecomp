@@ -56,7 +56,9 @@ class Text extends h2d.HtmlText {
     }
 
     public function refresh(): Void {
+        this.set_text(this.rawText);
     }
+
 
     public override function draw(arg0: h2d.RenderContext): Void {
     }

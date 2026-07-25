@@ -29,7 +29,10 @@ class AmazonBrutal extends en.mob.AmazonBase {
     }
 
     public override function init(): Void {
+        super.init();
+        this.setAffectS(64, 99999.0, null, null);
     }
+
 
     public override function registerToManager(): Void {
     }
@@ -115,7 +118,13 @@ class AmazonBrutal extends en.mob.AmazonBase {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
+        var var2: Bool = this.cd.fastCheck.exists(511705088);
+        if (var2) {
+            this.cineDashPhaseSpinning();
+        }
     }
+
 
     public override function preUpdate(): Void {
     }

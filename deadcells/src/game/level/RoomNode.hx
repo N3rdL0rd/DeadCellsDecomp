@@ -53,8 +53,19 @@ class RoomNode {
     }
 
     public function isInZBranch(): Bool {
-        throw "stub: isInZBranch not decompiled";
+        if (this.isZRoot) {
+            return true;
+        }
+        var p: level.RoomNode = this.parent;
+        while (p != null) {
+            if (p.isZRoot) {
+                return true;
+            }
+            p = p.parent;
+        }
+        return false;
     }
+
 
     public function set_isZRoot(arg0: Bool): Bool {
         throw "stub: set_isZRoot not decompiled";
@@ -114,13 +125,31 @@ class RoomNode {
         throw "stub: parentDistanceType not decompiled";
     }
 
-    public function addBefore(arg0: level.RoomNode, arg1: String): level.RoomNode {
-        throw "stub: addBefore not decompiled";
+    public function addBefore(e: level.RoomNode, id: String): level.RoomNode {
+        if (e == null) {
+            if (id != null) {
+                e = this.struct.getId(id);
+            }
+        }
+        if (e == null) {
+            throw "AddBefore target is null";
+        }
+        this.set_parent(e.parent);
+        e.set_parent(this);
+        return this;
     }
 
-    public function branchTo(arg0: level.RoomNode, arg1: String): level.RoomNode {
-        throw "stub: branchTo not decompiled";
+
+    public function branchTo(e: level.RoomNode, id: String): level.RoomNode {
+        if (e == null) {
+            if (id != null) {
+                e = this.struct.getId(id);
+            }
+        }
+        this.set_parent(e);
+        return this;
     }
+
 
     public function addAfter(arg0: level.RoomNode, arg1: String): level.RoomNode {
         throw "stub: addAfter not decompiled";
@@ -150,17 +179,30 @@ class RoomNode {
         throw "stub: hasParentMetaGate not decompiled";
     }
 
-    public function hasParentType(arg0: String): Bool {
-        throw "stub: hasParentType not decompiled";
+    public function hasParentType(type: String): Bool {
+        var p: level.RoomNode = this.parent;
+        while (p != null) {
+            if (p.rType == type) {
+                return true;
+            }
+            p = p.parent;
+        }
+        return false;
     }
+
 
     public function isParentOf(arg0: level.RoomNode, arg1: Dynamic): Bool {
         throw "stub: isParentOf not decompiled";
     }
 
     public function getRoot(): level.RoomNode {
-        throw "stub: getRoot not decompiled";
+        var n: level.RoomNode = this;
+        while (n.parent != null) {
+            n = n.parent;
+        }
+        return n;
     }
+
 
     public function searchChildren(arg0: String): level.RoomNode {
         throw "stub: searchChildren not decompiled";
@@ -171,8 +213,15 @@ class RoomNode {
     }
 
     public function countParents(): Int {
-        throw "stub: countParents not decompiled";
+        var n: Int = 0;
+        var p: level.RoomNode = this.parent;
+        while (p != null) {
+            p = p.parent;
+            n++;
+        }
+        return n;
     }
+
 
     public function countChildrenRec(arg0: Dynamic): Int {
         throw "stub: countChildrenRec not decompiled";

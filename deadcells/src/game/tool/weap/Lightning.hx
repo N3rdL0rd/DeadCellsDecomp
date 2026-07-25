@@ -10,8 +10,12 @@ class Lightning extends tool.Weapon {
     }
 
     public function isActive(): Bool {
-        throw "stub: isActive not decompiled";
+        if (this.active) {
+            return !this.destroyed;
+        }
+        return false;
     }
+
 
     public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";

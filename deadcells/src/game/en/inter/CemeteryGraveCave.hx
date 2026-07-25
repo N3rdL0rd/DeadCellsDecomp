@@ -29,8 +29,12 @@ class CemeteryGraveCave extends en.Interactive {
         throw "stub: hasKey not decompiled";
     }
 
-    public function narrate(arg0: Entity, arg1: String, arg2: Dynamic): Void {
+    public function narrate(by: Entity, str: String, c: Dynamic): Void {
+        this.closeSay();
+        this.lastSay = new ui.Saying(by, str, c, null, null, null, null);
+        this.lastSay.offset(0.0, -25.0);
     }
+
 
     public override function onFocus(): Void {
     }

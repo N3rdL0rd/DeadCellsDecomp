@@ -276,6 +276,10 @@ class Pattern {
     public var wid: Int;
     public var hei: Int;
 
-    public function new(arg0: Array<Dynamic>, arg1: Int, arg2: Int) {
+    public function new(grid: Array<Dynamic>, wid: Int, hei: Int) {
+        this.grid = grid;
+        this.wid = wid;
+        this.hei = hei;
     }
+
 }

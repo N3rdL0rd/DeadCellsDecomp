@@ -19,8 +19,17 @@ class Console extends h2d.Console {
     public override function log(arg0: String, arg1: Int = null): Void {
     }
 
-    public function logError(arg0: Dynamic): Void {
+    public function logError(e: Dynamic): Void {
+        var var3: String;
+        if (e == null) {
+            var3 = null;
+        } else {
+            var3 = Std.string(e);
+        }
+        this.log(var3, 16711680);
+        h2d.Console.HIDE_LOG_TIMEOUT = 9999.0;
     }
+
 
     public function updateUIVisibility(): Void {
     }
@@ -29,5 +38,10 @@ class Console extends h2d.Console {
     }
 
     public override function onRemove(): Void {
+        super.onRemove();
+        if (ui.Console.ME == this) {
+            ui.Console.ME = null;
+        }
     }
+
 }

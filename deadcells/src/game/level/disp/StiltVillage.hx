@@ -41,7 +41,10 @@ class StiltVillage extends level.BiomeDisp {
     }
 
     public override function renderFloorStamps(): Void {
+        super.addCeilingStamps("stampCeiling", null, null);
+        super.addFloorStamps("floorStamp", null, null);
     }
+
 
     public override function addCliffLights(): Void {
     }

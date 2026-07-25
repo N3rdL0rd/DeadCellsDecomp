@@ -68,7 +68,14 @@ class Shipwreck extends level.DynamicBiomeDisp {
     }
 
     public function renderBoatOutline(): Void {
+        this.renderBigBoatOutline("outline/outlineBoatBack");
+        this.renderJunkBoatOutline("outline/outlineJunkBack");
+        this.renderBigBoatOutline("outline/outlineBoatFront");
+        this.renderJunkBoatOutline("outline/outlineJunkFront");
+        this.renderCornerBoatOutline("outline/outlineBoatCornerFront");
+        this.renderCornerExt();
     }
+
 
     public function renderJunkBoatOutline(arg0: String): Void {
     }

@@ -34,8 +34,9 @@ class BaseBow extends tool.Weapon {
     }
 
     public function getBowElapsedChargeS(): Float {
-        throw "stub: getBowElapsedChargeS not decompiled";
+        return this.bowChargeF / 30.0;
     }
+
 
     public function getFullChargeRatio(): Float {
         throw "stub: getFullChargeRatio not decompiled";

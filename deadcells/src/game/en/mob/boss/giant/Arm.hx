@@ -37,8 +37,13 @@ class Arm {
     }
 
 
-    public function setGlowAlpha(arg0: Float, arg1: Int): Void {
+    public function setGlowAlpha(v: Float, dir: Int): Void {
+        this.upperGlow.alpha = v;
+        this.lowerGlow.alpha = v;
+        this.braceletGlow.alpha = v;
+        this.impulseDir = dir;
     }
+
 
     public function postUpdate(arg0: Float): Void {
     }

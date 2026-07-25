@@ -54,7 +54,11 @@ class Infection extends libs.Process {
     }
 
     public override function update(): Void {
+        super.update();
+        this.updateGracePeriod();
+        this.updateInfectionRules();
     }
+
 
     public function updateGracePeriod(): Void {
     }

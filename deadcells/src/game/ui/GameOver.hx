@@ -19,5 +19,8 @@ class GameOver extends ui.Process {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
+        ui.GameOver.ME = null;
     }
+
 }

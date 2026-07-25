@@ -21,9 +21,13 @@ class ScriptInterpreter extends hscript.Interp {
     }
 
 
-    public override function execute(arg0: hscript.Expr): Dynamic {
-        throw "stub: execute not decompiled";
+    public override function execute(_expr: hscript.Expr): Dynamic {
+        this.resetVariables();
+        this.exposeTypesAndFunctions();
+        var result: Dynamic = super.execute(_expr);
+        return result;
     }
+
 
     public function exposeTypesAndFunctions(): Void {
     }

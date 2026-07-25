@@ -24,13 +24,17 @@ class RandDeck {
     }
 
     public function clear(): Void {
+        this.cur = 0;
+        this.size = 0;
     }
+
 
     public function pop(): Dynamic {
         throw "stub: pop not decompiled";
     }
 
     public function peek(): Dynamic {
-        throw "stub: peek not decompiled";
+        return this.a[this.cur];
     }
+
 }

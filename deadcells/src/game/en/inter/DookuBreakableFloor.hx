@@ -14,7 +14,10 @@ class DookuBreakableFloor extends en.inter.FloatingPlatform {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        this.spr.blendMode = None;
     }
+
 
     public function target(arg0: Float): Void {
     }

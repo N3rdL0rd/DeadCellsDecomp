@@ -9,7 +9,10 @@ class DookuCastleMapBuilder extends level.gen.MapBuilder {
     }
 
     public override function initRoomNodes(): Void {
+        super.initRoomNodes();
+        this.addBigRoomExtension();
     }
+
 
     public override function buildMap(): level.LevelMap {
         throw "stub: buildMap not decompiled";

@@ -1,15 +1,25 @@
 package tool.weap.sh;
 
 class IceShield extends tool.weap.BaseShield {
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
+        this.holdAnimId = "blockIceShield";
+        this.parryAnimId = "blockEndIceShield";
     }
 
-    public override function onShieldBlock(arg0: tool.atk.AttackData, arg1: Bool): Void {
+
+    public override function onShieldBlock(sourceAtk: tool.atk.AttackData, fullParry: Bool): Void {
+        super.onShieldBlock(sourceAtk, fullParry);
+        if (fullParry) {
+            this.iceExplosion(sourceAtk);
+        }
     }
 
-    public function addIceClonesOn(arg0: Entity): Void {
+
+    public function addIceClonesOn(e: Entity): Void {
+        e.setAffectS(23, 10.0, null, null);
     }
+
 
     public override function counterGrenade(arg0: en.Grenade): Void {
     }

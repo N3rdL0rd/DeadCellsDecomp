@@ -49,7 +49,13 @@ class SkillFx extends tool.skill.SkillEvent {
     }
 
     public override function onDispose(): Void {
+        if (this.particle != null) {
+            if (this.loopWhileTrigger) {
+                this.particle.kill();
+            }
+        }
     }
+
 
     public function playFx(): Void {
     }

@@ -62,8 +62,13 @@ class Tumulus extends level.BiomeDisp {
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
-    public function decorateTumulusSide(arg0: level.Room, arg1: Int, arg2: Int): Void {
+    public function decorateTumulusSide(room: level.Room, startX: Int, endX: Int): Void {
+        var rectToFillWithDirtExt: Array<Dynamic> = this.findDirtExtRectangleCandidate(room, startX, endX);
+        rectToFillWithDirtExt = this.prepareDirtExtRectangle(rectToFillWithDirtExt);
+        this.renderDirtExtRectangle(rectToFillWithDirtExt);
+        this.displayTumulusBottom(room);
     }
+
 
     public function displayLittleTumulus(): Void {
     }

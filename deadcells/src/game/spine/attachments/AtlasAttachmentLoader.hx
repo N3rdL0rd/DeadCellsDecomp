@@ -3,8 +3,13 @@ package spine.attachments;
 class AtlasAttachmentLoader {
     public var atlas: spine.support.graphics.TextureAtlas;
 
-    public function new(arg0: spine.support.graphics.TextureAtlas) {
+    public function new(atlas: spine.support.graphics.TextureAtlas) {
+        if (atlas == null) {
+            throw new spine.support.error.IllegalArgumentException("atlas cannot be null.");
+        }
+        this.atlas = atlas;
     }
+
 
     public function newRegionAttachment(arg0: spine.Skin, arg1: String, arg2: String): spine.attachments.RegionAttachment {
         throw "stub: newRegionAttachment not decompiled";
@@ -14,19 +19,23 @@ class AtlasAttachmentLoader {
         throw "stub: newMeshAttachment not decompiled";
     }
 
-    public function newBoundingBoxAttachment(arg0: spine.Skin, arg1: String): spine.attachments.BoundingBoxAttachment {
-        throw "stub: newBoundingBoxAttachment not decompiled";
+    public function newBoundingBoxAttachment(skin: spine.Skin, name: String): spine.attachments.BoundingBoxAttachment {
+        return new spine.attachments.BoundingBoxAttachment(name);
     }
 
-    public function newClippingAttachment(arg0: spine.Skin, arg1: String): spine.attachments.ClippingAttachment {
-        throw "stub: newClippingAttachment not decompiled";
+
+    public function newClippingAttachment(skin: spine.Skin, name: String): spine.attachments.ClippingAttachment {
+        return new spine.attachments.ClippingAttachment(name);
     }
 
-    public function newPathAttachment(arg0: spine.Skin, arg1: String): spine.attachments.PathAttachment {
-        throw "stub: newPathAttachment not decompiled";
+
+    public function newPathAttachment(skin: spine.Skin, name: String): spine.attachments.PathAttachment {
+        return new spine.attachments.PathAttachment(name);
     }
 
-    public function newPointAttachment(arg0: spine.Skin, arg1: String): spine.attachments.PointAttachment {
-        throw "stub: newPointAttachment not decompiled";
+
+    public function newPointAttachment(skin: spine.Skin, name: String): spine.attachments.PointAttachment {
+        return new spine.attachments.PointAttachment(name);
     }
+
 }

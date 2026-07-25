@@ -128,8 +128,9 @@ class Giant extends en.mob.Boss {
     }
 
     public function isLasering(): Bool {
-        throw "stub: isLasering not decompiled";
+        return this.cd.fastCheck.exists(1077936128);
     }
+
 
     public override function onBossLevelUp(): Void {
     }

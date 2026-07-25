@@ -18,7 +18,9 @@ class Delayer {
     }
 
     public function destroy(): Void {
+        this.delays = null;
     }
+
 
     public function cancelEverything(): Void {
     }

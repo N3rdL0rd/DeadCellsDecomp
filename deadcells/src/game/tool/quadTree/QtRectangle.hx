@@ -6,8 +6,13 @@ class QtRectangle {
     public var w: Int;
     public var h: Int;
 
-    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0) {
+    public function new(x: Int, y: Int, w: Int, h: Int) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
     }
+
 
     public function contains(arg0: tool.quadTree.QtPoint): Bool {
         throw "stub: contains not decompiled";

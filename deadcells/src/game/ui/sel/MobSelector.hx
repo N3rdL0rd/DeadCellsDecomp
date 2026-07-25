@@ -54,8 +54,9 @@ class MobSelector extends ui.sel.GridSelector {
     }
 
     public override function getTitleText(): String {
-        throw "stub: getTitleText not decompiled";
+        return Lang.t.get("Select a mob", null);
     }
+
 
     public function mobFromEntry(arg0: Dynamic): String {
         throw "stub: mobFromEntry not decompiled";

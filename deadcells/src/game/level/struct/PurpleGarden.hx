@@ -35,8 +35,12 @@ class PurpleGarden extends level.LevelStruct {
     public function addBridgeEnigma(): Void {
     }
 
-    public function addMerchants(arg0: Array<Dynamic>, arg1: Array<Dynamic>): Void {
+    public function addMerchants(towerNodes: Array<Dynamic>, secondPlateauNodes: Array<Dynamic>): Void {
+        this.powerTowerMerchant(towerNodes);
+        this.weaponTowerMerchant(towerNodes);
+        this.powerBuildingMerchant(secondPlateauNodes);
     }
+
 
     public function addTreasures(arg0: Array<Dynamic>, arg1: Array<Dynamic>): Void {
     }

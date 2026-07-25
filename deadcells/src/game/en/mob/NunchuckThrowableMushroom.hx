@@ -13,7 +13,10 @@ class NunchuckThrowableMushroom extends en.mob.ThrowableMushroom {
     }
 
     public function onCineEnd(): Void {
+        this.unlockAi();
+        this.removeAllAffects(5);
     }
+
 
     public override function dropLoot(): Void {
     }

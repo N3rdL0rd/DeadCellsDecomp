@@ -34,7 +34,14 @@ class AdeleScythe extends tool.Weapon {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
+        if (this.delayer != null) {
+            if (pr.Game.ME != null) {
+                this.delayer.update(pr.Game.ME.tmod);
+            }
+        }
     }
+
 
     public override function dispose(): Void {
     }

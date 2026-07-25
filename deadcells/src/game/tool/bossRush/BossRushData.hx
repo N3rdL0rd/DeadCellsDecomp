@@ -39,16 +39,31 @@ class BossRushData {
     }
 
     public function getMaterial(): String {
-        throw "stub: getMaterial not decompiled";
+        var var1: Int = this.material;
+        switch (var1) {
+            case 0:
+                return "Stone";
+            case 1:
+                return "Copper";
+            case 2:
+                return "Gold";
+            case 3:
+                return "Shiny";
+            default:
+                return "Stone";
+        }
     }
+
 
     public function getPantSpriteName(): String {
-        throw "stub: getPantSpriteName not decompiled";
+        return 'statueBRPant${this.getMaterial()}${this.pant}';
     }
 
+
     public function getTopSpriteName(): String {
-        throw "stub: getTopSpriteName not decompiled";
+        return 'statueBRTop${this.getMaterial()}${this.top}';
     }
+
 
     public function hasSeenEnoughBoss(arg0: Bool): Bool {
         throw "stub: hasSeenEnoughBoss not decompiled";

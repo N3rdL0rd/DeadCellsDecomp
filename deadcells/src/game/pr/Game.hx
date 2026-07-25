@@ -213,7 +213,10 @@ class Game extends libs.Process {
     }
 
     public override function pause(): Void {
+        super.pause();
+        libs.heaps.slib.SpriteLib.TMOD = 0.0;
     }
+
 
     public function modalPause(arg0: Ref): Void {
     }
@@ -230,8 +233,13 @@ class Game extends libs.Process {
     public function pauseGameIfAvailable(): Void {
     }
 
-    public function onSteamOverlay(arg0: Bool): Void {
+    public function onSteamOverlay(active: Bool): Void {
+        if (!active) {
+            return;
+        }
+        this.pauseGameIfAvailable();
     }
+
 
     public override function onDispose(): Void {
     }

@@ -9,7 +9,10 @@ class StaphyRoomCine extends GameCinematic {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
+        this.tw.update(null);
     }
+
 
     public override function onDispose(): Void {
     }

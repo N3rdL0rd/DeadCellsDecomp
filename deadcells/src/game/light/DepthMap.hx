@@ -10,8 +10,12 @@ class DepthMap {
     public function new(arg0: Int = 0) {
     }
 
-    public function build(arg0: h2d.Layers, arg1: Int): Void {
+    public function build(rootLayer: h2d.Layers, layerCount: Int): Void {
+        this.currentObjectIndex = 0;
+        this.addLayerContent(rootLayer, layerCount);
+        this.objectsCount = this.currentObjectIndex + 1;
     }
+
 
     public function getLayerDepth(arg0: h2d.Object): Float {
         throw "stub: getLayerDepth not decompiled";
@@ -28,9 +32,10 @@ class DepthMap {
         throw "stub: computeLayerDepth not decompiled";
     }
 
-    public function computeObjectDepth(arg0: Int): Float {
-        throw "stub: computeObjectDepth not decompiled";
+    public function computeObjectDepth(objectIndex: Int): Float {
+        return 1.0 - objectIndex / this.objectsCount;
     }
+
 
     public function addLayerContent(arg0: h2d.Layers, arg1: Int): Void {
     }

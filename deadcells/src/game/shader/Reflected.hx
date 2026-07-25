@@ -5,9 +5,13 @@ class Reflected extends hxsl.Shader {
     public static var _SHADER: hxsl.SharedShader;
     public var reflectY__: Float;
 
-    public function new(arg0: Float) {
+    public function new(reflectY: Float) {
+        this.reflectY__ = 0.0;
         super();
+        this.reflectY__ = reflectY;
+        this.priority = 2;
     }
+
 
     public override function updateConstants(arg0: hxsl.Globals): Void {
     }

@@ -22,8 +22,13 @@ class LevelInfo {
     public var gold: Int;
     public var loreDescriptions: Array<Dynamic>;
 
-    public function new(arg0: Dynamic = null) {
+    public function new(_cdbLevelInfo: Dynamic) {
+        this.props = new tool.mod.script.LevelProps();
+        if (_cdbLevelInfo != null) {
+            this.p_CopyInfoFrom(_cdbLevelInfo);
+        }
     }
+
 
     public function p_CopyInfoFrom(arg0: Dynamic): Void {
     }

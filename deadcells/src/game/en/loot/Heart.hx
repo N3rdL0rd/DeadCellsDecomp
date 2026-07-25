@@ -17,8 +17,12 @@ class Heart extends en.Loot {
     public override function initGfx(): Void {
     }
 
-    public override function pickUp(arg0: en.Hero): Void {
+    public override function pickUp(h: en.Hero): Void {
+        super.pickUp(h);
+        this.pickUpFeedBack(null);
+        h.onPickupLoot(this);
     }
+
 
     public override function pickUpFeedBack(arg0: Ref): Void {
     }

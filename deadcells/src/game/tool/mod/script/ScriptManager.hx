@@ -14,17 +14,35 @@ class ScriptManager {
     }
 
     public function reset(): Void {
+        this.struct = new tool.mod.script.StructInterpreter();
+        this.releaseLevelStruct();
+        level.struct.ModedLevel.nextLevel = "";
     }
+
 
     public function loadScripts(arg0: String): Void {
     }
 
     public function doesOverrideStructure(): Bool {
-        throw "stub: doesOverrideStructure not decompiled";
+        if (this.struct != null) {
+            return this.struct.active;
+        }
+        return false;
     }
 
-    public function loadLevel(arg0: String): Void {
+
+    public function loadLevel(_levelId: String): Void {
+        if (this.struct != null) {
+            if (this.struct.active) {
+                if (_levelId == "ModedLevel") {
+                    this.struct.loadLevel(_levelId);
+                } else {
+                    this.struct.reset();
+                }
+            }
+        }
     }
+
 
     public function getCustomLevelInfo(arg0: Dynamic): Dynamic {
         throw "stub: getCustomLevelInfo not decompiled";
@@ -34,12 +52,16 @@ class ScriptManager {
         throw "stub: doesAllowInfamousMobScaling not decompiled";
     }
 
-    public function getMobTier(arg0: Int): Int {
-        throw "stub: getMobTier not decompiled";
+    public function getMobTier(_diff: Int): Int {
+        return this.struct.getMobTier(_diff);
     }
 
-    public function initLevelStruct(arg0: level.LevelStruct): Void {
+
+    public function initLevelStruct(_levelStruct: level.LevelStruct): Void {
+        tool.mod.script.Struct.p_Init(_levelStruct);
+        tool.mod.script.SeededRandom.p_seededRandom = _levelStruct.rng;
     }
+
 
     public function releaseLevelStruct(): Void {
         tool.mod.script.Struct.p_Release();

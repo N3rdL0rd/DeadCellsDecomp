@@ -12,7 +12,9 @@ class LevelMob {
     public var props: Dynamic;
 
     public function new() {
+        this.props = {};
     }
+
 
     public function p_CopyInfoFrom(arg0: Dynamic): Void {
     }

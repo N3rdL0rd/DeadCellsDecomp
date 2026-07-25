@@ -79,9 +79,14 @@ class LanternRanged extends tool.weap.BaseBow {
         throw "stub: get_shootY not decompiled";
     }
 
-    public function getTargetSpot(arg0: Int): h2d.col.Point {
-        throw "stub: getTargetSpot not decompiled";
+    public function getTargetSpot(index: Int): h2d.col.Point {
+        var charged: Bool = this.getNbSoulCast() > index;
+        if (charged) {
+            return this.getChargedTargetSpot(index);
+        }
+        return this.getNormalTargetSpot(index);
     }
+
 
     public function getChargedTargetSpot(arg0: Int): h2d.col.Point {
         throw "stub: getChargedTargetSpot not decompiled";

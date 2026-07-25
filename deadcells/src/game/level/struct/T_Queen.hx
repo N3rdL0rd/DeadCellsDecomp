@@ -11,8 +11,9 @@ class T_Queen extends level.struct.Transition {
     }
 
     public override function createTwitchDoor(): level.RoomNode {
-        throw "stub: createTwitchDoor not decompiled";
+        return this.createNode("TwitchDoor", null, null, null);
     }
+
 
     public override function addTeleports(): Void {
     }

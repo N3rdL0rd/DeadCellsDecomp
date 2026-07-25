@@ -194,10 +194,23 @@ class Death extends en.mob.Boss {
     }
 
     public function resistAllAffects(): Void {
+        this.setAffectResist(15, 1.0);
+        this.setAffectResist(23, 1.0);
+        this.setAffectResist(133, 1.0);
+        this.setAffectResist(8, 1.0);
+        this.setAffectResist(93, 1.0);
     }
 
+
     public function resetAffectResist(): Void {
+        this.setAffectResist(15, 0.7);
+        this.setAffectResist(23, 0.95);
+        this.setAffectResist(133, 0.5);
+        this.setAffectResist(8, 0.9);
+        this.setAffectResist(93, 0.7);
+        this.setAffectResist(46, 0.7);
     }
+
 
     public override function setAffectS(arg0: Int, arg1: Float, arg2: Ref, arg3: Dynamic): Void {
     }

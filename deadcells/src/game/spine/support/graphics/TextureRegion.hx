@@ -7,5 +7,10 @@ class TextureRegion {
     public var v2: Float;
 
     public function new() {
+        this.v2 = 0.0;
+        this.u2 = 0.0;
+        this.v = 0.0;
+        this.u = 0.0;
     }
+
 }

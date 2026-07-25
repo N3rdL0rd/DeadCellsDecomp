@@ -41,7 +41,9 @@ class Heal extends tool.HeroMainSkill {
     }
 
     public function onOwnerFullHeal(): Void {
+        this.set_healings(this.get_maxHealings());
     }
+
 
     public override function onPickItem(arg0: Entity, arg1: tool.InventItem): Void {
     }
@@ -80,7 +82,9 @@ class Heal extends tool.HeroMainSkill {
     }
 
     public function setFlaskGlow(): Void {
+        this.hero.setGlowColor(13006047, null, null, null);
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

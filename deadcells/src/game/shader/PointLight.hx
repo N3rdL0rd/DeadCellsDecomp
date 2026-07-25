@@ -10,8 +10,18 @@ class PointLight extends hxsl.Shader {
     public var depth__: Float;
 
     public function new() {
+        this.depth__ = 0.0;
+        this.intensity__ = 0.0;
+        this.decayPower__ = 0.0;
+        this.decayStart__ = 0.0;
+        this.range__ = 0.0;
         super();
+        this.intensity__ = 1.0;
+        this.decayPower__ = 1.0;
+        this.decayStart__ = 0.0;
+        this.depth__ = 0.0;
     }
+
 
     public override function updateConstants(arg0: hxsl.Globals): Void {
     }

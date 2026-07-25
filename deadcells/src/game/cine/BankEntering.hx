@@ -6,5 +6,8 @@ class BankEntering extends GameCinematic {
     }
 
     public function enterBank(): Void {
+        Main.ME.writeSave();
+        cine.LevelTransition.goto("Bank");
     }
+
 }

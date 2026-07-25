@@ -3,9 +3,12 @@ package en.dookuInteractions;
 class DookuInteractionSpawnGhostEnemies extends en.dookuInteractions.DookuInteraction {
     public var possibleMobs: Array<Dynamic>;
 
-    public function new(arg0: en.dookuInteractions.DookuInteractionsManager = null) {
-        super();
+    public function new(parent: en.dookuInteractions.DookuInteractionsManager) {
+        super(parent);
+        this.type = "CreateGhostEnemies";
+        this.ID = 7;
     }
+
 
     public override function initTexts(): Void {
     }

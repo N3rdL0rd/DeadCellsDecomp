@@ -18,6 +18,13 @@ class DeferredSprite extends h2d.Object {
     }
 
 
-    public override function drawRec(arg0: h2d.RenderContext): Void {
+    public override function drawRec(ctx: h2d.RenderContext): Void {
+        if (this.lightedLayers == null) {
+            return;
+        }
+        if (this.lightedLayers.deferredMask & this.groups != 0) {
+            super.drawRec(ctx);
+        }
     }
+
 }

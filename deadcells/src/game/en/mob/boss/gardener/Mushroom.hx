@@ -58,7 +58,9 @@ class Mushroom extends en.Interactive {
     }
 
     public function flashRed(): Void {
+        this.colorBlink(16711680, 0.9, 0.15);
     }
+
 
     public override function onTouchWall(wDir: Int): Void {
         super.onTouchWall(wDir);

@@ -48,7 +48,9 @@ class Tween {
     }
 
     public function endWithoutCallbacks(): Void {
+        this.done = true;
     }
+
 
     public function complete(arg0: Dynamic): Void {
     }

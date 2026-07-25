@@ -7,12 +7,14 @@ class Blowgun extends tool.Weapon {
 
 
     public override function get_shootX(): Float {
-        throw "stub: get_shootX not decompiled";
+        return this.owner.get_headX();
     }
 
+
     public override function get_shootY(): Float {
-        throw "stub: get_shootY not decompiled";
+        return this.owner.get_headY();
     }
+
 
     public function getAnimRatioFromAng(arg0: Float): Float {
         throw "stub: getAnimRatioFromAng not decompiled";

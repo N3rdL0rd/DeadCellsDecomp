@@ -26,8 +26,10 @@ class U28_VacuumCleaner extends en.Mob {
     }
 
     public static function preloadGfx(): libs.heaps.slib.SpriteLib {
-        throw "stub: preloadGfx not decompiled";
+        Assets.lib.get("atlas/GoldGorgerbig.atlas");
+        return Assets.lib.get("atlas/GoldGorgerMiddle.atlas");
     }
+
 
     public override function init(): Void {
     }

@@ -19,6 +19,13 @@ class LinkedMesh {
     public var slotIndex: Int;
     public var mesh: spine.attachments.MeshAttachment;
 
-    public function new(arg0: spine.attachments.MeshAttachment, arg1: String, arg2: Int, arg3: String) {
+    public function new(mesh: spine.attachments.MeshAttachment, skin: String, slotIndex: Int, parent: String) {
+        this.slotIndex = 0;
+        this.skin = null;
+        this.mesh = mesh;
+        this.skin = skin;
+        this.slotIndex = slotIndex;
+        this.parent = parent;
     }
+
 }

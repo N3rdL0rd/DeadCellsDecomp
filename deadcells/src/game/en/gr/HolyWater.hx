@@ -100,8 +100,13 @@ class HolyRain extends Entity {
     public override function initGfx(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        super.onCooldownEnd(k, subIndex);
+        if (k == "destroy") {
+            this.destroy();
+        }
     }
+
 
     public override function destroy(): Void {
     }

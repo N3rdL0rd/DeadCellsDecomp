@@ -19,8 +19,13 @@ class WreckingBallHero extends en.Bullet {
     public function shootAtAngle(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Void {
     }
 
-    public function setPosFluid(arg0: Float, arg1: Float): Void {
+    public function setPosFluid(x: Float, y: Float): Void {
+        this.cx = Std.int(x / 24.0);
+        this.cy = Std.int(y / 24.0);
+        this.xr = (x - this.cx * 24) / 24.0;
+        this.yr = (y - this.cy * 24) / 24.0;
     }
+
 
     public override function initGfx(): Void {
     }
@@ -56,8 +61,12 @@ class WreckingBallHero extends en.Bullet {
     }
 
     public override function _isOnScreen(): Bool {
-        throw "stub: _isOnScreen not decompiled";
+        if (this.parent != null) {
+            return this.parent.isOnScreen;
+        }
+        return false;
     }
+
 
     public override function getEntityCLIDS(): Array<Int> {
         throw "stub: getEntityCLIDS not decompiled";

@@ -17,9 +17,10 @@ class HeroMainSkill {
         throw "stub: create not decompiled";
     }
 
-    public function secToFrames(arg0: Float): Float {
-        throw "stub: secToFrames not decompiled";
+    public function secToFrames(v: Float): Float {
+        return v * hxd.Timer.wantedFPS;
     }
+
 
     public function isEnabled(): Bool {
         throw "stub: isEnabled not decompiled";
@@ -97,8 +98,9 @@ class HeroMainSkill {
     }
 
     public function isActive(): Bool {
-        throw "stub: isActive not decompiled";
+        return this.cd.fastCheck.exists(721420288);
     }
+
 
     public function canBeInterruptedBy(heroSkill: tool.HeroMainSkill): Bool {
         return true;
@@ -187,7 +189,11 @@ class HeroMainSkill {
     }
 
     public function unserializeInit(): Void {
+        this.hold = false;
+        this.duration = 1.0;
+        this.cooldown = 1.0;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

@@ -32,5 +32,8 @@ class ThunderShield extends tool.weap.BaseShield {
     }
 
     public override function onShieldReleased(): Void {
+        super.onShieldReleased();
+        this.isHoldingAndLightning = false;
     }
+
 }

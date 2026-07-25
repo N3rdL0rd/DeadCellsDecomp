@@ -48,7 +48,12 @@ class BodyPart extends Entity {
     }
 
     public override function onOutOfGameChange(): Void {
+        super.onOutOfGameChange();
+        if (!this.isOnScreen) {
+            super.destroy();
+        }
     }
+
 
     public override function fixedUpdate(): Void {
     }

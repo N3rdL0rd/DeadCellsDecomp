@@ -50,8 +50,9 @@ class Pet extends Entity {
     }
 
     public function aiLocked(): Bool {
-        throw "stub: aiLocked not decompiled";
+        return this.cd.fastCheck.exists(486539264);
     }
+
 
     public function unlockAi(): Void {
     }
@@ -79,8 +80,15 @@ class Pet extends Entity {
     public function onTargetLost(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        if (this.cd != null) {
+            super.onCooldownEnd(k, subIndex);
+            if (k == "buffed") {
+                this.debuff(null);
+            }
+        }
     }
+
 
     public override function postUpdate(): Void {
         super.postUpdate();
@@ -105,7 +113,13 @@ class Pet extends Entity {
 
 
     public override function onLeaveMap(): Void {
+        if (this.parent != null && this._level != null) {
+            super.setPosCase(this.parent.cx, this.parent.cy, null, null);
+        } else {
+            super.onLeaveMap();
+        }
     }
+
 
     public override function destroy(): Void {
     }
@@ -117,8 +131,15 @@ class Pet extends Entity {
     public override function onFocus(): Void {
     }
 
-    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(by: en.Hero, longPress: Bool): Void {
+        this.lockAiS(1.0);
+        if (longPress) {
+            this.petReaction();
+        } else {
+            this.noPetReaction();
+        }
     }
+
 
     public function noPetReaction(): Void {
     }

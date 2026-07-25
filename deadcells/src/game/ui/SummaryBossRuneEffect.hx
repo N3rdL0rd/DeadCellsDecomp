@@ -17,11 +17,21 @@ class SummaryBossRuneEffect extends h2d.Layers {
     }
 
     public function destroy(): Void {
+        this.removeChildren();
+        if (this.parent != null) {
+            this.parent.removeChild(this);
+        }
     }
+
 
     public function onResize(): Void {
     }
 
     public function update(): Void {
+        if (this.previousPS != this.get_pixelScale()) {
+            this.previousPS = this.get_pixelScale();
+            this.onResize();
+        }
     }
+
 }

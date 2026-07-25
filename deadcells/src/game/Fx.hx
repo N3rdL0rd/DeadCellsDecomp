@@ -671,9 +671,10 @@ class Fx extends libs.Process {
         throw "stub: playMobAttackAnim not decompiled";
     }
 
-    public function playWeaponAnim(arg0: Entity, arg1: Dynamic, arg2: Float, arg3: String, arg4: Dynamic, arg5: Dynamic): libs.heaps.slib.HSprite {
-        throw "stub: playWeaponAnim not decompiled";
+    public function playWeaponAnim(e: Entity, cinf: Dynamic, attackSpeed: Float, customId: String, innerColorOverride: Dynamic, outerColorOverride: Dynamic): libs.heaps.slib.HSprite {
+        return this.playWeaponAnimFromObject(e.spr, cinf, attackSpeed, null, null, customId, innerColorOverride, outerColorOverride);
     }
+
 
     public function playWeaponAnimFromObject(arg0: h2d.Object, arg1: Dynamic, arg2: Float, arg3: Dynamic, arg4: Dynamic, arg5: String, arg6: Dynamic, arg7: Dynamic): libs.heaps.slib.HSprite {
         throw "stub: playWeaponAnimFromObject not decompiled";
@@ -993,11 +994,29 @@ class Fx extends libs.Process {
     public function secretGlow(arg0: Float, arg1: Float, arg2: Int, arg3: Float): Void {
     }
 
-    public function _showGrenadeTarget(arg0: libs.heaps.HParticle): Void {
+    public function _showGrenadeTarget(p: libs.heaps.HParticle): Void {
+        var bomb: en.mob.boss.collector.CollectorBomb = p.userData;
+        if (bomb.destroyed) {
+            p.kill();
+        }
     }
 
-    public function showGrenadeTarget(arg0: en.mob.boss.collector.CollectorBomb, arg1: Float, arg2: Float, arg3: Float): Void {
+
+    public function showGrenadeTarget(bomb: en.mob.boss.collector.CollectorBomb, x: Float, y: Float, radius: Float): Void {
+        var p: libs.heaps.HParticle = this.allocDisk(x, y, radius, 16733440, null);
+        p.scaleMul = 0.9;
+        p.set_lifeS(0.3);
+        p.a = 0.15;
+        p.da = 0.05;
+        p.userData = bomb;
+        p.onUpdate = this._showGrenadeTarget;
+        p = this.allocRadius(x, y, radius, 16733440, null);
+        p.a = 0.5;
+        p.set_lifeS(0.1);
+        p.userData = bomb;
+        p.onUpdate = this._showGrenadeTarget;
     }
+
 
     public function pressurePlate(arg0: Float, arg1: Float, arg2: Int): Void {
     }
@@ -1413,8 +1432,15 @@ class Fx extends libs.Process {
     public function morpherAnnounce(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int): Void {
     }
 
-    public function pokeCharge(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Int, arg5: Int): Void {
+    public function pokeCharge(x: Float, y: Float, radius: Float, int: Float, startCol: Int, endCol: Int): Void {
+        var p: libs.heaps.HParticle = this.allocRadius(x, y, radius + (1.0 - int) * 20.0, startCol, null);
+        p.a = 0.7 * int;
+        p.set_lifeS(0.1);
+        p = this.allocRadius(x, y, radius, endCol, null);
+        p.a = int * int;
+        p.set_lifeS(0.1);
     }
+
 
     public function chargeArea(arg0: tool.Area, arg1: Float, arg2: Dynamic): Void {
     }
@@ -1586,8 +1612,12 @@ class Fx extends libs.Process {
     public function distilleryArche(arg0: h2d.SpriteBatch, arg1: h2d.SpriteBatch, arg2: Float, arg3: Float, arg4: Float, arg5: Float): Void {
     }
 
-    public function _dispShockWave(arg0: libs.heaps.HParticle): Void {
+    public function _dispShockWave(p: libs.heaps.HParticle): Void {
+        if (p.ds <= 0.05) {
+            p.dsFrict = 1.0;
+        }
     }
+
 
     public function dispShockWave(arg0: Float, arg1: Float, arg2: Float, arg3: Dynamic, arg4: Dynamic): Void {
     }
@@ -1918,8 +1948,14 @@ class Fx extends libs.Process {
     public function legendaryAltarLink(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Int): Void {
     }
 
-    public function noPower(arg0: Float, arg1: Float): Void {
+    public function noPower(x: Float, y: Float): Void {
+        var p: libs.heaps.HParticle = this.allocRadius(x, y, 20.0, 16711680, null);
+        p.a = 0.4;
+        p.ds = 0.2;
+        p.dsFrict = 0.7;
+        p.set_lifeS(0.0);
     }
+
 
     public function powerLink(arg0: Float, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Int, arg6: Dynamic): Void {
     }
@@ -1957,8 +1993,13 @@ class Fx extends libs.Process {
     public function throneFountainGlow(arg0: Float, arg1: Float, arg2: Int): Void {
     }
 
-    public function _eliteGradient(arg0: libs.heaps.HParticle): Void {
+    public function _eliteGradient(p: libs.heaps.HParticle): Void {
+        var r: Float = 1.0 - p.rLifeF / p.maxLifeF;
+        p.scaleX = p.data3 * (1.0 - r);
+        p.scaleY = 0.2 + r * p.data3 * p.data4;
+        this._trackEntity(p);
     }
+
 
     public function elite(arg0: Entity, arg1: Bool): Void {
     }

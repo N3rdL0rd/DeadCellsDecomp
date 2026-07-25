@@ -11,6 +11,14 @@ class Background extends h2d.Object {
     public override function sync(arg0: h2d.RenderContext): Void {
     }
 
-    public override function drawRec(arg0: h2d.RenderContext): Void {
+    public override function drawRec(ctx: h2d.RenderContext): Void {
+        if (this.lightedLayers == null) {
+            return;
+        }
+        var o: Bool = this.lightedLayers.drawingBackground;
+        this.lightedLayers.drawingBackground = true;
+        super.drawRec(ctx);
+        this.lightedLayers.drawingBackground = o;
     }
+
 }

@@ -36,8 +36,11 @@ class Harpy extends en.Mob {
     public function decideChargeAng(): Void {
     }
 
-    public override function reduceThreat(arg0: Entity, arg1: Float): Void {
+    public override function reduceThreat(source: Entity, loss: Float): Void {
+        loss *= 0.1;
+        super.reduceThreat(source, loss);
     }
+
 
     public function onFlee(arg0: Float): Void {
     }

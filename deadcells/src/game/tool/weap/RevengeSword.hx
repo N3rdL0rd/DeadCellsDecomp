@@ -18,8 +18,13 @@ class RevengeSword extends tool.Weapon {
     public override function hitFromWeapon(arg0: Entity, arg1: Ref): Void {
     }
 
-    public override function onOwnerCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onOwnerCooldownEnd(k: String, idx: Int): Void {
+        super.onOwnerCooldownEnd(k, idx);
+        if (k == "recentRevengeHit") {
+            this.setWeaponGlow();
+        }
     }
+
 
     public override function setWeaponGlow(): Void {
     }

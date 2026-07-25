@@ -9,9 +9,27 @@ class Animation {
     public function new(arg0: String = null, arg1: Array<Dynamic> = null, arg2: Float = 0.) {
     }
 
-    public static function binarySearch(arg0: Array<Float>, arg1: Float): Int {
-        throw "stub: binarySearch not decompiled";
+    public static function binarySearch(values: Array<Float>, target: Float): Int {
+        var low: Int = 0;
+        var high: Int = values.length - 2;
+        if (high == 0) {
+            return 1;
+        }
+        var current: Int = high >>> 1;
+        while (true) {
+            if (target >= values[current + 1]) {
+                low = current + 1;
+            } else {
+                high = current;
+            }
+            if (low == high) {
+                return low + 1;
+            }
+            current = low + high >>> 1;
+        }
+        return 0;
     }
+
 
     public static function binarySearchWithStep(arg0: Array<Float>, arg1: Float, arg2: Int): Int {
         throw "stub: binarySearchWithStep not decompiled";

@@ -16,7 +16,9 @@ class Tweenie {
     }
 
     public function destroy(): Void {
+        this.tlist = null;
     }
+
 
     public function completeAll(): Void {
     }

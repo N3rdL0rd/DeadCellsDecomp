@@ -11,5 +11,12 @@ class TmxBaseLayer extends tiled.TmxBaseObject {
 
     public function new() {
         super();
+        this.visible = true;
+        this.locked = false;
+        this.tintColor = -1;
+        this.offsetX = 0.0;
+        this.offsetY = 0.0;
+        this.opacity = 1.0;
     }
+
 }

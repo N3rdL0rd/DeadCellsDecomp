@@ -24,7 +24,9 @@ class Boss extends en.Mob {
     }
 
     public function initBossBar(): Void {
+        ui.HUD.ME.initBossBar(this, null);
     }
+
 
     public function getBossRoom(): level.Room {
         throw "stub: getBossRoom not decompiled";
@@ -45,8 +47,14 @@ class Boss extends en.Mob {
 
 
     public function combatStarted(): Bool {
-        throw "stub: combatStarted not decompiled";
+        if (this.life > 0) {
+            if (!this.destroyed) {
+                return this.isReady();
+            }
+        }
+        return false;
     }
+
 
     public override function canApplyColorSwap(): Bool {
         throw "stub: canApplyColorSwap not decompiled";
@@ -75,10 +83,17 @@ class Boss extends en.Mob {
     }
 
     public function stopOverrideMusic(): Void {
+        Audio.ME.stopOverrideMusic(null);
     }
 
+
     public override function onDie(): Void {
+        super.onDie();
+        ui.HUD.ME.hideBossBar(null);
+        this.stopOverrideMusic();
+        this.giveHeads();
     }
+
 
     public override function dispose(): Void {
     }

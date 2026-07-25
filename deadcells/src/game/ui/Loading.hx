@@ -36,10 +36,20 @@ class Loading extends h2d.Layers {
     }
 
     public function showContent(): Void {
+        this.loadingFlow.set_visible(true);
+        if (this.lvlContent != null) {
+            this.lvlContent.set_visible(true);
+        }
     }
 
+
     public function hideContent(): Void {
+        this.loadingFlow.set_visible(false);
+        if (this.lvlContent != null) {
+            this.lvlContent.set_visible(false);
+        }
     }
+
 
     public function onResize(arg0: Int, arg1: Int): Void {
     }

@@ -14,16 +14,18 @@ class FisherBarqueExit extends en.inter.Exit {
     }
 
     public function get_frontX(): Float {
-        throw "stub: get_frontX not decompiled";
+        return (this.cx + this.xr) * 24.0 + this.dir * 103;
     }
+
 
     public function get_frontY(): Float {
         throw "stub: get_frontY not decompiled";
     }
 
     public function get_backX(): Float {
-        throw "stub: get_backX not decompiled";
+        return (this.cx + this.xr) * 24.0 - this.dir * 206;
     }
+
 
     public function get_backY(): Float {
         return this.get_frontY();

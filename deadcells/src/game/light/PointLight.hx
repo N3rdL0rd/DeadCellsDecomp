@@ -15,12 +15,21 @@ class PointLight extends light.Light {
         super();
     }
 
-    public function set_range(arg0: Float): Float {
-        throw "stub: set_range not decompiled";
+    public function set_range(v: Float): Float {
+        if (this.maxRange < v) {
+            this.needUpdate = true;
+            this.maxRange = v;
+        }
+        this.range = v;
+        return v;
     }
 
-    public override function setColor(arg0: Int): Void {
+
+    public override function setColor(c: Int): Void {
+        this.needUpdate = true;
+        super.setColor(c);
     }
+
 
     public override function sync(arg0: h2d.RenderContext): Void {
     }

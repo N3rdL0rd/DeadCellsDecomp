@@ -20,7 +20,10 @@ class TitleScreenBgBase extends libs.Process {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
+        this.reset();
     }
+
 
     public function reset(): Void {
     }

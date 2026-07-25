@@ -33,8 +33,22 @@ class DebugScrollingGraph extends h2d.Drawable {
     public function setVertex(arg0: Int, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Float): Void {
     }
 
-    public function setQuad(arg0: Int, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Float, arg7: Float): Void {
+    public function setQuad(quadNumber: Int, x: Float, y: Float, w: Float, h: Float, r: Float, g: Float, b: Float): Void {
+        var j: Int = quadNumber * 4;
+        var var10: Int = j;
+        j++;
+        this.setVertex(var10, x, y, r, g, b, 0.3);
+        var10 = j;
+        j++;
+        this.setVertex(var10, x + w, y, r, g, b, 0.3);
+        var10 = j;
+        j++;
+        this.setVertex(var10, x, y + h, r, g, b, 0.8);
+        var10 = j;
+        j++;
+        this.setVertex(var10, x + w, y + h, r, g, b, 0.8);
     }
+
 
     public override function draw(arg0: h2d.RenderContext): Void {
     }

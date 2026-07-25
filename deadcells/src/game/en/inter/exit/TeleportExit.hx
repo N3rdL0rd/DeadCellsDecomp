@@ -27,8 +27,9 @@ class TeleportExit extends en.inter.Exit {
     }
 
     public override function getDestName(): String {
-        throw "stub: getDestName not decompiled";
+        return Lang.t.untranslated("");
     }
+
 
     public override function startExitCinematic(arg0: en.Hero): Void {
     }

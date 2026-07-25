@@ -9,8 +9,12 @@ class Error {
     }
 
     public function toString(): String {
-        throw "stub: toString not decompiled";
+        if (this.message != null) {
+            return this.message;
+        }
+        return "Error";
     }
+
 
     public function __string(): hl.Bytes {
         throw "stub: __string not decompiled";

@@ -4,6 +4,9 @@ class QtPoint {
     public var cx: Int;
     public var cy: Int;
 
-    public function new(arg0: Int = 0, arg1: Int = 0) {
+    public function new(x: Int, y: Int) {
+        this.cx = x;
+        this.cy = y;
     }
+
 }

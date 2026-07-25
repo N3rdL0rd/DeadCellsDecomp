@@ -17,10 +17,22 @@ class DookuInteractionKillMerchant extends en.dookuInteractions.DookuInteraction
     }
 
     public override function onStartup(): Void {
+        if (this.curMerchant == null) {
+            super.disable();
+            return;
+        }
     }
 
+
     public override function dynOnExecute(): Void {
+        if (this.curMerchant == null) {
+            super.disable();
+            return;
+        }
+        this.dropGem();
+        this.destroyShop();
     }
+
 
     public function dropGem(): Void {
     }
@@ -29,8 +41,12 @@ class DookuInteractionKillMerchant extends en.dookuInteractions.DookuInteraction
     }
 
     public override function getDookuPos(): h2d.col.IPoint {
-        throw "stub: getDookuPos not decompiled";
+        if (this.curMerchant == null) {
+            return super.getDookuPos();
+        }
+        return super.getPlatformPointNextToTarget(this.curMerchant);
     }
+
 
     public override function getDookuDir(): Int {
         throw "stub: getDookuDir not decompiled";

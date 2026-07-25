@@ -70,8 +70,12 @@ class LifeBar extends h2d.Object {
     public function onDamageBonus(arg0: Float, arg1: Float): Void {
     }
 
-    public function setSize(arg0: Int, arg1: Int): Void {
+    public function setSize(width: Int, height: Int): Void {
+        this.curState.outerWid = width;
+        this.curState.outerHei = height;
+        this.updateSize();
     }
+
 
     public function setInfection(arg0: Float, arg1: Float, arg2: Int, arg3: Bool): Void {
     }
@@ -86,7 +90,11 @@ class LifeBar extends h2d.Object {
     }
 
     public function freeze(): Void {
+        this.oldState.load(this.curState);
+        this.stateFade = 0.0;
+        this.freezed = true;
     }
+
 
     public function unfreeze(arg0: Dynamic): Void {
     }
@@ -110,6 +118,13 @@ class State {
     public function new() {
     }
 
-    public function load(arg0: ui.hud.State): Void {
+    public function load(o: ui.hud.State): Void {
+        this.maxLife = o.maxLife;
+        this.life = o.life;
+        this.recover = o.recover;
+        this.bonusLife = o.bonusLife;
+        this.outerWid = o.outerWid;
+        this.outerHei = o.outerHei;
     }
+
 }

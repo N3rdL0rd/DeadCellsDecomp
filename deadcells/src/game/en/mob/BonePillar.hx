@@ -14,20 +14,24 @@ class BonePillar extends en.Mob {
     }
 
     public function get_frontShootX(): Float {
-        throw "stub: get_frontShootX not decompiled";
+        return (this.cx + this.xr) * 24.0 + this.dir * 30;
     }
+
 
     public function get_frontShootY(): Float {
-        throw "stub: get_frontShootY not decompiled";
+        return (this.cy + this.yr) * 24.0 - 54.0;
     }
+
 
     public function get_backShootX(): Float {
-        throw "stub: get_backShootX not decompiled";
+        return (this.cx + this.xr) * 24.0 - this.dir * 30;
     }
 
+
     public function get_backShootY(): Float {
-        throw "stub: get_backShootY not decompiled";
+        return (this.cy + this.yr) * 24.0 - 28.0;
     }
+
 
     public override function initGfx(): Void {
     }

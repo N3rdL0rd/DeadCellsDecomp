@@ -86,9 +86,10 @@ class AnimManager {
         throw "stub: setFrame not decompiled";
     }
 
-    public function getDurationS(arg0: Float): Float {
-        throw "stub: getDurationS not decompiled";
+    public function getDurationS(fps: Float): Float {
+        return this.getDurationF() / fps;
     }
+
 
     public function destroy(): Void {
     }
@@ -105,7 +106,9 @@ class AnimManager {
     }
 
     public function clearOverlapAnim(): Void {
+        this.overlap = null;
     }
+
 
     public function hasOverlapAnim(): Bool {
         throw "stub: hasOverlapAnim not decompiled";
@@ -155,13 +158,22 @@ class AnimManager {
     }
 
     public function suspend(): Void {
+        this.suspended = true;
+        this.suspendF = 9999.0;
     }
+
 
     public function unsuspend(): Void {
+        this.suspended = false;
+        this.suspendF = 0.0;
     }
 
-    public function suspendForF(arg0: Float): Void {
+
+    public function suspendForF(durationFrame: Float): Void {
+        this.suspended = true;
+        this.suspendF = durationFrame + 1.0;
     }
+
 
     public function alwaysTrue(): Bool {
         return true;

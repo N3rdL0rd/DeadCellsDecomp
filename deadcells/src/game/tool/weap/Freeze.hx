@@ -15,8 +15,11 @@ class Freeze extends tool.Weapon {
         throw "stub: get_shootY not decompiled";
     }
 
-    public override function prepare(arg0: Float): Void {
+    public override function prepare(attackSpeed: Float): Void {
+        super.prepare(attackSpeed);
+        super.playChargeSfx(null, null, null, null, null);
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";

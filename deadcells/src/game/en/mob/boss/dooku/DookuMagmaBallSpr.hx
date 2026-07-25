@@ -12,7 +12,9 @@ class DookuMagmaBallSpr {
     }
 
     public function update(): Void {
+        this.anim.advanceTime(this.magmaBall._level.tmod / 60.0);
     }
+
 
     public function start(arg0: spine.AnimationState.TrackEntry): Void {
     }

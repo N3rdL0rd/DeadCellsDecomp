@@ -46,8 +46,12 @@ class AttackData {
     public function addTag(arg0: Int): Void {
     }
 
-    public function addTags(arg0: Array<Int>): Void {
+    public function addTags(tagList: Array<Int>): Void {
+        for (tag in tagList) {
+            this.addTag(tag);
+        }
     }
+
 
     public function removeTag(arg0: Int): Void {
     }

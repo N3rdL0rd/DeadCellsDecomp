@@ -23,8 +23,14 @@ class MoneyShooter extends tool.Weapon {
         throw "stub: get_shootY not decompiled";
     }
 
-    public override function prepare(arg0: Float): Void {
+    public override function prepare(attackSpeed: Float): Void {
+        if (!this.hasEnoughGold) {
+            this.onOutOfAmmoTry();
+            return;
+        }
+        super.prepare(attackSpeed);
     }
+
 
     public override function onOutOfAmmoTry(): Void {
     }

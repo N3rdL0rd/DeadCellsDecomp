@@ -9,9 +9,12 @@ class Beheaded extends en.Hero {
         super();
     }
 
-    public static function create(arg0: pr.Game): en.hero.Beheaded {
-        throw "stub: create not decompiled";
+    public static function create(game: pr.Game): en.hero.Beheaded {
+        var e: en.hero.Beheaded = new en.hero.Beheaded(game);
+        e.init();
+        return e;
     }
+
 
     public override function wakeup(arg0: pr.Level, arg1: Int, arg2: Int): Void {
     }

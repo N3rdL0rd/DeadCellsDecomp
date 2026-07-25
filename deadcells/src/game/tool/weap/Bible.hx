@@ -3,9 +3,12 @@ package tool.weap;
 class Bible extends tool.Weapon {
     public var canThrow: Bool;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        this.canThrow = false;
+        super(o, i);
+        Assets.lib.get("atlas/bibleRigged.atlas");
     }
+
 
     public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";

@@ -25,7 +25,10 @@ class ATSwitch extends en.inter.button.Button {
     }
 
     public override function setActivated(): Void {
+        super.setActivated();
+        this.setGlowColor(16744448, null, null, null);
     }
+
 
     public override function onActivationSuccess(arg0: en.Hero): Void {
     }

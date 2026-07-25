@@ -11,9 +11,10 @@ class MvFly extends tool.AutoMove {
         super();
     }
 
-    public override function goto(arg0: Int, arg1: Int): Bool {
-        throw "stub: goto not decompiled";
+    public override function goto(cx: Int, cy: Int): Bool {
+        return this.gotoPixel(cx * 24, cy * 24, null);
     }
+
 
     public override function gotoPixel(arg0: Float, arg1: Float, arg2: Ref): Bool {
         throw "stub: gotoPixel not decompiled";

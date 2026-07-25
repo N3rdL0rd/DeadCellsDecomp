@@ -109,8 +109,11 @@ class Skill extends libs.Process {
         throw "stub: isLockedAfter not decompiled";
     }
 
-    public function lockOwner(arg0: Float): Void {
+    public function lockOwner(dur: Float): Void {
+        this.lockOwnerMob(dur);
+        this.lockOwnerHero(dur);
     }
+
 
     public function lockOwnerMob(arg0: Float): Void {
     }
@@ -165,8 +168,10 @@ class Skill extends libs.Process {
     public function tryHitArea(arg0: tool.skill.SkillArea): Void {
     }
 
-    public function onTouchOpponents(arg0: tool.skill.SkillArea, arg1: Array<Dynamic>): Void {
+    public function onTouchOpponents(skillArea: tool.skill.SkillArea, opponents: Array<Dynamic>): Void {
+        this.tryHitEntities(skillArea, opponents, null);
     }
+
 
     public function onTouchAllies(arg0: tool.skill.SkillArea, arg1: Array<Dynamic>): Void {
     }

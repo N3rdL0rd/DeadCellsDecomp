@@ -41,8 +41,13 @@ class FirePillar extends Entity {
     public function checkTouchOpponents(): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        super.onCooldownEnd(k, subIndex);
+        if (k == "init") {
+            this.initPillar();
+        }
     }
+
 
     public override function onOutOfGameChange(): Void {
     }

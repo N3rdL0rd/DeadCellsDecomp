@@ -151,8 +151,9 @@ class HandBase extends en.Mob {
     }
 
     public function isSwiping(): Bool {
-        throw "stub: isSwiping not decompiled";
+        return this.cd.fastCheck.exists(1075838976);
     }
+
 
     public override function bump(arg0: Float, arg1: Float, arg2: Dynamic): Void {
     }

@@ -99,8 +99,13 @@ class ItemMetaManager {
     }
 
     public function getForgeRefineProgress(): Int {
-        throw "stub: getForgeRefineProgress not decompiled";
+        var var1: Bool = this.hasUnlockedItem("ForgeRefine1");
+        if (var1) {
+            return 1;
+        }
+        return 0;
     }
+
 
     public function getMetaMoneyCount(): Int {
         throw "stub: getMetaMoneyCount not decompiled";
@@ -170,9 +175,13 @@ class ItemMetaManager {
         throw "stub: f_getIngameLootRatio not decompiled";
     }
 
-    public function f_getMaxLootRatio(arg0: Int): Float {
-        throw "stub: f_getMaxLootRatio not decompiled";
+    public function f_getMaxLootRatio(upLevel: Int): Float {
+        if (this._user == null) {
+            return 0.0;
+        }
+        return this._user.br_getForgeCappedRatio(upLevel);
     }
+
 
     public function f_isBarComplete(arg0: Int): Bool {
         throw "stub: f_isBarComplete not decompiled";

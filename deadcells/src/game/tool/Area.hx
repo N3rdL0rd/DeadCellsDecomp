@@ -11,9 +11,17 @@ class Area {
     public function new(arg0: Float, arg1: Dynamic) {
     }
 
-    public function setAbsolutePos(arg0: Float, arg1: Float): Void {
+    public function setAbsolutePos(x: Float, y: Float): Void {
+        this.relativeTo = null;
+        this.x = x;
+        this.y = y;
     }
 
-    public function setRelativePos(arg0: Entity, arg1: Float, arg2: Float): Void {
+
+    public function setRelativePos(e: Entity, x: Float, y: Float): Void {
+        this.relativeTo = e;
+        this.x = x;
+        this.y = y;
     }
+
 }

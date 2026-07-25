@@ -25,8 +25,9 @@ class Emitter {
 
 
     public function get_bottom(): Float {
-        throw "stub: get_bottom not decompiled";
+        return this.y + this.hei - 1.0;
     }
+
 
     public function get_left(): Float {
         return this.x;
@@ -34,11 +35,26 @@ class Emitter {
 
 
     public function get_right(): Float {
-        throw "stub: get_right not decompiled";
+        return this.x + this.wid - 1.0;
     }
 
-    public function setPosition(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
+
+    public function setPosition(x: Float, y: Float, w: Dynamic, h: Dynamic): Void {
+        this.x = x;
+        this.y = y;
+        if (w != null) {
+            this.wid = w;
+        }
+        if (h != null) {
+            this.hei = h;
+        }
+        if (h == null) {
+            if (w != null) {
+                this.hei = w;
+            }
+        }
     }
+
 
     public function setSize(w: Float, h: Float): Void {
         this.wid = w;
@@ -255,9 +271,14 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
         throw "stub: irnd not decompiled";
     }
 
-    public function set_maxAlpha(arg0: Float): Float {
-        throw "stub: set_maxAlpha not decompiled";
+    public function set_maxAlpha(v: Float): Float {
+        if (v < this.a) {
+            this.a = v;
+        }
+        this.maxAlpha = v;
+        return v;
     }
+
 
     public function setCenterRatio(arg0: Float, arg1: Float): Void {
     }
@@ -270,8 +291,9 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
 
 
     public function get_frict(): Float {
-        throw "stub: get_frict not decompiled";
+        return (this.frictX + this.frictY) * 0.5;
     }
+
 
     public function uncolorize(): Void {
     }
@@ -289,20 +311,27 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
     }
 
     public function toString(): String {
-        throw "stub: toString not decompiled";
+        return 'HPart@${this.x},${this.y} (lifeS=${this.rLifeF / this.fps})';
     }
 
+
     public function clone(): libs.heaps.HParticle {
-        throw "stub: clone not decompiled";
+        var s: haxe.Serializer = new haxe.Serializer();
+        s.useCache = true;
+        s.serialize(this);
+        var var4: Dynamic = haxe.Unserializer.run(s.toString());
+        return var4;
     }
+
 
     public function set_delayS(arg0: Float): Float {
         throw "stub: set_delayS not decompiled";
     }
 
     public function get_delayS(): Float {
-        throw "stub: get_delayS not decompiled";
+        return this.delayF / this.fps;
     }
+
 
     public function set_delayF(arg0: Float): Float {
         throw "stub: set_delayF not decompiled";
@@ -316,16 +345,20 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
         throw "stub: set_lifeF not decompiled";
     }
 
-    public function mulLife(arg0: Float): Void {
+    public function mulLife(f: Float): Void {
+        this.rLifeF = this.rLifeF * f;
     }
+
 
     public function get_remainingLifeS(): Float {
-        throw "stub: get_remainingLifeS not decompiled";
+        return this.rLifeF / this.fps;
     }
 
+
     public function get_curLifeRatio(): Float {
-        throw "stub: get_curLifeRatio not decompiled";
+        return 1.0 - this.rLifeF / this.maxLifeF;
     }
+
 
     public function initAsKilled(): Void {
     }
@@ -334,7 +367,12 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
     }
 
     public function dispose(): Void {
+        super.remove();
+        this.bounds = null;
+        this.pool = null;
+        this.poolNode = null;
     }
+
 
     public function isAlive(): Bool {
         throw "stub: isAlive not decompiled";
@@ -345,12 +383,14 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
     }
 
     public function sign(): Int {
-        throw "stub: sign not decompiled";
+        return Std.random(2) * 2 - 1;
     }
 
-    public function randFloat(arg0: Float): Float {
-        throw "stub: randFloat not decompiled";
+
+    public function randFloat(f: Float): Float {
+        return Std.random(Std.int(f * 10000.0)) / 10000.0;
     }
+
 
     public function moveAng(arg0: Float, arg1: Float): Void {
     }

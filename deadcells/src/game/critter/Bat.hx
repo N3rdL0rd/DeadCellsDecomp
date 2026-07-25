@@ -20,10 +20,18 @@ class Bat extends Critter {
     }
 
     public override function onLeaveScreen(): Void {
+        super.onLeaveScreen();
+        if (this.fleeing) {
+            this.reset();
+        }
     }
 
+
     public override function reset(): Void {
+        super.reset();
+        this.sndSpace = null;
     }
+
 
     public function flee(arg0: Entity): Void {
     }

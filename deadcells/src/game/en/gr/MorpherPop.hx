@@ -10,7 +10,10 @@ class MorpherPop extends en.Grenade {
 
 
     public override function initGfx(): Void {
+        super.initGfx();
+        super.initSprite(Assets.gameElements, "egg", null, null, null, null, null, null);
     }
+
 
     public override function init(): Void {
         super.init();

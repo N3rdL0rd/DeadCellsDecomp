@@ -23,12 +23,14 @@ class LoreManager {
     }
 
     public function get_game(): pr.Game {
-        throw "stub: get_game not decompiled";
+        return pr.Game.ME;
     }
 
+
     public function get_ftime(): Float {
-        throw "stub: get_ftime not decompiled";
+        return pr.Game.ME.ftime;
     }
+
 
     public function get_lMap(): level.LevelMap {
         throw "stub: get_lMap not decompiled";
@@ -61,7 +63,9 @@ class LoreManager {
     }
 
     public function onReload(): Void {
+        this.cd.init(null);
     }
+
 
     public function disposeGfx(): Void {
     }
@@ -70,8 +74,12 @@ class LoreManager {
     }
 
     public function get_data(): Dynamic {
-        throw "stub: get_data not decompiled";
+        if (this._dataCache == null) {
+            this._dataCache = Cdb.getLoreRoomData(this.r.rTemplate);
+        }
+        return this._dataCache;
     }
+
 
     public function rnd(arg0: Float, arg1: Float, arg2: Ref): Float {
         throw "stub: rnd not decompiled";
@@ -82,7 +90,12 @@ class LoreManager {
     }
 
     public function onCdbReload(): Void {
+        this._dataCache = null;
+        this.init();
+        this.disposeGfx();
+        this.initGfx();
     }
+
 
     public function isCdbExaminableEntryActive(id: String, idx: Int): Bool {
         return true;
@@ -131,8 +144,10 @@ class LoreManager {
         throw "stub: isOnScreen not decompiled";
     }
 
-    public function preUpdate(arg0: Float): Void {
+    public function preUpdate(dt: Float): Void {
+        this.cd.update(dt);
     }
+
 
     public function postUpdate(arg0: Float): Void {
     }
@@ -140,9 +155,14 @@ class LoreManager {
     public function fixedUpdate(): Void {
     }
 
-    public function set_visible(arg0: Bool): Bool {
-        throw "stub: set_visible not decompiled";
+    public function set_visible(v: Bool): Bool {
+        if (v != this.visible) {
+            this.visible = v;
+            this.onVisibleChanged();
+        }
+        return v;
     }
+
 
     public function onVisibleChanged(): Void {
     }
@@ -159,7 +179,10 @@ class LoreManager {
     }
 
     public function unserializeInit(): Void {
+        this.lastCuveMaster = null;
+        this.oldDebug = false;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

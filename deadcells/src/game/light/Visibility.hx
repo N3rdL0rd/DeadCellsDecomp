@@ -48,8 +48,16 @@ class Wall extends h2d.col.Segment {
     public static function clampInCircle(arg0: h2d.col.Point, arg1: Float, arg2: light.Visibility.Edge, arg3: light.Visibility.Edge): Void {
     }
 
-    public function setValues(arg0: Float, arg1: Float, arg2: Float, arg3: Float): Void {
+    public function setValues(x1: Float, y1: Float, x2: Float, y2: Float): Void {
+        this.x = x1;
+        this.y = y1;
+        this.dx = x2 - x1;
+        this.dy = y2 - y1;
+        this.lenSq = this.dx * this.dx + this.dy * this.dy;
+        this.invLenSq = 1.0 / this.lenSq;
+        this.changed = true;
     }
+
 
     public function updateEdges(arg0: h2d.col.Point, arg1: Float): Bool {
         throw "stub: updateEdges not decompiled";
@@ -76,9 +84,42 @@ class Visibility {
         throw "stub: getAngleBetween not decompiled";
     }
 
-    public static function getDir(arg0: h2d.col.Point, arg1: light.Visibility.Wall): Int {
-        throw "stub: getDir not decompiled";
+    public static function getDir(p: h2d.col.Point, w: light.Wall): Int {
+        if (w == null) {
+            return 0;
+        }
+        if (w.dx == 0.0) {
+            if (p.y == w.y) {
+                if (w.dy > 0.0) {
+                    return 1;
+                }
+                return 2;
+            }
+            if (p.y == w.y + w.dy) {
+                if (w.dy > 0.0) {
+                    return 2;
+                }
+                return 1;
+            }
+        } else {
+            if (w.dy == 0.0) {
+                if (p.x == w.x) {
+                    if (w.dx > 0.0) {
+                        return 1;
+                    }
+                    return 2;
+                }
+                if (p.x == w.x + w.dx) {
+                    if (w.dx > 0.0) {
+                        return 2;
+                    }
+                    return 1;
+                }
+            }
+        }
+        return 0;
     }
+
 
     public static function getEdgeDir(arg0: light.Visibility.Edge): Int {
         throw "stub: getEdgeDir not decompiled";

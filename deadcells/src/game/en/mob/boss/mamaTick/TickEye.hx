@@ -20,8 +20,9 @@ class TickEye {
     }
 
     public function getCrazyOffset(): Float {
-        throw "stub: getCrazyOffset not decompiled";
+        return Math.random() * this.crazyFactor - this.crazyFactor / 2.0;
     }
+
 
     public function postUpdate(arg0: Float, arg1: Float): Void {
     }

@@ -51,8 +51,14 @@ class BeheadedActiveSkillsManager extends tool.hero.HeroActiveSkillsManager {
     }
 
     public override function speedBuffTimeLeftS(): Float {
-        throw "stub: speedBuffTimeLeftS not decompiled";
+        var var1: Float = super.speedBuffTimeLeftS();
+        var var2: Float = this.hero.getHighestAffectDurationS(78);
+        if (var2 < var1) {
+            return var1;
+        }
+        return var2;
     }
+
 
     public override function getRunSpeedMul(): Float {
         throw "stub: getRunSpeedMul not decompiled";

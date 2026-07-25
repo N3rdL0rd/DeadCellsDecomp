@@ -38,7 +38,10 @@ class CollectorPanel extends ui.Process {
     }
 
     public function onMetaListAllBatchesDone(): Void {
+        this.updateEntries();
+        this.onResize();
     }
+
 
     public function highlightNextBluePrint(): Void {
     }
@@ -52,8 +55,9 @@ class CollectorPanel extends ui.Process {
     }
 
     public function getEmptyStr(): String {
-        throw "stub: getEmptyStr not decompiled";
+        return Lang.t.get("\"Reviens me voir quand tu auras trouvé de nouveaux parchemins...\"", null);
     }
+
 
     public function canInvest(arg0: tool.ItemProgress): Bool {
         throw "stub: canInvest not decompiled";

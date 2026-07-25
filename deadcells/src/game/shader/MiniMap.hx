@@ -10,8 +10,11 @@ class FowAdd extends hxsl.Shader {
         super();
     }
 
-    public function setDecay(arg0: Float, arg1: Float): Void {
+    public function setDecay(start: Float, range: Float): Void {
+        this.decay__.x = start;
+        this.decay__.y = range;
     }
+
 
     public override function updateConstants(arg0: hxsl.Globals): Void {
     }

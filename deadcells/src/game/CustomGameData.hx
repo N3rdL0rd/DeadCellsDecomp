@@ -159,7 +159,45 @@ class CustomGameData {
     }
 
     public function unserializeInit(): Void {
+        this.customName = null;
+        this.numMaxPotions = -1;
+        this.numSaveMoney = -1;
+        this.numRecycling = -1;
+        this.numForgeRefine = -1;
+        this.cursedChestNumCurse = -1;
+        this.numBossCells = -1;
+        this.startingMoney = -1;
+        this.mutationLimit = -1;
+        this.colorless = false;
+        this.legendary = false;
+        this.unlimitedAmmo = false;
+        this.legendariesDisabled = false;
+        this.forgeUndergroundDisabled = false;
+        this.perkDisabled = false;
+        this.chargedObjectDisabled = false;
+        this.freeObjectDisabled = false;
+        this.oneShotProtectionDisabled = false;
+        this.affixesDisabled = false;
+        this.authorizeDoublons = false;
+        this.unlockFountain = false;
+        this.oldShopCategories = false;
+        this.curseHitOnePercent = false;
+        this.prctForge = [-1.0, -1.0, -1.0];
+        this.timerPermanent = 0;
+        this.carriedInfection = -1;
+        this.hasInfection = true;
+        this.hasInfectionForEasyDifficulties = false;
+        this.potionHealInfectionDisabled = false;
+        this.prctOfInfectedFood = -1.0;
+        this.randomSkin = false;
+        this.randomSkinEveryLevel = false;
+        this.preset = -1;
+        this.fixedSeed = -1;
+        this.useCustomBindings = false;
+        this.randomHead = false;
+        this.randomHeadEveryLevel = false;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

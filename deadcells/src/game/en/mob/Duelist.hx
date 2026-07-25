@@ -40,8 +40,11 @@ class Duelist extends en.Mob {
     public override function fixedUpdate(): Void {
     }
 
-    public override function onDamage(arg0: tool.atk.AttackData): Void {
+    public override function onDamage(a: tool.atk.AttackData): Void {
+        super.onDamage(a);
+        this.cancelVelocities();
     }
+
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }

@@ -22,7 +22,11 @@ class ShootingStar extends en.bu.Homing {
     }
 
     public override function onCantHome(): Void {
+        if (!this.destroyed) {
+            this.destroy();
+        }
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

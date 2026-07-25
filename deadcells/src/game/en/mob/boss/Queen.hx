@@ -118,9 +118,10 @@ class Queen extends en.mob.Boss {
         throw "stub: idleToAnim not decompiled";
     }
 
-    public function animToIdle(arg0: String): String {
-        throw "stub: animToIdle not decompiled";
+    public function animToIdle(id: String): String {
+        return id + "Idle";
     }
+
 
     public function loadToAnim(arg0: String): String {
         throw "stub: loadToAnim not decompiled";

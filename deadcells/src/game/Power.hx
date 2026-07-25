@@ -17,10 +17,17 @@ class Power {
 
 
     public function onReload(): Void {
+        this.cd.init(this.onCooldownEnd);
     }
 
-    public function onHeroLevelChanged(arg0: pr.Level): Void {
+
+    public function onHeroLevelChanged(oldLevel: pr.Level): Void {
+        if (this.shouldChangeLevelWithHero()) {
+            oldLevel.unregisterPower(this);
+            this.owner._level.registerPower(this);
+        }
     }
+
 
     public function onEnd(): Void {
     }
@@ -33,7 +40,16 @@ class Power {
     }
 
     public function destroy(): Void {
+        if (!this.destroyed) {
+            this.destroyed = true;
+            if (!this.owner.destroyed) {
+                if (this.owner._level != null) {
+                    this.onEnd();
+                }
+            }
+        }
     }
+
 
     public function onDispose(): Void {
     }
@@ -59,13 +75,15 @@ class Power {
     public function onDurationEnd(): Void {
     }
 
-    public function secToFrames(arg0: Float): Float {
-        throw "stub: secToFrames not decompiled";
+    public function secToFrames(v: Float): Float {
+        return v * hxd.Timer.wantedFPS;
     }
 
-    public function framesToSec(arg0: Float): Float {
-        throw "stub: framesToSec not decompiled";
+
+    public function framesToSec(v: Float): Float {
+        return v / hxd.Timer.wantedFPS;
     }
+
 
     public function getCLID(): Int {
         throw "stub: getCLID not decompiled";

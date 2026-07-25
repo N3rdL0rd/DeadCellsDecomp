@@ -12,13 +12,20 @@ class Cinematic {
     }
 
     public function destroy(): Void {
+        this.queues = null;
+        this.curQueue = null;
+        this.onAllComplete = null;
     }
+
 
     public function signal(arg0: String): Void {
     }
 
-    public function persistantSignal(arg0: String): Void {
+    public function persistantSignal(s: String): Void {
+        this.persistSignals.set(s, true);
+        this.signal(s);
     }
+
 
     public function __addParallel(arg0: Dynamic, arg1: Int, arg2: String): Void {
     }

@@ -25,12 +25,14 @@ class BatKamikaze extends en.mob.BatKamikazeTemplate {
     }
 
     public override function get_shootX(): Float {
-        throw "stub: get_shootX not decompiled";
+        return (this.cx + this.xr) * 24.0;
     }
 
+
     public override function get_shootY(): Float {
-        throw "stub: get_shootY not decompiled";
+        return (this.cy + this.yr) * 24.0 - this.hei * 0.5;
     }
+
 
     public override function behaviourAi(): Void {
     }

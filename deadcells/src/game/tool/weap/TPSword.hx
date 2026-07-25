@@ -61,5 +61,8 @@ class TPSword extends tool.Weapon {
     }
 
     public override function cancelChain(): Void {
+        super.cancelChain();
+        this.isCrit = false;
     }
+
 }

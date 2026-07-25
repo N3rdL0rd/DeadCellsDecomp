@@ -15,7 +15,10 @@ class BankNpcDoor extends en.inter.Door {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        super.initDoorSkin("prisonBossDoor", "prisonBossDoorSide", "hingeBigDoors", null, null, null);
     }
+
 
     public function openAndUnlock(arg0: Ref): Void {
     }

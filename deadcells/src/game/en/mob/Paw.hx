@@ -24,18 +24,24 @@ class AnimatedPaw {
         throw "stub: set_hasClaw not decompiled";
     }
 
-    public function set_segmentLength(arg0: Int): Int {
-        throw "stub: set_segmentLength not decompiled";
+    public function set_segmentLength(v: Int): Int {
+        this.paw.segmentLength = v;
+        return v;
     }
 
-    public function setGlowColor(arg0: Int, arg1: Int): Void {
+
+    public function setGlowColor(inner: Int, outer: Int): Void {
+        this.paw.setGlowColor(inner, outer);
     }
+
 
     public function setMode(arg0: en.mob.PawMode): Void {
     }
 
-    public function setVisible(arg0: Bool): Void {
+    public function setVisible(visible: Bool): Void {
+        this.paw.setVisible(visible);
     }
+
 
     public function init(arg0: pr.Level, arg1: Int, arg2: Int, arg3: en.mob.PawMode, arg4: Float, arg5: Float): Void {
     }
@@ -49,7 +55,10 @@ class AnimatedPaw {
 
 
     public function dispose(): Void {
+        this.paw.dispose();
+        this.paw = null;
     }
+
 
     public function update(arg0: Float): Void {
     }

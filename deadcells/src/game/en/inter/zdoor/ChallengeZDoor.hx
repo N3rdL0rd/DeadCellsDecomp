@@ -33,9 +33,13 @@ class ChallengeZDoor extends en.inter.ZDoor {
     public override function disposeGfx(): Void {
     }
 
-    public override function getClueIconId(arg0: Bool): String {
-        throw "stub: getClueIconId not decompiled";
+    public override function getClueIconId(forMap: Bool): String {
+        if (!forMap) {
+            return null;
+        }
+        return super.getClueIconId(forMap);
     }
+
 
     public override function onOutOfGameChange(): Void {
     }
@@ -46,8 +50,11 @@ class ChallengeZDoor extends en.inter.ZDoor {
     public override function enter(arg0: en.Hero): Void {
     }
 
-    public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
+    public override function onActivate(by: en.Hero, lp: Bool): Void {
+        this.checkChallengeCondition();
+        super.onActivate(by, lp);
     }
+
 
     public function open(): Void {
     }

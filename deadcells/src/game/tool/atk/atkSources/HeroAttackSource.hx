@@ -21,9 +21,16 @@ class HeroAttackSource extends tool.atk.AttackSourceImpl {
         throw "stub: computeBonusMul not decompiled";
     }
 
-    public override function computeExtraBonusMul(arg0: tool.atk.AttackData, arg1: Entity): Float {
-        throw "stub: computeExtraBonusMul not decompiled";
+    public override function computeExtraBonusMul(atk: tool.atk.AttackData, target: Entity): Float {
+        var extraMul: Float = super.computeExtraBonusMul(atk, target);
+        var var4: Bool = atk.hasTag(27);
+        if (!var4) {
+            extraMul *= this.computePerksBonusMul(atk, target);
+            extraMul *= this.computeAspectsBonusMul(atk, target);
+        }
+        return extraMul;
     }
+
 
     public function computePerksBonusMul(arg0: tool.atk.AttackData, arg1: Entity): Float {
         throw "stub: computePerksBonusMul not decompiled";

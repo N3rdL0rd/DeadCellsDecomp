@@ -42,7 +42,12 @@ class AnchorAmmo extends Entity {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
+        if (this.destroyed) {
+            return;
+        }
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

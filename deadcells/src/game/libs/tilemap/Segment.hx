@@ -27,16 +27,22 @@ class Segment {
     public static function hvSplit(arg0: Array<Dynamic>, arg1: Array<Dynamic>, arg2: Array<Dynamic>): Void {
     }
 
-    public static function yMinSort(arg0: libs.tilemap.Segment, arg1: libs.tilemap.Segment): Int {
-        throw "stub: yMinSort not decompiled";
+    public static function yMinSort(s1: libs.tilemap.Segment, s2: libs.tilemap.Segment): Int {
+        return s1.a.y - s2.a.y;
     }
 
-    public static function xMinSort(arg0: libs.tilemap.Segment, arg1: libs.tilemap.Segment): Int {
-        throw "stub: xMinSort not decompiled";
+
+    public static function xMinSort(s1: libs.tilemap.Segment, s2: libs.tilemap.Segment): Int {
+        return s1.a.x - s2.a.x;
     }
+
 
     public function swapVertices(): Void {
+        var tmp: libs.tilemap.Vertex = this.a;
+        this.a = this.b;
+        this.b = tmp;
     }
+
 
     public function intersects(arg0: libs.tilemap.Segment): Bool {
         throw "stub: intersects not decompiled";

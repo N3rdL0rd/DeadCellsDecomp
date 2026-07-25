@@ -12,8 +12,19 @@ class FrameData {
     public var realHei: Int;
     public var tile: h2d.Tile;
 
-    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Int = 0, arg5: Int = 0, arg6: Int = 0, arg7: Int = 0, arg8: Int = 0, arg9: h2d.Tile = null) {
+    public function new(var1: Int, var2: Int, var3: Int, var4: Int, var5: Int, var6: Int, var7: Int, var8: Int, var9: Int, var10: h2d.Tile) {
+        this.page = var1;
+        this.x = var2;
+        this.y = var3;
+        this.wid = var4;
+        this.hei = var5;
+        this.realX = var6;
+        this.realY = var7;
+        this.realWid = var8;
+        this.realHei = var9;
+        this.tile = var10;
     }
+
 }
 
 class LibGroup {
@@ -24,8 +35,15 @@ class LibGroup {
     public var frames: Array<Dynamic>;
     public var anim: Array<Int>;
 
-    public function new(arg0: String = null, arg1: Int = 0, arg2: Int = 0, arg3: Int = 0, arg4: Array<Dynamic> = null, arg5: Array<Int> = null) {
+    public function new(var1: String, var2: Int, var3: Int, var4: Int, var5: Array<Dynamic>, var6: Array<Int>) {
+        this.id = var1;
+        this.page = var2;
+        this.maxWid = var3;
+        this.maxHei = var4;
+        this.frames = var5;
+        this.anim = var6;
     }
+
 }
 
 class SpriteLib {

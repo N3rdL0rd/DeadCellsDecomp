@@ -11,9 +11,12 @@ class Decoy extends en.Mob {
         super();
     }
 
-    public static function create(arg0: Entity, arg1: en.Grenade, arg2: tool.InventItem): en.mob.Decoy {
-        throw "stub: create not decompiled";
+    public static function create(owner: Entity, g: en.Grenade, i: tool.InventItem): en.mob.Decoy {
+        var e: en.mob.Decoy = new en.mob.Decoy(owner, g, i);
+        e.init();
+        return e;
     }
+
 
     public override function initGfx(): Void {
     }

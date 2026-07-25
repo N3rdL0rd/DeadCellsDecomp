@@ -14,7 +14,10 @@ class SizedTileDeck extends libs.RandDeck {
     public var wid: Int;
     public var hei: Int;
 
-    public function new(arg0: Int = 0, arg1: Int = 0, arg2: Dynamic = null) {
-        super();
+    public function new(wid: Int, hei: Int, rnd: Dynamic) {
+        super(rnd, null);
+        this.wid = wid;
+        this.hei = hei;
     }
+
 }

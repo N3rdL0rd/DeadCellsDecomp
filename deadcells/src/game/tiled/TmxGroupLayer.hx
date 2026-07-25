@@ -11,8 +11,9 @@ class TmxGroupLayer extends tiled.TmxBaseLayer {
     }
 
     public function iterator(): tiled.TmxLayerIterator {
-        throw "stub: iterator not decompiled";
+        return new tiled.TmxLayerIterator(this);
     }
+
 
     public function findTileLayer(arg0: String): tiled.TmxTileLayer {
         throw "stub: findTileLayer not decompiled";

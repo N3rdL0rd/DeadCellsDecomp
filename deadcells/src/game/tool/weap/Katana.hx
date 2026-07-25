@@ -41,7 +41,12 @@ class Katana extends tool.Weapon {
     }
 
     public override function interrupt(): Void {
+        if (this.nextIsChargeAtk) {
+            this.dynamicChargeExecute();
+        }
+        super.interrupt();
     }
+
 
     public function dynamicChargeExecute(): Void {
     }
@@ -58,11 +63,16 @@ class Katana extends tool.Weapon {
     public function addDashKillWithoutHit(): Void {
     }
 
-    public function onOwnerAttackResultReceived(arg0: tool.atk.AttackData): Void {
+    public function onOwnerAttackResultReceived(a: tool.atk.AttackData): Void {
+        this.dashKillWithoutHitCount = 0;
     }
 
+
     public function cancelDashCharge(): Void {
+        this.interrupt();
+        this.nextIsChargeAtk = false;
     }
+
 
     public override function dispose(): Void {
     }

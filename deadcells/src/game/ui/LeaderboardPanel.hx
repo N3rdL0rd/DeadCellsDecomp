@@ -47,9 +47,16 @@ class LeaderboardPanel extends ui.Process {
     public function renderData(): Void {
     }
 
-    public function stateIcon(arg0: Int): String {
-        throw "stub: stateIcon not decompiled";
+    public function stateIcon(state: Int): String {
+        if (state & 1 != 0) {
+            return "leaderboardStar";
+        }
+        if (state & 4 != 0) {
+            return "leaderboardTime";
+        }
+        return "leaderboardDeath";
     }
+
 
     public function beginLoading(arg0: Ref): Void {
     }

@@ -14,13 +14,18 @@ class UIElement {
     }
 
     public function initRoot(): Void {
+        this.root = new h2d.Object(null);
     }
+
 
     public function initHighlighter(): Void {
     }
 
     public function initInteractive(): Void {
+        this.initHighlighter();
+        this.interactiveComponent = new uicore.InteractiveComponent(this);
     }
+
 
     public function addChild(arg0: uicore.UIElement): Void {
     }
@@ -28,11 +33,15 @@ class UIElement {
     public function removeChild(arg0: uicore.UIElement): Void {
     }
 
-    public function addChildRoot(arg0: uicore.UIElement): Void {
+    public function addChildRoot(element: uicore.UIElement): Void {
+        this.root.addChild(element.root);
     }
 
-    public function removeChildRoot(arg0: uicore.UIElement): Void {
+
+    public function removeChildRoot(element: uicore.UIElement): Void {
+        this.root.removeChild(element.root);
     }
+
 
     public function update(arg0: Float): Void {
     }
@@ -57,15 +66,36 @@ class UIElement {
         throw "stub: unselect not decompiled";
     }
 
-    public function onSelect(arg0: uicore.SelectionMode): Void {
+    public function onSelect(mode: uicore.SelectionMode): Void {
+        this.selected = true;
+        if (this.highlighter != null) {
+            this.highlighter.enable();
+        }
+        if (this.parent != null) {
+            this.parent.onChildSelected(this, mode);
+            this.parent.onSelect(mode);
+        }
     }
+
 
     public function onUnselect(): Void {
+        this.selected = false;
+        if (this.highlighter != null) {
+            this.highlighter.disable();
+        }
+        if (this.parent != null) {
+            this.parent.onUnselect();
+        }
     }
 
-    public function requestSelectionFromMouse(arg0: uicore.UIElement): Bool {
-        throw "stub: requestSelectionFromMouse not decompiled";
+
+    public function requestSelectionFromMouse(element: uicore.UIElement): Bool {
+        if (this.parent != null) {
+            return this.parent.requestSelectionFromMouse(element);
+        }
+        return false;
     }
+
 
     public function selectFromMouse(arg0: Bool): Bool {
         throw "stub: selectFromMouse not decompiled";
@@ -107,10 +137,18 @@ class UIElement {
     }
 
     public function resizeInteractive(): Void {
+        if (this.interactiveComponent != null) {
+            this.interactiveComponent.resize();
+        }
     }
 
+
     public function resize(): Void {
+        this.resizeChildren();
+        this.resizeHighlighter();
+        this.resizeInteractive();
     }
+
 
     public function getMouseInteractiveBounds(): h2d.col.Bounds {
         throw "stub: getMouseInteractiveBounds not decompiled";
@@ -119,8 +157,16 @@ class UIElement {
     public function bindDefaultActions(): Void {
     }
 
-    public function registerActionCb(arg0: Int, arg1: Dynamic): Void {
+    public function registerActionCb(action: Int, cb: Dynamic): Void {
+        if (this.interactiveComponent == null) {
+            this.initInteractive();
+        }
+        if (action == 14) {
+            this.interactiveComponent.initMouseInteractive();
+        }
+        this.interactiveComponent.registerCallback(action, cb);
     }
+
 
     public function registerUnhandledActionCb(arg0: Int, arg1: Dynamic, arg2: Bool): Void {
     }

@@ -16,7 +16,10 @@ class BossDoor extends en.inter.Door {
     }
 
     public override function initGfx(): Void {
+        super.initGfx();
+        super.initDoorSkin("prisonBossDoor", "prisonBossDoorSide", "hingeBigDoors", null, null, null);
     }
+
 
     public function closeAndLock(arg0: Dynamic): Void {
     }

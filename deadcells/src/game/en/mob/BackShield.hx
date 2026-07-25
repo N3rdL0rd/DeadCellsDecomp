@@ -25,8 +25,14 @@ class BackShield extends en.Mob {
     public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
     }
 
-    public override function contactAttack(arg0: Entity): Void {
+    public override function contactAttack(e: Entity): Void {
+        if (!this.isFacing(e)) {
+            this.ccRepel(e);
+        } else {
+            super.contactAttack(e);
+        }
     }
+
 
     public function ccRepel(arg0: Entity): Void {
     }

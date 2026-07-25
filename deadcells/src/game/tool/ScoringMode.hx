@@ -12,8 +12,12 @@ class ScoringMode {
     public var isFail: Bool;
     public var startedWithAssistMode: Bool;
 
-    public function new(arg0: pr.Game) {
+    public function new(game: pr.Game) {
+        this.startedWithAssistMode = false;
+        this.game = game;
+        this.exploScore = new libs.VarSecure(0);
     }
+
 
     public static function getLevel(arg0: Int): String {
         throw "stub: getLevel not decompiled";
@@ -25,9 +29,12 @@ class ScoringMode {
     public function startBossBattle(): Void {
     }
 
-    public function addScore(arg0: Int): Int {
-        throw "stub: addScore not decompiled";
+    public function addScore(v: Int): Int {
+        v += this.getBonusPoints();
+        this.exploScore.addValue(v);
+        return v;
     }
+
 
     public function getBonusPoints(): Int {
         throw "stub: getBonusPoints not decompiled";

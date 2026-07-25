@@ -9,7 +9,13 @@ class FallTaunt extends tool.TwitchVote {
     }
 
     public override function onDelayedVoteInit(): Void {
+        super.onDelayedVoteInit();
+        var var2: String = Lang.t.get("Aaaaaah !", null);
+        super.send(var2);
+        super.sendChoices();
+        super.setExpireS(10.0);
     }
+
 
     public override function onVote(arg0: tool.TwitchMessage, arg1: Dynamic, arg2: String): Void {
     }
