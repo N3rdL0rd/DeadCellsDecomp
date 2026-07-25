@@ -17,11 +17,15 @@ class LevelAreaAffect {
     public function new(arg0: pr.Level) {
     }
 
-    public static function iceWaterPropagation(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float): Void {
+    public static function iceWaterPropagation(level: pr.Level, cx: Int, cy: Int, aDurationS: Float, aValue: Float): Void {
+        tool.LevelAreaAffect.waterPropagation(level, 92, cx, cy, 9.0, 12.0, aDurationS, aValue);
     }
 
-    public static function electricityWaterPropagation(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Float, arg4: Float): Void {
+
+    public static function electricityWaterPropagation(level: pr.Level, cx: Int, cy: Int, aDurationS: Float, aValue: Float): Void {
+        tool.LevelAreaAffect.waterPropagation(level, 93, cx, cy, 2.0, 6.0, aDurationS, aValue);
     }
+
 
     public static function waterPropagation(arg0: pr.Level, arg1: Int, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Float): Void {
     }
@@ -46,7 +50,10 @@ class LevelAreaAffect {
     }
 
     public function dispose(): Void {
+        this.level = null;
+        this.frames = 0.0;
     }
+
 
     public function setDurationS(arg0: Float): Void {
     }

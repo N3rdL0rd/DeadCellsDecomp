@@ -26,13 +26,15 @@ class LevelTransition extends GameCinematic {
         throw "stub: reloadAfterBossRuneModif not decompiled";
     }
 
-    public static function gotoSub(arg0: level.LevelMap, arg1: Dynamic): cine.LevelTransition {
-        throw "stub: gotoSub not decompiled";
+    public static function gotoSub(map: level.LevelMap, linkId: Dynamic): cine.LevelTransition {
+        return new cine.LevelTransition(null, map, linkId, null, null);
     }
 
-    public static function goto(arg0: String): cine.LevelTransition {
-        throw "stub: goto not decompiled";
+
+    public static function goto(id: String): cine.LevelTransition {
+        return new cine.LevelTransition(id, null, null, null, null);
     }
+
 
     public function get_isADlcPLevel(): Bool {
         throw "stub: get_isADlcPLevel not decompiled";

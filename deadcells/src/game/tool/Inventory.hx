@@ -70,17 +70,22 @@ class Inventory {
     }
 
     public function swapWeapons(): Void {
+        this.swapItems(true);
     }
 
+
     public function swapSkills(): Void {
+        this.swapItems(false);
     }
+
 
     public function swapItems(arg0: Bool): Void {
     }
 
     public function getBackpackWeapon(): tool.InventItem {
-        throw "stub: getBackpackWeapon not decompiled";
+        return this.getEquippedWeaponOn(this.nbWeapons);
     }
+
 
     public function hasEmptyWeaponSlot(): Bool {
         throw "stub: hasEmptyWeaponSlot not decompiled";
@@ -196,7 +201,10 @@ class Inventory {
     }
 
     public function unserializeInit(): Void {
+        this.nbWeapons = 99999;
+        this.nbActives = 99999;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

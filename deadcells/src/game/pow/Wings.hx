@@ -34,7 +34,9 @@ class Wings extends Power {
     }
 
     public function onOwnerTouchGround(): Void {
+        this.owner.removeAllAffects(61);
     }
+
 
     public function onOwnerLand(arg0: Float): Void {
     }

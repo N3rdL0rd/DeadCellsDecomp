@@ -35,8 +35,9 @@ class SpeedRunner extends en.Pet {
     }
 
     public function isBuffingHero(): Bool {
-        throw "stub: isBuffingHero not decompiled";
+        return this.cd.fastCheck.exists(666894336);
     }
+
 
     public override function fixedUpdate(): Void {
     }

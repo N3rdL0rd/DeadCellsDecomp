@@ -48,7 +48,10 @@ class Cooldown {
     }
 
     public function destroy(): Void {
+        this.cdList = null;
+        this.fastCheck = null;
     }
+
 
     public function _getRatio(arg0: Int): Float {
         throw "stub: _getRatio not decompiled";

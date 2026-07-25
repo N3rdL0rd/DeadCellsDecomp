@@ -80,9 +80,14 @@ class TmxXmlParser {
     public static function readBaseLayer(arg0: haxe.io.BytesInput, arg1: tiled.TmxBaseLayer): Void {
     }
 
-    public static function readRootLayer(arg0: haxe.io.BytesInput): tiled.TmxGroupLayer {
-        throw "stub: readRootLayer not decompiled";
+    public static function readRootLayer(r: haxe.io.BytesInput): tiled.TmxGroupLayer {
+        var var1: Int = r.readByte();
+        if (var1 != 1) {
+            throw "Expect root layer to be a group layer";
+        }
+        return tiled.TmxXmlParser.readGroupLayer(r);
     }
+
 
     public static function readBaseObject(arg0: haxe.io.BytesInput, arg1: tiled.TmxBaseObject): Void {
     }

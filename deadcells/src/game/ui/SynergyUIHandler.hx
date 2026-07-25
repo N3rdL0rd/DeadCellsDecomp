@@ -10,8 +10,10 @@ class SynergyUIHandler {
     public static function resetExcludedItems(): Void {
     }
 
-    public static function setExcludedItems(arg0: Array<Dynamic>): Void {
+    public static function setExcludedItems(items: Array<Dynamic>): Void {
+        ui.SynergyUIHandler.excludedItems = items;
     }
+
 
     public static function addIncludedItem(arg0: tool.InventItem): Void {
     }
@@ -20,7 +22,10 @@ class SynergyUIHandler {
     }
 
     public static function resetIncludedAndExcluded(): Void {
+        ui.SynergyUIHandler.resetIncludedItems();
+        ui.SynergyUIHandler.resetExcludedItems();
     }
+
 
     public static function getSynergyIcon(arg0: String, arg1: tool.InventItem): String {
         throw "stub: getSynergyIcon not decompiled";

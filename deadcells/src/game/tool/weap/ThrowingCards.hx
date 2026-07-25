@@ -19,9 +19,14 @@ class ThrowingCards extends tool.Weapon {
         throw "stub: onExecute not decompiled";
     }
 
-    public override function set_cycle(arg0: Int): Int {
-        throw "stub: set_cycle not decompiled";
+    public override function set_cycle(v: Int): Int {
+        if (v == 0) {
+            super.stopCritFeedback();
+        }
+        this._cycle = v;
+        return v;
     }
+
 
     public override function incrementCycle(): Void {
     }

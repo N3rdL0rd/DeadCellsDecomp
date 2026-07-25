@@ -60,8 +60,12 @@ class U28_VacuumCleaner extends en.Mob {
     public function upgrade(arg0: Int, arg1: Ref, arg2: Ref, arg3: Ref): Void {
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, subIndex: Int): Void {
+        if (k == "evolving") {
+            this.endEvolve();
+        }
     }
+
 
     public function endEvolve(): Void {
     }

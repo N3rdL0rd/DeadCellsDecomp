@@ -24,7 +24,9 @@ class Throne extends level.BiomeDisp {
     }
 
     public override function renderFloorStamps(): Void {
+        super.addFloorStamps("floorStamp", null, null);
     }
+
 
     public override function postUpdate(): Void {
         super.postUpdate();

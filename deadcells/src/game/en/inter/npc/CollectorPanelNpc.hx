@@ -18,8 +18,11 @@ class CollectorPanelNpc extends en.inter.Npc {
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public override function onGreet(arg0: en.Hero): Void {
+    public override function onGreet(h: en.Hero): Void {
+        super.onGreet(h);
+        h.revealBlueprints();
     }
+
 
     public override function fixedUpdate(): Void {
     }

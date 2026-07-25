@@ -38,7 +38,10 @@ class AssistMode extends ui.OptionsBase {
     }
 
     public override function onDispose(): Void {
+        super.onDispose();
+        ui.AssistMode.ME = null;
     }
+
 
     public override function update(): Void {
     }
@@ -50,5 +53,8 @@ class AssistMode extends ui.OptionsBase {
     }
 
     public override function onResize(): Void {
+        this.initControlLabel();
+        super.onResize();
     }
+
 }

@@ -1,10 +1,16 @@
 package tool.weap.sh;
 
 class SpikeShield extends tool.weap.BaseShield {
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
+        this.holdAnimId = "blockSpikeShield";
+        this.parryAnimId = "blockEndSpikeShield";
     }
 
-    public override function beforeCounterAttackHit(arg0: tool.atk.AttackData, arg1: tool.atk.AttackData, arg2: Bool): Void {
+
+    public override function beforeCounterAttackHit(sourceAtk: tool.atk.AttackData, counter: tool.atk.AttackData, fullParry: Bool): Void {
+        super.beforeCounterAttackHit(sourceAtk, counter, fullParry);
+        counter.setTag(2, fullParry);
     }
+
 }

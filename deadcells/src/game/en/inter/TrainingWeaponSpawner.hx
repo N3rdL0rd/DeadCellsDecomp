@@ -22,32 +22,36 @@ class TrainingWeaponSpawner extends en.Interactive {
     }
 
     public function get_weaponLevel(): Int {
-        throw "stub: get_weaponLevel not decompiled";
+        return this.get_training().weaponLevel;
     }
+
 
     public function set_weaponLevel(arg0: Int): Int {
         throw "stub: set_weaponLevel not decompiled";
     }
 
     public function get_weaponQuality(): Int {
-        throw "stub: get_weaponQuality not decompiled";
+        return this.get_training().weaponQuality;
     }
+
 
     public function set_weaponQuality(arg0: Int): Int {
         throw "stub: set_weaponQuality not decompiled";
     }
 
     public function get_weaponColorless(): Bool {
-        throw "stub: get_weaponColorless not decompiled";
+        return this.get_training().weaponColorless;
     }
+
 
     public function set_weaponColorless(arg0: Bool): Bool {
         throw "stub: set_weaponColorless not decompiled";
     }
 
     public function get_weaponLegendary(): Bool {
-        throw "stub: get_weaponLegendary not decompiled";
+        return this.get_training().weaponLegendary;
     }
+
 
     public function set_weaponLegendary(arg0: Bool): Bool {
         throw "stub: set_weaponLegendary not decompiled";

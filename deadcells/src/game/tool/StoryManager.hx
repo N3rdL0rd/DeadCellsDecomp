@@ -30,8 +30,10 @@ class StoryManager {
     public function incNpcProgress(arg0: NpcId): Void {
     }
 
-    public function setNpcProgress(arg0: NpcId, arg1: Int): Void {
+    public function setNpcProgress(id: NpcId, v: Int): Void {
+        this.npcProgresses.set(id, v);
     }
+
 
     public function setBitFlag(arg0: String, arg1: Int, arg2: Bool): Void {
     }

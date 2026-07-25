@@ -24,9 +24,13 @@ class CliffEnigmaZDoor extends en.inter.zdoor.ChallengeZDoor {
     public function updateRunesGlowColor(): Void {
     }
 
-    public override function getClueIconId(arg0: Bool): String {
-        throw "stub: getClueIconId not decompiled";
+    public override function getClueIconId(forMap: Bool): String {
+        if (!forMap) {
+            return null;
+        }
+        return super.getClueIconId(forMap);
     }
+
 
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }

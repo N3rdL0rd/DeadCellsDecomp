@@ -1,9 +1,11 @@
 package tool.weap;
 
 class Freeze extends tool.Weapon {
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
+        this.disableSounds = true;
     }
+
 
     public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";

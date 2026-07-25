@@ -73,7 +73,11 @@ class TitleScreen extends ui.Process {
     }
 
     public function showDLCs(): Void {
+        var o: ui.UIDlc = new ui.UIDlc(this);
+        this.blur(null, null);
+        this.clearMenu();
     }
+
 
     public function saveMenu(): Void {
     }
@@ -85,7 +89,11 @@ class TitleScreen extends ui.Process {
     }
 
     public function onLeavingOptionsMenu(): Void {
+        this.unblur();
+        this.mainMenu();
+        this.setMiscTexts();
     }
+
 
     public function backFromStreamOptions(): Void {
     }

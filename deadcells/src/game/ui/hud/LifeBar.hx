@@ -51,7 +51,9 @@ class LifeBar extends h2d.Object {
     }
 
     public function hideBuff(): Void {
+        this.buffFlow.set_visible(false);
     }
+
 
     public function enableText(): Void {
     }

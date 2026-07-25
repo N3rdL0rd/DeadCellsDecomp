@@ -18,7 +18,10 @@ class SnakeSwordBase extends tool.Weapon {
     }
 
     public function onSwapCreate(): Void {
+        super.setCycleLossCD();
+        super.set_cycle(this.getLastWeaponCycle());
     }
+
 
     public function getLastWeaponCycle(): Int {
         throw "stub: getLastWeaponCycle not decompiled";
@@ -45,7 +48,10 @@ class SnakeSwordWeapon extends tool.weap.dual.SnakeSwordBase {
     }
 
     public override function onSwapCreate(): Void {
+        this.isFirstWeapon = true;
+        super.onSwapCreate();
     }
+
 
     public override function swapWeapon(): Void {
     }
@@ -61,14 +67,19 @@ class SnakeSwordWeaponAlt extends tool.weap.dual.SnakeSwordBase {
     }
 
     public override function onSwapCreate(): Void {
+        this.isFirstWeapon = false;
+        super.onSwapCreate();
     }
+
 
     public override function swapWeapon(): Void {
     }
 
-    public override function onCreateAttack(arg0: tool.atk.AttackData): tool.atk.AttackData {
-        throw "stub: onCreateAttack not decompiled";
+    public override function onCreateAttack(atk: tool.atk.AttackData): tool.atk.AttackData {
+        atk.setTag(7, true);
+        return atk;
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";

@@ -9,8 +9,17 @@ class BatVolley extends Power {
         super();
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
+        if (k == "casting") {
+            this.initThrowBat();
+        } else {
+            if (k == "bat") {
+                this.throwBat();
+            }
+        }
     }
+
 
     public function initThrowBat(): Void {
     }

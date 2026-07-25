@@ -3,9 +3,11 @@ package tool.weap;
 class BulletBlade extends tool.Weapon {
     public var castBullets: Bool;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        this.castBullets = true;
+        super(o, i);
     }
+
 
     public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";

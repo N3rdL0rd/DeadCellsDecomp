@@ -26,8 +26,13 @@ class CastleKnight extends en.Mob {
         throw "stub: isSpinning not decompiled";
     }
 
-    public override function onCooldownEnd(arg0: String, arg1: Int): Void {
+    public override function onCooldownEnd(k: String, idx: Int): Void {
+        super.onCooldownEnd(k, idx);
+        if (k == "spinning") {
+            this.stopSpin();
+        }
     }
+
 
     public function stopSpin(): Void {
     }

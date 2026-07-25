@@ -11,8 +11,9 @@ class InfectionRule extends libs.Process {
     }
 
     public function get_game(): pr.Game {
-        throw "stub: get_game not decompiled";
+        return pr.Game.ME;
     }
+
 
     public function activate(): Void {
     }

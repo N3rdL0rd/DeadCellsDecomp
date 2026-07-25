@@ -206,7 +206,9 @@ class LevelMap {
     }
 
     public function unserializeInit(): Void {
+        this.initDone = false;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

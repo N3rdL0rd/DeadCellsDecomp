@@ -24,7 +24,13 @@ class CrowManager extends Entity {
 
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
+        this.updateCurrentRoom();
+        if (this.shouldSpawnNewCrow()) {
+            this.tryToSpawnFlyingCrow();
+        }
     }
+
 
     public function updateCurrentRoom(): Void {
     }

@@ -21,16 +21,19 @@ class TierInfo {
     }
 
     public function get_brutTier(): Int {
-        throw "stub: get_brutTier not decompiled";
+        return this.hero.brutalityTier;
     }
+
 
     public function get_tactTier(): Int {
-        throw "stub: get_tactTier not decompiled";
+        return this.hero.tacticTier;
     }
 
+
     public function get_survTier(): Int {
-        throw "stub: get_survTier not decompiled";
+        return this.hero.survivalTier;
     }
+
 
     public function get_pixelScale(): Float {
         throw "stub: get_pixelScale not decompiled";

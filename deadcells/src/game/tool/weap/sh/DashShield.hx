@@ -21,7 +21,10 @@ class DashShield extends tool.weap.BaseShield {
     }
 
     public function cancelDash(): Void {
+        this.dashingF = 0.0;
+        this.owner.removeAllAffects(96);
     }
+
 
     public override function fixedUpdate(): Void {
     }
@@ -30,5 +33,9 @@ class DashShield extends tool.weap.BaseShield {
     }
 
     public override function onShieldReleased(): Void {
+        if (this.hasDashCharged) {
+            super.startParry();
+        }
     }
+
 }

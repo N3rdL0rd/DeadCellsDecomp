@@ -28,10 +28,14 @@ class Arm {
     }
 
     public function show(): Void {
+        this.setVisibility(true);
     }
 
+
     public function hide(): Void {
+        this.setVisibility(false);
     }
+
 
     public function setGlowAlpha(arg0: Float, arg1: Int): Void {
     }

@@ -3,9 +3,13 @@ package tool.mod.script;
 class SeededRandom {
     public static var p_seededRandom: libs.Rand;
 
-    public static function isBelow(arg0: Float): Bool {
-        throw "stub: isBelow not decompiled";
+    public static function isBelow(_value: Float): Bool {
+        if (tool.mod.script.SeededRandom.p_seededRandom == null) {
+            throw "The seeded random from the level is not set yet and cannot be called in a structure script at this point";
+        }
+        return tool.mod.script.Struct.isRandomBelow(_value);
     }
+
 
     public static function range(arg0: Float, arg1: Float): Float {
         throw "stub: range not decompiled";
@@ -24,6 +28,7 @@ class SeededRandom {
     }
 
     public static function p_getSeededRandom(): libs.Rand {
-        throw "stub: p_getSeededRandom not decompiled";
+        return tool.mod.script.SeededRandom.p_seededRandom;
     }
+
 }

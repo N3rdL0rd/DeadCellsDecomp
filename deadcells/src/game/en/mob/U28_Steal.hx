@@ -23,7 +23,10 @@ class U28_Steal extends en.Mob {
     }
 
     public override function init(): Void {
+        super.init();
+        this.getGoldPile();
     }
+
 
     public override function initGfx(): Void {
     }
@@ -31,8 +34,12 @@ class U28_Steal extends en.Mob {
     public function getGoldPile(): Void {
     }
 
-    public override function setElite(arg0: Bool): Void {
+    public override function setElite(disableEliteSkill: Bool): Void {
+        super.setElite(disableEliteSkill);
+        var var3: libs.heaps.slib.AnimManager = this.spr.get_anim();
+        var3.setStateAnimSpeed("walk", 2.0);
     }
+
 
     public override function initSkills(): Void {
     }
@@ -74,10 +81,16 @@ class U28_Steal extends en.Mob {
     }
 
     public override function onDelayedVolteStart(): Void {
+        super.onDelayedVolteStart();
+        this.cancelChain();
     }
 
-    public override function onBreach(arg0: tool.atk.AttackData): Void {
+
+    public override function onBreach(a: tool.atk.AttackData): Void {
+        super.onBreach(a);
+        this.cancelChain();
     }
+
 
     public override function onAffectChange(arg0: Int, arg1: Bool): Void {
     }

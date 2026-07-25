@@ -13,8 +13,9 @@ class BootlegSwordsman extends en.mob.BootlegBase {
     }
 
     public function get_isRunning(): Bool {
-        throw "stub: get_isRunning not decompiled";
+        return this.cd.fastCheck.exists(199229440);
     }
+
 
     public override function initGfx(): Void {
     }

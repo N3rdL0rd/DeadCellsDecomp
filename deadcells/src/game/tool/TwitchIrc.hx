@@ -42,7 +42,10 @@ class TwitchIrc {
     }
 
     public function destroy(): Void {
+        this.close();
+        this.destroyed = true;
     }
+
 
     public function sync(): Void {
     }

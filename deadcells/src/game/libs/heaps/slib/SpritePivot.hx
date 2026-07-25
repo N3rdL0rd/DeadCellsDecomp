@@ -9,7 +9,9 @@ class SpritePivot {
     public var centerFactorY: Float;
 
     public function new() {
+        this.isUndefined = true;
     }
+
 
     public function copyFrom(arg0: libs.heaps.slib.SpritePivot): Void {
     }

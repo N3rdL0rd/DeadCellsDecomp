@@ -15,7 +15,9 @@ class AnimationStateDataKey {
     public var a2: spine.Animation;
 
     public function new() {
+        this.a2 = null;
     }
+
 
     public function getHashCode(): Int {
         throw "stub: getHashCode not decompiled";

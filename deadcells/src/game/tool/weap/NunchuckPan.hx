@@ -23,10 +23,16 @@ class NunchuckPan extends tool.Weapon {
     }
 
     public override function dispose(): Void {
+        this.removeDelayedhit();
+        super.dispose();
     }
 
+
     public override function interrupt(): Void {
+        super.interrupt();
+        this.removeDelayedhit();
     }
+
 
     public function removeDelayedhit(): Void {
     }

@@ -27,8 +27,10 @@ class Active extends Entity {
     public function triggerOnDestroyAffixes(): Void {
     }
 
-    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic): Void {
+        super.setPosCase(x, y, 0.5, yr);
     }
+
 
     public function clearActiveCells(): Void {
     }

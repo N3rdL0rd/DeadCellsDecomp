@@ -46,7 +46,10 @@ class DookuInteraction {
     }
 
     public function disable(): Void {
+        this.parent.dookuDisable();
+        this.phase = 0;
     }
+
 
     public function getDookuPos(): h2d.col.IPoint {
         throw "stub: getDookuPos not decompiled";

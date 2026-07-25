@@ -13,8 +13,10 @@ class ClockTower extends level.LevelStruct {
         throw "stub: buildMainRooms not decompiled";
     }
 
-    public override function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
+    public override function addLoreRoom(lore: Dynamic, overrideStructMode: Dynamic): Void {
+        super.addLoreRoom(lore, 2);
     }
+
 
     public function addInBranch(arg0: level.RoomNode): Void {
     }
@@ -29,9 +31,13 @@ class ClockTower extends level.LevelStruct {
         throw "stub: getInsideLoreRoomSpot not decompiled";
     }
 
-    public override function createNode(arg0: String, arg1: String, arg2: Dynamic, arg3: String): level.RoomNode {
-        throw "stub: createNode not decompiled";
+    public override function createNode(type: String, templateId: String, group: Dynamic, id: String): level.RoomNode {
+        if (type == "GenericZDoor") {
+            group = 46;
+        }
+        return super.createNode(type, templateId, group, id);
     }
+
 
     public override function finalize(): Void {
     }

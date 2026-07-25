@@ -46,8 +46,12 @@ class Controller {
     }
 
     public function get_bindings(): tool.BindingProfiles {
-        throw "stub: get_bindings not decompiled";
+        if (this.useCustomBindings) {
+            return this.customBindings;
+        }
+        return this.normalBindings;
     }
+
 
     public function onAnyPadEnabled(arg0: libs.heaps.GamePad): Void {
     }
@@ -59,7 +63,9 @@ class Controller {
     }
 
     public function lock(): Void {
+        this.isLocked = true;
     }
+
 
     public function unlock(): Void {
     }

@@ -13,7 +13,9 @@ class LevelLogos {
     }
 
     public function preventAutoDispose(): Void {
+        this.levelLogoTexture.preventAutoDispose();
     }
+
 
     public function initLogoTexture(): Void {
     }

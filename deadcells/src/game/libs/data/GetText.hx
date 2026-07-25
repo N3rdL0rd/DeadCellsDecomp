@@ -19,14 +19,19 @@ class GetText {
         throw "stub: get not decompiled";
     }
 
-    public function readMo(arg0: haxe.io.Bytes): Void {
+    public function readMo(data: haxe.io.Bytes): Void {
+        var r: libs.data.MoReader = new libs.data.MoReader(data);
+        this.texts = r.parse();
     }
+
 
     public function readNextMo(arg0: haxe.io.Bytes): Void {
     }
 
     public function emptyDictionary(): Void {
+        this.texts = new haxe.ds.StringMap();
     }
+
 }
 
 class LocaleString_Impl_ {
@@ -44,20 +49,24 @@ class MoReader {
     public var hash_offset: Int;
     public var data: haxe.io.BytesInput;
 
-    public function new(arg0: haxe.io.Bytes) {
+    public function new(data: haxe.io.Bytes) {
+        this.data = new haxe.io.BytesInput(data, null, null);
     }
+
 
     public function parse(): haxe.ds.StringMap<Dynamic> {
         throw "stub: parse not decompiled";
     }
 
-    public function getTranslatedString(arg0: Int): String {
-        throw "stub: getTranslatedString not decompiled";
+    public function getTranslatedString(index: Int): String {
+        return this.getString(this.translated_table_offset + 8 * index);
     }
 
-    public function getOriginalString(arg0: Int): String {
-        throw "stub: getOriginalString not decompiled";
+
+    public function getOriginalString(index: Int): String {
+        return this.getString(this.original_table_offset + 8 * index);
     }
+
 
     public function getString(arg0: Int): String {
         throw "stub: getString not decompiled";

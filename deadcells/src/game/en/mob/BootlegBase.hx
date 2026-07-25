@@ -17,7 +17,10 @@ class BootlegBase extends en.Mob {
     }
 
     public override function init(): Void {
+        super.init();
+        this.rescaleBootLeg();
     }
+
 
     public override function preRevealAnim(arg0: Float): Void {
     }

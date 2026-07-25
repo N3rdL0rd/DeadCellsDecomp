@@ -12,8 +12,11 @@ class ItemGen {
     public function new(arg0: Int = 0, arg1: Bool = false) {
     }
 
-    public function setSeed(arg0: Int): Void {
+    public function setSeed(s: Int): Void {
+        this.seed = s;
+        this.rseed.initSeed(s, null);
     }
+
 
     public function finalizeLegendary(arg0: tool.InventItem): Void {
     }

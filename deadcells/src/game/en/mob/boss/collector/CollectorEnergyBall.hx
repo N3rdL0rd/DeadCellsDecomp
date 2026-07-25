@@ -26,7 +26,10 @@ class CollectorEnergyBall extends Entity {
     }
 
     public override function onTouchGround(): Void {
+        super.onTouchGround();
+        this.kill();
     }
+
 
     public override function onTouch(arg0: Entity): Void {
     }

@@ -21,7 +21,9 @@ class ChainSegment {
     }
 
     public function dispose(): Void {
+        this.sprite.remove();
     }
+
 
     public function follow(arg0: Float, arg1: Float): Void {
     }
@@ -38,12 +40,19 @@ class ChainSegment {
     public function updateSprite(): Void {
     }
 
-    public function set_visible(arg0: Bool): Bool {
-        throw "stub: set_visible not decompiled";
+    public function set_visible(v: Bool): Bool {
+        if (v != this.visible) {
+            this.visible = v;
+            this.onVisibleChanged();
+        }
+        return v;
     }
 
+
     public function onVisibleChanged(): Void {
+        this.sprite.visible = this.visible;
     }
+
 }
 
 class Chain {
@@ -78,8 +87,9 @@ class Chain {
     }
 
     public function getNbSegments(): Int {
-        throw "stub: getNbSegments not decompiled";
+        return this.lastSegmentIndex + 1;
     }
+
 
     public function updateNbSegments(arg0: Int, arg1: Ref): Void {
     }

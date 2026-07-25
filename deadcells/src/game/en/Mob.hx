@@ -544,7 +544,13 @@ class Mob extends Entity {
     }
 
     public override function refreshIcons(): Void {
+        super.refreshIcons();
+        if (this.icons == null) {
+            return;
+        }
+        super.postUpdateIcons();
     }
+
 
     public function preRevealAnim(arg0: Float): Void {
     }
@@ -681,13 +687,21 @@ class Mob extends Entity {
     }
 
     public override function onOutOfGameChange(): Void {
+        super.onOutOfGameChange();
+        if (!this.isOutOfGame) {
+            super.cancelVelocities();
+        }
     }
+
 
     public override function fixedUpdate(): Void {
     }
 
     public override function onEnterWater(): Void {
+        super.onEnterWater();
+        super.removeAllAffects(137);
     }
+
 
     public override function onLeaveWater(): Void {
     }

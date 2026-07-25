@@ -27,7 +27,9 @@ class WorkshopManager {
     }
 
     public function newItem(): Void {
+        this.updateProperties(null, null);
     }
+
 
     public function updateProperties(arg0: steam.ugc.Item, arg1: steam.ugc.Query.Result): Void {
     }

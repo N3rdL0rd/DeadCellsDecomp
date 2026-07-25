@@ -12,8 +12,9 @@ class Club extends tool.Weapon {
     }
 
     public function getTrueElapsedChargeS(): Float {
-        throw "stub: getTrueElapsedChargeS not decompiled";
+        return this.trueChargeF / 60.0;
     }
+
 
     public function getFullChargeRatio(): Float {
         throw "stub: getFullChargeRatio not decompiled";
