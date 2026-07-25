@@ -60,6 +60,7 @@ class Critter {
     public function onStepY(): Void {
     }
 
+
     public function onLeaveScreen(): Void {
         this.deactivate();
     }

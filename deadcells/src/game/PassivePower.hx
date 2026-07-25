@@ -12,6 +12,7 @@ class PassivePower extends Power {
     public function init(): Void {
     }
 
+
     public override function shouldChangeLevelWithHero(): Bool {
         return true;
     }
@@ -23,11 +24,13 @@ class PassivePower extends Power {
     public function kill(arg0: Bool): Void {
     }
 
-    public function onLevelChanged(arg0: pr.Level): Void {
+    public function onLevelChanged(lvl: pr.Level): Void {
     }
+
 
     public function doPassive(): Void {
     }
+
 
     public function onBeforeOwnerApplyAttackResult(a: tool.atk.AttackData): Bool {
         return true;

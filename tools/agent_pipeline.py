@@ -206,7 +206,10 @@ def find_function_span(content: str, class_name: str, method_name: str) -> Optio
     (modifiers through closing brace) within a specific class in this file, or
     None if it can't be located unambiguously - callers should fall back to a
     whole-file rewrite rather than guess."""
-    class_m = re.search(r"\bclass\s+" + re.escape(class_name) + r"\b[^{]*\{", content)
+    # (?:\w+\.)* tolerates crashlink's pseudo() sometimes printing the full
+    # dotted package path in the class line (e.g. "class en.Foo {" instead of
+    # "class Foo {") - real .hx source never does this, but pseudo output does.
+    class_m = re.search(r"\bclass\s+(?:\w+\.)*" + re.escape(class_name) + r"\b[^{]*\{", content)
     if not class_m:
         return None
     class_body_end = _match_brace(content, class_m.end() - 1)
@@ -498,6 +501,16 @@ def validate_selective_snippet(snippet: str, method_name: str) -> Optional[str]:
     return None
 
 
+def splice_method(file_content: str, span: tuple[int, int], method_text: str) -> str:
+    """Replaces file_content[span[0]:span[1]] with method_text, re-indented to
+    match what was already at span[0] (method_text may start at column 0 or
+    have its own unrelated indentation - callers besides the LLM path use this
+    too, e.g. direct-applying crashlink's own pseudocode)."""
+    indent = re.match(r"[ \t]*", file_content[span[0] :]).group(0)
+    reindented = textwrap.indent(textwrap.dedent(method_text.strip("\n")), indent)
+    return file_content[: span[0]] + reindented + "\n" + file_content[span[1] :]
+
+
 def guard_ok(original: str, candidate: str) -> Optional[str]:
     """None if candidate passes the sandbox check, else a rejection reason. Only
     used in whole-file mode (selective mode's guard is validate_selective_snippet
@@ -720,12 +733,7 @@ def _process_item_locked(
                     print(f"  [{item.name}] attempt {attempt}: rejected - {rejection}")
                     feedback = f"Your last response was rejected: {rejection}. Return only the {method_name} method."
                     continue
-                # Re-indent to match the original method's indentation - the model's
-                # snippet starts at column 0 (or whatever it felt like), and span[0]
-                # points right after the original line's leading whitespace, not before it.
-                indent = re.match(r"[ \t]*", original_content[span[0] :]).group(0)
-                reindented = textwrap.indent(textwrap.dedent(snippet.strip("\n")), indent)
-                candidate = original_content[: span[0]] + reindented + "\n" + original_content[span[1] :]
+                candidate = splice_method(original_content, span, snippet)
             else:
                 candidate = snippet
                 rejection = guard_ok(original_content, candidate)

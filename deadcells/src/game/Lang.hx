@@ -128,8 +128,9 @@ class Lang {
     public static function tryAutoInstallMod(): Void {
     }
 
-    public static function onItemDownloaded(arg0: steam.ugc.Item): Void {
+    public static function onItemDownloaded(item: steam.ugc.Item): Void {
     }
+
 
     public static function stopAutoInstall(arg0: String): Void {
     }
