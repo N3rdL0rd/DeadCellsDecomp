@@ -109,10 +109,27 @@ def main() -> None:
             sys.exit(f"Bootstrap build failed for shard {i}:\n{stderr}")
     print(f"Bootstrap builds OK for all {len(worktrees)} worktrees.")
 
+    # Use the main repo's already-set-up venv interpreter directly, NOT `uv
+    # run` in each worktree - `uv run` resolves the project from the nearest
+    # pyproject.toml, which every worktree has its own checked-out copy of, so
+    # it doesn't know they're "the same project" and tries to build 24
+    # independent venvs from scratch concurrently. This is why the first
+    # attempt at this looked stuck: all 24 shards were fighting over `uv`
+    # dependency installation/linking, not doing any real work, for the
+    # entire time before the run got killed. The interpreter can safely be
+    # shared (crashlink etc. are identical across worktrees) while each
+    # worker still runs ITS OWN worktree's copy of tools/direct_apply.py
+    # (Python resolves __file__/paths from the script location, not the
+    # interpreter location), so this doesn't compromise the per-worktree
+    # isolation the whole point of this script is built on.
+    python = str(ROOT / ".venv" / "bin" / "python")
+    if not Path(python).is_file():
+        sys.exit(f"{python} not found - expected the main repo's venv to already be set up (`uv sync`).")
+
     print("Launching shards in parallel...")
     procs = []
     for i, (wt_path, _branch) in enumerate(worktrees):
-        cmd = ["uv", "run", "python", "tools/direct_apply.py", "--shard-index", str(i), "--shard-count", str(workers)]
+        cmd = [python, "tools/direct_apply.py", "--shard-index", str(i), "--shard-count", str(workers)]
         if per_shard_limit:
             cmd += ["--limit", str(per_shard_limit)]
         log_path = tmp_base / f"shard-{i}.log"
