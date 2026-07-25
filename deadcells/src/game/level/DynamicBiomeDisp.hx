@@ -28,9 +28,10 @@ class DynamicBiomeDisp extends level.BiomeDisp {
     public function reloadBlends(): Void {
     }
 
-    public function getBlendRatioAt(arg0: Float, arg1: Float): Float {
-        throw "stub: getBlendRatioAt not decompiled";
+    public function getBlendRatioAt(px: Float, py: Float): Float {
+        return 0.0;
     }
+
 
     public function getViewportBlendRatio(): Float {
         throw "stub: getViewportBlendRatio not decompiled";

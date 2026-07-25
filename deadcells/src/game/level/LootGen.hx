@@ -54,8 +54,9 @@ class LootGen {
     }
 
     public function getLevelInfos(): Dynamic {
-        throw "stub: getLevelInfos not decompiled";
+        return this.lInfos;
     }
+
 
     public function isUnique(arg0: tool.InventItem): Bool {
         throw "stub: isUnique not decompiled";

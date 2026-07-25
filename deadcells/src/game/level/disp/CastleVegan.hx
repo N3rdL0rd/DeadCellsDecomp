@@ -9,20 +9,24 @@ class CastleVegan extends level.disp.Castle {
     }
 
     public override function getFloorJunkNames(): String {
-        throw "stub: getFloorJunkNames not decompiled";
+        return "veganFloorJunk";
     }
+
 
     public override function getWallJunkNames(): String {
-        throw "stub: getWallJunkNames not decompiled";
+        return "veganWallJunk";
     }
+
 
     public override function getSpecificJunkName(): String {
-        throw "stub: getSpecificJunkName not decompiled";
+        return "flower";
     }
 
+
     public override function getSpecificJunkGlowName(): String {
-        throw "stub: getSpecificJunkGlowName not decompiled";
+        return "flowerGlow";
     }
+
 
     public override function updateBiomeFx(): Void {
     }

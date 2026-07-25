@@ -39,8 +39,9 @@ class Bank extends level.BiomeDisp {
     }
 
     public override function getStampWallThreshold(): Float {
-        throw "stub: getStampWallThreshold not decompiled";
+        return 1.0;
     }
+
 
     public function canStampOnAlt(arg0: Int, arg1: Ref): Bool {
         throw "stub: canStampOnAlt not decompiled";

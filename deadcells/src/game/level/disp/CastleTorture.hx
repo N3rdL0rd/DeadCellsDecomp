@@ -9,10 +9,12 @@ class CastleTorture extends level.disp.Castle {
     }
 
     public override function getFloorJunkNames(): String {
-        throw "stub: getFloorJunkNames not decompiled";
+        return "tortureFloorJunk";
     }
 
+
     public override function getWallJunkNames(): String {
-        throw "stub: getWallJunkNames not decompiled";
+        return "tortureWallJunk";
     }
+
 }

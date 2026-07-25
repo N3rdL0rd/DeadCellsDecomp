@@ -43,8 +43,9 @@ class Bridge extends level.BiomeDisp {
     }
 
     public override function getForcedWallTrWidth(): Int {
-        throw "stub: getForcedWallTrWidth not decompiled";
+        return 1;
     }
+
 
     public override function listWallTransitions(): Array<Dynamic> {
         throw "stub: listWallTransitions not decompiled";

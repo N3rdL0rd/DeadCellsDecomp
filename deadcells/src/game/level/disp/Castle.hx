@@ -22,35 +22,42 @@ class Castle extends level.BiomeDisp {
     }
 
     public override function getStampWallThreshold(): Float {
-        throw "stub: getStampWallThreshold not decompiled";
+        return 1.0;
     }
+
 
     public function getFloorJunkNames(): String {
-        throw "stub: getFloorJunkNames not decompiled";
+        return "floorJunk";
     }
+
 
     public function getWallJunkNames(): String {
-        throw "stub: getWallJunkNames not decompiled";
+        return "wallJunk";
     }
+
 
     public override function getHighlightColor(): String {
-        throw "stub: getHighlightColor not decompiled";
+        return "CastleHighlight";
     }
 
+
     public override function getOverWaterLight(): String {
-        throw "stub: getOverWaterLight not decompiled";
+        return "CastleWaterLight";
     }
+
 
     public override function decorateRoom(arg0: level.Room): Void {
     }
 
     public function getSpecificJunkName(): String {
-        throw "stub: getSpecificJunkName not decompiled";
+        return null;
     }
 
+
     public function getSpecificJunkGlowName(): String {
-        throw "stub: getSpecificJunkGlowName not decompiled";
+        return null;
     }
+
 
     public override function render(): Void {
     }
@@ -86,7 +93,9 @@ class Castle extends level.BiomeDisp {
     }
 
     public override function updateBiomeFx(): Void {
+        super.updateBiomeFx();
     }
+
 
     public override function clear(): Void {
     }

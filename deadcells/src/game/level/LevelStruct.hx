@@ -90,9 +90,10 @@ class LevelStruct {
         throw "stub: getInsideLoreRoomSpot not decompiled";
     }
 
-    public function allowLoreRoomBefore(arg0: level.RoomNode): Bool {
-        throw "stub: allowLoreRoomBefore not decompiled";
+    public function allowLoreRoomBefore(r: level.RoomNode): Bool {
+        return true;
     }
+
 
     public function addLoreRoom(arg0: Dynamic, arg1: Dynamic): Void {
     }

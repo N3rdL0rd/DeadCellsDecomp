@@ -12,12 +12,14 @@ class CastleAlchemy extends level.disp.Castle {
     }
 
     public override function getSpecificJunkName(): String {
-        throw "stub: getSpecificJunkName not decompiled";
+        return "flask";
     }
 
+
     public override function getSpecificJunkGlowName(): String {
-        throw "stub: getSpecificJunkGlowName not decompiled";
+        return "flaskGlow";
     }
+
 
     public override function addHoleBackground(arg0: level.Room, arg1: Int, arg2: Int, arg3: Int, arg4: Int): Void {
     }
@@ -27,7 +29,9 @@ class CastleAlchemy extends level.disp.Castle {
     }
 
     public override function renderBackground(): Void {
+        super.renderBackground();
     }
+
 
     public override function postUpdate(): Void {
     }
@@ -36,12 +40,14 @@ class CastleAlchemy extends level.disp.Castle {
     }
 
     public override function getFloorJunkNames(): String {
-        throw "stub: getFloorJunkNames not decompiled";
+        return "alchemyFloorJunk";
     }
 
+
     public override function getWallJunkNames(): String {
-        throw "stub: getWallJunkNames not decompiled";
+        return "alchemyWallJunk";
     }
+
 
     public override function updateBiomeFx(): Void {
     }

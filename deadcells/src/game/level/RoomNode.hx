@@ -76,13 +76,17 @@ class RoomNode {
         throw "stub: copy not decompiled";
     }
 
-    public function setConstraint(arg0: level.LinkConstraint): level.RoomNode {
-        throw "stub: setConstraint not decompiled";
+    public function setConstraint(c: level.LinkConstraint): level.RoomNode {
+        this.parentLinkConstraint = c;
+        return this;
     }
 
-    public function setChildPriority(arg0: Int): level.RoomNode {
-        throw "stub: setChildPriority not decompiled";
+
+    public function setChildPriority(p: Int): level.RoomNode {
+        this.childPriority = p;
+        return this;
     }
+
 
     public function addFlag(arg0: level.RoomFlag): level.RoomNode {
         throw "stub: addFlag not decompiled";
@@ -92,9 +96,11 @@ class RoomNode {
         throw "stub: addNpc not decompiled";
     }
 
-    public function setExit(arg0: String): level.RoomNode {
-        throw "stub: setExit not decompiled";
+    public function setExit(e: String): level.RoomNode {
+        this.exitLevel = e;
+        return this;
     }
+
 
     public function calcDistanceCond(arg0: Dynamic, arg1: Bool): Int {
         throw "stub: calcDistanceCond not decompiled";

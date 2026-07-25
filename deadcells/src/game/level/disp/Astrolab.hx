@@ -64,6 +64,7 @@ class Astrolab extends level.BiomeDisp {
     }
 
     public override function getStampWallThreshold(): Float {
-        throw "stub: getStampWallThreshold not decompiled";
+        return 0.6;
     }
+
 }

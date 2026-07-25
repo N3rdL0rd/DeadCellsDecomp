@@ -84,9 +84,10 @@ class LoreManager {
     public function onCdbReload(): Void {
     }
 
-    public function isCdbExaminableEntryActive(arg0: String, arg1: Int): Bool {
-        throw "stub: isCdbExaminableEntryActive not decompiled";
+    public function isCdbExaminableEntryActive(id: String, idx: Int): Bool {
+        return true;
     }
+
 
     public function init(): Void {
     }
@@ -94,9 +95,10 @@ class LoreManager {
     public function removeEventLine(arg0: String, arg1: level.LoreEvent): Void {
     }
 
-    public function onCreateExaminable(arg0: String, arg1: en.inter.Examinable): Bool {
-        throw "stub: onCreateExaminable not decompiled";
+    public function onCreateExaminable(custId: String, exam: en.inter.Examinable): Bool {
+        return true;
     }
+
 
     public function onExaminableActivation(arg0: String, arg1: en.inter.Examinable, arg2: en.Hero): Void {
     }
