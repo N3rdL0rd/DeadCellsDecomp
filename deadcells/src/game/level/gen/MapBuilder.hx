@@ -8,7 +8,12 @@ class MapBuilder {
     public var rnd: libs.Rand;
     public var roomNodes: Array<Dynamic>;
 
-    public function new(arg0: User = null, arg1: Dynamic = null, arg2: Int = 0, arg3: Dynamic = null, arg4: libs.Rand = null) {
+    public function new(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand) {
+        this.user = user;
+        this.infos = infos;
+        this.seed = seed;
+        this.genMapData = genMapData;
+        this.rnd = rnd;
     }
 
     public function initRoomNodes(): Void {

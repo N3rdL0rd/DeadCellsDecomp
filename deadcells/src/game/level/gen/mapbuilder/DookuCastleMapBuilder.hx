@@ -4,8 +4,8 @@ class DookuCastleMapBuilder extends level.gen.MapBuilder {
     public var extensionPossibleRooms: haxe.ds.IntMap<Dynamic>;
     public var roomSizes: Array<Int>;
 
-    public function new(arg0: User = null, arg1: Dynamic = null, arg2: Int = 0, arg3: Dynamic = null, arg4: libs.Rand = null) {
-        super();
+    public function new(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand) {
+        super(user, infos, seed, genMapData, rnd);
     }
 
     public override function initRoomNodes(): Void {

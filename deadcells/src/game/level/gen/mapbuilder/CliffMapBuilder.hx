@@ -3,8 +3,8 @@ package level.gen.mapbuilder;
 class CliffMapBuilder extends level.gen.MapBuilder {
     public var inRoomCells: Array<Dynamic>;
 
-    public function new(arg0: User = null, arg1: Dynamic = null, arg2: Int = 0, arg3: Dynamic = null, arg4: libs.Rand = null) {
-        super();
+    public function new(user: User, infos: Dynamic, seed: Int, genMapData: Dynamic, rnd: libs.Rand) {
+        super(user, infos, seed, genMapData, rnd);
     }
 
     public function getExtColl(arg0: level.LevelMap, arg1: level.Room, arg2: Int): Int {
