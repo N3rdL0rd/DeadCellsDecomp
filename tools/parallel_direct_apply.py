@@ -80,6 +80,17 @@ def main() -> None:
         worktrees.append((wt_path, branch))
     print(f"Created {len(worktrees)} worktrees under {tmp_base}")
 
+    # hlboot.dat is gitignored (*.dat) - it's a required input (the original
+    # game's bytecode) but never tracked in git, so a fresh worktree checkout
+    # doesn't have it. Symlink rather than copy - it's the same multi-hundred-
+    # MB file N times over otherwise, and it's read-only for this purpose.
+    hlboot = ROOT / "hlboot.dat"
+    if not hlboot.is_file():
+        sys.exit(f"{hlboot} not found - can't set up worktrees without it.")
+    for wt_path, _branch in worktrees:
+        (wt_path / "hlboot.dat").symlink_to(hlboot)
+    print("Linked hlboot.dat into each worktree.")
+
     print("Launching shards in parallel...")
     procs = []
     for i, (wt_path, _branch) in enumerate(worktrees):
@@ -92,12 +103,26 @@ def main() -> None:
         procs.append((i, proc, log_f, log_path))
 
     start = time.time()
-    for i, proc, log_f, log_path in procs:
-        proc.wait()
-        log_f.close()
+    done_shards: set[int] = set()
+    while len(done_shards) < len(procs):
+        time.sleep(5)
         elapsed = time.time() - start
-        tail = log_path.read_text().splitlines()[-1:] if log_path.exists() else []
-        print(f"[shard {i}, {elapsed:.0f}s] exit {proc.returncode}  {tail[0] if tail else ''}")
+        total_matched = total_skipped = total_lines = 0
+        for i, proc, log_f, log_path in procs:
+            if proc.poll() is not None and i not in done_shards:
+                done_shards.add(i)
+                log_f.close()
+                tail = log_path.read_text().splitlines()[-1:] if log_path.exists() else []
+                print(f"  [shard {i}, {elapsed:.0f}s] FINISHED exit {proc.returncode}  {tail[0] if tail else ''}")
+            if log_path.exists():
+                lines = log_path.read_text().splitlines()
+                total_lines += sum(1 for l in lines if l.startswith("["))
+                total_matched += sum(1 for l in lines if "MATCHED" in l)
+                total_skipped += sum(1 for l in lines if "skip" in l)
+        print(
+            f"[{elapsed:.0f}s] {len(done_shards)}/{len(procs)} shards done - "
+            f"{total_matched} matched, {total_skipped} skipped, {total_lines} attempted across all shards"
+        )
 
     print("\nAll shards finished. Merging results back...")
     merged_files = 0
