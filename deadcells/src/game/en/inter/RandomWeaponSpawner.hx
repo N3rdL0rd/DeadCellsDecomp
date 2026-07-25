@@ -27,7 +27,9 @@ class RandomWeaponSpawner extends Entity {
     }
 
     public function spawnItemInArmory(): Void {
+        this.spawnItem(true);
     }
+
 
     public function spawnItem(arg0: Bool): en.inter.ItemDrop {
         throw "stub: spawnItem not decompiled";
@@ -49,7 +51,9 @@ class RandomWeaponSpawner extends Entity {
     }
 
     public function respawnInArmory(): Void {
+        this.respawn(true);
     }
+
 
     public function respawn(arg0: Bool): Void {
     }

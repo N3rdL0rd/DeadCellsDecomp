@@ -13,12 +13,14 @@ class UIWindow extends uicore.UIElement {
     }
 
     public override function _canBeSelected(): Bool {
-        throw "stub: _canBeSelected not decompiled";
+        return false;
     }
 
-    public override function selectFromMouse(arg0: Bool): Bool {
-        throw "stub: selectFromMouse not decompiled";
+
+    public override function selectFromMouse(click: Bool): Bool {
+        return false;
     }
+
 
     public override function requestSelectionFromMouse(arg0: uicore.UIElement): Bool {
         throw "stub: requestSelectionFromMouse not decompiled";

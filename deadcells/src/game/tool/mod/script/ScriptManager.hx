@@ -5,7 +5,9 @@ class ScriptManager {
     public var struct: tool.mod.script.StructInterpreter;
 
     public function new() {
+        this.reset();
     }
+
 
     public static function get_instance(): tool.mod.script.ScriptManager {
         throw "stub: get_instance not decompiled";
@@ -40,5 +42,7 @@ class ScriptManager {
     }
 
     public function releaseLevelStruct(): Void {
+        tool.mod.script.Struct.p_Release();
     }
+
 }

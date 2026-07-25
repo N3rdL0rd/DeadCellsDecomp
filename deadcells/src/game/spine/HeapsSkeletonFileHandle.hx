@@ -8,6 +8,7 @@ class HeapsSkeletonFileHandle {
     }
 
     public function getContent(): String {
-        throw "stub: getContent not decompiled";
+        return this.data;
     }
+
 }

@@ -79,7 +79,9 @@ class Power {
     }
 
     public function unserializeInit(): Void {
+        this.destroyed = false;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

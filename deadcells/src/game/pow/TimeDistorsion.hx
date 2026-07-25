@@ -9,8 +9,9 @@ class TimeDistorsion extends Power {
     }
 
     public override function shouldChangeLevelWithHero(): Bool {
-        throw "stub: shouldChangeLevelWithHero not decompiled";
+        return true;
     }
+
 
     public function tick(): Void {
     }

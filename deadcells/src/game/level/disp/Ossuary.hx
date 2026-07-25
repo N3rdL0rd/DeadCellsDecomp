@@ -12,11 +12,14 @@ class Ossuary extends level.BiomeDisp {
     }
 
     public override function getStampWallThreshold(): Float {
-        throw "stub: getStampWallThreshold not decompiled";
+        return 0.5;
     }
 
-    public override function decorateRoom(arg0: level.Room): Void {
+
+    public override function decorateRoom(r: level.Room): Void {
+        super.decorateRoom(r);
     }
+
 
     public override function decorateZone(arg0: level.DecoZone): Void {
     }

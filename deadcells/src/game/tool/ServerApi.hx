@@ -29,12 +29,14 @@ class ServerApi {
     }
 
     public static function getPlatformName(): String {
-        throw "stub: getPlatformName not decompiled";
+        return "Steam";
     }
 
+
     public static function canSaveScore(): Bool {
-        throw "stub: canSaveScore not decompiled";
+        return true;
     }
+
 
     public static function request(arg0: String, arg1: haxe.ds.StringMap<Dynamic>, arg2: Dynamic, arg3: Dynamic): Void {
     }
@@ -43,6 +45,7 @@ class ServerApi {
     }
 
     public static function getPlatform(): tool.UserPlatform {
-        throw "stub: getPlatform not decompiled";
+        return Steam;
     }
+
 }

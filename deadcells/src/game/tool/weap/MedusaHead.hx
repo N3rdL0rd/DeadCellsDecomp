@@ -8,8 +8,9 @@ class MedusaHead extends tool.Weapon {
     }
 
     public override function get_cycle(): Int {
-        throw "stub: get_cycle not decompiled";
+        return 0;
     }
+
 
     public override function get_shootX(): Float {
         throw "stub: get_shootX not decompiled";

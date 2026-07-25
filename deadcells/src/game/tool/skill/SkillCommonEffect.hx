@@ -12,8 +12,10 @@ class SkillCommonEffect extends tool.skill.SkillEvent {
         super();
     }
 
-    public function setTarget(arg0: Dynamic): Void {
+    public function setTarget(target: Dynamic): Void {
+        this.target = target;
     }
+
 
     public function initBump(arg0: Dynamic): Void {
     }
@@ -21,8 +23,10 @@ class SkillCommonEffect extends tool.skill.SkillEvent {
     public function initCautiousBump(arg0: Dynamic): Void {
     }
 
-    public function initStun(arg0: Float): Void {
+    public function initStun(stunS: Float): Void {
+        this.stunS = stunS;
     }
+
 
     public override function trigger(arg0: Dynamic): Void {
     }

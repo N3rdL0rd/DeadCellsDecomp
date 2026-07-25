@@ -88,8 +88,9 @@ class HeroMainSkill {
     }
 
     public function isUsingInputs(): Bool {
-        throw "stub: isUsingInputs not decompiled";
+        return true;
     }
+
 
     public function canUse(): Bool {
         throw "stub: canUse not decompiled";
@@ -99,9 +100,10 @@ class HeroMainSkill {
         throw "stub: isActive not decompiled";
     }
 
-    public function canBeInterruptedBy(arg0: tool.HeroMainSkill): Bool {
-        throw "stub: canBeInterruptedBy not decompiled";
+    public function canBeInterruptedBy(heroSkill: tool.HeroMainSkill): Bool {
+        return true;
     }
+
 
     public function destroy(): Void {
     }
@@ -131,36 +133,44 @@ class HeroMainSkill {
     }
 
     public function shouldHaveSmallHitbox(): Bool {
-        throw "stub: shouldHaveSmallHitbox not decompiled";
+        return false;
     }
+
 
     public function canWallGrab(): Bool {
-        throw "stub: canWallGrab not decompiled";
+        return true;
     }
+
 
     public function canJumpThroughUp(): Bool {
-        throw "stub: canJumpThroughUp not decompiled";
+        return true;
     }
 
-    public function canPreventStuckInWall(arg0: Int, arg1: Int): Bool {
-        throw "stub: canPreventStuckInWall not decompiled";
+
+    public function canPreventStuckInWall(cx: Int, cy: Int): Bool {
+        return false;
     }
+
 
     public function canBreakDoors(): Bool {
-        throw "stub: canBreakDoors not decompiled";
+        return false;
     }
+
 
     public function canBreakTiles(): Bool {
-        throw "stub: canBreakTiles not decompiled";
+        return false;
     }
 
-    public function canUseInteractive(arg0: en.Interactive): Bool {
-        throw "stub: canUseInteractive not decompiled";
+
+    public function canUseInteractive(inter: en.Interactive): Bool {
+        return true;
     }
 
-    public function isItemUseful(arg0: tool.InventItem): Bool {
-        throw "stub: isItemUseful not decompiled";
+
+    public function isItemUseful(item: tool.InventItem): Bool {
+        return true;
     }
+
 
     public function onOwnerDeath(): Void {
     }

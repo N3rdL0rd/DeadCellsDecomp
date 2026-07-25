@@ -32,16 +32,19 @@ class InventItem {
     }
 
     public function getRawItemLevel(): Int {
-        throw "stub: getRawItemLevel not decompiled";
+        return this._itemLevel;
     }
+
 
     public function getAdjustedItemLevel(): Int {
         throw "stub: getAdjustedItemLevel not decompiled";
     }
 
-    public function setItemLevel(arg0: Int): Int {
-        throw "stub: setItemLevel not decompiled";
+    public function setItemLevel(v: Int): Int {
+        this._itemLevel = v;
+        return v;
     }
+
 
     public function onReload(): Void {
     }
@@ -51,12 +54,15 @@ class InventItem {
     }
 
     public function get_pairedItem(): tool.InventItem {
-        throw "stub: get_pairedItem not decompiled";
+        return this.pairedItem;
     }
 
-    public function setPairedItem(arg0: tool.InventItem): tool.InventItem {
-        throw "stub: setPairedItem not decompiled";
+
+    public function setPairedItem(value: tool.InventItem): tool.InventItem {
+        this.pairedItem = value;
+        return value;
     }
+
 
     public function createPairedItem(): tool.InventItem {
         throw "stub: createPairedItem not decompiled";

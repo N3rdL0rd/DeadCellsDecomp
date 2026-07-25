@@ -13,9 +13,10 @@ class DeferredSprite extends h2d.Object {
     public override function sync(arg0: h2d.RenderContext): Void {
     }
 
-    public function cull(arg0: h2d.RenderContext): Bool {
-        throw "stub: cull not decompiled";
+    public function cull(ctx: h2d.RenderContext): Bool {
+        return false;
     }
+
 
     public override function drawRec(arg0: h2d.RenderContext): Void {
     }

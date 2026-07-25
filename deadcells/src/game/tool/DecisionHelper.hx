@@ -12,12 +12,15 @@ class DecisionHelper {
     public var elementsCount: Int;
     public var all: Array<Dynamic>;
 
-    public function new(arg0: Array<Dynamic>) {
+    public function new(items: Array<Dynamic>) {
+        this.initDecisionElements(items);
     }
 
+
     public function getElements(): Array<Dynamic> {
-        throw "stub: getElements not decompiled";
+        return this.all;
     }
+
 
     public function reset(arg0: Ref, arg1: Ref): Void {
     }

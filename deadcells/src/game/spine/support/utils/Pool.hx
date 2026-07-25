@@ -15,8 +15,9 @@ class Pool {
     }
 
     public function newObject(): Dynamic {
-        throw "stub: newObject not decompiled";
+        return null;
     }
+
 
     public function obtain(): Dynamic {
         throw "stub: obtain not decompiled";

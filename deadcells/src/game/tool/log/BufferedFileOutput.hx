@@ -24,5 +24,7 @@ class BufferedFileOutput {
     }
 
     public function onBufferFull(): Void {
+        this.saveLogs();
     }
+
 }

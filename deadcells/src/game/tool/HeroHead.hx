@@ -97,7 +97,9 @@ class HeroHead {
     }
 
     public function mainNormalFx(): Void {
+        this.customHeadFx();
     }
+
 
     public function mainFireFx(arg0: Int, arg1: Int): Void {
     }

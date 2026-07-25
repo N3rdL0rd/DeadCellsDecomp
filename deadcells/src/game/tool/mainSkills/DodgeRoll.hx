@@ -40,8 +40,9 @@ class DodgeRoll extends tool.mainSkills.Dodge {
     }
 
     public function getNoDodgeCancelRatio(): Float {
-        throw "stub: getNoDodgeCancelRatio not decompiled";
+        return 0.25;
     }
+
 
     public function applyDodgeMovement(): Void {
     }

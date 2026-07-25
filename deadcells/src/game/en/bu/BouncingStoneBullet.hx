@@ -59,7 +59,10 @@ class BouncingStoneBullet extends en.Bullet {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
+        this.checkTouchParent();
     }
+
 
     public override function postUpdate(): Void {
     }

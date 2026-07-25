@@ -3,16 +3,19 @@ package spine.support.utils;
 class JsonDynamic {
     public var data: Dynamic;
 
-    public function new(arg0: Dynamic = null) {
+    public function new(data: Dynamic) {
+        this.data = data;
     }
+
 
     public function has(arg0: String): Bool {
         throw "stub: has not decompiled";
     }
 
-    public function require(arg0: String): Dynamic {
-        throw "stub: require not decompiled";
+    public function require(key: String): Dynamic {
+        return this.get(key);
     }
+
 
     public function get(arg0: String): Dynamic {
         throw "stub: get not decompiled";
@@ -67,12 +70,14 @@ class JsonDynamic {
     }
 
     public function get_next(): Dynamic {
-        throw "stub: get_next not decompiled";
+        return null;
     }
 
+
     public function get_name(): String {
-        throw "stub: get_name not decompiled";
+        return null;
     }
+
 
     public function get_size(): Int {
         throw "stub: get_size not decompiled";
@@ -95,9 +100,10 @@ class JsonChild {
         throw "stub: has not decompiled";
     }
 
-    public function require(arg0: String): Dynamic {
-        throw "stub: require not decompiled";
+    public function require(key: String): Dynamic {
+        return this.get(key);
     }
+
 
     public function get(arg0: String): Dynamic {
         throw "stub: get not decompiled";

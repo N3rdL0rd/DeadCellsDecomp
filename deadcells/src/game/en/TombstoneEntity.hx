@@ -22,8 +22,9 @@ class TombstoneEntity extends Entity {
     }
 
     public function get_weaponInf(): Dynamic {
-        throw "stub: get_weaponInf not decompiled";
+        return Cdb.getWeapon("Tombstone");
     }
+
 
     public function addTargetedMobs(arg0: Array<Dynamic>): Void {
     }

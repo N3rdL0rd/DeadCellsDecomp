@@ -14,11 +14,14 @@ class Tutorial {
     }
 
     public function onReload(): Void {
+        this.init();
     }
 
+
     public function prepareSave(): Bool {
-        throw "stub: prepareSave not decompiled";
+        return true;
     }
+
 
     public function init(): Void {
     }

@@ -63,8 +63,10 @@ class AttackData {
         throw "stub: hasAnyTag not decompiled";
     }
 
-    public function overrideBaseDamage(arg0: Dynamic): Void {
+    public function overrideBaseDamage(v: Dynamic): Void {
+        this.baseDmg = v;
     }
+
 
     public function hasNoBaseDamage(): Bool {
         throw "stub: hasNoBaseDamage not decompiled";

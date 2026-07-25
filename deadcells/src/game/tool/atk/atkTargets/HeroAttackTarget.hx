@@ -1,12 +1,15 @@
 package tool.atk.atkTargets;
 
 class HeroAttackTarget extends tool.atk.AttackTargetImpl {
-    public function new(arg0: en.Hero = null) {
-        super();
+    public function new(parent: en.Hero) {
+        super(parent);
     }
 
-    public override function preAttack(arg0: tool.atk.AttackData): Void {
+
+    public override function preAttack(atk: tool.atk.AttackData): Void {
+        super.preAttack(atk);
     }
+
 
     public override function preHitResultUpdate(arg0: tool.atk.AttackData): Void {
     }

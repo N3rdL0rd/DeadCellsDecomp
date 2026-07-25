@@ -36,7 +36,10 @@ class GroundPart extends Entity {
     }
 
     public override function onLeaveMap(): Void {
+        super.onLeaveMap();
+        this.destroy();
     }
+
 
     public override function destroy(): Void {
         super.destroy();

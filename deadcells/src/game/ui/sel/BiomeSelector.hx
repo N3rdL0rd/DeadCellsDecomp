@@ -18,16 +18,19 @@ class BiomeSelector extends ui.sel.GridSelector {
     }
 
     public override function get_entryWid(): Int {
-        throw "stub: get_entryWid not decompiled";
+        return 80;
     }
+
 
     public override function get_entryHei(): Int {
-        throw "stub: get_entryHei not decompiled";
+        return 45;
     }
 
+
     public override function get_wid(): Int {
-        throw "stub: get_wid not decompiled";
+        return 3;
     }
+
 
     public override function initGrid(): Void {
     }

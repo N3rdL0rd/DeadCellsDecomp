@@ -54,12 +54,14 @@ class BossRushMode {
     }
 
     public function getLength(): tool.bossRush.BossRushModeLength {
-        throw "stub: getLength not decompiled";
+        return this.length;
     }
 
+
     public function getDifficulty(): tool.bossRush.BossRushModeDifficulty {
-        throw "stub: getDifficulty not decompiled";
+        return this.difficulty;
     }
+
 
     public function onBossDeath(arg0: Dynamic, arg1: Ref): Void {
     }

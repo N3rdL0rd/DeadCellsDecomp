@@ -20,7 +20,9 @@ class AncientTempleManager extends libs.Process {
     }
 
     public override function update(): Void {
+        super.update();
     }
+
 
     public function getCLID(): Int {
         throw "stub: getCLID not decompiled";

@@ -16,7 +16,9 @@ class Crowbar extends tool.Weapon {
     }
 
     public override function fixedUpdate(): Void {
+        super.fixedUpdate();
     }
+
 
     public override function dispose(): Void {
     }

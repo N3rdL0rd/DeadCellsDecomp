@@ -237,11 +237,15 @@ class Options {
     public function setTriggerDeadZone(arg0: Float): Void {
     }
 
-    public function setDeadZoneLeftJoystick(arg0: Float): Void {
+    public function setDeadZoneLeftJoystick(value: Float): Void {
+        this.setDeadZoneJoystick(Left, value);
     }
 
-    public function setDeadZoneRightJoystick(arg0: Float): Void {
+
+    public function setDeadZoneRightJoystick(value: Float): Void {
+        this.setDeadZoneJoystick(Right, value);
     }
+
 
     public function setDeadZoneJoystick(arg0: JoystickId, arg1: Float): Void {
     }
@@ -251,7 +255,9 @@ class Options {
     }
 
     public function resetKeyMapping(): Void {
+        this.set_keyboard(null);
     }
+
 
     public function resetPadMapping(): Void {
     }

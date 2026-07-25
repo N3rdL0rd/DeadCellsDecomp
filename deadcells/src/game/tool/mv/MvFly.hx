@@ -19,9 +19,10 @@ class MvFly extends tool.AutoMove {
         throw "stub: gotoPixel not decompiled";
     }
 
-    public override function canGoto(arg0: Int, arg1: Int): Bool {
-        throw "stub: canGoto not decompiled";
+    public override function canGoto(cx: Int, cy: Int): Bool {
+        return true;
     }
+
 
     public override function getNextPoint(): tool.CPoint {
         throw "stub: getNextPoint not decompiled";

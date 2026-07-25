@@ -14,8 +14,10 @@ class StructInterpreter extends tool.mod.script.ScriptInterpreter {
         throw "stub: callBuildMainRooms not decompiled";
     }
 
-    public function loadLevel(arg0: String): Void {
+    public function loadLevel(_levelId: String): Void {
+        this.init();
     }
+
 
     public override function init(): Void {
     }
@@ -24,8 +26,9 @@ class StructInterpreter extends tool.mod.script.ScriptInterpreter {
     }
 
     public function doesAllowInfamousMobScaling(): Bool {
-        throw "stub: doesAllowInfamousMobScaling not decompiled";
+        return this.shouldDoInfamousMobScaling;
     }
+
 
     public function callBuildSecondaryRooms(): Bool {
         throw "stub: callBuildSecondaryRooms not decompiled";
@@ -76,8 +79,10 @@ class StructInterpreter extends tool.mod.script.ScriptInterpreter {
     public function callDefaultAddTeleport(): Void {
     }
 
-    public function setAutomaticMobScaling(arg0: Bool): Void {
+    public function setAutomaticMobScaling(_setting: Bool): Void {
+        this.shouldDoInfamousMobScaling = _setting;
     }
+
 
     public function getMobTier(arg0: Int): Int {
         throw "stub: getMobTier not decompiled";

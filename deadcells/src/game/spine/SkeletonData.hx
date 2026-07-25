@@ -30,8 +30,9 @@ class SkeletonData {
     }
 
     public function getDefaultSkin(): spine.Skin {
-        throw "stub: getDefaultSkin not decompiled";
+        return this.defaultSkin;
     }
+
 
     public function findSkin(arg0: String): spine.Skin {
         throw "stub: findSkin not decompiled";

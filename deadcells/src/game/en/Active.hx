@@ -48,7 +48,10 @@ class Active extends Entity {
 
 
     public override function onFatalFallDamage(): Void {
+        super.onFatalFallDamage();
+        super.kill();
     }
+
 
     public function initStats(): Void {
     }

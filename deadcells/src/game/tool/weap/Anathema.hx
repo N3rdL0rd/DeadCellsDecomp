@@ -1,9 +1,10 @@
 package tool.weap;
 
 class Anathema extends tool.Weapon {
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(owner: en.Hero, i: tool.InventItem) {
+        super(owner, i);
     }
+
 
     public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";

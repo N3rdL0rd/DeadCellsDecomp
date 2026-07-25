@@ -12,11 +12,14 @@ class ForcedDiveAttack extends tool.mainSkills.DiveAttack {
     }
 
     public override function canUse(): Bool {
-        throw "stub: canUse not decompiled";
+        return true;
     }
 
+
     public override function onEnd(): Void {
+        super.destroy();
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

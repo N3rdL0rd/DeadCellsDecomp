@@ -9,8 +9,9 @@ class ExtraHeal extends Power {
     }
 
     public override function shouldChangeLevelWithHero(): Bool {
-        throw "stub: shouldChangeLevelWithHero not decompiled";
+        return true;
     }
+
 
     public function get_hudSkill(): ui.hud.Skill {
         throw "stub: get_hudSkill not decompiled";

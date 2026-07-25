@@ -13,16 +13,19 @@ class BossSelector extends ui.sel.GridSelector {
     }
 
     public override function get_wid(): Int {
-        throw "stub: get_wid not decompiled";
+        return 4;
     }
+
 
     public override function get_entryWid(): Int {
-        throw "stub: get_entryWid not decompiled";
+        return 70;
     }
 
+
     public override function get_entryHei(): Int {
-        throw "stub: get_entryHei not decompiled";
+        return 70;
     }
+
 
     public override function get_maxPixelHei(): Int {
         throw "stub: get_maxPixelHei not decompiled";

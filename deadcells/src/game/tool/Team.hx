@@ -55,8 +55,10 @@ class TeamIterator {
     public var memberIdx: Int;
     public var opposingTeamMembers: Array<Dynamic>;
 
-    public function new(arg0: tool.Team) {
+    public function new(t: tool.Team) {
+        this.reset(t);
     }
+
 
     public function reset(arg0: tool.Team): tool.TeamIterator {
         throw "stub: reset not decompiled";
@@ -80,8 +82,10 @@ class TeamMobIterator {
     public var teamIdx: Int;
     public var memberIdx: Int;
 
-    public function new(arg0: tool.Team) {
+    public function new(t: tool.Team) {
+        this.reset(t);
     }
+
 
     public function reset(arg0: tool.Team): tool.TeamMobIterator {
         throw "stub: reset not decompiled";

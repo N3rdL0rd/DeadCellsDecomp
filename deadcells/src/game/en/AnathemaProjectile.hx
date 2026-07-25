@@ -47,10 +47,16 @@ class AnathemaProjectile extends Entity {
     }
 
     public override function onTouchGround(): Void {
+        super.onTouchGround();
+        this.explode();
     }
 
-    public override function onTouchWall(arg0: Int): Void {
+
+    public override function onTouchWall(wDir: Int): Void {
+        super.onTouchWall(wDir);
+        this.explode();
     }
+
 
     public override function onTouch(arg0: Entity): Void {
     }

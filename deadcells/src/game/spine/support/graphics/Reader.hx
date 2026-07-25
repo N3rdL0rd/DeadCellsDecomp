@@ -7,9 +7,10 @@ class Reader {
     public function new(arg0: String = null) {
     }
 
-    public function trim(arg0: String): String {
-        throw "stub: trim not decompiled";
+    public function trim(value: String): String {
+        return StringTools.trim(value);
     }
+
 
     public function readLine(): String {
         throw "stub: readLine not decompiled";

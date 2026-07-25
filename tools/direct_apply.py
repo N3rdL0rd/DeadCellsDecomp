@@ -25,6 +25,7 @@ Usage:
 import argparse
 import sys
 import time
+import zlib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -92,6 +93,17 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--limit", type=int, default=None, help="cap the number of functions to try")
     parser.add_argument("--dry-run", action="store_true", help="count what would apply cleanly, make no writes")
+    parser.add_argument(
+        "--shard-index", type=int, default=None, help="0-based shard id (pair with --shard-count)"
+    )
+    parser.add_argument(
+        "--shard-count",
+        type=int,
+        default=None,
+        help="total shards - every function's FILE (not the function itself) is assigned to exactly "
+        "one shard via a deterministic hash, so two shards never touch the same file and their "
+        "results can always be merged without conflicts. Used by tools/parallel_direct_apply.py.",
+    )
     args = parser.parse_args()
 
     print("Loading original bytecode (hlboot.dat)... this takes ~20s and only happens once.")
@@ -101,6 +113,16 @@ def main() -> None:
     queue = build_queue(original)
     ledger = load_ledger()
     queue = [i for i in queue if ledger.get(i.name, {}).get("status") not in ("matched", "deferred")]
+    if args.shard_count:
+        # zlib.crc32, not the builtin hash() - str hashing is randomized per
+        # PYTHONHASHSEED by default, which would assign the same file to
+        # DIFFERENT shards in different worker processes and break the
+        # no-two-shards-share-a-file guarantee this depends on.
+        queue = [
+            i
+            for i in queue
+            if zlib.crc32(str(i.file_path).encode()) % args.shard_count == args.shard_index
+        ]
     if args.limit:
         queue = queue[: args.limit]
 

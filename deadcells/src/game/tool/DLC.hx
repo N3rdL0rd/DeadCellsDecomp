@@ -28,8 +28,9 @@ class DLC {
     }
 
     public static function canShowStore(): Bool {
-        throw "stub: canShowStore not decompiled";
+        return true;
     }
+
 
     public static function getCdbIdFromEnum(arg0: tool.DLCId): String {
         throw "stub: getCdbIdFromEnum not decompiled";

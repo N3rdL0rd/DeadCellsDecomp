@@ -58,7 +58,10 @@ class CrossEntity extends Entity {
 
 
     public override function onLeaveMap(): Void {
+        super.onLeaveMap();
+        this.retrieve();
     }
+
 
     public override function onTouchWall(arg0: Int): Void {
     }
@@ -80,7 +83,10 @@ class CrossEntity extends Entity {
     }
 
     public override function onDie(): Void {
+        super.onDie();
+        this.retrieve();
     }
+
 
     public function beginRegistering(): Void {
     }

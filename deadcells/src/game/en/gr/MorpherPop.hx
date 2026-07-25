@@ -4,9 +4,10 @@ class MorpherPop extends en.Grenade {
     public static var __eclids: Array<Int>;
     public static var __clid: Int;
 
-    public function new(arg0: Entity = null, arg1: Float = 0.) {
-        super();
+    public function new(e: Entity, t: Float) {
+        super(e, t);
     }
+
 
     public override function initGfx(): Void {
     }

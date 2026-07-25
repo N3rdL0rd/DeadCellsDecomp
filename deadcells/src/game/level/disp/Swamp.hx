@@ -66,8 +66,9 @@ class Swamp extends level.BiomeDisp {
     }
 
     public override function getStampWallThreshold(): Float {
-        throw "stub: getStampWallThreshold not decompiled";
+        return 1.0;
     }
+
 
     public override function onAddWallJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
     }

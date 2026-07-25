@@ -9,8 +9,9 @@ class CellBonus extends Power {
     }
 
     public override function shouldChangeLevelWithHero(): Bool {
-        throw "stub: shouldChangeLevelWithHero not decompiled";
+        return true;
     }
+
 
     public override function postUpdate(): Void {
     }

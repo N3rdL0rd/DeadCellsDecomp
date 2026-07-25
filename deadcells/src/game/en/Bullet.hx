@@ -114,7 +114,10 @@ class Bullet extends Entity {
     }
 
     public override function onTouchGround(): Void {
+        super.onTouchGround();
+        this.blockOnCollision();
     }
+
 
     public function blockOnCollision(): Void {
     }
@@ -182,7 +185,10 @@ class Bullet extends Entity {
     }
 
     public override function onLeaveMap(): Void {
+        super.onLeaveMap();
+        this.vanish();
     }
+
 
     public function reachMaxDist(): Void {
     }

@@ -52,8 +52,9 @@ class HorizontalTurret extends en.active.Turret {
     }
 
     public override function getAttackTarget(): Entity {
-        throw "stub: getAttackTarget not decompiled";
+        return this.pickTurretTarget(null);
     }
+
 
     public function pickTurretTarget(arg0: Entity): Entity {
         throw "stub: pickTurretTarget not decompiled";

@@ -69,26 +69,35 @@ class Process {
         throw "stub: toString not decompiled";
     }
 
-    public function secToFrames(arg0: Float): Float {
-        throw "stub: secToFrames not decompiled";
+    public function secToFrames(v: Float): Float {
+        return v * this.getDefaultFrameRate();
     }
 
-    public function framesToSec(arg0: Float): Float {
-        throw "stub: framesToSec not decompiled";
+
+    public function framesToSec(v: Float): Float {
+        return v / this.getDefaultFrameRate();
     }
+
 
     public function getDefaultFrameRate(): Float {
-        throw "stub: getDefaultFrameRate not decompiled";
+        return hxd.Timer.wantedFPS;
     }
+
 
     public function pause(): Void {
+        this.paused = true;
     }
+
 
     public function resume(): Void {
+        this.paused = false;
     }
 
+
     public function destroy(): Void {
+        this.destroyed = true;
     }
+
 
     public function addChild(arg0: Process): Void {
     }

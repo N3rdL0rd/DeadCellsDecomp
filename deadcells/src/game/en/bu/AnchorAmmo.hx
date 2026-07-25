@@ -33,7 +33,10 @@ class AnchorAmmo extends Entity {
     }
 
     public override function onLeaveMap(): Void {
+        super.onLeaveMap();
+        super.destroy();
     }
+
 
     public override function postUpdate(): Void {
     }

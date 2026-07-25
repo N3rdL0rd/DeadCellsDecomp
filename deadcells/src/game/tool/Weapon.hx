@@ -37,20 +37,24 @@ class Weapon {
     }
 
     public function get_cycle(): Int {
-        throw "stub: get_cycle not decompiled";
+        return this._cycle;
     }
+
 
     public function set_cycle(arg0: Int): Int {
         throw "stub: set_cycle not decompiled";
     }
 
     public function get_attackSpeed(): Float {
-        throw "stub: get_attackSpeed not decompiled";
+        return this._attackSpeed;
     }
 
-    public function set_attackSpeed(arg0: Float): Float {
-        throw "stub: set_attackSpeed not decompiled";
+
+    public function set_attackSpeed(v: Float): Float {
+        this._attackSpeed = v;
+        return v;
     }
+
 
     public function get_hudSkill(): ui.hud.Skill {
         throw "stub: get_hudSkill not decompiled";
@@ -132,8 +136,9 @@ class Weapon {
     }
 
     public function allowTurnDuringCharge(): Bool {
-        throw "stub: allowTurnDuringCharge not decompiled";
+        return true;
     }
+
 
     public function canComboNextSkillEarly(): Bool {
         throw "stub: canComboNextSkillEarly not decompiled";
@@ -184,8 +189,9 @@ class Weapon {
     }
 
     public function tryToUse(): Bool {
-        throw "stub: tryToUse not decompiled";
+        return true;
     }
+
 
     public function tryToCancel(arg0: Bool): Bool {
         throw "stub: tryToCancel not decompiled";

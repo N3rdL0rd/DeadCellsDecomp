@@ -19,10 +19,14 @@ class PassivePower extends Power {
 
 
     public function doActive(): Void {
+        this.kill(true);
     }
 
-    public function kill(arg0: Bool): Void {
+
+    public function kill(onActive: Bool): Void {
+        super.setDurationS(0.0);
     }
+
 
     public function onLevelChanged(lvl: pr.Level): Void {
     }

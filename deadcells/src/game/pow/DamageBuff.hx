@@ -9,8 +9,9 @@ class DamageBuff extends Power {
     }
 
     public override function shouldChangeLevelWithHero(): Bool {
-        throw "stub: shouldChangeLevelWithHero not decompiled";
+        return true;
     }
+
 
     public override function onCooldownEnd(arg0: String, arg1: Int): Void {
     }

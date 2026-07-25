@@ -15,8 +15,10 @@ class Katana extends tool.Weapon {
         super();
     }
 
-    public override function prepare(arg0: Float): Void {
+    public override function prepare(attackSpeed: Float): Void {
+        super.prepare(attackSpeed);
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";

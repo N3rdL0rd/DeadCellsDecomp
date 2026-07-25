@@ -1,9 +1,10 @@
 package ui;
 
 class Wrapper extends h2d.Layers {
-    public function new(arg0: h2d.Object = null) {
-        super();
+    public function new(p: h2d.Object) {
+        super(p);
     }
+
 
     public override function calcAbsPos(): Void {
     }

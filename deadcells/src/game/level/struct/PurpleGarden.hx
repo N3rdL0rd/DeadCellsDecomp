@@ -1,9 +1,10 @@
 package level.struct;
 
 class PurpleGarden extends level.LevelStruct {
-    public function new(arg0: User = null, arg1: Dynamic = null, arg2: libs.Rand = null) {
-        super();
+    public function new(user: User, level: Dynamic, rng: libs.Rand) {
+        super(user, level, rng);
     }
+
 
     public function solvedBridgeEnigma(): Bool {
         throw "stub: solvedBridgeEnigma not decompiled";

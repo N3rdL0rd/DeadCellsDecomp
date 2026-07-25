@@ -23,8 +23,9 @@ class Distillery extends level.BiomeDisp {
     }
 
     public override function getStampWallThreshold(): Float {
-        throw "stub: getStampWallThreshold not decompiled";
+        return 0.5;
     }
+
 
     public override function decorateRoom(arg0: level.Room): Void {
     }

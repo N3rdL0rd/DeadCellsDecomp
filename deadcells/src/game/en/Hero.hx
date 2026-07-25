@@ -129,8 +129,9 @@ class Hero extends Entity {
     }
 
     public function createHead(): tool.HeroHead {
-        throw "stub: createHead not decompiled";
+        return new tool.HeroHead();
     }
+
 
     public function get_darknessCounterMax(): Float {
         throw "stub: get_darknessCounterMax not decompiled";
@@ -217,14 +218,23 @@ class Hero extends Entity {
     public function overrideMaxLife(arg0: Int): Void {
     }
 
-    public override function setSurvivalTier(arg0: Int): Void {
+    public override function setSurvivalTier(v: Int): Void {
+        super.setSurvivalTier(v);
+        this.updateMaxLife();
     }
 
-    public override function setBrutalityTier(arg0: Int): Void {
+
+    public override function setBrutalityTier(v: Int): Void {
+        super.setBrutalityTier(v);
+        this.updateMaxLife();
     }
 
-    public override function setTacticTier(arg0: Int): Void {
+
+    public override function setTacticTier(v: Int): Void {
+        super.setTacticTier(v);
+        this.updateMaxLife();
     }
+
 
     public function computeTiers(): Void {
     }
@@ -876,8 +886,11 @@ class Hero extends Entity {
     public override function heal(arg0: Int): Void {
     }
 
-    public override function setDepth(arg0: Int): Void {
+    public override function setDepth(layer: Int): Void {
+        super.setDepth(layer);
+        this.setHeadDepth(layer);
     }
+
 
     public function onHeroAlphaChanged(arg0: Float, arg1: Float): Void {
     }

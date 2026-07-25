@@ -28,8 +28,9 @@ class Skeleton {
     }
 
     public function getBones(): Array<Dynamic> {
-        throw "stub: getBones not decompiled";
+        return this.bones;
     }
+
 
     public function findBone(arg0: String): spine.Bone {
         throw "stub: findBone not decompiled";

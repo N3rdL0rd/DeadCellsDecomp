@@ -27,7 +27,9 @@ class Throne extends level.BiomeDisp {
     }
 
     public override function postUpdate(): Void {
+        super.postUpdate();
     }
+
 
     public function renderBackground(): Void {
     }

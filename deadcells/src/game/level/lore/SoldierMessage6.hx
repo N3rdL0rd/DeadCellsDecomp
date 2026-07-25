@@ -4,9 +4,10 @@ class SoldierMessage6 extends level.LoreManager {
     public static var __clid: Int;
     public var _pt: tool.CPoint;
 
-    public function new(arg0: pr.Level = null, arg1: level.Room = null) {
-        super();
+    public function new(l: pr.Level, r: level.Room) {
+        super(l, r);
     }
+
 
     public function get_pt(): tool.CPoint {
         throw "stub: get_pt not decompiled";

@@ -82,8 +82,10 @@ class HUD extends ui.Process {
     public function hudAlphaUpdate(arg0: Float): Void {
     }
 
-    public function hudSizeUpdate(arg0: Float): Void {
+    public function hudSizeUpdate(size: Float): Void {
+        this.onResize();
     }
+
 
     public function createPart(arg0: h2d.Tile, arg1: Dynamic, arg2: Dynamic, arg3: Dynamic): libs.heaps.HParticle {
         throw "stub: createPart not decompiled";

@@ -12,7 +12,9 @@ class InteractiveComponent {
     }
 
     public function resize(): Void {
+        this.resizeMouseInteractive();
     }
+
 
     public function resizeMouseInteractive(): Void {
     }

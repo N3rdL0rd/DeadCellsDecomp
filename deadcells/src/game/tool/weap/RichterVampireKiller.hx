@@ -1,9 +1,10 @@
 package tool.weap;
 
 class RichterVampireKiller extends tool.Weapon {
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";
@@ -18,11 +19,13 @@ class RichterVampireKiller extends tool.Weapon {
     public override function dynOnFxFrame(arg0: tool.Weapon.WeaponSkill, arg1: Dynamic): Void {
     }
 
-    public override function tryToCancel(arg0: Bool): Bool {
-        throw "stub: tryToCancel not decompiled";
+    public override function tryToCancel(byWeapon: Bool): Bool {
+        return false;
     }
 
+
     public override function allowTurnDuringCharge(): Bool {
-        throw "stub: allowTurnDuringCharge not decompiled";
+        return false;
     }
+
 }

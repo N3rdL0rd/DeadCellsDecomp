@@ -28,8 +28,9 @@ class TPSword extends tool.Weapon {
     }
 
     public override function allowTurnDuringCharge(): Bool {
-        throw "stub: allowTurnDuringCharge not decompiled";
+        return false;
     }
+
 
     public override function dynOnInterrupt(arg0: tool.Weapon.WeaponSkill, arg1: Float): Void {
     }
@@ -41,8 +42,9 @@ class TPSword extends tool.Weapon {
     }
 
     public override function autoAim(): Bool {
-        throw "stub: autoAim not decompiled";
+        return false;
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";

@@ -8,6 +8,8 @@ class TraceUtils {
     public static function logWithException(arg0: Dynamic, arg1: String, arg2: Dynamic): Void {
     }
 
-    public static function traceWithException(arg0: Dynamic, arg1: String, arg2: Dynamic): Void {
+    public static function traceWithException(ex: Dynamic, msg: String, pos: Dynamic): Void {
+        var exceptionInfos: Dynamic = tool.TraceUtils.extractExceptionInfos(ex);
     }
+
 }

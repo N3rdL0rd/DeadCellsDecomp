@@ -8,8 +8,9 @@ class FireDeco extends en.LoreDeco {
     }
 
     public override function getAtlas(): libs.heaps.slib.SpriteLib {
-        throw "stub: getAtlas not decompiled";
+        return Assets.tryGetAtlas(LevelFire);
     }
+
 
     public override function addNormalMap(): Void {
     }

@@ -24,12 +24,14 @@ class MobSkill extends tool.skill.Skill {
     }
 
     public function canUse(): Bool {
-        throw "stub: canUse not decompiled";
+        return true;
     }
 
-    public function canUseOn(arg0: Entity): Bool {
-        throw "stub: canUseOn not decompiled";
+
+    public function canUseOn(e: Entity): Bool {
+        return this.canUse();
     }
+
 
     public override function useMobSkillInfos(arg0: Dynamic): Void {
     }
@@ -64,8 +66,9 @@ class MobSkill extends tool.skill.Skill {
     }
 
     public function needFacing(): Bool {
-        throw "stub: needFacing not decompiled";
+        return true;
     }
+
 
     public function onAnnounce(): Void {
     }

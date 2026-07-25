@@ -84,9 +84,10 @@ class HeroWeaponsManager extends tool.HeroManager {
         throw "stub: hasButtonPressedForWeapon not decompiled";
     }
 
-    public function getWeaponDamageMultiplier(arg0: tool.Weapon): Float {
-        throw "stub: getWeaponDamageMultiplier not decompiled";
+    public function getWeaponDamageMultiplier(weapon: tool.Weapon): Float {
+        return 1.0;
     }
+
 
     public override function dispose(): Void {
     }

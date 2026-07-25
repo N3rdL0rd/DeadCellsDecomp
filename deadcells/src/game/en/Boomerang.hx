@@ -37,7 +37,10 @@ class Boomerang extends Entity {
     }
 
     public override function onLeaveMap(): Void {
+        super.onLeaveMap();
+        this.retrieve();
     }
+
 
     public function retrieve(): Void {
     }
@@ -56,7 +59,10 @@ class Boomerang extends Entity {
     }
 
     public override function onDie(): Void {
+        super.onDie();
+        this.retrieve();
     }
+
 
     public override function getCLID(): Int {
         throw "stub: getCLID not decompiled";

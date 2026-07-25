@@ -1,9 +1,10 @@
 package tool.weap;
 
 class LowHealth extends tool.Weapon {
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
     }
+
 
     public function checkCondition(): Bool {
         throw "stub: checkCondition not decompiled";

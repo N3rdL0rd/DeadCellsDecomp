@@ -1,9 +1,10 @@
 package level.disp;
 
 class PhotoRoom extends level.BiomeDisp {
-    public function new(arg0: pr.Level = null, arg1: level.LevelMap = null, arg2: Array<Dynamic> = null) {
-        super();
+    public function new(p: pr.Level, m: level.LevelMap, parallax: Array<Dynamic>) {
+        super(p, m, parallax);
     }
+
 
     public override function render(): Void {
     }

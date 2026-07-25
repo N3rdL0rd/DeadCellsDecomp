@@ -129,8 +129,10 @@ class WorldMap {
     public function drawConnections(): Void {
     }
 
-    public function drawSpecialConnections(arg0: String): Void {
+    public function drawSpecialConnections(curLevelName: String): Void {
+        this.drawBankConnections(curLevelName);
     }
+
 
     public function drawCurrentPath(): Void {
     }
@@ -139,9 +141,11 @@ class WorldMap {
         throw "stub: drawLevelCards not decompiled";
     }
 
-    public function drawSpecialCards(arg0: Dynamic): Dynamic {
-        throw "stub: drawSpecialCards not decompiled";
+    public function drawSpecialCards(size: Dynamic): Dynamic {
+        size = this.drawBankCard(size);
+        return size;
     }
+
 
     public function draw(arg0: h2d.Layers, arg1: Int, arg2: Ref): Dynamic {
         throw "stub: draw not decompiled";

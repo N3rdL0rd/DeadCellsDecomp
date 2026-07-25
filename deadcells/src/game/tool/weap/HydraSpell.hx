@@ -4,9 +4,10 @@ class HydraSpell extends tool.Weapon {
     public var fxCircle: libs.heaps.slib.HSprite;
     public var lastFxCircle: libs.heaps.slib.HSprite;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
     }
+
 
     public function get_maxCycle(): Int {
         throw "stub: get_maxCycle not decompiled";

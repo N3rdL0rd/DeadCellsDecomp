@@ -10,9 +10,10 @@ class GetText {
         throw "stub: checkSyntax not decompiled";
     }
 
-    public function untranslated(arg0: Dynamic): String {
-        throw "stub: untranslated not decompiled";
+    public function untranslated(str: Dynamic): String {
+        return Std.string(str);
     }
+
 
     public function get(arg0: String, arg1: Dynamic): String {
         throw "stub: get not decompiled";

@@ -70,8 +70,9 @@ class WiggleWhip extends tool.Weapon {
     }
 
     public override function allowTurnDuringCharge(): Bool {
-        throw "stub: allowTurnDuringCharge not decompiled";
+        return false;
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";

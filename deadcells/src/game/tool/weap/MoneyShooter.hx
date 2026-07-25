@@ -3,9 +3,10 @@ package tool.weap;
 class MoneyShooter extends tool.Weapon {
     public var hasEnoughGold: Bool;
 
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
     }
+
 
     public function get_minGold(): Dynamic {
         throw "stub: get_minGold not decompiled";

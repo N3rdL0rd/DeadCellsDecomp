@@ -20,6 +20,8 @@ class Signal2 extends libs.signals.Signal.BaseSignal {
     public override function dispatchCallback2(arg0: Dynamic, arg1: Dynamic): Void {
     }
 
-    public override function dispatchCallback3(arg0: Dynamic, arg1: Dynamic): Void {
+    public override function dispatchCallback3(callback: Dynamic, callbackData: Dynamic): Void {
+        throw "Use Signal 3";
     }
+
 }

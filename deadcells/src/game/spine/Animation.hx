@@ -18,8 +18,9 @@ class Animation {
     }
 
     public function getDuration(): Float {
-        throw "stub: getDuration not decompiled";
+        return this.duration;
     }
+
 }
 
 class CurveTimeline {
@@ -29,8 +30,9 @@ class CurveTimeline {
     }
 
     public function getPropertyId(): Int {
-        throw "stub: getPropertyId not decompiled";
+        return 0;
     }
+
 
     public function apply(arg0: spine.Skeleton, arg1: Float, arg2: Float, arg3: Array<Dynamic>, arg4: Float, arg5: Int, arg6: Int): Void {
     }

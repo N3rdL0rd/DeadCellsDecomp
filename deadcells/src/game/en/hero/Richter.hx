@@ -31,7 +31,9 @@ class Richter extends en.Hero {
     }
 
     public override function initSpeechDeck(): Void {
+        this.speechSfxDeck = null;
     }
+
 
     public override function onLevelChanged(arg0: pr.Level): Void {
     }

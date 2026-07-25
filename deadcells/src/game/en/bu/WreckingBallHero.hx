@@ -34,10 +34,16 @@ class WreckingBallHero extends en.Bullet {
     }
 
     public override function onHitWall(): Void {
+        super.onHitWall();
+        this.doGroundShake();
     }
 
+
     public override function onTouchGround(): Void {
+        super.onTouchGround();
+        this.doGroundShake();
     }
+
 
     public function doGroundShake(): Void {
     }

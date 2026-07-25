@@ -3,9 +3,10 @@ package tool.hero.weap;
 class RichterWeaponsManager extends tool.hero.weap.BeheadedWeaponsManager {
     public static var __clid: Int;
 
-    public function new(arg0: en.Hero = null) {
-        super();
+    public function new(h: en.Hero) {
+        super(h);
     }
+
 
     public override function init(): Void {
     }

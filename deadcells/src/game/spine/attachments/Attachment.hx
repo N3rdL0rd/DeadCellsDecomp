@@ -7,8 +7,9 @@ class Attachment {
     }
 
     public function toString(): String {
-        throw "stub: toString not decompiled";
+        return this.name;
     }
+
 
     public function __string(): hl.Bytes {
         throw "stub: __string not decompiled";

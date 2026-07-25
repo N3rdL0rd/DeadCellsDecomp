@@ -32,7 +32,9 @@ class TierSelect extends ui.Process {
     }
 
     public function firstOnResize(): Void {
+        this.onResize();
     }
+
 
     public function addTier(arg0: Int, arg1: Int, arg2: tool.InventItem, arg3: String): Void {
     }

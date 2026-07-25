@@ -40,8 +40,9 @@ class PureNail extends tool.Weapon {
     }
 
     public override function isPlayingAttackAnim(): Bool {
-        throw "stub: isPlayingAttackAnim not decompiled";
+        return false;
     }
+
 
     public function dirInputValueHorizontal(): Float {
         throw "stub: dirInputValueHorizontal not decompiled";

@@ -142,8 +142,9 @@ class ItemMetaManager {
     }
 
     public function f_getMaxUpgradeLevel(): Int {
-        throw "stub: f_getMaxUpgradeLevel not decompiled";
+        return 3;
     }
+
 
     public function f_getMaxCells(arg0: Int): Float {
         throw "stub: f_getMaxCells not decompiled";

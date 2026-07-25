@@ -13,8 +13,9 @@ class Button extends en.Interactive {
     }
 
     public function getSpriteLib(): libs.heaps.slib.SpriteLib {
-        throw "stub: getSpriteLib not decompiled";
+        return Assets.gameElements;
     }
+
 
     public function getLightTipStr(): String {
         throw "stub: getLightTipStr not decompiled";

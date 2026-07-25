@@ -50,8 +50,9 @@ class ModManager {
     }
 
     public function getMods(): Array<Dynamic> {
-        throw "stub: getMods not decompiled";
+        return this.modStates;
     }
+
 
     public function onSaveLoaded(arg0: Array<Dynamic>): Void {
     }

@@ -20,8 +20,9 @@ class HeadSelector extends ui.sel.GridSelector {
     }
 
     public override function get_wid(): Int {
-        throw "stub: get_wid not decompiled";
+        return 6;
     }
+
 
     public override function setControlLabel(): Void {
     }

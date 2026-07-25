@@ -57,11 +57,17 @@ class Homunculus extends Entity {
         throw "stub: canBeHitBy not decompiled";
     }
 
-    public override function setPosCase(arg0: Int, arg1: Int, arg2: Dynamic, arg3: Dynamic): Void {
+    public override function setPosCase(x: Int, y: Int, xr: Dynamic, yr: Dynamic): Void {
+        super.setPosCase(x, y, xr, yr);
+        this.onRelocate();
     }
 
-    public override function setPosPixel(arg0: Float, arg1: Float): Void {
+
+    public override function setPosPixel(x: Float, y: Float): Void {
+        super.setPosPixel(x, y);
+        this.onRelocate();
     }
+
 
     public override function setDepth(arg0: Int): Void {
     }

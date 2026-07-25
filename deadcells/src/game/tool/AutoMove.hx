@@ -18,10 +18,14 @@ class AutoMove {
     }
 
     public function stop(): Void {
+        throw "Not implemented";
     }
 
+
     public function update(): Void {
+        throw "Not implemented";
     }
+
 
     public function canGoto(arg0: Int, arg1: Int): Bool {
         throw "stub: canGoto not decompiled";

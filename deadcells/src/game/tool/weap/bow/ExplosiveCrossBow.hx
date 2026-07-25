@@ -1,9 +1,10 @@
 package tool.weap.bow;
 
 class ExplosiveCrossBow extends tool.weap.BaseBow {
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
     }
+
 
     public override function get_shootY(): Float {
         throw "stub: get_shootY not decompiled";
@@ -24,9 +25,10 @@ class ExplosiveCrossBow extends tool.weap.BaseBow {
 }
 
 class ExplosiveCrossBowOffHand extends tool.Weapon {
-    public function new(arg0: en.Hero = null, arg1: tool.InventItem = null) {
-        super();
+    public function new(o: en.Hero, i: tool.InventItem) {
+        super(o, i);
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";

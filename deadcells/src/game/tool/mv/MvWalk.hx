@@ -21,9 +21,11 @@ class MvWalk extends tool.AutoMove {
         throw "stub: set_canFall not decompiled";
     }
 
-    public function set_canLeavePlatform(arg0: Bool): Bool {
-        throw "stub: set_canLeavePlatform not decompiled";
+    public function set_canLeavePlatform(b: Bool): Bool {
+        this.set_canFall(b);
+        return b;
     }
+
 
     public override function getNextPoint(): tool.CPoint {
         throw "stub: getNextPoint not decompiled";
@@ -76,8 +78,9 @@ class MvWalk extends tool.AutoMove {
     }
 
     public function getWalkSpeed(): Float {
-        throw "stub: getWalkSpeed not decompiled";
+        return this.speed;
     }
+
 
     public function canWalk(): Bool {
         throw "stub: canWalk not decompiled";

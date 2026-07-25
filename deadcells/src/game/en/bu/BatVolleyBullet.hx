@@ -35,7 +35,10 @@ class BatVolleyBullet extends en.Bullet {
     }
 
     public override function blockOnCollision(): Void {
+        super.blockOnCollision();
+        Splatter.singleHeavy(this);
     }
+
 
     public override function onStep(): Void {
     }

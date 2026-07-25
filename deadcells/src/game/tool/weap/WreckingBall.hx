@@ -30,12 +30,14 @@ class WreckingBall extends tool.Weapon {
     }
 
     public function getChainEndX(): Dynamic {
-        throw "stub: getChainEndX not decompiled";
+        return this.get_handX();
     }
 
+
     public function getChainEndY(): Dynamic {
-        throw "stub: getChainEndY not decompiled";
+        return this.get_handY();
     }
+
 
     public override function onExecute(): Bool {
         throw "stub: onExecute not decompiled";

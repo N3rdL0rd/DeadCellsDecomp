@@ -1,9 +1,10 @@
 package libs.heaps;
 
 class StaticGeometryGroup extends libs.heaps.MultiTileObject.MultiTileObject_h2d_TileGroup {
-    public function new(arg0: Array<Dynamic> = null, arg1: h2d.Object = null) {
-        super();
+    public function new(libs: Array<Dynamic>, parent: h2d.Object) {
+        super(libs, parent);
     }
+
 
     public function add(arg0: Int, arg1: Int, arg2: h2d.Tile): Void {
     }

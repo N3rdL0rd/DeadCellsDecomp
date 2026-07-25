@@ -11,8 +11,9 @@ class Wings extends Power {
     }
 
     public override function shouldChangeLevelWithHero(): Bool {
-        throw "stub: shouldChangeLevelWithHero not decompiled";
+        return true;
     }
+
 
     public function onOwnerAttackDealt(arg0: tool.atk.AttackData, arg1: Entity): Void {
     }

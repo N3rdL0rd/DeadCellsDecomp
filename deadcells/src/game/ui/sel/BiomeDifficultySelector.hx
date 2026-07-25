@@ -6,12 +6,15 @@ class BiomeDifficultySelector extends ui.sel.BiomeSelector {
     public var recommendedScrollsText: ui.Text;
     public var gearLevelText: ui.Text;
 
-    public function new(arg0: Array<Int> = null, arg1: Dynamic = null, arg2: String = null) {
-        super();
+    public function new(groups: Array<Int>, validateCb: Dynamic, preSelectedBiome: String) {
+        super(groups, validateCb, preSelectedBiome);
     }
 
+
     public override function initGrid(): Void {
+        super.initGrid();
     }
+
 
     public override function initRightFlow(): Void {
     }

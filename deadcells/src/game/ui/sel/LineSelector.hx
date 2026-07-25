@@ -30,27 +30,32 @@ class LineSelector extends ui.Process {
     }
 
     public function get_selectTextStr(): String {
-        throw "stub: get_selectTextStr not decompiled";
+        return "";
     }
 
+
     public function get_currentTextStr(): String {
-        throw "stub: get_currentTextStr not decompiled";
+        return "";
     }
+
 
     public function createObjects(): Void {
     }
 
     public function getItemNumber(): Int {
-        throw "stub: getItemNumber not decompiled";
+        return 0;
     }
 
-    public function getItem(arg0: Int): Dynamic {
-        throw "stub: getItem not decompiled";
+
+    public function getItem(i: Int): Dynamic {
+        return null;
     }
+
 
     public function isCurrentSelected(): Bool {
-        throw "stub: isCurrentSelected not decompiled";
+        return false;
     }
+
 
     public function updateItemScale(arg0: Dynamic, arg1: Int): Void {
     }

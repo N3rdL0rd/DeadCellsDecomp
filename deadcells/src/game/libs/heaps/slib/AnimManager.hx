@@ -164,8 +164,9 @@ class AnimManager {
     }
 
     public function alwaysTrue(): Bool {
-        throw "stub: alwaysTrue not decompiled";
+        return true;
     }
+
 
     public function registerTransition(arg0: String, arg1: String, arg2: String, arg3: Dynamic, arg4: Dynamic, arg5: Dynamic): Void {
     }

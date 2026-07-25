@@ -476,8 +476,11 @@ class Mob extends Entity {
     public override function applyAttackResult(arg0: tool.atk.AttackData): Void {
     }
 
-    public override function beforeTryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Void {
+    public override function beforeTryToPreventDeath(a: tool.atk.AttackData, prevLife: Float): Void {
+        super.beforeTryToPreventDeath(a, prevLife);
+        this.checkForExecute(a);
     }
+
 
     public override function tryToPreventDeath(arg0: tool.atk.AttackData, arg1: Float): Bool {
         throw "stub: tryToPreventDeath not decompiled";

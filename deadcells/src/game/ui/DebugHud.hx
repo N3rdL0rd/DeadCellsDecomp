@@ -14,8 +14,9 @@ class FPSAverage {
     }
 
     public function getAverage(): Int {
-        throw "stub: getAverage not decompiled";
+        return this.displayValue;
     }
+
 }
 
 class DebugHud extends libs.Process {

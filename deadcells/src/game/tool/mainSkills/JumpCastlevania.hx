@@ -3,9 +3,10 @@ package tool.mainSkills;
 class JumpCastlevania extends tool.mainSkills.Jump {
     public static var __clid: Int;
 
-    public function new(arg0: en.Hero = null, arg1: pr.Game = null, arg2: Dynamic = null) {
-        super();
+    public function new(hero: en.Hero, game: pr.Game, skillInfos: Dynamic) {
+        super(hero, game, skillInfos);
     }
+
 
     public override function init(): Void {
     }

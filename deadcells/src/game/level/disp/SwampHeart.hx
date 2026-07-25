@@ -25,8 +25,10 @@ class SwampHeart extends level.BiomeDisp {
     public function addWater(): Void {
     }
 
-    public override function decorateRoom(arg0: level.Room): Void {
+    public override function decorateRoom(r: level.Room): Void {
+        super.decorateRoom(r);
     }
+
 
     public function renderForeground(): Void {
     }

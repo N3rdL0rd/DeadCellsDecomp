@@ -11,14 +11,20 @@ class Signal extends libs.signals.Signal.BaseSignal {
     public override function dispatchCallback(arg0: Dynamic, arg1: Dynamic): Void {
     }
 
-    public override function dispatchCallback1(arg0: Dynamic, arg1: Dynamic): Void {
+    public override function dispatchCallback1(callback: Dynamic, callbackData: Dynamic): Void {
+        throw "Use Signal 1";
     }
 
-    public override function dispatchCallback2(arg0: Dynamic, arg1: Dynamic): Void {
+
+    public override function dispatchCallback2(callback: Dynamic, callbackData: Dynamic): Void {
+        throw "Use Signal 2";
     }
 
-    public override function dispatchCallback3(arg0: Dynamic, arg1: Dynamic): Void {
+
+    public override function dispatchCallback3(callback: Dynamic, callbackData: Dynamic): Void {
+        throw "Use Signal 3";
     }
+
 }
 
 class BaseSignal {
@@ -41,17 +47,25 @@ class BaseSignal {
     public function dispatchCallbacks(): Void {
     }
 
-    public function dispatchCallback(arg0: Dynamic, arg1: Dynamic): Void {
+    public function dispatchCallback(callback: Dynamic, callbackData: Dynamic): Void {
+        throw "implement in override";
     }
 
-    public function dispatchCallback1(arg0: Dynamic, arg1: Dynamic): Void {
+
+    public function dispatchCallback1(callback: Dynamic, callbackData: Dynamic): Void {
+        throw "implement in override";
     }
 
-    public function dispatchCallback2(arg0: Dynamic, arg1: Dynamic): Void {
+
+    public function dispatchCallback2(callback: Dynamic, callbackData: Dynamic): Void {
+        throw "implement in override";
     }
 
-    public function dispatchCallback3(arg0: Dynamic, arg1: Dynamic): Void {
+
+    public function dispatchCallback3(callback: Dynamic, callbackData: Dynamic): Void {
+        throw "implement in override";
     }
+
 
     public function dispatchCheck(arg0: Dynamic, arg1: Dynamic): Void {
     }
@@ -81,9 +95,10 @@ class BaseSignal {
         throw "stub: add not decompiled";
     }
 
-    public function getNumParams(arg0: Dynamic): Int {
-        throw "stub: getNumParams not decompiled";
+    public function getNumParams(callback: Dynamic): Int {
+        return this.defaultCallbackProps;
     }
+
 
     public function priority(arg0: Int): libs.signals.Signal.BaseSignal {
         throw "stub: priority not decompiled";

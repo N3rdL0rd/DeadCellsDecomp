@@ -17,7 +17,10 @@ class Saw extends en.Bullet {
     }
 
     public override function onHitWall(): Void {
+        super.playBlockSound();
+        this.destroy();
     }
+
 
     public override function postUpdate(): Void {
     }

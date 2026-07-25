@@ -41,8 +41,10 @@ class ExitToRichterCastle extends en.Interactive {
     public override function onActivate(arg0: en.Hero, arg1: Bool): Void {
     }
 
-    public function startExitCinematic(arg0: en.Hero): Void {
+    public function startExitCinematic(hero: en.Hero): Void {
+        cine.LevelTransition.goto("RichterCastle");
     }
+
 
     public function richterProgressCheck(): Bool {
         throw "stub: richterProgressCheck not decompiled";

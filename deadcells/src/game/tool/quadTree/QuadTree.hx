@@ -25,8 +25,9 @@ class QuadTree {
     }
 
     public function countEntities(): Int {
-        throw "stub: countEntities not decompiled";
+        return this.nbEntities;
     }
+
 
     public function remove(arg0: Int, arg1: Int, arg2: Entity): Bool {
         throw "stub: remove not decompiled";

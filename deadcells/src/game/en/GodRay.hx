@@ -6,8 +6,9 @@ class GodRay extends en.LoreDeco {
     }
 
     public override function getAtlas(): libs.heaps.slib.SpriteLib {
-        throw "stub: getAtlas not decompiled";
+        return Assets.tryGetAtlas(LevelGodRay);
     }
+
 
     public override function addNormalMap(): Void {
     }

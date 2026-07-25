@@ -69,24 +69,29 @@ class HeroActiveSkillsManager extends tool.HeroManager {
     }
 
     public function hasAnySpeedBuff(): Bool {
-        throw "stub: hasAnySpeedBuff not decompiled";
+        return false;
     }
+
 
     public function speedBuffTimeLeftS(): Float {
-        throw "stub: speedBuffTimeLeftS not decompiled";
+        return 0.0;
     }
+
 
     public function getRunSpeedMul(): Float {
-        throw "stub: getRunSpeedMul not decompiled";
+        return 0.0;
     }
+
 
     public function getDodgeSpeedMul(): Float {
-        throw "stub: getDodgeSpeedMul not decompiled";
+        return 0.0;
     }
 
+
     public function getClimbSpeedMul(): Float {
-        throw "stub: getClimbSpeedMul not decompiled";
+        return 0.0;
     }
+
 
     public function killEntities(): Void {
     }
@@ -199,8 +204,10 @@ class HeroActiveSkill {
         throw "stub: prepareSave not decompiled";
     }
 
-    public function init(arg0: tool.skill.OldSkill): Void {
+    public function init(s: tool.skill.OldSkill): Void {
+        this.skill = s;
     }
+
 
     public function restoreTimers(): Void {
     }

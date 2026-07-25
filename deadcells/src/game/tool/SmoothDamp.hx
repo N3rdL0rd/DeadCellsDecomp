@@ -3,8 +3,10 @@ package tool;
 class Ref {
     public var value: Float;
 
-    public function new(arg0: Float) {
+    public function new(value: Float) {
+        this.value = value;
     }
+
 }
 
 class SmoothDamp {

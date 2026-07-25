@@ -5,9 +5,10 @@ class EnemyGrenadeSub extends en.Grenade {
     public static var __clid: Int;
     public var glow: libs.heaps.slib.HSprite;
 
-    public function new(arg0: Entity = null) {
-        super();
+    public function new(e: Entity) {
+        super(e, null);
     }
+
 
     public override function initGfx(): Void {
     }

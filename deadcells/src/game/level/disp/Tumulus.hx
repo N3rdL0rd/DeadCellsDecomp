@@ -51,8 +51,10 @@ class Tumulus extends level.BiomeDisp {
     public override function onAddFloorJunk(arg0: Dynamic, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Int, arg6: Int): Void {
     }
 
-    public override function renderFrontCorner(arg0: libs.tilemap.CornerType, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Bool): Void {
+    public override function renderFrontCorner(type: libs.tilemap.CornerType, cx: Int, cy: Int, wid: Int, hei: Int, stonePF: Bool): Void {
+        super.renderFrontCorner(type, cx, cy, wid, hei, stonePF);
     }
+
 
     public override function renderParallax(arg0: Dynamic, arg1: String): Void {
     }

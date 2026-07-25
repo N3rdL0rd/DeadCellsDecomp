@@ -29,20 +29,23 @@ class GridSelector extends ui.Process {
     }
 
     public function get_wid(): Int {
-        throw "stub: get_wid not decompiled";
+        return 8;
     }
+
 
     public function get_maxPixelHei(): Int {
         throw "stub: get_maxPixelHei not decompiled";
     }
 
     public function get_entryWid(): Int {
-        throw "stub: get_entryWid not decompiled";
+        return 24;
     }
 
+
     public function get_entryHei(): Int {
-        throw "stub: get_entryHei not decompiled";
+        return 24;
     }
+
 
     public function pauseGame(): Void {
     }
@@ -54,9 +57,10 @@ class GridSelector extends ui.Process {
         throw "stub: getTitleText not decompiled";
     }
 
-    public function isEntryLocked(arg0: Int): Bool {
-        throw "stub: isEntryLocked not decompiled";
+    public function isEntryLocked(i: Int): Bool {
+        return false;
     }
+
 
     public function getIconBmp(arg0: Int, arg1: h2d.Object): h2d.Object {
         throw "stub: getIconBmp not decompiled";

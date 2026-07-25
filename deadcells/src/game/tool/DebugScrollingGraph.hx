@@ -23,8 +23,9 @@ class DebugScrollingGraph extends h2d.Drawable {
     }
 
     public function getValueNow(): Float {
-        throw "stub: getValueNow not decompiled";
+        return 0.0;
     }
+
 
     public function afterPresent(): Void {
     }

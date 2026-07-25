@@ -79,12 +79,14 @@ class UIElement {
     }
 
     public function getScaledWidth(): Float {
-        throw "stub: getScaledWidth not decompiled";
+        return this.getMaxChildrenScaledWidth();
     }
 
+
     public function getScaledHeight(): Float {
-        throw "stub: getScaledHeight not decompiled";
+        return this.getMaxChildrenScaledHeight();
     }
+
 
     public function getMaxChildrenScaledWidth(): Float {
         throw "stub: getMaxChildrenScaledWidth not decompiled";

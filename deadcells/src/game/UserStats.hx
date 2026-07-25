@@ -48,17 +48,23 @@ class UserStats {
     public function init(): Void {
     }
 
-    public function set_runs(arg0: Int): Int {
-        throw "stub: set_runs not decompiled";
+    public function set_runs(v: Int): Int {
+        this.runs = v;
+        return this.runs;
     }
 
-    public function set_runsCompleted(arg0: Int): Int {
-        throw "stub: set_runsCompleted not decompiled";
+
+    public function set_runsCompleted(v: Int): Int {
+        this.runsCompleted = v;
+        return this.runsCompleted;
     }
 
-    public function set_curseSurvived(arg0: Int): Int {
-        throw "stub: set_curseSurvived not decompiled";
+
+    public function set_curseSurvived(v: Int): Int {
+        this.curseSurvived = v;
+        return this.curseSurvived;
     }
+
 
     public function checkWeaponsUnlockedAchievement(): Void {
     }
@@ -140,7 +146,9 @@ class UserStats {
     }
 
     public function unserializeInit(): Void {
+        this.invalidCdb = false;
     }
+
 
     public function unserialize(arg0: hxbit.Serializer): Void {
     }

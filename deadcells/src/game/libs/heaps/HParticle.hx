@@ -40,8 +40,11 @@ class Emitter {
     public function setPosition(arg0: Float, arg1: Float, arg2: Dynamic, arg3: Dynamic): Void {
     }
 
-    public function setSize(arg0: Float, arg1: Float): Void {
+    public function setSize(w: Float, h: Float): Void {
+        this.wid = w;
+        this.hei = h;
     }
+
 
     public function setDurationS(arg0: Float): Void {
     }
@@ -127,8 +130,9 @@ class ParticlePool {
     }
 
     public function getAllocateds(): Int {
-        throw "stub: getAllocateds not decompiled";
+        return this.nalloc;
     }
+
 
     public function killAll(): Void {
     }
@@ -215,9 +219,11 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
     public function playAnimAndStop(arg0: libs.heaps.slib.SpriteLib, arg1: String, arg2: Ref): Void {
     }
 
-    public function setAnimSpeed(arg0: Float): libs.heaps.HParticle {
-        throw "stub: setAnimSpeed not decompiled";
+    public function setAnimSpeed(spd: Float): libs.heaps.HParticle {
+        this.animSpd = spd;
+        return this;
     }
+
 
     public function setAnimDuration(arg0: Float): libs.heaps.HParticle {
         throw "stub: setAnimDuration not decompiled";
@@ -363,8 +369,10 @@ class HParticle extends h2d.SpriteBatch.BatchElement {
     public function updatePart(arg0: Float): Void {
     }
 
-    public function setBatchGroup(arg0: libs.heaps.SpriteBatchGroup): Void {
+    public function setBatchGroup(spriteBatchGroup: libs.heaps.SpriteBatchGroup): Void {
+        this.batchGroup = spriteBatchGroup;
     }
+
 
     public function __string(): hl.Bytes {
         throw "stub: __string not decompiled";

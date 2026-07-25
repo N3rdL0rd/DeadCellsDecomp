@@ -27,8 +27,10 @@ class GlowKey extends hxsl.Shader {
         throw "stub: getGlowDatas not decompiled";
     }
 
-    public function setGlowData(arg0: Int, arg1: Dynamic): Void {
+    public function setGlowData(index: Int, glowData: Dynamic): Void {
+        this.applyGlowData(index, glowData);
     }
+
 
     public function setGlowDatas(arg0: Array<Dynamic>): Void {
     }

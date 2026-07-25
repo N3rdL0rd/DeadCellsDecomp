@@ -14,7 +14,9 @@ class KingScepter extends tool.Weapon {
     }
 
     public function onDodge(): Void {
+        this.cancelAll();
     }
+
 
     public function cancelAll(): Void {
     }

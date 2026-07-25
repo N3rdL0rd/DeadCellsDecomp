@@ -85,9 +85,10 @@ class Struct {
         throw "stub: createRoomWithType not decompiled";
     }
 
-    public static function createRoomFromGroup(arg0: String): tool.mod.script.RoomNode {
-        throw "stub: createRoomFromGroup not decompiled";
+    public static function createRoomFromGroup(_groupName: String): tool.mod.script.RoomNode {
+        return null;
     }
+
 
     public static function createSpecificRoom(arg0: String): tool.mod.script.RoomNode {
         throw "stub: createSpecificRoom not decompiled";

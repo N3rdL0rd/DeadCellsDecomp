@@ -17,7 +17,9 @@ class ScriptInterpreter extends hscript.Interp {
     }
 
     public override function resetVariables(): Void {
+        super.resetVariables();
     }
+
 
     public override function execute(arg0: hscript.Expr): Dynamic {
         throw "stub: execute not decompiled";

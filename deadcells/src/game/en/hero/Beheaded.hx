@@ -20,8 +20,9 @@ class Beheaded extends en.Hero {
     }
 
     public override function createHead(): tool.HeroHead {
-        throw "stub: createHead not decompiled";
+        return new tool.heroHeads.BeheadedHead();
     }
+
 
     public override function init(): Void {
     }
