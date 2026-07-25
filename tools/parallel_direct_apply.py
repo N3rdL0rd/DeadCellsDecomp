@@ -91,6 +91,24 @@ def main() -> None:
         (wt_path / "hlboot.dat").symlink_to(hlboot)
     print("Linked hlboot.dat into each worktree.")
 
+    # direct_apply.py's build_queue() loads deadcells/bin/client.hl immediately,
+    # before doing anything else - true in the main tree (continuously rebuilt
+    # all session) but not in a brand new worktree, which has never been
+    # compiled once. Bootstrap one build per worktree first, in parallel (each
+    # worktree has its own independent bin/ output, so this is as safe to
+    # parallelize as the shards themselves).
+    print("Bootstrapping an initial build.match.hxml in each worktree (needed before client.hl exists)...")
+    bootstrap_procs = [
+        (i, subprocess.Popen(["haxe", "build.match.hxml"], cwd=wt_path / "deadcells",
+                              stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True))
+        for i, (wt_path, _branch) in enumerate(worktrees)
+    ]
+    for i, proc in bootstrap_procs:
+        _, stderr = proc.communicate()
+        if proc.returncode != 0:
+            sys.exit(f"Bootstrap build failed for shard {i}:\n{stderr}")
+    print(f"Bootstrap builds OK for all {len(worktrees)} worktrees.")
+
     print("Launching shards in parallel...")
     procs = []
     for i, (wt_path, _branch) in enumerate(worktrees):
